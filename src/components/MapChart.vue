@@ -164,7 +164,7 @@
 
 <script>
 import store from '@/store'
-import LeftCol from '@/components/LeftCol'
+import LeftCol from '@/components/LeftCol_basic'
 import * as d3 from 'd3-scale'
 import { isMobile } from 'mobile-device-detect'
 
