@@ -11,6 +11,7 @@ import MultiLineChart from './components/MultiLineChart'
 import BarChart from './components/BarChart'
 import MapChart from './components/MapChart'
 import GeoList from './components/GeoList'
+import TopRow from './components/TopRow'
 
 Vue.config.productionTip = false
 
@@ -25,3 +26,4 @@ Vue.customElement('multiline-chart', MultiLineChart)
 Vue.customElement('bar-chart', BarChart)
 Vue.customElement('map-chart', MapChart)
 Vue.customElement('geo-list', GeoList)
+Vue.customElement('top-row', TopRow)

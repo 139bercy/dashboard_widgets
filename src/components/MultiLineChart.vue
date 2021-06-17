@@ -1,6 +1,6 @@
 <template>
-
   <div class="widget_container fr-grid-row" :class="(loading)?'loading':''" :data-display="display" :id="widgetId">
+    <TopRow :data-display="display" :localisation="selectedGeoLabel" :date="currentDate" :values="currentValues" :names="names" :evolcodes="evolcodes" :evolvalues="evolvalues"></TopRow>
     <LeftCol :data-display="display" :localisation="selectedGeoLabel" :date="currentDate" :values="currentValues" :names="names" :evolcodes="evolcodes" :evolvalues="evolvalues"></LeftCol>
     <div class="r_col r-col-12 fr-col-lg-9">
       <div class="chart ml-lg">
@@ -19,13 +19,16 @@
 </template>
 
 <script>
+
 import store from '@/store'
 import Chart from 'chart.js'
-import LeftCol from '@/components/LeftCol' 
+import LeftCol from '@/components/DataBox'
+import TopRow from '@/components/TopRow' 
 export default {
   name: 'MultiLineChart',
   components: {
-    LeftCol
+    LeftCol,
+    TopRow
   },
   data(){
     return {
@@ -183,18 +186,28 @@ export default {
                   backgroundColor:gradientFill,
                   borderColor:"#000091",
                   type:'line',
-                  pointRadius:8,
+                  cubicInterpolationMode: 'monotone',
+                  pointHoverRadius:15,
+                  pointStyle:'circle',
+                  pointHitRadius:100,
                   pointBackgroundColor:"rgba(0, 0, 0, 0)",
                   pointBorderColor:"rgba(0, 0, 0, 0)",
+                  pointHoverBackgroundColor:"rgba(0, 0, 0, 0.1)",
+                  pointHoverBorderColor:"rgba(0, 0, 0, 0.1)",
                 },
                 {
                   data: self.dataset2,
                   backgroundColor:gradientFill2,
                   borderColor:"#007c3a",
                   type:'line',
-                  pointRadius:8,
+                  cubicInterpolationMode: 'monotone',
+                  pointHoverRadius:15,
+                  pointStyle:'circle',
+                  pointHitRadius:100,
                   pointBackgroundColor:"rgba(0, 0, 0, 0)",
                   pointBorderColor:"rgba(0, 0, 0, 0)",
+                  pointHoverBackgroundColor:"rgba(0, 0, 0, 0.1)",
+                  pointHoverBorderColor:"rgba(0, 0, 0, 0.1)",
                 }
               ]
           },
@@ -205,7 +218,8 @@ export default {
             scales: {
               xAxes: [{
                 gridLines: {
-                  color: "rgba(0, 0, 0, 0)",
+                  color: "#e5e5e5",
+                  borderDash:[3]
                 },
                 ticks: {
                   autoSkip: true,
@@ -213,7 +227,7 @@ export default {
                   maxRotation: 0,
                   minRotation: 0,
                   callback: function(value) {
-                    return value.toString().substring(3,5)+"/"+value.toString().substring(8,10)
+                    return value.toString().substring(3,5)+" / 20"+value.toString().substring(8,10)
                   }
                 },
               }],

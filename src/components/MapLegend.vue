@@ -1,20 +1,18 @@
 <template>
 
-  <div class="l_col fr-col-12 fr-col-lg-3">
-        
-        <br>
-        <br> <br>
-        <br>
-        
-        <div class="scale" v-if="map">
-          <p class="l_box_title fr-text--xs fr-mb-1w">Légende</p>
-          <div class="scale_container"></div>
-          <div>
-            <span class="min fr-text--sm fr-text--bold fr-mb-0">{{convertNumberToHuman(min)}}</span>
-            <span class="max fr-text--sm fr-text--bold fr-mb-0">{{convertNumberToHuman(max)}}</span>
-          </div>
+  <div class="legend fr-col-lg-2">
+    <div class="legend_container">
+      <p class="l_box_title fr-text fr-mb-1w">Légende</p>
+      <div class="scale fr-grid-row" style="grid-column-gap: 0.5rem; justify-content:flex-start;" v-if="map">
+        <div class="scale_container"> </div>
+        <div class="fr-col-2" style="display: flex; flex-direction: column;">
+          <span class="min fr-text--sm fr-text--bold fr-mb-1">{{convertNumberToHuman(min)}}</span>
+          <span class="max fr-text--sm fr-text--bold fr-mb-1">{{convertNumberToHuman(max)}}</span>
         </div>
+      </div>
     </div>
+  </div>
+
 </template>
 
 <script>
@@ -97,72 +95,41 @@ export default {
   @import "../../public/css/overload-fonts.css";
   @import "../../public/css/dsfr.min.css";
 
-  .l_col{
+  .legend{
 
     .sep, .sep-viz {
       border-bottom:1px solid #E5E5E5;
     }
 
-    @media (min-width: 62em) {
-      .sep-viz {
-        display: none;
-      }
-    }
-
     .l_box_title{
       color: #6b6b6b;
     }
-    .flex{
-      display: inline-flex;
-      align-items: center;
-    }
-    .l_box_number_container {
-      display: flex;
-      justify-content: space-between;
-      .l_box_trend {
-        &.down {
-          .trend_ico {
-            transform: rotate(90deg);
-          }
-        }
-        &.green {
-          color: #357941;
-          background-color: #d9ffeb;
-          .trend_ico {
-            path {
-              fill: #357941;
-            }
-          }
-        }
-        &.red {
-          color: #d80600;
-          background-color: #fff4f3;
-          .trend_ico {
-            path {
-              fill: #d80600;
-            }
-          }
-        }
-        &.blue {
-          color: #0768d5;
-          background-color: #f0f7ff;
-          .trend_ico {
-            path {
-              fill: #0768d5;
-            }
-          }
-        }
+
+    @media (min-width: 62em) {
+      .sep-viz {
+        display: none;
       } 
     }
+
+    .legend_container{
+      position: absolute;
+      top: 73%;
+      left: 5%
+    }
+
     .scale{
       .scale_container{
-        height: 1.5rem;
+        height: 5.5rem;
+        width: 1.5rem;
         background-color: red;
-        background: linear-gradient(90deg, rgba(255, 199, 0,1) 0%, rgba(113, 88, 69, 1) 100%);
+        transform: translate(0%, 0%);
+        background: linear-gradient(180deg, rgba(255, 199, 0,1) 0%, rgba(113, 88, 69, 1) 100%);
       }
+      
       div:last-child {
         display:flex;
         justify-content: space-between;
+        transform: translate(0%, 0%);
       }
     }
 
@@ -172,7 +139,9 @@ export default {
         justify-content: unset;
       }
     }
-  }
 
+
+
+  }
 
 </style>

@@ -25,7 +25,7 @@
 <script>
 import store from '@/store'
 import Chart from 'chart.js'
-import LeftCol from '@/components/LeftCol'
+import LeftCol from '@/components/DataBox'
 
 export default {
   name: 'LineChart',
@@ -187,9 +187,14 @@ export default {
             backgroundColor: gradientFill,
             borderColor: "#000091",
             type: 'line',
-            pointRadius: 8,
-            pointBackgroundColor: "rgba(0, 0, 0, 0)",
-            pointBorderColor: "rgba(0, 0, 0, 0)",
+            cubicInterpolationMode: 'monotone',
+            pointHoverRadius:15,
+            pointStyle:'circle',
+            pointHitRadius:100,
+            pointBackgroundColor:"rgba(0, 0, 0, 0)",
+            pointBorderColor:"rgba(0, 0, 0, 0)",
+            pointHoverBackgroundColor:"rgba(0, 0, 0, 0.1)",
+            pointHoverBorderColor:"rgba(0, 0, 0, 0.1)",
           }]
         },
         options: {
@@ -199,7 +204,8 @@ export default {
           scales: {
             xAxes: [{
               gridLines: {
-                color: "rgba(0, 0, 0, 0)",
+                color: "#e5e5e5",
+                borderDash: [3]
               },
               ticks: {
                 autoSkip: true,

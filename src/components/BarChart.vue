@@ -17,7 +17,7 @@
 <script>
 import store from '@/store'
 import Chart from 'chart.js'
-import LeftCol from '@/components/LeftCol' 
+import LeftCol from '@/components/DataBox' 
 export default {
   name: 'BarChart',
   components: {
