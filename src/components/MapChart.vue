@@ -2,7 +2,7 @@
 
   <div class="widget_container fr-grid-row--middle" :class="(loading)?'loading':''" :data-display="display" :id="widgetId">
     <LeftCol :data-display="display" :localisation="localGeoLabel" :date="currentDate" :values="currentValues" :names="names" :evolcodes="evolcodes" :evolvalues="evolvalues" :min="scaleMin" :max="scaleMax" :map="map"></LeftCol>
-    <div class="r_col fr-col-12 fr-col-lg-12">
+    <div class="r_col fr-col-12 fr-col-lg-12" style="margin-bottom: 1rem">
       <div class="map m-lg fr-grid-row--right">
         
         <div class="map_tooltip" v-if="tooltip.display" :style="{top:tooltip.top,left:tooltip.left}">

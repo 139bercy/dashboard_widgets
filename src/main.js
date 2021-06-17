@@ -12,6 +12,7 @@ import BarChart from './components/BarChart'
 import MapChart from './components/MapChart'
 import GeoList from './components/GeoList'
 import TopRow from './components/TopRow'
+import Complete_panel from './components/Complete_panel'
 
 Vue.config.productionTip = false
 
@@ -27,3 +28,4 @@ Vue.customElement('bar-chart', BarChart)
 Vue.customElement('map-chart', MapChart)
 Vue.customElement('geo-list', GeoList)
 Vue.customElement('top-row', TopRow)
+Vue.customElement('complete-panel', Complete_panel)

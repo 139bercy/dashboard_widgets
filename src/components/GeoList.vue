@@ -96,11 +96,11 @@ export default {
 @import "../../public/css/dsfr.min.css";
 
 .fr-select {
-  box-shadow: inset 0 -2px 0 0 #000091;
+  box-shadow: inset 0 -2px 0 0 #009100;
 }
 
 button.fr-link {
-  border: solid 1px #e5e5e5;
+  border: solid 1px #a5cea7;
 }
 
 </style>

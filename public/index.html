@@ -27,11 +27,6 @@
             margin: 0 auto 50px;
         }
         
-        .box_container {
-            max-width: 270px;
-            margin: 0 auto 50px;
-        }
-        
         .geo_container {
             max-width: 200px;
             margin: 0 auto 50px;
@@ -50,7 +45,7 @@
 
         <div class="fr-grid-row">
 
-            <div class="fr-col-2 fr-col-md-4 fr-col-lg-3">
+            <div class="fr-col-2 fr-col-md-4 fr-col-lg-4">
                 <nav class="fr-sidemenu fr-sidemenu--sticky-full-height fr-pr-0" role="navigation" aria-label="Menu latéral">
 
                     <div style="position:relative; width:100%; height:0; padding-top:100%;">
@@ -143,171 +138,76 @@
 
                 <!-- 
 
-    Template pour les boites
+            Template pour les boites
                     
-                    <a class="anchor" id="refonglet"></a>
-                    <div class="lvl2-header fr-px-2w fr-px-md-3w fr-pt-3w">
+                    <a class="anchor " id="refonglet "></a>
+                    <div class="lvl2-header fr-px-2w fr-px-md-3w fr-pt-3w ">
                         <h3> Titre_mesure
                         </h3>
-                        <p class="fr-text--xs fr-mb-3w">Source :
-                            <a title="vers data.gouv.fr" href="source_http" target="_blank" rel="noopener" data-section="nom_section" data-subsection="nom_subsection">
+                        <p class="fr-text--xs fr-mb-3w ">Source :
+                            <a title="vers data.gouv.fr " href="source_http " target="_blank " rel="noopener " data-section="nom_section " data-subsection="nom_subsection ">
                             Vers des fichiers d'open-data</a>
                         </p>
                     </div>
-                    <div class="fr-tabs" style="transition: none 0s ease 0s;">
+                    <div class="fr-tabs " style="transition: none 0s ease 0s; ">
 
-                        <ul class="fr-tabs__list" role="tablist" aria-label="changer d'onglet">
+                        <ul class="fr-tabs__list " role="tablist " aria-label="changer d 'onglet">
                             <li role="presentation">
-                                <button id="tabpanel-2-1" class="fr-tabs__tab" tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-2-1-panel_Indicateur_1">Nombre d'entreprises
+                                <button id="tabpanel-2-1" class="fr-tabs__tab" tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-2-1-panel_Indicateur_1">Nombre d'entreprises </button>
+                    </li>
+                    <li role="presentation">
+                        <button id="tabpanel-2-2" class="fr-tabs__tab" tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-2-2-panel_Indicateur_2">Montant total de l'investissement ainsi déclenché
                             </button>
-                            </li>
-                            <li role="presentation">
-                                <button id="tabpanel-2-2" class="fr-tabs__tab" tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-2-2-panel_Indicateur_2">Montant total de l'investissement ainsi déclenché
-                            </button>
-                            </li>
-                        </ul>
+                    </li>
+                    </ul>
 
-                        <div id="tabpanel-2-1-panel_Indicateur_1" class="fr-tabs__panel fr-tabs__panel--selected fr-p-3w" role="tabpanel" aria-labelledby="tabpanel-2-1" tabindex="0">
-                            <div style="margin-bottom: 2rem">
-                                <multiline-chart indicateur1="Indicateur_1" indicateur2="Indicateur_2"> </multiline-chart>
-                            </div>
-                                <map-chart indicateur="Indicateur_1"></map-chart>
+                    <div id="tabpanel-2-1-panel_Indicateur_1" class="fr-tabs__panel fr-tabs__panel--selected fr-p-3w" role="tabpanel" aria-labelledby="tabpanel-2-1" tabindex="0">
+                        <div style="margin-bottom: 2rem">
+                            <multiline-chart indicateur1="Indicateur_1" indicateur2="Indicateur_2"> </multiline-chart>
                         </div>
-
-                        <div id="tabpanel-2-2-panel_Indicateur_2" class="fr-tabs__panel fr-p-7w" role="tabpanel" aria-labelledby="tabpanel-2-2" tabindex="1">
-                            <line-chart indicateur="Indicateur_2"></line-chart>
-                            <map-chart indicateur="Indicateur_2"></map-chart>
-                        </div>
-
+                        <map-chart indicateur="Indicateur_1"></map-chart>
                     </div>
 
-                    <section class="fr-accordion">
-                        <h3 class="fr-accordion__title">
-                            <button class="fr-accordion__btn fr-text--sm" aria-expanded="false" aria-controls="accordion_BPI">
-                            En savoir plus sur l'indicateur
-                        </button>
-                        </h3>
-                        <div class="fr-collapse fr-mx-0" id="accordion_BPI">
-                            <p class="fr-mb-0 fr-text--sm">
-                                Propriétés_indicateur
-                            </p>
-                        </div>
-                    </section>
-
-                    -->
-
-
-                    <!-- Volet verdissement -->
-
-
-                    <a class="anchor" id="refonglet"></a>
-                    <div class="lvl2-header fr-px-2w fr-px-md-3w fr-pt-3w">
-                        <h3> Modernisation de la filière (BPI)
-                        </h3>
-                        <p class="fr-text--xs fr-mb-3w">Source :
-                            <a title="vers data.gouv.fr" href="source_http" target="_blank" rel="noopener" data-section="nom_section" data-subsection="nom_subsection">
-                            Vers des fichiers d'open-data</a>
-                        </p>
+                    <div id="tabpanel-2-2-panel_Indicateur_2" class="fr-tabs__panel fr-p-7w" role="tabpanel" aria-labelledby="tabpanel-2-2" tabindex="1">
+                        <line-chart indicateur="Indicateur_2"></line-chart>
+                        <map-chart indicateur="Indicateur_2"></map-chart>
                     </div>
-                    <div class="fr-tabs" style="transition: none 0s ease 0s;">
-
-                        <ul class="fr-tabs__list" role="tablist" aria-label="changer d'onglet">
-                            <li role="presentation">
-                                <button id="tabpanel-2-1" class="fr-tabs__tab" tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-2-1-panel_BPI">Nombre d'entreprises
-                            </button>
-                            </li>
-                            <li role="presentation">
-                                <button id="tabpanel-2-2" class="fr-tabs__tab" tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-2-2-panel_BPI">Montant total de l'investissement ainsi déclenché
-                            </button>
-                            </li>
-                        </ul>
-
-                        <div id="tabpanel-2-1-panel_BPI" class="fr-tabs__panel fr-tabs__panel--selected fr-p-3w" role="tabpanel" aria-labelledby="tabpanel-2-1" tabindex="0">
-                            <div style="margin-bottom: 2rem">
-                                <multiline-chart indicateur1="Nombre_d’entreprises_-_BPI" indicateur2="Nombre_de_PME_-_BPI"> </multiline-chart>
-                            </div>
-                                <map-chart indicateur="Nombre_d’entreprises_-_BPI"></map-chart>
-                        </div>
-
-                        <div id="tabpanel-2-2-panel_BPI" class="fr-tabs__panel fr-p-7w" role="tabpanel" aria-labelledby="tabpanel-2-2" tabindex="1">
-                            <line-chart indicateur="Montant_de_l’investissement_total_déclenché_- _ETE"></line-chart>
-                            <map-chart indicateur="Montant_de_l’investissement_total_déclenché_- _ETE"></map-chart>
-                        </div>
-
-                    </div>
-
-                    <section class="fr-accordion">
-                        <h3 class="fr-accordion__title">
-                            <button class="fr-accordion__btn fr-text--sm" aria-expanded="false" aria-controls="accordion_BPI">
-                            En savoir plus sur l'indicateur
-                        </button>
-                        </h3>
-                        <div class="fr-collapse fr-mx-0" id="accordion_BPI">
-                            <p class="fr-mb-0 fr-text--sm">
-                                Propriétés_indicateur
-                            </p>
-                        </div>
-                    </section>
-
-                    <a class="anchor" id="refonglet"></a>
-                    <div class="lvl2-header fr-px-2w fr-px-md-3w fr-pt-3w">
-                        <h3> Soutien à chaleur bas carbone
-                        </h3>
-                        <p class="fr-text--xs fr-mb-3w">Source :
-                            <a title="vers data.gouv.fr" href="source_http" target="_blank" rel="noopener" data-section="nom_section" data-subsection="nom_subsection">
-                            Vers des fichiers d'open-data</a>
-                        </p>
-                    </div>
-
-                    <div class="fr-tabs" style="height: 200px; transition: none 0s ease 0s;">
-
-                        <ul class="fr-tabs__list" role="tablist" aria-label="changer d'onglet">
-                            <li role="presentation">
-                                <button id="tabpanel-2-1" class="fr-tabs__tab" tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-2-1-panel_CBC">Nombre d'entreprises 
-                            </li>
-                            <li role="presentation">
-                                <button id="tabpanel-2-2" class="fr-tabs__tab" tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-2-2-panel_CBC">Montant total de l'investissement 
-                            </button>
-                            </li>
-                        </ul>
-
-                        <div id="tabpanel-2-1-panel_CBC" class="fr-tabs__panel fr-tabs__panel--selected fr-p-7w" role="tabpanel" aria-labelledby="tabpanel-2-1" tabindex="0">
-                            <multiline-chart indicateur1="Nombre_d’entreprises_-_BPI" indicateur2="Nombre_de_PME_-_BPI"> </multiline-chart>
-                            <map-chart indicateur="Nombre_d’entreprises_-_BPI"></map-chart>
-                        </div>
-
-                        <div id="tabpanel-2-2-panel_CBC" class="fr-tabs__panel fr-p-7w" role="tabpanel" aria-labelledby="tabpanel-2-2" tabindex="1" style="transform: translate(100%);">
-                            <line-chart indicateur="Montant_cumulé_de_l’investissement_total_ainsi_déclenché_-_CBC"></line-chart>
-                            <map-chart indicateur="Montant_cumulé_de_l’investissement_total_ainsi_déclenché_-_CBC"></map-chart>
-                        </div>
-
-                    </div>
-
-                    <section class="fr-accordion">
-                        <h3 class="fr-accordion__title">
-                            <button class="fr-accordion__btn fr-text--sm" aria-expanded="false" aria-controls="accordion_CBC">
-                            En savoir plus sur l'indicateur
-                        </button>
-                        </h3>
-                        <div class="fr-collapse fr-mx-0" id="accordion_CBC">
-                            <p class="fr-mb-0 fr-text--sm">
-                                Propriétés_indicateur
-                            </p>
-                        </div>
-                    </section>
-
-
-                    <!-- Volet cohésion -->
-
-                    <!-- Volet compétitivité -->
-
 
                 </div>
+
+                <section class="fr-accordion">
+                    <h3 class="fr-accordion__title">
+                        <button class="fr-accordion__btn fr-text--sm" aria-expanded="false" aria-controls="accordion_BPI">
+                            En savoir plus sur l'indicateur
+                        </button>
+                    </h3>
+                    <div class="fr-collapse fr-mx-0" id="accordion_BPI">
+                        <p class="fr-mb-0 fr-text--sm">
+                            Propriétés_indicateur
+                        </p>
+                    </div>
+                </section>
+
+                -->
+
+
+                <!-- Volet verdissement -->
+
+                <complete-panel></complete-panel>
+
+
+
+                <!-- Volet cohésion -->
+
+                <!-- Volet compétitivité -->
+
+
             </div>
         </div>
+    </div>
 
-        <script type="module" src="js/dsfr.module.min.js"></script>
-        <script type="text/javascript" nomodule src="js/dsfr.nomodule.min.js"></script>
+    <script type="module" src="js/dsfr.module.min.js"></script>
+    <script type="text/javascript" nomodule src="js/dsfr.nomodule.min.js"></script>
 
 </body>
 

@@ -1697,7 +1697,7 @@ details>summary:first-of-type {
 }
 
 .fr-accordion {
-    position: relative
+    position: relative;
 }
 
 .fr-accordion__title {
@@ -1717,7 +1717,7 @@ details>summary:first-of-type {
     width: 100%;
     text-align: left;
     margin: 0;
-    padding: .75rem 0
+    padding: .75rem 0;
 }
 
 .fr-accordion .fr-accordion__btn:before {
@@ -1734,7 +1734,7 @@ details>summary:first-of-type {
 }
 
 .fr-accordion .fr-accordion__btn[aria-expanded=true i]:before {
-    content: ""
+    content: "";
 }
 
 .fr-accordion .fr-collapse {
@@ -1757,7 +1757,7 @@ details>summary:first-of-type {
 }
 
 .fr-accordion {
-    box-shadow: 0 1px 0 0 var(--g300), 0 -1px 0 0 var(--g300)
+    box-shadow: 0 0 0 0 var(--boxcountour), 0 0 0 0 var(--boxcountour)
 }
 
 .fr-accordion .fr-accordion__btn {
@@ -2546,24 +2546,24 @@ button.fr-link[disabled] {
 }
 
 :root:not([data-fr-theme=dark i]) .fr-pagination__link[aria-current] {
-    --color-hover: rgba(0, 0, 221, 0.5);
+    --color-hover: rgba(0, 221, 11, 0.5);
     --color-active: rgba(41, 41, 255, 0.5)
 }
 
 :root:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-pagination__link[aria-current],
 :root:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-pagination__link[aria-current] {
-    --color-hover: rgba(0, 0, 221, 0.5);
+    --color-hover: rgba(0, 221, 11, 0.5);
     --color-active: rgba(41, 41, 255, 0.5)
 }
 
 :root:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-pagination__link[aria-current],
 :root:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-pagination__link[aria-current] {
-    --color-hover: rgba(71, 71, 255, 0.5);
+    --color-hover: rgba(71, 255, 71, 0.5);
     --color-active: rgba(0, 0, 243, 0.5)
 }
 
 :root[data-fr-theme=dark i] .fr-pagination__link[aria-current] {
-    --color-hover: rgba(71, 71, 255, 0.5);
+    --color-hover: rgba(71, 255, 71, 0.5);
     --color-active: rgba(0, 0, 243, 0.5)
 }
 
@@ -2574,7 +2574,7 @@ button.fr-pagination__link:not([aria-current])[disabled] {
 
 :root {
     --block-color-hover: hsla(0, 0%, 87.8%, 0.5);
-    --block-color-active: hsla(0, 0%, 76.1%, 0.5)
+    --block-color-active: hsla(0, 0%, 76.1%, 0.5);
 }
 
 :root[data-fr-theme=dark i] {
@@ -2582,7 +2582,7 @@ button.fr-pagination__link:not([aria-current])[disabled] {
     --bf500-plain: #009100;
     --w-bf500: #009100;
     --bf300-plain: #9aff9a;
-    --bf200-bf300: #9aff9a;
+    --bf200-bf300: #161a16;
     --bf100-g750: #2a2a2a;
     --t-plain: transparent;
     --t-w: #fff;
@@ -2612,11 +2612,13 @@ button.fr-pagination__link:not([aria-current])[disabled] {
 }
 
 :root {
-    --bf500: #009100;
+    --bf500: #039103;
+    --boxshadow: #29b829;
+    --boxcountour: #17b9084b;
     --bf500-plain: #009100;
     --w-bf500: #fff;
     --bf300-plain: #9aff9a;
-    --bf200-bf300: #ececff;
+    --bf200-bf300: #ecfff1;
     --bf100-g750: #f5f5ff;
     --t-plain: transparent;
     --t-w: transparent;
@@ -2647,7 +2649,7 @@ button.fr-pagination__link:not([aria-current])[disabled] {
 
 :root:not([data-fr-theme=dark i]) [class*="--scheme-light-"],
 :root:not([data-fr-theme=dark i]) [class*=fr-scheme-light] {
-    --bf500: #009100;
+    --bf500: #04e004;
     --bf500-plain: #009100;
     --w-bf500: #fff;
     --bf300-plain: #9aff9a;
@@ -2715,48 +2717,48 @@ button.fr-pagination__link:not([aria-current])[disabled] {
     background-color: var(--w);
     --scheme-border: var(--bf500);
     --block-color-hover: hsla(0, 0%, 87.8%, 0.5);
-    --block-color-active: hsla(0, 0%, 76.1%, 0.5)
+    --block-color-active: hsla(0, 0%, 76.1%, 0.5);
 }
 
 :root[data-fr-theme=dark i] :root .fr-scheme-light-white {
     --block-color-hover: rgba(65, 65, 65, 0.5);
-    --block-color-active: rgba(99, 99, 99, 0.5)
+    --block-color-active: rgba(99, 99, 99, 0.5);
 }
 
 :root .fr-scheme-light-grey-100 {
     background-color: var(--g100-g800);
     --scheme-border: var(--bf500);
     --block-color-hover: hsla(0, 0%, 85.1%, 0.5);
-    --block-color-active: hsla(0, 0%, 72.5%, 0.5)
+    --block-color-active: hsla(0, 0%, 72.5%, 0.5);
 }
 
 :root[data-fr-theme=dark i] :root .fr-scheme-light-grey-100 {
     --block-color-hover: rgba(65, 65, 65, 0.5);
-    --block-color-active: rgba(99, 99, 99, 0.5)
+    --block-color-active: rgba(99, 99, 99, 0.5);
 }
 
 :root .fr-scheme-light-grey-200 {
     background-color: var(--g200);
     --scheme-border: var(--bf500);
     --block-color-hover: hsla(0, 0%, 81.2%, 0.5);
-    --block-color-active: hsla(0, 0%, 68.6%, 0.5)
+    --block-color-active: hsla(0, 0%, 68.6%, 0.5);
 }
 
 :root[data-fr-theme=dark i] :root .fr-scheme-light-grey-200 {
     --block-color-hover: rgba(95, 95, 95, 0.5);
-    --block-color-active: hsla(0, 0%, 52.5%, 0.5)
+    --block-color-active: hsla(0, 0%, 52.5%, 0.5);
 }
 
 :root .fr-scheme-light-beige {
     background-color: var(--beige);
     --scheme-border: var(--bf500);
     --block-color-hover: rgba(224, 219, 208, 0.5);
-    --block-color-active: rgba(199, 189, 170, 0.5)
+    --block-color-active: rgba(199, 189, 170, 0.5);
 }
 
 :root[data-fr-theme=dark i] :root .fr-scheme-light-beige {
     --block-color-hover: rgba(79, 79, 79, 0.5);
-    --block-color-active: hsla(0, 0%, 45.1%, 0.5)
+    --block-color-active: hsla(0, 0%, 45.1%, 0.5);
 }
 
 :root[data-fr-transition] [class*=fr-scheme-light] {
@@ -2767,12 +2769,12 @@ button.fr-pagination__link:not([aria-current])[disabled] {
     background-color: var(--g800-plain);
     --scheme-border: var(--bf300-plain);
     --block-color-hover: rgba(65, 65, 65, 0.5);
-    --block-color-active: rgba(99, 99, 99, 0.5)
+    --block-color-active: rgba(99, 99, 99, 0.5);
 }
 
 :root[data-fr-theme=dark i] :root .fr-scheme-dark-grey-800 {
     --block-color-hover: rgba(65, 65, 65, 0.5);
-    --block-color-active: rgba(99, 99, 99, 0.5)
+    --block-color-active: rgba(99, 99, 99, 0.5);
 }
 
 :root[data-fr-transition] [class*=fr-scheme-dark] {
@@ -3581,7 +3583,7 @@ button.fr-pagination__link:not([aria-current])[disabled] {
 
 .fr-tabs__panel:focus,
 .fr-tabs__panel:focus-visible {
-    outline-offset: calc(-1rem + 2px)
+    outline-offset: calc(-1rem + 2px);
 }
 
 .fr-tabs__panel:not(.fr-tabs__panel--selected) {
@@ -3589,20 +3591,20 @@ button.fr-pagination__link:not([aria-current])[disabled] {
 }
 
 .fr-tabs:after {
-    box-shadow: inset 1px -1px 0 0 var(--g300), inset -1px 0 0 var(--g300)
+    box-shadow: inset 1px -1px 0 0 var(--boxcountour), inset -1px 0 0 var(--boxcountour)
 }
 
 .fr-tabs__list:after,
 .fr-tabs__list>li:first-child:before,
 .fr-tabs__list>li:last-child:after,
 .fr-tabs__list>li:not(:first-child):before {
-    box-shadow: 0 1px 0 0 var(--g300)
+    box-shadow: 0 1px 0 0 var(--boxcountour)
 }
 
 .fr-tabs__tab:not([aria-selected=true]) {
-    background-color: var(--bf100-g750);
+    background-color: rgba(8, 218, 8, 0.116);
     color: var(--g700);
-    box-shadow: 0 1px 0 0 var(--g300)
+    box-shadow: 0 1px 0 0 var(--boxcountour);
 }
 
 :root:not([data-fr-theme=dark i]) .fr-tabs__tab:not([aria-selected=true]) {
@@ -3619,7 +3621,7 @@ button.fr-pagination__link:not([aria-current])[disabled] {
 :root:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-tabs__tab:not([aria-selected=true]),
 :root:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-tabs__tab:not([aria-selected=true]) {
     --color-hover: rgba(79, 79, 79, 0.5);
-    --color-active: hsla(0, 0%, 45.1%, 0.5);
+    --color-active: rgba(182, 255, 182, 0.5);
 }
 
 :root[data-fr-theme=dark i] .fr-tabs__tab:not([aria-selected=true]) {
@@ -3630,13 +3632,13 @@ button.fr-pagination__link:not([aria-current])[disabled] {
 .fr-tabs__tab:not([aria-selected=true]):disabled,
 .fr-tabs__tab:not([aria-selected=true])[disabled] {
     color: var(--g600-g400);
-    background-color: var(--g200)
+    background-color: var(--g200);
 }
 
 .fr-tabs__tab[aria-selected=true] {
-    box-shadow: inset 0 .125rem 0 0 var(--bf500);
+    box-shadow: inset 0 .125rem 0 0 var(--boxshadow);
     background-color: var(--t-plain);
-    color: var(--bf500)
+    color: var(--bf200);
 }
 
 .fr-tabs__tab[aria-selected=true]:active:not(:disabled),
@@ -3647,7 +3649,7 @@ button.fr-pagination__link:not([aria-current])[disabled] {
 }
 
 .fr-tabs__tab[aria-selected=true]:after {
-    box-shadow: -1px 0 0 0 var(--g300), 1px 0 0 0 var(--g300)
+    box-shadow: -1px 0 0 0 var(--boxcountour), 1px 0 0 0 var(--boxcountour)
 }
 
 .fr-tile {
@@ -5600,25 +5602,25 @@ button.fr-pagination__link:not([aria-current])[disabled] {
 }
 
 :root:not([data-fr-theme=dark i]) .fr-btn {
-    --color-hover: rgba(0, 0, 221, 0.5);
-    --color-active: rgba(41, 41, 255, 0.5)
+    --color-hover: rgba(0, 221, 0, 0.5);
+    --color-active: rgba(41, 255, 41, 0.5);
 }
 
 :root:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-btn,
 :root:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-btn {
-    --color-hover: rgba(0, 0, 221, 0.5);
-    --color-active: rgba(41, 41, 255, 0.5)
+    --color-hover: rgba(0, 221, 0, 0.5);
+    --color-active: rgba(41, 255, 41, 0.5)
 }
 
 :root:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-btn,
 :root:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-btn {
-    --color-hover: rgba(71, 71, 255, 0.5);
-    --color-active: rgba(0, 0, 243, 0.5)
+    --color-hover: rgba(71, 255, 71, 0.5);
+    --color-active: rgba(0, 243, 0, 0.5)
 }
 
 :root[data-fr-theme=dark i] .fr-btn {
-    --color-hover: rgba(71, 71, 255, 0.5);
-    --color-active: rgba(0, 0, 243, 0.5)
+    --color-hover: rgba(71, 255, 71, 0.5);
+    --color-active: rgba(0, 243, 0, 0.5)
 }
 
 a.fr-btn:not([href]),
@@ -6529,7 +6531,7 @@ input.fr-input[disabled] {
 select.fr-select:disabled,
 select.fr-select[disabled] {
     color: var(--g600-g400);
-    box-shadow: inset 0 -2px 0 0 var(--g400);
+    box-shadow: inset 0 -2px 0 0 var(--g800);
     opacity: 1;
     --data-uri-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 24 24' ><path fill='%236a6a6a' d='M12,13.1l5-4.9l1.4,1.4L12,15.9L5.6,9.5l1.4-1.4L12,13.1z'/></svg>");
     background-image: var(--data-uri-svg)
@@ -7350,7 +7352,7 @@ input.fr-toggle__input[disabled]+label:after {
 }
 
 .fr-search-bar .fr-input {
-    box-shadow: inset 0 -2px 0 0 var(--bf500)
+    box-shadow: inset 0 -2px 0 0 var(--g500)
 }
 
 .fr-header {

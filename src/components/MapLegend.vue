@@ -113,7 +113,7 @@ export default {
 
     .legend_container{
       position: absolute;
-      top: 73%;
+      top: 37rem;
       left: 5%
     }
 
