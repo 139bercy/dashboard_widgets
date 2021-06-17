@@ -193,7 +193,63 @@
 
                 <!-- Volet verdissement -->
 
-                <complete-panel></complete-panel>
+                <div class="fr-mt-6w">
+                    <a class="anchor" id="refonglet"></a>
+                    <div class="lvl2-header fr-px-2w fr-px-md-3w fr-pt-3w">
+                        <h3> Modernisation de la filière (BPI)
+                        </h3>
+                        <p class="fr-text--xs fr-mb-3w">Source :
+                            <a title="vers data.gouv.fr" href="source_http" target="_blank" rel="noopener" data-section="nom_section" data-subsection="nom_subsection">
+                            Vers des fichiers d'open-data</a>
+                        </p>
+                    </div>
+
+                    <div class="fr-tabs" style="transition: none 0s ease 0s;">
+
+                        <ul class="fr-tabs__list" role="tablist" aria-label="changer d'onglet">
+                            <li role="presentation">
+                                <button id="tabpanel-2-1" class="fr-tabs__tab" tabindex="0" role="tab" aria-selected="true" aria-controls="tabpanel-2-1-panel_BPI">Nombre d'entreprises
+                            </button>
+                            </li>
+                            <li role="presentation">
+                                <button id="tabpanel-2-2" class="fr-tabs__tab" tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-2-2-panel_BPI">Montant total de l'investissement ainsi déclenché
+                            </button>
+                            </li>
+                        </ul>
+
+                        <div id="tabpanel-2-1-panel_BPI" class="fr-tabs__panel fr-tabs__panel--selected fr-p-3w" role="tabpanel" aria-labelledby="tabpanel-2-1" tabindex="0">
+
+                            <div style="margin-bottom: 2rem">
+                                <multiline-chart indicateur1="Nombre_d’entreprises_-_BPI" indicateur2="Nombre_de_PME_-_BPI"> </multiline-chart>
+                            </div>
+                            <map-chart indicateur="Nombre_d’entreprises_-_BPI"></map-chart>
+
+                            <section class="fr-accordion">
+                                <h3 class="fr-accordion__title">
+                                    <button class="fr-accordion__btn fr-text--sm" aria-expanded="false" aria-controls="accordion_BPI">
+                                        En savoir plus sur la mesure :
+                                    </button>
+                                </h3>
+                                <div class="fr-collapse fr-mx-0" id="accordion_BPI">
+                                    <p class="fr-mb-0 fr-text--sm">
+                                        Propriétés_mesure
+                                    </p>
+                                </div>
+                            </section>
+
+                        </div>
+
+                        <div id="tabpanel-2-2-panel_BPI" class="fr-tabs__panel fr-p-7w" role="tabpanel" aria-labelledby="tabpanel-2-2" tabindex="1">
+                            <line-chart indicateur="Montant_de_l’investissement_total_déclenché_- _ETE"></line-chart>
+                            <map-chart indicateur="Montant_de_l’investissement_total_déclenché_- _ETE"></map-chart>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <big-panel panel_id="panel1" source_http="http" indicateur1="Nombre_d’entreprises_-_BPI" indicateur1bis="Nombre_d’entreprises_-_BPI" indicateur2="Nombre_d’entreprises_-_BPI" indicateur2bis="Nombre_d’entreprises_-_BPI" Propriétés_mesure="Nombre_d’entreprises_-_BPI"></big-panel>
 
 
 
