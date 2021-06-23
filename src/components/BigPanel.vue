@@ -19,16 +19,17 @@
             </button>
             </li>
             <li role="presentation">
-                <button id="tabpanel-2-2" class="fr-tabs__tab" tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-2-2-panel">Montant total de l'investissement ainsi déclenché
+                <button id="tabpanel-2-2" class="fr-tabs__tab" tabindex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-2-2-panel">Montant total de l'investissement
             </button>
             </li>
         </ul>
 
         <div id="tabpanel-2-1-panel" class="fr-tabs__panel fr-tabs__panel--selected fr-p-3w" role="tabpanel" aria-labelledby="tabpanel-2-1" tabindex="0">
             <div style="margin-bottom: 2rem">
-                <multiline-chart :indicateur1="indicateur1" :indicateur2="indicateur1bis"></multiline-chart>
+                <line-chart :indicateur="indicateur1" v-if="card_line1==1"></line-chart>
+                <multiline-chart :indicateur1="indicateur1" :indicateur2="indicateur1bis" v-if="card_line1==2"></multiline-chart>
             </div>
-            <map-chart :indicateur="indicateur1"></map-chart>
+            <map-chart :indicateur="indicateur1" v-if="map1"></map-chart>
 
             <section class="fr-accordion">
                 <h3 class="fr-accordion__title">
@@ -37,18 +38,20 @@
                   </button>
                 </h3>
                 <div class="fr-collapse fr-mx-0" id="accordion1">
-                    <p class="fr-mb-0 fr-text--sm" :text="Propriétés_mesure">
+                    <p class="fr-mb-0 fr-text--sm">
+                      {{Propriétés_mesure}}
                     </p>
                 </div>
             </section>
 
         </div>
 
-        <div id="tabpanel-2-2-panel" class="fr-tabs__panel fr-p-7w" role="tabpanel" aria-labelledby="tabpanel-2-2" tabindex="1">
+        <div id="tabpanel-2-2-panel" class="fr-tabs__panel fr-p-3w" role="tabpanel" aria-labelledby="tabpanel-2-2" tabindex="1">
             <div style="margin-bottom: 2rem">
-                <multiline-chart :indicateur1="indicateur2" :indicateur2="indicateur2bis"></multiline-chart>
+                <line-chart :indicateur="indicateur2" v-if="card_line2==1"></line-chart>
+                <multiline-chart :indicateur1="indicateur2" :indicateur2="indicateur2bis" v-if="card_line2==2"></multiline-chart>
             </div>
-            <map-chart :indicateur="indicateur2"></map-chart>
+            <map-chart :indicateur="indicateur2" v-if="map2"></map-chart>
 
             <section class="fr-accordion">
                 <h3 class="fr-accordion__title">
@@ -57,7 +60,8 @@
                   </button>
                 </h3>
                 <div class="fr-collapse fr-mx-0" id="accordion2">
-                    <p class="fr-mb-0 fr-text--sm" :text="Propriétés_mesure">
+                    <p class="fr-mb-0 fr-text--sm">
+                      {{Propriétés_mesure}}
                     </p>
                 </div>
             </section>
@@ -89,7 +93,16 @@ export default {
     indicateur2: String,
     indicateur2bis: String,
     Propriétés_mesure: String,
+    card_line1: Number,
+    card_line2: Number,
+    map1: Boolean,
+    map2: Boolean,
   },
+
+  actions: {
+
+  },
+
   computed: {
   },
   methods: {
@@ -104,8 +117,8 @@ export default {
 
   mounted(){
   }
-
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

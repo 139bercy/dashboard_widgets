@@ -1,17 +1,11 @@
 <template>
   <div class="widget_container fr-grid-row" :class="(loading)?'loading':''" :data-display="display" :id="widgetId">
     <TopRow :data-display="display" :localisation="selectedGeoLabel" :date="currentDate" :values="currentValues" :names="names" :evolcodes="evolcodes" :evolvalues="evolvalues"></TopRow>
-    <LeftCol :data-display="display" :localisation="selectedGeoLabel" :date="currentDate" :values="currentValues" :names="names" :evolcodes="evolcodes" :evolvalues="evolvalues"></LeftCol>
-    <div class="r_col r-col-12 fr-col-lg-9">
-      <div class="chart ml-lg">
-        <canvas :id="chartId"></canvas>
-        <div class="flex fr-mt-3v fr-mb-1v" :style="style">
-          <span class="legende_dot"></span>
-          <p class="fr-text--sm fr-text--bold fr-ml-1v fr-mb-0">{{capitalize(units[0])}}</p>
-        </div>
-        <div class="flex" :style="style">
-          <span class="legende_dot" data-serie="2"></span>
-          <p class="fr-text--sm fr-text--bold fr-ml-1v fr-mb-0">{{capitalize(units[1])}}</p>
+    <div class="fr-grid-row" style="display:flex; flex-direction:row;">
+      <LeftCol :data-display="display" :localisation="selectedGeoLabel" :date="currentDate" :values="currentValues" :names="names" :evolcodes="evolcodes" :evolvalues="evolvalues"></LeftCol>
+      <div class="r_col r-col-12 fr-col-lg-9">
+        <div class="chart ml-lg">
+          <canvas :id="chartId"></canvas>
         </div>
       </div>
     </div>
@@ -343,6 +337,7 @@ export default {
       align-self:center;
       .flex{
         display: flex;
+        align-items: center;
         .legende_dot{
           width: 1rem;
           height: 1rem;
@@ -350,6 +345,15 @@ export default {
           background-color: #000091;
           display: inline-block;
           margin-top: 0.25rem;
+          &[data-serie="2"]{
+            background-color: #007c3a;
+          }
+        }
+        .legende_line{
+          width: 1.5rem;
+          height: 0.2rem;
+          background-color: #000091;
+          margin-top: 0rem;
           &[data-serie="2"]{
             background-color: #007c3a;
           }

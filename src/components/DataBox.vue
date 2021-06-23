@@ -1,17 +1,31 @@
 <template>
 
-  <div class="l_col fr-col-12 fr-col-lg-3">
-    <div class="indicateur_info" :class="i>0 ? 'fr-mt-2w' : ''" v-for="(n,i) in names" :key="n">
-      <p class="fr-text--sm fr-text--bold fr-mt-0 fr-mb-1w">{{names[i]}}</p>
-      <div class="l_box_number_container">
-        <p class="fr-text--bold fr-mb-1v">{{convertNumberToHuman(values[i])}}</p>
-      </div>
+  <div class="fr-col-12 fr-col-lg-3">
+    
+    <div class="flex fr-mt-2w">
+      <p class="fr-text--sm fr-text--bold fr-mt-0 fr-mb-1w" style="text-align: right;">{{names[0]}}</p>
     </div> 
+    <div class="flex fr-mb-1w" style="float: right;">
+      <p class="fr-text--bold fr-mb-1v" style="font-size: vw; margin-right: 15px; vertical-align: middle;">{{convertNumberToHuman(values[0])}}</p>
+      <span class="legende_line1"></span>
+    </div>
+
+    <div class="flex fr-mt-2w">
+      <p class="fr-text--sm fr-text--bold fr-mt-0 fr-mb-1w" style="text-align: right;">{{names[1]}}</p>
+    </div> 
+    <div class="flex fr-mb-1w" style="float: right;">
+      <p class="fr-text--bold fr-mb-1v" style="font-size: vw; margin-right: 15px">{{convertNumberToHuman(values[1])}}</p>
+      <span class="legende_line2"></span>
+    </div>
+
+
   </div>  
 
 </template>
 
 <script>
+
+import store from '@/store'
 
 export default {
   name: 'LeftCol',
@@ -21,7 +35,8 @@ export default {
       isDown:[false,false],
       isGreen:[false,false],
       isRed:[false,false],
-      isBlue:[false,false]
+      isBlue:[false,false],
+      units:[]
     }
   },
   props: {
@@ -81,7 +96,72 @@ export default {
     this.testEvolStyle()
   },
 
+  capitalize(string){
+    if(string){
+      return string.charAt(0).toUpperCase() + string.slice(1)
+    }
+  },
+
+  updateData() {
+
+    var self = this
+
+    var geolevel = this.selectedGeoLevel
+    var geocode = this.selectedGeoCode
+
+    this.localGeoLabel = this.selectedGeoLabel
+
+    var geoObject
+
+    geoObject = this.getGeoObject(geolevel, geocode)
+
+    if (typeof geoObject === 'undefined') {
+      if (geolevel == 'regions') {
+        geoObject = this.getGeoObject("France", "01")
+        this.localGeoLabel = "France entière"
+        this.geoFallback = true
+        this.geoFallbackMsg = "Affichage des résultats au niveau national, faute de données au niveau régional"
+      } else {
+        var depObj = store.state.dep.find(obj => {
+          return obj["value"] === geocode
+        })
+        geoObject = this.getGeoObject("regions", depObj["region_value"])
+        this.localGeoLabel = depObj["region"]
+        this.geoFallback = true
+        this.geoFallbackMsg = "Affichage des résultats au niveau régional, faute de données au niveau départemental"
+        if (typeof geoObject === 'undefined') {
+          geoObject = this.getGeoObject("France", "01")
+          this.localGeoLabel = "France entière"
+          this.geoFallback = true
+          this.geoFallbackMsg = "Affichage des résultats au niveau national, faute de données au niveau régional ou départemental"
+        }
+      }
+    }
+
+    this.names.length = 0
+    this.units.length = 0
+    this.currentValues.length = 0
+    this.evolcodes.length = 0
+    this.evolvalues.length = 0
+
+    this.names.push(this.indicateur_data["nom"])
+    this.units.push(this.indicateur_data["unite"])
+    this.currentValues.push(geoObject["last_value"])
+    this.currentDate = this.convertDateToHuman(geoObject["last_date"])
+    this.evolcodes.push(geoObject["evol_color"])
+    this.evolvalues.push(geoObject["evol_percentage"])
+
+    this.labels.length = 0
+    this.dataset.length = 0
+
+    geoObject["values"].forEach(function (d) {
+      self.labels.push(self.convertDateToHuman(d["date"]))
+      self.dataset.push((d["value"]))
+    })
+  },
+
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -169,6 +249,32 @@ export default {
         display: block;
         justify-content: unset;
       }
+    }
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+    .legende_line1{
+      width: 1.5rem;
+      height: 0.2rem;
+      background-color: #000091;
+      margin-top: 0rem;
+      &[data-serie="2"]{
+        background-color: #007c3a;
+      }
+    }
+    .legende_line1{
+      width: 1.5rem;
+      height: 0.3rem;
+      background-color: #000091;
+      margin-top: 0rem;
+    }
+    .legende_line2{
+      width: 1.5rem;
+      height: 0.3rem;
+      background-color: #007c3a;
+      margin-top: 0rem;
     }
   }
 
