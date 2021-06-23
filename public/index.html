@@ -128,19 +128,12 @@
                     Retrouvez par mois et par département l'état d'avancement des mesures phares de France Relance.
                 </p>
 
-                <!-- Volet verdissement -->
-
                 <div id="Panneaux">
 
-                    <big-panel panel_id="panel1" source_http="http" indicateur1="Nombre_d’entreprises_-_BPI" indicateur1bis="Nombre_de_PME_-_BPI" indicateur2="Montant_cumulé_de_l’investissement_total_ainsi_déclenché_-_CBC" indicateur2bis="Nombre_d’entreprises_-_BPI" Propriétés_mesure="Nombre_d’entreprises_-_BPI"
-                        card_line1=2 map1=true card_line2=1 map2=true></big-panel>
+                    <big-panel panel_id="test" source_http="http" indicateur1="Nombre_d’entreprises_-_BPI" indicateur1bis="Nombre_de_PME_-_BPI" indicateur2="Montant_cumulé_de_l’investissement_total_ainsi_déclenché_-_CBC" indicateur2bis="Nombre_d’entreprises_-_BPI" indicateur3="Montant_cumulé_de_l’investissement_total_ainsi_déclenché_-_CBC"
+                        indicateur3bis="Nombre_d’entreprises_-_BPI" Propriétés_mesure="Nombre_d’entreprises_-_BPI" card_line1=2 map1=true card_line2=1 map2=true card_line3=1 map3=true card_onglet=2></big-panel>
 
                 </div>
-
-                <!-- Volet cohésion -->
-
-                <!-- Volet compétitivité -->
-
 
             </div>
         </div>
@@ -149,59 +142,79 @@
     <script type="module" src="js/dsfr.module.min.js"></script>
     <script type="text/javascript" nomodule src="js/dsfr.nomodule.min.js"></script>
 
+    <script>
+        function to_json_name_format(nom_propilot) {
+            var nom_propilot = nom_propilot.replace('_', '')
+            var nom_propilot = nom_propilot.replace('/', '&')
+            var nom_propilot = nom_propilot.replace('"', '')
+            return nom_propilot
+        };
+
+        var config;
+        fetch('config_file.json')
+            .then(res => res.json())
+            .then(data => config = data);
+
+        var panneau_id_num = 0;
+        for (var panneau in config) {
+
+            console.log('hello');
+
+            panneau_id_num += 1;
+            var panneau_id = "Panneau_" + panneau_id_num;
+
+            document.getElementById("Panneaux").innerHTML += "<big-panel id=" + panneau_id + "></big-panel>";
+
+            document.getElementById(panneau_id).setAttribute("panel_id", panneau_id);
+
+            var onglet1 = panneau["Onglet No 1"];
+
+            document.getElementById(panneau_id).setAttribute("source_http", onglet1.Lien_page_mesure);
+            /*            document.getElementById(panneau_id).setAttribute("source_http", onglet1.Lien_open_source); */
+            document.getElementById(panneau_id).setAttribute("Propriétés_mesure", onglet1.Description_mesure);
+
+            var onglet_id_num = 0;
+            var nb_indicateurs_onglet = 0;
+            for (var onglet in panneau) {
+                onglet_id_num += 1;
+
+                var temporary_subset = onglet.filter(function(Indicateur) {
+                    return +(Indicateur.Indicateur_principal) == 1;
+                });
+                var Nom_indicateur_propilot = temporary_subset.Nom_indicateur_propilot;
+                Nom_indicateur_propilot = to_json_name_format(Nom_indicateur_propilot);
+                var attribute_traite = "indicateur" + String(onglet_id_num);
+                document.getElementById(panneau_id).setAttribute(attribute_traite, Nom_indicateur_propilot);
+                var attribute_traite = "map" + String(onglet_id_num);
+                document.getElementById(panneau_id).setAttribute(attribute_traite, onglet[Indicateur_principal == 1].Carte);
+
+                nb_indicateurs_onglet += temporary_subset.Carte;
+
+                attribute_traite = "indicateur" + String(onglet_id_num) + "bis";
+                Nom_indicateur_propilot = "Valeur_par_défaut";
+
+                var temporary_subset = onglet.filter(function(Indicateur) {
+                    return +(Indicateur.Indicateur_principal) == 0;
+                });
+                if (temporary_subset.length > 0) {
+
+                    Nom_indicateur_propilot = onglet[Indicateur_principal == 0].Nom_indicateur_propilot;
+                    Nom_indicateur_propilot = to_json_name_format(Nom_indicateur_propilot);
+                    nb_indicateurs_onglet += 1;
+
+                };
+                document.getElementById(panneau_id).setAttribute(attribute_traite, Nom_indicateur_propilot);
+
+                attribute_traite = "card_line" + String(onglet_id_num);
+                document.getElementById(panneau_id).setAttribute(attribute_traite, nb_indicateurs_onglet);
+
+            };
+
+            document.getElementById(panneau_id).setAttribute("card_onglet", onglet_id_num);
+
+        };
+    </script>
+
 </body>
-
-<script>
-    function to_json_name_format(nom_propilot) {
-        var nom_propilot = nom_propilot.replace('_', '')
-        return nom_propilot
-    }
-
-    var panneau_id_num = 0
-    var config = require('config_file.json')
-    for (var panneau in list(config.keys())) {
-
-        panneau_id_num += 1
-        var panneau_id = "Panneau_" + String(panneau_id_num)
-
-        document.getElementById("Panneaux").innerHTML += "<big-panel> id= \"\r\n" + panneau_id + "\"\r\n </big-panel>";
-        document.getElementById(panneau_id).setAttribute("panel_id", panneau_id);
-        var onglet1 = list(config[panneau].keys())[0]
-        document.getElementById(panneau_id).setAttribute("source_http", onglet1.Lien_page_mesure);
-        document.getElementById(panneau_id).setAttribute("source_http", onglet1.Lien_open_source);
-        document.getElementById(panneau_id).setAttribute("Propriétés_mesure", onglet1.Description_mesure);
-
-        onglet_id_num = 0
-        nb_indicateurs_panel = 0
-        for (var onglet in list(config[panneau].keys())) {
-            onglet_id_num += 1
-
-            var Nom_indicateur_propilot = onglet.keys()[Indicateur_principal == 1].Nom_indicateur_propilot
-            Nom_indicateur_propilot = to_json_name_format(Nom_indicateur_propilot)
-            var indicateur_traité = "indicateur" + String(onglet_id_num)
-            document.getElementById(panneau_id).setAttribute(indicateur_traité, Nom_indicateur_propilot);
-            var indicateur_traité = "map" + String(onglet_id_num)
-            document.getElementById(panneau_id).setAttribute(indicateur_traité, onglet.keys()[Indicateur_principal == 1].Carte);
-
-            nb_indicateurs_panel += (1 * onglet.keys()[Indicateur_principal == 1].Carte)
-
-            if (len(list(panneau[onglet].keys()[Indicateur_principal == 0])) > 0) {
-
-                indicateur_traité = "indicateur" + String(onglet_id_num) + "bis"
-                Nom_indicateur_propilot = to_json_name_format(indicateur)
-                document.getElementById(panneau_id).setAttribute(indicateur_traité, Nom_indicateur_propilot)
-                nb_indicateurs_panel += 1
-
-            }
-
-            indicateur_traité = "card_line" + String(onglet_id_num)
-            document.getElementById(panneau_id).setAttribute(indicateur_traité, Nom_indicateur_propilot)
-
-        }
-
-
-    }
-</script>
-
 
 </html>
