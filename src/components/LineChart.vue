@@ -1,24 +1,25 @@
 <template>
 
   <div class="widget_container fr-grid-row" :class="(loading)?'loading':''" :data-display="display" :id="widgetId">
-    <div class="fr-warning" v-if="geoFallback">
-      <div class="scheme-border">
-        <span class="fr-fi-information-fill fr-px-1w fr-py-3v" aria-hidden="true"></span>
-      </div>
-      <p class="fr-text--sm fr-mb-0 fr-p-3v">{{ geoFallbackMsg }}
-      </p>
+      <div class="fr-warning" v-if="geoFallback">
+        <div class="scheme-border">
+            <span class="fr-fi-information-fill fr-px-1w fr-py-3v" aria-hidden="true"></span>
+        </div>
+        <p class="fr-text--sm fr-mb-0 fr-p-3v">{{geoFallbackMsg}}
+        </p>
     </div>
-    <LeftCol :data-display="display" :localisation="localGeoLabel" :date="currentDate" :values="currentValues"
-             :names="names" :evolcodes="evolcodes" :evolvalues="evolvalues"></LeftCol>
-    <div class="r_col fr-col-12 fr-col-lg-9">
+    <LineCol v-bind="leftColProps" v-if="topCol"></LineCol>
+    <LeftCol v-bind="leftColProps" v-if="leftCol"></LeftCol>
+    <div class="r_col fr-col-12" :class="{'fr-col-lg-9': leftCol}">
       <div class="chart ml-lg">
         <canvas :id="chartId"></canvas>
         <div class="flex fr-mt-3v" :style="style">
           <span class="legende_dot"></span>
-          <p class="fr-text--sm fr-text--bold fr-ml-1v fr-mb-0">{{ capitalize(units[0]) }}</p>
+          <p class="fr-text--sm fr-text--bold fr-ml-1v fr-mb-0">{{capitalize(units[0])}}</p>
         </div>
       </div>
     </div>
+    <LineCol v-bind="leftColProps" v-if="bottomCol"></LineCol>
   </div>
 </template>
 
@@ -26,57 +27,74 @@
 import store from '@/store'
 import Chart from 'chart.js'
 import LeftCol from '@/components/LeftCol'
+import LineCol from '@/components/LineCol'
+import { mixin } from '@/utils.js'
 
 export default {
   name: 'LineChart',
   components: {
-    LeftCol
+    LeftCol,
+    LineCol
   },
-  data() {
+  mixins: [mixin],
+  data () {
     return {
       indicateur_data: undefined,
       labels: [],
       dataset: [],
-      widgetId: "",
-      chartId: "",
-      display: "",
-      localisation: "",
-      currentValues: [],
-      currentDate: "",
-      names: [],
+      widgetId: '',
+      chartId: '',
+      display: '',
+      leftColProps: {
+        localisation: '',
+        currentValues: [],
+        currentDate: '',
+        names: [],
+        evolcodes: [],
+        evolvalues: [],
+        isMap: false,
+        date: ''
+      },
       units: [],
-      evolcodes: [],
-      evolvalues: [],
       chart: undefined,
       loading: true,
       legendLeftMargin: 0,
-      localGeoLabel: "",
       geoFallback: false,
-      geoFallbackMsg: "",
-      map: false
+      geoFallbackMsg: ''
     }
   },
   props: {
     indicateur: String,
+    interpolation: String,
+    topCol: {
+      type: Boolean,
+      default: false
+    },
+    leftCol: {
+      type: Boolean,
+      default: true
+    },
+    bottomCol: {
+      type: Boolean,
+      default: false
+    }
   },
   computed: {
-    selectedGeoLevel() {
+    selectedGeoLevel () {
       return store.state.user.selectedGeoLevel
     },
-    selectedGeoCode() {
+    selectedGeoCode () {
       return store.state.user.selectedGeoCode
     },
-    selectedGeoLabel() {
+    selectedGeoLabel () {
       return store.state.user.selectedGeoLabel
     },
-    style() {
-      return 'margin-left: ' + this.legendLeftMargin + 'px';
-    },
-
+    style () {
+      return 'margin-left: ' + this.legendLeftMargin + 'px'
+    }
   },
   methods: {
-
-    async getData() {
+    async getData () {
       store.dispatch('getData', this.indicateur).then(data => {
         this.indicateur_data = data
         this.loading = false
@@ -84,100 +102,96 @@ export default {
       })
     },
 
-    updateData() {
+    updateData () {
+      const self = this
 
-      var self = this
+      const geolevel = this.selectedGeoLevel
+      const geocode = this.selectedGeoCode
 
-      var geolevel = this.selectedGeoLevel
-      var geocode = this.selectedGeoCode
+      this.leftColProps.localisation = this.selectedGeoLabel
 
-      this.localGeoLabel = this.selectedGeoLabel
-
-      var geoObject
+      let geoObject
 
       geoObject = this.getGeoObject(geolevel, geocode)
+      this.leftColProps.date = this.convertDateToHuman(geoObject.last_date)
 
       if (typeof geoObject === 'undefined') {
-        if (geolevel == 'regions') {
-          geoObject = this.getGeoObject("France", "01")
-          this.localGeoLabel = "France entière"
+        if (geolevel === 'regions') {
+          geoObject = this.getGeoObject('France', '01')
+          this.leftColProps.localisation = 'France entière'
           this.geoFallback = true
-          this.geoFallbackMsg = "Affichage des résultats au niveau national, faute de données au niveau régional"
+          this.geoFallbackMsg = 'Affichage des résultats au niveau national, faute de données au niveau régional'
         } else {
-          var depObj = store.state.dep.find(obj => {
-            return obj["value"] === geocode
+          const depObj = store.state.dep.find(obj => {
+            return obj.value === geocode
           })
-          geoObject = this.getGeoObject("regions", depObj["region_value"])
-          this.localGeoLabel = depObj["region"]
+          geoObject = this.getGeoObject('regions', depObj.region_value)
+          this.leftColProps.localisation = depObj.region
           this.geoFallback = true
-          this.geoFallbackMsg = "Affichage des résultats au niveau régional, faute de données au niveau départemental"
+          this.geoFallbackMsg = 'Affichage des résultats au niveau régional, faute de données au niveau départemental'
           if (typeof geoObject === 'undefined') {
-            geoObject = this.getGeoObject("France", "01")
-            this.localGeoLabel = "France entière"
+            geoObject = this.getGeoObject('France', '01')
+            this.leftColProps.localisation = 'France entière'
             this.geoFallback = true
-            this.geoFallbackMsg = "Affichage des résultats au niveau national, faute de données au niveau régional ou départemental"
+            this.geoFallbackMsg = 'Affichage des résultats au niveau national, faute de données au niveau régional ou départemental'
           }
         }
       }
 
-      this.names.length = 0
+      this.leftColProps.names.length = 0
       this.units.length = 0
-      this.currentValues.length = 0
-      this.evolcodes.length = 0
-      this.evolvalues.length = 0
+      this.leftColProps.currentValues.length = 0
+      this.leftColProps.evolcodes.length = 0
+      this.leftColProps.evolvalues.length = 0
 
-      this.names.push(this.indicateur_data["nom"])
-      this.units.push(this.indicateur_data["unite"])
-      this.currentValues.push(geoObject["last_value"])
-      this.currentDate = this.convertDateToHuman(geoObject["last_date"])
-      this.evolcodes.push(geoObject["evol_color"])
-      this.evolvalues.push(geoObject["evol_percentage"])
+      this.leftColProps.names.push(this.indicateur_data.nom)
+      this.units.push(this.indicateur_data.unite)
+      this.leftColProps.currentValues.push(geoObject.last_value)
+      this.leftColProps.currentDate = this.convertDateToHuman(geoObject.last_date)
+      this.leftColProps.evolcodes.push(geoObject.evol_color)
+      this.leftColProps.evolvalues.push(geoObject.evol_percentage)
 
       this.labels.length = 0
       this.dataset.length = 0
 
-      geoObject["values"].forEach(function (d) {
-        self.labels.push(self.convertDateToHuman(d["date"]))
-        self.dataset.push((d["value"]))
+      geoObject.values.forEach(function (d) {
+        self.labels.push(self.convertDateToHuman(d.date))
+        self.dataset.push((d.value))
       })
-
     },
 
-    getGeoObject(geolevel, geocode) {
-
-      var geoObject
-      if (geolevel === "France") {
-        geoObject = this.indicateur_data["france"][0]
+    getGeoObject (geolevel, geocode) {
+      let geoObject
+      if (geolevel === 'France') {
+        geoObject = this.indicateur_data.france[0]
       } else {
         geoObject = this.indicateur_data[geolevel].find(obj => {
-          return obj["code_level"] === geocode
+          return obj.code_level === geocode
         })
       }
       return geoObject
     },
 
-    updateChart() {
-
+    updateChart () {
       this.updateData()
       this.chart.update()
-
     },
 
-    createChart() {
-      var self = this
+    createChart () {
+      const self = this
 
       this.updateData()
 
-      var xTickLimit
+      let xTickLimit
       this.display === 'big' ? xTickLimit = 6 : xTickLimit = 1
 
-      var ctx = document.getElementById(self.chartId).getContext('2d')
+      const ctx = document.getElementById(self.chartId).getContext('2d')
 
-      var gradientFill
+      let gradientFill
       this.display === 'big' ? gradientFill = ctx.createLinearGradient(0, 0, 0, 500) : gradientFill = ctx.createLinearGradient(0, 0, 0, 250)
 
-      gradientFill.addColorStop(0, "rgba(218, 218, 254, 0.6)")
-      gradientFill.addColorStop(0.6, "rgba(245, 245, 255, 0)")
+      gradientFill.addColorStop(0, 'rgba(218, 218, 254, 0.6)')
+      gradientFill.addColorStop(0.6, 'rgba(245, 245, 255, 0)')
 
       this.chart = new Chart(ctx, {
         data: {
@@ -185,21 +199,22 @@ export default {
           datasets: [{
             data: self.dataset,
             backgroundColor: gradientFill,
-            borderColor: "#000091",
+            borderColor: '#000091',
             type: 'line',
+            cubicInterpolationMode: this.interpolation || 'default',
             pointRadius: 8,
-            pointBackgroundColor: "rgba(0, 0, 0, 0)",
-            pointBorderColor: "rgba(0, 0, 0, 0)",
+            pointBackgroundColor: 'rgba(0, 0, 0, 0)',
+            pointBorderColor: 'rgba(0, 0, 0, 0)'
           }]
         },
         options: {
           animation: {
-            easing: "easeInOutBack"
+            easing: 'easeInOutBack'
           },
           scales: {
             xAxes: [{
               gridLines: {
-                color: "rgba(0, 0, 0, 0)",
+                color: 'rgba(0, 0, 0, 0)'
               },
               ticks: {
                 autoSkip: true,
@@ -207,13 +222,13 @@ export default {
                 maxRotation: 0,
                 minRotation: 0,
                 callback: function (value) {
-                  return value.toString().substring(3, 5) + "/" + value.toString().substring(8, 10)
+                  return value.toString().substring(3, 5) + '/' + value.toString().substring(8, 10)
                 }
-              },
+              }
             }],
             yAxes: [{
               gridLines: {
-                color: "#e5e5e5",
+                color: '#e5e5e5',
                 borderDash: [3]
               },
               ticks: {
@@ -221,8 +236,8 @@ export default {
                 maxTicksLimit: 5
               },
               afterFit: function (axis) {
-                self.legendLeftMargin = axis.width;
-              },
+                self.legendLeftMargin = axis.width
+              }
             }]
           },
           legend: {
@@ -230,47 +245,23 @@ export default {
           },
           tooltips: {
             displayColors: false,
-            backgroundColor: "#6b6b6b",
+            backgroundColor: '#6b6b6b',
             callbacks: {
               label: function (tooltipItems) {
-                var int = self.convertFloatToHuman(tooltipItems["value"])
-                return int + " " + self.units[0]
+                const int = self.convertFloatToHuman(tooltipItems.value)
+                return int + ' ' + self.units[0]
               },
               title: function (tooltipItems) {
-                return tooltipItems[0]["label"]
+                return tooltipItems[0].label
               },
               labelTextColor: function () {
-                return "#eeeeee"
+                return '#eeeeee'
               }
-            },
+            }
           }
         }
-      });
-    },
-
-    convertStringToLocaleNumber(string) {
-      return parseInt(string).toLocaleString()
-    },
-
-    convertFloatToHuman(float) {
-      if (Number.isInteger(parseFloat(float))) {
-        return parseInt(float).toLocaleString()
-      } else {
-        return parseFloat(float).toFixed(1).toLocaleString()
-      }
-    },
-
-    convertDateToHuman(string) {
-      let date = new Date(string)
-      return date.toLocaleDateString()
-    },
-
-    capitalize(string) {
-      if (string) {
-        return string.charAt(0).toUpperCase() + string.slice(1)
-      }
+      })
     }
-
   },
 
   watch: {
@@ -282,92 +273,77 @@ export default {
     }
   },
 
-  created() {
-    this.chartId = "myChart" + Math.floor(Math.random() * (1000));
-    this.widgetId = "widget" + Math.floor(Math.random() * (1000));
+  created () {
+    this.chartId = 'myChart' + Math.floor(Math.random() * (1000))
+    this.widgetId = 'widget' + Math.floor(Math.random() * (1000))
     this.getData()
   },
 
-  mounted() {
+  mounted () {
     document.getElementById(this.widgetId).offsetWidth > 486 ? this.display = 'big' : this.display = 'small'
-    // 502px to break
   }
 
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
-/* overload fonts path, to delete when parent has access
-@import "../../css/overload-fonts.css";
-@import "../../css/dsfr.min.css";
- */
-
-.widget_container {
-  .fr-warning {
-    display: flex;
-    min-width: 100%;
-    margin: 0 0 0.75rem;
-    background-color: var(--w);
-    width: 100%;
-
-    .scheme-border {
-      min-width: 2.5rem;
-      background-color: #0768d5;
+  .widget_container{
+    .fr-warning {
       display: flex;
-      justify-content: center;
-    }
-
-    span {
-      display: block;
-      color: var(--w);
-    }
-
-    p {
-      border: solid 1px #0768d5;
+      min-width: 100%;
+      margin: 0 0 0.75rem;
+      background-color: var(--w);
       width: 100%;
+      .scheme-border {
+          min-width: 2.5rem;
+          background-color: #0768d5;
+          display: flex;
+          justify-content: center;
+      }
+      span {
+          display: block;
+          color: var(--w);
+      }
+      p {
+          border: solid 1px #0768d5;
+          width: 100%;
 
-    }
-  }
-
-  .ml-lg {
-    margin-left: 0;
-  }
-
-  @media (min-width: 62em) {
-    .ml-lg {
-      margin-left: 3rem;
-    }
-  }
-  @media (max-width: 62em) {
-    .chart .flex {
-      margin-left: 0 !important
-    }
-  }
-
-  .r_col {
-    align-self: center;
-
-    .flex {
-      display: flex;
-
-      .legende_dot {
-        width: 1rem;
-        height: 1rem;
-        min-width: 1rem;
-        border-radius: 50%;
-        background-color: #000091;
-        display: inline-block;
-        margin-top: 0.25rem;
       }
     }
-  }
+    .ml-lg {
+      margin-left:0;
+    }
+    @media (min-width: 62em) {
+      .ml-lg {
+        margin-left:3rem;
+      }
+    }
+    @media (max-width: 62em) {
+      .chart .flex {
+        margin-left:0!important
+      }
+    }
+    .r_col {
+      align-self:center;
+      .flex{
+        display: flex;
+        .legende_dot{
+          width: 1rem;
+          height: 1rem;
+          min-width: 1rem;
+          border-radius: 50%;
+          background-color: #000091;
+          display: inline-block;
+          margin-top: 0.25rem;
+        }
+      }
+    }
 
-  .chart canvas {
-    max-width: 100%;
-  }
+    .chart canvas {
+      max-width:100%;
+    }
 
-}
+  }
 
 </style>
