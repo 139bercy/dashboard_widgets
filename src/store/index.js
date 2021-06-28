@@ -52,7 +52,6 @@ export default new Vuex.Store({
       state.user.selectedGeoLabel = payload.label
     },
     setUrl (state, url) {
-      console.log("inside store")
       state.data.url = url
     }
   }

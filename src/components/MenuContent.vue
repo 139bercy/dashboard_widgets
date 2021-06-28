@@ -51,7 +51,11 @@ export default {
     }
   },
   mounted () {
-    if (this.panneaux.length > 0) {
+    this.processPanneaux()
+  },
+  methods: {
+    processPanneaux () {
+      if (this.panneaux.length > 0) {
         this.volets = []
         this.panneauxByVolets = []
         this.panneaux.forEach((panneau) => {
@@ -64,15 +68,19 @@ export default {
           this.panneauxByVolets[panneau.Volet].push(panneau)
         })
         this.toggleMenuList(this.panneaux[0].Volet, true)
-    }
-  },
-  methods: {
+      }
+    },
     toggleMenuList (volet, value) {
       if (value !== undefined) {
         this.$set(this.voletOpened, volet, value)
       } else {
         this.$set(this.voletOpened, volet, !this.voletOpened[volet])
       }
+    }
+  },
+  watch: {
+    panneaux: function () {
+      this.processPanneaux()
     }
   }
 }

@@ -45,7 +45,6 @@ export default {
   },
   methods: {
     async getData () {
-      console.log(this.dataUrl);
       store.commit('setUrl', this.dataUrl)
       fetch(this.configuration)
           .then(res => res.json())
