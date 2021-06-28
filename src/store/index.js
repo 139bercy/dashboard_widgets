@@ -22,7 +22,7 @@ export default new Vuex.Store({
       if (state.promises[indicator]) {
         return state.promises[indicator]
       }
-      const url = `${BASE_URL}/${indicator}.json`
+      const url = `${state.data.url || BASE_URL}/${indicator}.json`
       const promise = fetch(url).then(res => {
         return res.json()
       }).then(data => {
@@ -50,6 +50,10 @@ export default new Vuex.Store({
       state.user.selectedGeoLevel = payload.level
       state.user.selectedGeoCode = payload.code
       state.user.selectedGeoLabel = payload.label
+    },
+    setUrl (state, url) {
+      console.log("inside store")
+      state.data.url = url
     }
   }
 })

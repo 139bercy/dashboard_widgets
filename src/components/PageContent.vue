@@ -22,8 +22,9 @@
     </div>
   </div>
 </template>
-<script>
 
+<script>
+import store from '@/store'
 import MenuContent from '@/components/MenuContent'
 import PanelList from '@/components/PanelList'
 
@@ -34,19 +35,28 @@ export default {
     PanelList
   },
   props: {
-    configuration: String
+    configuration: String,
+    dataUrl: String
   },
   data () {
     return {
       panneaux: []
     }
   },
-  mounted () {
-    fetch(this.configuration)
-        .then(res => res.json())
-        .then(data => {
-          this.panneaux = data
-        })
+  methods: {
+    async getData () {
+      console.log(this.dataUrl);
+      store.commit('setUrl', this.dataUrl)
+      fetch(this.configuration)
+          .then(res => res.json())
+          .then(data => {
+            this.panneaux = data
+          })
+    }
+  }
+  ,
+  created () {
+    this.getData()
   }
 }
 </script>
