@@ -41,13 +41,8 @@ export default {
   name: 'MenuContent',
   mixins: [mixin],
   props: {
-    configuration: String
+    panneaux: Array
   },
-  // computed: {
-  //   console () {
-  //     return console
-  //   }
-  // },
   data () {
     return {
       volets: [],
@@ -56,13 +51,10 @@ export default {
     }
   },
   mounted () {
-    fetch(this.configuration)
-      .then(res => res.json())
-      .then(data => {
-        this.panneaux = data
+    if (this.panneaux.length > 0) {
         this.volets = []
         this.panneauxByVolets = []
-        data.forEach((panneau) => {
+        this.panneaux.forEach((panneau) => {
           if (!this.volets.includes(panneau.Volet)) {
             this.volets.push(panneau.Volet)
             this.panneauxByVolets[panneau.Volet] = []
@@ -71,8 +63,8 @@ export default {
           }
           this.panneauxByVolets[panneau.Volet].push(panneau)
         })
-        this.toggleMenuList(data[0].Volet, true)
-      })
+        this.toggleMenuList(this.panneaux[0].Volet, true)
+    }
   },
   methods: {
     toggleMenuList (volet, value) {

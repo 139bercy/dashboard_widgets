@@ -3,7 +3,7 @@
     <div class="fr-grid-row">
 
       <div class="fr-col-12 fr-col-md-4 fr-col-lg-3">
-        <menu-content configuration="dashboard-configuration.json"></menu-content>
+        <menu-content :panneaux="panneaux"></menu-content>
       </div>
       <div class="fr-col-12 fr-col-md-8 fr-col-lg-7 fr-col-offset-md-1 fr-mb-6w">
 
@@ -15,7 +15,7 @@
           Retrouvez par mois et par département l'état d'avancement des mesures phares de France Relance.
         </p>
 
-        <panel-list configuration="dashboard-configuration.json"></panel-list>
+        <panel-list :panneaux="panneaux"></panel-list>
 
       </div>
 
@@ -25,11 +25,28 @@
 <script>
 
 import MenuContent from '@/components/MenuContent'
+import PanelList from '@/components/PanelList'
 
 export default {
   name: 'PageContent',
   components: {
-    MenuContent
+    MenuContent,
+    PanelList
+  },
+  props: {
+    configuration: String
+  },
+  data () {
+    return {
+      panneaux: []
+    }
+  },
+  mounted () {
+    fetch(this.configuration)
+        .then(res => res.json())
+        .then(data => {
+          this.panneaux = data
+        })
   }
 }
 </script>

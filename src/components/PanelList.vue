@@ -14,19 +14,7 @@ export default {
     Panel
   },
   props: {
-    configuration: String
-  },
-  data () {
-    return {
-      panneaux: {}
-    }
-  },
-  mounted () {
-    fetch(this.configuration)
-      .then(res => res.json())
-      .then(data => {
-        this.panneaux = data
-      })
+    panneaux: Array
   }
 }
 </script>
