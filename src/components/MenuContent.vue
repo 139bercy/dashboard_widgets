@@ -1,5 +1,5 @@
 <template>
-  <nav class="fr-sidemenu fr-sidemenu--sticky-full-height fr-pr-0" role="navigation"
+  <nav id="menu-france-relance" class="fr-sidemenu fr-sidemenu--sticky-full-height fr-pr-0" role="navigation"
        aria-label="Menu latéral">
     <div class="fr-sidemenu__inner">
       <div class="fr-collapse fr-pt-0 fr-pt-md-4w fr-pb-md-11w" id="fr-sidemenu-wrapper">
@@ -36,9 +36,13 @@
 
 <script>
 import { mixin } from '@/utils.js'
+import GeoList from '@/components/GeoList'
 
 export default {
   name: 'MenuContent',
+  components: {
+    GeoList
+  },
   mixins: [mixin],
   props: {
     panneaux: Array
@@ -87,6 +91,14 @@ export default {
 
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
+#menu-france-relance .fr-select {
+  box-shadow: inset 0 -2px 0 0 var(--bf500-plain);
+}
 
+#menu-france-relance button.fr-link {
+  border: solid 1px var(--w-bf500);
+}
+</style>
+<style scoped lang="scss">
 </style>
