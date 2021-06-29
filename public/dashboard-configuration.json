@@ -1,0 +1,771 @@
+[
+    {
+        "Lien_page_mesure": "https://www.economie.gouv.fr/entreprises/aide-embauche-jeune-plan-de-relance",
+        "Nom_mesure_GP": "Aides Exceptionnelles pour l’Embauche en Contrat d’Apprentissage",
+        "Volet": "Cohésion",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Nombre de contrats concernés",
+                "Description_mesure": "Il s'agit d'une aide pour accompagner financièrement les employeurs qui recrutent en contrats d'apprentissage. Cette aide est versée pour la 1ere année d'exécution du contrat et n’est pas cumulable avec l’aide à l’embauche d’un jeune. Le montant de l'aide varie en fonction de l'âge de l'apprenti : 5000 € pour un apprenti de moins de 18 ans, 8 000 € pour un apprenti majeur.",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "Apprentissage",
+                        "Nom_indicateur_propilot": "Nombre de contrats d’apprentissage bénéficiaires de l’aide exceptionnelle - APP",
+                        "Code_mesure": "COH1",
+                        "Unité_indicateur": "# Contrats",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "# Contrats",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            },{
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Nombre de contrats concernés",
+                "Description_mesure": "Cette aide accompagne les entreprises qui embauchent un salarié en contrat de professionnalisation entre le 1er juillet 2020 et le 31 décembre 2021 pour la préparation par un jeune de moins de 30 ans d’un diplôme jusqu'au niveau master. Elle est versée pour les 12 premiers mois d’exécution du contrat. Le montant de cette aide et ses modalités de versement sont les mêmes que ceux de l'aide exceptionnelle pour l'embauche en contrat d'apprentissage. Les contrats de professionnalisation expérimentaux prévus par le VI de l’article 28 de la loi du 5 septembre 2018 sont également éligibles à l’aide.",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "Contrats de professionnalisation",
+                        "Nom_indicateur_propilot": "Nombre de contrats de professionnalisation bénéficiaires de l’aide exceptionnelle - CDP",
+                        "Code_mesure": "COH3",
+                        "Unité_indicateur": "# Contrats",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "# Contrats",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.economie.gouv.fr/entreprises/aide-embauche-jeune-plan-de-relance",
+        "Nom_mesure_GP": "Aides Exceptionnelles pour l’Embauche en Contrat de Professionnalisation",
+        "Volet": "Cohésion",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Nombre de contrats concernés",
+                "Description_mesure": "Cette aide accompagne les entreprises qui embauchent un salarié en contrat de professionnalisation entre le 1er juillet 2020 et le 31 décembre 2021 pour la préparation par un jeune de moins de 30 ans d’un diplôme jusqu'au niveau master. Elle est versée pour les 12 premiers mois d’exécution du contrat. Le montant de cette aide et ses modalités de versement sont les mêmes que ceux de l'aide exceptionnelle pour l'embauche en contrat d'apprentissage. Les contrats de professionnalisation expérimentaux prévus par le VI de l’article 28 de la loi du 5 septembre 2018 sont également éligibles à l’aide.",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "Contrats de professionnalisation",
+                        "Nom_indicateur_propilot": "Nombre de contrats de professionnalisation bénéficiaires de l’aide exceptionnelle - CDP",
+                        "Code_mesure": "COH3",
+                        "Unité_indicateur": "# Contrats",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "# Contrats",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.economie.gouv.fr/entreprises/aide-embauche-jeune-plan-de-relance",
+        "Nom_mesure_GP": "Aides Exceptionnelles pour l’Embauche d’Un Jeune de Moins de 26 Ans",
+        "Volet": "Cohésion",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Nombre de contrats concernés",
+                "Description_mesure": "Cette nouvelle aide a pour objectif de faciliter l’embauche des jeunes tout en stimulant l'activité des entreprises bénéficiaires. Le montant de l'aide est de 4000 € maximum sur 1 an pour un jeune salarié à temps plein. Ce montant est proratisé en fonction de la quotité de temps de travail du salarié et de la durée effective du contrat de travail. Pour toutes les entreprises, quels que soient leur secteur d’activité et leur taille.",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "Prime à l’embauche des jeunes",
+                        "Nom_indicateur_propilot": "Nombre d'aides à l'embauche des jeunes - PEJ",
+                        "Code_mesure": "COH4",
+                        "Unité_indicateur": "# Aides",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "# Contrats",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/profils/entreprises/aide-embauche-jeune-contrat-initiative-emploi-cie",
+        "Nom_mesure_GP": "Aide à l’Embauche d’Un Jeune en Contrat Initiative Emploi (CIE Jeunes) ",
+        "Volet": "Cohésion",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Nombre de contrats concernés",
+                "Description_mesure": "Dans le cadre du plan « 1 jeune, 1 solution », les employeurs du secteur marchand peuvent bénéficier d’une aide financière lorsqu’ils recrutent un jeune âgé de moins de 26 ans ou un jeune reconnu travailleur handicapé (jusqu’à 30 ans inclus) en Contrat Initiative Emploi Jeunes (CIE Jeunes). L’aide à l’insertion professionnelle, attribuée à l’employeur qui recrute en Contrat Initiative Emploi (CIE) un jeune de moins de 26 ans ou un jeune reconnu travailleur handicapé jusqu’à l’âge de 30 ans inclus, s’élève pour 2020, à 47 % du SMIC.",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "CIE jeunes",
+                        "Nom_indicateur_propilot": "Entrées de jeunes en CIE - CIE",
+                        "Code_mesure": "COH5",
+                        "Unité_indicateur": "# Entrées",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "# Contrats",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/insertion-personnes-eloignees-emploi-pec",
+        "Nom_mesure_GP": "Parcours Emploi Compétences Jeunes (PEC Jeunes)",
+        "Volet": "Cohésion",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Nombre de contrats concernés",
+                "Description_mesure": "Dans le cadre du plan « 1 jeune,1 solution », ce dispositif s’adresse aux jeunes éloignés du marché de l’emploi, âgés de moins de 26 ans, et aux jeunes reconnus travailleurs handicapés, jusqu’à 30 ans inclus. Il a pour objectif de développer, dans le cadre d’une activité professionnelle, des compétences transférables ou mobilisables dans un autre environnement. La rémunération du CIE ne pourra pas être inférieure au Smic horaire (10,25 € brut au 1er janvier 2021).",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "PEC jeunes",
+                        "Nom_indicateur_propilot": "Entrées de jeunes en PEC - PEC",
+                        "Code_mesure": "COH6",
+                        "Unité_indicateur": "# Entrées",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "# Contrats",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/profils/particuliers/insertion-activite-economique-jeunes",
+        "Nom_mesure_GP": "Insertion par l’Activité Économique Jeunes (IAE Jeunes)",
+        "Volet": "Cohésion",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Nombre d’insertions par l’activité économique",
+                "Description_mesure": "La mesure consiste à appuyer la trajectoire de croissance d’emplois supplémentaires au sein des structures d’insertion par l’activité économique (SIAE) en soutenant l’entrée de 35 000 jeunes en 2021. Dans le cadre du plan « 1 jeune 1 solution » de France Relance, accompagner en 2021 35 000 jeunes en parcours au sein d’une structure d’insertion par l’activité économique (association intermédiaire, entreprise d’insertion, atelier et chantier d’insertion…) pour leur permettre d’acquérir des compétences, de prendre confiance en eux et de s’insérer ou se réinsérer dans l’emploi. Ces parcours, de 24 mois maximum, facilitent l’accès à l’emploi durable des jeunes les plus éloignés du marché du travail grâce à la combinaison de la mise en emploi, d’un accompagnement individualisé et de la formation.",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "IAE jeunes",
+                        "Nom_indicateur_propilot": "Places créées en IAE pour les jeunes - IAE",
+                        "Code_mesure": "COH7",
+                        "Unité_indicateur": "# Places crées",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "# Contrats",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/profils/particuliers/garantie-jeunes",
+        "Nom_mesure_GP": "Garanties Jeunes",
+        "Volet": "Cohésion",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Nombre de garanties",
+                "Description_mesure": "La Garantie jeunes est un dispositif réservé aux jeunes de 16 à 25 ans en situation de précarité pour les aider dans leur accès à l’autonomie et à l’insertion professionnelle. La Garantie jeunes est un contrat d’engagements réciproques d’un an entre un jeune et une mission locale. Un conseiller de Mission locale vous accompagne de façon intensive et personnalisée pour construire avec vous un parcours qui allie expérience professionnelle, conseils, ateliers collectifs et versement d’une allocation. La Garantie jeunes ouvre en effet droit à une allocation d’un montant mensuel maximum équivalent à celui du Revenu de solidarité active (RSA) pour une personne seule, déduction faite du forfait logement. Au 1er avril 2021, le montant maximum de l’allocation versée au titre de la Garantie jeunes était ainsi égal à 497,50 € par mois.",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "Garantie jeunes",
+                        "Nom_indicateur_propilot": "Entrées en garanties jeunes - GJE",
+                        "Code_mesure": "COH8",
+                        "Unité_indicateur": "# Entrées",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "# Contrats",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/profils/collectivites/internats-dexcellence",
+        "Nom_mesure_GP": "Internats d’Excellence",
+        "Volet": "Cohésion",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Nombre de places crées",
+                "Description_mesure": "L’internat est un puissant vecteur de réduction des inégalités sociales et territoriales. Il offre des conditions de travail et un projet éducatif renforcé à des collégiens et lycéens qui ne bénéficient pas d'un environnement propice aux études. Or, dans les départements où se concentrent les plus grandes difficultés sociales et scolaires, l’offre actuelle d’internat ne satisfait pas les besoins. Dans ce cadre, l'internat d'excellence est revitalisé autour de la réussite scolaire des élèves issus notamment de l'éducation prioritaire et de la politique de la ville.",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "Internats d’excellence",
+                        "Nom_indicateur_propilot": "Nombre de places crées ou réhabilitées en internat d’excellence - IEX",
+                        "Code_mesure": "COH2",
+                        "Unité_indicateur": "# Places crées",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "# Places",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.cohesion-territoires.gouv.fr/letat-investit-dans-les-territoires-consultez-la-carte-des-projets-soutenus-la-dsil-exceptionnelle",
+        "Nom_mesure_GP": "Dotation de Soutien à l’Investissement Local Exceptionnelle",
+        "Volet": "Cohésion",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Nombre de projets soutenus",
+                "Description_mesure": "Créée dans le cadre de la loi de finances rectificative du 30 juillet 2020, la DSIL exceptionnelle joue un rôle crucial dans le soutien à l’investissement des collectivités. Dotée d’une enveloppe de 950 millions d’euros, elle permet la réalisation d’opérations structurantes sur le territoire et sur le quotidien des habitants, prioritairement en matière de transition écologique, de résilience sanitaire et de rénovation du patrimoine.",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "Soutien à l’investissement local (DSIL exceptionnelle)",
+                        "Nom_indicateur_propilot": "Nombre de projets des collectivités locales soutenus",
+                        "Code_mesure": "COH9",
+                        "Unité_indicateur": "# Projets",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "# Projets",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://immobilier-etat.gouv.fr/les-grands-dossiers/france-relance-projets-renovation-energetique-batiments-publics",
+        "Nom_mesure_GP": "Rénovation Thermique des Bâtiments de l’État",
+        "Volet": "Ecologie",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Nombre de bâtiments dont le marché de rénovation est notifié",
+                "Description_mesure": "Le parc de l’État représentant près de 100 millions de m², et la consommation des bâtiments un quart des émissions de gaz à effet de serre en France, le Gouvernement a souhaité que les bâtiments publics prennent part, de manière substantielle, à l’effort national de rénovation énergétique. « France Relance » retient un important programme de rénovation énergétique des bâtiments publics pour un montant de 4 milliards d’euros dont 300 millions seront délégués aux régions visant à réduire l’empreinte énergétique des bâtiments publics, soutenir le secteur de la construction au niveau local et moderniser les lieux de vie collectifs au bénéfice des usagers et des agents.",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "Rénovation bâtiments Etats",
+                        "Nom_indicateur_propilot": "Nombre de bâtiments Etat dont le marché de rénovation est notifié - RBE",
+                        "Code_mesure": "ECO3",
+                        "Unité_indicateur": "# Bâtiments",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "# Bâtiments",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://immobilier-etat.gouv.fr/les-grands-dossiers/france-relance-projets-renovation-energetique-batiments-publics",
+        "Nom_mesure_GP": "Rénovation Thermique des Bâtiments des Collectivités",
+        "Volet": "Ecologie",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Nombre de bâtiments dont le marché de rénovation est notifié",
+                "Description_mesure": "Le parc de l’État représentant près de 100 millions de m², et la consommation des bâtiments un quart des émissions de gaz à effet de serre en France, le Gouvernement a souhaité que les bâtiments publics prennent part, de manière substantielle, à l’effort national de rénovation énergétique. « France Relance » retient un important programme de rénovation énergétique des bâtiments publics pour un montant de 4 milliards d’euros dont 300 millions seront délégués aux régions visant à réduire l’empreinte énergétique des bâtiments publics, soutenir le secteur de la construction au niveau local et moderniser les lieux de vie collectifs au bénéfice des usagers et des agents.",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "Rénovation bâtiments collectivités",
+                        "Nom_indicateur_propilot": "Nombre de projets de collectivités locales soutenus - RBC",
+                        "Code_mesure": "ECO4",
+                        "Unité_indicateur": "# Projets",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "# Bâtiments",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/profils/particuliers/maprimerenov",
+        "Nom_mesure_GP": "MaPrimeRénov",
+        "Volet": "Ecologie",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Nombre de dossiers validés",
+                "Description_mesure": "MaPrimeRénov’ permet de financer les travaux d’isolation, de chauffage, de ventilation ou d’audit énergétique d’une maison individuelle ou d’un appartement en habitat collectif. Les travaux doivent avoir été effectués par des entreprises labellisées RGE (reconnues garantes pour l’environnement). Le montant de la prime varie en fonction des matériaux et des équipements éligibles dans la limite d’un plafond de 20 000 € pour des travaux sur un logement et pendant une durée maximale de 5 ans.",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "Ma Prime Rénov’",
+                        "Nom_indicateur_propilot": "Nombre de dossiers MaPrimeRénov validés – MPR",
+                        "Code_mesure": "ECO1",
+                        "Unité_indicateur": "# Dossiers",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "# Bâtiments",
+                        "Lien_open_source": "nan"
+                    },
+                    {
+                        "Nom_mesure_propilot": "Ma Prime Rénov’",
+                        "Nom_indicateur_propilot": "Montant moyen des travaux associés aux dossiers validés - MPR",
+                        "Code_mesure": "ECO1",
+                        "Unité_indicateur": "Euros",
+                        "Indicateur_principal": "0",
+                        "Unité_GP": "Millions d’euros",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/profils/entreprises/decarbonation-industrie",
+        "Nom_mesure_GP": "Décarbonation de l’Industrie",
+        "Volet": "Ecologie",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Nombre d’entreprises aidées",
+                "Description_mesure": "La décarbonation de l’industrie a pour objectif d’accompagner les entreprises industrielles dans l’investissement d’équipements et de procédés moins émetteurs de CO2. Deux dispositifs pour le soutien à l’investissement : un appel à projets pour l’efficacité énergétique et l’évolution des procédés, ainsi qu'un guichet pour l’efficacité énergétique sont mis en place dans le cadre du plan de relance. Un Appel à projets pour l’efficacité énergétique et l’évolution des procédés au service de la décarbonation de l’industrie (avec deux dispositifs, désormais clos), ainsi qu'un guichet de soutien à l’investissement pour les projets d’amélioration de l’efficacité énergétique à destination des entreprises industrielles soutenant des projets d’investissements inférieurs à 3 M€ visant la réduction de la consommation d’énergie et la décarbonation en leur apportant une aide sous forme de subvention.",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "Décarbonation de l'industrie (Appel à projets EE + Guichet EE + Chaleur bas carbone) ",
+                        "Nom_indicateur_propilot": "Nombre d’entreprises ayant reçu l’aide ",
+                        "Code_mesure": "ECO2",
+                        "Unité_indicateur": "# Entreprises",
+                        "Indicateur_principal": "0",
+                        "Unité_GP": "# Entreprises",
+                        "Lien_open_source": "nan"
+                    },
+                    {
+                        "Nom_mesure_propilot": "Décarbonation de l'industrie (Appel à projets EE + Guichet EE + Chaleur bas carbone) ",
+                        "Nom_indicateur_propilot": "Montant cumulé de l’investissement total ainsi déclenché",
+                        "Code_mesure": "ECO2",
+                        "Unité_indicateur": "Euros",
+                        "Indicateur_principal": "0",
+                        "Unité_GP": "Millions d’euros",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/profils/entreprises/prime-conversion-soutien-aquisition-agro-equipements",
+        "Nom_mesure_GP": "Prime à la Conversion des Agroéquipements",
+        "Volet": "Ecologie",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Nombre de structures agricoles aidées",
+                "Description_mesure": "Investir dans la modernisation des équipements est une priorité pour doter les agriculteurs de matériels plus performants en matière environnementale, permettant une agriculture plus sobre en intrants (notamment en produits phytosanitaires) et en ressources (par exemple en eau). Cette mesure consiste en une aide à l’investissement pour le remplacement de matériels anciens et peu performants et l’acquisition de matériels performants en matière environnementale (par exemple : tout matériel permettant la réduction d’usage des produits phytopharmaceutiques ou de fertilisants, y compris capteurs et logiciels, ou matériels de substitution et de travail du sol telles que bineuses mécaniques…).",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "Prime à la conversion des agroéquipements",
+                        "Nom_indicateur_propilot": "Nombre de structures agricoles bénéficiaires de la prime à la conversion des agroéquipements - AEA",
+                        "Code_mesure": "ECO5",
+                        "Unité_indicateur": "# Entreprises",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "# Structures",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/profils/entreprises/prime-conversion",
+        "Nom_mesure_GP": "Prime à la Conversion des Véhicules",
+        "Volet": "Ecologie",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Nombre de primes versées",
+                "Description_mesure": "La prime à la conversion constitue une aide à l’achat ou à la location d’un véhicule peu polluant, en échange de la mise au rebut d’un vieux véhicule polluant. La prime à la conversion constitue une aide aux professionnels pour : l’achat ou la location d’un véhicule électrique ou hybride rechargeable, neuf ou d’occasion, dont l’autonomie est supérieure à 50 km et dont le prix inférieur ou égal à 60 000 €; et en échange de la mise au rebut d’un vieux véhicule immatriculé pour la première fois avant 2011 pour les véhicules diesels ou avant 2006 pour les véhicules à essence. Le montant de la prime s’élève à 2 500 € pour une voiture et à 5 000 € pour une camionnette.",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "Prime à la conversion des véhicules légers",
+                        "Nom_indicateur_propilot": "Nombre de primes à la conversion - DVP ",
+                        "Code_mesure": "ECO6",
+                        "Unité_indicateur": "# Primes",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "# Primes",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/profils/particuliers/bonus-ecologique",
+        "Nom_mesure_GP": "Bonus Ecologique",
+        "Volet": "Ecologie",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Nombre de bonus versés",
+                "Description_mesure": "Le bonus écologique constitue une aide à l’achat ou à la location d’un véhicule peu polluant. Le bonus écologique est une aide de l’État attribuée lors de l’achat ou de la location d’un véhicule neuf émettant peu de CO2. Il peut s’agir d’un véhicule électrique, hydrogène ou hybride rechargeable. Il est également possible de bénéficier de cette aide pour l'achat ou la location d'un véhicule électrique d'occasion.",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "Bonus électrique ",
+                        "Nom_indicateur_propilot": "Nombre de bonus octroyés à des véhicules électriques et hybrides rechargeables - BOE ",
+                        "Code_mesure": "ECO7",
+                        "Unité_indicateur": "# Primes",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "# Bonus",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/lancement-appels-projets-filiere-hydrogene#",
+        "Nom_mesure_GP": "Plan de Relance Hydrogène",
+        "Volet": "Ecologie",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Nombre de projets soutenus",
+                "Description_mesure": "Le Gouvernement annonce l’ouverture de 2 appels à projets pour développer la filière hydrogène dans le cadre du Plan de relance et de la stratégie nationale pour l’hydrogène décarboné. Ces 2 appels à projets portés par l’ADEME s’inscrivent dans le cadre de la stratégie nationale d’accélération de l’hydrogène décarboné annoncée le 8 septembre 2020. Cette stratégie entend amorcer un changement d'échelle dans les développements de la filière, en accompagnant le déploiement d'usages de l'hydrogène dans les territoires, et l'innovation au sein des acteurs équipementiers et industriels. Plus de 7 Md€ sont destinés au soutien de cette filière au niveau national d’ici 2030 dont 2 Md€ intégrés dans le Plan de relance. ",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "Écosystèmes territoriaux hydrogène DGEC, AAP Ademe",
+                        "Nom_indicateur_propilot": "Nombre de projets soutenus - ETH",
+                        "Code_mesure": "ECO8",
+                        "Unité_indicateur": "# Projets",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "# Projets",
+                        "Lien_open_source": "nan"
+                    },
+                    {
+                        "Nom_mesure_propilot": "Écosystèmes territoriaux hydrogène DGEC, AAP Ademe",
+                        "Nom_indicateur_propilot": "Montant total de CO2 évité - ETH",
+                        "Code_mesure": "ECO8",
+                        "Unité_indicateur": "CO2",
+                        "Indicateur_principal": "0",
+                        "Unité_GP": "mtCO2",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/fonds-modernisation-automobile-aeronautique-nouveaux-projets-laureats",
+        "Nom_mesure_GP": "Modernisation des Filières Automobile et Aéronautique",
+        "Volet": "Ecologie",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Nombre d’entreprises aidées",
+                "Description_mesure": "Le fonds de modernisation, de diversification et de verdissement des procédés de la filière aéronautique est doté de 300 M€ par France Relance. Il doit permettre aux acteurs de la filière aéronautique de rebondir en développant des chaînes de valeur d’avenir ou stratégiques afin de sortir de la crise par le haut, en préservant les compétences durement acquises, et en préparant l’avion vert du futur. Le fonds de modernisation, de diversification et de verdissement des procédés de la filière automobile est doté de 600 M€ par France Relance. Il vise à aider les entreprises à gagner en compétitivité, par une accélération des investissements d’automatisation et de numérisation de leurs procédés industriels.",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "Modernisation des filières (BPI)",
+                        "Nom_indicateur_propilot": "Nombre d’entreprises - BPI",
+                        "Code_mesure": "ECO9",
+                        "Unité_indicateur": "# Entreprises",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "# Entreprises",
+                        "Lien_open_source": "nan"
+                    },
+                    {
+                        "Nom_mesure_propilot": "Modernisation des filières (BPI)",
+                        "Nom_indicateur_propilot": "Montant cumulé de l’investissement total ainsi déclenché - BPI",
+                        "Code_mesure": "ECO9",
+                        "Unité_indicateur": "Euros",
+                        "Indicateur_principal": "0",
+                        "Unité_GP": "Millions d’euros",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/profils/particuliers/label-relance",
+        "Nom_mesure_GP": "Label Relance",
+        "Volet": "Compétitivité",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Nombre de fonds labellisés",
+                "Description_mesure": "Le label « Relance » permet aux épargnants et investisseurs professionnels d’identifier les organismes de placement collectifs (OPC) apportant une réponse aux besoins de financement des entreprises françaises, cotés ou non, et ainsi de mobiliser l’épargne pour la relance. Le label « Relance » vient reconnaître les fonds qui s’engagent à mobiliser rapidement des ressources nouvelles pour soutenir les fonds propres et quasi-fonds propres des entreprises françaises (PME et ETI) cotés ou non. L’objectif est d’orienter l’épargne des épargnants et des investisseurs professionnels vers ces placements qui répondent aux besoins de financements de l’économie française consécutifs de la crise sanitaire. Les fonds labellisés doivent en outre respecter un ensemble de critères environnementaux, sociaux et de bonne gouvernance (ESG), incluant notamment l’interdiction du financement d’activités charbonnées et le suivi d’une note ou d’un indicateur ESG.",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "Label relance",
+                        "Nom_indicateur_propilot": "Nombre de fonds labellisés - GFP",
+                        "Code_mesure": "COM1",
+                        "Unité_indicateur": "# Fonds",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "# Fonds",
+                        "Lien_open_source": "nan"
+                    },
+                    {
+                        "Nom_mesure_propilot": "Label relance",
+                        "Nom_indicateur_propilot": "Montant des fonds labellisés - GFP",
+                        "Code_mesure": "COM1",
+                        "Unité_indicateur": "Euros",
+                        "Indicateur_principal": "0",
+                        "Unité_GP": "Millions d’euros",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.entreprises.gouv.fr/fr/strategies-d-acceleration/strategie-d-acceleration-sante-numerique",
+        "Nom_mesure_GP": "Soutien au Développement des Marchés Numérique et Santé",
+        "Volet": "Compétitivité",
+        "onglets": [
+            {
+                "Carte": "false",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Montant des crédits programmés",
+                "Description_mesure": "Cette initiative vise à préparer l’avenir, et faire de la France un leader sur l’innovation en e-santé. Les actions portées par cette stratégie d’accélération « Santé Numérique » viseront à favoriser l’émergence, en France, de solutions innovantes, appuyées par des approches scientifiques pluridisciplinaires novatrices et des propositions de modèles médico-économiques ambitieux, pour conquérir un marché de la e-santé en pleine croissance au niveau mondial.",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "Soutien au développement des marchés clés numérique et santé (PIA)",
+                        "Nom_indicateur_propilot": "Montant des crédits programmés (DPM)",
+                        "Code_mesure": "COM8",
+                        "Unité_indicateur": "Euros",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "Millions d’euros",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/profils/entreprises/preservation-emploi-recherche-developpement",
+        "Nom_mesure_GP": "Préservation de l’Emploi R&D",
+        "Volet": "Compétitivité",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Nombre de chercheurs aidés",
+                "Description_mesure": "Cette mesure est destinée à aider à préserver les capacités humaines de Recherche et Développement (R&D) des entreprises et à mettre à disposition des entreprises de jeunes diplômés et docteurs. Grâce à cette mesure, l’État va pouvoir prendre en charge la rémunération des personnels de R&D des entreprises mis à disposition de laboratoires publics de recherche ou en formation doctorale.Cela va permettre également que l’État prenne en charge la rémunération de jeunes diplômés et jeunes docteurs embauchés en CDD par un laboratoire public de recherche et mis à disposition des entreprises.",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "Préservation de l’emploi de R&D",
+                        "Nom_indicateur_propilot": "Nombre de chercheurs bénéficiaires de la mesure - ERD",
+                        "Code_mesure": "COM7",
+                        "Unité_indicateur": "# Chercheurs",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "# Chercheurs",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.bpifrance.fr/A-la-une/Appels-a-projets-concours/Appel-a-projets-Plan-de-relance-pour-l-industrie-Secteurs-strategiques-volet-national-50697",
+        "Nom_mesure_GP": "Plan de Relance de l’Industrie – Secteurs Stratégiques",
+        "Volet": "Compétitivité",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Nombre d’entreprises aidées",
+                "Description_mesure": "Dans le contexte de la crise liée à la COVID-19, le Gouvernement mobilise des moyens exceptionnels pour le soutien à l’investissement et la modernisation de l’industrie. Le financement apporté par l’Etat est sous forme de subventions et s’inscrit dans le cadre de la réglementation européenne des aides publiques aux entreprises. Les projets attendus doivent être d’au moins 200 000€ pour les secteurs aéronautique et automobile et d’au moins 1 000 000 € pour les autres secteurs (santé, agroalimentaire, électronique, et intrants de l’industrie).",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "Relocalisation : sécurisation des approvisionnements critiques",
+                        "Nom_indicateur_propilot": "Nombre d’entreprises bénéficiaires - SAC",
+                        "Code_mesure": "COM2",
+                        "Unité_indicateur": "# Entreprises",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "# Entreprises",
+                        "Lien_open_source": "nan"
+                    },
+                    {
+                        "Nom_mesure_propilot": "Relocalisation : sécurisation des approvisionnements critiques",
+                        "Nom_indicateur_propilot": "Montant total des projets - SAC",
+                        "Code_mesure": "COM2",
+                        "Unité_indicateur": "Euros",
+                        "Indicateur_principal": "0",
+                        "Unité_GP": "Millions d’euros",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "http://relance.projets-territoriaux.bpifrance.fr/",
+        "Nom_mesure_GP": "Plan de Relance de l’Industrie – Territoires d’Industrie",
+        "Volet": "Compétitivité",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Nombre d’entreprises aidées",
+                "Description_mesure": "La crise sanitaire a profondément affecté notre tissu industriel en portant un coup d’arrêt brutal à l’investissement de nombreuses entreprises, dans des territoires déjà souvent exposés à de profondes mutations. Face à l’urgence, la réponse réside dans une accélération des investissements et une action rapide au plus près des territoires. Cela passe par une démarche ambitieuse et coconstruite entre l’Etat et les Régions, animée à travers le programme Territoires d’Industrie. Dans le cadre du Plan de relance, l’Etat met en place un fonds de 150 M€ de subventions en faveur des projets industriels les plus structurants pour les territoires. La sélection se fera selon un processus simplifié, dans une logique de proximité, lors de Revues régionales d’accélération Etat - Région. Elle s’appuiera sur une instruction financière et des diligences liées à la connaissance client, réalisée par Bpifrance.",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "Relocalisation : soutien aux projets industriels dans les territoires",
+                        "Nom_indicateur_propilot": "Nombre d’entreprises bénéficiares - PIT",
+                        "Code_mesure": "COM3",
+                        "Unité_indicateur": "# Entreprises",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "# Entreprises",
+                        "Lien_open_source": "nan"
+                    },
+                    {
+                        "Nom_mesure_propilot": "Relocalisation : soutien aux projets industriels dans les territoires",
+                        "Nom_indicateur_propilot": "Montant total des projets - PIT",
+                        "Code_mesure": "COM3",
+                        "Unité_indicateur": "Euros",
+                        "Indicateur_principal": "0",
+                        "Unité_GP": "Millions d’euros",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/profils/entreprises/soutien-export",
+        "Nom_mesure_GP": "Mesures de Soutien à L’Export Business France",
+        "Volet": "Compétitivité",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Nombre d’entreprises aidées",
+                "Description_mesure": "Le « chèque-relance export » prend en charge 50 % des frais de participation à un salon international ou à l’achat d’une prestation de projection collective ou individuelle (dans la limite d’un plafond). Les prestations peuvent être achetées auprès de la Team France Export (TFE) ou d’une entreprise référencée. L’objectif est de financer 15 000 prestations. En parallèle, l’État prend en charge 5000 € pour l’envoi en mission d’un VIE par une PME-ETI (dans la limite de deux par entreprises). Le chèque VIE financera également l’envoi à l’international de VIE issus de formations courtes ou venant des quartiers prioritaires de la politique de la ville (QPV). L’objectif est de financer 3 000 missions. ",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "Renforcement des subventions de Business France (chèque export, chèque VIE)",
+                        "Nom_indicateur_propilot": "Nombre d’entreprises bénéficiares - SBF",
+                        "Code_mesure": "COM6",
+                        "Unité_indicateur": "# Entreprises",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "# Entreprises",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/profils/entreprises/aide-investissement-industrie-du-futur",
+        "Nom_mesure_GP": "Industrie du Futur",
+        "Volet": "Compétitivité",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Nombre d’entreprises aidées",
+                "Description_mesure": "Cette mesure, fermée le 12 mai, vise à soutenir la montée en gamme des PME et ETI industrielles par la diffusion du numérique et l’adoption des nouvelles technologies (fabrication additive, robotique, réalité virtuelle ou augmentée, logiciels de conception, contrôle non destructif, etc.). L’aide prend la forme d’une subvention pour l’acquisition d’un bien inscrit à l'actif immobilisé et affecté à une activité industrielle sur le territoire français.",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "Industrie du futur",
+                        "Nom_indicateur_propilot": "Nombre d’entreprises bénéficiaires - IDF",
+                        "Code_mesure": "COM4",
+                        "Unité_indicateur": "# Entreprises",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "# Entreprises",
+                        "Lien_open_source": "nan"
+                    },
+                    {
+                        "Nom_mesure_propilot": "Industrie du futur",
+                        "Nom_indicateur_propilot": "Montant total de l’investissement ainsi déclenché - IDF",
+                        "Code_mesure": "COM4",
+                        "Unité_indicateur": "Euros",
+                        "Indicateur_principal": "0",
+                        "Unité_GP": "Millions d’euros",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/profils/entreprises/aides-francenum-transformation-numerique",
+        "Nom_mesure_GP": "France Num pour la Transformation Numérique",
+        "Volet": "Compétitivité",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Nombre d’accompagnements réalisés",
+                "Description_mesure": "L’initiative France Num a pour objectif de vous accompagner dans votre transformation numérique pour développer votre activité au moyen du numérique. L’initiative France Num contribue au développement économique de votre TPE/PME grâce à l’augmentation de votre utilisation du numérique en réponse à vos besoins (fidéliser vos clients, gagner du temps, vous faire connaître, vendre à distance…).",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "France Num",
+                        "Nom_indicateur_propilot": "Nombre d'accompagnements dispensés - FUM",
+                        "Code_mesure": "COM5",
+                        "Unité_indicateur": "# Projets",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "# Accompagnements",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/profils/particuliers/soutien-investissement-monuments-historiques",
+        "Nom_mesure_GP": "Rénovation des Cathédrales et Monuments Nationaux",
+        "Volet": "Compétitivité",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Nombre de projets soutenus",
+                "Description_mesure": "Cette mesure vise à conforter les opérations de restauration de monuments historiques relevant des collectivités ou de propriétaires privés dans la perspective d’apporter un soutien à l’emploi et aux secteurs économiques de l’architecture et du patrimoine et de renforcer l’attractivité des territoires. L’objectif est d’accélérer des opérations bien identifiées de restauration des monuments historiques appartenant aux communes et aux propriétaires privés grâce à une enveloppe spécifique de 40 M€ en augmentant le taux moyen de subvention de l’État.",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "Patrimoine - rénovation de cathédrales et de monuments nationaux initiés ",
+                        "Nom_indicateur_propilot": "Nombre de projets de rénovation de cathédrales et de monuments nationaux initiés - PAE",
+                        "Code_mesure": "COM9",
+                        "Unité_indicateur": "# Projets",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "# Projets",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/profils/entreprises/baisse-impots-production",
+        "Nom_mesure_GP": "Baisse des Impôts de Production",
+        "Volet": "Compétitivité",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Nombre d’entreprises bénéficiaires",
+                "Description_mesure": "Cette mesure vise à alléger les impôts de production des entreprises, qui sont déconnectés de leurs performances économiques, dans un objectif de renforcement de leur compétitivité et de l’attractivité du territoire.",
+                "indicateurs": [
+                    {
+                        "Nom_mesure_propilot": "Baisse des impôts de production",
+                        "Nom_indicateur_propilot": "Nombre d’entreprises bénéficiaires de la mesure - BIP ",
+                        "Code_mesure": "COM10",
+                        "Unité_indicateur": "# Entreprises",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "# Entreprises",
+                        "Lien_open_source": "nan"
+                    },
+                    {
+                        "Nom_mesure_propilot": "Baisse des impôts de production",
+                        "Nom_indicateur_propilot": "Montant estimé des baisses d’impôts - BIP",
+                        "Code_mesure": "COM10",
+                        "Unité_indicateur": "Euros",
+                        "Indicateur_principal": "0",
+                        "Unité_GP": "Millions d’euros",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    }
+]

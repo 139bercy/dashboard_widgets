@@ -5,7 +5,10 @@ module.exports = {
       new webpack.optimize.LimitChunkCountPlugin({
         maxChunks: 1
       })
-    ]
+    ],
+    devServer: {
+      headers: { "Access-Control-Allow-Origin": "*" }
+    }
   },
   filenameHashing: false,
   productionSourceMap: false,
