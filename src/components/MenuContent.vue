@@ -94,10 +94,16 @@ export default {
 <style lang="scss">
 #menu-france-relance .fr-select {
   box-shadow: inset 0 -2px 0 0 var(--bf500-plain);
+  //-moz-appearance: none;
+  background: var(--beige);
 }
 
 #menu-france-relance button.fr-link {
   border: solid 1px var(--w-bf500);
+}
+
+#menu-france-relance  .fr-accordion {
+    box-shadow: 0 0 0 0 var(--boxcountour), 0 0 0 0 var(--boxcountour)
 }
 </style>
 <style scoped lang="scss">
