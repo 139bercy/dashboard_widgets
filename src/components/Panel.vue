@@ -1,5 +1,5 @@
 <template>
-  <div :id="'panel_' + toJsonNameFormat(Nom_mesure_GP)" class="fr-mt-6w">
+  <div :id="'panel_' + toJsonNameFormat(Nom_mesure_GP)" class="fr-mt-3w">
     <div class="lvl2-header fr-px-2w fr-px-md-3w fr-pt-3w">
       <h3>{{ Nom_mesure_GP }}</h3>
     </div>
@@ -25,7 +25,7 @@
         </div>
       </div>
     </div>
-    <section class="fr-accordion fr-col-12">
+    <div class="fr-accordion panel-accordion-extended">
       <h3 class="fr-accordion__title">
         <button class="fr-accordion__btn fr-text--sm"
                 :aria-expanded="accordionOpened"
@@ -45,7 +45,7 @@
             Vers des fichiers d'open-data</a>
         </p>
       </div>
-    </section>
+    </div>
   </div>
 </template>
 
@@ -153,8 +153,6 @@ export default {
   }
 }
 
-
-
 .fr-accordion {
   box-shadow: inset 1px -1px var(--bf500), inset -1px 0 0 var(--boxshadow) !important;
 
@@ -162,5 +160,4 @@ export default {
     text-align: justify;
   }
 }
-
 </style>

@@ -16,6 +16,7 @@
     "sass-loader": "^10.2.0",
     "vue": "^2.6.14",
     "vue-custom-element": "^3.3.0",
+    "vue-screen": "^1.5.4",
     "vuex": "^3.6.2"
   },
   "devDependencies": {

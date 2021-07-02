@@ -1,17 +1,20 @@
-<template>
+<template style="margin: 0;">
   <div class="page-content fr-container">
     <div class="fr-grid-row">
 
       <div class="fr-col-12 fr-col-md-4 fr-col-lg-3">
         <menu-content :panneaux="panneaux"></menu-content>
       </div>
-      <div class="fr-col-12 fr-col-md-8 fr-col-lg-7 fr-col-offset-md-1 fr-mb-6w">
+      <div class="fr-col-12 fr-col-md-7 fr-col-lg-7 fr-ml-md-6w fr-mb-6w">
 
-        <p class="fr-text fr-mt-10w fr-mb-0 ">
+        <p class="fr-text fr-mt-2w fr-mb-0 ">
           Retrouvez par mois et par département l'état d'avancement des mesures phares de France Relance.
+<!--          {{$screen.breakpoint}}-->
         </p>
 
-        <panel-list :panneaux="panneaux"></panel-list>
+        <div v-for="(panneau, index) in panneaux" :key="index">
+          <panel v-bind:index="index + ''" v-bind="panneau"></panel>
+        </div>
 
       </div>
 
@@ -22,13 +25,13 @@
 <script>
 import store from '@/store'
 import MenuContent from '@/components/MenuContent'
-import PanelList from '@/components/PanelList'
+import Panel from '@/components/Panel'
 
 export default {
   name: 'PageContent',
   components: {
     MenuContent,
-    PanelList
+    Panel
   },
   props: {
     configuration: String,
@@ -55,6 +58,10 @@ export default {
   }
 }
 </script>
+
+<style scoped lang="css">
+
+</style>
 
 <style lang="scss">
 

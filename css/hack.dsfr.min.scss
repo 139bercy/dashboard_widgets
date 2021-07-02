@@ -23,7 +23,7 @@
     }
 
     a {
-    //    text-decoration: none;
+        text-decoration: none;
         color: inherit
     }
 
@@ -344,7 +344,7 @@
     }
 
     //:root {
-    //    --is-link:
+        --is-link: ;
     //}
 
     a {
@@ -397,7 +397,7 @@
     }
 
     //:root {
-    //    --is-list:
+        --is-list: ;
     //}
 
     ol, ol > li, ul, ul > li {
@@ -895,7 +895,7 @@
         align-self: center
     }
 
-    .fr-container {
+    &.fr-container, .fr-container {
         width: 100%;
         margin-left: auto;
         margin-right: auto;
@@ -903,7 +903,7 @@
         padding-right: 1rem
     }
 
-    .fr-container--fluid {
+    &.fr-container--fluid, .fr-container--fluid {
         padding-left: 0;
         padding-right: 0;
         max-width: none
@@ -1434,22 +1434,22 @@
         background-color: var(--t-plain)
     }
 
-    :root:not([data-fr-theme=dark i]) .fr-accordion .fr-accordion__btn {
+    &:not([data-fr-theme=dark i]) .fr-accordion .fr-accordion__btn {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-accordion .fr-accordion__btn, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-accordion .fr-accordion__btn {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-accordion .fr-accordion__btn, &:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-accordion .fr-accordion__btn {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-accordion .fr-accordion__btn, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-accordion .fr-accordion__btn {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-accordion .fr-accordion__btn, &:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-accordion .fr-accordion__btn {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
 
-    :root[data-fr-theme=dark i] .fr-accordion .fr-accordion__btn {
+    &[data-fr-theme=dark i] .fr-accordion .fr-accordion__btn {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
@@ -1611,22 +1611,22 @@
         background-color: var(--beige)
     }
 
-    :root:not([data-fr-theme=dark i]) .fr-card.fr-enlarge-link {
+    &:not([data-fr-theme=dark i]) .fr-card.fr-enlarge-link {
         --color-hover: rgba(224, 219, 208, 0.5);
         --color-active: rgba(199, 189, 170, 0.5)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-card.fr-enlarge-link, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-card.fr-enlarge-link {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-card.fr-enlarge-link, &:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-card.fr-enlarge-link {
         --color-hover: rgba(224, 219, 208, 0.5);
         --color-active: rgba(199, 189, 170, 0.5)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-card.fr-enlarge-link, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-card.fr-enlarge-link {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-card.fr-enlarge-link, &:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-card.fr-enlarge-link {
         --color-hover: rgba(79, 79, 79, 0.5);
         --color-active: hsla(0, 0%, 45.1%, 0.5)
     }
 
-    :root[data-fr-theme=dark i] .fr-card.fr-enlarge-link {
+    &[data-fr-theme=dark i] .fr-card.fr-enlarge-link {
         --color-hover: rgba(79, 79, 79, 0.5);
         --color-active: hsla(0, 0%, 45.1%, 0.5)
     }
@@ -1897,22 +1897,22 @@
         background-color: var(--t-plain)
     }
 
-    :root:not([data-fr-theme=dark i]) .fr-link {
+    &:not([data-fr-theme=dark i]) .fr-link {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-link, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-link {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-link, &:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-link {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-link, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-link {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-link, &:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-link {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
 
-    :root[data-fr-theme=dark i] .fr-link {
+    &[data-fr-theme=dark i] .fr-link {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
@@ -1944,7 +1944,7 @@
         background-position: 0 -.0625rem, 0 0, 0 0
     }
 
-    :root[data-fr-mourning] .fr-logo:before {
+    &[data-fr-mourning] .fr-logo:before {
         background-size: 2.75rem 1.125rem, 0, 2.75rem 1rem
     }
 
@@ -1955,7 +1955,7 @@
         padding-top: 2.20833rem
     }
 
-    :root[data-fr-theme=dark i] .fr-logo:after {
+    &[data-fr-theme=dark i] .fr-logo:after {
         background-position: -2.625rem 100%
     }
 
@@ -1966,7 +1966,7 @@
         background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 18'%3E%3Cpath fill='%23fff' d='M11.3 10.2c-.9.6-1.7 1.3-2.3 2.1v-.1c.4-.5.7-1 1-1.5.4-.2.7-.5 1-.8.5-.5 1-1 1.7-1.3.3-.1.5-.1.8 0-.1.1-.2.1-.4.2H13v-.1c-.3.3-.7.5-1 .9-.1.2-.2.6-.7.6 0 .1.1 0 0 0zm1.6 4.6c0-.1-.1 0-.2 0l-.1.1-.1.1-.2.2s.1.1.2 0l.1-.1c.1 0 .2-.1.2-.2.1 0 .1 0 .1-.1 0 .1 0 0 0 0zm-1.6-4.3c.1 0 .2 0 .2-.1s.1-.1.1-.1v-.1c-.2.1-.3.2-.3.3zm2.4 1.9s0-.1 0 0c.1-.1.2-.1.3-.1.7-.1 1.4-.3 2.1-.6-.8-.5-1.7-.9-2.6-1h.1c-.1-.1-.3-.1-.5-.2h.1c-.2-.1-.5-.1-.7-.2.1 0 .2-.2.2-.3h-.1c-.4.2-.6.5-.8.9.2.1.5 0 .7.1h-.3c-.1 0-.2.1-.2.2h.1c-.1 0-.1.1-.2.1.1.1.2 0 .4 0 0 .1.1.1.1.1-.1 0-.2.1-.3.3-.1.2-.2.2-.3.3v.1c-.3.2-.6.5-.9.8v.1c-.1.1-.2.1-.2.2v.1c.4-.1.6-.4 1-.5l.6-.3c.2 0 .3-.1.5-.1v.1h.2c0 .1-.2 0-.1.1s.3.1.4 0c.2-.2.3-.2.4-.2zM12.4 14c-.4.2-.9.2-1.2.4 0 0 0 .1-.1.1 0 0-.1 0-.1.1-.1 0-.1.1-.2.2l-.1.1s0 .1.1 0l.1-.1s-.1.1-.1.2v.3l-.1.1s0 .1-.1.1l-.1.1.2-.2.1-.1h.2s0-.1.1-.1c.1-.1.2-.2.3-.2h.1c.1-.1.3-.1.4-.2.1-.1.2-.2.3-.2.2-.2.5-.3.8-.5-.1 0-.2-.1-.3-.1 0 .1-.2 0-.3 0zM30 9.7c-.1.2-.4.2-.6.3-.2.2 0 .4.1.5.1.3-.2.5-.4.5.1.1.2.1.2.1 0 .2.2.2.1.4s-.5.3-.3.5c.1.2.1.5 0 .7-.1.2-.3.4-.5.5-.2.1-.4.1-.6 0-.1 0-.1-.1-.2-.1-.5-.1-1-.2-1.5-.2-.1 0-.3.1-.4.1-.1.1-.3.2-.4.3l-.1.1c-.1.1-.2.2-.2.3-.1.2-.2.4-.2.6-.2.5-.2 1 0 1.4 0 0 1 .3 1.7.6.2.1.5.2.7.4l1.7 1H13.2l1.6-1c.6-.4 1.3-.7 2-1 .5-.2 1.1-.5 1.5-.9.2-.2.3-.4.5-.5.3-.4.6-.7 1-1l.3-.3s0-.1.1-.1c-.2.1-.2.2-.4.2 0 0-.1 0 0-.1s.2-.2.3-.2v-.1c-.4 0-.7.2-1 .5h-.2c-.5.2-.8.5-1.2.7v-.1c-.2.1-.4.2-.5.2-.2 0-.5.1-.8 0-.4 0-.7.1-1.1.2-.2.1-.4.1-.6.2v.1l-.2.2c-.2.1-.3.2-.5.4l-.5.5h-.1l.1-.1.1-.1c0-.1.1-.1.1-.2.2-.1.3-.3.5-.4 0 0-.1 0 0 0 0 0 0-.1.1-.1l-.1.1c-.1.1-.1.2-.2.2v-.2l.2-.2c.1-.1.2-.1.3-.2h.1c-.2.1-.3.1-.5.2h-.2c0-.1.1-.1.2-.2h.1c1-.8 2.3-.6 3.4-1 .1-.1.2-.1.3-.2.1-.1.3-.2.5-.3.2-.2.4-.4.5-.7v-.1c-.4.4-.8.7-1.3 1-.6.2-1.3.4-2 .4 0-.1.1-.1.1-.1 0-.1.1-.1.1-.2h.1s0-.1.1-.1h.1c-.1-.1-.3.1-.4 0 .1-.1 0-.2.1-.2h.1s0-.1.1-.1c.5-.3.9-.5 1.3-.7-.1 0-.1.1-.2 0 .1 0 0-.1.1-.1.3-.1.6-.3.9-.4-.1 0-.2.1-.3 0 .1 0 .1-.1.2-.1v-.1c0-.1.1 0 .2-.1h-.1c.1-.1.2-.2.4-.2 0-.1-.1 0-.1-.1h.1-.5c-.1 0 0-.1 0-.1.1-.2.2-.5.3-.7h-.1c-.3.3-.8.5-1.2.6h-.2c-.2.1-.4.1-.5 0-.1-.1-.2-.2-.3-.2-.2-.1-.5-.3-.8-.4-.7-.2-1.5-.4-2.3-.3.3-.1.7-.2 1.1-.3.5-.2 1-.3 1.5-.3h-.3c-.4 0-.9.1-1.3.2-.3.1-.6.2-.9.2-.2.1-.3.2-.5.2v-.1c.3-.4.7-.7 1.1-.8.5-.1 1.1 0 1.6.1.4 0 .8.1 1.1.2.1 0 .2.2.3.3.2.1.4 0 .5.1v-.2c.1-.1.3 0 .4 0 .2-.2-.2-.4-.3-.6v-.1c.2.2.5.4.7.6.1.1.5.2.5 0-.2-.3-.4-.6-.7-.9v-.2c-.1 0-.1 0-.1-.1-.1-.1-.1-.2-.1-.3-.1-.2 0-.4-.1-.5-.1-.2-.1-.3-.1-.5-.1-.5-.2-1-.3-1.4-.1-.6.3-1 .6-1.5.2-.4.5-.7.8-1 .1-.4.3-.7.6-1 .3-.3.6-.5.9-.6.3-.1.5-.2.8-.3l2.5-.4H25l1.8.3c.1 0 .2 0 .2.1.1.1.3.2.4.2.2.1.4.3.6.5.1.1.2.3.1.4-.1.1-.1.4-.2.4-.2.1-.4.1-.6.1-.1 0-.2 0-.4-.1.5.2.9.4 1.2.8 0 .1.2.1.3.1v.1c-.1.1-.1.1-.1.2h.1c.1-.1.1-.4.3-.3.2.1.2.3.1.4-.1.1-.2.2-.4.3v.2c.1.1.1.2.2.4s.1.5.2.7c.1.5.2.9.2 1.4 0 .2-.1.5 0 .7l.3.6c.1.2.2.3.3.5.2.3.6.6.4 1zm-15.6 5.2c-.1 0-.1.1-.1.1s.1 0 .1-.1zm5.8-1.8c-.1.1 0 0 0 0zm-6.7-.2c0 .1.1 0 .1 0 .2-.1.5 0 .6-.2-.1-.1-.2 0-.2-.1-.1 0-.2 0-.2.1-.1.1-.3.1-.3.2z'/%3E%3Cpath fill='gray' d='M27.9 6.8c.1 0 .3 0 .3.1-.1.2-.4.3-.6.5h-.1c-.1.1-.1.2-.1.2h-.3c.1.1.3.2.5.2l.1.1h.2V8c-.1.1-.2.1-.4.1.2.1.5.1.7 0 .2-.1 0-.4.1-.5-.1 0 0-.1-.1-.1.1-.1.1-.2.2-.2s.1 0 .2-.1c0-.1-.1-.1-.1-.2.2-.1.3-.3.3-.5 0-.1-.3-.1-.4-.2h-.5c-.2 0-.3.1-.5.1l-.6.3c.2-.1.4-.1.7-.2 0 .3.2.3.4.3'/%3E%3C/svg%3E"), linear-gradient(90deg, #000091, #000091 50%, #e1000f 0, #e1000f), linear-gradient(90deg, #000, #000)
     }
 
-    :root[data-fr-mourning] .fr-logo:before {
+    &[data-fr-mourning] .fr-logo:before {
         box-shadow: 0 0 0 1px var(--t-w)
     }
 
@@ -1989,7 +1989,7 @@
         background-position: 0 -.04688rem, 0 0, 0 0
     }
 
-    :root[data-fr-mourning] .fr-logo--sm:before {
+    &[data-fr-mourning] .fr-logo--sm:before {
         background-size: 2.0625rem .84375rem, 0, 2.0625rem .75rem
     }
 
@@ -2000,7 +2000,7 @@
         padding-top: 1.65625rem
     }
 
-    :root[data-fr-theme=dark i] .fr-logo--sm:after {
+    &[data-fr-theme=dark i] .fr-logo--sm:after {
         background-position: -1.96875rem 100%
     }
 
@@ -2016,7 +2016,7 @@
         background-position: 0 -.07812rem, 0 0, 0 0
     }
 
-    :root[data-fr-mourning] .fr-logo--lg:before {
+    &[data-fr-mourning] .fr-logo--lg:before {
         background-size: 3.4375rem 1.40625rem, 0, 3.4375rem 1.25rem
     }
 
@@ -2027,7 +2027,7 @@
         padding-top: 2.76042rem
     }
 
-    :root[data-fr-theme=dark i] .fr-logo--lg:after {
+    &[data-fr-theme=dark i] .fr-logo--lg:after {
         background-position: -3.28125rem 100%
     }
 
@@ -2148,22 +2148,22 @@
         background-color: var(--t-plain)
     }
 
-    :root:not([data-fr-theme=dark i]) .fr-pagination__link {
+    &:not([data-fr-theme=dark i]) .fr-pagination__link {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-pagination__link, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-pagination__link {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-pagination__link, &:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-pagination__link {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-pagination__link, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-pagination__link {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-pagination__link, &:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-pagination__link {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
 
-    :root[data-fr-theme=dark i] .fr-pagination__link {
+    &[data-fr-theme=dark i] .fr-pagination__link {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
@@ -2173,22 +2173,22 @@
         color: var(--w-bf500)
     }
 
-    :root:not([data-fr-theme=dark i]) .fr-pagination__link[aria-current] {
+    &:not([data-fr-theme=dark i]) .fr-pagination__link[aria-current] {
         --color-hover: rgba(0, 0, 221, 0.5);
         --color-active: rgba(41, 41, 255, 0.5)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-pagination__link[aria-current], :root:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-pagination__link[aria-current] {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-pagination__link[aria-current], &:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-pagination__link[aria-current] {
         --color-hover: rgba(0, 0, 221, 0.5);
         --color-active: rgba(41, 41, 255, 0.5)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-pagination__link[aria-current], :root:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-pagination__link[aria-current] {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-pagination__link[aria-current], &:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-pagination__link[aria-current] {
         --color-hover: rgba(71, 71, 255, 0.5);
         --color-active: rgba(0, 0, 243, 0.5)
     }
 
-    :root[data-fr-theme=dark i] .fr-pagination__link[aria-current] {
+    &[data-fr-theme=dark i] .fr-pagination__link[aria-current] {
         --color-hover: rgba(71, 71, 255, 0.5);
         --color-active: rgba(0, 0, 243, 0.5)
     }
@@ -2197,12 +2197,12 @@
         color: var(--g600-g400)
     }
 
-    :root {
+    //:root {
         --block-color-hover: hsla(0, 0%, 87.8%, 0.5);
-        --block-color-active: hsla(0, 0%, 76.1%, 0.5)
-    }
+        --block-color-active: hsla(0, 0%, 76.1%, 0.5);
+    //}
 
-    :root[data-fr-theme=dark i] {
+    &[data-fr-theme=dark i] {
         --bf500: #9a9aff;
         --bf500-plain: #000091;
         --w-bf500: #000091;
@@ -2233,10 +2233,44 @@
         --rm300: #383838;
         --rm500: #f7bfc3;
         --scroll-shadow: #1e1e1e;
-        --overlay: hsla(0, 0%, 80.8%, 0.32)
+        --overlay: hsla(0, 0%, 80.8%, 0.32);
     }
 
-    :root {
+    //:root {
+        --bf500: #000091;
+        --bf500-plain: #000091;
+        --w-bf500: #fff;
+        --bf300-plain: #9a9aff;
+        --bf200-bf300: #ececff;
+        --bf100-g750: #f5f5ff;
+        --t-plain: transparent;
+        --t-w: transparent;
+        --g800: #1e1e1e;
+        --g700: #383838;
+        --g600: #6a6a6a;
+        --g500: #9c9c9c;
+        --g400: #cecece;
+        --g300: #e7e7e7;
+        --g200: #f0f0f0;
+        --g100: #f8f8f8;
+        --w: #fff;
+        --beige: #f9f8f6;
+        --g800-plain: #1e1e1e;
+        --g600-g400: #6a6a6a;
+        --g400-t: #cecece;
+        --g100-g800: #f8f8f8;
+        --w-g750: #fff;
+        --focus: #2a7ffe;
+        --info: #0762c8;
+        --success: #008941;
+        --error: #e10600;
+        --rm300: #f7bfc3;
+        --rm500: #e1000f;
+        --scroll-shadow: rgba(30, 30, 30, 0.16);
+        --overlay: hsla(0, 0%, 61.2%, 0.32);
+    //}
+
+    &:not([data-fr-theme=dark i]) [class*="--scheme-light-"], &:not([data-fr-theme=dark i]) [class*=fr-scheme-light] {
         --bf500: #000091;
         --bf500-plain: #000091;
         --w-bf500: #fff;
@@ -2270,41 +2304,7 @@
         --overlay: hsla(0, 0%, 61.2%, 0.32)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-light-"], :root:not([data-fr-theme=dark i]) [class*=fr-scheme-light] {
-        --bf500: #000091;
-        --bf500-plain: #000091;
-        --w-bf500: #fff;
-        --bf300-plain: #9a9aff;
-        --bf200-bf300: #ececff;
-        --bf100-g750: #f5f5ff;
-        --t-plain: transparent;
-        --t-w: transparent;
-        --g800: #1e1e1e;
-        --g700: #383838;
-        --g600: #6a6a6a;
-        --g500: #9c9c9c;
-        --g400: #cecece;
-        --g300: #e7e7e7;
-        --g200: #f0f0f0;
-        --g100: #f8f8f8;
-        --w: #fff;
-        --beige: #f9f8f6;
-        --g800-plain: #1e1e1e;
-        --g600-g400: #6a6a6a;
-        --g400-t: #cecece;
-        --g100-g800: #f8f8f8;
-        --w-g750: #fff;
-        --focus: #2a7ffe;
-        --info: #0762c8;
-        --success: #008941;
-        --error: #e10600;
-        --rm300: #f7bfc3;
-        --rm500: #e1000f;
-        --scroll-shadow: rgba(30, 30, 30, 0.16);
-        --overlay: hsla(0, 0%, 61.2%, 0.32)
-    }
-
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-dark-"], :root:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-dark-"], &:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] {
         --bf500: #9a9aff;
         --w-bf500: #000091;
         --bf200-bf300: #9a9aff;
@@ -2334,91 +2334,91 @@
         --overlay: hsla(0, 0%, 80.8%, 0.32)
     }
 
-    :root .fr-scheme-light-white {
+    .fr-scheme-light-white {
         background-color: var(--w);
         --scheme-border: var(--bf500);
         --block-color-hover: hsla(0, 0%, 87.8%, 0.5);
         --block-color-active: hsla(0, 0%, 76.1%, 0.5)
     }
 
-    :root[data-fr-theme=dark i] :root .fr-scheme-light-white {
+    &[data-fr-theme=dark i] .fr-scheme-light-white {
         --block-color-hover: rgba(65, 65, 65, 0.5);
         --block-color-active: rgba(99, 99, 99, 0.5)
     }
 
-    :root .fr-scheme-light-grey-100 {
+    .fr-scheme-light-grey-100 {
         background-color: var(--g100-g800);
         --scheme-border: var(--bf500);
         --block-color-hover: hsla(0, 0%, 85.1%, 0.5);
         --block-color-active: hsla(0, 0%, 72.5%, 0.5)
     }
 
-    :root[data-fr-theme=dark i] :root .fr-scheme-light-grey-100 {
+    &[data-fr-theme=dark i] .fr-scheme-light-grey-100 {
         --block-color-hover: rgba(65, 65, 65, 0.5);
         --block-color-active: rgba(99, 99, 99, 0.5)
     }
 
-    :root .fr-scheme-light-grey-200 {
+    .fr-scheme-light-grey-200 {
         background-color: var(--g200);
         --scheme-border: var(--bf500);
         --block-color-hover: hsla(0, 0%, 81.2%, 0.5);
         --block-color-active: hsla(0, 0%, 68.6%, 0.5)
     }
 
-    :root[data-fr-theme=dark i] :root .fr-scheme-light-grey-200 {
+    &[data-fr-theme=dark i] .fr-scheme-light-grey-200 {
         --block-color-hover: rgba(95, 95, 95, 0.5);
         --block-color-active: hsla(0, 0%, 52.5%, 0.5)
     }
 
-    :root .fr-scheme-light-beige {
+    .fr-scheme-light-beige {
         background-color: var(--beige);
         --scheme-border: var(--bf500);
         --block-color-hover: rgba(224, 219, 208, 0.5);
         --block-color-active: rgba(199, 189, 170, 0.5)
     }
 
-    :root[data-fr-theme=dark i] :root .fr-scheme-light-beige {
+    &[data-fr-theme=dark i] .fr-scheme-light-beige {
         --block-color-hover: rgba(79, 79, 79, 0.5);
         --block-color-active: hsla(0, 0%, 45.1%, 0.5)
     }
 
-    :root[data-fr-transition] [class*=fr-scheme-light] {
+    &[data-fr-transition] [class*=fr-scheme-light] {
         transition: background-color .3s, box-shadow .3s
     }
 
-    :root .fr-scheme-dark-grey-800 {
+    .fr-scheme-dark-grey-800 {
         background-color: var(--g800-plain);
         --scheme-border: var(--bf300-plain);
         --block-color-hover: rgba(65, 65, 65, 0.5);
         --block-color-active: rgba(99, 99, 99, 0.5)
     }
 
-    :root[data-fr-theme=dark i] :root .fr-scheme-dark-grey-800 {
+    &[data-fr-theme=dark i] .fr-scheme-dark-grey-800 {
         --block-color-hover: rgba(65, 65, 65, 0.5);
         --block-color-active: rgba(99, 99, 99, 0.5)
     }
 
-    :root[data-fr-transition] [class*=fr-scheme-dark] {
+    &[data-fr-transition] [class*=fr-scheme-dark] {
         transition: background-color .3s, box-shadow .3s
     }
 
-    :root .fr-switch-theme .fr-fieldset .fr-radio-group:last-child input[type=radio] + label {
+    .fr-switch-theme .fr-fieldset .fr-radio-group:last-child input[type=radio] + label {
         margin-bottom: 0
     }
 
-    :root .fr-switch-theme .fr-fieldset .fr-radio-group:first-child input[type=radio] + label {
+    .fr-switch-theme .fr-fieldset .fr-radio-group:first-child input[type=radio] + label {
         background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3Cpath id='a' d='M0 0h80v80H0z'/%3E%3C/defs%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cmask id='b' fill='%23fff'%3E%3Cuse xlink:href='%23a'/%3E%3C/mask%3E%3Ccircle stroke='%23000091' stroke-width='2' mask='url(%23b)' cx='40' cy='40' r='16'/%3E%3Cpath d='M40 29a1 1 0 010 2 9 9 0 00-9 9 1 1 0 01-2 0c0-6.075 4.925-11 11-11z' fill='%23E1000F' fill-rule='nonzero' mask='url(%23b)'/%3E%3Cpath d='M39.912 64a1 1 0 011 1v6a1 1 0 11-2 0v-6a1 1 0 011-1zm18.947-7.262l4.243 4.242a1 1 0 01-1.415 1.414l-4.242-4.242a1 1 0 111.414-1.414zm-35.48 0a1 1 0 010 1.414l-4.243 4.242a1 1 0 01-1.414-1.414l4.242-4.242a1 1 0 011.415 0zM71 38.912a1 1 0 010 2h-6a1 1 0 110-2h6zm-56 0a1 1 0 010 2H9a1 1 0 110-2h6zm4.26-21.772l4.244 4.242a1 1 0 01-1.415 1.414l-4.242-4.242a1 1 0 011.414-1.414zm43.717 0a1 1 0 010 1.414l-4.243 4.242a1 1 0 01-1.414-1.414l4.242-4.242a1 1 0 011.415 0zM39.912 8a1 1 0 011 1v6a1 1 0 11-2 0V9a1 1 0 011-1z' fill='%23000091' mask='url(%23b)'/%3E%3C/g%3E%3C/svg%3E")
     }
 
-    :root .fr-switch-theme .fr-fieldset .fr-radio-group:nth-child(2) input[type=radio] + label {
+    .fr-switch-theme .fr-fieldset .fr-radio-group:nth-child(2) input[type=radio] + label {
         background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h80v80H0z'/%3E%3Cpath d='M38 26c0 11.046 8.954 20 20 20 2.23 0 4.376-.365 6.38-1.039C62.174 53.607 54.333 60 45 60c-11.046 0-20-8.954-20-20 0-8.815 5.703-16.298 13.62-18.961A20.024 20.024 0 0038 26z' stroke='%23000091' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath fill='%23E1000F' d='M14.647 20.822l-4.151-.848 4.151-.849.849-4.151.848 4.151 4.152.849-4.152.848-.848 4.152zm43 11l-4.151-.848 4.151-.849.849-4.151.848 4.151 4.152.849-4.152.848-.848 4.152zm-39 29l-4.151-.848 4.151-.849.849-4.151.848 4.151 4.152.849-4.152.848-.848 4.152z'/%3E%3C/g%3E%3C/svg%3E")
     }
 
-    :root[data-fr-theme=dark i] .fr-switch-theme .fr-fieldset .fr-radio-group:first-child input[type=radio] + label {
+    &[data-fr-theme=dark i] .fr-switch-theme .fr-fieldset .fr-radio-group:first-child input[type=radio] + label {
         background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='80' height='80'%3E%3Cdefs%3E%3Cpath id='a' d='M0 0h80v80H0z'/%3E%3C/defs%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cmask id='b' fill='%23fff'%3E%3Cuse xlink:href='%23a'/%3E%3C/mask%3E%3Ccircle cx='40' cy='40' r='16' stroke='%239a9aff' stroke-width='2' mask='url(%23b)'/%3E%3Cpath fill='%23F7BFC3' fill-rule='nonzero' d='M40 29a1 1 0 010 2 9 9 0 00-9 9 1 1 0 01-2 0c0-6.075 4.925-11 11-11z' mask='url(%23b)'/%3E%3Cpath fill='%239a9aff' d='M39.912 64a1 1 0 011 1v6a1 1 0 01-2 0v-6a1 1 0 011-1zm18.947-7.262l4.243 4.242a1 1 0 01-1.415 1.414l-4.242-4.242a1 1 0 011.414-1.414zm-35.48 0a1 1 0 010 1.414l-4.243 4.242a.999.999 0 11-1.414-1.414l4.242-4.242a1.002 1.002 0 011.415 0zM71 38.912a1 1 0 110 2h-6a1 1 0 010-2h6zm-56 0a1 1 0 110 2H9a1 1 0 010-2h6zm4.26-21.772l4.244 4.242a1 1 0 01-1.415 1.414l-4.242-4.242a1 1 0 011.414-1.414zm43.717 0a1 1 0 010 1.414l-4.243 4.242a.999.999 0 11-1.414-1.414l4.242-4.242a1.002 1.002 0 011.415 0zM39.912 8a1 1 0 011 1v6a1 1 0 01-2 0V9a1 1 0 011-1z' mask='url(%23b)'/%3E%3C/g%3E%3C/svg%3E")
     }
 
-    :root[data-fr-theme=dark i] .fr-switch-theme .fr-fieldset .fr-radio-group:nth-child(2) input[type=radio] + label {
+    &[data-fr-theme=dark i] .fr-switch-theme .fr-fieldset .fr-radio-group:nth-child(2) input[type=radio] + label {
         background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h80v80H0z'/%3E%3Cpath stroke='%239a9aff' stroke-linejoin='round' stroke-width='2' d='M38 26c0 11.046 8.954 20 20 20 2.23 0 4.376-.365 6.38-1.039C62.174 53.607 54.333 60 45 60c-11.046 0-20-8.954-20-20 0-8.815 5.703-16.298 13.62-18.961A20.039 20.039 0 0038 26z'/%3E%3Cpath fill='%23F7BFC3' d='M14.647 20.823l-4.151-.85 4.151-.848.849-4.152.849 4.152 4.151.848-4.151.85-.849 4.15zm43 11l-4.151-.85 4.151-.848.849-4.152.849 4.152 4.151.848-4.151.85-.849 4.15zm-39 29l-4.151-.85 4.151-.848.849-4.152.849 4.152 4.151.848-4.151.85-.849 4.15z'/%3E%3C/g%3E%3C/svg%3E")
     }
 
@@ -2713,22 +2713,22 @@
         background-color: var(--t-plain)
     }
 
-    :root:not([data-fr-theme=dark i]) .fr-sidemenu__link {
+    &:not([data-fr-theme=dark i]) .fr-sidemenu__link {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-sidemenu__link, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-sidemenu__link {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-sidemenu__link, &:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-sidemenu__link {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-sidemenu__link, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-sidemenu__link {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-sidemenu__link, &:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-sidemenu__link {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
 
-    :root[data-fr-theme=dark i] .fr-sidemenu__link {
+    &[data-fr-theme=dark i] .fr-sidemenu__link {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
@@ -2781,22 +2781,22 @@
         background-color: var(--t-plain)
     }
 
-    :root:not([data-fr-theme=dark i]) .fr-summary__list > li > a {
+    &:not([data-fr-theme=dark i]) .fr-summary__list > li > a {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-summary__list > li > a, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-summary__list > li > a {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-summary__list > li > a, &:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-summary__list > li > a {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-summary__list > li > a, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-summary__list > li > a {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-summary__list > li > a, &:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-summary__list > li > a {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
 
-    :root[data-fr-theme=dark i] .fr-summary__list > li > a {
+    &[data-fr-theme=dark i] .fr-summary__list > li > a {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
@@ -3143,22 +3143,22 @@
         box-shadow: 0 1px 0 0 var(--g300)
     }
 
-    :root:not([data-fr-theme=dark i]) .fr-tabs__tab:not([aria-selected=true]) {
+    &:not([data-fr-theme=dark i]) .fr-tabs__tab:not([aria-selected=true]) {
         --color-hover: rgba(182, 182, 255, 0.5);
         --color-active: rgba(119, 119, 255, 0.5)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-tabs__tab:not([aria-selected=true]), :root:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-tabs__tab:not([aria-selected=true]) {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-tabs__tab:not([aria-selected=true]), &:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-tabs__tab:not([aria-selected=true]) {
         --color-hover: rgba(182, 182, 255, 0.5);
         --color-active: rgba(119, 119, 255, 0.5)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-tabs__tab:not([aria-selected=true]), :root:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-tabs__tab:not([aria-selected=true]) {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-tabs__tab:not([aria-selected=true]), &:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-tabs__tab:not([aria-selected=true]) {
         --color-hover: rgba(79, 79, 79, 0.5);
         --color-active: hsla(0, 0%, 45.1%, 0.5)
     }
 
-    :root[data-fr-theme=dark i] .fr-tabs__tab:not([aria-selected=true]) {
+    &[data-fr-theme=dark i] .fr-tabs__tab:not([aria-selected=true]) {
         --color-hover: rgba(79, 79, 79, 0.5);
         --color-active: hsla(0, 0%, 45.1%, 0.5)
     }
@@ -3302,22 +3302,22 @@
         background-color: var(--beige)
     }
 
-    :root:not([data-fr-theme=dark i]) .fr-tile.fr-enlarge-link {
+    &:not([data-fr-theme=dark i]) .fr-tile.fr-enlarge-link {
         --color-hover: rgba(224, 219, 208, 0.5);
         --color-active: rgba(199, 189, 170, 0.5)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-tile.fr-enlarge-link, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-tile.fr-enlarge-link {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-tile.fr-enlarge-link, &:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-tile.fr-enlarge-link {
         --color-hover: rgba(224, 219, 208, 0.5);
         --color-active: rgba(199, 189, 170, 0.5)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-tile.fr-enlarge-link, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-tile.fr-enlarge-link {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-tile.fr-enlarge-link, &:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-tile.fr-enlarge-link {
         --color-hover: rgba(79, 79, 79, 0.5);
         --color-active: hsla(0, 0%, 45.1%, 0.5)
     }
 
-    :root[data-fr-theme=dark i] .fr-tile.fr-enlarge-link {
+    &[data-fr-theme=dark i] .fr-tile.fr-enlarge-link {
         --color-hover: rgba(79, 79, 79, 0.5);
         --color-active: hsla(0, 0%, 45.1%, 0.5)
     }
@@ -4628,22 +4628,22 @@
         color: var(--w-bf500)
     }
 
-    :root:not([data-fr-theme=dark i]) .fr-btn {
+    &:not([data-fr-theme=dark i]) .fr-btn {
         --color-hover: rgba(0, 0, 221, 0.5);
         --color-active: rgba(41, 41, 255, 0.5)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-btn, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-btn {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-btn, &:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-btn {
         --color-hover: rgba(0, 0, 221, 0.5);
         --color-active: rgba(41, 41, 255, 0.5)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-btn, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-btn {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-btn, &:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-btn {
         --color-hover: rgba(71, 71, 255, 0.5);
         --color-active: rgba(0, 0, 243, 0.5)
     }
 
-    :root[data-fr-theme=dark i] .fr-btn {
+    &[data-fr-theme=dark i] .fr-btn {
         --color-hover: rgba(71, 71, 255, 0.5);
         --color-active: rgba(0, 0, 243, 0.5)
     }
@@ -4659,22 +4659,22 @@
         box-shadow: inset 0 0 0 1px var(--bf500)
     }
 
-    :root:not([data-fr-theme=dark i]) .fr-btn--secondary {
+    &:not([data-fr-theme=dark i]) .fr-btn--secondary {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-btn--secondary, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-btn--secondary {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-btn--secondary, &:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-btn--secondary {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-btn--secondary, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-btn--secondary {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-btn--secondary, &:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-btn--secondary {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
 
-    :root[data-fr-theme=dark i] .fr-btn--secondary {
+    &[data-fr-theme=dark i] .fr-btn--secondary {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
@@ -4911,7 +4911,7 @@
         background-position: 0 -.0625rem, 0 0, 0 0
     }
 
-    :root[data-fr-mourning] .fr-footer__brand .fr-logo:before {
+    &[data-fr-mourning] .fr-footer__brand .fr-logo:before {
         background-size: 2.75rem 1.125rem, 0, 2.75rem 1rem
     }
 
@@ -4922,7 +4922,7 @@
         padding-top: 2.20833rem
     }
 
-    :root[data-fr-theme=dark i] .fr-footer__brand .fr-logo:after {
+    &[data-fr-theme=dark i] .fr-footer__brand .fr-logo:after {
         background-position: -2.625rem 100%
     }
 
@@ -5499,15 +5499,15 @@
         background-image: var(--data-uri-svg)
     }
 
-    :root[data-fr-theme=dark i] .fr-select {
+    &[data-fr-theme=dark i] .fr-select {
         --data-uri-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 24 24' ><path fill='%23fff' d='M12,13.1l5-4.9l1.4,1.4L12,15.9L5.6,9.5l1.4-1.4L12,13.1z'/></svg>")
     }
 
-    [class*=fr-scheme-light] .fr-select :root:not([data-fr-theme=dark i]) {
+    [class*=fr-scheme-light] .fr-select &:not([data-fr-theme=dark i]) {
         --data-uri-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 24 24' ><path fill='%231e1e1e' d='M12,13.1l5-4.9l1.4,1.4L12,15.9L5.6,9.5l1.4-1.4L12,13.1z'/></svg>")
     }
 
-    [class*=fr-scheme-dark] .fr-select :root:not([data-fr-theme=dark i]) {
+    [class*=fr-scheme-dark] .fr-select &:not([data-fr-theme=dark i]) {
         --data-uri-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 24 24' ><path fill='%231e1e1e' d='M12,13.1l5-4.9l1.4,1.4L12,15.9L5.6,9.5l1.4-1.4L12,13.1z'/></svg>")
     }
 
@@ -5527,15 +5527,15 @@
         background-image: var(--data-uri-svg)
     }
 
-    :root[data-fr-theme=dark i] select.fr-select:disabled, :root[data-fr-theme=dark i] select.fr-select[disabled] {
+    &[data-fr-theme=dark i] select.fr-select:disabled, &[data-fr-theme=dark i] select.fr-select[disabled] {
         --data-uri-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 24 24' ><path fill='%23cecece' d='M12,13.1l5-4.9l1.4,1.4L12,15.9L5.6,9.5l1.4-1.4L12,13.1z'/></svg>")
     }
 
-    [class*=fr-scheme-light] select.fr-select:disabled :root:not([data-fr-theme=dark i]), [class*=fr-scheme-light] select.fr-select[disabled] :root:not([data-fr-theme=dark i]) {
+    [class*=fr-scheme-light] select.fr-select:disabled &:not([data-fr-theme=dark i]), [class*=fr-scheme-light] select.fr-select[disabled] &:not([data-fr-theme=dark i]) {
         --data-uri-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 24 24' ><path fill='%236a6a6a' d='M12,13.1l5-4.9l1.4,1.4L12,15.9L5.6,9.5l1.4-1.4L12,13.1z'/></svg>")
     }
 
-    [class*=fr-scheme-dark] select.fr-select:disabled :root:not([data-fr-theme=dark i]), [class*=fr-scheme-dark] select.fr-select[disabled] :root:not([data-fr-theme=dark i]) {
+    [class*=fr-scheme-dark] select.fr-select:disabled &:not([data-fr-theme=dark i]), [class*=fr-scheme-dark] select.fr-select[disabled] &:not([data-fr-theme=dark i]) {
         --data-uri-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 24 24' ><path fill='%236a6a6a' d='M12,13.1l5-4.9l1.4,1.4L12,15.9L5.6,9.5l1.4-1.4L12,13.1z'/></svg>")
     }
 
@@ -5692,22 +5692,22 @@
         background-color: var(--bf200-bf300)
     }
 
-    :root:not([data-fr-theme=dark i]) a.fr-tag, :root:not([data-fr-theme=dark i]) button.fr-tag {
+    &:not([data-fr-theme=dark i]) a.fr-tag, &:not([data-fr-theme=dark i]) button.fr-tag {
         --color-hover: rgba(172, 172, 255, 0.5);
         --color-active: rgba(107, 107, 255, 0.5)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-light-"] a.fr-tag, :root:not([data-fr-theme=dark i]) [class*="--scheme-light-"] button.fr-tag, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-light] a.fr-tag, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-light] button.fr-tag {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-light-"] a.fr-tag, &:not([data-fr-theme=dark i]) [class*="--scheme-light-"] button.fr-tag, &:not([data-fr-theme=dark i]) [class*=fr-scheme-light] a.fr-tag, &:not([data-fr-theme=dark i]) [class*=fr-scheme-light] button.fr-tag {
         --color-hover: rgba(172, 172, 255, 0.5);
         --color-active: rgba(107, 107, 255, 0.5)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] a.fr-tag, :root:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] button.fr-tag, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] a.fr-tag, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] button.fr-tag {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] a.fr-tag, &:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] button.fr-tag, &:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] a.fr-tag, &:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] button.fr-tag {
         --color-hover: rgba(71, 71, 255, 0.5);
         --color-active: rgba(0, 0, 243, 0.5)
     }
 
-    :root[data-fr-theme=dark i] a.fr-tag, button.fr-tag {
+    &[data-fr-theme=dark i] a.fr-tag, button.fr-tag {
         --color-hover: rgba(71, 71, 255, 0.5);
         --color-active: rgba(0, 0, 243, 0.5)
     }
@@ -6193,22 +6193,22 @@
         background-color: var(--t-plain)
     }
 
-    :root:not([data-fr-theme=dark i]) .fr-nav__btn, :root:not([data-fr-theme=dark i]) .fr-nav__link {
+    &:not([data-fr-theme=dark i]) .fr-nav__btn, &:not([data-fr-theme=dark i]) .fr-nav__link {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-nav__btn, :root:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-nav__link, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-nav__btn, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-nav__link {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-nav__btn, &:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-nav__link, &:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-nav__btn, &:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-nav__link {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-nav__btn, :root:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-nav__link, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-nav__btn, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-nav__link {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-nav__btn, &:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-nav__link, &:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-nav__btn, &:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-nav__link {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
 
-    .fr-nav__btn, :root[data-fr-theme=dark i] .fr-nav__link {
+    .fr-nav__btn, &[data-fr-theme=dark i] .fr-nav__link {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
@@ -6330,7 +6330,7 @@
         background-position: 0 -.04688rem, 0 0, 0 0
     }
 
-    :root[data-fr-mourning] .fr-header__logo .fr-logo:before {
+    &[data-fr-mourning] .fr-header__logo .fr-logo:before {
         background-size: 2.0625rem .84375rem, 0, 2.0625rem .75rem
     }
 
@@ -6341,7 +6341,7 @@
         padding-top: 1.65625rem
     }
 
-    :root[data-fr-theme=dark i] .fr-header__logo .fr-logo:after {
+    &[data-fr-theme=dark i] .fr-header__logo .fr-logo:after {
         background-position: -1.96875rem 100%
     }
 
@@ -6513,22 +6513,22 @@
         color: var(--bf500)
     }
 
-    :root:not([data-fr-theme=dark i]) .fr-header__navbar .fr-btn {
+    &:not([data-fr-theme=dark i]) .fr-header__navbar .fr-btn {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-header__navbar .fr-btn, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-header__navbar .fr-btn {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-header__navbar .fr-btn, &:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-header__navbar .fr-btn {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
 
-    :root:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-header__navbar .fr-btn, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-header__navbar .fr-btn {
+    &:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-header__navbar .fr-btn, &:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-header__navbar .fr-btn {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
 
-    :root[data-fr-theme=dark i] .fr-header__navbar .fr-btn {
+    &[data-fr-theme=dark i] .fr-header__navbar .fr-btn {
         --color-hover: var(--block-color-hover);
         --color-active: var(--block-color-active)
     }
@@ -7355,22 +7355,22 @@
             background-color: var(--t-plain)
         }
 
-        :root:not([data-fr-theme=dark i]) .fr-sidemenu__btn {
+        &:not([data-fr-theme=dark i]) .fr-sidemenu__btn {
             --color-hover: var(--block-color-hover);
             --color-active: var(--block-color-active)
         }
 
-        :root:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-sidemenu__btn, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-sidemenu__btn {
+        &:not([data-fr-theme=dark i]) [class*="--scheme-light-"] .fr-sidemenu__btn, &:not([data-fr-theme=dark i]) [class*=fr-scheme-light] .fr-sidemenu__btn {
             --color-hover: var(--block-color-hover);
             --color-active: var(--block-color-active)
         }
 
-        :root:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-sidemenu__btn, :root:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-sidemenu__btn {
+        &:not([data-fr-theme=dark i]) [class*="--scheme-dark-"] .fr-sidemenu__btn, &:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] .fr-sidemenu__btn {
             --color-hover: var(--block-color-hover);
             --color-active: var(--block-color-active)
         }
 
-        :root[data-fr-theme=dark i] .fr-sidemenu__btn {
+        &[data-fr-theme=dark i] .fr-sidemenu__btn {
             --color-hover: var(--block-color-hover);
             --color-active: var(--block-color-active)
         }
@@ -8702,7 +8702,7 @@
             background-position: 0 -.07812rem, 0 0, 0 0
         }
 
-        :root[data-fr-mourning] .fr-footer__brand .fr-logo:before {
+        &[data-fr-mourning] .fr-footer__brand .fr-logo:before {
             background-size: 3.4375rem 1.40625rem, 0, 3.4375rem 1.25rem
         }
 
@@ -8713,7 +8713,7 @@
             padding-top: 2.76042rem
         }
 
-        :root[data-fr-theme=dark i] .fr-footer__brand .fr-logo:after {
+        &[data-fr-theme=dark i] .fr-footer__brand .fr-logo:after {
             background-position: -3.28125rem 100%
         }
 
