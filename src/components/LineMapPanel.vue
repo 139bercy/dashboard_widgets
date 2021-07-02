@@ -20,7 +20,7 @@
     </div>
     <div class="fr-grid-row">
 
-      <left-col class="map-legend fr-col-2" v-bind="leftColProps"></left-col>
+      <left-col :class="{'map-legend': $screen.breakpoint == 'lg'}" class="fr-col-2" v-bind="leftColProps"></left-col>
       <map-chart
           class="fr-col-12"
           :indicateur="indicateurName1"
