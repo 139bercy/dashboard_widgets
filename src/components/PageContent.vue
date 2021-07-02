@@ -1,15 +1,11 @@
 <template>
-  <div class="fr-container">
+  <div class="page-content fr-container">
     <div class="fr-grid-row">
 
       <div class="fr-col-12 fr-col-md-4 fr-col-lg-3">
         <menu-content :panneaux="panneaux"></menu-content>
       </div>
       <div class="fr-col-12 fr-col-md-8 fr-col-lg-7 fr-col-offset-md-1 fr-mb-6w">
-
-        <div id="logo-haut-page">
-          <img src="Logo-France-Relance.png" alt="Logo FR">
-        </div>
 
         <p class="fr-text fr-mt-10w fr-mb-0 ">
           Retrouvez par mois et par département l'état d'avancement des mesures phares de France Relance.
@@ -61,25 +57,15 @@ export default {
 </script>
 
 <style lang="scss">
-#logo-haut-page {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-top: 50%;
 
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-}
-
-.fr-container {
+@import "../../css/hack.dsfr.min.scss";
+@import "../../css/overload-fonts.css";
+//@import "../../remixicons/remixicon";
+.page-content {
 
   /* overload fonts path, to delete when parent has access */
-  @import "../../css/overload-fonts.css";
-  @import "../../css/dsfr.min.css";
+  @include dsfr;
+  //@include icons;
 
   --bf500: #009100;
   --bf500-plain: #039103;
@@ -116,7 +102,7 @@ export default {
   --boxcountour: #17b9084b;
 }
 
-.fr-container[data-fr-theme=dark i] {
+.page-content[data-fr-theme=dark i] {
   --bf500: #9a9aff;
   --bf500-plain: #000091;
   --w-bf500: #000091;
@@ -150,8 +136,8 @@ export default {
   --overlay: hsla(0, 0%, 80.8%, 0.32)
 }
 
-.fr-container:not([data-fr-theme=dark i]) [class*="--scheme-light-"],
-.fr-container:not([data-fr-theme=dark i]) [class*=fr-scheme-light] {
+.page-content:not([data-fr-theme=dark i]) [class*="--scheme-light-"],
+.page-content:not([data-fr-theme=dark i]) [class*=fr-scheme-light] {
   --bf500: #000091;
   --bf500-plain: #000091;
   --w-bf500: #fff;
@@ -185,8 +171,8 @@ export default {
   --overlay: hsla(0, 0%, 61.2%, 0.32)
 }
 
-.fr-container:not([data-fr-theme=dark i]) [class*="--scheme-dark-"],
-.fr-container:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] {
+.page-content:not([data-fr-theme=dark i]) [class*="--scheme-dark-"],
+.page-content:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] {
   --bf500: #9a9aff;
   --w-bf500: #000091;
   --bf200-bf300: #9a9aff;
@@ -216,7 +202,7 @@ export default {
   --overlay: hsla(0, 0%, 80.8%, 0.32)
 }
 
-.fr-container:not([data-fr-theme="dark" i]) .fr-tabs__tab:not([aria-selected="true"]) {
+.page-content:not([data-fr-theme="dark" i]) .fr-tabs__tab:not([aria-selected="true"]) {
   --color-hover: rgba(187, 255, 182, 0.5);
   --color-active: rgba(109, 168, 105, 0.5);
   --block-color-hover: rgba(187, 255, 182, 0.5);

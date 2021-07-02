@@ -17,11 +17,12 @@
             </button>
               <ul class="fr-sidemenu__list" v-show="voletOpened[volet]">
                 <li class="fr-sidemenu__item fr-sidemenu__item"
+                    :class="{'fr-sidemenu__item--active' : activeVolet === volet + '-' + index}"
                     v-for="(panneau, index) in panneauxByVolets[volet]" :key="index"
                 >
-                  <a class="fr-sidemenu__link" data-section="volet_cohesion"
-                     data-name="point_de_situation"
+                  <a class="fr-sidemenu__link"
                      :href="'#panel_' + toJsonNameFormat(panneau.Nom_mesure_GP)"
+                     v-on:click="activeVolet = volet + '-' + index"
                      target="_self">
                     {{ panneau.Nom_mesure_GP }}
                   </a>
@@ -51,7 +52,8 @@ export default {
     return {
       volets: [],
       voletOpened: [],
-      panneauxByVolets: []
+      panneauxByVolets: [],
+      activeVolet: null
     }
   },
   mounted () {
@@ -72,6 +74,7 @@ export default {
           this.panneauxByVolets[panneau.Volet].push(panneau)
         })
         this.toggleMenuList(this.panneaux[0].Volet, true)
+        this.activeVolet = this.panneaux[0].Volet + '-' + 0
       }
     },
     toggleMenuList (volet, value) {
@@ -92,18 +95,22 @@ export default {
 </script>
 
 <style lang="scss">
-#menu-france-relance .fr-select {
-  box-shadow: inset 0 -2px 0 0 var(--bf500-plain);
-  //-moz-appearance: none;
-  background: var(--beige);
-}
 
-#menu-france-relance button.fr-link {
-  border: solid 1px var(--w-bf500);
-}
+@use "sass:meta";
+#menu-france-relance {
+  .fr-select {
+    box-shadow: inset 0 -2px 0 0 var(--bf500-plain);
+    //-moz-appearance: none;
+    background: var(--beige);
+  }
 
-#menu-france-relance  .fr-accordion {
+  button.fr-link {
+    border: solid 1px var(--w-bf500);
+  }
+
+  .fr-accordion {
     box-shadow: 0 0 0 0 var(--boxcountour), 0 0 0 0 var(--boxcountour)
+  }
 }
 </style>
 <style scoped lang="scss">

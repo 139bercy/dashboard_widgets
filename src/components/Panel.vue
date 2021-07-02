@@ -25,7 +25,7 @@
         </div>
       </div>
     </div>
-    <div class="fr-accordion fr-col-12">
+    <section class="fr-accordion fr-col-12">
       <h3 class="fr-accordion__title">
         <button class="fr-accordion__btn fr-text--sm"
                 :aria-expanded="accordionOpened"
@@ -45,7 +45,7 @@
             Vers des fichiers d'open-data</a>
         </p>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 
@@ -80,6 +80,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+
+
 .fr-tabs {
   transition: none 0s ease 0s;
 
@@ -117,6 +119,7 @@ export default {
       &:not(:last-of-type) {
         margin-right: 0 !important;
       }
+
       &:first-of-type::before {
         box-shadow: inset 1px -1px var(--boxshadow);
       }
@@ -145,14 +148,15 @@ export default {
     padding-bottom: 0.5rem !important;
   }
 
+  &:after {
+    box-shadow: inset 1px 0 var(--boxshadow), inset -1px 0 0 var(--boxshadow) !important;
+  }
 }
 
-.fr-tabs::after {
-  box-shadow: inset 1px 0 var(--boxshadow), inset -1px 0 0 var(--boxshadow);
-}
+
 
 .fr-accordion {
-  box-shadow: inset 1px -1px var(--bf500), inset -1px 0 0 var(--boxshadow);
+  box-shadow: inset 1px -1px var(--bf500), inset -1px 0 0 var(--boxshadow) !important;
 
   .description-mesure {
     text-align: justify;

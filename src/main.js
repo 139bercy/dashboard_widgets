@@ -16,6 +16,7 @@ import PageContent from './components/PageContent'
 import MenuContent from './components/MenuContent'
 
 import vueCustomElement from 'vue-custom-element'
+
 Vue.use(getData(store))
 
 Vue.config.productionTip = false

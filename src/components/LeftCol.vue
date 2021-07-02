@@ -114,7 +114,8 @@ export default {
 
 <style scoped lang="scss">
   @import "../../css/overload-fonts.css";
-  @import "../../css/dsfr.min.css";
+  @import "../../css/hack.dsfr.min.scss";
+  //@import "../../css/dsfr.min.css";
   .l_col{
 
     .sep, .sep-viz {
