@@ -1,12 +1,12 @@
 <template>
-  <div :id="'panel_' + toJsonNameFormat(Nom_mesure_GP)" class="fr-mt-6w">
+  <div :id="'panel_' + toJsonNameFormat(Nom_mesure_GP)" class="fr-mt-3w">
     <div class="lvl2-header fr-px-2w fr-px-md-3w fr-pt-3w">
       <h3>{{ Nom_mesure_GP }}</h3>
     </div>
-
-    <div class="fr-tabs" style="transition: none 0s ease 0s;">
+    <div class="fr-tabs">
       <ul class="fr-tabs__list" role="tablist" aria-label="changer d'onglet">
-        <li role="presentation" v-for="(onglet, indexOnglet) in onglets" :key="indexOnglet">
+        <li role="presentation" v-for="(onglet, indexOnglet) in onglets" :key="indexOnglet"
+            :is-selected="currentOnglet === onglet">
           <button class="fr-tabs__tab" v-on:click="currentOnglet=onglet"
                   :tabindex="indexOnglet" role="tab"
                   :aria-selected="currentOnglet === onglet"
@@ -25,7 +25,7 @@
         </div>
       </div>
     </div>
-    <section class="fr-accordion">
+    <div class="fr-accordion panel-accordion-extended">
       <h3 class="fr-accordion__title">
         <button class="fr-accordion__btn fr-text--sm"
                 :aria-expanded="accordionOpened"
@@ -34,18 +34,18 @@
           En savoir plus sur la mesure :
         </button>
       </h3>
-      <div class="fr-mx-0" v-show="accordionOpened">
-        <p class="fr-mb-0 fr-text--sm">
+      <div class="fr-pl-2v fr-pr-2v fr-col-12" v-show="accordionOpened">
+        <p class="description-mesure fr-mb-0 fr-text--sm fr-pb-1v">
           {{ onglets[0].Description_mesure }}
         </p>
-        <p class="fr-text--xs fr-mb-3w">Source :
+        <p class="fr-text--xs fr-mb-3w fr-pb-1v">Source :
           <a title="vers data.gouv.fr" v-bind:href="Lien_page_mesure"
              target="_blank" rel="noopener" data-section="nom_section"
              data-subsection="nom_subsection">
             Vers des fichiers d'open-data</a>
         </p>
       </div>
-    </section>
+    </div>
   </div>
 </template>
 
@@ -66,7 +66,7 @@ export default {
     Lien_page_mesure: String,
     onglets: Array
   },
-  data () {
+  data() {
     return {
       currentIndexOnglet: 0,
       currentOnglet: this.onglets[0],
@@ -81,15 +81,83 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
-/* overload fonts path, to delete when parent has access */
-@import "../../css/overload-fonts.css";
-@import "../../css/dsfr.min.css";
 
-.fr-tabs__panel {
-  padding-bottom: 0.5rem !important;
+.fr-tabs {
+  transition: none 0s ease 0s;
+
+  .fr-tabs__list {
+
+    &::after {
+      box-shadow: inset 1px -1px 0 0 var(--boxshadow), inset -1px 0 0 var(--boxshadow);
+    }
+
+    > li {
+      margin-left: 0 !important;
+
+      &[is-selected="true"] {
+        box-shadow: inset 1px 0 var(--boxshadow), inset -1px 0 var(--boxshadow), inset 0 1px var(--boxshadow);
+      }
+
+      .fr-tabs__tab {
+        &[aria-selected="true"] {
+          box-shadow: none;
+        }
+
+        &[aria-selected="true"]:after {
+          box-shadow: none;
+        }
+
+        &:not([aria-selected="true"]) {
+          box-shadow: inset 0 -1px var(--boxshadow);
+        }
+
+        &::after {
+          box-shadow: none;
+        }
+      }
+
+      &:not(:last-of-type) {
+        margin-right: 0 !important;
+      }
+
+      &:first-of-type::before {
+        box-shadow: inset 1px -1px var(--boxshadow);
+      }
+
+      &:not(:first-of-type)::before {
+        box-shadow: none;
+      }
+
+      &:not(:last-of-type)::after {
+        //box-shadow: -1px 0 var(--boxshadow);
+        box-shadow: none;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      &::after {
+        box-shadow: none;
+      }
+    }
+  }
+
+  .fr-tabs__panel {
+    padding-top: 2.0rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  &:after {
+    box-shadow: inset 1px 0 var(--boxshadow), inset -1px 0 0 var(--boxshadow) !important;
+  }
 }
 
-.fr-tabs__list > li {
-  margin-right: 0 !important;
+.fr-accordion {
+  box-shadow: inset 1px -1px var(--bf500), inset -1px 0 0 var(--boxshadow) !important;
+
+  .description-mesure {
+    text-align: justify;
+  }
 }
 </style>

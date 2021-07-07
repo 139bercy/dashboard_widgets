@@ -1,21 +1,20 @@
-<template>
-  <div class="fr-container">
+<template style="margin: 0;">
+  <div class="page-content fr-container">
     <div class="fr-grid-row">
 
       <div class="fr-col-12 fr-col-md-4 fr-col-lg-3">
         <menu-content :panneaux="panneaux"></menu-content>
       </div>
-      <div class="fr-col-12 fr-col-md-8 fr-col-lg-7 fr-col-offset-md-1 fr-mb-6w">
+      <div class="fr-col-12 fr-col-md-7 fr-col-lg-7 fr-ml-md-6w fr-mb-6w">
 
-        <div style="position:relative; width:100%; height:0; padding-top:50%;">
-          <img style="position:absolute; top:0; left:0; width:100%;" src="Logo-France-Relance.png" alt="Logo FR">
-        </div>
-
-        <p class="fr-text&#45;&#45;lead fr-mt-10w fr-mb-0 ">
+        <p class="fr-text fr-mt-2w fr-mb-0 ">
           Retrouvez par mois et par département l'état d'avancement des mesures phares de France Relance.
+<!--          {{$screen.breakpoint}}-->
         </p>
 
-        <panel-list :panneaux="panneaux"></panel-list>
+        <div v-for="(panneau, index) in panneaux" :key="index">
+          <panel v-bind:index="index + ''" v-bind="panneau"></panel>
+        </div>
 
       </div>
 
@@ -26,25 +25,25 @@
 <script>
 import store from '@/store'
 import MenuContent from '@/components/MenuContent'
-import PanelList from '@/components/PanelList'
+import Panel from '@/components/Panel'
 
 export default {
   name: 'PageContent',
   components: {
     MenuContent,
-    PanelList
+    Panel
   },
   props: {
     configuration: String,
     dataUrl: String
   },
-  data () {
+  data() {
     return {
       panneaux: []
     }
   },
   methods: {
-    async getData () {
+    async getData() {
       store.commit('setUrl', this.dataUrl)
       fetch(this.configuration)
           .then(res => res.json())
@@ -54,14 +53,63 @@ export default {
     }
   }
   ,
-  created () {
+  created() {
     this.getData()
   }
 }
 </script>
 
-<style scoped lang="scss">
-.fr-container[data-fr-theme=dark i] {
+<style scoped lang="css">
+
+</style>
+
+<style lang="scss">
+
+@import "../../css/hack.dsfr.min.scss";
+@import "../../css/overload-fonts.css";
+//@import "../../remixicons/remixicon";
+.page-content {
+
+  /* overload fonts path, to delete when parent has access */
+  @include dsfr;
+  //@include icons;
+
+  --bf500: #009100;
+  --bf500-plain: #039103;
+  --w-bf500: #fff;
+  --bf300-plain: #9a9aff;
+  --bf200-bf300: #ececff;
+  --bf100-g750: #f7fff5;
+  --t-plain: transparent;
+  --t-w: transparent;
+  --g800: #1e1e1e;
+  --g700: #383838;
+  --g600: #6a6a6a;
+  --g500: #9c9c9c;
+  --g400: #cecece;
+  --g300: #e7e7e7;
+  --g200: #f0f0f0;
+  --g100: #f8f8f8;
+  --w: #fff;
+  --beige: #f9f8f6;
+  --g800-plain: #1e1e1e;
+  --g600-g400: #6a6a6a;
+  --g400-t: #cecece;
+  --g100-g800: #f8f8f8;
+  --w-g750: #fff;
+  --focus: #2a7ffe;
+  --info: #0762c8;
+  --success: #008941;
+  --error: #e10600;
+  --rm300: #f7bfc3;
+  --rm500: #e1000f;
+  --scroll-shadow: rgba(30, 30, 30, 0.16);
+  --overlay: hsla(0, 0%, 61.2%, 0.32);
+  --boxshadow: #29b829;
+  --boxcountour: #17b9084b;
+}
+
+.page-content[data-fr-theme=dark i] {
   --bf500: #9a9aff;
   --bf500-plain: #000091;
   --w-bf500: #000091;
@@ -95,42 +143,8 @@ export default {
   --overlay: hsla(0, 0%, 80.8%, 0.32)
 }
 
-.fr-container {
-  --bf500: #000000;
-  --bf500-plain: #000091;
-  --w-bf500: #fff;
-  --bf300-plain: #9a9aff;
-  --bf200-bf300: #ececff;
-  --bf100-g750: #f5f5ff;
-  --t-plain: transparent;
-  --t-w: transparent;
-  --g800: #1e1e1e;
-  --g700: #383838;
-  --g600: #6a6a6a;
-  --g500: #9c9c9c;
-  --g400: #cecece;
-  --g300: #e7e7e7;
-  --g200: #f0f0f0;
-  --g100: #f8f8f8;
-  --w: #fff;
-  --beige: #f9f8f6;
-  --g800-plain: #1e1e1e;
-  --g600-g400: #6a6a6a;
-  --g400-t: #cecece;
-  --g100-g800: #f8f8f8;
-  --w-g750: #fff;
-  --focus: #2a7ffe;
-  --info: #0762c8;
-  --success: #008941;
-  --error: #e10600;
-  --rm300: #f7bfc3;
-  --rm500: #e1000f;
-  --scroll-shadow: rgba(30, 30, 30, 0.16);
-  --overlay: hsla(0, 0%, 61.2%, 0.32)
-}
-
-.fr-container:not([data-fr-theme=dark i]) [class*="--scheme-light-"],
-.fr-container:not([data-fr-theme=dark i]) [class*=fr-scheme-light] {
+.page-content:not([data-fr-theme=dark i]) [class*="--scheme-light-"],
+.page-content:not([data-fr-theme=dark i]) [class*=fr-scheme-light] {
   --bf500: #000091;
   --bf500-plain: #000091;
   --w-bf500: #fff;
@@ -164,8 +178,8 @@ export default {
   --overlay: hsla(0, 0%, 61.2%, 0.32)
 }
 
-.fr-container:not([data-fr-theme=dark i]) [class*="--scheme-dark-"],
-.fr-container:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] {
+.page-content:not([data-fr-theme=dark i]) [class*="--scheme-dark-"],
+.page-content:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] {
   --bf500: #9a9aff;
   --w-bf500: #000091;
   --bf200-bf300: #9a9aff;
@@ -193,5 +207,12 @@ export default {
   --rm500: #f7bfc3;
   --scroll-shadow: #1e1e1e;
   --overlay: hsla(0, 0%, 80.8%, 0.32)
+}
+
+.page-content:not([data-fr-theme="dark" i]) .fr-tabs__tab:not([aria-selected="true"]) {
+  --color-hover: rgba(187, 255, 182, 0.5);
+  --color-active: rgba(109, 168, 105, 0.5);
+  --block-color-hover: rgba(187, 255, 182, 0.5);
+  --block-color-active: rgba(109, 168, 105, 0.5);
 }
 </style>

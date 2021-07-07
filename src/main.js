@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import VueScreen from 'vue-screen'
 
 import store from './store'
 import { getData } from './import.js'
@@ -11,11 +12,17 @@ import BarChart from './components/BarChart'
 import MapChart from './components/MapChart'
 import GeoList from './components/GeoList'
 import LineMapPanel from './components/LineMapPanel'
-import PanelList from './components/PanelList'
 import PageContent from './components/PageContent'
 import MenuContent from './components/MenuContent'
 
 import vueCustomElement from 'vue-custom-element'
+
+Vue.use(VueScreen, {
+  sm: '36em',
+  md: '48em',
+  lg: '62em'
+});
+
 Vue.use(getData(store))
 
 Vue.config.productionTip = false
@@ -30,6 +37,5 @@ Vue.customElement('bar-chart', BarChart)
 Vue.customElement('map-chart', MapChart)
 Vue.customElement('geo-list', GeoList)
 Vue.customElement('line-map-panel', LineMapPanel)
-Vue.customElement('panel-list', PanelList)
 Vue.customElement('page-content', PageContent)
 Vue.customElement('menu-content', MenuContent)
