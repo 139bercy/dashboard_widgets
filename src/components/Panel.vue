@@ -160,4 +160,8 @@ export default {
     text-align: justify;
   }
 }
+
+.panel-accordion-extended{
+  background-color:  #f4f6f6 ;
+}
 </style>

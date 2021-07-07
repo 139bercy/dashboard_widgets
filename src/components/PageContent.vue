@@ -7,10 +7,10 @@
       </div>
       <div class="fr-col-12 fr-col-md-7 fr-col-lg-7 fr-ml-md-6w fr-mb-6w">
 
-        <H2 class="fr-text fr-mt-2w fr-mb-0 ">
+        <H1 class="fr-text fr-mt-2w fr-mb-0 ">
           Retrouvez par mois et par département l'état d'avancement des mesures phares de France Relance.
 <!--          {{$screen.breakpoint}}-->
-        </H2>
+        </H1>
 
         <div v-for="(panneau, index) in panneaux" :key="index">
           <panel v-bind:index="index + ''" v-bind="panneau"></panel>
