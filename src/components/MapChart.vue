@@ -297,14 +297,12 @@ export default {
     flex-direction: column;
     align-items: center;
 
-    .france_container {
+    .france_container{
       height: 100%;
-
-      svg {
+      svg{
         height: 100%;
         width: 100%;
-
-        g {
+        g{
           cursor: pointer;
         }
       }
@@ -312,19 +310,16 @@ export default {
 
     .om_container {
       width: 100%;
-
-      .om {
+      .om{
         display: flex;
         flex-direction: column;
         align-items: center;
         color: #616161;
-
-        span {
+        span{
           display: block;
           white-space: nowrap;
         }
-
-        g {
+        g{
           cursor: pointer;
         }
       }
@@ -385,10 +380,8 @@ export default {
       width: 100%;
     }
   }
-
   .r_col {
     align-self: stretch;
-
     .flex {
       display: flex;
       align-items: center;

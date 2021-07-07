@@ -146,6 +146,8 @@ export default {
   .fr-tabs__panel {
     padding-top: 2.0rem !important;
     padding-bottom: 0.5rem !important;
+    display: flex;
+   // height: 50em; break the on mouse over in the map
   }
 
   &:after {
