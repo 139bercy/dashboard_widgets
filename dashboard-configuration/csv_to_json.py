@@ -54,4 +54,3 @@ with open(os.path.join(os.getcwd(), "dashboard_widgets", "public", "dashboard-co
 
 
 
-
