@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style = "margin-top:20px">
     <div class="chart_container" v-if="onglet.indicateurs.length > 0 && onglet.Graph">
       <line-chart
           interpolation="monotone"

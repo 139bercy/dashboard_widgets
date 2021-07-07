@@ -20,6 +20,7 @@
     </div>
     <LineCol v-bind="leftColProps" v-if="bottomCol"></LineCol>
   </div>
+  
 </template>
 
 <script>
