@@ -35,7 +35,7 @@
           </div>
         </div>
         <div class="no_select" :class="{'france_container': DOMTOMBottom, 'fr-col-10' : !DOMTOMBottom}" style="margin-top: 80px">
-          <france :onenter="displayTooltip" :onleave="hideTooltip"></france>
+          <france class="map-to-rezize" :onenter="displayTooltip" :onleave="hideTooltip"></france>
         </div>
       </div>
     </div>
@@ -387,7 +387,9 @@ export default {
       align-items: center;
     }
   }
-
+  .map-to-rezize{
+    height: 10em;
+  }
 }
 
 </style>
