@@ -8,7 +8,7 @@
       <div class="fr-col-12 fr-col-md-7 fr-col-lg-7 fr-ml-md-6w fr-mb-6w">
 
         <H1 class="fr-text fr-mt-2w fr-mb-0 ">
-          Retrouvez par mois et par département l'état d'avancement des mesures phares de France Relance.
+          Retrouvez par mois et par département l'état d'avancement des mesures phares de <a target="_blank" href="https://www.economie.gouv.fr/plan-de-relance">France Relance</a>.
 <!--          {{$screen.breakpoint}}-->
         </H1>
 
