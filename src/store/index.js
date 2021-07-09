@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-const BASE_URL = 'http://localhost:8080/json'
+//const BASE_URL = 'http://n:8080/json' //déclaré dans index.html cette ligne est inutile 
 
 export default new Vuex.Store({
   state: {
@@ -22,7 +22,8 @@ export default new Vuex.Store({
       if (state.promises[indicator]) {
         return state.promises[indicator]
       }
-      const url = `${state.data.url || BASE_URL}/${indicator}.json`
+      const url = `${state.data.url}/${indicator}.json`
+      console.log(state.data.url);
       const promise = fetch(url).then(res => {
         return res.json()
       }).then(data => {
@@ -34,7 +35,7 @@ export default new Vuex.Store({
     }
   },
   mutations: {
-    setPromise (state, payload) {
+    setPromise (state, payload) { 
       state.promises[payload.indicator] = payload.promise
     },
     setData (state, payload) {
