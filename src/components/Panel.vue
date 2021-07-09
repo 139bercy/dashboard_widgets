@@ -1,5 +1,5 @@
 <template>
-  <div :id="'panel_' + toJsonNameFormat(Nom_mesure_GP)" class="fr-mt-3w">
+  <div :id="'panel_' + toJsonNameFormat(Nom_mesure_GP)" class="fr-mt-3w box">
     <div class="lvl2-header fr-px-2w fr-px-md-3w fr-pt-3w">
       <h3>{{ Nom_mesure_GP }}</h3>
     </div>
@@ -154,10 +154,31 @@ export default {
 }
 
 .fr-accordion {
-  box-shadow: inset 1px -1px var(--bf500), inset -1px 0 0 var(--boxshadow) !important;
+  box-shadow: inset 1px -1px var(--boxshadow), inset -1px 0 0 var(--boxshadow) !important;
 
   .description-mesure {
     text-align: justify;
+    margin-top: 1rem;
   }
 }
+
+@media (max-width: 62em) {
+
+  .page-content .fr-tabs {
+
+    margin-right: initial;
+    margin-left: initial;
+
+  }
+  
+  .page-content .fr-accordion .fr-accordion__btn {
+
+    max-width: 95%;
+    padding-left: 5%;
+  
+  }
+
+}
+
+
 </style>
