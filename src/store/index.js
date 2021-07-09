@@ -19,18 +19,36 @@ export default new Vuex.Store({
   },
   actions: {
     getData ({ commit, state }, indicator) {
+      /*
       if (state.promises[indicator]) {
         return state.promises[indicator]
       }
-      const url = `${state.data.url}/${indicator}.json`
+      const url = `${state.data.url}` // /${indicator}.json`
       const promise = fetch(url).then(res => {
+        console.debug(res.json())
         return res.json()
       }).then(data => {
+        console.debug(data)
         commit('setData', { indicator: indicator, data: data })
         return data
       })
       commit('setPromise', { indicator: indicator, promise: promise })
       return promise
+      */
+      function getUsers(url) {
+        return fetch(url)
+      }
+      
+      const test = getUsers(`https://data.economie.gouv.fr/api/datasets/1.0/relance-tableau-de-bord/records/b26b6dc600d499c5b65ecf1b818520c8d5d586f7`);
+      test.then(response => response.json())
+     .then(data => {
+          console.log(data);
+          console.log(JSON.parse(data.fields.data))
+     })
+     .catch(error => {
+          // handle error
+     });
+
     }
   },
   mutations: {
@@ -52,7 +70,7 @@ export default new Vuex.Store({
       state.user.selectedGeoLabel = payload.label
     },
     setUrl (state, url) {
-      state.data.url = url
+      state.data.url = "https://data.economie.gouv.fr/api/datasets/1.0/relance-tableau-de-bord" ///records/b26b6dc600d499c5b65ecf1b818520c8d5d586f7"
     }
   }
 })
