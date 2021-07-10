@@ -93,6 +93,9 @@ export default {
   methods: {
     async getData () {
       store.dispatch('getData', this.toJsonNameFormat(this.onglet.indicateurs[0].Nom_indicateur_propilot)).then(data => {
+        console.log("00000000000000000")
+        console.log(data)
+        console.log(this.toJsonNameFormat(this.onglet.indicateurs[0].Nom_indicateur_propilot))
         this.indicateur_data = data
         this.updateData()
       })

@@ -19,36 +19,34 @@ export default new Vuex.Store({
   },
   actions: {
     getData ({ commit, state }, indicator) {
-      /*
+
       if (state.promises[indicator]) {
         return state.promises[indicator]
       }
-      const url = `${state.data.url}` // /${indicator}.json`
-      const promise = fetch(url).then(res => {
-        console.debug(res.json())
-        return res.json()
-      }).then(data => {
-        console.debug(data)
-        commit('setData', { indicator: indicator, data: data })
-        return data
-      })
-      commit('setPromise', { indicator: indicator, promise: promise })
-      return promise
-      */
-      function getUsers(url) {
+      console.log("GET DATA index.js " + indicator)
+      function fetchUrl(url) {
         return fetch(url)
       }
-      
-      const test = getUsers(`https://data.economie.gouv.fr/api/datasets/1.0/relance-tableau-de-bord/records/b26b6dc600d499c5b65ecf1b818520c8d5d586f7`);
-      test.then(response => response.json())
-     .then(data => {
-          console.log(data);
-          console.log(JSON.parse(data.fields.data))
-     })
-     .catch(error => {
-          // handle error
-     });
 
+      // const url = `${state.data.url}` // /${indicator}.json`
+      const url = "https://data.economie.gouv.fr/api/datasets/1.0/relance-tableau-de-bord/records/b26b6dc600d499c5b65ecf1b818520c8d5d586f7";
+      const promise = fetchUrl(url);
+
+      promise.then(res => {
+        res.json()
+        console.log("RESPONCEEEEEEEE")
+        console.log(res.json())
+        return res.json()})
+      .then(data => {
+        let datas = JSON.parse(data.fields.data)
+        datas.json()
+        console.log("TTTTTTTTTTTTTTT")
+        commit('setData', { indicator: indicator, data: datas })
+        return datas
+      }).catch( error =>  console.log(error));
+      
+      commit('setPromise', { indicator: indicator, promise: promise })
+      return promise
     }
   },
   mutations: {
