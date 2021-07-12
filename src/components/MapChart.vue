@@ -12,30 +12,30 @@
             <div class="tooltip_value">{{ convertStringToLocaleNumber(tooltip.value) }} {{ units[0] }}</div>
           </div>
         </div>
-        <div class="om_container no_select" :class="{'fr-grid-row': DOMTOMBottom, 'fr-col-2' : !DOMTOMBottom}">
-          <div class="om fr-col-4 fr-col-sm" style="margin-top: 100px">
-            <span class="fr-text--xs fr-my-1w" >Guadeloupe</span>
+        <div class="om_container no_select" style="margin-left:5%" :class="{'fr-grid-row': DOMTOMBottom, 'fr-col-2' : !DOMTOMBottom}">
+          <div class="om fr-col-12 fr-col-sm top-om">
+            <span class="fr-text--xs fr-my-1w" style= "padding-right: 100%; padding-bottom: 2%; display: inline-block; white-space:nowrap; margin-top: 0rem !important;" >Guadeloupe</span>
             <guadeloupe :onenter="displayTooltip" :onleave="hideTooltip"></guadeloupe>
           </div>
-          <div class="om fr-col-4 fr-col-sm">
-            <span class="fr-text--xs fr-my-1w">Martinique</span>
+          <div class="om fr-col-12 fr-col-sm">
+            <span class="fr-text--xs fr-my-1w" style= "padding-right: 100%; padding-bottom: 2%; display: inline-block; white-space:nowrap; margin-top: 0rem !important;">Martinique</span>
             <martinique :onenter="displayTooltip" :onleave="hideTooltip"></martinique>
           </div>
-          <div class="om fr-col-4 fr-col-sm">
-            <span class="fr-text--xs fr-my-1w">La Réunion</span>
+          <div class="om fr-col-12 fr-col-sm">
+            <span class="fr-text--xs fr-my-1w" style= "padding-right: 100%; padding-bottom: 2%; display: inline-block; white-space:nowrap; margin-top: 0rem !important;">La Réunion</span>
             <reunion :onenter="displayTooltip" :onleave="hideTooltip"></reunion>
           </div>
-          <div class="om fr-col-4 fr-col-sm">
-            <span class="fr-text--xs fr-my-1w">Mayotte</span>
+          <div class="om fr-col-12 fr-col-sm">
+            <span class="fr-text--xs fr-my-1w" style= "padding-right: 100%; padding-bottom: 2%; display: inline-block; white-space:nowrap; margin-top: 0rem !important;">Mayotte   </span>
             <mayotte :onenter="displayTooltip" :onleave="hideTooltip"></mayotte>
           </div>
-          <div class="om fr-col-4 fr-col-sm">
-            <span class="fr-text--xs fr-my-1w">Guyane</span>
+          <div class="om fr-col-12 fr-col-sm">
+            <span class="fr-text--xs fr-my-1w" style= "padding-right: 100%; padding-bottom: 2%; display: inline-block; white-space:nowrap; margin-top: 0rem !important;">Guyane    </span>
             <guyane :onenter="displayTooltip" :onleave="hideTooltip"></guyane>
           </div>
         </div>
-        <div class="no_select" :class="{'france_container': DOMTOMBottom, 'fr-col-10' : !DOMTOMBottom}" style="margin-top: 80px">
-          <france class="map-to-rezize" :onenter="displayTooltip" :onleave="hideTooltip"></france>
+        <div class="no_select" :class="{'france_container': DOMTOMBottom, 'fr-col-9' : !DOMTOMBottom}" style="margin-top: 10%">
+          <france :onenter="displayTooltip" :onleave="hideTooltip"></france>
         </div>
       </div>
     </div>
@@ -300,8 +300,6 @@ export default {
     .france_container{
       height: 100%;
       svg{
-        height: 100%;
-        width: 100%;
         g{
           cursor: pointer;
         }
@@ -387,8 +385,10 @@ export default {
       align-items: center;
     }
   }
-  .map-to-rezize{
-    height: 10em;
+  @media (min-width: 62em) {
+    .top-om {
+      margin-top: 80px;
+    }
   }
 }
 
