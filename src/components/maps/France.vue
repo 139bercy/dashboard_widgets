@@ -116,8 +116,7 @@ export default {
   .map-size {
 
     margin-left: 15% !important;
-    height: 25em;
-    width: 80%;
+    width: 85%;
 
   }
 
