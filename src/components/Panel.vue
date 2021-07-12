@@ -27,7 +27,7 @@
     </div>
     <div class="fr-accordion panel-accordion-extended">
       <h3 class="fr-accordion__title">
-        <button class="fr-accordion__btn fr-text--sm"
+        <button class="fr-accordion__btn fr-text--sm fr-col-10" 
                 :aria-expanded="accordionOpened"
                 v-on:click="accordionOpened=!accordionOpened"
         >
@@ -38,11 +38,11 @@
         <p class="description-mesure fr-mb-0 fr-text--sm fr-pb-1v">
           {{ onglets[0].Description_mesure }}
         </p>
-        <p class="fr-text--xs fr-mb-3w fr-pb-1v">Source :
+        <p class="fr-text--xs fr-mb-3w fr-pb-1v">En savoir encore plus :
           <a title="vers data.gouv.fr" v-bind:href="Lien_page_mesure"
              target="_blank" rel="noopener" data-section="nom_section"
              data-subsection="nom_subsection">
-            Vers des fichiers d'open-data</a>
+            Site officiel de la mesure</a>
         </p>
       </div>
     </div>
@@ -160,6 +160,9 @@ export default {
 
   .description-mesure {
     text-align: justify;
+    margin-left: 4%; 
+    margin-right: 5%; 
+    text-indent: 2em;
   }
 }
 

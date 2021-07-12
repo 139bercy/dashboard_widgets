@@ -4,7 +4,7 @@
     <LineCol :props="leftColProps" v-if="topCol"></LineCol>
     <LeftCol :props="leftColProps" v-if="leftCol || leftCol === undefined"></LeftCol>
     <div class="r_col fr-col-12" :class="{'fr-col-lg-9': leftCol}">
-      <div class="" :class="{'map fr-col-12': DOMTOMBottom, 'm-lg': leftCol, 'fr-grid-row': !DOMTOMBottom}">
+      <div :class="{'map fr-col-12': DOMTOMBottom, 'm-lg': leftCol, 'fr-grid-row': !DOMTOMBottom}">
         <div class="map_tooltip" v-if="tooltip.display" :style="{top:tooltip.top,left:tooltip.left}">
           <div class="tooltip_header">{{ convertDateToHuman(tooltip.date) }}</div>
           <div class="tooltip_body">
