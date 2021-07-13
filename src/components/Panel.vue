@@ -1,27 +1,30 @@
 <template>
-  <div :id="'panel_' + toJsonNameFormat(Nom_mesure_GP)" class="fr-mt-3w box">
-    <div class="lvl2-header fr-px-2w fr-px-md-3w fr-pt-3w">
-      <h3>{{ Nom_mesure_GP }}</h3>
-    </div>
-    <div class="fr-tabs">
-      <ul class="fr-tabs__list" role="tablist" aria-label="changer d'onglet">
-        <li role="presentation" v-for="(onglet, indexOnglet) in onglets" :key="indexOnglet"
-            :is-selected="currentOnglet === onglet">
-          <button class="fr-tabs__tab" v-on:click="currentOnglet=onglet"
-                  :tabindex="indexOnglet" role="tab"
-                  :aria-selected="currentOnglet === onglet"
-                  :aria-controls="'tabpanel-' + indexOnglet + '-panel'"
-          >
-            {{ onglet.Nom_indicateur_GP }}
-          </button>
-        </li>
-      </ul>
+  <div :id="'panel_' + toJsonNameFormat(Nom_mesure_GP) + '-'+ index" class="fr-mt-3w panel">
+    <div class="full-page-lg">
+      <div class="lvl2-header fr-px-2w fr-px-md-3w fr-pt-3w">
+        <h3>{{ Nom_mesure_GP }}</h3>
+      </div>
+      <div class="fr-tabs">
+        <ul class="fr-tabs__list" role="tablist" aria-label="changer d'onglet">
+          <li role="presentation" v-for="(onglet, indexOnglet) in onglets" :key="indexOnglet"
+              :is-selected="currentOnglet === onglet">
+            <button class="fr-tabs__tab" v-on:click="currentOnglet=onglet"
+                    :tabindex="indexOnglet" role="tab"
+                    :aria-selected="currentOnglet === onglet"
+                    :aria-controls="'tabpanel-' + indexOnglet + '-panel'"
+            >
+              {{ onglet.Nom_indicateur_GP }}
+            </button>
+          </li>
+        </ul>
 
-      <div :id="'tabpanel-' + currentIndexOnglet + '-panel'"
-           class="fr-tabs__panel fr-tabs__panel--selected fr-pt-2w fr-mt-3w"
-           v-for="(onglet, indexOnglet) in onglets" :key="indexOnglet">
-        <div v-if="currentOnglet.indicateurs.length > 0 && currentOnglet.Graph && currentOnglet === onglet">
-          <line-map-panel :onglet="onglet"></line-map-panel>
+        <div :id="'tabpanel-' + currentIndexOnglet + '-panel'"
+             class="fr-tabs__panel fr-pt-2w fr-mt-3w"
+             :class="{'fr-tabs__panel--selected' : currentOnglet.indicateurs.length > 0 && currentOnglet.Graph && currentOnglet === onglet}"
+             v-for="(onglet, indexOnglet) in onglets" :key="indexOnglet">
+          <div v-if="currentOnglet.indicateurs.length > 0 && currentOnglet.Graph && currentOnglet === onglet">
+            <line-map-panel :onglet="onglet"></line-map-panel>
+          </div>
         </div>
       </div>
     </div>
@@ -81,104 +84,122 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
-
-.fr-tabs {
-  transition: none 0s ease 0s;
-
-  .fr-tabs__list {
-
-    &::after {
-      box-shadow: inset 1px -1px 0 0 var(--boxshadow), inset -1px 0 0 var(--boxshadow);
+.panel {
+  @media (max-width: 62em) {
+    .page-content {
+      .fr-tabs {
+        margin-right: initial;
+        margin-left: initial;
+      }
     }
 
-    > li {
-      margin-left: 0 !important;
+    .page-content {
+      .fr-accordion {
+        .fr-accordion__btn {
+          max-width: 95%;
+          padding-left: 5%;
+        }
+      }
+    }
 
-      &[is-selected="true"] {
-        box-shadow: inset 1px 0 var(--boxshadow), inset -1px 0 var(--boxshadow), inset 0 1px var(--boxshadow);
+    .full-page-lg {
+      height: 95vh;
+      max-height: 95vh;
+      overflow: hidden;
+
+      & > .fr-tabs {
+        height: 95% !important;
+        max-height: 95% !important;
+
+        .fr-tabs__panel--selected {
+          height: 100% !important;
+          max-height: 100% !important;
+        }
+      }
+    }
+
+  }
+
+
+  .fr-tabs {
+    transition: none 0s ease 0s;
+
+    .fr-tabs__list {
+
+      &::after {
+        box-shadow: inset 1px -1px 0 0 var(--boxshadow), inset -1px 0 0 var(--boxshadow);
       }
 
-      .fr-tabs__tab {
-        &[aria-selected="true"] {
+      > li {
+        margin-left: 0 !important;
+
+        &[is-selected="true"] {
+          box-shadow: inset 1px 0 var(--boxshadow), inset -1px 0 var(--boxshadow), inset 0 1px var(--boxshadow);
+        }
+
+        .fr-tabs__tab {
+          &[aria-selected="true"] {
+            box-shadow: none;
+          }
+
+          &[aria-selected="true"]:after {
+            box-shadow: none;
+          }
+
+          &:not([aria-selected="true"]) {
+            box-shadow: inset 0 -1px var(--boxshadow);
+          }
+
+          &::after {
+            box-shadow: none;
+          }
+        }
+
+        &:not(:last-of-type) {
+          margin-right: 0 !important;
+        }
+
+        &:first-of-type::before {
+          box-shadow: inset 1px -1px var(--boxshadow);
+        }
+
+        &:not(:first-of-type)::before {
           box-shadow: none;
         }
 
-        &[aria-selected="true"]:after {
+        &:not(:last-of-type)::after {
+          //box-shadow: -1px 0 var(--boxshadow);
           box-shadow: none;
         }
 
-        &:not([aria-selected="true"]) {
-          box-shadow: inset 0 -1px var(--boxshadow);
+        &:last-child {
+          padding-right: 0;
         }
 
         &::after {
           box-shadow: none;
         }
       }
+    }
 
-      &:not(:last-of-type) {
-        margin-right: 0 !important;
-      }
+    .fr-tabs__panel {
+      padding-top: 2.0rem !important;
+      padding-bottom: 0.5rem !important;
+    }
 
-      &:first-of-type::before {
-        box-shadow: inset 1px -1px var(--boxshadow);
-      }
-
-      &:not(:first-of-type)::before {
-        box-shadow: none;
-      }
-
-      &:not(:last-of-type)::after {
-        //box-shadow: -1px 0 var(--boxshadow);
-        box-shadow: none;
-      }
-
-      &:last-child {
-        padding-right: 0;
-      }
-
-      &::after {
-        box-shadow: none;
-      }
+    &:after {
+      box-shadow: inset 1px 0 var(--boxshadow), inset -1px 0 0 var(--boxshadow) !important;
     }
   }
 
-  .fr-tabs__panel {
-    padding-top: 2.0rem !important;
-    padding-bottom: 0.5rem !important;
-  }
+  .fr-accordion {
+    box-shadow: inset 1px -1px var(--boxshadow), inset -1px 0 0 var(--boxshadow) !important;
 
-  &:after {
-    box-shadow: inset 1px 0 var(--boxshadow), inset -1px 0 0 var(--boxshadow) !important;
-  }
-}
-
-.fr-accordion {
-  box-shadow: inset 1px -1px var(--boxshadow), inset -1px 0 0 var(--boxshadow) !important;
-
-  .description-mesure {
-    text-align: justify;
-    margin-top: 1rem;
-  }
-}
-
-@media (max-width: 62em) {
-
-  .page-content .fr-tabs {
-
-    margin-right: initial;
-    margin-left: initial;
-
-  }
-  
-  .page-content .fr-accordion .fr-accordion__btn {
-
-    max-width: 95%;
-    padding-left: 5%;
-  
+    .description-mesure {
+      text-align: justify;
+      margin-top: 1rem;
+    }
   }
 
 }
-
-
 </style>
