@@ -3,7 +3,10 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-const BASE_URL = 'http://localhost:8080/json'
+
+function encodeIndicatorName(indicator) {
+  return encodeURIComponent('%' + indicator.substring(indicator.length -4, indicator.length) + '%')
+}
 
 export default new Vuex.Store({
   state: {
@@ -22,12 +25,28 @@ export default new Vuex.Store({
       if (state.promises[indicator]) {
         return state.promises[indicator]
       }
-      const url = `${state.data.url || BASE_URL}/${indicator}.json`
+
+      // console.log(indicator)
+      // console.log(encodeURIComponent(indicator))
+      // const url = `${state.data.url || BASE_URL}/${indicator}.json`
+      const url = `https://data.economie.gouv.fr/api/v2/catalog/datasets/relance-tableau-de-bord/exports/json?where=nom%20LIKE%20'${encodeIndicatorName(indicator)}'`
       const promise = fetch(url).then(res => {
         return res.json()
+      }).then(result => {
+        // Récupération des données en traitant le format fourni par data.economie
+        if (!result || result.length !== 1) {
+          return null
+        }
+        result[0].france = JSON.parse(result[0].france);
+        result[0].regions = JSON.parse(result[0].regions);
+        result[0].departements = JSON.parse(result[0].departements);
+        console.log(result[0])
+        return result[0]
       }).then(data => {
         commit('setData', { indicator: indicator, data: data })
         return data
+      }).catch(response => {
+        console.log(response)
       })
       commit('setPromise', { indicator: indicator, promise: promise })
       return promise
@@ -50,9 +69,6 @@ export default new Vuex.Store({
       state.user.selectedGeoLevel = payload.level
       state.user.selectedGeoCode = payload.code
       state.user.selectedGeoLabel = payload.label
-    },
-    setUrl (state, url) {
-      state.data.url = url
     }
   }
 })
