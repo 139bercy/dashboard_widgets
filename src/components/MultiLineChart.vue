@@ -6,16 +6,16 @@
     <div class="r_col fr-col-12" :class="{'fr-col-lg-9': leftCol}">
       <div class="chart ml-lg">
         <canvas :id="chartId"></canvas>
-        <div class="fr-col-12 fr-grid-row">
-          <div class="flex fr-col-6" :style="style" v-if="units[0]">
-            <span class="legende_dot"></span>
-            <span class="fr-text--sm fr-text--bold fr-ml-1v fr-mb-0">{{ capitalize(units[0]) }}</span>
-          </div>
-          <div class="flex fr-col-6" :style="style" v-if="units[1]">
-            <span class="legende_dot" data-serie="2"></span>
-            <span class="fr-text--sm fr-text--bold fr-ml-1v fr-mb-0">{{ capitalize(units[1]) }}</span>
-          </div>
-        </div>
+<!--        <div class="fr-col-12 fr-grid-row">-->
+<!--          <div class="flex fr-col-6" :style="style" v-if="units[0]">-->
+<!--            <span class="legende_dot"></span>-->
+<!--            <span class="fr-text&#45;&#45;sm fr-text&#45;&#45;bold fr-ml-1v fr-mb-0">{{ capitalize(units[0]) }}</span>-->
+<!--          </div>-->
+<!--          <div class="flex fr-col-6" :style="style" v-if="units[1]">-->
+<!--            <span class="legende_dot" data-serie="2"></span>-->
+<!--            <span class="fr-text&#45;&#45;sm fr-text&#45;&#45;bold fr-ml-1v fr-mb-0">{{ capitalize(units[1]) }}</span>-->
+<!--          </div>-->
+<!--        </div>-->
       </div>
     </div>
     <LineCol v-bind="leftColProps" v-if="bottomCol"></LineCol>

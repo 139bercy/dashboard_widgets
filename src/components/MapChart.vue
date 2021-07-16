@@ -12,6 +12,10 @@
             <div class="tooltip_value">{{ convertStringToLocaleNumber(tooltip.value) }} {{ units[0] }}</div>
           </div>
         </div>
+        <div class="no_select" :class="{'france_container': DOMTOMBottom, 'fr-col-8' : !DOMTOMBottom}">
+          <france :onenter="displayTooltip" :onleave="hideTooltip"></france>
+        </div>
+        <div :class="{'fr-col-2' : !DOMTOMBottom}"></div>
         <div class="om_container no_select" :class="{'fr-grid-row': DOMTOMBottom, 'fr-col-2' : !DOMTOMBottom}">
           <div class="om fr-col-4 fr-col-sm">
             <span class="fr-text--xs fr-my-1w">Guadeloupe</span>
@@ -33,9 +37,6 @@
             <span class="fr-text--xs fr-my-1w">Mayotte</span>
             <mayotte :onenter="displayTooltip" :onleave="hideTooltip"></mayotte>
           </div>
-        </div>
-        <div class="no_select" :class="{'france_container': DOMTOMBottom, 'fr-col-10' : !DOMTOMBottom}">
-          <france :onenter="displayTooltip" :onleave="hideTooltip"></france>
         </div>
       </div>
     </div>
@@ -375,6 +376,7 @@ export default {
     }
     .map {
       height: 100%;
+      max-height: 100%;
     }
   }
   @media (max-width: 62em) {

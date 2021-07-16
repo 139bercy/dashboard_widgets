@@ -40,7 +40,6 @@ export default new Vuex.Store({
         result[0].france = JSON.parse(result[0].france);
         result[0].regions = JSON.parse(result[0].regions);
         result[0].departements = JSON.parse(result[0].departements);
-        console.log(result[0])
         return result[0]
       }).then(data => {
         commit('setData', { indicator: indicator, data: data })

@@ -1,39 +1,41 @@
 <template>
-  <div>
-    <div class="line-map-panel" v-if="indicateur_data">
-      <div class="chart_container" v-if="onglet.indicateurs.length > 0 && onglet.Graph">
+  <div class="line-map-panel" :class="{'panel-full-page-lg': $screen.breakpoint === 'lg'}">
+    <div v-if="indicateur_data && !loading" class="fr-grid-row">
+      <left-col class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColProps"
+                v-if="$screen.breakpoint === 'lg'"></left-col>
+      <left-col class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColPropsNotLargeChart"
+                v-if="$screen.breakpoint !== 'lg'"></left-col>
+      <div class="container fr-col-12 fr-col-lg-9" v-if="onglet.indicateurs.length > 0 && onglet.Graph">
         <line-chart
             interpolation="monotone"
             :indicateur="indicateurName1"
             :top-col="false"
-            :left-col="true"
+            :left-col="false"
             v-if="indicateur_data && !indicateur_data2">
         </line-chart>
         <multi-line-chart
-            class="chart_container"
             interpolation="monotone"
             :indicateur1="indicateurName1"
             :indicateur2="indicateurName2"
             :top-col="false"
-            :left-col="true"
+            :left-col="false"
             v-if="indicateur_data2">
         </multi-line-chart>
       </div>
-      <div class="fr-grid-row">
-
-        <left-col :class="{'map-legend': $screen.breakpoint === 'lg'}" class="fr-col-12"
-                  v-bind="leftColProps">
-        </left-col>
+      <div class="container fr-col-12 fr-grid-row">
+        <div class="fr-col-12 fr-col-lg-3" v-if="$screen.breakpoint === 'lg'"></div>
         <map-chart
-            class="fr-col-12"
+            class="map-container fr-col-12 fr-col-lg-9"
             :indicateur="indicateurName1"
             :top-col="false"
             :left-col="false"
             :bottom-col="false"
-            :DOMTOMBottom="false"
+            :DOMTOMBottom="$screen.breakpoint !== 'lg'"
             v-if="onglet.Carte && indicateur_data">
         </map-chart>
       </div>
+      <left-col class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColPropsNotLargeMap"
+                v-if="$screen.breakpoint !== 'lg'"></left-col>
     </div>
     <div v-else-if="loading">
       Récupération des données en cours
@@ -80,8 +82,15 @@ export default {
       leftColProps: {
         min: 0,
         max: 0,
-        isMap: true
-      }
+        isMap: true,
+        date: null,
+        localisation: null,
+        currentValues: [],
+        currentDate: null,
+        names: null,
+        evolcodes: null,
+        evolvalues: null
+      },
     }
   },
   computed: {
@@ -99,13 +108,43 @@ export default {
     },
     indicateurName2() {
       return this.onglet.indicateurs[1].Nom_indicateur_propilot
+    },
+    leftColPropsNotLargeChart() {
+      return {
+        date: this.leftColProps.date,
+        localisation: this.leftColProps.localisation,
+        currentValues: this.leftColProps.currentValues,
+        currentDate: this.leftColProps.currentDate,
+        names: this.leftColProps.names,
+        evolcodes: this.leftColProps.evolcodes,
+        evolvalues: this.leftColProps.evolvalues
+      }
+    },
+    leftColPropsNotLargeMap() {
+      return {
+        min: this.leftColProps.min,
+        max: this.leftColProps.max,
+        isMap: true
+      }
     }
   },
   methods: {
     async getData() {
       this.loading = true
-      store.dispatch('getData', this.onglet.indicateurs[0].Nom_indicateur_propilot).then(data => {
+      const promise1 = store.dispatch('getData', this.indicateurName1).then(data => {
         this.indicateur_data = data
+      })
+
+      let promise2;
+      if (this.onglet.indicateurs.length === 2) {
+        promise2 = store.dispatch('getData', this.indicateurName2).then(data => {
+          this.indicateur_data2 = data
+        })
+      } else {
+        promise2 = Promise.resolve();
+      }
+
+      Promise.all([promise1, promise2]).then(_ => {
         this.updateData()
         this.loading = false
       }).catch(_ => {
@@ -125,11 +164,69 @@ export default {
         }
       })
 
-      this.scaleMin = Math.min.apply(null, values)
-      this.scaleMax = Math.max.apply(null, values)
+      this.leftColProps.min = Math.min.apply(null, values)
+      this.leftColProps.max = Math.max.apply(null, values)
 
-      this.leftColProps.min = this.scaleMin
-      this.leftColProps.max = this.scaleMax
+      this.leftColProps.localisation = this.selectedGeoLabel
+
+      const geolevel = this.selectedGeoLevel
+      const geocode = this.selectedGeoCode
+
+      let geoObject
+      let geoObject2
+
+      if (geolevel === 'France') {
+        geoObject = this.indicateur_data.france[0]
+        if (this.indicateur_data2) {
+          geoObject2 = this.indicateur_data2.france[0]
+        }
+      } else {
+        geoObject = this.indicateur_data[geolevel].find(obj => {
+          return obj.code_level === geocode
+        })
+        if (this.indicateur_data2) {
+          geoObject2 = this.indicateur_data2[geolevel].find(obj => {
+            return obj.code_level === geocode
+          })
+        }
+      }
+
+      this.leftColProps.date = this.convertDateToHuman(geoObject.last_date)
+
+      this.leftColProps.names = []
+      // this.units.length = 0
+      this.leftColProps.currentValues = []
+      this.leftColProps.evolcodes = []
+      this.leftColProps.evolvalues = []
+
+      this.leftColProps.names.push(this.indicateur_data.nom)
+      if (this.indicateur_data2) {
+        this.leftColProps.names.push(this.indicateur_data2.nom)
+      }
+      // this.units.push(this.indicateur_data.unite, this.indicateur_data2.unite)
+      this.leftColProps.currentValues.push(geoObject.last_value)
+      if (this.indicateur_data2) {
+        this.leftColProps.currentValues.push(geoObject2.last_value)
+      }
+      this.leftColProps.currentDate = this.convertDateToHuman(geoObject.last_date)
+      this.leftColProps.evolcodes.push(geoObject.evol_color, geoObject2.evol_color)
+      this.leftColProps.evolvalues.push(geoObject.evol_percentage, geoObject2.evol_percentage)
+
+      this.labels.length = 0
+      this.dataset.length = 0
+      this.dataset2.length = 0
+
+      geoObject.values.forEach(function (d) {
+        self.labels.push(self.convertDateToHuman(d.date))
+        self.dataset.push((d.value))
+
+        const correspondingValue = geoObject2.values.find(obj => {
+          return obj.date === d.date
+        })
+        if (correspondingValue) {
+          self.dataset2.push(correspondingValue.value)
+        }
+      })
     }
   },
   created() {
@@ -140,21 +237,75 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style lang="scss">
+.panel-full-page-lg {
+  height: 100%;
+  max-height: 100%;
 
-.map-legend {
-  margin-bottom: -75px;
-  margin-left: 150px;
+  > div {
+    height: 100%;
+    max-height: 100%;
+  }
+
+  .map-legend {
+    height: 50%;
+    max-height: 50%;
+  }
+
+  .container {
+    height: 50%;
+    max-height: 50%;
+
+    > div {
+      height: 100%;
+      max-height: 100%;
+
+      > div {
+        height: 100%;
+        max-height: 100%;
+
+        > .chart {
+          height: 100%;
+          max-height: 100%;
+
+          canvas {
+            max-height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .map-container {
+    height: 50%;
+    max-height: 50%;
+
+    > div {
+      height: 100%;
+      max-height: 100%;
+
+      > div {
+        height: 100%;
+        max-height: 100%;
+
+        > div:not(.map_tooltip) {
+          height: 100%;
+          max-height: 100%;
+
+          > svg {
+            max-height: 100%;
+            margin-left: 0;
+            margin-right: 0;
+          }
+        }
+      }
+
+      .om_container {
+        svg {
+          max-height: 30%;
+        }
+      }
+    }
+  }
 }
-
-//* {
-//  height: 50% !important;
-//  max-height: 50% !important;
-//
-//  & > * {
-//    height: 100%;
-//    max-height: 100%;
-//  }
-//}
-
 </style>

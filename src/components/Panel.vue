@@ -1,6 +1,6 @@
 <template>
   <div :id="'panel_' + toJsonNameFormat(Nom_mesure_GP) + '-'+ index" class="fr-mt-3w panel">
-    <div class="full-page-lg">
+    <div :class="{'full-page-lg': $screen.breakpoint === 'lg'}">
       <div class="lvl2-header fr-px-2w fr-px-md-3w fr-pt-3w">
         <h3>{{ Nom_mesure_GP }}</h3>
       </div>
@@ -28,7 +28,7 @@
         </div>
       </div>
     </div>
-    <div class="fr-accordion panel-accordion-extended">
+    <div class="fr-accordion panel-accordion-extended" :class="{'mobile' : $screen.breakpoint === 'xs' || $screen.breakpoint === 'sm' }">
       <h3 class="fr-accordion__title">
         <button class="fr-accordion__btn fr-text--sm"
                 :aria-expanded="accordionOpened"
@@ -85,42 +85,34 @@ export default {
 <style scoped lang="scss">
 
 .panel {
-  @media (max-width: 62em) {
-    .page-content {
-      .fr-tabs {
-        margin-right: initial;
-        margin-left: initial;
-      }
-    }
+  // Gestion du positionnement sur grand écran (breakpoint lg)
+  .full-page-lg {
+    height: 95vh;
+    max-height: 95vh;
+    overflow: hidden;
 
-    .page-content {
-      .fr-accordion {
-        .fr-accordion__btn {
-          max-width: 95%;
-          padding-left: 5%;
+    & > .fr-tabs {
+      height: calc(100% - 60px);
+      max-height: calc(100% - 60px);
+
+      .fr-tabs__panel--selected {
+        height: calc(100% - 48px);
+        max-height: calc(100% - 48px);
+
+        > div {
+          height: 100%;
+          max-height: 100%;
+
+          > div {
+            height: 100%;
+            max-height: 100%;
+          }
         }
       }
     }
-
-    .full-page-lg {
-      height: 95vh;
-      max-height: 95vh;
-      overflow: hidden;
-
-      & > .fr-tabs {
-        height: 95% !important;
-        max-height: 95% !important;
-
-        .fr-tabs__panel--selected {
-          height: 100% !important;
-          max-height: 100% !important;
-        }
-      }
-    }
-
   }
 
-
+  // Gestion de la bordure autour d'un panel
   .fr-tabs {
     transition: none 0s ease 0s;
 
@@ -193,7 +185,12 @@ export default {
   }
 
   .fr-accordion {
+    &.mobile {
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+    }
     box-shadow: inset 1px -1px var(--boxshadow), inset -1px 0 0 var(--boxshadow) !important;
+    // Fin de gestion de la bordure autour d'un panel
 
     .description-mesure {
       text-align: justify;
