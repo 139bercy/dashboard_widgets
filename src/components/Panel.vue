@@ -1,5 +1,5 @@
 <template>
-  <div :id="'panel_' + toJsonNameFormat(Nom_mesure_GP) + '-'+ index" class="fr-mt-3w panel">
+  <div :id="'panel_' + toJsonNameFormat(Nom_mesure_GP) + '-'+ index" class="panel">
     <div :class="{'full-page-lg': $screen.breakpoint === 'lg'}">
       <div class="lvl2-header fr-px-2w fr-px-md-3w fr-pt-3w">
         <h3>{{ Nom_mesure_GP }}</h3>
@@ -84,11 +84,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
-.panel {
   // Gestion du positionnement sur grand écran (breakpoint lg)
+  @media (min-width: 62em) {
   .full-page-lg {
-    height: 95vh;
-    max-height: 95vh;
+    height: 97vh;
+    max-height: 97vh;
     overflow: hidden;
 
     & > .fr-tabs {
@@ -96,8 +96,8 @@ export default {
       max-height: calc(100% - 60px);
 
       .fr-tabs__panel--selected {
-        height: calc(100% - 48px);
-        max-height: calc(100% - 48px);
+        height: calc(100% - 60px);
+        max-height: calc(100% - 60px);
 
         > div {
           height: 100%;
@@ -112,6 +112,7 @@ export default {
     }
   }
 
+  }
   // Gestion de la bordure autour d'un panel
   .fr-tabs {
     transition: none 0s ease 0s;
@@ -198,5 +199,4 @@ export default {
     }
   }
 
-}
 </style>

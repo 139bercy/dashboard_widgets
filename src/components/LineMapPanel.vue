@@ -7,6 +7,7 @@
                 v-if="$screen.breakpoint !== 'lg'"></left-col>
       <div class="container fr-col-12 fr-col-lg-9" v-if="onglet.indicateurs.length > 0 && onglet.Graph">
         <line-chart
+            class="chart-container"
             interpolation="monotone"
             :indicateur="indicateurName1"
             :top-col="false"
@@ -14,6 +15,7 @@
             v-if="indicateur_data && !indicateur_data2">
         </line-chart>
         <multi-line-chart
+            class="chart-container"
             interpolation="monotone"
             :indicateur1="indicateurName1"
             :indicateur2="indicateurName2"
@@ -21,16 +23,13 @@
             :left-col="false"
             v-if="indicateur_data2">
         </multi-line-chart>
-      </div>
-      <div class="container fr-col-12 fr-grid-row">
-        <div class="fr-col-12 fr-col-lg-3" v-if="$screen.breakpoint === 'lg'"></div>
         <map-chart
-            class="map-container fr-col-12 fr-col-lg-9"
+            class="map-container fr-col-12"
             :indicateur="indicateurName1"
             :top-col="false"
             :left-col="false"
             :bottom-col="false"
-            :DOMTOMBottom="$screen.breakpoint !== 'lg'"
+            :DOMTOMBottom="true"
             v-if="onglet.Carte && indicateur_data">
         </map-chart>
       </div>
@@ -238,74 +237,70 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-.panel-full-page-lg {
-  height: 100%;
-  max-height: 100%;
-
-  > div {
+  .panel-full-page-lg {
     height: 100%;
     max-height: 100%;
-  }
-
-  .map-legend {
-    height: 50%;
-    max-height: 50%;
-  }
-
-  .container {
-    height: 50%;
-    max-height: 50%;
 
     > div {
       height: 100%;
       max-height: 100%;
+    }
+
+    .container {
+      height: 100%;
+      max-height: 100%;
+    }
+
+    .chart-container {
+      height: 40%;
+      max-height: 40%;
 
       > div {
         height: 100%;
         max-height: 100%;
 
         > .chart {
-          height: 100%;
           max-height: 100%;
+          height: 100%;
 
           canvas {
+            height: 100%;
             max-height: 100%;
           }
         }
       }
     }
-  }
 
-  .map-container {
-    height: 50%;
-    max-height: 50%;
-
-    > div {
-      height: 100%;
-      max-height: 100%;
+    .map-container {
+      height: 65%;
+      max-height: 65%;
 
       > div {
         height: 100%;
         max-height: 100%;
 
-        > div:not(.map_tooltip) {
+        > div {
           height: 100%;
           max-height: 100%;
 
-          > svg {
-            max-height: 100%;
-            margin-left: 0;
-            margin-right: 0;
+          > .france_container {
+            height: 80%;
+            max-height: 80%;
+
+            .svg {
+              max-height: 80%;
+              margin-left: 0;
+              margin-right: 0;
+            }
           }
         }
-      }
 
-      .om_container {
-        svg {
-          max-height: 30%;
+        .om_container {
+          svg {
+            max-height: 30%;
+          }
         }
       }
     }
   }
-}
 </style>
