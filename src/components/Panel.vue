@@ -21,7 +21,10 @@
         <div :id="'tabpanel-' + currentIndexOnglet + '-panel'"
              class="fr-tabs__panel fr-pt-2w fr-mt-3w"
              :class="{'fr-tabs__panel--selected' : currentOnglet.indicateurs.length > 0 && currentOnglet.Graph && currentOnglet === onglet}"
-             v-for="(onglet, indexOnglet) in onglets" :key="indexOnglet">
+             v-for="(onglet, indexOnglet) in onglets" :key="indexOnglet"
+             role="tabpanel"
+             :tabindex="currentOnglet === onglet ? 1 : 0"
+             :aria-selected="currentOnglet === onglet ? 1 : 0">
           <div v-if="currentOnglet.indicateurs.length > 0 && currentOnglet.Graph && currentOnglet === onglet">
             <line-map-panel :onglet="onglet"></line-map-panel>
           </div>
