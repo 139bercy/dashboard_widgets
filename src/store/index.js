@@ -8,6 +8,9 @@ function encodeIndicatorName(indicator) {
   return encodeURIComponent('%' + indicator.substring(indicator.length -4, indicator.length) + '%')
 }
 
+
+// import { toJsonNameFormat } from '@/utils.js'
+
 export default new Vuex.Store({
   state: {
     dep: [],
@@ -27,12 +30,14 @@ export default new Vuex.Store({
       }
 
       // console.log(indicator)
-      // console.log(encodeURIComponent(indicator))
-      // const url = `${state.data.url || BASE_URL}/${indicator}.json`
+      // console.log()
+      // const url = `json/Nombre_de_contrats_d_apprentissage_beneficiaires_de_l_aide_exceptionnelle_-_APP1.json`
       const url = `https://data.economie.gouv.fr/api/v2/catalog/datasets/relance-tableau-de-bord/exports/json?where=nom%20LIKE%20'${encodeIndicatorName(indicator)}'`
       const promise = fetch(url).then(res => {
         return res.json()
       }).then(result => {
+        // console.log(result)
+        // return result
         // Récupération des données en traitant le format fourni par data.economie
         if (!result || result.length !== 1) {
           return null

@@ -9,7 +9,6 @@
 
         <p class="fr-text fr-mt-2w fr-mb-0 ">
           Retrouvez par mois et par département l'état d'avancement des mesures phares de France Relance.
-<!--          {{$screen.breakpoint}}-->
         </p>
 
         <div v-for="(panneau, index) in panneaux" :key="index">
@@ -23,7 +22,6 @@
 </template>
 
 <script>
-import store from '@/store'
 import MenuContent from '@/components/MenuContent'
 import Panel from '@/components/Panel'
 
