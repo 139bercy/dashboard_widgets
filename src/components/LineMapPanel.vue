@@ -230,6 +230,14 @@ export default {
   },
   created() {
     this.getData()
+  },
+  watch: {
+    selectedGeoCode: function () {
+      this.updateData()
+    },
+    selectedGeoLevel: function () {
+      this.updateData()
+    }
   }
 }
 
