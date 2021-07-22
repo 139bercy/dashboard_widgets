@@ -264,7 +264,7 @@
                 "indicateurs": [
                     {
                         "Nom_mesure_propilot": "Décarbonation de l'industrie (Appel à projets EE + Guichet EE + Chaleur bas carbone) ",
-                        "Nom_indicateur_propilot": "Nombre d’entreprises ayant reçu l’aide ",
+                        "Nom_indicateur_propilot": "Nombre d’entreprises ayant reçu l’aide - CBC3",
                         "Code_mesure": "ECO2",
                         "Unité_indicateur": "# Entreprises",
                         "Indicateur_principal": "1",
