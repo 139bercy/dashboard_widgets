@@ -14,7 +14,6 @@
         <div v-for="(panneau, index) in panneaux" :key="index">
           <panel v-bind:index="index + ''" v-bind="panneau"></panel>
         </div>
-
       </div>
 
     </div>

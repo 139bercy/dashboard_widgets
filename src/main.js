@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import VueScreen from 'vue-screen'
+// import VueScrollactive from 'vue-scrollactive'
+import Scrollactive from 'vue-scrollactive/src/scrollactive.vue';
 
 import store from './store'
 import { getData } from './import.js'
@@ -21,7 +23,11 @@ Vue.use(VueScreen, {
   sm: '36em',
   md: '48em',
   lg: '62em'
-});
+})
+
+// Vue.use(VueScrollactive)
+Vue.component('scrollactive', Scrollactive)
+
 
 Vue.use(getData(store))
 
