@@ -1,8 +1,8 @@
 <template>
 
   <div class="widget_container fr-grid-row" :class="(loading)?'loading':''" :data-display="display" :id="widgetId">
-    <LineCol :props="leftColProps" v-if="topCol"></LineCol>
-    <LeftCol :props="leftColProps" v-if="leftCol || leftCol === undefined"></LeftCol>
+    <LineCol v-bind="leftColProps" v-if="topCol"></LineCol>
+    <LeftCol v-bind="leftColProps" v-if="leftCol || leftCol === undefined"></LeftCol>
     <div class="r_col fr-col-12" :class="{'fr-col-lg-9': leftCol}">
       <div class="" :class="{'map fr-col-12': DOMTOMBottom, 'm-lg': leftCol, 'fr-grid-row': !DOMTOMBottom}">
         <div class="map_tooltip" v-if="tooltip.display" :style="{top:tooltip.top,left:tooltip.left}">
@@ -12,14 +12,22 @@
             <div class="tooltip_value">{{ convertStringToLocaleNumber(tooltip.value) }} {{ units[0] }}</div>
           </div>
         </div>
+        <div class="no_select" :class="{'france_container': DOMTOMBottom, 'fr-col-9' : !DOMTOMBottom}">
+          <france :onenter="displayTooltip" :onleave="hideTooltip"></france>
+        </div>
+        <div :class="{'fr-col-1' : !DOMTOMBottom}"></div>
         <div class="om_container no_select" :class="{'fr-grid-row': DOMTOMBottom, 'fr-col-2' : !DOMTOMBottom}">
-          <div class="om fr-col-4 fr-col-sm" style="margin-top: 100px">
-            <span class="fr-text--xs fr-my-1w" >Guadeloupe</span>
+          <div class="om fr-col-4 fr-col-sm">
+            <span class="fr-text--xs fr-my-1w">Guadeloupe</span>
             <guadeloupe :onenter="displayTooltip" :onleave="hideTooltip"></guadeloupe>
           </div>
           <div class="om fr-col-4 fr-col-sm">
             <span class="fr-text--xs fr-my-1w">Martinique</span>
             <martinique :onenter="displayTooltip" :onleave="hideTooltip"></martinique>
+          </div>
+          <div class="om fr-col-4 fr-col-sm">
+            <span class="fr-text--xs fr-my-1w">Guyane</span>
+            <guyane :onenter="displayTooltip" :onleave="hideTooltip"></guyane>
           </div>
           <div class="om fr-col-4 fr-col-sm">
             <span class="fr-text--xs fr-my-1w">La Réunion</span>
@@ -29,13 +37,6 @@
             <span class="fr-text--xs fr-my-1w">Mayotte</span>
             <mayotte :onenter="displayTooltip" :onleave="hideTooltip"></mayotte>
           </div>
-          <div class="om fr-col-4 fr-col-sm">
-            <span class="fr-text--xs fr-my-1w">Guyane</span>
-            <guyane :onenter="displayTooltip" :onleave="hideTooltip"></guyane>
-          </div>
-        </div>
-        <div class="no_select" :class="{'france_container': DOMTOMBottom, 'fr-col-10' : !DOMTOMBottom}" style="margin-top: 80px">
-          <france :onenter="displayTooltip" :onleave="hideTooltip"></france>
         </div>
       </div>
     </div>
@@ -375,6 +376,7 @@ export default {
     }
     .map {
       height: 100%;
+      max-height: 100%;
     }
   }
   @media (max-width: 62em) {

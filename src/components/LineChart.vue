@@ -13,10 +13,10 @@
     <div class="r_col fr-col-12" :class="{'fr-col-lg-9': leftCol}">
       <div class="chart ml-lg">
         <canvas :id="chartId"></canvas>
-        <div class="flex fr-mt-3v" :style="style">
-          <span class="legende_dot"></span>
-          <p class="fr-text--sm fr-text--bold fr-ml-1v fr-mb-0">{{capitalize(units[0])}}</p>
-        </div>
+<!--        <div class="flex fr-mt-3v" :style="style">-->
+<!--          <span class="legende_dot"></span>-->
+<!--          <p class="fr-text&#45;&#45;sm fr-text&#45;&#45;bold fr-ml-1v fr-mb-0">{{capitalize(units[0])}}</p>-->
+<!--        </div>-->
       </div>
     </div>
     <LineCol v-bind="leftColProps" v-if="bottomCol"></LineCol>

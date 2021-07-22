@@ -9,7 +9,6 @@
 
         <p class="fr-text fr-mt-2w fr-mb-0 ">
           Retrouvez par mois et par département l'état d'avancement des mesures phares de France Relance.
-<!--          {{$screen.breakpoint}}-->
         </p>
 
         <div v-for="(panneau, index) in panneaux" :key="index">
@@ -23,7 +22,6 @@
 </template>
 
 <script>
-import store from '@/store'
 import MenuContent from '@/components/MenuContent'
 import Panel from '@/components/Panel'
 
@@ -34,8 +32,7 @@ export default {
     Panel
   },
   props: {
-    configuration: String,
-    dataUrl: String
+    configuration: String
   },
   data() {
     return {
@@ -44,7 +41,6 @@ export default {
   },
   methods: {
     async getData() {
-      store.commit('setUrl', this.dataUrl)
       fetch(this.configuration)
           .then(res => res.json())
           .then(data => {
@@ -67,12 +63,10 @@ export default {
 
 @import "../../css/hack.dsfr.min.scss";
 @import "../../css/overload-fonts.css";
-//@import "../../remixicons/remixicon";
 .page-content {
 
   /* overload fonts path, to delete when parent has access */
   @include dsfr;
-  //@include icons;
 
   --bf500: #009100;
   --bf500-plain: #039103;

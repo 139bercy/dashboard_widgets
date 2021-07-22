@@ -13,7 +13,10 @@
         <div class="sep fr-my-4w fr-my-md-3w" v-if="currentValues"></div>
         <div data-box="number" v-if="currentValues">
           <div class="indicateur_info" :class="i>0 ? 'fr-mt-2w' : ''" v-for="(n,i) in names" :key="n">
-            <p class="fr-text--sm fr-text--bold fr-mt-0 fr-mb-1w">{{names[i]}}</p>
+            <p class="fr-text--sm fr-text--bold fr-mt-0 fr-mb-1w">
+              <span class="legende_dot" :class="{'dot-blue': i === 0, 'dot-green': i === 1}"></span>
+              {{names[i]}}
+            </p>
             <div class="l_box_number_container">
               <p class="fr-text--lg fr-text--bold fr-mb-1v">{{convertFloatToHuman(currentValues[i])}}</p>
               <p class="l_box_trend flex fr-mb-0 fr-text--xs fr-text--bold fr-px-1w fr-py-1v"
@@ -114,8 +117,24 @@ export default {
 
 <style scoped lang="scss">
   @import "../../css/overload-fonts.css";
-  @import "../../css/hack.dsfr.min.scss";
-  //@import "../../css/dsfr.min.css";
+  .dot-blue {
+    background-color: #000091;
+    width: 1rem;
+    height: 1rem;
+    min-width: 1rem;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 0.25rem;
+  }
+  .dot-green {
+    background-color: #007c3a;
+    width: 1rem;
+    height: 1rem;
+    min-width: 1rem;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 0.25rem;
+  }
   .l_col{
 
     .sep, .sep-viz {
