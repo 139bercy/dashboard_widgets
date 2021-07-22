@@ -1,5 +1,5 @@
 import pandas as pd
-import json 
+import json
 import os
 
 def convert_excel_to_json(path):
@@ -44,13 +44,9 @@ def convert_excel_to_json(path):
         liste_panneaux += [dict_panneau]
     return liste_panneaux
 
-json_final = convert_excel_to_json(path = os.path.join(os.getcwd(), "dashboard_widgets", "dashboard-configuration", "Web_edito v_1.csv"))
-    
-with open(os.path.join(os.getcwd(), "dashboard_widgets", "dashboard-configuration", "dashboard-configuration.json"), 'w', encoding="utf8") as f:
+json_final = convert_excel_to_json(path = os.path.join(os.getcwd(), "dashboard-configuration", "Web_edito v_1.csv"))
+
+with open(os.path.join(os.getcwd(), "dashboard-configuration", "dashboard-configuration.json"), 'w', encoding="utf8") as f:
     json.dump(json_final, f, indent=4, ensure_ascii=False, sort_keys=False )
-with open(os.path.join(os.getcwd(), "dashboard_widgets", "public", "dashboard-configuration.json"), 'w', encoding="utf8") as f:
+with open(os.path.join(os.getcwd(), "public", "dashboard-configuration.json"), 'w', encoding="utf8") as f:
     json.dump(json_final, f, indent=4, ensure_ascii=False, sort_keys=False )
-    
-
-
-
