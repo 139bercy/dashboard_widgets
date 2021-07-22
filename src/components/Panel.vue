@@ -1,5 +1,5 @@
 <template>
-  <div :id="'panel_' + toJsonNameFormat(Nom_mesure_GP) + '-'+ index" class="panel">
+  <div :id="'panel_' + toJsonNameFormat(Nom_mesure_GP)" class="panel">
     <div :class="{'full-page-lg': $screen.breakpoint === 'lg'}">
       <div class="lvl2-header fr-px-2w fr-px-md-3w fr-pt-3w">
         <h3>{{ Nom_mesure_GP }}</h3>
