@@ -1,0 +1,71 @@
+---
+version: 2
+jobs:
+    build-dist:
+      docker:
+          - image: node:16-alpine3.14
+      steps:
+          - checkout
+          - run:
+                name: Installation des dépendances
+                command: |
+                  npm install
+          - run:
+              name: Génération du build
+              command: |
+                npm run build
+          - run:
+              name: Réécriture des urls des fichiers dans l'index pour les github pages
+              command: |
+                sed -e 's|/css/app.css|css/app.css|g' -i index.html
+                sed -e 's|/js/app.js|js/app.js|g' -i index.html
+          - persist_to_workspace:
+              root: ./
+              paths: dist
+          # - run:
+          #     name: Déplacements des fichiers de dist vers la branches gh-pages
+          #     command: |
+          #       mv dist ../
+          #       git checkout gh-pages
+          #       mv ../dist/ ./
+
+    deploy-github-pages:
+      build-dist:
+      docker:
+          - image: node:16-alpine3.14
+      steps:
+          - attach_workspace:
+              at: ./
+          - run:
+              name: Install and configure dependencies
+              command: |
+                npm install -g --silent gh-pages@2.0.1
+                git config user.email "circleci@dashboard-widget"
+                git config user.name "CircleCI"
+          - run:
+              name: Deploy docs to gh-pages branch
+              command: gh-pages --dist ./dist
+          # - run:
+          #     name: Commit des fichiers dans la branche gh-pages
+          #     command: |
+          #       git config --global  user.email "circleci@dashboard-widget"
+          #       git config --global user.name "CircleCI"
+          #       git commit -m "Mise à jour des github pages"
+          #       git push --set-upstream origin gh-pages
+              
+workflows:
+    version: 2
+    gh-pages:
+      jobs:
+        - build-dist
+            filters:
+              branches:
+                only:
+                  - master
+        - deploy-github-pages
+            requires:
+              - build-dist
+            filters:
+              branches:
+                only:
+                  - master
