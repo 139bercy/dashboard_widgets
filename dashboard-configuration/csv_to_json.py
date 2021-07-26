@@ -1,14 +1,30 @@
 import pandas as pd
-import json 
+import json
 import os
 
+
 def convert_excel_to_json(path):
-    """Exporte un json à partir d'un excel avec comme clef une ligne et comme valeur un dictionnaire: {colonne: value}"""
-    df = pd.read_csv(path, sep = ",")
+    """Exporte un json à partir d'un excel avec comme clef une ligne
+    et comme valeur un dictionnaire: {colonne: value}"""
+    df = pd.read_csv(path, sep=",")
     liste_panneaux = []
     panneau_properties = ["Lien_page_mesure", "Nom_mesure_GP", "Volet"]
-    onglet_properties = ["Carte", "Graph", "Nom_indicateur_GP", "Description_mesure", "Nom_indicateur_GP_long"]
-    indicateur_properties = ["Nom_mesure_propilot", "Nom_indicateur_propilot", "Code_mesure", "Unité_indicateur", "Indicateur_principal", "Unité_GP", "Lien_open_source"]
+    onglet_properties = [
+        "Carte",
+        "Graph",
+        "Nom_indicateur_GP",
+        "Description_mesure",
+        "Nom_indicateur_GP_long"
+    ]
+    indicateur_properties = [
+        "Nom_mesure_propilot",
+        "Nom_indicateur_propilot",
+        "Code_mesure",
+        "Unité_indicateur",
+        "Indicateur_principal",
+        "Unité_GP",
+        "Lien_open_source"
+    ]
     df = df.sort_values(by=["No_Panneau"], ascending=True)
     panneaux = list(df["No_Panneau"].unique())
     for panneau in panneaux:
@@ -44,13 +60,27 @@ def convert_excel_to_json(path):
         liste_panneaux += [dict_panneau]
     return liste_panneaux
 
-json_final = convert_excel_to_json(path = os.path.join(os.getcwd(), "dashboard_widgets", "dashboard-configuration", "Web_edito v_1.csv"))
-    
-with open(os.path.join(os.getcwd(), "dashboard_widgets", "dashboard-configuration", "dashboard-configuration.json"), 'w', encoding="utf8") as f:
-    json.dump(json_final, f, indent=4, ensure_ascii=False, sort_keys=False )
-with open(os.path.join(os.getcwd(), "dashboard_widgets", "public", "dashboard-configuration.json"), 'w', encoding="utf8") as f:
-    json.dump(json_final, f, indent=4, ensure_ascii=False, sort_keys=False )
-    
 
+json_final = convert_excel_to_json(path=os.path.join(
+    os.getcwd(), "dashboard-configuration", "Web_edito v_1.csv"))
 
-
+with open(
+    os.path.join(
+        os.getcwd(),
+        "dashboard-configuration",
+        "dashboard-configuration.json"
+        ),
+    'w',
+    encoding="utf8"
+) as f:
+    json.dump(json_final, f, indent=4, ensure_ascii=False, sort_keys=False)
+with open(
+    os.path.join(
+        os.getcwd(),
+        "public",
+        "dashboard-configuration.json"
+    ),
+    'w',
+    encoding="utf8"
+) as f:
+    json.dump(json_final, f, indent=4, ensure_ascii=False, sort_keys=False)
