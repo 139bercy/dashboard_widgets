@@ -1,95 +1,116 @@
 ---
 version: 2
 jobs:
-    build-dist:
-      docker:
-          - image: node:16-alpine3.14
-      steps:
-          - checkout
-          - run:
-                name: Installation des dépendances
-                command: |
-                  npm install
-          - run:
-              name: Génération du build
-              command: |
-                npm run build
-          - run:
-              name: Réécriture des urls des fichiers dans l'index pour les github pages
-              command: |
-                sed -e 's|/css/app.css|css/app.css|g' -i index.html
-                sed -e 's|/js/app.js|js/app.js|g' -i index.html
-          - persist_to_workspace:
-              root: ./
-              paths: dist
+  install-requirements-node:
+    docker:
+      - image: node:16-alpine3.14
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - dependencies-{{ checksum "package-lock.json" }}
+      - run:
+            name: Installation des dépendences npm
+            command: |
+                npm install
+      - save_cache:
+          key: dependencies-{{ checksum "package-lock.json"}}
+          paths:
+            - "node_modules"
 
-
-    install-requirements:
-      docker:
-              - image: python:3.8
-      steps:
+  build-dist:
+    docker:
+        - image: node:16-alpine3.14
+    steps:
         - checkout
         - restore_cache:
             keys:
-              - dependencies-{{ checksum "dashboard-configuration/requirements.txt"}}
+              - dependencies-{{ checksum "package-lock.json" }}
         - run:
-              name: Installation des requirements Python
-              command: |
-                  python3 -m venv venv
-                  . venv/bin/activate
-                  pip3 install -r dashboard-configuration/requirements.txt
-        - save_cache:
-            key: dependencies-{{ checksum "dashboard-configuration/requirements.txt"}}
-            paths:
-              - "venv"
+            name: Génération du build
+            command: |
+              npm run build
+        - run:
+            name: Réécriture des urls des fichiers dans l'index pour les github pages
+            command: |
+              sed -e 's|/css/app.css|css/app.css|g' -i dist/index.html
+              sed -e 's|/js/app.js|js/app.js|g' -i dist/index.html
+        - persist_to_workspace:
+            root: ./
+            paths: dist
 
-    build-dashboard-configuration:
-      docker:
-          - image: python:3.9-alpine3.14
-      steps:
-          - checkout
-          - restore_cache:
-              keys:
-                - dependencies-{{ checksum "dashboard-configuration/requirements.txt"}}
-          - run:
-              name: Génération du fichier de configuration par rapport au fichier csv
-              command: |
+  install-requirements-python:
+    docker:
+      - image: python:3.8
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - dependencies-{{ checksum "dashboard-configuration/requirements.txt"}}
+      - run:
+            name: Installation des requirements Python
+            command: |
                 python3 -m venv venv
                 . venv/bin/activate
-                python dashboard-configuration/csv_to_json.py
-          - persist_to_workspace:
-              root: ./
-              paths: public/dashboard-configuration.json
+                pip3 install -r dashboard-configuration/requirements.txt
+                pip
+      - save_cache:
+          key: dependencies-python-{{ checksum "dashboard-configuration/requirements.txt"}}
+          paths:
+            - "venv"
 
-    deploy-github-pages:
-      build-dist:
-      docker:
-          - image: node:16-alpine3.14
-      steps:
-          - attach_workspace:
-              at: ./
-          - run:
-              name: Install and configure dependencies
-              command: |
-                npm install -g --silent gh-pages@2.0.1
-                git config user.email "circleci@dashboard-widget"
-                git config user.name "CircleCI"
-          - run:
-              name: Deploy docs to gh-pages branch
-              command: gh-pages --dist ./dist
+  build-dashboard-configuration:
+    docker:
+        - image: python:3.8
+    steps:
+        - checkout
+        - restore_cache:
+            keys:
+              - dependencies-python-{{ checksum "dashboard-configuration/requirements.txt"}}
+        - run:
+            name: Génération du fichier de configuration par rapport au fichier csv
+            command: |
+              . venv/bin/activate
+              python dashboard-configuration/csv_to_json.py
+        - persist_to_workspace:
+            root: ./
+            paths: public/dashboard-configuration.json
+
+  deploy-github-pages:
+    docker:
+        - image: node:16-alpine3.14
+    steps:
+        - checkout
+        - attach_workspace:
+            at: ./
+        - run:
+            name: Install and configure dependencies
+            command: |
+              apk add --no-cache git openssh
+              npm install -g --silent gh-pages@2.0.1
+              git config user.email "circleci@dashboard-widget"
+              git config user.name "CircleCI"
+        - add_ssh_keys:
+            fingerprints:
+              - "db:bf:2d:63:8e:96:6f:d6:14:d0:8d:59:eb:52:54:94"
+        - run:
+            name: Deploy docs to gh-pages branch
+            command: gh-pages --dist ./dist
 
 workflows:
     version: 2
     gh-pages:
       jobs:
-        - install-requirements
+        - install-requirements-node
+        - install-requirements-python
         - build-dashboard-configuration:
             requires:
-              - install-requirements
+              - install-requirements-python
         - build-dist:
             requires:
+              - install-requirements-node
               - build-dashboard-configuration
-        - deploy-github-pages
+        - deploy-github-pages:
             requires:
               - build-dist
             filters:
