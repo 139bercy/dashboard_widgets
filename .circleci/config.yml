@@ -23,6 +23,44 @@ jobs:
               root: ./
               paths: dist
 
+
+    install-requirements:
+      docker:
+              - image: python:3.8
+      steps:
+        - checkout
+        - restore_cache:
+            keys:
+              - dependencies-{{ checksum "dashboard-configuration/requirements.txt"}}
+        - run:
+              name: Installation des requirements Python
+              command: |
+                  python3 -m venv venv
+                  . venv/bin/activate
+                  pip3 install -r dashboard-configuration/requirements.txt
+        - save_cache:
+            key: dependencies-{{ checksum "dashboard-configuration/requirements.txt"}}
+            paths:
+              - "venv"
+
+    build-dashboard-configuration:
+      docker:
+          - image: python:3.9-alpine3.14
+      steps:
+          - checkout
+          - restore_cache:
+              keys:
+                - dependencies-{{ checksum "dashboard-configuration/requirements.txt"}}
+          - run:
+              name: Génération du fichier de configuration par rapport au fichier csv
+              command: |
+                python3 -m venv venv
+                . venv/bin/activate
+                python dashboard-configuration/csv_to_json.py
+          - persist_to_workspace:
+              root: ./
+              paths: public/dashboard-configuration.json
+
     deploy-github-pages:
       build-dist:
       docker:
@@ -39,16 +77,18 @@ jobs:
           - run:
               name: Deploy docs to gh-pages branch
               command: gh-pages --dist ./dist
-              
+
 workflows:
     version: 2
     gh-pages:
       jobs:
-        - build-dist
-            filters:
-              branches:
-                only:
-                  - master
+        - install-requirements
+        - build-dashboard-configuration:
+            requires:
+              - install-requirements
+        - build-dist:
+            requires:
+              - build-dashboard-configuration
         - deploy-github-pages
             requires:
               - build-dist

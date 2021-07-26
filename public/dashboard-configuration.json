@@ -282,7 +282,7 @@
                 "indicateurs": [
                     {
                         "Nom_mesure_propilot": "Décarbonation de l'industrie (Appel à projets EE + Guichet EE + Chaleur bas carbone) ",
-                        "Nom_indicateur_propilot": "Montant cumulé de l’investissement total ainsi déclenché",
+                        "Nom_indicateur_propilot": "Montant cumulé de l’investissement total ainsi déclenché - CBC2",
                         "Code_mesure": "ECO2",
                         "Unité_indicateur": "Euros",
                         "Indicateur_principal": "1",
