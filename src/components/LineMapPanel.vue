@@ -88,7 +88,8 @@ export default {
         currentDate: null,
         names: null,
         evolcodes: null,
-        evolvalues: null
+        evolvalues: null,
+        units: []
       },
     }
   },
@@ -116,7 +117,8 @@ export default {
         currentDate: this.leftColProps.currentDate,
         names: this.leftColProps.names,
         evolcodes: this.leftColProps.evolcodes,
-        evolvalues: this.leftColProps.evolvalues
+        evolvalues: this.leftColProps.evolvalues,
+        units: this.leftColProps.units
       }
     },
     leftColPropsNotLargeMap() {
@@ -193,18 +195,17 @@ export default {
       this.leftColProps.date = this.convertDateToHuman(geoObject.last_date)
 
       this.leftColProps.names = []
-      // this.units.length = 0
+      this.leftColProps.units = []
       this.leftColProps.currentValues = []
       this.leftColProps.evolcodes = []
       this.leftColProps.evolvalues = []
 
       this.leftColProps.names.push(this.indicateur_data.nom)
-      if (this.indicateur_data2) {
-        this.leftColProps.names.push(this.indicateur_data2.nom)
-      }
-      // this.units.push(this.indicateur_data.unite, this.indicateur_data2.unite)
+      this.leftColProps.units.push(this.onglet.indicateurs[0]["Unité_GP"])
       this.leftColProps.currentValues.push(geoObject.last_value)
       if (this.indicateur_data2) {
+        this.leftColProps.names.push(this.indicateur_data2.nom)
+        this.leftColProps.units.push(this.onglet.indicateurs[1]["Unité_GP"])
         this.leftColProps.currentValues.push(geoObject2.last_value)
       }
       this.leftColProps.currentDate = this.convertDateToHuman(geoObject.last_date)

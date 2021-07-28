@@ -18,7 +18,9 @@
               {{names[i]}}
             </p>
             <div class="l_box_number_container">
-              <p class="fr-text--lg fr-text--bold fr-mb-1v">{{convertFloatToHuman(currentValues[i])}}</p>
+              <p class="fr-text--lg fr-text--bold fr-mb-1v">
+                {{convertFloatToHuman(currentValues[i])}} <span v-if="units.length > i">{{units[i]}}</span>
+              </p>
               <p class="l_box_trend flex fr-mb-0 fr-text--xs fr-text--bold fr-px-1w fr-py-1v"
                  v-bind:class="{'down':isDown[i],'green':isGreen[i],'red':isRed[i],'blue':isBlue[i]}"
                  v-if="typeof evolvalues[i] === 'Number'">
@@ -68,7 +70,8 @@ export default {
     evolcodes: Array,
     evolvalues: Array,
     isMap: Boolean,
-    date: String
+    date: String,
+    units: Array,
   },
   computed: {
 
