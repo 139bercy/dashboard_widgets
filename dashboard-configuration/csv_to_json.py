@@ -19,7 +19,6 @@ def convert_excel_to_json(path):
     indicateur_properties = [
         "Nom_mesure_propilot",
         "Nom_indicateur_propilot",
-        "Code_mesure",
         "Unité_indicateur",
         "Indicateur_principal",
         "Unité_GP",
@@ -64,16 +63,6 @@ def convert_excel_to_json(path):
 json_final = convert_excel_to_json(path=os.path.join(
     os.getcwd(), "dashboard-configuration", "Web_edito v_1.csv"))
 
-with open(
-    os.path.join(
-        os.getcwd(),
-        "dashboard-configuration",
-        "dashboard-configuration.json"
-        ),
-    'w',
-    encoding="utf8"
-) as f:
-    json.dump(json_final, f, indent=4, ensure_ascii=False, sort_keys=False)
 with open(
     os.path.join(
         os.getcwd(),
