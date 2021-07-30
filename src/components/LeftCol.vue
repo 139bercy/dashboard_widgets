@@ -9,6 +9,9 @@
             <span class="fr-ml-1v">{{localisation}}</span>
           </p>
           <p class="l_box_title fr-text--xs fr-mb-1w">Mise à jour : {{date}}</p>
+          <div v-if="$screen.breakpoint !== 'lg'" style="position: absolute;top: 20px;right: 10px;">
+            <img src="/Logo-France-Relance.png" alt="logo France-Relance" width="100px"/>
+          </div>
         </div>
         <div class="sep fr-my-4w fr-my-md-3w" v-if="currentValues"></div>
         <div data-box="number" v-if="currentValues">
@@ -43,6 +46,9 @@
             <span class="min fr-text--sm fr-text--bold fr-mb-0">{{convertFloatToHuman(min)}}</span>
             <span class="max fr-text--sm fr-text--bold fr-mb-0">{{convertFloatToHuman(max)}}</span>
           </div>
+        </div>
+        <div v-if="$screen.breakpoint === 'lg'" style="position: absolute;bottom: 20px;">
+          <img src="/Logo-France-Relance.png" alt="logo France-Relance" width="100px"/>
         </div>
     </div>
 </template>
