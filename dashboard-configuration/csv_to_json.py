@@ -8,7 +8,12 @@ def convert_excel_to_json(path):
     et comme valeur un dictionnaire: {colonne: value}"""
     df = pd.read_csv(path, sep=",")
     liste_panneaux = []
-    panneau_properties = ["Lien_page_mesure", "Nom_mesure_GP", "Volet"]
+    panneau_properties = [
+        "Lien_page_mesure",
+        "Nom_mesure_GP",
+        "Volet",
+        "source"
+    ]
     onglet_properties = [
         "Carte",
         "Graph",
@@ -24,7 +29,7 @@ def convert_excel_to_json(path):
         "Unité_GP",
         "Lien_open_source"
     ]
-    df = df.sort_values(by=["No_Panneau"], ascending=True)
+    df = df.dropna(subset=['No_Panneau']).sort_values(by=["No_Panneau"], ascending=True)
     panneaux = list(df["No_Panneau"].unique())
     for panneau in panneaux:
         dict_panneau = {}

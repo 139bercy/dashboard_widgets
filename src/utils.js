@@ -9,11 +9,11 @@ export const convertStringToLocaleNumber = function (string) {
 }
 
 export const convertFloatToHuman = function (float) {
-  if (Number.isInteger(parseFloat(float))) {
+  // if (Number.isInteger(parseFloat(float))) {
     return parseInt(float).toLocaleString()
-  } else {
-    return parseFloat(parseFloat(float).toFixed(2)).toLocaleString()
-  }
+  // } else {
+  //   return parseFloat(parseFloat(float).toFixed(2)).toLocaleString()
+  // }
 }
 
 export const convertDateToHuman = function (string) {

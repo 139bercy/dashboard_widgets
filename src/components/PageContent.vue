@@ -8,7 +8,7 @@
       <div class="fr-col-12 fr-col-md-7 fr-col-lg-7 fr-ml-md-6w fr-mb-6w">
 
         <p class="fr-text fr-mt-2w fr-mb-0 ">
-          Retrouvez par mois et par département l'état d'avancement des mesures phares de France Relance.
+          Avec France Relance, l’Etat investit 100 Md€ pour accélérer la transition écologique, renforcer la compétitivité des entreprises et des territoires et renforcer la cohésion sociale et territoriale. Retrouvez ici chaque mois, par département, l'état d'avancement du déploiement des mesures phares de France Relance.
         </p>
 
         <div v-for="(panneau, index) in panneaux" :key="index">
