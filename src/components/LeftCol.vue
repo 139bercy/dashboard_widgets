@@ -9,8 +9,8 @@
             <span class="fr-ml-1v">{{localisation}}</span>
           </p>
           <p class="l_box_title fr-text--xs fr-mb-1w">Mise à jour : {{date}}</p>
-          <div v-if="$screen.breakpoint !== 'lg'" style="position: absolute;top: 20px;right: 10px;">
-            <img src="/Logo-France-Relance.png" alt="logo France-Relance" width="100px"/>
+          <div v-if="$screen.breakpoint !== 'lg'" style="position: absolute;top: 40px;right: 10px;">
+            <img src="/Logo-France-Relance.png" alt="logo France-Relance" width="80px"/>
           </div>
         </div>
         <div class="sep fr-my-4w fr-my-md-3w" v-if="currentValues"></div>
