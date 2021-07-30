@@ -8,7 +8,6 @@
         <p class="fr-text--sm fr-mb-0 fr-p-3v">{{geoFallbackMsg}}
         </p>
     </div>
-    <LineCol v-bind="leftColProps" v-if="topCol"></LineCol>
     <LeftCol v-bind="leftColProps" v-if="leftCol"></LeftCol>
     <div class="r_col fr-col-12" :class="{'fr-col-lg-9': leftCol}">
       <div class="chart ml-lg">
@@ -19,7 +18,6 @@
 <!--        </div>-->
       </div>
     </div>
-    <LineCol v-bind="leftColProps" v-if="bottomCol"></LineCol>
   </div>
 </template>
 
@@ -27,14 +25,12 @@
 import store from '@/store'
 import Chart from 'chart.js'
 import LeftCol from '@/components/LeftCol'
-import LineCol from '@/components/LineCol'
 import { mixin } from '@/utils.js'
 
 export default {
   name: 'LineChart',
   components: {
-    LeftCol,
-    LineCol
+    LeftCol
   },
   mixins: [mixin],
   data () {

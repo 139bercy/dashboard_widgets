@@ -59,7 +59,6 @@ export default {
 
   mixins: [mixin],
   components: {
-    // LineCol,
     LeftCol,
     LineChart,
     MultiLineChart,

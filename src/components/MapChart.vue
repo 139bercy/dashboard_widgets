@@ -1,7 +1,6 @@
 <template>
 
   <div class="widget_container fr-grid-row" :class="(loading)?'loading':''" :data-display="display" :id="widgetId">
-    <LineCol v-bind="leftColProps" v-if="topCol"></LineCol>
     <LeftCol v-bind="leftColProps" v-if="leftCol || leftCol === undefined"></LeftCol>
     <div class="r_col fr-col-12" :class="{'fr-col-lg-9': leftCol}">
       <div class="" :class="{'map fr-col-12': DOMTOMBottom, 'm-lg': leftCol, 'fr-grid-row': !DOMTOMBottom}">
@@ -40,14 +39,12 @@
         </div>
       </div>
     </div>
-    <LineCol :props="leftColProps" v-if="bottomCol"></LineCol>
   </div>
 </template>
 
 <script>
 import store from '@/store'
 import LeftCol from '@/components/LeftCol'
-import LineCol from '@/components/LineCol'
 import maps from '@/components/maps'
 import * as d3 from 'd3-scale'
 import { isMobile } from 'mobile-device-detect'
@@ -58,7 +55,6 @@ export default {
   mixins: [mixin],
   components: {
     LeftCol,
-    LineCol,
     ...maps
   },
   data () {
