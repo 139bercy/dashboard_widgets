@@ -37,7 +37,7 @@
                 :aria-expanded="accordionOpened"
                 v-on:click="accordionOpened=!accordionOpened"
         >
-          En savoir plus sur la mesure :
+          En savoir plus sur la mesure
         </button>
       </h3>
       <div class="fr-pl-2v fr-pr-2v fr-col-12" v-show="accordionOpened">
@@ -45,6 +45,7 @@
           {{ onglets[0].Description_mesure }}
         </p>
         <p class="fr-text--xs fr-mb-3w fr-pb-1v">Source :
+          {{source}}
           <a title="vers data.gouv.fr" v-bind:href="Lien_page_mesure"
              target="_blank" rel="noopener" data-section="nom_section"
              data-subsection="nom_subsection">
@@ -70,6 +71,7 @@ export default {
     index: String,
     Nom_mesure_GP: String,
     Lien_page_mesure: String,
+    source: String,
     onglets: Array
   },
   data() {
