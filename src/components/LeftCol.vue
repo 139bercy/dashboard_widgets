@@ -47,7 +47,7 @@
             <span class="max fr-text--sm fr-text--bold fr-mb-0">{{convertFloatToHuman(max)}}</span>
           </div>
         </div>
-        <div v-if="$screen.breakpoint === 'lg'" style="position: absolute;bottom: 20px;">
+        <div v-if="$screen.breakpoint === 'lg'" style="position: absolute;bottom: -30px;">
           <img src="Logo-France-Relance.png" alt="logo France-Relance" width="100px"/>
         </div>
     </div>
