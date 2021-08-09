@@ -1,8 +1,10 @@
 <template>
-  <div class="line-map-panel" :class="{'panel-full-page-lg': $screen.breakpoint === 'lg'}">
+  <div class="line-map-panel" :class="{'panel-full-page-lg': $screen.breakpoint === 'lg', 'only-chart' : this.indicateur_data && !this.indicateur_data.departements}">
     <div v-if="indicateur_data && !loading" class="fr-grid-row">
       <left-col class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColProps"
-                v-if="$screen.breakpoint === 'lg'"></left-col>
+                v-if="$screen.breakpoint === 'lg' && this.indicateur_data && this.indicateur_data.departements"></left-col>
+      <left-col class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColPropsNotLargeChart"
+                v-if="$screen.breakpoint === 'lg' && this.indicateur_data && !this.indicateur_data.departements"></left-col>
       <left-col class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColPropsNotLargeChart"
                 v-if="$screen.breakpoint !== 'lg'"></left-col>
       <div class="container fr-col-12 fr-col-lg-9" v-if="onglet.indicateurs.length > 0 && onglet.Graph">
@@ -30,11 +32,11 @@
             :left-col="false"
             :bottom-col="false"
             :DOMTOMBottom="true"
-            v-if="onglet.Carte && indicateur_data">
+            v-if="onglet.Carte && indicateur_data && this.indicateur_data.departements">
         </map-chart>
       </div>
       <left-col class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColPropsNotLargeMap"
-                v-if="$screen.breakpoint !== 'lg'"></left-col>
+                v-if="$screen.breakpoint !== 'lg' && this.indicateur_data && this.indicateur_data.departements"></left-col>
     </div>
     <div v-else-if="loading">
       Récupération des données en cours
@@ -152,21 +154,20 @@ export default {
       })
     },
     updateData() {
-      if (this.indicateur_data === null || this.indicateur_data.departements === null) {
+      if (this.indicateur_data === null) {
         return;
       }
-
-      // Gestion de la légende de la map
-      const values = []
-      this.indicateur_data.departements.forEach(function (d) {
-        if (d !== null && d.last_value !== null) {
-          values.push(parseInt(d.last_value))
-        }
-      })
-
-      this.leftColProps.min = Math.min.apply(null, values)
-      this.leftColProps.max = Math.max.apply(null, values)
-
+      this.updateDataForLegend()
+      if (this.indicateur_data.departements !== null) {
+        this.updateDataForLegendMap();
+      }
+    },
+    updateDataForLegend() {
+      const self = this
+      if (this.indicateur_data === null) {
+        return;
+      }
+      let oldLocalisation = this.leftColProps.localisation
       this.leftColProps.localisation = this.selectedGeoLabel
 
       const geolevel = this.selectedGeoLevel
@@ -175,11 +176,12 @@ export default {
       let geoObject
       let geoObject2
 
-      if (geolevel === 'France') {
+      if (geolevel === 'France' || !this.indicateur_data[geolevel]) {
         geoObject = this.indicateur_data.france[0]
         if (this.indicateur_data2) {
           geoObject2 = this.indicateur_data2.france[0]
         }
+        this.leftColProps.localisation = oldLocalisation ?? this.leftColProps.localisation
       } else {
         geoObject = this.indicateur_data[geolevel].find(obj => {
           return obj.code_level === geocode
@@ -208,24 +210,46 @@ export default {
         this.leftColProps.currentValues.push(geoObject2.last_value)
       }
       this.leftColProps.currentDate = this.convertDateToHuman(geoObject.last_date)
-      this.leftColProps.evolcodes.push(geoObject.evol_color, geoObject2.evol_color)
-      this.leftColProps.evolvalues.push(geoObject.evol_percentage, geoObject2.evol_percentage)
+      this.leftColProps.evolcodes.push(geoObject.evol_color)
+      this.leftColProps.evolvalues.push(geoObject.evol_percentage)
+      if (geoObject2) {
+        this.leftColProps.evolcodes.push(geoObject2.evol_color)
+        this.leftColProps.evolvalues.push(geoObject2.evol_percentage)
+      }
 
-      this.labels.length = 0
-      this.dataset.length = 0
-      this.dataset2.length = 0
+      this.labels = []
+      this.dataset = []
+      this.dataset2 = []
 
       geoObject.values.forEach(function (d) {
         self.labels.push(self.convertDateToHuman(d.date))
         self.dataset.push((d.value))
 
-        const correspondingValue = geoObject2.values.find(obj => {
-          return obj.date === d.date
-        })
-        if (correspondingValue) {
-          self.dataset2.push(correspondingValue.value)
+        if (geoObject2) {
+          const correspondingValue = geoObject2.values.find(obj => {
+            return obj.date === d.date
+          })
+          if (correspondingValue) {
+            self.dataset2.push(correspondingValue.value)
+          }
         }
       })
+    },
+    updateDataForLegendMap() {
+      if (this.indicateur_data === null || this.indicateur_data.departements === null) {
+        return;
+      }
+
+      // Gestion de la légende de la map
+      const values = []
+      this.indicateur_data.departements.forEach(function (d) {
+        if (d !== null && d.last_value !== null) {
+          values.push(parseInt(d.last_value))
+        }
+      })
+
+      this.leftColProps.min = Math.min.apply(null, values)
+      this.leftColProps.max = Math.max.apply(null, values)
     }
   },
   created() {
@@ -246,8 +270,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
   .panel-full-page-lg {
-    height: 100%;
-    max-height: 100%;
 
     > div {
       height: 100%;
@@ -259,31 +281,26 @@ export default {
       max-height: 100%;
     }
 
-    .chart-container {
-      height: 40%;
-      max-height: 40%;
-
-      > div {
-        height: 100%;
-        max-height: 100%;
-
-        > .chart {
-          max-height: 100%;
-          height: 100%;
-
-          canvas {
-            height: 100%;
-            max-height: 100%;
-          }
-        }
-      }
-    }
-
-    .map-container {
+    &.only-chart {
       height: 65%;
       max-height: 65%;
 
-      > div {
+      .chart-container {
+        height: 100%;
+        max-height: 100%;
+      }
+    }
+
+    &:not(.only-chart) {
+      height: 100%;
+      max-height: 100%;
+
+      .chart-container {
+        height: 40%;
+        max-height: 40%;
+      }
+
+      .chart-container {
         height: 100%;
         max-height: 100%;
 
@@ -291,21 +308,46 @@ export default {
           height: 100%;
           max-height: 100%;
 
-          > .france_container {
-            height: 80%;
-            max-height: 80%;
+          > .chart {
+            max-height: 100%;
+            height: 100%;
 
-            .svg {
-              max-height: 80%;
-              margin-left: 0;
-              margin-right: 0;
+            canvas {
+              height: 100%;
+              max-height: 100%;
             }
           }
         }
+      }
 
-        .om_container {
-          svg {
-            max-height: 30%;
+      .map-container {
+        height: 65%;
+        max-height: 65%;
+
+        > div {
+          height: 100%;
+          max-height: 100%;
+
+          > div {
+            height: 100%;
+            max-height: 100%;
+
+            > .france_container {
+              height: 80%;
+              max-height: 80%;
+
+              .svg {
+                max-height: 80%;
+                margin-left: 0;
+                margin-right: 0;
+              }
+            }
+          }
+
+          .om_container {
+            svg {
+              max-height: 30%;
+            }
           }
         }
       }
