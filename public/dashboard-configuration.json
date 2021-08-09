@@ -294,7 +294,7 @@
                         "Nom_indicateur_propilot": "Nombre de fonds labellisés – GFP3",
                         "Unité_indicateur": "# Fonds",
                         "Indicateur_principal": "1",
-                        "Unité_GP": "fonds",
+                        "Unité_GP": "euros",
                         "Lien_open_source": "nan"
                     }
                 ]
@@ -311,7 +311,7 @@
                         "Nom_indicateur_propilot": "Montant des fonds labellisés – GFP4",
                         "Unité_indicateur": "Euros",
                         "Indicateur_principal": "1",
-                        "Unité_GP": "euros",
+                        "Unité_GP": "fonds",
                         "Lien_open_source": "nan"
                     }
                 ]

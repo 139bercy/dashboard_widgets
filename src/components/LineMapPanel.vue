@@ -1,8 +1,10 @@
 <template>
-  <div class="line-map-panel" :class="{'panel-full-page-lg': $screen.breakpoint === 'lg'}">
+  <div class="line-map-panel" :class="{'panel-full-page-lg': $screen.breakpoint === 'lg', 'only-chart' : this.indicateur_data && !this.indicateur_data.departements}">
     <div v-if="indicateur_data && !loading" class="fr-grid-row">
       <left-col class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColProps"
-                v-if="$screen.breakpoint === 'lg'"></left-col>
+                v-if="$screen.breakpoint === 'lg' && this.indicateur_data && this.indicateur_data.departements"></left-col>
+      <left-col class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColPropsNotLargeChart"
+                v-if="$screen.breakpoint === 'lg' && this.indicateur_data && !this.indicateur_data.departements"></left-col>
       <left-col class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColPropsNotLargeChart"
                 v-if="$screen.breakpoint !== 'lg'"></left-col>
       <div class="container fr-col-12 fr-col-lg-9" v-if="onglet.indicateurs.length > 0 && onglet.Graph">
@@ -30,11 +32,11 @@
             :left-col="false"
             :bottom-col="false"
             :DOMTOMBottom="true"
-            v-if="onglet.Carte && indicateur_data">
+            v-if="onglet.Carte && indicateur_data && this.indicateur_data.departements">
         </map-chart>
       </div>
       <left-col class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColPropsNotLargeMap"
-                v-if="$screen.breakpoint !== 'lg'"></left-col>
+                v-if="$screen.breakpoint !== 'lg' && this.indicateur_data && this.indicateur_data.departements"></left-col>
     </div>
     <div v-else-if="loading">
       Récupération des données en cours
@@ -152,20 +154,18 @@ export default {
       })
     },
     updateData() {
-      if (this.indicateur_data === null || this.indicateur_data.departements === null) {
+      if (this.indicateur_data === null) {
         return;
       }
-
-      // Gestion de la légende de la map
-      const values = []
-      this.indicateur_data.departements.forEach(function (d) {
-        if (d !== null && d.last_value !== null) {
-          values.push(parseInt(d.last_value))
-        }
-      })
-
-      this.leftColProps.min = Math.min.apply(null, values)
-      this.leftColProps.max = Math.max.apply(null, values)
+      this.updateDataForLegend()
+      if (this.indicateur_data.departements !== null) {
+        this.updateDataForLegendMap();
+      }
+    },
+    updateDataForLegend() {
+      if (this.indicateur_data === null) {
+        return;
+      }
 
       this.leftColProps.localisation = this.selectedGeoLabel
 
@@ -226,6 +226,22 @@ export default {
           self.dataset2.push(correspondingValue.value)
         }
       })
+    },
+    updateDataForLegendMap() {
+      if (this.indicateur_data === null || this.indicateur_data.departements === null) {
+        return;
+      }
+
+      // Gestion de la légende de la map
+      const values = []
+      this.indicateur_data.departements.forEach(function (d) {
+        if (d !== null && d.last_value !== null) {
+          values.push(parseInt(d.last_value))
+        }
+      })
+
+      this.leftColProps.min = Math.min.apply(null, values)
+      this.leftColProps.max = Math.max.apply(null, values)
     }
   },
   created() {
@@ -245,7 +261,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-  .panel-full-page-lg {
+  .panel-full-page-lg:not(.only-chart) {
     height: 100%;
     max-height: 100%;
 
@@ -306,6 +322,40 @@ export default {
         .om_container {
           svg {
             max-height: 30%;
+          }
+        }
+      }
+    }
+  }
+  .panel-full-page-lg.only-chart {
+    height: 100%;
+    max-height: 100%;
+
+    > div {
+      height: 100%;
+      max-height: 100%;
+    }
+
+    .container {
+      height: 100%;
+      max-height: 100%;
+    }
+
+    .chart-container {
+      height: 100%;
+      max-height: 100%;
+
+      > div {
+        height: 100%;
+        max-height: 100%;
+
+        > .chart {
+          max-height: 100%;
+          height: 100%;
+
+          canvas {
+            height: 100%;
+            max-height: 100%;
           }
         }
       }
