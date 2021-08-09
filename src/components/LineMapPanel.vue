@@ -270,14 +270,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
   .panel-full-page-lg {
-    &.only-chart {
-      height: 65%;
-      max-height: 65%;
-    }
-    &:not(.only-chart) {
-      height: 100%;
-      max-height: 100%;
-    }
 
     > div {
       height: 100%;
@@ -289,31 +281,26 @@ export default {
       max-height: 100%;
     }
 
-    .chart-container {
-      height: 40%;
-      max-height: 40%;
-
-      > div {
-        height: 100%;
-        max-height: 100%;
-
-        > .chart {
-          max-height: 100%;
-          height: 100%;
-
-          canvas {
-            height: 100%;
-            max-height: 100%;
-          }
-        }
-      }
-    }
-
-    .map-container {
+    &.only-chart {
       height: 65%;
       max-height: 65%;
 
-      > div {
+      .chart-container {
+        height: 100%;
+        max-height: 100%;
+      }
+    }
+
+    &:not(.only-chart) {
+      height: 100%;
+      max-height: 100%;
+
+      .chart-container {
+        height: 40%;
+        max-height: 40%;
+      }
+
+      .chart-container {
         height: 100%;
         max-height: 100%;
 
@@ -321,21 +308,46 @@ export default {
           height: 100%;
           max-height: 100%;
 
-          > .france_container {
-            height: 80%;
-            max-height: 80%;
+          > .chart {
+            max-height: 100%;
+            height: 100%;
 
-            .svg {
-              max-height: 80%;
-              margin-left: 0;
-              margin-right: 0;
+            canvas {
+              height: 100%;
+              max-height: 100%;
             }
           }
         }
+      }
 
-        .om_container {
-          svg {
-            max-height: 30%;
+      .map-container {
+        height: 65%;
+        max-height: 65%;
+
+        > div {
+          height: 100%;
+          max-height: 100%;
+
+          > div {
+            height: 100%;
+            max-height: 100%;
+
+            > .france_container {
+              height: 80%;
+              max-height: 80%;
+
+              .svg {
+                max-height: 80%;
+                margin-left: 0;
+                margin-right: 0;
+              }
+            }
+          }
+
+          .om_container {
+            svg {
+              max-height: 30%;
+            }
           }
         }
       }

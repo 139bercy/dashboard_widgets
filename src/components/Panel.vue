@@ -91,32 +91,34 @@ export default {
 
   // Gestion du positionnement sur grand écran (breakpoint lg)
   @media (min-width: 62em) {
-  .full-page-lg {
-    // height: 97vh;
-    max-height: 97vh;
-    overflow: hidden;
+    .full-page-lg {
+      &:not:has(.only-chart) {
+        height: 97vh;
+        max-height: 97vh;
+        overflow: hidden;
+      }
 
-    & > .fr-tabs {
-      // height: calc(100% - 60px);
-      max-height: calc(100% - 60px);
+      &:has(.only-chart) {
+        height: 65vh;
+        max-height: 65vh;
+        overflow: hidden;
+      }
 
-      .fr-tabs__panel--selected {
-        // height: calc(100% - 60px);
+      & > .fr-tabs {
+        height: calc(100% - 60px);
         max-height: calc(100% - 60px);
 
-        > div {
-          // height: 100%;
-          max-height: 100%;
+        .fr-tabs__panel--selected {
+          height: calc(100% - 60px);
+          max-height: calc(100% - 60px);
 
           > div {
-            // height: 100%;
-            // max-height: 100%;
+            height: 100%;
+            max-height: 100%;
           }
         }
       }
     }
-  }
-
   }
   // Gestion de la bordure autour d'un panel
   .fr-tabs {
