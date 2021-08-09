@@ -163,10 +163,11 @@ export default {
       }
     },
     updateDataForLegend() {
+      const self = this
       if (this.indicateur_data === null) {
         return;
       }
-
+      let oldLocalisation = this.leftColProps.localisation
       this.leftColProps.localisation = this.selectedGeoLabel
 
       const geolevel = this.selectedGeoLevel
@@ -175,11 +176,12 @@ export default {
       let geoObject
       let geoObject2
 
-      if (geolevel === 'France') {
+      if (geolevel === 'France' || !this.indicateur_data[geolevel]) {
         geoObject = this.indicateur_data.france[0]
         if (this.indicateur_data2) {
           geoObject2 = this.indicateur_data2.france[0]
         }
+        this.leftColProps.localisation = oldLocalisation ?? this.leftColProps.localisation
       } else {
         geoObject = this.indicateur_data[geolevel].find(obj => {
           return obj.code_level === geocode
@@ -208,22 +210,28 @@ export default {
         this.leftColProps.currentValues.push(geoObject2.last_value)
       }
       this.leftColProps.currentDate = this.convertDateToHuman(geoObject.last_date)
-      this.leftColProps.evolcodes.push(geoObject.evol_color, geoObject2.evol_color)
-      this.leftColProps.evolvalues.push(geoObject.evol_percentage, geoObject2.evol_percentage)
+      this.leftColProps.evolcodes.push(geoObject.evol_color)
+      this.leftColProps.evolvalues.push(geoObject.evol_percentage)
+      if (geoObject2) {
+        this.leftColProps.evolcodes.push(geoObject2.evol_color)
+        this.leftColProps.evolvalues.push(geoObject2.evol_percentage)
+      }
 
-      this.labels.length = 0
-      this.dataset.length = 0
-      this.dataset2.length = 0
+      this.labels = []
+      this.dataset = []
+      this.dataset2 = []
 
       geoObject.values.forEach(function (d) {
         self.labels.push(self.convertDateToHuman(d.date))
         self.dataset.push((d.value))
 
-        const correspondingValue = geoObject2.values.find(obj => {
-          return obj.date === d.date
-        })
-        if (correspondingValue) {
-          self.dataset2.push(correspondingValue.value)
+        if (geoObject2) {
+          const correspondingValue = geoObject2.values.find(obj => {
+            return obj.date === d.date
+          })
+          if (correspondingValue) {
+            self.dataset2.push(correspondingValue.value)
+          }
         }
       })
     },
@@ -261,9 +269,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-  .panel-full-page-lg:not(.only-chart) {
-    height: 100%;
-    max-height: 100%;
+  .panel-full-page-lg {
+    &.only-chart {
+      height: 65%;
+      max-height: 65%;
+    }
+    &:not(.only-chart) {
+      height: 100%;
+      max-height: 100%;
+    }
 
     > div {
       height: 100%;
@@ -322,40 +336,6 @@ export default {
         .om_container {
           svg {
             max-height: 30%;
-          }
-        }
-      }
-    }
-  }
-  .panel-full-page-lg.only-chart {
-    height: 100%;
-    max-height: 100%;
-
-    > div {
-      height: 100%;
-      max-height: 100%;
-    }
-
-    .container {
-      height: 100%;
-      max-height: 100%;
-    }
-
-    .chart-container {
-      height: 100%;
-      max-height: 100%;
-
-      > div {
-        height: 100%;
-        max-height: 100%;
-
-        > .chart {
-          max-height: 100%;
-          height: 100%;
-
-          canvas {
-            height: 100%;
-            max-height: 100%;
           }
         }
       }

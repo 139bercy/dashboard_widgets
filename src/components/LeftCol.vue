@@ -7,11 +7,12 @@
           <p class="flex fr-text--sm fr-text--bold fr-my-0">
             <svg width="16" height="16" viewBox="0 0 16 16"><path d="M12.243 2.424c2.343 2.343 2.343 6.142 0 8.485L8 15.152l-4.243-4.243c-2.343-2.343-2.343-6.142 0-8.485C6.101.081 9.9.081 12.243 2.424zM4.7 3.367c-1.822 1.822-1.822 4.777 0 6.6l3.3 3.3 3.3-3.3c1.822-1.823 1.822-4.778 0-6.6-1.823-1.822-4.777-1.822-6.6 0zM8 5.333c.736 0 1.333.597 1.333 1.334C9.333 7.403 8.736 8 8 8s-1.333-.597-1.333-1.333c0-.737.597-1.334 1.333-1.334z" transform="translate(-550 -5417) translate(527 5237) translate(0 124) translate(23 56)"/></svg>
             <span class="fr-ml-1v">{{localisation}}</span>
+
+           <span style="top: 40px;right: 10px;" :class="{'position-absolute' : $screen.breakpoint !== 'lg'}">
+             <img src="Logo-France-Relance.png" alt="logo France-Relance" width="60px"/>
+           </span>
           </p>
           <p class="l_box_title fr-text--xs fr-mb-1w">Mise à jour : {{date}}</p>
-          <div v-if="$screen.breakpoint !== 'lg'" style="position: absolute;top: 40px;right: 10px;">
-            <img src="Logo-France-Relance.png" alt="logo France-Relance" width="80px"/>
-          </div>
         </div>
         <div class="sep fr-my-4w fr-my-md-3w" v-if="currentValues"></div>
         <div data-box="number" v-if="currentValues">
@@ -46,9 +47,6 @@
             <span class="min fr-text--sm fr-text--bold fr-mb-0">{{convertFloatToHuman(min)}}</span>
             <span class="max fr-text--sm fr-text--bold fr-mb-0">{{convertFloatToHuman(max)}}</span>
           </div>
-        </div>
-        <div v-if="$screen.breakpoint === 'lg'" style="position: absolute;bottom: -30px;">
-          <img src="Logo-France-Relance.png" alt="logo France-Relance" width="100px"/>
         </div>
     </div>
 </template>
@@ -219,6 +217,10 @@ export default {
         justify-content: unset;
       }
     }
+  }
+
+  .position-absolute {
+    position: absolute
   }
 
 </style>

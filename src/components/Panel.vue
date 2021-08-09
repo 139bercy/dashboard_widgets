@@ -92,25 +92,25 @@ export default {
   // Gestion du positionnement sur grand écran (breakpoint lg)
   @media (min-width: 62em) {
   .full-page-lg {
-    height: 97vh;
+    // height: 97vh;
     max-height: 97vh;
     overflow: hidden;
 
     & > .fr-tabs {
-      height: calc(100% - 60px);
+      // height: calc(100% - 60px);
       max-height: calc(100% - 60px);
 
       .fr-tabs__panel--selected {
-        height: calc(100% - 60px);
+        // height: calc(100% - 60px);
         max-height: calc(100% - 60px);
 
         > div {
-          height: 100%;
+          // height: 100%;
           max-height: 100%;
 
           > div {
-            height: 100%;
-            max-height: 100%;
+            // height: 100%;
+            // max-height: 100%;
           }
         }
       }
