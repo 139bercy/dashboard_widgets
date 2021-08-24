@@ -18,6 +18,7 @@ import PageContent from './components/PageContent'
 import MenuContent from './components/MenuContent'
 
 import vueCustomElement from 'vue-custom-element'
+import iframeResizer from "./iframeResizer.contentWindow.min.js"
 
 Vue.use(VueScreen, {
   sm: '36em',
@@ -28,7 +29,7 @@ Vue.use(VueScreen, {
 // Vue.use(VueScrollactive)
 Vue.component('scrollactive', Scrollactive)
 
-
+Vue.use(iframeResizer)
 Vue.use(getData(store))
 
 Vue.config.productionTip = false
