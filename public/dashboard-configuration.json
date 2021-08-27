@@ -318,6 +318,7 @@
             }
         ]
     },
+
     {
         "Lien_page_mesure": "https://www.bpifrance.fr/A-la-une/Appels-a-projets-concours/Appel-a-projets-Plan-de-relance-pour-l-industrie-Secteurs-strategiques-volet-national-50697",
         "Nom_mesure_GP": "Soutien aux projets industriels dans 5 secteurs critiques",
@@ -666,6 +667,23 @@
                         "Unité_GP": "contrats",
                         "Lien_open_source": "nan"
                     },
+                    {
+                        "Nom_mesure_propilot": "Garantie jeunes",
+                        "Nom_indicateur_propilot": "Entrées en garanties jeunes – GJE1",
+                        "Unité_indicateur": "# Entrées",
+                        "Indicateur_principal": "0",
+                        "Unité_GP": "contrats",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            },
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Garantie jeunes",
+                "Description_mesure": "Elles visent à faciliter l'entrée dans la vie professionnelle des jeunes particulièrement touchés par les conséquences de la crise sanitaire.",
+                "Nom_indicateur_GP_long": "Nombre d'entrées en garanties pour les jeunes ",
+                "indicateurs": [
                     {
                         "Nom_mesure_propilot": "Garantie jeunes",
                         "Nom_indicateur_propilot": "Entrées en garanties jeunes – GJE1",
