@@ -666,14 +666,6 @@
                         "Indicateur_principal": "1",
                         "Unité_GP": "contrats",
                         "Lien_open_source": "nan"
-                    },
-                    {
-                        "Nom_mesure_propilot": "Garantie jeunes",
-                        "Nom_indicateur_propilot": "Entrées en garanties jeunes – GJE1",
-                        "Unité_indicateur": "# Entrées",
-                        "Indicateur_principal": "0",
-                        "Unité_GP": "contrats",
-                        "Lien_open_source": "nan"
                     }
                 ]
             },
