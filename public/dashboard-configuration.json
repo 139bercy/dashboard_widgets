@@ -319,31 +319,6 @@
         ]
     },
     {
-        "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/profils/entreprises/preservation-emploi-recherche-developpement",
-        "Nom_mesure_GP": "Préservation de l’emploi recherche & développement",
-        "Volet": "Compétitivité",
-        "source": "Ministère de l’Enseignement supérieur, de la Recherche et de l’Innovation ",
-        "onglets": [
-            {
-                "Carte": "true",
-                "Graph": "true",
-                "Nom_indicateur_GP": "Chercheurs aidés",
-                "Description_mesure": "La mesure Préservation de l’emploi dans la Recherche et le Développement (R&D) vise à maintenir et relancer la R&D dans les entreprises afin de préserver les compétences, les emplois et la compétitivité des entreprises françaises. L’État soutien le maintien en emploi de personnels de R&D dans des laboratoires privé et publics. Une enveloppe est en particulier dédiée à la prise en charge de jeunes diplômés ou docteurs dont les embauches ont été retardées ou mises en causes lors de la crise. ",
-                "Nom_indicateur_GP_long": "Nombre total de chercheurs bénéficiaires des mesures",
-                "indicateurs": [
-                    {
-                        "Nom_mesure_propilot": "Préservation de l’emploi de R&D",
-                        "Nom_indicateur_propilot": "Nombre de chercheurs bénéficiaires de la mesure – ERD1",
-                        "Unité_indicateur": "# Chercheurs",
-                        "Indicateur_principal": "1",
-                        "Unité_GP": "emplois",
-                        "Lien_open_source": "nan"
-                    }
-                ]
-            }
-        ]
-    },
-    {
         "Lien_page_mesure": "https://www.bpifrance.fr/A-la-une/Appels-a-projets-concours/Appel-a-projets-Plan-de-relance-pour-l-industrie-Secteurs-strategiques-volet-national-50697",
         "Nom_mesure_GP": "Soutien aux projets industriels dans 5 secteurs critiques",
         "Volet": "Compétitivité",
