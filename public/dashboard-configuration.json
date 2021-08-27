@@ -672,12 +672,12 @@
             {
                 "Carte": "true",
                 "Graph": "true",
-                "Nom_indicateur_GP": "Garantie jeunes",
+                "Nom_indicateur_GP": "Garanties jeunes",
                 "Description_mesure": "Elles visent à faciliter l'entrée dans la vie professionnelle des jeunes particulièrement touchés par les conséquences de la crise sanitaire.",
                 "Nom_indicateur_GP_long": "Nombre d'entrées en garanties pour les jeunes ",
                 "indicateurs": [
                     {
-                        "Nom_mesure_propilot": "Garantie jeunes",
+                        "Nom_mesure_propilot": "Garanties jeunes",
                         "Nom_indicateur_propilot": "Entrées en garanties jeunes – GJE1",
                         "Unité_indicateur": "# Entrées",
                         "Indicateur_principal": "0",
