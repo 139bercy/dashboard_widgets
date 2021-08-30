@@ -27,6 +27,7 @@ export const toJsonNameFormat = (nomPropilot) => {
     .replaceAll('&', '_')
     .replaceAll('"', '')
     .replaceAll('’', '')
+    .replaceAll('\'', '')
 }
 
 export const testIfNaN = function (float) {
