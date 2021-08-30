@@ -10,13 +10,13 @@
                 "Graph": "true",
                 "Nom_indicateur_GP": "Bâtiments de l'État",
                 "Description_mesure": "Le parc de l'État représentant près de 100 millions de m², et la consommation des bâtiments un quart des émissions de gaz à effet de serre en France, le Gouvernement a souhaité que les bâtiments publics prennent part, de manière substantielle, à l'effort national de rénovation énergétique. « France Relance » retient un important programme de rénovation énergétique des bâtiments publics pour un montant de 4 milliards d'euros dont 300 millions seront délégués aux régions visant à réduire l'empreinte énergétique des bâtiments publics, soutenir le secteur de la construction au niveau local et moderniser les lieux de vie collectifs au bénéfice des usagers et des agents.",
-                "Nom_indicateur_GP_long": "Nombre de bâtiments d’état dont un marché de rénovation est notifié",
+                "Nom_indicateur_GP_long": "Nombre de bâtiments de l’État dont un marché de rénovation est notifié",
                 "indicateurs": [
                     {
                         "Code_indicateur": "RBE1",
                         "Nom_mesure_propilot": "Rénovation bâtiments Etats",
                         "Nom_indicateur_propilot": "Nombre de bâtiments Etat dont le marché de rénovation est notifié - RBE1",
-                        "Nom_indicateur_GP_long": "Nombre de bâtiments d’état dont un marché de rénovation est notifié",
+                        "Nom_indicateur_GP_long": "Nombre de bâtiments de l’État dont un marché de rénovation est notifié",
                         "Unité_indicateur": "# Bâtiments",
                         "Indicateur_principal": "1",
                         "Unité_GP": "logements",
@@ -112,7 +112,7 @@
     },
     {
         "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/profils/entreprises/decarbonation-industrie",
-        "Nom_mesure_GP": "Décarbonation de l'industrie",
+        "Nom_mesure_GP": "Soutien à la chaleur bas carbone",
         "Volet": "Ecologie",
         "source": "Ministère de la Transition Ecologique",
         "onglets": [
@@ -120,7 +120,7 @@
                 "Carte": "true",
                 "Graph": "true",
                 "Nom_indicateur_GP": "Entreprises aidées",
-                "Description_mesure": "Le programme de décarbonation de l'industrie a pour objectif d'accompagner les entreprises industrielles dans l'investissement d'équipements et de procédés moins émetteurs de CO2. Deux dispositifs pour le soutien à l'investissement : un appel à projets pour l'efficacité énergétique et l'évolution des procédés, ainsi qu'un guichet pour l'efficacité énergétique sont mis en place dans le cadre du plan de relance. Un Appel à projets pour l'efficacité énergétique et l'évolution des procédés au service de la décarbonation de l'industrie (avec deux dispositifs, désormais clos), ainsi qu'un guichet de soutien à l'investissement pour les projets d'amélioration de l'efficacité énergétique à destination des entreprises industrielles soutenant des projets d'investissements inférieurs à 3 M€ visant la réduction de la consommation d'énergie et la décarbonation en leur apportant une aide sous forme de subvention.",
+                "Description_mesure": "La décarbonation de l’industrie a pour objectif d’accompagner les entreprises industrielles dans l’utilisation de sources de chaleur moins émettrices de CO2 comme la biomasse ou les Combustibles Solides de Récupération (CSR).",
                 "Nom_indicateur_GP_long": "Nombre d'entreprises ayant reçu l'aide",
                 "indicateurs": [
                     {
@@ -147,6 +147,52 @@
                         "Nom_mesure_propilot": "Décarbonation de l'industrie (Appel à projets EE + Guichet EE + Chaleur bas carbone) ",
                         "Nom_indicateur_propilot": "Montant cumulé de l'investissement total ainsi déclenché - CBC2",
                         "Nom_indicateur_GP_long": "Montant cumulé de l'investissement total ainsi déclenché",
+                        "Unité_indicateur": "Euros",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "euros",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "nan",
+        "Nom_mesure_GP": "Décarbonation de l'industrie",
+        "Volet": "Ecologie",
+        "source": "Ministère de la Transition Ecologique",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Investissement déclenché",
+                "Description_mesure": "nan",
+                "Nom_indicateur_GP_long": "Nombre d’entreprises ayant reçu l’aide",
+                "indicateurs": [
+                    {
+                        "Code_indicateur": "PEE3",
+                        "Nom_mesure_propilot": "Décarbonation de l'industrie (Appel à projets EE + Guichet EE + Chaleur bas carbone) ",
+                        "Nom_indicateur_propilot": "Nombre d’entreprises ayant reçu l’aide – PEE3",
+                        "Nom_indicateur_GP_long": "Nombre d’entreprises ayant reçu l’aide",
+                        "Unité_indicateur": "# Entreprises",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "entreprises",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            },
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Nom_indicateur_GP": "Entreprises aidées",
+                "Description_mesure": "Le programme de décarbonation de l'industrie a pour objectif d'accompagner les entreprises industrielles dans l'investissement d'équipements et de procédés moins émetteurs de CO2.",
+                "Nom_indicateur_GP_long": "Montant cumulé de l’investissement total ainsi déclenché",
+                "indicateurs": [
+                    {
+                        "Code_indicateur": "PEE2",
+                        "Nom_mesure_propilot": "nan",
+                        "Nom_indicateur_propilot": "Montant cumulé de l’investissement total ainsi déclenché – PEE2",
+                        "Nom_indicateur_GP_long": "Montant cumulé de l’investissement total ainsi déclenché",
                         "Unité_indicateur": "Euros",
                         "Indicateur_principal": "1",
                         "Unité_GP": "euros",
