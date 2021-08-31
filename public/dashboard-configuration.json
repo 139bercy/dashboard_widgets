@@ -381,13 +381,13 @@
                 "Nom_indicateur_GP_long": "Nombre de fonds labellisés",
                 "indicateurs": [
                     {
-                        "Code_indicateur": "GFP3",
+                        "Code_indicateur": "GFP4",
                         "Nom_mesure_propilot": "Label relance",
-                        "Nom_indicateur_propilot": "Nombre de fonds labellisés - GFP3",
+                        "Nom_indicateur_propilot": "Nombre de fonds labellisés – GFP4",
                         "Nom_indicateur_GP_long": "Nombre de fonds labellisés",
                         "Unité_indicateur": "# Fonds",
                         "Indicateur_principal": "1",
-                        "Unité_GP": "euros",
+                        "Unité_GP": "fonds",
                         "Lien_open_source": "nan"
                     }
                 ]
@@ -400,13 +400,13 @@
                 "Nom_indicateur_GP_long": "Montant des fonds labellisés",
                 "indicateurs": [
                     {
-                        "Code_indicateur": "GFP4",
+                        "Code_indicateur": "GFP3",
                         "Nom_mesure_propilot": "Label relance",
-                        "Nom_indicateur_propilot": "Montant des fonds labellisés - GFP4",
+                        "Nom_indicateur_propilot": "Montant des fonds labellisés – GFP3",
                         "Nom_indicateur_GP_long": "Montant des fonds labellisés",
                         "Unité_indicateur": "Euros",
                         "Indicateur_principal": "1",
-                        "Unité_GP": "fonds",
+                        "Unité_GP": "euros",
                         "Lien_open_source": "nan"
                     }
                 ]
