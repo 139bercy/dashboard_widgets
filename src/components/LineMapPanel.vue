@@ -11,7 +11,7 @@
         <line-chart
             class="chart-container"
             interpolation="monotone"
-            :indicateur="indicateurName1"
+            :indicateur="indicateurCode1"
             :top-col="false"
             :left-col="false"
             v-if="indicateur_data && !indicateur_data2">
@@ -19,15 +19,15 @@
         <multi-line-chart
             class="chart-container"
             interpolation="monotone"
-            :indicateur1="indicateurName1"
-            :indicateur2="indicateurName2"
+            :indicateur1="indicateurCode1"
+            :indicateur2="indicateurCode2"
             :top-col="false"
             :left-col="false"
             v-if="indicateur_data2">
         </multi-line-chart>
         <map-chart
             class="map-container fr-col-12"
-            :indicateur="indicateurName1"
+            :indicateur="indicateurCode1"
             :top-col="false"
             :left-col="false"
             :bottom-col="false"
@@ -104,11 +104,17 @@ export default {
     selectedGeoLabel() {
       return store.state.user.selectedGeoLabel
     },
+    indicateurCode1() {
+      return this.onglet.indicateurs[0].Code_indicateur
+    },
+    indicateurCode2() {
+      return this.onglet.indicateurs[1].Code_indicateur
+    },
     indicateurName1() {
-      return this.onglet.indicateurs[0].Nom_indicateur_propilot
+      return this.onglet.indicateurs[0].Nom_indicateur_GP_long
     },
     indicateurName2() {
-      return this.onglet.indicateurs[1].Nom_indicateur_propilot
+      return this.onglet.indicateurs[1].Nom_indicateur_GP_long
     },
     leftColPropsNotLargeChart() {
       return {
@@ -133,13 +139,13 @@ export default {
   methods: {
     async getData() {
       this.loading = true
-      const promise1 = store.dispatch('getData', this.indicateurName1).then(data => {
+      const promise1 = store.dispatch('getData', this.indicateurCode1).then(data => {
         this.indicateur_data = data
       })
 
       let promise2;
       if (this.onglet.indicateurs.length === 2) {
-        promise2 = store.dispatch('getData', this.indicateurName2).then(data => {
+        promise2 = store.dispatch('getData', this.indicateurCode2).then(data => {
           this.indicateur_data2 = data
         })
       } else {
@@ -201,11 +207,11 @@ export default {
       this.leftColProps.evolcodes = []
       this.leftColProps.evolvalues = []
 
-      this.leftColProps.names.push(this.indicateur_data.nom)
+      this.leftColProps.names.push(this.indicateurName1)
       this.leftColProps.units.push(this.onglet.indicateurs[0]["Unité_GP"])
       this.leftColProps.currentValues.push(geoObject.last_value)
       if (this.indicateur_data2) {
-        this.leftColProps.names.push(this.indicateur_data2.nom)
+        this.leftColProps.names.push(this.indicateurName2)
         this.leftColProps.units.push(this.onglet.indicateurs[1]["Unité_GP"])
         this.leftColProps.currentValues.push(geoObject2.last_value)
       }

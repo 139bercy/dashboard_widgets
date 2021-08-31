@@ -22,8 +22,10 @@ def convert_excel_to_json(path):
         "Nom_indicateur_GP_long"
     ]
     indicateur_properties = [
+        "Code_indicateur",
         "Nom_mesure_propilot",
         "Nom_indicateur_propilot",
+        "Nom_indicateur_GP_long",
         "Unité_indicateur",
         "Indicateur_principal",
         "Unité_GP",
