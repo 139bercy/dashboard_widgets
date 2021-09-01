@@ -1,6 +1,6 @@
 <template>
   <div :id="'panel_' + toJsonNameFormat(Nom_mesure_GP)" class="panel">
-    <div :class="{'full-page-lg': $screen.breakpoint === 'lg'}">
+    <div :class="{'full-page-lg': $screen.breakpoint === 'lg', 'only-chart': carte === 'false'}">
       <div class="lvl2-header fr-px-2w fr-px-md-3w fr-pt-3w">
         <h3>{{ Nom_mesure_GP }}</h3>
       </div>
@@ -18,7 +18,7 @@
           </li>
         </ul>
 
-        <div :id="'tabpanel-' + currentIndexOnglet + '-panel'"
+        <div :id="'tabpanel-' + indexOnglet + '-panel'"
              class="fr-tabs__panel fr-pt-2w fr-mt-3w"
              :class="{'fr-tabs__panel--selected' : currentOnglet.indicateurs.length > 0 && currentOnglet.Graph && currentOnglet === onglet}"
              v-for="(onglet, indexOnglet) in onglets" :key="indexOnglet"
@@ -76,9 +76,13 @@ export default {
   },
   data() {
     return {
-      currentIndexOnglet: 0,
       currentOnglet: this.onglets[0],
       accordionOpened: false
+    }
+  },
+  computed: {
+    carte() {
+      return this.currentOnglet.Carte
     }
   },
   methods: {}
@@ -92,15 +96,15 @@ export default {
   // Gestion du positionnement sur grand écran (breakpoint lg)
   @media (min-width: 62em) {
     .full-page-lg {
-      &:not:has(.only-chart) {
+      &:not(.only-chart) {
         height: 97vh;
         max-height: 97vh;
         overflow: hidden;
       }
 
-      &:has(.only-chart) {
-        height: 65vh;
-        max-height: 65vh;
+      &.only-chart {
+        height: 45vh;
+        max-height: 45vh;
         overflow: hidden;
       }
 

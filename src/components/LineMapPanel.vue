@@ -296,10 +296,9 @@ export default {
         max-height: 100%;
       }
     }
-
     &:not(.only-chart) {
-      height: 100%;
-      max-height: 100%;
+      // height: 100%;
+      // max-height: 100%;
 
       .chart-container {
         height: 40%;

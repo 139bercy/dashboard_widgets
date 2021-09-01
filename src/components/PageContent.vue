@@ -7,8 +7,16 @@
       </div>
       <div class="fr-col-12 fr-col-md-7 fr-col-lg-7 fr-ml-md-6w fr-mb-6w">
 
-        <p class="fr-text fr-mt-2w fr-mb-0 ">
-          Avec France Relance, l’Etat investit 100 Md€ pour accélérer la transition écologique, renforcer la compétitivité des entreprises et des territoires et renforcer la cohésion sociale et territoriale. Retrouvez ici chaque mois, par département, l'état d'avancement du déploiement des mesures phares de France Relance.
+        <p>
+          Le plan France Relance s’inscrit en cohérence avec la politique économique menée depuis 2017 par le Gouvernement et sans discontinuité malgré la crise. Ce plan d’investissements de 100 Mds€ doit permettre d’accélérer la transition écologique de notre économie, de renforcer notre compétitivité et d’opérer une reconquête industrielles, tout en soutenant l’emploi et les compétences, notamment des jeunes, et le développement de tous les territoires.  Il est ainsi structuré selon trois axes (écologie, compétitivité et cohésion).
+        </p>
+
+        <p>
+          Les mesures de France Relance ont déjà été largement déployées depuis le lancement du plan en septembre 2020 et produisent leurs effets. Afin de garantir une transparence sur la mise en œuvre de France Relance, le ministère de l’Économie, des Finances et de la Relance publie [un tableau de bord synthétique / un outil de visualisation du déploiement du plan].
+        </p>
+
+        <p>
+          Ce tableau de bord met en lumière 18 mesures de France Relance. Il sera mis à jour mensuellement.
         </p>
 
         <div v-for="(panneau, index) in panneaux" :key="index">

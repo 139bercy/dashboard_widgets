@@ -19,7 +19,7 @@
                         "Nom_indicateur_GP_long": "Nombre de bâtiments de l’État dont un marché de rénovation est notifié",
                         "Unité_indicateur": "# Bâtiments",
                         "Indicateur_principal": "1",
-                        "Unité_GP": "logements",
+                        "Unité_GP": "bâtiments",
                         "Lien_open_source": "nan"
                     }
                 ]
@@ -28,7 +28,7 @@
                 "Carte": "true",
                 "Graph": "true",
                 "Nom_indicateur_GP": "Bâtiments des collectivités",
-                "Description_mesure": "nan",
+                "Description_mesure": "Le parc de l'État représentant près de 100 millions de m², et la consommation des bâtiments un quart des émissions de gaz à effet de serre en France, le Gouvernement a souhaité que les bâtiments publics prennent part, de manière substantielle, à l'effort national de rénovation énergétique. « France Relance » retient un important programme de rénovation énergétique des bâtiments publics pour un montant de 4 milliards d'euros dont 300 millions seront délégués aux régions visant à réduire l'empreinte énergétique des bâtiments publics, soutenir le secteur de la construction au niveau local et moderniser les lieux de vie collectifs au bénéfice des usagers et des agents.",
                 "Nom_indicateur_GP_long": "Nombre de projets de collectivités locales soutenus",
                 "indicateurs": [
                     {
@@ -39,25 +39,6 @@
                         "Unité_indicateur": "# Projets",
                         "Indicateur_principal": "1",
                         "Unité_GP": "bâtiments",
-                        "Lien_open_source": "nan"
-                    }
-                ]
-            },
-            {
-                "Carte": "true",
-                "Graph": "true",
-                "Nom_indicateur_GP": "Projets soutenus",
-                "Description_mesure": "Créée dans le cadre de la loi de finances rectificative du 30 juillet 2020, la Dotation de Soutien à l'Investissement Locale (DSIL) Exceptionnelle a contribué au soutien de l'investissement dans les collectivités. Elle permet la réalisation d'opérations structurantes sur le territoire, prioritairement en matière de transition écologique, de résilience sanitaire et de rénovation du patrimoine.",
-                "Nom_indicateur_GP_long": "Nombre de projets des collectivités locales soutenus",
-                "indicateurs": [
-                    {
-                        "Code_indicateur": "SIL1",
-                        "Nom_mesure_propilot": "Soutien à l'investissement local (DSIL exceptionnelle)",
-                        "Nom_indicateur_propilot": "Nombre de projets des collectivités locales soutenus - SIL1",
-                        "Nom_indicateur_GP_long": "Nombre de projets des collectivités locales soutenus",
-                        "Unité_indicateur": "# Projets",
-                        "Indicateur_principal": "1",
-                        "Unité_GP": "projets",
                         "Lien_open_source": "nan"
                     }
                 ]
@@ -93,7 +74,7 @@
                 "Carte": "true",
                 "Graph": "true",
                 "Nom_indicateur_GP": "Budget dépensé",
-                "Description_mesure": "nan",
+                "Description_mesure": "MaPrimeRénov' permet de financer les travaux d'isolation, de chauffage, de ventilation ou d'audit énergétique d'une maison individuelle ou d'un appartement en habitat collectif. Les travaux doivent avoir été effectués par des entreprises labellisées RGE (reconnues garantes pour l'environnement). Le montant de la prime varie en fonction des matériaux et des équipements éligibles dans la limite d'un plafond de 20 000 € pour des travaux sur un logement et pendant une durée maximale de 5 ans.",
                 "Nom_indicateur_GP_long": "Montant moyen des travaux associés aux dossiers validés",
                 "indicateurs": [
                     {
@@ -120,7 +101,7 @@
                 "Carte": "true",
                 "Graph": "true",
                 "Nom_indicateur_GP": "Entreprises aidées",
-                "Description_mesure": "La décarbonation de l’industrie a pour objectif d’accompagner les entreprises industrielles dans l’utilisation de sources de chaleur moins émettrices de CO2 comme la biomasse ou les Combustibles Solides de Récupération (CSR).",
+                "Description_mesure": "Cette mesure a pour but de soutenir les technologies de production d'hydrogène renouvelable et bas carbone.",
                 "Nom_indicateur_GP_long": "Nombre d'entreprises ayant reçu l'aide",
                 "indicateurs": [
                     {
@@ -139,7 +120,7 @@
                 "Carte": "true",
                 "Graph": "true",
                 "Nom_indicateur_GP": "Investissement déclenché",
-                "Description_mesure": "nan",
+                "Description_mesure": "Cette mesure a pour but de soutenir les technologies de production d'hydrogène renouvelable et bas carbone.",
                 "Nom_indicateur_GP_long": "Montant cumulé de l'investissement total ainsi déclenché",
                 "indicateurs": [
                     {
@@ -166,7 +147,7 @@
                 "Carte": "true",
                 "Graph": "true",
                 "Nom_indicateur_GP": "Investissement déclenché",
-                "Description_mesure": "nan",
+                "Description_mesure": "La décarbonation de l’industrie a pour objectif d’accompagner les entreprises industrielles dans l’utilisation de sources de chaleur moins émettrices de CO2 comme la biomasse ou les Combustibles Solides de Récupération (CSR).",
                 "Nom_indicateur_GP_long": "Nombre d’entreprises ayant reçu l’aide",
                 "indicateurs": [
                     {
@@ -185,7 +166,7 @@
                 "Carte": "true",
                 "Graph": "true",
                 "Nom_indicateur_GP": "Entreprises aidées",
-                "Description_mesure": "Le programme de décarbonation de l'industrie a pour objectif d'accompagner les entreprises industrielles dans l'investissement d'équipements et de procédés moins émetteurs de CO2.",
+                "Description_mesure": "La décarbonation de l’industrie a pour objectif d’accompagner les entreprises industrielles dans l’utilisation de sources de chaleur moins émettrices de CO2 comme la biomasse ou les Combustibles Solides de Récupération (CSR).",
                 "Nom_indicateur_GP_long": "Montant cumulé de l’investissement total ainsi déclenché",
                 "indicateurs": [
                     {
@@ -374,7 +355,7 @@
         "source": "Ministère de l'Economie, des Finances et de la Relance",
         "onglets": [
             {
-                "Carte": "true",
+                "Carte": "false",
                 "Graph": "true",
                 "Nom_indicateur_GP": "Fonds labellisés",
                 "Description_mesure": "Le « label Relance » permet aux épargnants et investisseurs professionnels d'identifier les organismes de placement collectifs (OPC) apportant une réponse aux besoins de financement des entreprises françaises, cotés ou non, mobilisant ainsi l'épargne pour la relance. Le « label Relance » vient reconnaître les fonds qui s'engagent à mobiliser rapidement des ressources nouvelles pour soutenir les fonds propres et quasi-fonds propres des entreprises françaises (PME et ETI) cotés ou non. L'objectif est d'orienter l'épargne des épargnants et des investisseurs professionnels vers ces placements qui répondent aux besoins de financements de l'économie française consécutifs à la crise sanitaire. Les fonds labellisés doivent en outre respecter un ensemble de critères environnementaux, sociaux et de bonne gouvernance (ESG), incluant notamment l'interdiction du financement d'activités charbonnées et le suivi d'une note ou d'un indicateur ESG. ",
@@ -393,7 +374,7 @@
                 ]
             },
             {
-                "Carte": "true",
+                "Carte": "false",
                 "Graph": "true",
                 "Nom_indicateur_GP": "Montant labellisé",
                 "Description_mesure": "nan",
