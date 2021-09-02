@@ -18,27 +18,8 @@
                         "Nom_indicateur_propilot": "Nombre de bâtiments Etat dont le marché de rénovation est notifié - RBE1",
                         "Nom_indicateur_GP_long": "Nombre de bâtiments de l’État dont un marché de rénovation est notifié",
                         "Unité_indicateur": "# Bâtiments",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "logements",
-                        "Lien_open_source": "nan"
-                    }
-                ]
-            },
-            {
-                "Carte": "true",
-                "Graph": "true",
-                "Nom_indicateur_GP": "Bâtiments des collectivités",
-                "Description_mesure": "nan",
-                "Nom_indicateur_GP_long": "Nombre de projets de collectivités locales soutenus",
-                "indicateurs": [
-                    {
-                        "Code_indicateur": "RBC1",
-                        "Nom_mesure_propilot": "Rénovation bâtiments collectivités",
-                        "Nom_indicateur_propilot": "Nombre de projets de collectivités locales soutenus - RBC1",
-                        "Nom_indicateur_GP_long": "Nombre de projets de collectivités locales soutenus",
-                        "Unité_indicateur": "# Projets",
-                        "Indicateur_principal": "1",
-                        "Unité_GP": "bâtiments",
                         "Lien_open_source": "nan"
                     }
                 ]
@@ -56,7 +37,7 @@
                         "Nom_indicateur_propilot": "Nombre de projets des collectivités locales soutenus - SIL1",
                         "Nom_indicateur_GP_long": "Nombre de projets des collectivités locales soutenus",
                         "Unité_indicateur": "# Projets",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "projets",
                         "Lien_open_source": "nan"
                     }
@@ -83,7 +64,7 @@
                         "Nom_indicateur_propilot": "Nombre de dossiers MaPrimeRénov validés - MPR4",
                         "Nom_indicateur_GP_long": "Nombre de dossiers MaPrimeRénov validés",
                         "Unité_indicateur": "# Dossiers",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "logements",
                         "Lien_open_source": "nan"
                     }
@@ -92,17 +73,17 @@
             {
                 "Carte": "true",
                 "Graph": "true",
-                "Nom_indicateur_GP": "Budget dépensé",
+                "Nom_indicateur_GP": "Travaux associés",
                 "Description_mesure": "nan",
-                "Nom_indicateur_GP_long": "Montant moyen des travaux associés aux dossiers validés",
+                "Nom_indicateur_GP_long": "Montant des travaux associés aux dossiers validés",
                 "indicateurs": [
                     {
                         "Code_indicateur": "MPR2",
                         "Nom_mesure_propilot": "MaPrimeRénov'",
                         "Nom_indicateur_propilot": "Montant moyen des travaux associés aux dossiers validés - MPR2",
-                        "Nom_indicateur_GP_long": "Montant moyen des travaux associés aux dossiers validés",
+                        "Nom_indicateur_GP_long": "Montant des travaux associés aux dossiers validés",
                         "Unité_indicateur": "Euros",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "euros",
                         "Lien_open_source": "nan"
                     }
@@ -119,7 +100,7 @@
             {
                 "Carte": "true",
                 "Graph": "true",
-                "Nom_indicateur_GP": "Entreprises aidées",
+                "Nom_indicateur_GP": "Entreprises lauréates",
                 "Description_mesure": "La décarbonation de l’industrie a pour objectif d’accompagner les entreprises industrielles dans l’utilisation de sources de chaleur moins émettrices de CO2 comme la biomasse ou les Combustibles Solides de Récupération (CSR).",
                 "Nom_indicateur_GP_long": "Nombre d'entreprises ayant reçu l'aide",
                 "indicateurs": [
@@ -129,7 +110,7 @@
                         "Nom_indicateur_propilot": "Nombre d'entreprises ayant reçu l'aide - CBC3",
                         "Nom_indicateur_GP_long": "Nombre d'entreprises ayant reçu l'aide",
                         "Unité_indicateur": "# Entreprises",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "entreprises",
                         "Lien_open_source": "nan"
                     }
@@ -148,7 +129,7 @@
                         "Nom_indicateur_propilot": "Montant cumulé de l'investissement total ainsi déclenché - CBC2",
                         "Nom_indicateur_GP_long": "Montant cumulé de l'investissement total ainsi déclenché",
                         "Unité_indicateur": "Euros",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "euros",
                         "Lien_open_source": "nan"
                     }
@@ -175,7 +156,7 @@
                         "Nom_indicateur_propilot": "Nombre d’entreprises ayant reçu l’aide – PEE3",
                         "Nom_indicateur_GP_long": "Nombre d’entreprises ayant reçu l’aide",
                         "Unité_indicateur": "# Entreprises",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "entreprises",
                         "Lien_open_source": "nan"
                     }
@@ -184,7 +165,7 @@
             {
                 "Carte": "true",
                 "Graph": "true",
-                "Nom_indicateur_GP": "Entreprises aidées",
+                "Nom_indicateur_GP": "Entreprises lauréates",
                 "Description_mesure": "Le programme de décarbonation de l'industrie a pour objectif d'accompagner les entreprises industrielles dans l'investissement d'équipements et de procédés moins émetteurs de CO2.",
                 "Nom_indicateur_GP_long": "Montant cumulé de l’investissement total ainsi déclenché",
                 "indicateurs": [
@@ -194,7 +175,7 @@
                         "Nom_indicateur_propilot": "Montant cumulé de l’investissement total ainsi déclenché – PEE2",
                         "Nom_indicateur_GP_long": "Montant cumulé de l’investissement total ainsi déclenché",
                         "Unité_indicateur": "Euros",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "euros",
                         "Lien_open_source": "nan"
                     }
@@ -211,7 +192,7 @@
             {
                 "Carte": "true",
                 "Graph": "true",
-                "Nom_indicateur_GP": "Structures agricoles aidées",
+                "Nom_indicateur_GP": "Structures agricoles lauréates",
                 "Description_mesure": "La prime à la conversion des agroéquipements a permis à des agriculteurs de bénéficier matériels plus performants en matière environnementale, permettant une agriculture plus sobre en intrants (notamment en produits phytosanitaires) et en ressources (par exemple en eau). Cette mesure consiste en une aide à l'investissement pour le remplacement de matériels anciens et peu performants, notamment en matière environnementale.",
                 "Nom_indicateur_GP_long": "Nombre de structures agricoles bénéficiaires de la prime à la conversion des agroéquipements",
                 "indicateurs": [
@@ -221,7 +202,7 @@
                         "Nom_indicateur_propilot": "Nombre de structures agricoles bénéficiaires de la prime à la conversion des agroéquipements - AEA1",
                         "Nom_indicateur_GP_long": "Nombre de structures agricoles bénéficiaires de la prime à la conversion des agroéquipements",
                         "Unité_indicateur": "# Entreprises",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "structures",
                         "Lien_open_source": "nan"
                     }
@@ -248,7 +229,7 @@
                         "Nom_indicateur_propilot": "Nombre de primes à la conversion - DVP1",
                         "Nom_indicateur_GP_long": "Nombre de primes à la conversion",
                         "Unité_indicateur": "# Primes",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "primes",
                         "Lien_open_source": "nan"
                     }
@@ -267,7 +248,7 @@
                         "Nom_indicateur_propilot": "Nombre de bonus octroyés à des véhicules électriques et hybrides rechargeables - BOE1",
                         "Nom_indicateur_GP_long": "Nombre de bonus octroyés",
                         "Unité_indicateur": "# Primes",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "bonus",
                         "Lien_open_source": "nan"
                     }
@@ -294,7 +275,7 @@
                         "Nom_indicateur_propilot": "Nombre de projets soutenus - ETH2",
                         "Nom_indicateur_GP_long": "Nombre de projets soutenus",
                         "Unité_indicateur": "# Projets",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "projets",
                         "Lien_open_source": "nan"
                     }
@@ -313,7 +294,7 @@
                         "Nom_indicateur_propilot": "Montant total de CO2 évité - ETH1",
                         "Nom_indicateur_GP_long": "Montant total de CO2 évité",
                         "Unité_indicateur": "eqCO2",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "eqmtCO2",
                         "Lien_open_source": "nan"
                     }
@@ -330,7 +311,7 @@
             {
                 "Carte": "true",
                 "Graph": "true",
-                "Nom_indicateur_GP": "Entreprises aidées",
+                "Nom_indicateur_GP": "Entreprises lauréates",
                 "Description_mesure": "Le fonds de modernisation, de diversification et de verdissement des procédés de la filière aéronautique doit permettre aux acteurs de la filière aéronautique développer des chaînes de valeur d'avenir ou stratégiques afin de sortir de la crise par le haut, en préservant les compétences durement acquises, et en préparant l'avion vert du futur. Le fonds de modernisation, de diversification et de verdissement des procédés de la filière automobile vise à aider les entreprises automobiles à gagner en compétitivité, par une accélération des investissements d'automatisation et de numérisation de leurs procédés industriels.",
                 "Nom_indicateur_GP_long": "Nombre d'entreprises",
                 "indicateurs": [
@@ -340,7 +321,7 @@
                         "Nom_indicateur_propilot": "Nombre d'entreprises - BPI2",
                         "Nom_indicateur_GP_long": "Nombre d'entreprises",
                         "Unité_indicateur": "# Entreprises",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "entreprises",
                         "Lien_open_source": "nan"
                     }
@@ -359,7 +340,7 @@
                         "Nom_indicateur_propilot": "Montant cumulé de l'investissement total ainsi déclenché - BPI1",
                         "Nom_indicateur_GP_long": "Montant cumulé de l'investissement total ainsi déclenché",
                         "Unité_indicateur": "Euros",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "euros",
                         "Lien_open_source": "nan"
                     }
@@ -386,7 +367,7 @@
                         "Nom_indicateur_propilot": "Nombre de fonds labellisés – GFP4",
                         "Nom_indicateur_GP_long": "Nombre de fonds labellisés",
                         "Unité_indicateur": "# Fonds",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "fonds",
                         "Lien_open_source": "nan"
                     }
@@ -405,7 +386,7 @@
                         "Nom_indicateur_propilot": "Montant des fonds labellisés – GFP3",
                         "Nom_indicateur_GP_long": "Montant des fonds labellisés",
                         "Unité_indicateur": "Euros",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "euros",
                         "Lien_open_source": "nan"
                     }
@@ -432,7 +413,7 @@
                         "Nom_indicateur_propilot": "Nombre d'entreprises bénéficiaires - SAC2",
                         "Nom_indicateur_GP_long": "Nombre d'entreprises bénéficiaires",
                         "Unité_indicateur": "# Entreprises",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "entreprises",
                         "Lien_open_source": "nan"
                     }
@@ -451,7 +432,7 @@
                         "Nom_indicateur_propilot": "Montant total des projets - SAC1",
                         "Nom_indicateur_GP_long": "Montant total des projets",
                         "Unité_indicateur": "Euros",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "euros",
                         "Lien_open_source": "nan"
                     }
@@ -468,7 +449,7 @@
             {
                 "Carte": "true",
                 "Graph": "true",
-                "Nom_indicateur_GP": "Entreprises aidées",
+                "Nom_indicateur_GP": "Entreprises lauréates",
                 "Description_mesure": "La mesure de relocalisation par le soutien à l'investissement industriel dans les territoires vise à accélérer des projets structurants, prêts à être engagés rapidement, afin de favoriser la relance de l'industrie française et la compétitivité des entreprises ainsi que de contribuer à la transition écologique et à la relocalisation des chaînes de production en France. Il prend la forme d'un fonds, de subventions, du volontariat territorial en entreprise ainsi que de conditions d'accès privilégiées aux accélérateurs de Bpifrance. ",
                 "Nom_indicateur_GP_long": "Nombre d'entreprises bénéficiaires ",
                 "indicateurs": [
@@ -478,7 +459,7 @@
                         "Nom_indicateur_propilot": "Nombre d'entreprises bénéficiaires - PIT2",
                         "Nom_indicateur_GP_long": "Nombre d'entreprises bénéficiaires ",
                         "Unité_indicateur": "# Entreprises",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "entreprises",
                         "Lien_open_source": "nan"
                     }
@@ -497,7 +478,7 @@
                         "Nom_indicateur_propilot": "Montant total des projets - PIT1",
                         "Nom_indicateur_GP_long": "Montant total des projets",
                         "Unité_indicateur": "Euros",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "euros",
                         "Lien_open_source": "nan"
                     }
@@ -514,7 +495,7 @@
             {
                 "Carte": "true",
                 "Graph": "true",
-                "Nom_indicateur_GP": "Entreprises aidées",
+                "Nom_indicateur_GP": "Entreprises lauréates",
                 "Description_mesure": "Le Chèque Relance Export prend en charge 50 %, dans la limite d'un plafond, des dépenses éligibles d'une prestation d'accompagnement international pour les PME et ETI françaises. C'est un véritable coup de pouce pour les aider dans leur prospection de marchés étrangers. Les prestations peuvent être achetées auprès de la Team France Export (TFE) ou d'une entreprise référencée. En parallèle, pour aider à la création ou au renforcement d'une équipe export, le Chèque Relance VIE (Volontariat International en Entreprise) permet aux PME et ETI françaises de prendre en charge la création ou la prolongation d'une mission VIE, et de mobiliser de jeunes talents (en particulier ceux issus de formations courtes ou de quartiers prioritaires de la ville) pour les aider dans leur développement international. ",
                 "Nom_indicateur_GP_long": "Nombre d'entreprises bénéficiaires",
                 "indicateurs": [
@@ -524,7 +505,7 @@
                         "Nom_indicateur_propilot": "Nombre d'entreprises bénéficiaires - SBF1",
                         "Nom_indicateur_GP_long": "Nombre d'entreprises bénéficiaires",
                         "Unité_indicateur": "# Entreprises",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "entreprises",
                         "Lien_open_source": "nan"
                     }
@@ -541,7 +522,7 @@
             {
                 "Carte": "true",
                 "Graph": "true",
-                "Nom_indicateur_GP": "Entreprises aidées",
+                "Nom_indicateur_GP": "Entreprises lauréates",
                 "Description_mesure": "Le guichet « Industrie du Futur » de 2021 (fermé depuis le 12 mai) a pour objectif de permettre aux entreprises industrielles de numériser ou robotiser leurs processus et lignes de production. Son succès (15 000 dossiers déposés) a montré l'implication des petites entreprises dans la modernisation de l'industrie malgré un contexte sanitaire perturbé. La subvention leur a permis d'accéder à de nouvelles technologies telles que des robots, des machines de production à commande programmable, des réseaux de capteurs, des logiciels de conception, ou encore la fabrication additive.",
                 "Nom_indicateur_GP_long": "Nombre d'entreprises bénéficiaires",
                 "indicateurs": [
@@ -551,7 +532,7 @@
                         "Nom_indicateur_propilot": "Nombre d'entreprises bénéficiaires - IDF3",
                         "Nom_indicateur_GP_long": "Nombre d'entreprises bénéficiaires",
                         "Unité_indicateur": "# Entreprises",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "entreprises",
                         "Lien_open_source": "nan"
                     }
@@ -570,7 +551,7 @@
                         "Nom_indicateur_propilot": "Montant total de l'investissement ainsi déclenché - IDF2",
                         "Nom_indicateur_GP_long": "Montant total de l'investissement ainsi déclenché",
                         "Unité_indicateur": "Euros",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "euros",
                         "Lien_open_source": "nan"
                     }
@@ -597,7 +578,7 @@
                         "Nom_indicateur_propilot": "Nombre d'accompagnements dispensés - FUM1",
                         "Nom_indicateur_GP_long": "Nombre d'accompagnements dispensés",
                         "Unité_indicateur": "# Projets",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "accompagnements",
                         "Lien_open_source": "nan"
                     }
@@ -624,7 +605,7 @@
                         "Nom_indicateur_propilot": "Nombre de projets de rénovation de cathédrales et de monuments nationaux initiés - PAE1",
                         "Nom_indicateur_GP_long": "Nombre de projets de rénovation de cathédrales et de monuments nationaux initiés",
                         "Unité_indicateur": "# Projets",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "projets",
                         "Lien_open_source": "nan"
                     }
@@ -651,7 +632,7 @@
                         "Nom_indicateur_propilot": "Nombre d'entreprises bénéficiaires de la mesure - BIP1",
                         "Nom_indicateur_GP_long": "Nombre d'entreprises bénéficiaires de la mesure",
                         "Unité_indicateur": "# Entreprises",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "entreprises",
                         "Lien_open_source": "nan"
                     }
@@ -662,15 +643,15 @@
                 "Graph": "true",
                 "Nom_indicateur_GP": "Baisse d'impôts estimée",
                 "Description_mesure": "nan",
-                "Nom_indicateur_GP_long": "Montant estimé des baisses d'impôts",
+                "Nom_indicateur_GP_long": "Montant estimé de cette baisse des impôts de production",
                 "indicateurs": [
                     {
                         "Code_indicateur": "BIP2",
                         "Nom_mesure_propilot": "Baisse des impôts de production",
                         "Nom_indicateur_propilot": "Montant estimé des baisses d'impôts - BIP2",
-                        "Nom_indicateur_GP_long": "Montant estimé des baisses d'impôts",
+                        "Nom_indicateur_GP_long": "Montant estimé de cette baisse des impôts de production",
                         "Unité_indicateur": "Euros",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "euros",
                         "Lien_open_source": "nan"
                     }
@@ -680,7 +661,7 @@
     },
     {
         "Lien_page_mesure": "https://www.economie.gouv.fr/entreprises/aide-embauche-jeune-plan-de-relance",
-        "Nom_mesure_GP": "Primes jeunes",
+        "Nom_mesure_GP": "« 1 jeune, 1 solution » (primes jeunes)",
         "Volet": "Cohésion",
         "source": "Ministère du Travail, de l'Emploi et de l'Insertion",
         "onglets": [
@@ -697,7 +678,7 @@
                         "Nom_indicateur_propilot": "Nombre de contrats d'apprentissage bénéficiaires de l'aide exceptionnelle - APP1",
                         "Nom_indicateur_GP_long": "Nombre de contrats d'apprentissage bénéficiaires de l'aide exceptionnelle",
                         "Unité_indicateur": "# Contrats",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "contrats",
                         "Lien_open_source": "nan"
                     }
@@ -716,7 +697,7 @@
                         "Nom_indicateur_propilot": "Nombre de contrats de professionnalisation bénéficiaires de l'aide exceptionnelle - CDP1",
                         "Nom_indicateur_GP_long": "Nombre de contrats de professionnalisation bénéficiaires de l'aide exceptionnelle",
                         "Unité_indicateur": "# Contrats",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "contrats",
                         "Lien_open_source": "nan"
                     }
@@ -735,7 +716,7 @@
                         "Nom_indicateur_propilot": "Nombre d'aides à l'embauche des jeunes - PEJ1",
                         "Nom_indicateur_GP_long": "Nombre d'aides à l'embauche des jeunes",
                         "Unité_indicateur": "# Aides",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "contrats",
                         "Lien_open_source": "nan"
                     }
@@ -745,7 +726,7 @@
     },
     {
         "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/profils/entreprises/aide-embauche-jeune-contrat-initiative-emploi-cie",
-        "Nom_mesure_GP": "Plan « 1 jeune 1 solution »",
+        "Nom_mesure_GP": "« 1 jeune, 1 solution » (autres)",
         "Volet": "Cohésion",
         "source": "Ministère du Travail, de l'Emploi et de l'Insertion",
         "onglets": [
@@ -762,7 +743,7 @@
                         "Nom_indicateur_propilot": "Entrées de jeunes en CIE - CIE1",
                         "Nom_indicateur_GP_long": "Entrées de jeunes en CIE",
                         "Unité_indicateur": "# Entrées",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "contrats",
                         "Lien_open_source": "nan"
                     },
@@ -772,7 +753,7 @@
                         "Nom_indicateur_propilot": "Entrées de jeunes en PEC - PEC1",
                         "Nom_indicateur_GP_long": "Entrées de jeunes en PEC",
                         "Unité_indicateur": "# Entrées",
-                        "Indicateur_principal": "0",
+                        "Indicateur_principal": "0.0",
                         "Unité_GP": "contrats",
                         "Lien_open_source": "nan"
                     }
@@ -791,7 +772,7 @@
                         "Nom_indicateur_propilot": "Places créées en IAE pour les jeunes - IAE1",
                         "Nom_indicateur_GP_long": "Places créées en IAE pour les jeunes",
                         "Unité_indicateur": "# Places crées",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "contrats",
                         "Lien_open_source": "nan"
                     }
@@ -810,7 +791,7 @@
                         "Nom_indicateur_propilot": "Nombre de places crées ou réhabilitées en internat d'excellence - IEX1",
                         "Nom_indicateur_GP_long": "Nombre de places crées ou réhabilitées en internat d'excellence",
                         "Unité_indicateur": "# Places crées",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Unité_GP": "places",
                         "Lien_open_source": "nan"
                     }
