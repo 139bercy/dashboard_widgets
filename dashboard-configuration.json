@@ -23,25 +23,6 @@
                         "Lien_open_source": "nan"
                     }
                 ]
-            },
-            {
-                "Carte": "true",
-                "Graph": "true",
-                "Nom_indicateur_GP": "Projets soutenus",
-                "Description_mesure": "Créée dans le cadre de la loi de finances rectificative du 30 juillet 2020, la Dotation de Soutien à l'Investissement Locale (DSIL) Exceptionnelle a contribué au soutien de l'investissement dans les collectivités. Elle permet la réalisation d'opérations structurantes sur le territoire, prioritairement en matière de transition écologique, de résilience sanitaire et de rénovation du patrimoine.",
-                "Nom_indicateur_GP_long": "Nombre de projets des collectivités locales soutenus",
-                "indicateurs": [
-                    {
-                        "Code_indicateur": "SIL1",
-                        "Nom_mesure_propilot": "Soutien à l'investissement local (DSIL exceptionnelle)",
-                        "Nom_indicateur_propilot": "Nombre de projets des collectivités locales soutenus - SIL1",
-                        "Nom_indicateur_GP_long": "Nombre de projets des collectivités locales soutenus",
-                        "Unité_indicateur": "# Projets",
-                        "Indicateur_principal": "1",
-                        "Unité_GP": "projets",
-                        "Lien_open_source": "nan"
-                    }
-                ]
             }
         ]
     },
@@ -165,52 +146,6 @@
         ]
     },
     {
-        "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/lancement-appels-projets-filiere-hydrogene#",
-        "Nom_mesure_GP": "Plan de relance hydrogène",
-        "Volet": "Ecologie",
-        "source": "Ministère de la Transition Ecologique",
-        "onglets": [
-            {
-                "Carte": "true",
-                "Graph": "true",
-                "Nom_indicateur_GP": "Projets soutenus",
-                "Description_mesure": "Le Gouvernement annonce l'ouverture de 2 appels à projets pour développer la filière hydrogène dans le cadre du Plan de relance et de la stratégie nationale pour l'hydrogène décarboné. Ces 2 appels à projets portés par l'ADEME s'inscrivent dans le cadre de la stratégie nationale d'accélération de l'hydrogène décarboné annoncée le 8 septembre 2020. Cette stratégie entend amorcer un changement d'échelle dans les développements de la filière, en accompagnant le déploiement d'usages de l'hydrogène dans les territoires, et l'innovation au sein des acteurs équipementiers et industriels. Plus de 7 Md€ sont destinés au soutien de cette filière au niveau national d'ici 2030 dont 2 Md€ intégrés dans le Plan de relance. ",
-                "Nom_indicateur_GP_long": "Nombre de projets soutenus",
-                "indicateurs": [
-                    {
-                        "Code_indicateur": "ETH2",
-                        "Nom_mesure_propilot": "Écosystèmes territoriaux hydrogène DGEC, AAP Ademe",
-                        "Nom_indicateur_propilot": "Nombre de projets soutenus - ETH2",
-                        "Nom_indicateur_GP_long": "Nombre de projets soutenus",
-                        "Unité_indicateur": "# Projets",
-                        "Indicateur_principal": "1",
-                        "Unité_GP": "projets",
-                        "Lien_open_source": "nan"
-                    }
-                ]
-            },
-            {
-                "Carte": "true",
-                "Graph": "true",
-                "Nom_indicateur_GP": "GES évités",
-                "Description_mesure": "nan",
-                "Nom_indicateur_GP_long": "Montant total de CO2 évité",
-                "indicateurs": [
-                    {
-                        "Code_indicateur": "ETH1",
-                        "Nom_mesure_propilot": "Écosystèmes territoriaux hydrogène DGEC, AAP Ademe",
-                        "Nom_indicateur_propilot": "Montant total de CO2 évité - ETH1",
-                        "Nom_indicateur_GP_long": "Montant total de CO2 évité",
-                        "Unité_indicateur": "eqCO2",
-                        "Indicateur_principal": "1",
-                        "Unité_GP": "eqmtCO2",
-                        "Lien_open_source": "nan"
-                    }
-                ]
-            }
-        ]
-    },
-    {
         "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/fonds-modernisation-automobile-aeronautique-nouveaux-projets-laureats",
         "Nom_mesure_GP": "Modernisation des filières automobile et aéronautique",
         "Volet": "Ecologie",
@@ -247,52 +182,6 @@
                         "Nom_mesure_propilot": "Modernisation des filières (BPI)",
                         "Nom_indicateur_propilot": "Montant cumulé de l'investissement total ainsi déclenché - BPI1",
                         "Nom_indicateur_GP_long": "Montant cumulé de l'investissement total ainsi déclenché",
-                        "Unité_indicateur": "Euros",
-                        "Indicateur_principal": "1",
-                        "Unité_GP": "euros",
-                        "Lien_open_source": "nan"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/profils/particuliers/label-relance",
-        "Nom_mesure_GP": "Label « Relance »",
-        "Volet": "Compétitivité",
-        "source": "Ministère de l'Economie, des Finances et de la Relance",
-        "onglets": [
-            {
-                "Carte": "true",
-                "Graph": "true",
-                "Nom_indicateur_GP": "Fonds labellisés",
-                "Description_mesure": "Le « label Relance » permet aux épargnants et investisseurs professionnels d'identifier les organismes de placement collectifs (OPC) apportant une réponse aux besoins de financement des entreprises françaises, cotés ou non, mobilisant ainsi l'épargne pour la relance. Le « label Relance » vient reconnaître les fonds qui s'engagent à mobiliser rapidement des ressources nouvelles pour soutenir les fonds propres et quasi-fonds propres des entreprises françaises (PME et ETI) cotés ou non. L'objectif est d'orienter l'épargne des épargnants et des investisseurs professionnels vers ces placements qui répondent aux besoins de financements de l'économie française consécutifs à la crise sanitaire. Les fonds labellisés doivent en outre respecter un ensemble de critères environnementaux, sociaux et de bonne gouvernance (ESG), incluant notamment l'interdiction du financement d'activités charbonnées et le suivi d'une note ou d'un indicateur ESG. ",
-                "Nom_indicateur_GP_long": "Nombre de fonds labellisés",
-                "indicateurs": [
-                    {
-                        "Code_indicateur": "GFP4",
-                        "Nom_mesure_propilot": "Label relance",
-                        "Nom_indicateur_propilot": "Nombre de fonds labellisés – GFP4",
-                        "Nom_indicateur_GP_long": "Nombre de fonds labellisés",
-                        "Unité_indicateur": "# Fonds",
-                        "Indicateur_principal": "1",
-                        "Unité_GP": "fonds",
-                        "Lien_open_source": "nan"
-                    }
-                ]
-            },
-            {
-                "Carte": "true",
-                "Graph": "true",
-                "Nom_indicateur_GP": "Montant labellisé",
-                "Description_mesure": "nan",
-                "Nom_indicateur_GP_long": "Montant des fonds labellisés",
-                "indicateurs": [
-                    {
-                        "Code_indicateur": "GFP3",
-                        "Nom_mesure_propilot": "Label relance",
-                        "Nom_indicateur_propilot": "Montant des fonds labellisés – GFP3",
-                        "Nom_indicateur_GP_long": "Montant des fonds labellisés",
                         "Unité_indicateur": "Euros",
                         "Indicateur_principal": "1",
                         "Unité_GP": "euros",
