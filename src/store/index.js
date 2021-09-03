@@ -3,14 +3,6 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-
-function encodeIndicatorName(indicator) {
-  return encodeURIComponent('%' + indicator.substring(indicator.length -4, indicator.length) + '%')
-}
-
-
-// import { toJsonNameFormat } from '@/utils.js'
-
 export default new Vuex.Store({
   state: {
     dep: [],
@@ -29,10 +21,8 @@ export default new Vuex.Store({
         return state.promises[indicator]
       }
 
-      // console.log(indicator)
-      // console.log()
-      // const url = `json/Nombre_de_contrats_d_apprentissage_beneficiaires_de_l_aide_exceptionnelle_-_APP1.json`
-      const url = `https://data.economie.gouv.fr/api/v2/catalog/datasets/relance-tableau-de-bord/exports/json?where=nom%20LIKE%20'${encodeIndicatorName(indicator)}'`
+      const url = `https://data.economie.gouv.fr/api/v2/catalog/datasets/relance-tableau-de-bord/exports/json?where=code%20LIKE%20'${indicator}'&limit=-1&pretty=false`
+      // const url = `https://data.economie.gouv.fr/api/v2/catalog/datasets/plan-de-relance-tableau-de-bord/exports/json?where=code%20LIKE%20'${indicator}'&limit=-1&pretty=false`
       const promise = fetch(url).then(res => {
         return res.json()
       }).then(result => {
