@@ -10,22 +10,22 @@ def convert_excel_to_json(path):
     liste_panneaux = []
     panneau_properties = [
         "Lien_page_mesure",
-        "Nom_mesure_GP",
+        "Titre_panneau",
         "Volet",
         "source"
     ]
     onglet_properties = [
         "Carte",
         "Graph",
-        "Nom_indicateur_GP",
         "Description_mesure",
-        "Nom_indicateur_GP_long"
+        "Titre_onglet"
     ]
     indicateur_properties = [
+        "Code_indicateur",
         "Nom_mesure_propilot",
         "Nom_indicateur_propilot",
-        "Unité_indicateur",
         "Indicateur_principal",
+        "Titre_indicateur",
         "Unité_GP",
         "Lien_open_source"
     ]
