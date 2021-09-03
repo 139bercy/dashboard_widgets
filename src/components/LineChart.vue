@@ -207,6 +207,7 @@ export default {
           animation: {
             easing: 'easeInOutBack'
           },
+          maintainAspectRatio: false,
           scales: {
             xAxes: [{
               gridLines: {
