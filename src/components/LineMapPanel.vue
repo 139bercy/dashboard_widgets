@@ -7,11 +7,11 @@
                 v-if="$screen.breakpoint === 'lg' && this.indicateur_data && !this.indicateur_data.departements"></left-col>
       <left-col class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColPropsNotLargeChart"
                 v-if="$screen.breakpoint !== 'lg'"></left-col>
-      <div class="container fr-col-12 fr-col-lg-9" v-if="onglet.indicateurs.length > 0 && onglet.Graph">
+      <div class="line-map-container fr-col-12 fr-col-lg-9" v-if="onglet.indicateurs.length > 0 && onglet.Graph">
         <line-chart
             class="chart-container"
             interpolation="monotone"
-            :indicateur="indicateurName1"
+            :indicateur="indicateurCode1"
             :top-col="false"
             :left-col="false"
             v-if="indicateur_data && !indicateur_data2">
@@ -19,15 +19,15 @@
         <multi-line-chart
             class="chart-container"
             interpolation="monotone"
-            :indicateur1="indicateurName1"
-            :indicateur2="indicateurName2"
+            :indicateur1="indicateurCode1"
+            :indicateur2="indicateurCode2"
             :top-col="false"
             :left-col="false"
             v-if="indicateur_data2">
         </multi-line-chart>
         <map-chart
             class="map-container fr-col-12"
-            :indicateur="indicateurName1"
+            :indicateur="indicateurCode1"
             :top-col="false"
             :left-col="false"
             :bottom-col="false"
@@ -68,7 +68,7 @@ export default {
   },
   props: {
     index: String,
-    Nom_mesure_GP: String,
+    Titre_panneau: String,
     Lien_page_mesure: String,
     onglet: Object
   },
@@ -104,11 +104,17 @@ export default {
     selectedGeoLabel() {
       return store.state.user.selectedGeoLabel
     },
+    indicateurCode1() {
+      return this.onglet.indicateurs[0].Code_indicateur
+    },
+    indicateurCode2() {
+      return this.onglet.indicateurs[1].Code_indicateur
+    },
     indicateurName1() {
-      return this.onglet.indicateurs[0].Nom_indicateur_propilot
+      return this.onglet.indicateurs[0].Titre_indicateur
     },
     indicateurName2() {
-      return this.onglet.indicateurs[1].Nom_indicateur_propilot
+      return this.onglet.indicateurs[1].Titre_indicateur
     },
     leftColPropsNotLargeChart() {
       return {
@@ -133,13 +139,13 @@ export default {
   methods: {
     async getData() {
       this.loading = true
-      const promise1 = store.dispatch('getData', this.indicateurName1).then(data => {
+      const promise1 = store.dispatch('getData', this.indicateurCode1).then(data => {
         this.indicateur_data = data
       })
 
       let promise2;
       if (this.onglet.indicateurs.length === 2) {
-        promise2 = store.dispatch('getData', this.indicateurName2).then(data => {
+        promise2 = store.dispatch('getData', this.indicateurCode2).then(data => {
           this.indicateur_data2 = data
         })
       } else {
@@ -201,11 +207,11 @@ export default {
       this.leftColProps.evolcodes = []
       this.leftColProps.evolvalues = []
 
-      this.leftColProps.names.push(this.indicateur_data.nom)
+      this.leftColProps.names.push(this.indicateurName1)
       this.leftColProps.units.push(this.onglet.indicateurs[0]["Unité_GP"])
       this.leftColProps.currentValues.push(geoObject.last_value)
       if (this.indicateur_data2) {
-        this.leftColProps.names.push(this.indicateur_data2.nom)
+        this.leftColProps.names.push(this.indicateurName2)
         this.leftColProps.units.push(this.onglet.indicateurs[1]["Unité_GP"])
         this.leftColProps.currentValues.push(geoObject2.last_value)
       }
@@ -270,48 +276,34 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
   .panel-full-page-lg {
-
+    height: 100%;
+    max-height: 100%;
+    .line-map-container {
+      height: 100%;
+      max-height: 100%;
+    }
     > div {
       height: 100%;
       max-height: 100%;
     }
-
-    .container {
-      height: 100%;
-      max-height: 100%;
-    }
-
     &.only-chart {
       height: 65%;
       max-height: 65%;
-
       .chart-container {
         height: 100%;
         max-height: 100%;
       }
     }
-
     &:not(.only-chart) {
-      height: 100%;
-      max-height: 100%;
-
       .chart-container {
-        height: 40%;
-        max-height: 40%;
-      }
-
-      .chart-container {
-        height: 100%;
-        max-height: 100%;
-
+        height: 30%;
+        max-height: 30%;
         > div {
           height: 100%;
           max-height: 100%;
-
           > .chart {
             max-height: 100%;
             height: 100%;
-
             canvas {
               height: 100%;
               max-height: 100%;
@@ -319,34 +311,28 @@ export default {
           }
         }
       }
-
       .map-container {
-        height: 65%;
-        max-height: 65%;
-
+        height: 80%;
+        max-height: 80%;
         > div {
           height: 100%;
           max-height: 100%;
-
           > div {
             height: 100%;
             max-height: 100%;
-
             > .france_container {
-              height: 80%;
-              max-height: 80%;
-
+              height: 70%;
+              max-height: 70%;
               .svg {
-                max-height: 80%;
+                max-height: 70%;
                 margin-left: 0;
                 margin-right: 0;
               }
             }
           }
-
           .om_container {
             svg {
-              max-height: 30%;
+              max-height: 35%;
             }
           }
         }

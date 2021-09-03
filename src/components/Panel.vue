@@ -1,8 +1,8 @@
 <template>
-  <div :id="'panel_' + toJsonNameFormat(Nom_mesure_GP)" class="panel">
-    <div :class="{'full-page-lg': $screen.breakpoint === 'lg'}">
+  <div :id="'panel_' + toJsonNameFormat(Titre_panneau)" class="panel">
+    <div :class="{'full-page-lg': $screen.breakpoint === 'lg', 'only-chart': carte === 'false'}">
       <div class="lvl2-header fr-px-2w fr-px-md-3w fr-pt-3w">
-        <h3>{{ Nom_mesure_GP }}</h3>
+        <h3>{{ Titre_panneau }}</h3>
       </div>
       <div class="fr-tabs">
         <ul class="fr-tabs__list" role="tablist" aria-label="changer d'onglet">
@@ -13,12 +13,12 @@
                     :aria-selected="currentOnglet === onglet"
                     :aria-controls="'tabpanel-' + indexOnglet + '-panel'"
             >
-              {{ onglet.Nom_indicateur_GP }}
+              {{ onglet.Titre_onglet }}
             </button>
           </li>
         </ul>
 
-        <div :id="'tabpanel-' + currentIndexOnglet + '-panel'"
+        <div :id="'tabpanel-' + indexOnglet + '-panel'"
              class="fr-tabs__panel fr-pt-2w fr-mt-3w"
              :class="{'fr-tabs__panel--selected' : currentOnglet.indicateurs.length > 0 && currentOnglet.Graph && currentOnglet === onglet}"
              v-for="(onglet, indexOnglet) in onglets" :key="indexOnglet"
@@ -69,16 +69,20 @@ export default {
   },
   props: {
     index: String,
-    Nom_mesure_GP: String,
+    Titre_panneau: String,
     Lien_page_mesure: String,
     source: String,
     onglets: Array
   },
   data() {
     return {
-      currentIndexOnglet: 0,
       currentOnglet: this.onglets[0],
       accordionOpened: false
+    }
+  },
+  computed: {
+    carte() {
+      return this.currentOnglet.Carte
     }
   },
   methods: {}
@@ -88,30 +92,25 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-
   // Gestion du positionnement sur grand écran (breakpoint lg)
   @media (min-width: 62em) {
     .full-page-lg {
-      &:not:has(.only-chart) {
+      &:not(.only-chart) {
         height: 97vh;
         max-height: 97vh;
         overflow: hidden;
       }
-
-      &:has(.only-chart) {
-        height: 65vh;
-        max-height: 65vh;
+      &.only-chart {
+        height: 45vh;
+        max-height: 45vh;
         overflow: hidden;
       }
-
       & > .fr-tabs {
         height: calc(100% - 60px);
         max-height: calc(100% - 60px);
-
         .fr-tabs__panel--selected {
           height: calc(100% - 60px);
           max-height: calc(100% - 60px);
-
           > div {
             height: 100%;
             max-height: 100%;
@@ -123,75 +122,58 @@ export default {
   // Gestion de la bordure autour d'un panel
   .fr-tabs {
     transition: none 0s ease 0s;
-
     .fr-tabs__list {
-
       &::after {
         box-shadow: inset 1px -1px 0 0 var(--boxshadow), inset -1px 0 0 var(--boxshadow);
       }
-
       > li {
         margin-left: 0 !important;
-
         &[is-selected="true"] {
           box-shadow: inset 1px 0 var(--boxshadow), inset -1px 0 var(--boxshadow), inset 0 1px var(--boxshadow);
         }
-
         .fr-tabs__tab {
           &[aria-selected="true"] {
             box-shadow: none;
           }
-
           &[aria-selected="true"]:after {
             box-shadow: none;
           }
-
           &:not([aria-selected="true"]) {
             box-shadow: inset 0 -1px var(--boxshadow);
           }
-
           &::after {
             box-shadow: none;
           }
         }
-
         &:not(:last-of-type) {
           margin-right: 0 !important;
         }
-
         &:first-of-type::before {
           box-shadow: inset 1px -1px var(--boxshadow);
         }
-
         &:not(:first-of-type)::before {
           box-shadow: none;
         }
-
         &:not(:last-of-type)::after {
           //box-shadow: -1px 0 var(--boxshadow);
           box-shadow: none;
         }
-
         &:last-child {
           padding-right: 0;
         }
-
         &::after {
           box-shadow: none;
         }
       }
     }
-
     .fr-tabs__panel {
       padding-top: 2.0rem !important;
       padding-bottom: 0.5rem !important;
     }
-
     &:after {
       box-shadow: inset 1px 0 var(--boxshadow), inset -1px 0 0 var(--boxshadow) !important;
     }
   }
-
   .fr-accordion {
     &.mobile {
       margin-left: calc(50% - 50vw);
@@ -199,11 +181,9 @@ export default {
     }
     box-shadow: inset 1px -1px var(--boxshadow), inset -1px 0 0 var(--boxshadow) !important;
     // Fin de gestion de la bordure autour d'un panel
-
     .description-mesure {
       text-align: justify;
       margin-top: 1rem;
     }
   }
-
 </style>

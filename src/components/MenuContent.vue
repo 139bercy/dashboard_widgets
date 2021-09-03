@@ -44,10 +44,10 @@
                 v-for="(panneau, index) in panneauxByVolets[volet]"
                 :key="index"
                 :data-section-selector="
-                  '#panel_' + toJsonNameFormat(panneau.Nom_mesure_GP)
+                  '#panel_' + toJsonNameFormat(panneau.Titre_panneau)
                 "
               >
-                {{ panneau.Nom_mesure_GP }}
+                {{ panneau.Titre_panneau }}
               </li>
             </ul>
           </li>

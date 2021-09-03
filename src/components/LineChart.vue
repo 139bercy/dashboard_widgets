@@ -229,7 +229,18 @@ export default {
               },
               ticks: {
                 autoSkip: true,
-                maxTicksLimit: 5
+                maxTicksLimit: 5,
+                callback: function (value) {
+                  value = parseFloat(value)
+                  if (value / 1000000000 >= 1) {
+                    return Intl.NumberFormat().format(value / 1000000000) + ' Mrds'
+                  } else if (value / 1000000 >= 1) {
+                    return Intl.NumberFormat().format(value / 1000000) + ' M'
+                  } else if (value / 1000 >= 1) {
+                    return Intl.NumberFormat().format(value / 1000) + ' K'
+                  }
+                  return Intl.NumberFormat().format(value)
+                }
               },
               afterFit: function (axis) {
                 self.legendLeftMargin = axis.width
