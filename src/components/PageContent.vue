@@ -8,7 +8,7 @@
       <div class="fr-col-12 fr-col-md-7 fr-col-lg-7 fr-ml-md-6w fr-mb-6w">
 
         <p>
-          Le plan France Relance s’inscrit en cohérence avec la politique économique menée depuis 2017 par le Gouvernement et sans discontinuité malgré la crise. Ce plan d’investissements de 100 Mds€ doit permettre d’accélérer la transition écologique de notre économie, de renforcer notre compétitivité et d’opérer une reconquête industrielles, tout en soutenant l’emploi et les compétences, notamment des jeunes, et le développement de tous les territoires.  Il est ainsi structuré selon trois axes (écologie, compétitivité et cohésion).
+          Le plan France Relance s’inscrit en cohérence avec la politique économique menée depuis 2017 par le Gouvernement et sans discontinuité malgré la crise. Ce plan d’investissements de 100 Mds€ doit permettre d’accélérer la transition écologique de notre économie, de renforcer notre compétitivité et d’opérer une reconquête industrielle, tout en soutenant l’emploi et les compétences, notamment des jeunes, et le développement de tous les territoires.  Il est ainsi structuré selon trois axes (écologie, compétitivité et cohésion).
         </p>
 
         <p>
