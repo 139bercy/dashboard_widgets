@@ -20,7 +20,10 @@
         </p>
 
         <p>
-          <a href="https:/www.economie.gouv.fr/plan-de-relance/cartographies">Accédez aux autres cartographies sur le déploiement des projets France Relance</a>
+
+          <a target="_parent" href="https://www.economie.gouv.fr/plan-de-relance/cartographies" class="fr-link">
+            Accédez aux autres cartographies sur le déploiement des projets France Relance
+          </a>
         </p>
 
 

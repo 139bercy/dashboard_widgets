@@ -13,12 +13,10 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "RBE1",
-                        "Nom_mesure_propilot": "Rénovation bâtiments Etats",
                         "Nom_indicateur_propilot": "Nombre de bâtiments Etat dont le marché de rénovation est notifié – RBE1",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre de bâtiments de l’État dont un marché de rénovation est notifié ",
-                        "Unité_GP": "bâtiments",
-                        "Lien_open_source": "nan"
+                        "Unité_GP": "bâtiments"
                     }
                 ]
             }
@@ -38,12 +36,10 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "MPR4",
-                        "Nom_mesure_propilot": "MaPrimeRénov’",
                         "Nom_indicateur_propilot": "Nombre de dossiers MaPrimeRénov validés – MPR4",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre de dossiers MaPrimeRénov validés",
-                        "Unité_GP": "logements",
-                        "Lien_open_source": "nan"
+                        "Unité_GP": "logements"
                     }
                 ]
             },
@@ -55,12 +51,10 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "MPR2",
-                        "Nom_mesure_propilot": "MaPrimeRénov’",
                         "Nom_indicateur_propilot": "Montant moyen des travaux associés aux dossiers validés – MPR2",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Montant des travaux associés aux dossiers validés",
-                        "Unité_GP": "euros",
-                        "Lien_open_source": "nan"
+                        "Unité_GP": "euros"
                     }
                 ]
             }
@@ -80,12 +74,10 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "AEA1",
-                        "Nom_mesure_propilot": "Prime à la conversion des agroéquipements",
                         "Nom_indicateur_propilot": "Nombre de structures agricoles bénéficiaires de la prime à la conversion des agroéquipements – AEA1",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Nombre de structures agricoles bénéficiaires de la prime à la conversion des agroéquipements ",
-                        "Unité_GP": "structures",
-                        "Lien_open_source": "nan"
+                        "Titre_indicateur": "Nombre de structures agricoles bénéficiaires",
+                        "Unité_GP": "structures"
                     }
                 ]
             }
@@ -105,12 +97,10 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "DVP1",
-                        "Nom_mesure_propilot": "Prime à la conversion des véhicules légers",
                         "Nom_indicateur_propilot": "Nombre de primes à la conversion – DVP1",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre de primes à la conversion",
-                        "Unité_GP": "primes",
-                        "Lien_open_source": "nan"
+                        "Unité_GP": "primes"
                     }
                 ]
             },
@@ -122,12 +112,10 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "BOE1",
-                        "Nom_mesure_propilot": "Bonus électrique ",
                         "Nom_indicateur_propilot": "Nombre de bonus octroyés à des véhicules électriques et hybrides rechargeables – BOE1",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre de bonus octroyés",
-                        "Unité_GP": "bonus",
-                        "Lien_open_source": "nan"
+                        "Unité_GP": "bonus"
                     }
                 ]
             }
@@ -147,12 +135,10 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "ETH2",
-                        "Nom_mesure_propilot": "Écosystèmes territoriaux hydrogène DGEC, AAP Ademe",
                         "Nom_indicateur_propilot": "Nombre de projets soutenus – ETH2",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre de projets soutenus ",
-                        "Unité_GP": "projets",
-                        "Lien_open_source": "nan"
+                        "Unité_GP": "projets"
                     }
                 ]
             },
@@ -164,12 +150,10 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "ETH1",
-                        "Nom_mesure_propilot": "Écosystèmes territoriaux hydrogène DGEC, AAP Ademe",
                         "Nom_indicateur_propilot": "Montant total de CO2 évité – ETH1",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Montant total de gaz à effet de serre évité (équivalent tonne CO2)",
-                        "Unité_GP": "eqmtCO2",
-                        "Lien_open_source": "nan"
+                        "Unité_GP": "eqmtCO2"
                     }
                 ]
             }
@@ -189,12 +173,10 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "BPI2",
-                        "Nom_mesure_propilot": "Modernisation des filières (BPI)",
                         "Nom_indicateur_propilot": "Nombre d’entreprises – BPI2",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre d’entreprises ",
-                        "Unité_GP": "entreprises",
-                        "Lien_open_source": "nan"
+                        "Unité_GP": "entreprises"
                     }
                 ]
             },
@@ -206,12 +188,10 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "BPI1",
-                        "Nom_mesure_propilot": "Modernisation des filières (BPI)",
                         "Nom_indicateur_propilot": "Montant cumulé de l’investissement total ainsi déclenché – BPI1",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Montant cumulé de l’investissement total ainsi déclenché",
-                        "Unité_GP": "euros",
-                        "Lien_open_source": "nan"
+                        "Unité_GP": "euros"
                     }
                 ]
             }
@@ -231,12 +211,10 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "SAC2",
-                        "Nom_mesure_propilot": "Relocalisation : sécurisation des approvisionnements critiques",
                         "Nom_indicateur_propilot": "Nombre d’entreprises bénéficiaires – SAC2",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre d’entreprises bénéficiaires",
-                        "Unité_GP": "entreprises",
-                        "Lien_open_source": "nan"
+                        "Unité_GP": "entreprises"
                     }
                 ]
             },
@@ -244,16 +222,14 @@
                 "Carte": "true",
                 "Graph": "true",
                 "Description_mesure": "nan",
-                "Titre_onglet": "Montants accordées",
+                "Titre_onglet": "Montants accordés",
                 "indicateurs": [
                     {
                         "Code_indicateur": "SAC1",
-                        "Nom_mesure_propilot": "Relocalisation : sécurisation des approvisionnements critiques",
                         "Nom_indicateur_propilot": "Montant total des projets – SAC1",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Montant total des projets",
-                        "Unité_GP": "euros",
-                        "Lien_open_source": "nan"
+                        "Unité_GP": "euros"
                     }
                 ]
             }
@@ -273,12 +249,10 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "PIT2",
-                        "Nom_mesure_propilot": "Relocalisation : soutien aux projets industriels dans les territoires",
                         "Nom_indicateur_propilot": "Nombre d’entreprises bénéficiaires – PIT2",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre d’entreprises bénéficiaires",
-                        "Unité_GP": "entreprises",
-                        "Lien_open_source": "nan"
+                        "Unité_GP": "entreprises"
                     }
                 ]
             },
@@ -286,16 +260,14 @@
                 "Carte": "true",
                 "Graph": "true",
                 "Description_mesure": "nan",
-                "Titre_onglet": "Montants accordées",
+                "Titre_onglet": "Montants accordés",
                 "indicateurs": [
                     {
                         "Code_indicateur": "PIT1",
-                        "Nom_mesure_propilot": "Relocalisation : soutien aux projets industriels dans les territoires",
                         "Nom_indicateur_propilot": "Montant total des projets – PIT1",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Montant total des projets",
-                        "Unité_GP": "euros",
-                        "Lien_open_source": "nan"
+                        "Unité_GP": "euros"
                     }
                 ]
             }
@@ -315,12 +287,10 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "SBF1",
-                        "Nom_mesure_propilot": "Renforcement des subventions de Business France (chèque export, chèque VIE)",
                         "Nom_indicateur_propilot": "Nombre d’entreprises bénéficiaires – SBF1",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre d’entreprises bénéficiaires",
-                        "Unité_GP": "entreprises",
-                        "Lien_open_source": "nan"
+                        "Unité_GP": "entreprises"
                     }
                 ]
             }
@@ -340,12 +310,10 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "IDF3",
-                        "Nom_mesure_propilot": "Industrie du futur",
                         "Nom_indicateur_propilot": "Nombre d’entreprises bénéficiaires – IDF3",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre d’entreprises bénéficiaires",
-                        "Unité_GP": "entreprises",
-                        "Lien_open_source": "nan"
+                        "Unité_GP": "entreprises"
                     }
                 ]
             },
@@ -357,12 +325,10 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "IDF2",
-                        "Nom_mesure_propilot": "Industrie du futur",
                         "Nom_indicateur_propilot": "Montant total de l’investissement ainsi déclenché – IDF2",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Montant total de l’investissement ainsi déclenché",
-                        "Unité_GP": "euros",
-                        "Lien_open_source": "nan"
+                        "Unité_GP": "euros"
                     }
                 ]
             }
@@ -382,12 +348,10 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "FUM1",
-                        "Nom_mesure_propilot": "France Num",
                         "Nom_indicateur_propilot": "Nombre d'accompagnements dispensés – FUM1",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre d'accompagnements dispensés",
-                        "Unité_GP": "accompagnements",
-                        "Lien_open_source": "nan"
+                        "Unité_GP": "accompagnements"
                     }
                 ]
             }
@@ -407,12 +371,10 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "PAE1",
-                        "Nom_mesure_propilot": "Patrimoine - rénovation de cathédrales et de monuments nationaux initiés ",
                         "Nom_indicateur_propilot": "Nombre de projets de rénovation de cathédrales et de monuments nationaux initiés – PAE1",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre de projets de rénovation de cathédrales et de monuments nationaux initiés",
-                        "Unité_GP": "projets",
-                        "Lien_open_source": "nan"
+                        "Unité_GP": "projets"
                     }
                 ]
             }
@@ -432,12 +394,10 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "BIP1",
-                        "Nom_mesure_propilot": "Baisse des impôts de production",
                         "Nom_indicateur_propilot": "Nombre d’entreprises bénéficiaires de la mesure – BIP1",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Nombre d’entreprises bénéficiaires de la mesure",
-                        "Unité_GP": "entreprises",
-                        "Lien_open_source": "nan"
+                        "Titre_indicateur": "Nombre d’entreprises bénéficiaires",
+                        "Unité_GP": "entreprises"
                     }
                 ]
             },
@@ -449,12 +409,10 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "BIP2",
-                        "Nom_mesure_propilot": "Baisse des impôts de production",
                         "Nom_indicateur_propilot": "Montant estimé des baisses d’impôts - BIP2",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Montant estimé de cette baisse des impôts de production ",
-                        "Unité_GP": "euros",
-                        "Lien_open_source": "nan"
+                        "Unité_GP": "euros"
                     }
                 ]
             }
@@ -474,12 +432,10 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "APP1",
-                        "Nom_mesure_propilot": "Apprentissage",
                         "Nom_indicateur_propilot": "Nombre de contrats d’apprentissage bénéficiaires de l’aide exceptionnelle – APP1",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre de contrats d’apprentissage bénéficiaires de l’aide exceptionnelle",
-                        "Unité_GP": "contrats",
-                        "Lien_open_source": "nan"
+                        "Unité_GP": "contrats"
                     }
                 ]
             },
@@ -491,12 +447,10 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "CDP1",
-                        "Nom_mesure_propilot": "Contrats de professionnalisation",
                         "Nom_indicateur_propilot": "Nombre de contrats de professionnalisation bénéficiaires de l’aide exceptionnelle – CDP1",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre de contrats de professionnalisation bénéficiaires de l’aide exceptionnelle ",
-                        "Unité_GP": "contrats",
-                        "Lien_open_source": "nan"
+                        "Unité_GP": "contrats"
                     }
                 ]
             },
@@ -508,12 +462,10 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "PEJ1",
-                        "Nom_mesure_propilot": "Prime à l’embauche des jeunes",
                         "Nom_indicateur_propilot": "Nombre d'aides à l'embauche des jeunes – PEJ1",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre de jeunes bénéficiant de la prime à l’embauche",
-                        "Unité_GP": "contrats",
-                        "Lien_open_source": "nan"
+                        "Unité_GP": "contrats"
                     }
                 ]
             }
@@ -533,21 +485,17 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "CIE1",
-                        "Nom_mesure_propilot": "CIE jeunes",
                         "Nom_indicateur_propilot": "Entrées de jeunes en CIE – CIE1",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Entrées de jeunes en CIE",
-                        "Unité_GP": "contrats",
-                        "Lien_open_source": "nan"
+                        "Unité_GP": "contrats"
                     },
                     {
                         "Code_indicateur": "PEC1",
-                        "Nom_mesure_propilot": "PEC jeunes",
                         "Nom_indicateur_propilot": "Entrées de jeunes en PEC – PEC1",
                         "Indicateur_principal": "0",
                         "Titre_indicateur": "Entrées de jeunes en PEC",
-                        "Unité_GP": "contrats",
-                        "Lien_open_source": "nan"
+                        "Unité_GP": "contrats"
                     }
                 ]
             },
@@ -559,12 +507,10 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "IAE1",
-                        "Nom_mesure_propilot": "IAE jeunes",
                         "Nom_indicateur_propilot": "Places créées en IAE pour les jeunes – IAE1",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Places créées en IAE pour les jeunes ",
-                        "Unité_GP": "contrats",
-                        "Lien_open_source": "nan"
+                        "Unité_GP": "contrats"
                     }
                 ]
             },
@@ -576,12 +522,10 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "IEX1",
-                        "Nom_mesure_propilot": "Internats d’excellence",
                         "Nom_indicateur_propilot": "Nombre de places crées ou réhabilitées en internat d’excellence – IEX1",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Nombre de places crées ou réhabilitées en internat d’excellence",
-                        "Unité_GP": "places",
-                        "Lien_open_source": "nan"
+                        "Titre_indicateur": "Nombre de places créées ou réhabilitées en internat d’excellence",
+                        "Unité_GP": "places"
                     }
                 ]
             }

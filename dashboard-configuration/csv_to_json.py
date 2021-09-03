@@ -22,12 +22,10 @@ def convert_excel_to_json(path):
     ]
     indicateur_properties = [
         "Code_indicateur",
-        "Nom_mesure_propilot",
         "Nom_indicateur_propilot",
         "Indicateur_principal",
         "Titre_indicateur",
         "Unité_GP",
-        "Lien_open_source"
     ]
     df = df.dropna(subset=['No_Panneau']).sort_values(by=["No_Panneau"], ascending=True)
     panneaux = list(df["No_Panneau"].unique())
