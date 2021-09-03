@@ -58,7 +58,7 @@
                         "Nom_mesure_propilot": "MaPrimeRénov’",
                         "Nom_indicateur_propilot": "Montant moyen des travaux associés aux dossiers validés – MPR2",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Montant moyen des travaux associés aux dossiers validés ",
+                        "Titre_indicateur": "Montant des travaux associés aux dossiers validés",
                         "Unité_GP": "euros",
                         "Lien_open_source": "nan"
                     }
@@ -125,8 +125,50 @@
                         "Nom_mesure_propilot": "Bonus électrique ",
                         "Nom_indicateur_propilot": "Nombre de bonus octroyés à des véhicules électriques et hybrides rechargeables – BOE1",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Nombre de bonus octroyés à des véhicules électriques et hybrides rechargeables",
+                        "Titre_indicateur": "Nombre de bonus octroyés",
                         "Unité_GP": "bonus",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/lancement-appels-projets-filiere-hydrogene#",
+        "Titre_panneau": "Plan de relance hydrogène",
+        "Volet": "Ecologie",
+        "source": "Ministère de la Transition Ecologique",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Description_mesure": "Le Gouvernement annonce l’ouverture de 2 appels à projets pour développer la filière hydrogène dans le cadre du Plan de relance et de la stratégie nationale pour l’hydrogène décarboné. Ces 2 appels à projets portés par l'ADEME s’inscrivent dans le cadre de la stratégie nationale d’accélération de l’hydrogène décarboné annoncée le 8 septembre 2020. Cette stratégie entend amorcer un changement d'échelle dans les développements de la filière, en accompagnant le déploiement d'usages de l'hydrogène dans les territoires, et l'innovation au sein des acteurs équipementiers et industriels. Plus de 7 Md€ sont destinés au soutien de cette filière au niveau national d’ici 2030 dont 2 Md€ intégrés dans le Plan de relance. ",
+                "Titre_onglet": "Projets soutenus",
+                "indicateurs": [
+                    {
+                        "Code_indicateur": "ETH2",
+                        "Nom_mesure_propilot": "Écosystèmes territoriaux hydrogène DGEC, AAP Ademe",
+                        "Nom_indicateur_propilot": "Nombre de projets soutenus – ETH2",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Nombre de projets soutenus ",
+                        "Unité_GP": "projets",
+                        "Lien_open_source": "nan"
+                    }
+                ]
+            },
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Description_mesure": "nan",
+                "Titre_onglet": "GES évités",
+                "indicateurs": [
+                    {
+                        "Code_indicateur": "ETH1",
+                        "Nom_mesure_propilot": "Écosystèmes territoriaux hydrogène DGEC, AAP Ademe",
+                        "Nom_indicateur_propilot": "Montant total de CO2 évité – ETH1",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Montant total de gaz à effet de serre évité (équivalent tonne CO2)",
+                        "Unité_GP": "eqmtCO2",
                         "Lien_open_source": "nan"
                     }
                 ]
@@ -202,7 +244,7 @@
                 "Carte": "true",
                 "Graph": "true",
                 "Description_mesure": "nan",
-                "Titre_onglet": "Subventions accordées",
+                "Titre_onglet": "Montants accordées",
                 "indicateurs": [
                     {
                         "Code_indicateur": "SAC1",
@@ -244,7 +286,7 @@
                 "Carte": "true",
                 "Graph": "true",
                 "Description_mesure": "nan",
-                "Titre_onglet": "Subventions accordées",
+                "Titre_onglet": "Montants accordées",
                 "indicateurs": [
                     {
                         "Code_indicateur": "PIT1",
@@ -410,7 +452,7 @@
                         "Nom_mesure_propilot": "Baisse des impôts de production",
                         "Nom_indicateur_propilot": "Montant estimé des baisses d’impôts - BIP2",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Montant estimé des baisses d’impôts",
+                        "Titre_indicateur": "Montant estimé de cette baisse des impôts de production ",
                         "Unité_GP": "euros",
                         "Lien_open_source": "nan"
                     }
