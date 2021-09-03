@@ -70,7 +70,7 @@
                 "Carte": "true",
                 "Graph": "true",
                 "Description_mesure": "La prime à la conversion des agroéquipements a permis à des agriculteurs de bénéficier matériels plus performants en matière environnementale, permettant une agriculture plus sobre en intrants (notamment en produits phytosanitaires) et en ressources (par exemple en eau). Cette mesure consiste en une aide à l’investissement pour le remplacement de matériels anciens et peu performants, notamment en matière environnementale.",
-                "Titre_onglet": "Structures agricoles lauréates",
+                "Titre_onglet": "Structures agricoles bénéficiaires",
                 "indicateurs": [
                     {
                         "Code_indicateur": "AEA1",
@@ -152,7 +152,7 @@
                         "Code_indicateur": "ETH1",
                         "Nom_indicateur_propilot": "Montant total de CO2 évité – ETH1",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Montant total de gaz à effet de serre évité (équivalent tonne CO2)",
+                        "Titre_indicateur": "Montant total de gaz à effet de serre évité (équivalent méga tonne CO2)",
                         "Unité_GP": "eqmtCO2"
                     }
                 ]
@@ -169,13 +169,13 @@
                 "Carte": "true",
                 "Graph": "true",
                 "Description_mesure": "Le fonds de modernisation, de diversification et de verdissement des procédés de la filière aéronautique doit permettre aux acteurs de la filière aéronautique développer des chaînes de valeur d’avenir ou stratégiques afin de sortir de la crise par le haut, en préservant les compétences durement acquises, et en préparant l’avion vert du futur. Le fonds de modernisation, de diversification et de verdissement des procédés de la filière automobile vise à aider les entreprises automobiles à gagner en compétitivité, par une accélération des investissements d’automatisation et de numérisation de leurs procédés industriels.",
-                "Titre_onglet": "Entreprises lauréates",
+                "Titre_onglet": "Entreprises bénéficiaires",
                 "indicateurs": [
                     {
                         "Code_indicateur": "BPI2",
                         "Nom_indicateur_propilot": "Nombre d’entreprises – BPI2",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Nombre d’entreprises ",
+                        "Titre_indicateur": "Nombre d’entreprises bénéficiaires",
                         "Unité_GP": "entreprises"
                     }
                 ]
@@ -207,7 +207,7 @@
                 "Carte": "true",
                 "Graph": "true",
                 "Description_mesure": "La mesure de relocalisation par la sécurisation des approvisionnements stratégiques vise à renforcer la production nationale et à soutenir l’implantation voire la réimplantation de certaines industries stratégiques sur le territoire.  Il s’agit d’assurer la résilience et l’indépendance de l’économie française. Un soutien à l’investissement ainsi qu’un renforcement des outils capitalistiques sont fourni dans cinq secteurs prioritaires (les produits de santé, les intrants critiques pour l’industrie, l’électronique, l’agroalimentaire  et les télécommunications). ",
-                "Titre_onglet": "Entreprises lauréates",
+                "Titre_onglet": "Entreprises bénéficiaires",
                 "indicateurs": [
                     {
                         "Code_indicateur": "SAC2",
@@ -245,7 +245,7 @@
                 "Carte": "true",
                 "Graph": "true",
                 "Description_mesure": "La mesure de relocalisation par le soutien à l’investissement industriel dans les territoires vise à accélérer des projets structurants, prêts à être engagés rapidement, afin de favoriser la relance de l’industrie française et la compétitivité des entreprises ainsi que de contribuer à la transition écologique et à la relocalisation des chaînes de production en France. Il prend la forme d’un fonds, de subventions, du volontariat territorial en entreprise ainsi que de conditions d’accès privilégiées aux accélérateurs de Bpifrance. ",
-                "Titre_onglet": "Entreprises lauréates",
+                "Titre_onglet": "Entreprises bénéficiaires",
                 "indicateurs": [
                     {
                         "Code_indicateur": "PIT2",
@@ -283,7 +283,7 @@
                 "Carte": "true",
                 "Graph": "true",
                 "Description_mesure": "Le Chèque Relance Export prend en charge 50 %, dans la limite d’un plafond, des dépenses éligibles d’une prestation d’accompagnement international pour les PME et ETI françaises. C’est un véritable coup de pouce pour les aider dans leur prospection de marchés étrangers. Les prestations peuvent être achetées auprès de la Team France Export (TFE) ou d’une entreprise référencée. En parallèle, pour aider à la création ou au renforcement d’une équipe export, le Chèque Relance VIE (Volontariat International en Entreprise) permet aux PME et ETI françaises de prendre en charge la création ou la prolongation d’une mission VIE, et de mobiliser de jeunes talents (en particulier ceux issus de formations courtes ou de quartiers prioritaires de la ville) pour les aider dans leur développement international. ",
-                "Titre_onglet": "Entreprises lauréates",
+                "Titre_onglet": "Entreprises bénéficiaires",
                 "indicateurs": [
                     {
                         "Code_indicateur": "SBF1",
@@ -306,7 +306,7 @@
                 "Carte": "true",
                 "Graph": "true",
                 "Description_mesure": "Le guichet « Industrie du Futur » de 2021 (fermé depuis le 12 mai) a pour objectif de permettre aux entreprises industrielles de numériser ou robotiser leurs processus et lignes de production. Son succès (15 000 dossiers déposés) a montré l’implication des petites entreprises dans la modernisation de l’industrie malgré un contexte sanitaire perturbé. La subvention leur a permis d’accéder à de nouvelles technologies telles que des robots, des machines de production à commande programmable, des réseaux de capteurs, des logiciels de conception, ou encore la fabrication additive.",
-                "Titre_onglet": "Entreprises lauréates",
+                "Titre_onglet": "Entreprises bénéficiaires",
                 "indicateurs": [
                     {
                         "Code_indicateur": "IDF3",
@@ -390,7 +390,7 @@
                 "Carte": "true",
                 "Graph": "true",
                 "Description_mesure": "Cette mesure vise à alléger les impôts de production des entreprises, qui sont déconnectés de leurs performances économiques, dans un objectif de renforcement de leur compétitivité et de l’attractivité du territoire.Les impôts concernés sont la contribution économique territoriale (CET), composée de la cotisation foncière des entreprises (CFE) et de la cotisation sur la valeur ajoutée des entreprises (CVAE) ainsi que la taxe foncière sur les propriétés bâties (TFPB).",
-                "Titre_onglet": "Nombre d’entreprises bénéficiaires",
+                "Titre_onglet": "Entreprises bénéficiaires",
                 "indicateurs": [
                     {
                         "Code_indicateur": "BIP1",
