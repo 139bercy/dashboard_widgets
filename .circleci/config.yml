@@ -75,6 +75,9 @@ jobs:
         - persist_to_workspace:
             root: ./
             paths: public/dashboard-configuration.json
+        - store_artifacts:
+              path: ./public/dashboard-configuration.json
+              destination: dashboard-configuration.json
 
   deploy-github-pages:
     docker:
@@ -96,6 +99,9 @@ jobs:
         - run:
             name: Deploy docs to gh-pages branch
             command: gh-pages --dist ./dist
+        - store_artifacts:
+              path: ./public/dashboard-configuration.json
+              destination: dashboard-configuration.json
 
 workflows:
     version: 2
