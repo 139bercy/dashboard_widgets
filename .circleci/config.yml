@@ -23,6 +23,8 @@ jobs:
         - image: node:16-alpine3.14
     steps:
         - checkout
+        - attach_workspace:
+            at: ./
         - restore_cache:
             keys:
               - dependencies-{{ checksum "package-lock.json" }}
@@ -95,7 +97,7 @@ jobs:
               - "db:bf:2d:63:8e:96:6f:d6:14:d0:8d:59:eb:52:54:94"
         - run:
             name: Deploy docs to gh-pages branch
-            command: gh-pages --dist ./dist
+            command: gh-pages --dist ./dist --message "[ci skip]"
 
 workflows:
     version: 2

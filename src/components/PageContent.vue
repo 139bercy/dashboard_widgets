@@ -21,6 +21,13 @@
 
         <p>
 
+          <a target="_parent" href="https://data.economie.gouv.fr/explore/dataset/france-relance-donnees-agregees/table/" class="fr-link">
+            Accédez aux données de France Relance alimentant ce tableau de bord
+          </a>
+        </p>
+        
+        <p>
+
           <a target="_parent" href="https://www.economie.gouv.fr/plan-de-relance/cartographies" class="fr-link">
             Accédez aux autres cartographies sur le déploiement des projets France Relance
           </a>
