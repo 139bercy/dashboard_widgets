@@ -61,6 +61,82 @@
         ]
     },
     {
+        "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/profils/entreprises/decarbonation-industrie",
+        "Titre_panneau": "Soutien à la chaleur bas carbone",
+        "Volet": "Ecologie",
+        "source": "Ministère de la Transition Ecologique",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Description_mesure": "Le programme de décarbonation de l’industrie a pour objectif d’accompagner les entreprises industrielles dans l’investissement d’équipements et de procédés moins émetteurs de CO2. Deux dispositifs pour le soutien à l’investissement : un appel à projets pour l’efficacité énergétique et l’évolution des procédés, ainsi qu'un guichet pour l’efficacité énergétique sont mis en place dans le cadre du plan de relance. Un Appel à projets pour l’efficacité énergétique et l’évolution des procédés au service de la décarbonation de l’industrie (avec deux dispositifs, désormais clos), ainsi qu'un guichet de soutien à l’investissement pour les projets d’amélioration de l’efficacité énergétique à destination des entreprises industrielles soutenant des projets d’investissements inférieurs à 3 M€ visant la réduction de la consommation d’énergie et la décarbonation en leur apportant une aide sous forme de subvention.",
+                "Titre_onglet": "Entreprises bénéficiaires",
+                "indicateurs": [
+                    {
+                        "Code_indicateur": "CBC3",
+                        "Nom_indicateur_propilot": "Nombre d'entreprises ayant reçu l'aide - CBC3",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Nombre d’entreprises bénéficiaires",
+                        "Unité_GP": "entreprises"
+                    }
+                ]
+            },
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Description_mesure": "nan",
+                "Titre_onglet": "Investissement déclenché",
+                "indicateurs": [
+                    {
+                        "Code_indicateur": "CBC2",
+                        "Nom_indicateur_propilot": "Montant cumulé de l'investissement total ainsi déclenché - CBC2",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Montant cumulé de l’investissement total ainsi déclenché",
+                        "Unité_GP": "euros"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/profils/entreprises/decarbonation-industrie",
+        "Titre_panneau": "Décarbonation de l'industrie",
+        "Volet": "Ecologie",
+        "source": "Ministère de la Transition Ecologique",
+        "onglets": [
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Description_mesure": "Le programme de décarbonation de l’industrie a pour objectif d’accompagner les entreprises industrielles dans l’investissement d’équipements et de procédés moins émetteurs de CO2. Deux dispositifs pour le soutien à l’investissement : un appel à projets pour l’efficacité énergétique et l’évolution des procédés, ainsi qu'un guichet pour l’efficacité énergétique sont mis en place dans le cadre du plan de relance. Un Appel à projets pour l’efficacité énergétique et l’évolution des procédés au service de la décarbonation de l’industrie (avec deux dispositifs, désormais clos), ainsi qu'un guichet de soutien à l’investissement pour les projets d’amélioration de l’efficacité énergétique à destination des entreprises industrielles soutenant des projets d’investissements inférieurs à 3 M€ visant la réduction de la consommation d’énergie et la décarbonation en leur apportant une aide sous forme de subvention.",
+                "Titre_onglet": "Entreprises bénéficiaires",
+                "indicateurs": [
+                    {
+                        "Code_indicateur": "PEE3",
+                        "Nom_indicateur_propilot": "Nombre d’entreprises ayant reçu l’aide – PEE3",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Nombre d’entreprises bénéficiaires",
+                        "Unité_GP": "entreprises"
+                    }
+                ]
+            },
+            {
+                "Carte": "true",
+                "Graph": "true",
+                "Description_mesure": "nan",
+                "Titre_onglet": "Investissement déclenché",
+                "indicateurs": [
+                    {
+                        "Code_indicateur": "PEE2",
+                        "Nom_indicateur_propilot": "Montant cumulé de l’investissement total ainsi déclenché – PEE2",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Montant cumulé de l’investissement total ainsi déclenché",
+                        "Unité_GP": "euros"
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "Lien_page_mesure": "https://www.economie.gouv.fr/plan-de-relance/profils/entreprises/prime-conversion-soutien-aquisition-agro-equipements",
         "Titre_panneau": "Prime à la conversion des agroéquipements",
         "Volet": "Ecologie",
@@ -108,7 +184,7 @@
                 "Carte": "true",
                 "Graph": "true",
                 "Description_mesure": "nan",
-                "Titre_onglet": "Bonus électrique ",
+                "Titre_onglet": "Bonus écologique ",
                 "indicateurs": [
                     {
                         "Code_indicateur": "BOE1",
@@ -481,7 +557,7 @@
                 "Carte": "true",
                 "Graph": "true",
                 "Description_mesure": "Le plan « 1 jeune, 1 solution » s’adresse aux jeunes de moins de 26 ans éloignés du marché de l’emploi et aux jeunes de moins de 30 ans reconnus travailleurs handicapés.  Il vise à favoriser l’insertion professionnelle en proposant un parcours qui associe mise en situation professionnelle et accès facilité à la formation et l’acquisition de compétences. Le Contrat Initiative Emplois (CIE) Jeunes est un dispositif d’insertion professionnelle prenant la forme d’un contrat de travail comportant des actions d’accompagnement professionnel. Le Parcours Emploi compétences (PEC) Jeunes permet d’accéder à la fois à un emploi permettant de développer des compétences transférables et à de la formation avec un accompagnement personnalisé tout au long du parcours. L’Insertion par l’Activité Economique (IAE) Jeunes propose un parcours au sein d’une structure IAE pour acquérir des compétences, prendre confiance en soi, s’insérer ou se réinsérer sur le marché de l’emploi. La Garantie jeunes est un contrat d’engagements réciproques d’un an entre un jeune et une mission locale, réservé aux jeunes de 16 à 25 ans en situation de précarité pour les aider dans leur accès à l’autonomie et à l’insertion professionnelle. Dans les lycées et collèges, de nouvelles places en internat d’excellence ont été créées pour permettre à davantage de jeunes de réussir leur scolarité et construire leur projet professionnel à travers un accompagnement pédagogique personnalisé.",
-                "Titre_onglet": "CIE",
+                "Titre_onglet": "CIE et PEC",
                 "indicateurs": [
                     {
                         "Code_indicateur": "CIE1",
