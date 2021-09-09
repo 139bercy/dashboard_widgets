@@ -25,7 +25,7 @@
             Accédez aux données de France Relance alimentant ce tableau de bord
           </a>
         </p>
-        
+
         <p>
 
           <a target="_parent" href="https://www.economie.gouv.fr/plan-de-relance/cartographies" class="fr-link">
@@ -37,6 +37,8 @@
         <div v-for="(panneau, index) in panneaux" :key="index">
           <panel v-bind:index="index + ''" v-bind="panneau"></panel>
         </div>
+
+        <SourceLinks class="fr-col-12 fr-col-md-12 fr-col-lg-12 fr-mt-3w" />
       </div>
 
     </div>
@@ -46,12 +48,14 @@
 <script>
 import MenuContent from '@/components/MenuContent'
 import Panel from '@/components/Panel'
+import SourceLinks from '@/components/SourceLinks'
 
 export default {
   name: 'PageContent',
   components: {
     MenuContent,
-    Panel
+    Panel,
+    SourceLinks
   },
   props: {
     configuration: String
