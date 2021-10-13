@@ -74,6 +74,7 @@ jobs:
             command: |
               . venv/bin/activate
               python dashboard-configuration/csv_to_json.py
+        # TODO Ajouter un persist_to_workspace pour chque fichier de configuration
         - persist_to_workspace:
             root: ./
             paths:
