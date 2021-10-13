@@ -56,7 +56,6 @@ jobs:
                 python3 -m venv venv
                 . venv/bin/activate
                 pip3 install -r dashboard-configuration/requirements.txt
-                pip
       - save_cache:
           key: dependencies-python-{{ checksum "dashboard-configuration/requirements.txt"}}
           paths:

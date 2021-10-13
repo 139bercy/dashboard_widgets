@@ -66,8 +66,6 @@ def convert_excel_to_json(path):
         liste_panneaux += [dict_panneau]
     return liste_panneaux
 
-
-
 def build_configuration(source: str, sink: str):
     json_final = convert_excel_to_json(path=os.path.join(
         os.getcwd(), "dashboard-configuration", source))
