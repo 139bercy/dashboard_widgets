@@ -76,7 +76,7 @@ jobs:
               python dashboard-configuration/csv_to_json.py
         - persist_to_workspace:
             root: ./
-            paths: public/dashboard-configuration.json
+            paths: public/france-relance.json
 
   deploy-github-pages:
     docker:
