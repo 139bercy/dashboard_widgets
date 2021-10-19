@@ -13,7 +13,8 @@ export default new Vuex.Store({
       selectedGeoLevel: 'France',
       selectedGeoCode: '01',
       selectedGeoLabel: 'France entière'
-    }
+    },
+    dataset: 'relance-tableau-de-bord'
   },
   actions: {
     getData ({ commit, state }, indicator) {
@@ -21,7 +22,7 @@ export default new Vuex.Store({
         return state.promises[indicator]
       }
 
-      const url = `https://data.economie.gouv.fr/api/v2/catalog/datasets/relance-tableau-de-bord/exports/json?where=code%20LIKE%20'${indicator}'&limit=-1&pretty=false`
+      const url = `https://data.economie.gouv.fr/api/v2/catalog/datasets/${state.data.dataset}/exports/json?limit=-1&pretty=false&where=code%20LIKE%20'${indicator}'`
       // const url = `https://data.economie.gouv.fr/api/v2/catalog/datasets/plan-de-relance-tableau-de-bord/exports/json?where=code%20LIKE%20'${indicator}'&limit=-1&pretty=false`
       const promise = fetch(url).then(res => {
         return res.json()
@@ -32,9 +33,15 @@ export default new Vuex.Store({
         if (!result || result.length !== 1) {
           return null
         }
-        result[0].france = JSON.parse(result[0].france);
-        result[0].regions = JSON.parse(result[0].regions);
-        result[0].departements = JSON.parse(result[0].departements);
+        if (result[0].france) {
+          result[0].france = JSON.parse(result[0].france);
+        }
+        if (result[0].regions) {
+          result[0].regions = JSON.parse(result[0].regions);
+        }
+        if (result[0].departements) {
+          result[0].departements = JSON.parse(result[0].departements);
+        }
         return result[0]
       }).then(data => {
         commit('setData', { indicator: indicator, data: data })
@@ -63,6 +70,9 @@ export default new Vuex.Store({
       state.user.selectedGeoLevel = payload.level
       state.user.selectedGeoCode = payload.code
       state.user.selectedGeoLabel = payload.label
+    },
+    setDataset (state, dataset) {
+      state.data.dataset = dataset
     }
   }
 })

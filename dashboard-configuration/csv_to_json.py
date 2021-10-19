@@ -51,9 +51,9 @@ def convert_excel_to_json(path):
                 dict_onglet[col] = str(df_onglet[col].iloc[0])
                 if col in ["Carte", "Graph"]:
                     if int(df_panneau[col].iloc[0]) == 1:
-                        dict_onglet[col] = "true"
+                        dict_onglet[col] = True
                     else:
-                        dict_onglet[col] = "false"
+                        dict_onglet[col] = False
             dict_onglet["indicateurs"] = liste_indicateurs
             liste_onglets += [dict_onglet]
         for col in panneau_properties:
@@ -63,16 +63,21 @@ def convert_excel_to_json(path):
     return liste_panneaux
 
 
-json_final = convert_excel_to_json(path=os.path.join(
-    os.getcwd(), "dashboard-configuration", "Web_edito v_1.csv"))
 
-with open(
-    os.path.join(
-        os.getcwd(),
-        "public",
-        "dashboard-configuration.json"
-    ),
-    'w',
-    encoding="utf8"
-) as f:
-    json.dump(json_final, f, indent=4, ensure_ascii=False, sort_keys=False)
+def build_configuration(source: str, sink: str):
+    json_final = convert_excel_to_json(path=os.path.join(
+        os.getcwd(), "dashboard-configuration", source))
+
+    with open(
+        os.path.join(
+            os.getcwd(),
+            "public",
+            sink
+        ),
+        'w',
+        encoding="utf8"
+    ) as f:
+        json.dump(json_final, f, indent=4, ensure_ascii=False, sort_keys=False)
+
+
+build_configuration("france-relance.csv", "france-relance.json")

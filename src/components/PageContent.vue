@@ -2,50 +2,24 @@
   <div class="page-content fr-container">
     <div class="fr-grid-row">
 
-      <div class="fr-col-12 fr-col-md-4 fr-col-lg-3">
+      <div class="fr-col-12 fr-col-md-4 fr-col-lg-3" v-if="displaySearch">
         <menu-content :panneaux="panneaux"></menu-content>
       </div>
       <div class="fr-col-12 fr-col-md-7 fr-col-lg-7 fr-ml-md-6w fr-mb-6w">
-
-        <p>
-          Le plan France Relance s’inscrit en cohérence avec la politique économique menée depuis 2017 par le Gouvernement et sans discontinuité malgré la crise. Ce plan d’investissements de 100 Mds€ doit permettre d’accélérer la transition écologique de notre économie, de renforcer notre compétitivité et d’opérer une reconquête industrielle, tout en soutenant l’emploi et les compétences, notamment des jeunes, et le développement de tous les territoires.  Il est ainsi structuré selon trois axes (écologie, compétitivité et cohésion).
-        </p>
-
-        <p>
-          Les mesures de France Relance ont déjà été largement déployées depuis le lancement du plan en septembre 2020 et produisent leurs effets. Afin de garantir une transparence sur la mise en œuvre de France Relance, le ministère de l’Économie, des Finances et de la Relance publie un tableau de bord synthétique.
-        </p>
-
-        <p>
-          Ce tableau de bord met en lumière {{ panneaux.length }} mesures de France Relance. Il sera mis à jour mensuellement.
-        </p>
-
-        <p>
-
-          <a target="_parent" href="https://data.economie.gouv.fr/explore/dataset/france-relance-donnees-agregees/table/" class="fr-link">
-            Accédez aux données de France Relance alimentant ce tableau de bord
-          </a>
-        </p>
-
-        <p>
-
-          <a target="_parent" href="https://www.economie.gouv.fr/plan-de-relance/cartographies" class="fr-link">
-            Accédez aux autres cartographies sur le déploiement des projets France Relance
-          </a>
-        </p>
-
+        <div v-html="descriptionContent"></div>
 
         <div v-for="(panneau, index) in panneaux" :key="index">
           <panel v-bind:index="index + ''" v-bind="panneau"></panel>
         </div>
 
-        <SourceLinks class="fr-col-12 fr-col-md-12 fr-col-lg-12 fr-mt-3w" />
+        <SourceLinks class="fr-col-12 fr-col-md-12 fr-col-lg-12 fr-mt-3w" :source-links="sourceLinks"/>
       </div>
-
     </div>
   </div>
 </template>
 
 <script>
+import store from '@/store'
 import MenuContent from '@/components/MenuContent'
 import Panel from '@/components/Panel'
 import SourceLinks from '@/components/SourceLinks'
@@ -58,20 +32,33 @@ export default {
     SourceLinks
   },
   props: {
-    configuration: String
+    configuration: String,
+    dataset: String,
+    displaySearch: Boolean,
+    description: String,
+    sourceLinks: String
   },
   data() {
     return {
-      panneaux: []
+      panneaux: [],
+      descriptionContent: ''
     }
   },
   methods: {
     async getData() {
-      fetch(this.configuration)
+      store.commit('setDataset', this.dataset)
+      await fetch(this.configuration)
           .then(res => res.json())
           .then(data => {
             this.panneaux = data
           })
+      if (this.description!== undefined && this.description !== '') {
+        const self = this
+        await fetch(this.description)
+          .then(res => res.text())
+          // hack pour intégrer le nombre d'indicateurs dans la description
+          .then(data => this.descriptionContent = data.replace("{{ panneaux.length }}", this.panneaux.length))
+      }
     }
   }
   ,

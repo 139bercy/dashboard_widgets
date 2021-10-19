@@ -7,7 +7,7 @@
                 v-if="$screen.breakpoint === 'lg' && this.indicateur_data && !this.indicateur_data.departements"></left-col>
       <left-col class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColPropsNotLargeChart"
                 v-if="$screen.breakpoint !== 'lg'"></left-col>
-      <div class="line-map-container fr-col-12 fr-col-lg-9" v-if="onglet.indicateurs.length > 0 && onglet.Graph">
+      <div class="line-map-container fr-col-12 fr-col-lg-9" v-if="onglet.indicateurs.length > 0">
         <line-chart
             class="chart-container"
             interpolation="monotone"
