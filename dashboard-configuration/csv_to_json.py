@@ -17,6 +17,7 @@ def convert_excel_to_json(path):
     onglet_properties = [
         "Carte",
         "Graph",
+        "Points",
         "Description_mesure",
         "Titre_onglet"
     ]
@@ -49,7 +50,7 @@ def convert_excel_to_json(path):
                 liste_indicateurs += [dict_indicateur]
             for col in onglet_properties:
                 dict_onglet[col] = str(df_onglet[col].iloc[0])
-                if col in ["Carte", "Graph"]:
+                if col in ["Carte", "Graph", "Points"]:
                     if int(df_panneau[col].iloc[0]) == 1:
                         dict_onglet[col] = True
                     else:
@@ -81,3 +82,5 @@ def build_configuration(source: str, sink: str):
 
 
 build_configuration("france-relance.csv", "france-relance.json")
+build_configuration("afa.csv", "afa.json")
+build_configuration("impact.csv", "impact.json")

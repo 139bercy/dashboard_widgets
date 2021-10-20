@@ -1,6 +1,6 @@
 <template>
   <div :id="'panel_' + toJsonNameFormat(Titre_panneau)" class="panel">
-    <div :class="{'full-page-lg': $screen.breakpoint === 'lg', 'only-chart': carte === 'false'}">
+    <div :class="{'full-page-lg': $screen.breakpoint === 'lg', 'only-one-element': onlyOneElement && !points}">
       <div class="lvl2-header fr-px-2w fr-px-md-3w fr-pt-3w">
         <h3>{{ Titre_panneau }}</h3>
       </div>
@@ -27,6 +27,9 @@
              :aria-selected="currentOnglet === onglet ? 1 : 0">
           <div v-if="currentOnglet.indicateurs.length > 0 && currentOnglet === onglet">
             <line-map-panel :onglet="onglet" v-if="onglet.Graph || onglet.Carte"></line-map-panel>
+            <MapPointPanel :onglet="onglet" v-if="onglet.Points ">
+              <!-- && indicateur_data && this.indicateur_data.points -->
+            </MapPointPanel>
           </div>
         </div>
       </div>
@@ -60,12 +63,14 @@
 
 import { mixin } from '@/utils.js'
 import LineMapPanel from './LineMapPanel'
+import MapPointPanel from './MapPointPanel.vue'
 
 export default {
   name: 'Panel',
   mixins: [mixin],
   components: {
-    LineMapPanel
+    LineMapPanel,
+    MapPointPanel
   },
   props: {
     index: String,
@@ -81,8 +86,15 @@ export default {
     }
   },
   computed: {
-    carte() {
-      return this.currentOnglet.Carte
+    onlyOneElement() {
+      return this.currentOnglet.Carte && !this.currentOnglet.Graph && !this.currentOnglet.Points
+      || !this.currentOnglet.Carte && this.currentOnglet.Graph && !this.currentOnglet.Points
+      || !this.currentOnglet.Carte && !this.currentOnglet.Graph && this.currentOnglet.Points
+    },
+    points() {
+      return this.currentOnglet.Carte && !this.currentOnglet.Graph && !this.currentOnglet.Points
+      || !this.currentOnglet.Carte && this.currentOnglet.Graph && !this.currentOnglet.Points
+      || !this.currentOnglet.Carte && !this.currentOnglet.Graph && this.currentOnglet.Points
     }
   },
   methods: {}
@@ -95,12 +107,12 @@ export default {
   // Gestion du positionnement sur grand écran (breakpoint lg)
   @media (min-width: 62em) {
     .full-page-lg {
-      &:not(.only-chart) {
+      &:not(.only-one-element) {
         height: 97vh;
         max-height: 97vh;
         overflow: hidden;
       }
-      &.only-chart {
+      &.only-one-element {
         height: 45vh;
         max-height: 45vh;
         overflow: hidden;

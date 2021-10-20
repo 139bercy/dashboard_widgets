@@ -1,5 +1,5 @@
 ---
-version: 2
+version: 2.1
 jobs:
   install-requirements-node:
     docker:
@@ -76,7 +76,10 @@ jobs:
               python dashboard-configuration/csv_to_json.py
         - persist_to_workspace:
             root: ./
-            paths: public/france-relance.json
+            paths:
+              - public/france-relance.json
+              - public/afa.json
+              - public/impact.json
 
   deploy-github-pages:
     docker:
