@@ -36,7 +36,7 @@
         </map-chart>
       </div>
       <left-col class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColPropsNotLargeMap"
-                v-if="$screen.breakpoint !== 'lg' && this.indicateur_data && this.indicateur_data.departements"></left-col>
+                v-if="$screen.breakpoint !== 'lg' && this.indicateur_data && this.indicateur_data.departements && onglet.Carte"></left-col>
     </div>
     <div v-else-if="loading">
       Récupération des données en cours
@@ -252,7 +252,7 @@ export default {
       })
     },
     updateDataForLegendMap() {
-      if (this.indicateur_data === null || this.indicateur_data.departements === null) {
+      if (this.indicateur_data === null || this.indicateur_data.departements === null || !this.onglet.Carte) {
         return;
       }
 

@@ -41,7 +41,7 @@
         <div v-if="isMap" class="sep fr-my-4w fr-my-md-3w"></div>
         <div v-else class="sep-viz fr-my-4w fr-my-md-3w"></div>
         <div class="scale" v-if="isMap">
-          <p class="l_box_title fr-text--xs fr-mb-1w">Légende</p>
+          <p class="l_box_title fr-text--xs fr-mb-1w">Légende {{!this.onglet.Carte}} et {{this.onglet.Carte}}</p>
           <div class="scale_container"></div>
           <div>
             <span class="min fr-text--sm fr-text--bold fr-mb-0">{{convertFloatToHuman(min)}}</span>
