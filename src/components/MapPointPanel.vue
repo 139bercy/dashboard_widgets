@@ -2,6 +2,7 @@
   <div class="map-point-panel">
     <div v-if="indicateur_data && !loading" class="fr-grid-row">
       <MapPointLegend class="map-legend fr-col-12 fr-col-lg-3"
+        :logo="logo" :alt-logo="altLogo"
         :indicateurs="indicateurs"
         :selecteur="onglet.Titre_onglet"
         :legende="onglet.indicateurs[0].Titre_indicateur"
@@ -48,7 +49,9 @@ export default {
     index: String,
     Titre_panneau: String,
     Lien_page_mesure: String,
-    onglet: Object
+    onglet: Object,
+    logo: String,
+    altLogo: String
   },
   data() {
     return {

@@ -11,6 +11,12 @@
             <option v-for="v in indicateurs" :value="v" :key="v">{{ v }}</option>
           </select>
         </div>
+        <p></p>
+          <div class="fr-text--sm fr-text--bold fr-mt-0 fr-mb-1w">
+            <span :class="{'position-absolute' : $screen.breakpoint !== 'lg'}" v-if="logo">
+              <img :src="logo" :alt="altLogo" width="60px"/>
+            </span>
+          </div>
       </div>
     </div>
     <div data-box="number" v-if="nbPoints">
@@ -43,7 +49,9 @@ export default {
   props: {
     selecteur: String,
     legende: String,
-    indicateurs: Array
+    indicateurs: Array,
+    logo: String,
+    altLogo: String
   },
   methods: {
     updateSelected(event) {

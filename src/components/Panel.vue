@@ -26,8 +26,8 @@
              :tabindex="currentOnglet === onglet ? 1 : 0"
              :aria-selected="currentOnglet === onglet ? 1 : 0">
           <div v-if="currentOnglet.indicateurs.length > 0 && currentOnglet === onglet">
-            <line-map-panel :onglet="onglet" v-if="onglet.Graph || onglet.Carte"></line-map-panel>
-            <MapPointPanel :onglet="onglet" v-if="onglet.Points ">
+            <line-map-panel :onglet="onglet" :logo="logo" :alt-logo="altLogo" v-if="onglet.Graph || onglet.Carte"></line-map-panel>
+            <MapPointPanel :onglet="onglet" :logo="logo" :alt-logo="altLogo" v-if="onglet.Points ">
               <!-- && indicateur_data && this.indicateur_data.points -->
             </MapPointPanel>
           </div>
@@ -77,7 +77,9 @@ export default {
     Titre_panneau: String,
     Lien_page_mesure: String,
     source: String,
-    onglets: Array
+    onglets: Array,
+    logo: String,
+    altLogo: String
   },
   data() {
     return {

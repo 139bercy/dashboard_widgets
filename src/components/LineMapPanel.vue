@@ -1,7 +1,7 @@
 <template>
   <div class="line-map-panel" :class="{'panel-full-page-lg': $screen.breakpoint === 'lg', 'only-one-element' : onlyOneElement}">
     <div v-if="indicateur_data && !loading" class="fr-grid-row">
-      <left-col class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColProps"
+      <left-col class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColProps" :logo="logo" :alt-logo="altLogo"
                 v-if="$screen.breakpoint === 'lg' && this.indicateur_data && this.indicateur_data.departements"></left-col>
       <left-col class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColPropsNotLargeChart"
                 v-if="$screen.breakpoint === 'lg' && this.indicateur_data && !this.indicateur_data.departements"></left-col>
@@ -70,7 +70,9 @@ export default {
     index: String,
     Titre_panneau: String,
     Lien_page_mesure: String,
-    onglet: Object
+    onglet: Object,
+    logo: String,
+    altLogo: String
   },
   data() {
     return {
@@ -125,14 +127,18 @@ export default {
         names: this.leftColProps.names,
         evolcodes: this.leftColProps.evolcodes,
         evolvalues: this.leftColProps.evolvalues,
-        units: this.leftColProps.units
+        units: this.leftColProps.units,
+        logo: this.logo,
+        altLogo: this.altLogo
       }
     },
     leftColPropsNotLargeMap() {
       return {
         min: this.leftColProps.min,
         max: this.leftColProps.max,
-        isMap: true
+        isMap: true,
+        logo: this.logo,
+        altLogo: this.altLogo
       }
     },
     onlyOneElement() {
