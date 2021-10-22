@@ -6,6 +6,8 @@
 import store from '@/store'
 import { mixin } from '@/utils.js'
 
+import { isMobile } from 'mobile-device-detect'
+
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
@@ -44,14 +46,16 @@ export default {
     },
     defineMap(divId) {
       // TODO https://www.datavis.fr/index.php?page=leaflet-cluster ?
-      this.map = L.map(divId).setView(
-        /*coordonnées centrés sur la france*/[46.549, 2.210],
-        /*précision de la carte pour voir la totalité de la france métropolitaine à l'écran*/5
-      );
+      this.map = L.map(divId, {
+        center: /*coordonnées centrés sur la france*/[46.549, 2.210],
+        // minZoom: /*précision de la carte pour voir la totalité de la france métropolitaine à l'écran*/!isMobile ? 5 : 1,
+        zoom: /*précision de la carte pour voir la totalité de la france métropolitaine à l'écran*/!isMobile ? 5 : 4
+      })
       // Mise en place de la cate OpenStreetMap
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
-        attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+        attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>',
+        subdomains: ['a','b','c']
       }).addTo(this.map);
 
       // Affichage de l'échelle
