@@ -1,10 +1,10 @@
 <template>
   <div :id="'panel_' + toJsonNameFormat(Titre_panneau)" class="panel">
-    <div :class="{'full-page-lg': $screen.breakpoint === 'lg', 'only-chart': carte === 'false'}">
+    <div :class="{'full-page-lg': $screen.breakpoint === 'lg', 'only-one-element': onlyOneElement && !points}">
       <div class="lvl2-header fr-px-2w fr-px-md-3w fr-pt-3w">
         <h3>{{ Titre_panneau }}</h3>
       </div>
-      <div class="fr-tabs">
+      <div class="fr-tabs" :class="{'box-shadow-without-descrption-mesure': !onglets[0].Description_mesure}">
         <ul class="fr-tabs__list" role="tablist" aria-label="changer d'onglet">
           <li role="presentation" v-for="(onglet, indexOnglet) in onglets" :key="indexOnglet"
               :is-selected="currentOnglet === onglet">
@@ -26,12 +26,18 @@
              :tabindex="currentOnglet === onglet ? 1 : 0"
              :aria-selected="currentOnglet === onglet ? 1 : 0">
           <div v-if="currentOnglet.indicateurs.length > 0 && currentOnglet === onglet">
-            <line-map-panel :onglet="onglet" v-if="onglet.Graph || onglet.Carte"></line-map-panel>
+            <line-map-panel :onglet="onglet" :logo="logo" :alt-logo="altLogo" v-if="onglet.Graph || onglet.Carte"></line-map-panel>
+            <MapPointPanel :onglet="onglet" :logo="logo" :alt-logo="altLogo" v-if="onglet.Points">
+              <!-- && indicateur_data && this.indicateur_data.points -->
+            </MapPointPanel>
           </div>
         </div>
       </div>
     </div>
-    <div class="fr-accordion panel-accordion-extended" :class="{'mobile' : $screen.breakpoint === 'xs' || $screen.breakpoint === 'sm' }">
+    <div
+      class="fr-accordion panel-accordion-extended"
+      :class="{'mobile' : $screen.breakpoint === 'xs' || $screen.breakpoint === 'sm' }"
+      v-if="onglets[0].Description_mesure">
       <h3 class="fr-accordion__title">
         <button class="fr-accordion__btn fr-text--sm"
                 :aria-expanded="accordionOpened"
@@ -60,19 +66,23 @@
 
 import { mixin } from '@/utils.js'
 import LineMapPanel from './LineMapPanel'
+import MapPointPanel from './MapPointPanel.vue'
 
 export default {
   name: 'Panel',
   mixins: [mixin],
   components: {
-    LineMapPanel
+    LineMapPanel,
+    MapPointPanel
   },
   props: {
     index: String,
     Titre_panneau: String,
     Lien_page_mesure: String,
     source: String,
-    onglets: Array
+    onglets: Array,
+    logo: String,
+    altLogo: String
   },
   data() {
     return {
@@ -81,8 +91,15 @@ export default {
     }
   },
   computed: {
-    carte() {
-      return this.currentOnglet.Carte
+    onlyOneElement() {
+      return this.currentOnglet.Carte && !this.currentOnglet.Graph && !this.currentOnglet.Points
+      || !this.currentOnglet.Carte && this.currentOnglet.Graph && !this.currentOnglet.Points
+      || !this.currentOnglet.Carte && !this.currentOnglet.Graph && this.currentOnglet.Points
+    },
+    points() {
+      return this.currentOnglet.Carte && !this.currentOnglet.Graph && !this.currentOnglet.Points
+      || !this.currentOnglet.Carte && this.currentOnglet.Graph && !this.currentOnglet.Points
+      || !this.currentOnglet.Carte && !this.currentOnglet.Graph && this.currentOnglet.Points
     }
   },
   methods: {}
@@ -95,22 +112,22 @@ export default {
   // Gestion du positionnement sur grand écran (breakpoint lg)
   @media (min-width: 62em) {
     .full-page-lg {
-      &:not(.only-chart) {
+      &:not(.only-one-element) {
         height: 97vh;
         max-height: 97vh;
         overflow: hidden;
       }
-      &.only-chart {
+      &.only-one-element {
         height: 45vh;
         max-height: 45vh;
         overflow: hidden;
       }
       & > .fr-tabs {
-        height: calc(100% - 60px);
-        max-height: calc(100% - 60px);
+        height: calc(100% - 40px);
+        max-height: calc(100% - 40px);
         .fr-tabs__panel--selected {
-          height: calc(100% - 60px);
-          max-height: calc(100% - 60px);
+          height: calc(100% - 40px);
+          max-height: calc(100% - 40px);
           > div {
             height: 100%;
             max-height: 100%;
@@ -122,6 +139,10 @@ export default {
   // Gestion de la bordure autour d'un panel
   .fr-tabs {
     transition: none 0s ease 0s;
+
+    &.box-shadow-without-descrption-mesure {
+      box-shadow:  0px 1px var(--boxshadow);
+    }
     .fr-tabs__list {
       &::after {
         box-shadow: inset 1px -1px 0 0 var(--boxshadow), inset -1px 0 0 var(--boxshadow);
@@ -174,6 +195,7 @@ export default {
       box-shadow: inset 1px 0 var(--boxshadow), inset -1px 0 0 var(--boxshadow) !important;
     }
   }
+
   .fr-accordion {
     &.mobile {
       margin-left: calc(50% - 50vw);

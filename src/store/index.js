@@ -42,6 +42,9 @@ export default new Vuex.Store({
         if (result[0].departements) {
           result[0].departements = JSON.parse(result[0].departements);
         }
+        if (result[0].points) {
+          result[0].points = JSON.parse(result[0].points);
+        }
         return result[0]
       }).then(data => {
         commit('setData', { indicator: indicator, data: data })

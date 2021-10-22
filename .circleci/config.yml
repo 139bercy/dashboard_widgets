@@ -1,5 +1,5 @@
 ---
-version: 2
+version: 2.1
 jobs:
   install-requirements-node:
     docker:
@@ -35,8 +35,9 @@ jobs:
         - run:
             name: Réécriture des urls des fichiers dans l'index pour les github pages
             command: |
-              sed -e 's|/css/app.css|css/app.css|g' -i dist/index.html
-              sed -e 's|/js/app.js|js/app.js|g' -i dist/index.html
+              sed -e 's|/css/index|css/index|g' -e 's|/js/index|js/index|g' -i dist/index.html
+              sed -e 's|/css/index|css/index|g' -e 's|/js/index|js/index|g' -i dist/index-impact.html
+              sed -e 's|/css/index|css/index|g' -e 's|/js/index|js/index|g' -i dist/index-afa.html
         - persist_to_workspace:
             root: ./
             paths: dist
@@ -76,7 +77,10 @@ jobs:
               python dashboard-configuration/csv_to_json.py
         - persist_to_workspace:
             root: ./
-            paths: public/france-relance.json
+            paths:
+              - public/france-relance.json
+              - public/afa.json
+              - public/impact.json
 
   deploy-github-pages:
     docker:

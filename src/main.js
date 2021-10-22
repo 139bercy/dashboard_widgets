@@ -16,6 +16,7 @@ import GeoList from './components/GeoList'
 import LineMapPanel from './components/LineMapPanel'
 import PageContent from './components/PageContent'
 import MenuContent from './components/MenuContent'
+import MapPoint from './components/MapPoint'
 
 import vueCustomElement from 'vue-custom-element'
 
@@ -44,3 +45,4 @@ Vue.customElement('geo-list', GeoList)
 Vue.customElement('line-map-panel', LineMapPanel)
 Vue.customElement('page-content', PageContent)
 Vue.customElement('menu-content', MenuContent)
+Vue.customElement('map-point', MapPoint)

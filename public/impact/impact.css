@@ -1,0 +1,126 @@
+
+.page-content {
+  --boxshadow: var(--bf500);
+  --boxcountour: var(--bf500-plain);
+
+/* https://htmlcolors.com/hex-to-hsl */
+  /* Couleur de la palette pouvant être modifier */
+  /* --map-point-color-1: #9A9AFF; */
+  --map-point-color-1-H: 240deg;
+  --map-point-color-1-S: 100%;
+  --map-point-color-1-L: 80%;
+  --map-point-color-1: hsl(var(--map-point-color-1-H), var(--map-point-color-1-S), var(--map-point-color-1-L));
+  /* --map-point-color-2: #0762C8; */
+  --map-point-color-2-H: 212deg;
+  --map-point-color-2-S: 93%;
+  --map-point-color-2-L: 41%;
+  --map-point-color-2: hsl(var(--map-point-color-2-H), var(--map-point-color-2-S), var(--map-point-color-2-L));
+  /* --map-point-color-3: #D08A77; */
+  --map-point-color-3-H: 13deg;
+  --map-point-color-3-S: 49%;
+  --map-point-color-3-L: 64%;
+  --map-point-color-3: hsl(var(--map-point-color-3-H), var(--map-point-color-3-S), var(--map-point-color-3-L));
+  /* --map-point-color-4: #FFC29E; */
+  --map-point-color-4-H: 22deg;
+  --map-point-color-4-S: 100%;
+  --map-point-color-4-L: 81%;
+  --map-point-color-4: hsl(var(--map-point-color-3-H), var(--map-point-color-3-S), var(--map-point-color-4-L));
+  /* --map-point-color-5: #FF6F4C; */
+  --map-point-color-5-H: 12deg;
+  --map-point-color-5-S: 100%;
+  --map-point-color-5-L: 65%;
+  --map-point-color-5: hsl(var(--map-point-color-5-H), var(--map-point-color-5-S), var(--map-point-color-5-L));
+  /* --map-point-color-6: #32C5FF; */
+  --map-point-color-6-H: 197deg;
+  --map-point-color-6-S: 100%;
+  --map-point-color-6-L: 60%;
+  --map-point-color-6: hsl(var(--map-point-color-6-H), var(--map-point-color-6-S), var(--map-point-color-6-L));
+  /* --map-point-color-7: #9A9AFF; */
+  --map-point-color-7-H: 240deg;
+  --map-point-color-7-S: 100%;
+  --map-point-color-7-L: 80%;
+  --map-point-color-7: hsl(var(--map-point-color-7-H), var(--map-point-color-7-S), var(--map-point-color-7-L));
+  /* --map-point-color-8: #0762C8; */
+  --map-point-color-8-H: 212deg;
+  --map-point-color-8-S: 93%;
+  --map-point-color-8-L: 41%;
+  --map-point-color-8: hsl(var(--map-point-color-8-H), var(--map-point-color-8-S), var(--map-point-color-8-L));
+  /* --map-point-color-9: #D08A77; */
+  --map-point-color-9-H: 13deg;
+  --map-point-color-9-S: 49%;
+  --map-point-color-9-L: 64%;
+  --map-point-color-9: hsl(var(--map-point-color-9-H), var(--map-point-color-9-S), var(--map-point-color-9-L));
+  /* --map-point-color-10: #FFC29E; */
+  --map-point-color-10-H: 22deg;
+  --map-point-color-10-S: 100%;
+  --map-point-color-10-L: 81%;
+  --map-point-color-10: hsl(var(--map-point-color-10-H), var(--map-point-color-10-S), var(--map-point-color-10-L));
+  /* --map-point-color-11: #FF6F4C; */
+  --map-point-color-11-H: 12deg;
+  --map-point-color-11-S: 100%;
+  --map-point-color-11-L: 65%;
+  --map-point-color-11: hsl(var(--map-point-color-11-H), var(--map-point-color-12-S), var(--map-point-color-12-L));
+  /* --map-point-color-13: #32C5FF; */
+  --map-point-color-12-H: 197deg;
+  --map-point-color-12-S: 100%;
+  --map-point-color-12-L: 60%;
+  --map-point-color-12: hsl(var(--map-point-color-12-H), var(--map-point-color-12-S), var(--map-point-color-12-L));
+  /* --map-point-color-13: #9A9AFF; */
+  --map-point-color-13-H: 240deg;
+  --map-point-color-13-S: 100%;
+  --map-point-color-13-L: 80%;
+  --map-point-color-13: hsl(var(--map-point-color-13-H), var(--map-point-color-13-S), var(--map-point-color-13-L));
+  /* --map-point-color-14: #0762C8; */
+  --map-point-color-14-H: 212deg;
+  --map-point-color-14-S: 93%;
+  --map-point-color-14-L: 41%;
+  --map-point-color-14: hsl(var(--map-point-color-14-H), var(--map-point-color-14-S), var(--map-point-color-14-L));
+  /* --map-point-color-15: #D08A77; */
+  --map-point-color-15-H: 13deg;
+  --map-point-color-15-S: 49%;
+  --map-point-color-15-L: 64%;
+  --map-point-color-15: hsl(var(--map-point-color-15-H), var(--map-point-color-15-S), var(--map-point-color-15-L));
+  /* --map-point-color-16: #FFC29E; */
+  --map-point-color-16-H: 22deg;
+  --map-point-color-16-S: 100%;
+  --map-point-color-16-L: 81%;
+  --map-point-color-16: hsl(var(--map-point-color-16-H), var(--map-point-color-16-S), var(--map-point-color-16-L));
+  /* --map-point-color-17: #FF6F4C; */
+  --map-point-color-17-H: 12deg;
+  --map-point-color-17-S: 100%;
+  --map-point-color-17-L: 65%;
+  --map-point-color-17: hsl(var(--map-point-color-17-H), var(--map-point-color-17-S), var(--map-point-color-17-L));
+  /* --map-point-color-18: #32C5FF; */
+  --map-point-color-18-H: 197deg;
+  --map-point-color-18-S: 100%;
+  --map-point-color-18-L: 60%;
+  --map-point-color-18: hsl(var(--map-point-color-18-H), var(--map-point-color-18-S), var(--map-point-color-18-L));
+  /* --map-point-color-19: #9A9AFF; */
+  --map-point-color-19-H: 240deg;
+  --map-point-color-19-S: 100%;
+  --map-point-color-19-L: 80%;
+  --map-point-color-19: hsl(var(--map-point-color-19-H), var(--map-point-color-19-S), var(--map-point-color-19-L));
+  /* --map-point-color-20: #0762C8; */
+  --map-point-color-20-H: 212deg;
+  --map-point-color-20-S: 93%;
+  --map-point-color-20-L: 41%;
+  --map-point-color-20: hsl(var(--map-point-color-20-H), var(--map-point-color-20-S), var(--map-point-color-20-L));
+}
+
+/* .page-content[data-fr-theme=dark i] {
+}
+
+.page-content:not([data-fr-theme=dark i]) [class*="--scheme-light-"],
+.page-content:not([data-fr-theme=dark i]) [class*=fr-scheme-light] {
+}
+
+.page-content:not([data-fr-theme=dark i]) [class*="--scheme-dark-"],
+.page-content:not([data-fr-theme=dark i]) [class*=fr-scheme-dark] {
+} */
+
+.page-content:not([data-fr-theme="dark" i]) .fr-tabs__tab:not([aria-selected="true"]) {
+  --color-hover: rgba(187, 255, 182, 0.5);
+  --color-active: rgba(109, 168, 105, 0.5);
+  --block-color-hover: rgba(187, 255, 182, 0.5);
+  --block-color-active: rgba(109, 168, 105, 0.5);
+}

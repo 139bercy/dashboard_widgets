@@ -17,12 +17,13 @@ def convert_excel_to_json(path):
     onglet_properties = [
         "Carte",
         "Graph",
+        "Points",
         "Description_mesure",
         "Titre_onglet"
     ]
     indicateur_properties = [
         "Code_indicateur",
-        "Nom_indicateur_propilot",
+        # "Nom_indicateur_propilot",
         "Indicateur_principal",
         "Titre_indicateur",
         "Unité_GP",
@@ -45,19 +46,22 @@ def convert_excel_to_json(path):
                 df_indicateur = df_onglet.iloc[indicateur]
                 dict_indicateur = {}
                 for col in indicateur_properties:
-                    dict_indicateur[col] = str(df_indicateur[col])
+                    if not pd.isna(df_indicateur[col]):
+                        dict_indicateur[col] = str(df_indicateur[col])
                 liste_indicateurs += [dict_indicateur]
             for col in onglet_properties:
-                dict_onglet[col] = str(df_onglet[col].iloc[0])
-                if col in ["Carte", "Graph"]:
-                    if int(df_panneau[col].iloc[0]) == 1:
-                        dict_onglet[col] = True
-                    else:
-                        dict_onglet[col] = False
+                if not pd.isna(df_onglet[col].iloc[0]):
+                    dict_onglet[col] = str(df_onglet[col].iloc[0])
+                    if col in ["Carte", "Graph", "Points"]:
+                        if int(df_panneau[col].iloc[0]) == 1:
+                            dict_onglet[col] = True
+                        else:
+                            dict_onglet[col] = False
             dict_onglet["indicateurs"] = liste_indicateurs
             liste_onglets += [dict_onglet]
         for col in panneau_properties:
-            dict_panneau[col] = str(df_panneau[col].iloc[0])
+            if not pd.isna(df_panneau[col].iloc[0]):
+                dict_panneau[col] = str(df_panneau[col].iloc[0])
         dict_panneau["onglets"] = liste_onglets
         liste_panneaux += [dict_panneau]
     return liste_panneaux
@@ -81,3 +85,5 @@ def build_configuration(source: str, sink: str):
 
 
 build_configuration("france-relance.csv", "france-relance.json")
+build_configuration("afa.csv", "afa.json")
+build_configuration("impact.csv", "impact.json")
