@@ -1,0 +1,25 @@
+[
+    {
+        "Lien_page_mesure": "https://immobilier-etat.gouv.fr/les-grands-dossiers/france-relance-projets-renovation-energetique-batiments-publics",
+        "Titre_panneau": "Rénovation thermique des bâtiments publics",
+        "Volet": "Ecologie",
+        "source": "Ministère de l’Economie, des Finances et de la Relance",
+        "onglets": [
+            {
+                "Carte": true,
+                "Graph": true,
+                "Points": false,
+                "Description_mesure": "Le parc de l’État représentant près de 100 millions de m², et la consommation des bâtiments un quart des émissions de gaz à effet de serre en France, le Gouvernement a souhaité que les bâtiments publics prennent part, de manière substantielle, à l’effort national de rénovation énergétique. « France Relance » retient un important programme de rénovation énergétique des bâtiments publics pour un montant de 4 milliards d’euros dont 300 millions seront délégués aux régions visant à réduire l’empreinte énergétique des bâtiments publics, soutenir le secteur de la construction au niveau local et moderniser les lieux de vie collectifs au bénéfice des usagers et des agents.",
+                "Titre_onglet": "Bâtiments de l’État",
+                "indicateurs": [
+                    {
+                        "Code_indicateur": "APDCDE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Nombre de bâtiments de l’État dont un marché de rénovation est notifié ",
+                        "Unité_GP": "bâtiments"
+                    }
+                ]
+            }
+        ]
+    }
+]
