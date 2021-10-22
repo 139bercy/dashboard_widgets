@@ -323,8 +323,8 @@ export default {
         }
       }
       .map-container {
-        height: 80%;
-        max-height: 80%;
+        height: 70%;
+        max-height: 70%;
         > div {
           height: 100%;
           max-height: 100%;

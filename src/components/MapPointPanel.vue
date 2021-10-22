@@ -1,6 +1,6 @@
 <template>
-  <div class="map-point-panel">
-    <div v-if="indicateur_data && !loading" class="fr-grid-row">
+  <div class="map-point-panel" v-if="!loading">
+    <div v-if="indicateurs.length > 0" class="fr-grid-row">
       <MapPointLegend class="map-legend fr-col-12 fr-col-lg-3"
         :logo="logo" :alt-logo="altLogo"
         :indicateurs="indicateurs"
@@ -14,11 +14,13 @@
                 v-if="$screen.breakpoint === 'lg' && this.indicateur_data && !this.indicateur_data.departements"></MapPointLegend>
       <MapPointLegend class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColPropsNotLargeChart"
                 v-if="$screen.breakpoint !== 'lg'"></MapPointLegend> -->
-      <div class="map-container fr-col-12 fr-col-lg-9" v-if="onglet.indicateurs.length > 0">
-        <MapPoint class="map-container fr-col-12" :indicateur="indicateur">
+
+      <div class="map-container fr-col-12 fr-col-lg-9" v-if="indicateurs.length > 0">
+        <MapPoint class="map-container fr-col-12" :indicateurs="indicateurs" :activatedIndicateurs="activatedIndicateurs">
             <!-- v-if="indicateur_data && this.indicateur_data.points" -->
         </MapPoint>
       </div>
+
       <!-- <MapPointLegend class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColPropsNotLargeMap"
                 v-if="$screen.breakpoint !== 'lg' && this.indicateur_data && this.indicateur_data.departements"></MapPointLegend> -->
     </div>
@@ -55,24 +57,41 @@ export default {
   },
   data() {
     return {
-      loading: false,
-      indicateur_data: [],
       dataset: [],
-      indicateur: undefined
+      indicateurs: [],
+      activatedIndicateurs: [],
+      loading: true
     }
   },
-  computed: {
-    indicateurs() {
-      return this.onglet.indicateurs[0].Code_indicateur.split(',')
-    },
-  },
   methods: {
-    selectIndicateur(value) {
-      this.indicateur = value
+    async getData (indicateur) {
+      const data = await store.dispatch('getData', indicateur)
+      return data && data.points ? data.points.length : 0
+    },
+    selectIndicateur(value, activated) {
+      let activatedIndicateurs = this.activatedIndicateurs.filter(key => key !== value);
+      if (activated) {
+        activatedIndicateurs = activatedIndicateurs.concat(value)
+      }
+      this.activatedIndicateurs = activatedIndicateurs
     },
   },
-  created() {
-    this.indicateur = this.indicateurs[0]
+  async created() {
+    let indicateurs = this.onglet.indicateurs[0].Code_indicateur.split('|')
+    let indicateursVides = [];
+    (await Promise.all(indicateurs.map(async indicateur => {
+      return await this.getData(indicateur)
+    }))).forEach((nbPoints, index) => {
+      if (nbPoints === 0) {
+        indicateursVides.push(index)
+      }
+    })
+    this.indicateurs = indicateurs.filter((_, i) => !indicateursVides.includes(i))
+
+
+    this.activatedIndicateurs = [].concat(this.indicateurs).splice(0,4)
+    // console.log(this.activatedIndicateurs.join('\t|\t'))
+    this.loading = false
   },
 }
 
@@ -81,13 +100,16 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 .map-point-panel {
+  min-height: 300px;
   height: 100%;
   max-height: 100%;
   .map-container {
+    min-height: 300px;
     height: 100%;
     max-height: 100%;
   }
   > div {
+    min-height: 300px;
     height: 100%;
     max-height: 100%;
   }

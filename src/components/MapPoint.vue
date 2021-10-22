@@ -1,5 +1,5 @@
 <template>
-  <div id="map" class="map"></div>
+  <div id="map" class="map map-point"></div>
 </template>
 
 <script>
@@ -20,39 +20,27 @@ L.Icon.Default.mergeOptions({
 export default {
   name: 'MapPoint',
   mixins: [mixin],
-  components: {
-  },
+  // components: {
+  // },
   data () {
     return {
-      indicateur_data: undefined,
+      indicateurs_data: [],
       map: undefined,
-      markers: []
+      markers: [],
+      loading: true
     }
   },
   props: {
-    indicateur: String
+    indicateurs: Array,
+    activatedIndicateurs: Array
   },
   computed: {
   },
   methods: {
-    async getData () {
-      // store.dispatch('getData', this.indicateur).then(data => {
-      //   this.indicateur_data = data
-      //   this.loading = false
-      //   this.updateMap()
-      // })
-      // TODO
-      await fetch("impact.data.json")
-        .then(res => res.json())
-        .then(data => {
-          this.loading = false
-          this.indicateur_data = data.find(d => d.code == this.indicateur)
-          if (this.indicateur_data) {
-            this.indicateur_data.points = JSON.parse(this.indicateur_data.points)
-            this.updateData()
-          }
-        })
-
+    async getData (indicateur) {
+      return await store.dispatch('getData', indicateur).then(data => {
+        this.indicateurs_data[indicateur] = data
+      })
     },
     defineMap(divId) {
       // TODO https://www.datavis.fr/index.php?page=leaflet-cluster ?
@@ -69,44 +57,191 @@ export default {
       // Affichage de l'échelle
       L.control.scale().addTo(this.map);
     },
-    updateData () {
-      this.map.removeLayer(this.markers);
+    updateData (indicateur, color) {
+      // console.log(indicateur, color)
+      if (!this.indicateurs_data[indicateur]) {
+        return;
+      }
       const markers = { "entreprises": [] };
       //  Création des points d'intérêt (entreprise)
-      this.indicateur_data.points.forEach(point => {
+      this.indicateurs_data[indicateur].points.forEach(point => {
         // Rien ne sera affiché d'une entreprise si elle ne possède pas de coordonnées GPS !
-        if (point.latitude && point.longitude) {
-          if (point.latitude !== "null" && point.longitude !== "null") {
-            let marker = L.marker([point.latitude, point.longitude]);
-            // let tooltip = `<b>${entreprise.identite["DENOMINATION_UNITE_LEGALE"]}</b>`
-            let tooltip = `<b>${point.nom}</b><br/>SIREN: ${point.siren}<br/><br/><small>Date de mise à jour: ${point.last_date}</small>`
-            marker.bindTooltip(tooltip);
-            markers.entreprises.push(marker);
-          }
+        if (
+          point.latitude && point.latitude !== 'nan' && point.latitude !== "null"
+          && point.longitude && point.longitude !== 'nan' && point.longitude !== "null"
+        ) {
+          L.Icon.Default.prototype.options.className = `color-${color}`
+          let marker = L.marker([point.latitude, point.longitude]);
+
+          // let tooltip = `<b>${entreprise.identite["DENOMINATION_UNITE_LEGALE"]}</b>`
+          let tooltip = `<b>${point.nom}</b><br/>SIREN: ${point.siren}<br/><br/><small>Date de mise à jour: ${point.last_date}</small>`
+          marker.bindTooltip(tooltip);
+          markers.entreprises.push(marker);
         }
       });
 
-      this.markers = L.layerGroup(markers.entreprises);
-      this.map.addLayer(this.markers)
+      const layerGroup = L.layerGroup(markers.entreprises);
+      // this.map.addLayer(layerGroup)
+      // console.log("indicateur '" + indicateur + "' added")
+      return layerGroup
     },
-
-    updateMap () {
-      this.updateData()
+    toggleIndicateurs () {
+      this.indicateurs.forEach((indicateur,index) => {
+        // console.log(this.activatedIndicateurs.join('\t|\t'))
+        if (this.activatedIndicateurs.includes(indicateur) && this.markers[indicateur] && !this.map.hasLayer(this.markers[indicateur])) {
+          // console.log(index, indicateur, this.markers, this.markers[indicateur])
+          L.Icon.Default.prototype.options.className = `color-${index+1}`
+          this.map.addLayer(this.markers[indicateur])
+        }
+        if (!this.activatedIndicateurs.includes(indicateur) && this.markers[indicateur] && this.map.hasLayer(this.markers[indicateur])) {
+          this.map.removeLayer(this.markers[indicateur]);
+        }
+      })
     },
   },
-  mounted () {
+  async mounted () {
     this.defineMap("map")
-    this.getData()
+    const promises = await Promise.all(this.indicateurs.map(async (indicateur, index) => {
+      return await this.getData(indicateur)
+    }))
+    const markers = []
+    promises.map((_, index) => {
+      return this.updateData(this.indicateurs[index], index+1)
+    }).filter(layerGroup => layerGroup).forEach((layer, index) => {
+      markers[this.indicateurs[index]] = layer
+    })
+    this.markers = markers
+    this.toggleIndicateurs()
+    // console.log(markers, this.markers)
+    this.loading = false
   },
   watch: {
-    indicateur: function () {
-      this.getData()
+    activatedIndicateurs: function () {
+      this.toggleIndicateurs()
     },
   }
 }
 
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 
+
+.map-point {
+
+  /* Couleur par défaut dans MapPoint ne pas modifier color-0 */
+  /* --map-point-color-0: #3383cc; */
+  --map-point-color-0-H: 209deg;
+  --map-point-color-0-S: 60%;
+  --map-point-color-0-L: 50%;
+  --map-point-color-0: hsl(var(--map-point-color-0-H), var(--map-point-color-0-S), var(--map-point-color-0-L));
+  .leaflet-marker-icon {
+    // calcule des couleurs à partir de cette technique
+    // https://stackoverflow.com/questions/29037023/how-to-calculate-required-hue-rotate-to-generate-specific-colour
+    &.color-0 {
+      filter: hue-rotate(0deg);
+    }
+    &.color-1 {
+      filter: hue-rotate(calc(var(--map-point-color-1-H) - var(--map-point-color-0-H)))
+              // saturate(calc(100% + (var(--map-point-color-1-S) - var(--map-point-color-0-S))))
+              brightness(calc(100% + (var(--map-point-color-1-L) - var(--map-point-color-0-L))));
+    }
+    &.color-2 {
+      filter: hue-rotate(calc(var(--map-point-color-2-H) - var(--map-point-color-0-H)))
+              // saturate(calc(100% + (var(--map-point-color-2-S) - var(--map-point-color-0-S))))
+              brightness(calc(100% + (var(--map-point-color-2-L) - var(--map-point-color-0-L))));
+    }
+    &.color-3 {
+      filter: hue-rotate(calc(var(--map-point-color-3-H) - var(--map-point-color-0-H)))
+              // saturate(calc(100% + (var(--map-point-color-3-S) - var(--map-point-color-0-S))))
+              brightness(calc(100% + (var(--map-point-color-3-L) - var(--map-point-color-0-L))));
+    }
+    &.color-4 {
+      filter: hue-rotate(calc(var(--map-point-color-4-H) - var(--map-point-color-0-H)))
+              // saturate(calc(100% + (var(--map-point-color-4-S) - var(--map-point-color-0-S))))
+              brightness(calc(100% + (var(--map-point-color-4-L) - var(--map-point-color-0-L))));
+    }
+    &.color-5 {
+      filter: hue-rotate(calc(var(--map-point-color-5-H) - var(--map-point-color-0-H)))
+              // saturate(calc(100% + (var(--map-point-color-5-S) - var(--map-point-color-0-S))))
+              brightness(calc(100% + (var(--map-point-color-5-L) - var(--map-point-color-0-L))));
+    }
+    &.color-6 {
+      filter: hue-rotate(calc(var(--map-point-color-6-H) - var(--map-point-color-0-H)))
+              // saturate(calc(100% + (var(--map-point-color-6-S) - var(--map-point-color-0-S))))
+              brightness(calc(100% + (var(--map-point-color-6-L) - var(--map-point-color-0-L))));
+    }
+    &.color-7 {
+      filter: hue-rotate(calc(var(--map-point-color-7-H) - var(--map-point-color-0-H)))
+              // saturate(calc(100% + (var(--map-point-color-7-S) - var(--map-point-color-0-S))))
+              brightness(calc(100% + (var(--map-point-color-7-L) - var(--map-point-color-0-L))));
+    }
+    &.color-8 {
+      filter: hue-rotate(calc(var(--map-point-color-8-H) - var(--map-point-color-0-H)))
+              // saturate(calc(100% + (var(--map-point-color-8-S) - var(--map-point-color-0-S))))
+              brightness(calc(100% + (var(--map-point-color-8-L) - var(--map-point-color-0-L))));
+    }
+    &.color-9 {
+      filter: hue-rotate(calc(var(--map-point-color-9-H) - var(--map-point-color-0-H)))
+              // saturate(calc(100% + (var(--map-point-color-9-S) - var(--map-point-color-0-S))))
+              brightness(calc(100% + (var(--map-point-color-9-L) - var(--map-point-color-0-L))));
+    }
+    &.color-10 {
+      filter: hue-rotate(calc(var(--map-point-color-10-H) - var(--map-point-color-0-H)))
+              // saturate(calc(100% + (var(--map-point-color-10-S) - var(--map-point-color-0-S))))
+              brightness(calc(100% + (var(--map-point-color-10-L) - var(--map-point-color-0-L))));
+    }
+    &.color-11 {
+      filter: hue-rotate(calc(var(--map-point-color-11-H) - var(--map-point-color-0-H)))
+              // saturate(calc(100% + (var(--map-point-color-11-S) - var(--map-point-color-0-S))))
+              brightness(calc(100% + (var(--map-point-color-11-L) - var(--map-point-color-0-L))));
+    }
+    &.color-12 {
+      filter: hue-rotate(calc(var(--map-point-color-12-H) - var(--map-point-color-0-H)))
+              // saturate(calc(100% + (var(--map-point-color-12-S) - var(--map-point-color-0-S))))
+              brightness(calc(100% + (var(--map-point-color-12-L) - var(--map-point-color-0-L))));
+    }
+    &.color-13 {
+      filter: hue-rotate(calc(var(--map-point-color-13-H) - var(--map-point-color-0-H)))
+              // saturate(calc(100% + (var(--map-point-color-13-S) - var(--map-point-color-0-S))))
+              brightness(calc(100% + (var(--map-point-color-13-L) - var(--map-point-color-0-L))));
+    }
+    &.color-14 {
+      filter: hue-rotate(calc(var(--map-point-color-14-H) - var(--map-point-color-0-H)))
+              // saturate(calc(100% + (var(--map-point-color-14-S) - var(--map-point-color-0-S))))
+              brightness(calc(100% + (var(--map-point-color-14-L) - var(--map-point-color-0-L))));
+    }
+    &.color-15 {
+      filter: hue-rotate(calc(var(--map-point-color-15-H) - var(--map-point-color-0-H)))
+              // saturate(calc(100% + (var(--map-point-color-15-S) - var(--map-point-color-0-S))))
+              brightness(calc(100% + (var(--map-point-color-15-L) - var(--map-point-color-0-L))));
+    }
+    &.color-16 {
+      filter: hue-rotate(calc(var(--map-point-color-16-H) - var(--map-point-color-0-H)))
+              // saturate(calc(100% + (var(--map-point-color-16-S) - var(--map-point-color-0-S))))
+              brightness(calc(100% + (var(--map-point-color-16-L) - var(--map-point-color-0-L))));
+    }
+    &.color-17 {
+      filter: hue-rotate(calc(var(--map-point-color-17-H) - var(--map-point-color-0-H)))
+              // saturate(calc(100% + (var(--map-point-color-17-S) - var(--map-point-color-0-S))))
+              brightness(calc(100% + (var(--map-point-color-17-L) - var(--map-point-color-0-L))));
+    }
+    &.color-18 {
+      filter: hue-rotate(calc(var(--map-point-color-18-H) - var(--map-point-color-0-H)))
+              // saturate(calc(100% + (var(--map-point-color-18-S) - var(--map-point-color-0-S))))
+              brightness(calc(100% + (var(--map-point-color-18-L) - var(--map-point-color-0-L))));
+    }
+    &.color-19 {
+      filter: hue-rotate(calc(var(--map-point-color-19-H) - var(--map-point-color-0-H)))
+              // saturate(calc(100% + (var(--map-point-color-19-S) - var(--map-point-color-0-S))))
+              brightness(calc(100% + (var(--map-point-color-19-L) - var(--map-point-color-0-L))));
+    }
+    &.color-20 {
+      filter: hue-rotate(calc(var(--map-point-color-20-H) - var(--map-point-color-0-H)))
+              // saturate(calc(100% + (var(--map-point-color-20-S) - var(--map-point-color-0-S))))
+              brightness(calc(100% + (var(--map-point-color-20-L) - var(--map-point-color-0-L))));
+    }
+  }
+}
+ // .leaflet-marker-icon { filter:hue-rotate(250deg) }
 </style>

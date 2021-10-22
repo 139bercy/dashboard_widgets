@@ -1,15 +1,24 @@
 <template>
-
   <div class="fr-grid-row">
-    <div class="l_col fr-col-11" data-box="number" v-if="indicateurs && indicateurs.length > 0">
+    <div class="l_col fr-col-11" data-box="number" v-if="indicateurs && indicateurs.length > 0 && !loading">
       <div class="indicateur_info">
-        <p class="fr-text--sm fr-text--bold fr-mt-0 fr-mb-1w">
+        <!-- <p class="fr-text--sm fr-text--bold fr-mt-0 fr-mb-1w">
           {{ selecteur }}
-        </p>
-        <div class="l_box_number_container">
-          <select class="fr-select fr-text--sm fr-mb-0 fr-py-1v" name="select" @change="updateSelected">
-            <option v-for="v in indicateurs" :value="v" :key="v">{{ v }}</option>
-          </select>
+        </p> -->
+        <div class="l_box_number_container" v-for="indicateur,index in indicateurs" :key="indicateur">
+          <div class="fr-checkbox-group">
+              <input
+                type="checkbox"
+                :id="'checkbox-' + indicateur"
+                :name="indicateur"
+                :checked="indicateurs.findIndex(i => i == indicateur) < 4"
+                @change="updateSelected" />
+              <label
+                class="fr-label" :class="'color-' + (index + 1)"
+                :for="'checkbox-' + indicateur">
+                {{ indicateur }}  {{ nbPoints[indicateur] ? '(' + nbPoints[indicateur] + ')' : '' }}
+              </label>
+          </div>
         </div>
         <p></p>
           <div class="fr-text--sm fr-text--bold fr-mt-0 fr-mb-1w">
@@ -19,31 +28,20 @@
           </div>
       </div>
     </div>
-    <div data-box="number" v-if="nbPoints">
-      <div class="indicateur_info">
-        <p class="fr-text--sm fr-text--bold fr-mt-0 fr-mb-1w">
-          {{ legende }}
-        </p>
-        <div class="l_box_number_container">
-          <p class="fr-text--lg fr-text--bold fr-mb-1v">
-            {{ convertFloatToHuman(nbPoints) }}
-          </p>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 
 <script>
 
+import store from '@/store'
 import { mixin } from '@/utils.js'
 export default {
   name: 'MapPointLegend',
   mixins: [mixin],
   data () {
     return {
-      indicateur: undefined,
-      nbPoints: undefined
+      nbPoints: [],
+      loading: true
     }
   },
   props: {
@@ -55,31 +53,27 @@ export default {
   },
   methods: {
     updateSelected(event) {
-      this.indicateur = event.target.value
-      this.$emit('indicateurSelected', event.target.value)
-      this.getData()
+      // console.log(event)
+      const indicateurKey = event.target.name
+      const indicateurStatus = event.target.checked
+      // console.log(indicateurKey, indicateurStatus)
+      this.$emit('indicateurSelected', indicateurKey, indicateurStatus)
     },
-    async getData () {
-      // store.dispatch('getData', this.indicateur).then(data => {
-        // this.nbPoints = indicateur_data.points.length
-      // })
-      // TODO
-      await fetch("impact.data.json")
-        .then(res => res.json())
-        .then(data => {
-          // this.loading = false
-          const indicateur_data = data.find(d => d.code == this.indicateur)
-          if (indicateur_data) {
-            this.nbPoints = JSON.parse(indicateur_data.points).length
-          }
-        })
-
+    async getData (indicateur) {
+      // console.log(indicateur)
+      const data = await store.dispatch('getData', indicateur)
+      if (data && data.points) {
+        // console.log(indicateur, data.points.length)
+        this.nbPoints[indicateur] = data.points.length
+      }
     },
   },
 
-  created () {
-    this.indicateur = this.indicateurs[0]
-    this.getData()
+  async created () {
+    await Promise.all(this.indicateurs.map(async indicateur => {
+      return await this.getData(indicateur)
+    }))
+    this.loading = false
   }
 
 }
@@ -87,6 +81,9 @@ export default {
 
 <style scoped lang="scss">
   @import "../../css/overload-fonts.css";
+  .fr-grid-row {
+    overflow: visible;
+  }
   .l_col{
     .flex{
       display: inline-flex;
@@ -95,19 +92,10 @@ export default {
     .l_box_number_container {
       display: flex;
       justify-content: space-between;
-    }
-    .scale{
-      .scale_container{
-        height: 1.5rem;
-        background-color: red;
-        background: linear-gradient(90deg, rgba(255, 199, 0,1) 0%, rgba(113, 88, 69, 1) 100%);
-      }
-      div:last-child {
-        display:flex;
-        justify-content: space-between;
+      .fr-label {
+        font-size: xx-small;
       }
     }
-
     @media (min-width: 36em) {
       .l_box_number_container {
         display: block;
@@ -118,6 +106,160 @@ export default {
 
   .position-absolute {
     position: absolute
+  }
+
+
+  .fr-checkbox-group {
+    .fr-label {
+      &.color-0 {
+        color: var(--map-point-color-0);
+        &:checked {
+          &label::before {
+            background-color: var(--map-point-color-0);
+          }
+        }
+      }
+      &.color-1 {
+        color: var(--map-point-color-1);
+        &::before {
+          border: 1px solid var(--map-point-color-1);
+          background-color: var(--map-point-color-1) !important;
+        }
+      }
+      &.color-2 {
+        color: var(--map-point-color-2);
+        &::before {
+          border: 1px solid var(--map-point-color-2);
+          background-color: var(--map-point-color-2) !important;
+        }
+      }
+      &.color-3 {
+        color: var(--map-point-color-3);
+        &::before {
+          border: 1px solid var(--map-point-color-3);
+          background-color: var(--map-point-color-3) !important;
+        }
+      }
+      &.color-4 {
+        color: var(--map-point-color-4);
+        &::before {
+          border: 1px solid var(--map-point-color-4);
+          background-color: var(--map-point-color-4) !important;
+        }
+      }
+      &.color-5{
+        color: var(--map-point-color-5);
+        &::before {
+          border: 1px solid var(--map-point-color-5);
+          background-color: var(--map-point-color-5) !important;
+        }
+      }
+      &.color-6{
+        color: var(--map-point-color-6);
+        &::before {
+          border: 1px solid var(--map-point-color-6);
+          background-color: var(--map-point-color-6) !important;
+        }
+      }
+      &.color-7{
+        color: var(--map-point-color-7);
+        &::before {
+          border: 1px solid var(--map-point-color-7);
+          background-color: var(--map-point-color-7) !important;
+        }
+      }
+      &.color-8{
+        color: var(--map-point-color-8);
+        &::before {
+          border: 1px solid var(--map-point-color-8);
+          background-color: var(--map-point-color-8) !important;
+        }
+      }
+      &.color-9{
+        color: var(--map-point-color-9);
+        &::before {
+          border: 1px solid var(--map-point-color-9);
+          background-color: var(--map-point-color-9) !important;
+        }
+      }
+      &.color-10{
+        color: var(--map-point-color-10);
+        &::before {
+          border: 1px solid var(--map-point-color-10);
+          background-color: var(--map-point-color-10) !important;
+        }
+      }
+      &.color-11{
+        color: var(--map-point-color-11);
+        &::before {
+          border: 1px solid var(--map-point-color-11);
+          background-color: var(--map-point-color-11) !important;
+        }
+      }
+      &.color-12{
+        color: var(--map-point-color-12);
+        &::before {
+          border: 1px solid var(--map-point-color-12);
+          background-color: var(--map-point-color-12) !important;
+        }
+      }
+      &.color-13{
+        color: var(--map-point-color-13);
+        &::before {
+          border: 1px solid var(--map-point-color-13);
+          background-color: var(--map-point-color-13) !important;
+        }
+      }
+      &.color-14{
+        color: var(--map-point-color-14);
+        &::before {
+          border: 1px solid var(--map-point-color-14);
+          background-color: var(--map-point-color-14) !important;
+        }
+      }
+      &.color-15{
+        color: var(--map-point-color-15);
+        &::before {
+          border: 1px solid var(--map-point-color-15);
+          background-color: var(--map-point-color-15) !important;
+        }
+      }
+      &.color-16{
+        color: var(--map-point-color-16);
+        &::before {
+          border: 1px solid var(--map-point-color-16);
+          background-color: var(--map-point-color-16) !important;
+        }
+      }
+      &.color-17{
+        color: var(--map-point-color-17);
+        &::before {
+          border: 1px solid var(--map-point-color-17);
+          background-color: var(--map-point-color-17) !important;
+        }
+      }
+      &.color-18{
+        color: var(--map-point-color-18);
+        &::before {
+          border: 1px solid var(--map-point-color-18);
+          background-color: var(--map-point-color-18) !important;
+        }
+      }
+      &.color-19{
+        color: var(--map-point-color-19);
+        &::before {
+          border: 1px solid var(--map-point-color-19);
+          background-color: var(--map-point-color-19) !important;
+        }
+      }
+      &.color-20{
+        color: var(--map-point-color-20);
+        &::before {
+          border: 1px solid var(--map-point-color-20);
+          background-color: var(--map-point-color-20) !important;
+        }
+      }
+    }
   }
 
 </style>

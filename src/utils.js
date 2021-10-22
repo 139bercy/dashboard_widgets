@@ -22,7 +22,8 @@ export const convertDateToHuman = function (string) {
 }
 
 export const toJsonNameFormat = (nomPropilot) => {
-  return nomPropilot.replaceAll(' ', '_')
+  return nomPropilot
+  ? nomPropilot.replaceAll(' ', '_')
     .replaceAll('/', '_')
     .replaceAll('&', '_')
     .replaceAll('"', '')
@@ -33,6 +34,7 @@ export const toJsonNameFormat = (nomPropilot) => {
     .replaceAll(',', '')
     .replaceAll('(', '')
     .replaceAll(')', '')
+    : nomPropilot
 }
 
 export const testIfNaN = function (float) {

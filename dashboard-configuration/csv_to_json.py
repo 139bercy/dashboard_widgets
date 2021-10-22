@@ -23,7 +23,7 @@ def convert_excel_to_json(path):
     ]
     indicateur_properties = [
         "Code_indicateur",
-        "Nom_indicateur_propilot",
+        # "Nom_indicateur_propilot",
         "Indicateur_principal",
         "Titre_indicateur",
         "Unité_GP",
@@ -46,19 +46,22 @@ def convert_excel_to_json(path):
                 df_indicateur = df_onglet.iloc[indicateur]
                 dict_indicateur = {}
                 for col in indicateur_properties:
-                    dict_indicateur[col] = str(df_indicateur[col])
+                    if not pd.isna(df_indicateur[col]):
+                        dict_indicateur[col] = str(df_indicateur[col])
                 liste_indicateurs += [dict_indicateur]
             for col in onglet_properties:
-                dict_onglet[col] = str(df_onglet[col].iloc[0])
-                if col in ["Carte", "Graph", "Points"]:
-                    if int(df_panneau[col].iloc[0]) == 1:
-                        dict_onglet[col] = True
-                    else:
-                        dict_onglet[col] = False
+                if not pd.isna(df_onglet[col].iloc[0]):
+                    dict_onglet[col] = str(df_onglet[col].iloc[0])
+                    if col in ["Carte", "Graph", "Points"]:
+                        if int(df_panneau[col].iloc[0]) == 1:
+                            dict_onglet[col] = True
+                        else:
+                            dict_onglet[col] = False
             dict_onglet["indicateurs"] = liste_indicateurs
             liste_onglets += [dict_onglet]
         for col in panneau_properties:
-            dict_panneau[col] = str(df_panneau[col].iloc[0])
+            if not pd.isna(df_panneau[col].iloc[0]):
+                dict_panneau[col] = str(df_panneau[col].iloc[0])
         dict_panneau["onglets"] = liste_onglets
         liste_panneaux += [dict_panneau]
     return liste_panneaux

@@ -4,7 +4,7 @@
       <div class="lvl2-header fr-px-2w fr-px-md-3w fr-pt-3w">
         <h3>{{ Titre_panneau }}</h3>
       </div>
-      <div class="fr-tabs">
+      <div class="fr-tabs" :class="{'box-shadow-without-descrption-mesure': !onglets[0].Description_mesure}">
         <ul class="fr-tabs__list" role="tablist" aria-label="changer d'onglet">
           <li role="presentation" v-for="(onglet, indexOnglet) in onglets" :key="indexOnglet"
               :is-selected="currentOnglet === onglet">
@@ -27,14 +27,17 @@
              :aria-selected="currentOnglet === onglet ? 1 : 0">
           <div v-if="currentOnglet.indicateurs.length > 0 && currentOnglet === onglet">
             <line-map-panel :onglet="onglet" :logo="logo" :alt-logo="altLogo" v-if="onglet.Graph || onglet.Carte"></line-map-panel>
-            <MapPointPanel :onglet="onglet" :logo="logo" :alt-logo="altLogo" v-if="onglet.Points ">
+            <MapPointPanel :onglet="onglet" :logo="logo" :alt-logo="altLogo" v-if="onglet.Points">
               <!-- && indicateur_data && this.indicateur_data.points -->
             </MapPointPanel>
           </div>
         </div>
       </div>
     </div>
-    <div class="fr-accordion panel-accordion-extended" :class="{'mobile' : $screen.breakpoint === 'xs' || $screen.breakpoint === 'sm' }">
+    <div
+      class="fr-accordion panel-accordion-extended"
+      :class="{'mobile' : $screen.breakpoint === 'xs' || $screen.breakpoint === 'sm' }"
+      v-if="onglets[0].Description_mesure">
       <h3 class="fr-accordion__title">
         <button class="fr-accordion__btn fr-text--sm"
                 :aria-expanded="accordionOpened"
@@ -120,11 +123,11 @@ export default {
         overflow: hidden;
       }
       & > .fr-tabs {
-        height: calc(100% - 60px);
-        max-height: calc(100% - 60px);
+        height: calc(100% - 40px);
+        max-height: calc(100% - 40px);
         .fr-tabs__panel--selected {
-          height: calc(100% - 60px);
-          max-height: calc(100% - 60px);
+          height: calc(100% - 40px);
+          max-height: calc(100% - 40px);
           > div {
             height: 100%;
             max-height: 100%;
@@ -136,6 +139,10 @@ export default {
   // Gestion de la bordure autour d'un panel
   .fr-tabs {
     transition: none 0s ease 0s;
+
+    &.box-shadow-without-descrption-mesure {
+      box-shadow:  0px 1px var(--boxshadow);
+    }
     .fr-tabs__list {
       &::after {
         box-shadow: inset 1px -1px 0 0 var(--boxshadow), inset -1px 0 0 var(--boxshadow);
@@ -188,6 +195,7 @@ export default {
       box-shadow: inset 1px 0 var(--boxshadow), inset -1px 0 0 var(--boxshadow) !important;
     }
   }
+
   .fr-accordion {
     &.mobile {
       margin-left: calc(50% - 50vw);

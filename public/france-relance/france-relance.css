@@ -1,9 +1,6 @@
 
 .page-content {
 
-  /* overload fonts path, to delete when parent has access */
-  @include dsfr;
-
   --bf500: #009100;
   --bf500-plain: #039103;
   --w-bf500: #fff;
