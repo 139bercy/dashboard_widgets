@@ -27,4 +27,4 @@ pnpm-debug.log*
 */.ipynb_checkpoints
 */.~lock*
 
-public/dashboard-configuration.json
+public/*.json

@@ -20,13 +20,13 @@
 
         <div :id="'tabpanel-' + indexOnglet + '-panel'"
              class="fr-tabs__panel fr-pt-2w fr-mt-3w"
-             :class="{'fr-tabs__panel--selected' : currentOnglet.indicateurs.length > 0 && currentOnglet.Graph && currentOnglet === onglet}"
+             :class="{'fr-tabs__panel--selected' : currentOnglet.indicateurs.length > 0 && currentOnglet === onglet}"
              v-for="(onglet, indexOnglet) in onglets" :key="indexOnglet"
              role="tabpanel"
              :tabindex="currentOnglet === onglet ? 1 : 0"
              :aria-selected="currentOnglet === onglet ? 1 : 0">
-          <div v-if="currentOnglet.indicateurs.length > 0 && currentOnglet.Graph && currentOnglet === onglet">
-            <line-map-panel :onglet="onglet"></line-map-panel>
+          <div v-if="currentOnglet.indicateurs.length > 0 && currentOnglet === onglet">
+            <line-map-panel :onglet="onglet" v-if="onglet.Graph || onglet.Carte"></line-map-panel>
           </div>
         </div>
       </div>
