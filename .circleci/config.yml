@@ -34,6 +34,7 @@ jobs:
               npm run build
         - run:
             name: Réécriture des urls des fichiers dans l'index pour les github pages
+            # TODO Ajouter un sed pour chaque fichier de configuration
             command: |
               sed -e 's|/css/index|css/index|g' -e 's|/js/index|js/index|g' -i dist/index.html
               sed -e 's|/css/index|css/index|g' -e 's|/js/index|js/index|g' -i dist/index-impact.html
