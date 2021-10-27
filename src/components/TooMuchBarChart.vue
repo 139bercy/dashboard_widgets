@@ -28,7 +28,7 @@ import LeftCol from '@/components/LeftCol'
 import { mixin } from '@/utils.js'
 
 export default {
-  name: 'MultiLineChart',
+  name: 'TooMuchBarChart',
   components: {
     LeftCol
   },
@@ -37,9 +37,11 @@ export default {
     return {
       indicateur_data: undefined,
       indicateur_data2: undefined,
+      indicateur_data3: undefined,
       labels: [],
       dataset: [],
       dataset2: [],
+      dataset3: [],
       widgetId: '',
       chartId: '',
       display: '',
@@ -62,6 +64,7 @@ export default {
   props: {
     indicateur1: String,
     indicateur2: String,
+    indicateur3: String,
     interpolation: String,
     topCol: {
       type: Boolean,
@@ -100,6 +103,10 @@ export default {
 
       const promise2 = store.dispatch('getData', this.indicateur2).then(data => {
         this.indicateur_data2 = data
+      })
+
+      const promise3 = store.dispatch('getData', this.indicateur2).then(data => {
+        this.indicateur_data3 = data
       })
 
       Promise.all([promise1, promise2]).then((values) => {
@@ -194,30 +201,84 @@ export default {
 
       this.chart = new Chart(ctx, {
         data: {
-          labels: ['2016','2017', '2018', '2019','2020'],
+          labels:['2016','2017', '2018', '2019','2020'],
+          label:false,
           datasets: [
             {
-              data: self.dataset,
-              backgroundColor: gradientFill,
-              borderColor: '#000091',
-              type: 'line',
-              cubicInterpolationMode: this.interpolation || 'default',
-              pointRadius: 3.5,
-              pointBackgroundColor: 'rgb(0, 0, 145)',
-              pointBorderColor: 'rgb(0, 0, 145)'
+            data: self.dataset,
+            backgroundColor: '#0B2027',
+            borderColor: '#0B2027',
+            type: 'bar',
+            borderWidth:1,
+            barThickness:40
             },
             {
-              data: self.dataset2,
-              backgroundColor: gradientFill2,
-              borderColor: '#007c3a',
-              type: 'line',
-              cubicInterpolationMode: this.interpolation || 'default',
-              pointRadius: 3.5,
-              pointBackgroundColor: 'rgba(0, 124,	58)',
-              pointBorderColor: 'rgb(0, 124,	58)'
-            }
+            data: self.dataset,
+            backgroundColor: '#264d5a',
+            borderColor: '#264d5a',
+            type: 'bar',
+            borderWidth:1,
+            barThickness:40
+            },
+            {
+            data: self.dataset,
+            backgroundColor: '#40798c',
+            borderColor: '#40798c',
+            type: 'bar',
+            borderWidth:1,
+            barThickness:40
+            },
+            { 
+            data: self.dataset,
+            backgroundColor: '#70a9a1',
+            borderColor: '#70a9a1',
+            type: 'bar',
+            borderWidth:1,
+            barThickness:40
+            },
+            {
+            data: self.dataset,
+            backgroundColor: '#A0C0B4',
+            borderColor: '#A0C0B4',
+            type: 'bar',
+            borderWidth:1,
+            barThickness:40
+            },
+            {
+            data: self.dataset,
+            backgroundColor: '#cfd7c7',
+            borderColor: '#cfd7c7',
+            type: 'bar',
+            borderWidth:1,
+            barThickness:40
+            },
+            {
+            data: self.dataset,
+            backgroundColor: '#e3e4cc',
+            borderColor: '#e3e4cc',
+            type: 'bar',
+            borderWidth:1,
+            barThickness:40
+            },
+            {
+            data: self.dataset,
+            backgroundColor: '#f6f1d1',
+            borderColor: '#f6f1d1',
+            type: 'bar',
+            borderWidth:1,
+            barThickness:40
+            },
+
+            {
+            data: self.dataset,
+            backgroundColor: '#007c3a',
+            borderColor: '#007c3a',
+            type: 'bar',
+            borderWidth:1,
+            barThickness:40
+            },
           ]
-        },
+            },
         options: {
           animation: {
             easing: 'easeInOutBack'
@@ -225,38 +286,29 @@ export default {
           maintainAspectRatio: false,
           scales: {
             xAxes: [{
+              offset: true,
+              stacked:true,
+              stackType: '100%',
               gridLines: {
                 color: 'rgba(0, 0, 0, 0)'
               },
               ticks: {
-                autoSkip: true,
+                autoSkip: false,
                 maxTicksLimit: xTickLimit,
                 maxRotation: 0,
                 minRotation: 0,
               }
             }],
             yAxes: [{
+              stacked:true,
+              stackType: '100%',
               gridLines: {
                 color: '#e5e5e5',
                 borderDash: [3]
               },
               ticks: {
-                autoSkip: false,
-                maxTicksLimit: 5,
-                callback: function (value) {
-                  value = parseFloat(value)
-                  if (value / 1000000000 >= 1) {
-                    return Intl.NumberFormat().format(value / 1000000000) + ' Mrds'
-                  } else if (value / 1000000 >= 1) {
-                    return Intl.NumberFormat().format(value / 1000000) + ' M'
-                  } else if (value / 1000 >= 1) {
-                    return Intl.NumberFormat().format(value / 1000) + ' K'
-                  }
-                  return Intl.NumberFormat().format(value)
-                }
-              },
-              afterFit: function (axis) {
-                self.legendLeftMargin = axis.width
+                autoSkip: true,
+                maxTicksLimit: 5
               }
             }]
           },
@@ -266,9 +318,18 @@ export default {
           tooltips: {
             displayColors: false,
             backgroundColor: '#6b6b6b',
-
-              
-            
+            callbacks: {
+              label: function (tooltipItems) {
+                const int = self.convertFloatToHuman(tooltipItems.value)
+                return int + ' ' + self.units[tooltipItems.datasetIndex]
+              },
+              title: function (tooltipItems) {
+                return tooltipItems[0].label
+              },
+              labelTextColor: function () {
+                return '#eeeeee'
+              }
+            }
           }
         }
       })

@@ -14,7 +14,7 @@
             :indicateur="indicateurCode1"
             :top-col="false"
             :left-col="false"
-            v-if="indicateur_data && !indicateur_data2">
+            v-if="indicateur_data && !indicateur_data2 && onglet.Graph">
         </line-chart>
         <multi-line-chart
             class="chart-container"
@@ -25,6 +25,29 @@
             :left-col="false"
             v-if="indicateur_data2">
         </multi-line-chart>
+        <multi-bar-chart
+            class="chart-container"
+            interpolation="monotone"
+            :indicateur1="indicateurCode1"
+            :indicateur2="indicateurCode2"
+            :top-col="false"
+            :left-col="false"
+            v-if="indicateur_data2 && onglet.Points">
+        </multi-bar-chart>
+          <bar-chart
+            class="chart-container"
+            :indicateur="indicateurCode1"
+            :top-col="false"
+            :left-col="false"
+            v-if="indicateur_data && !indicateur_data2 && onglet.Points">
+        </bar-chart>
+          <too-much-bar-chart
+            class="chart-container"
+            :indicateur="indicateurCode1"
+            :top-col="false"
+            :left-col="false"
+            v-if="indicateur_data && !indicateur_data2 && onglet.Points">
+        </too-much-bar-chart>
         <map-chart
             class="map-container fr-col-12"
             :indicateur="indicateurCode1"
@@ -34,9 +57,29 @@
             :DOMTOMBottom="true"
             v-if="onglet.Carte && indicateur_data && this.indicateur_data.departements">
         </map-chart>
+
+        <!-- line-chart avec corde plus tendu-->
+        <!--
+        <line-chart
+            class="chart-container"
+            :indicateur="indicateurCode1"
+            :top-col="false"
+            :left-col="false"
+            v-if="indicateur_data && !indicateur_data2">
+        </line-chart>
+        -->
+        <!-- 
+        <data-box
+            class="chart-container"
+            :indicateur="indicateurCode1"
+            :top-col="false"
+            :left-col="false"
+            v-if="indicateur_data && !indicateur_data2">
+        </data-box> 
+        -->
       </div>
       <left-col class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColPropsNotLargeMap"
-                v-if="$screen.breakpoint !== 'lg' && this.indicateur_data && this.indicateur_data.departements"></left-col>
+                v-if="$screen.breakpoint !== 'lg' && this.indicateur_data && this.indicateur_data.departements && onglet.Carte"></left-col>
     </div>
     <div v-else-if="loading">
       Récupération des données en cours
@@ -55,6 +98,9 @@ import MultiLineChart from './MultiLineChart.vue'
 import MapChart from './MapChart.vue'
 import { mixin } from '@/utils.js'
 import LeftCol from './LeftCol'
+import BarChart from './BarChart.vue'
+import MultiBarChart from './MultiBarChart.vue'
+import TooMuchBarChart from './TooMuchBarChart.vue'
 
 export default {
   name: 'LineMapPanel',
@@ -64,7 +110,10 @@ export default {
     LeftCol,
     LineChart,
     MultiLineChart,
-    MapChart
+    MapChart,
+    BarChart,
+    MultiBarChart,
+    TooMuchBarChart
   },
   props: {
     index: String,
@@ -238,7 +287,7 @@ export default {
       this.dataset2 = []
 
       geoObject.values.forEach(function (d) {
-        self.labels.push(self.convertDateToHuman(d.date))
+        self.labels.push(['2016','2017', '2018', '2019','2020'])
         self.dataset.push((d.value))
 
         if (geoObject2) {

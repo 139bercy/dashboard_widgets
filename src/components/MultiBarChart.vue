@@ -215,9 +215,6 @@ export default {
             }
           ]
             },
-         chart: {
-      stackType: '100%'
-          },  
         options: {
           animation: {
             easing: 'easeInOutBack'

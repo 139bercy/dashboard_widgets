@@ -28,7 +28,7 @@ import LeftCol from '@/components/LeftCol'
 import { mixin } from '@/utils.js'
 
 export default {
-  name: 'LineChart',
+  name: 'Doughnut',
   components: {
     LeftCol
   },
@@ -189,81 +189,19 @@ export default {
 
       this.chart = new Chart(ctx, {
         data: {
-          labels: ['2016','2017', '2018', '2019','2020'],
           datasets: [{
             data: self.dataset,
             backgroundColor: gradientFill,
             borderColor: '#000091',
-            type: 'line',
-            cubicInterpolationMode: this.interpolation || 'default',
-            pointRadius: 3.5,
-            pointBackgroundColor: 'rgb(0, 0, 145)',
-            pointBorderColor: 'rgb(0, 0, 145)',
-            tension: 0.1
+            type: 'doughnut',
           }]
         },
         options: {
-          animation: {
-            easing: 'easeInOutBack'
-          },
           maintainAspectRatio: false,
-          scales: {
-            xAxes: [{
-              gridLines: {
-                color: 'rgba(0, 0, 0,0)'
-              },
-              ticks: {
-                autoSkip: false,
-                maxTicksLimit: xTickLimit,
-                maxRotation: 0,
-                minRotation: 0,
-              }
-            }],
-            yAxes: [{
-              gridLines: {
-                color: '#e5e5e5',
-                borderDash: [3],
-                beginAtZero: true
-              },
-              ticks: {
-                autoSkip: true,
-                maxTicksLimit: 5,
-                callback: function (value) {
-                  value = parseFloat(value)
-                  if (value / 1000000000 >= 1) {
-                    return Intl.NumberFormat().format(value / 1000000000) + ' Mrds'
-                  } else if (value / 1000000 >= 1) {
-                    return Intl.NumberFormat().format(value / 1000000) + ' M'
-                  } else if (value / 1000 >= 1) {
-                    return Intl.NumberFormat().format(value / 1000) + ' K'
-                  }
-                  return Intl.NumberFormat().format(value)
-                }
-              },
-              afterFit: function (axis) {
-                self.legendLeftMargin = axis.width
-              }
-            }]
-          },
           legend: {
             display: false
           },
-          tooltips: {
-            displayColors: false,
-            backgroundColor: '#6b6b6b',
-            callbacks: {
-              label: function (tooltipItems) {
-                const int = self.convertFloatToHuman(tooltipItems.value)
-                return int + ' ' + self.units[0]
-              },
-              title: function (tooltipItems) {
-                return tooltipItems[0].label
-              },
-              labelTextColor: function () {
-                return '#eeeeee'
-              }
-            }
-          }
+          
         }
       })
     }

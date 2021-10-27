@@ -13,10 +13,10 @@
     <div class="r_col fr-col-12 fr-col-lg-9">
       <div class="chart ml-lg">
         <canvas :id="chartId"></canvas>
-        <div class="flex fr-mt-3v" :style="style">
+<!--        <div class="flex fr-mt-3v" :style="style">
           <span class="legende_dot"></span>
           <p class="fr-text--sm fr-text--bold fr-ml-1v fr-mb-0">{{capitalize(units[0])}}</p>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -186,13 +186,15 @@ export default {
 
       this.chart = new Chart(ctx, {
         data: {
-          labels: self.labels,
+          labels:['2016','2017', '2018', '2019','2020'],
+          label:false,
           datasets: [{
             data: self.dataset,
-            backgroundColor: '#000091',
+            backgroundColor: 'rgba(0, 0, 145,0.5)',
             borderColor: '#000091',
             type: 'bar',
-            borderWidth: 4
+            borderWidth:1,
+            barThickness:40
           }]
         },
         options: {
@@ -202,17 +204,15 @@ export default {
 
           scales: {
             xAxes: [{
+              offset: true,
               gridLines: {
                 color: 'rgba(0, 0, 0, 0)'
               },
               ticks: {
-                autoSkip: true,
+                autoSkip: false,
                 maxTicksLimit: xTickLimit,
                 maxRotation: 0,
                 minRotation: 0,
-                callback: function (value) {
-                  return value.toString().substring(3, 5) + '/' + value.toString().substring(8, 10)
-                }
               }
             }],
             yAxes: [{
@@ -300,6 +300,7 @@ export default {
     }
     .ml-lg {
       margin-left:0;
+      margin-bottom: 20px;
     }
     @media (min-width: 62em) {
       .ml-lg {
