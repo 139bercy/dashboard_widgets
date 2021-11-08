@@ -1,0 +1,27 @@
+{
+  "datasets": [
+    {
+    "pointRadius": 3.5,
+    "pointBackgroundColor": "rgb(0, 0, 145)",
+    "pointBorderColor": "rgb(0, 0, 145)",
+    "tension": 0.1
+    },
+    {
+      "pointRadius": 3.5,
+      "pointBackgroundColor": "rgb(0, 124, 58)",
+      "pointBorderColor": "rgb(0, 124, 58)"
+    }
+  ],
+  "options": {
+    "scales": {
+      "xAxes": [{
+        "ticks": {
+          "autoSkip": false
+        }
+      }],
+      "yAxes": [{
+        "beginAtZero": true
+      }]
+    }
+  }
+}

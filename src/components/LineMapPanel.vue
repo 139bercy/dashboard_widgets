@@ -11,6 +11,7 @@
         <line-chart
             class="chart-container"
             interpolation="monotone"
+            :line-chart-configuration="lineChartConfiguration"
             :indicateur="indicateurCode1"
             :top-col="false"
             :left-col="false"
@@ -19,6 +20,7 @@
         <multi-line-chart
             class="chart-container"
             interpolation="monotone"
+            :line-chart-configuration="lineChartConfiguration"
             :indicateur1="indicateurCode1"
             :indicateur2="indicateurCode2"
             :top-col="false"
@@ -72,7 +74,8 @@ export default {
     Lien_page_mesure: String,
     onglet: Object,
     logo: String,
-    altLogo: String
+    altLogo: String,
+    lineChartConfiguration: Object
   },
   data() {
     return {

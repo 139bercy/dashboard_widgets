@@ -34,6 +34,7 @@ export const toJsonNameFormat = (nomPropilot) => {
     .replaceAll(',', '')
     .replaceAll('(', '')
     .replaceAll(')', '')
+    .replaceAll(':', '')
     : nomPropilot
 }
 

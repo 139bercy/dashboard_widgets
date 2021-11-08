@@ -17,6 +17,8 @@ def convert_excel_to_json(path):
     onglet_properties = [
         "Carte",
         "Graph",
+        "Bar",
+        "Box",
         "Points",
         "Description_mesure",
         "Titre_onglet"
@@ -52,7 +54,7 @@ def convert_excel_to_json(path):
             for col in onglet_properties:
                 if not pd.isna(df_onglet[col].iloc[0]):
                     dict_onglet[col] = str(df_onglet[col].iloc[0])
-                    if col in ["Carte", "Graph", "Points"]:
+                    if col in ["Carte", "Graph", "Points", "Bar", "Box"]:
                         if int(df_panneau[col].iloc[0]) == 1:
                             dict_onglet[col] = True
                         else:

@@ -73,7 +73,8 @@ export default {
     bottomCol: {
       type: Boolean,
       default: false
-    }
+    },
+    lineChartConfiguration: Object
   },
   computed: {
     selectedGeoLevel () {
@@ -87,7 +88,16 @@ export default {
     },
     style () {
       return 'margin-left: ' + this.legendLeftMargin + 'px'
-    }
+    },
+    lineChartConfigurationOptions () {
+      return this.lineChartConfiguration && this.lineChartConfiguration.options
+        ? this.lineChartConfiguration.options
+        : {}
+    },
+    lineChartConfigurationDatasets1 () {
+      return this.lineChartConfiguration && this.lineChartConfiguration.datasets && this.lineChartConfiguration.datasets.length >= 1
+        ? this.lineChartConfiguration.datasets[0] : {}
+    },
   },
   methods: {
     async getData () {
@@ -192,18 +202,20 @@ export default {
       this.chart = new Chart(ctx, {
         data: {
           labels: self.labels,
-          datasets: [{
-            data: self.dataset,
-            backgroundColor: gradientFill,
-            borderColor: '#000091',
-            type: 'line',
-            cubicInterpolationMode: this.interpolation || 'default',
-            pointRadius: 8,
-            pointBackgroundColor: 'rgba(0, 0, 0, 0)',
-            pointBorderColor: 'rgba(0, 0, 0, 0)'
-          }]
+          datasets: [
+            Object.assign({
+              data: self.dataset,
+              backgroundColor: gradientFill,
+              borderColor: '#000091',
+              type: 'line',
+              cubicInterpolationMode: this.interpolation || 'default',
+              pointRadius: 8,
+              pointBackgroundColor: 'rgba(0, 0, 0, 0)',
+              pointBorderColor: 'rgba(0, 0, 0, 0)'
+            }, this.lineChartConfigurationDatasets1)
+          ]
         },
-        options: {
+        options: Object.assign({
           animation: {
             easing: 'easeInOutBack'
           },
@@ -267,7 +279,7 @@ export default {
               }
             }
           }
-        }
+        }, this.lineChartConfigurationOptions)
       })
     }
   },

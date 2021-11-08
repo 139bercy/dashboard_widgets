@@ -26,7 +26,12 @@
              :tabindex="currentOnglet === onglet ? 1 : 0"
              :aria-selected="currentOnglet === onglet ? 1 : 0">
           <div v-if="currentOnglet.indicateurs.length > 0 && currentOnglet === onglet">
-            <line-map-panel :onglet="onglet" :logo="logo" :alt-logo="altLogo" v-if="onglet.Graph || onglet.Carte"></line-map-panel>
+            <line-map-panel
+              :onglet="onglet"
+              :logo="logo" :alt-logo="altLogo"
+              :line-chart-configuration="lineChartConfiguration"
+              v-if="chartPanel">
+            </line-map-panel>
             <MapPointPanel :onglet="onglet" :logo="logo" :alt-logo="altLogo" v-if="onglet.Points">
               <!-- && indicateur_data && this.indicateur_data.points -->
             </MapPointPanel>
@@ -82,7 +87,8 @@ export default {
     source: String,
     onglets: Array,
     logo: String,
-    altLogo: String
+    altLogo: String,
+    lineChartConfiguration: Object
   },
   data() {
     return {
@@ -91,6 +97,9 @@ export default {
     }
   },
   computed: {
+    chartPanel() {
+      return this.currentOnglet.Carte  || this.currentOnglet.Graph  || this.currentOnglet.Bar
+    },
     onlyOneElement() {
       return this.currentOnglet.Carte && !this.currentOnglet.Graph && !this.currentOnglet.Points
       || !this.currentOnglet.Carte && this.currentOnglet.Graph && !this.currentOnglet.Points
