@@ -1,6 +1,6 @@
 <template>
 
-  <div class="data_box fr-p-3w" :data-display="display" :id="widgetId" v-bind:class="{'green':isGreen,'red':isRed, 'loading':loading}">
+  <div class="data_box" :data-display="display" :id="widgetId" v-bind:class="{'green':isGreen,'red':isRed, 'loading':loading}">
 
     <p class="l_box_title fr-text--xs fr-mb-0">Mise à jour : {{currentDate}}</p>
     <p class="fr-text--sm fr-text--bold fr-my-1w">{{name}}</p>
@@ -99,7 +99,7 @@ export default {
     },
 
     async getData () {
-      store.dispatch('getData', this.indicateur + '_short').then(data => {
+      store.dispatch('getData', this.indicateur).then(data => {
         this.indicateur_data = data
         this.loading = false
         this.updateData()

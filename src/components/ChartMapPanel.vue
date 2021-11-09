@@ -43,7 +43,8 @@
             :indicateur="indicateurCode1"
             :left-col="false"
             :DOMTOMBottom="true"
-            v-if="onglet.Carte && indicateur_data && this.indicateur_data.departements">
+            :min-geo-level="onglet.MinGeoLevel"
+            v-if="onglet.Carte && indicateur_data && this.indicateur_data[onglet.MinGeoLevel]">
         </MapChart>
       </div>
       <left-col class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColPropsNotLargeMap"
@@ -101,7 +102,6 @@ export default {
       leftColProps: {
         min: 0,
         max: 0,
-        isMap: false,
         date: null,
         localisation: null,
         currentValues: [],
@@ -109,7 +109,10 @@ export default {
         names: null,
         evolcodes: null,
         evolvalues: null,
-        units: []
+        isMap: false,
+        isBox: false,
+        units: [],
+        unitsEvol: []
       },
     }
   },
@@ -145,8 +148,10 @@ export default {
         evolcodes: this.leftColProps.evolcodes,
         evolvalues: this.leftColProps.evolvalues,
         units: this.leftColProps.units,
+        unitsEvol: this.leftColProps.unitsEvol,
         logo: this.logo,
-        altLogo: this.altLogo
+        altLogo: this.altLogo,
+        isBox: this.leftColProps.isBox
       }
     },
     leftColPropsNotLargeMap() {
@@ -154,6 +159,7 @@ export default {
         min: this.leftColProps.min,
         max: this.leftColProps.max,
         isMap: true,
+        isBox: false,
         logo: this.logo,
         altLogo: this.altLogo
       }
@@ -204,6 +210,8 @@ export default {
       let oldLocalisation = this.leftColProps.localisation
       this.leftColProps.localisation = this.selectedGeoLabel
 
+      this.leftColProps.isBox = this.onglet.Box
+
       const geolevel = this.selectedGeoLevel
       const geocode = this.selectedGeoCode
 
@@ -234,13 +242,16 @@ export default {
       this.leftColProps.currentValues = []
       this.leftColProps.evolcodes = []
       this.leftColProps.evolvalues = []
+      this.leftColProps.unitsEvol = []
 
       this.leftColProps.names.push(this.indicateurName1)
       this.leftColProps.units.push(this.onglet.indicateurs[0]["Unité_GP"])
+      this.leftColProps.unitsEvol.push(this.onglet.indicateurs[0]["Unité_Evol"])
       this.leftColProps.currentValues.push(geoObject.last_value)
       if (this.indicateur_data2) {
         this.leftColProps.names.push(this.indicateurName2)
         this.leftColProps.units.push(this.onglet.indicateurs[1]["Unité_GP"])
+        this.leftColProps.unitsEvol.push(this.onglet.indicateurs[1]["Unité_Evol"])
         this.leftColProps.currentValues.push(geoObject2.last_value)
       }
       this.leftColProps.currentDate = this.convertDateToHuman(geoObject.last_date)

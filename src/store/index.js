@@ -5,14 +5,15 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    dep: [],
-    reg: [],
+    departements: [],
+    regions: [],
     promises: {},
     data: {},
     user: {
       selectedGeoLevel: 'France',
       selectedGeoCode: '01',
-      selectedGeoLabel: 'France entière'
+      selectedGeoLabel: 'France entière',
+      geoLevelOrder: ["departements", "regions", "France"]
     },
     dataset: 'relance-tableau-de-bord'
   },
@@ -22,7 +23,7 @@ export default new Vuex.Store({
         return state.promises[indicator]
       }
 
-      const url = `https://data.economie.gouv.fr/api/v2/catalog/datasets/${state.data.dataset}/exports/json?limit=-1&pretty=false&where=code%20LIKE%20'${indicator}'`
+      const url = `https://data.economie.gouv.fr/api/v2/catalog/datasets/${state.dataset}/exports/json?limit=-1&pretty=false&where=code%20LIKE%20'${indicator}'`
       // const url = `https://data.economie.gouv.fr/api/v2/catalog/datasets/plan-de-relance-tableau-de-bord/exports/json?where=code%20LIKE%20'${indicator}'&limit=-1&pretty=false`
       const promise = fetch(url).then(res => {
         return res.json()
@@ -64,10 +65,10 @@ export default new Vuex.Store({
       state.data[payload.indicator] = payload.data
     },
     initDep (state, dep) {
-      state.dep = dep
+      state.departements = dep
     },
     initReg (state, reg) {
-      state.reg = reg
+      state.regions = reg
     },
     setUserChoices (state, payload) {
       state.user.selectedGeoLevel = payload.level
@@ -75,7 +76,7 @@ export default new Vuex.Store({
       state.user.selectedGeoLabel = payload.label
     },
     setDataset (state, dataset) {
-      state.data.dataset = dataset
+      state.dataset = dataset
     }
   }
 })

@@ -1,6 +1,6 @@
 <template>
   <div :id="'panel_' + toJsonNameFormat(Titre_panneau)" class="panel">
-    <div :class="{'full-page-lg': $screen.breakpoint === 'lg', 'only-one-element': onlyOneElement && !points}">
+    <div :class="{'full-page-lg': $screen.breakpoint === 'lg', 'only-one-element': onlyOneElement && !points, 'flex-data-boxes': onlyBoxes}">
       <div class="lvl2-header fr-px-2w fr-px-md-3w fr-pt-3w">
         <h3>{{ Titre_panneau }}</h3>
       </div>
@@ -38,6 +38,11 @@
               :logo="logo" :alt-logo="altLogo"
               v-if="onglet.Points">
             </MapPointPanel>
+            <DataBoxes
+              :onglet="onglet"
+              :logo="logo" :alt-logo="altLogo"
+              v-if="onglet.Box && !onglet.Graph && !onglet.Bar">
+            </DataBoxes>
           </div>
         </div>
       </div>
@@ -75,13 +80,15 @@
 import { mixin } from '@/utils.js'
 import ChartMapPanel from './ChartMapPanel'
 import MapPointPanel from './MapPointPanel.vue'
+import DataBoxes from './DataBoxes.vue'
 
 export default {
   name: 'Panel',
   mixins: [mixin],
   components: {
     ChartMapPanel,
-    MapPointPanel
+    MapPointPanel,
+    DataBoxes
   },
   props: {
     index: String,
@@ -108,7 +115,9 @@ export default {
       return this.currentOnglet.Carte && !this.currentOnglet.Graph && !this.currentOnglet.Bar
       || !this.currentOnglet.Carte && this.currentOnglet.Graph && !this.currentOnglet.Bar
       || !this.currentOnglet.Carte && !this.currentOnglet.Graph && this.currentOnglet.Bar
-      || !this.currentOnglet.Carte && !this.currentOnglet.Graph && !this.currentOnglet.Bar
+    },
+    onlyBoxes() {
+      return this.currentOnglet.Box && !this.currentOnglet.Graph
     },
     points() {
       return this.currentOnglet.Points
@@ -124,7 +133,7 @@ export default {
   // Gestion du positionnement sur grand écran (breakpoint lg)
   @media (min-width: 62em) {
     .full-page-lg {
-      &:not(.only-one-element) {
+      &:not(.only-one-element):not(.flex-data-boxes) {
         height: 97vh;
         max-height: 97vh;
         overflow: hidden;

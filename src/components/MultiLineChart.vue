@@ -317,7 +317,7 @@ export default {
         width: 1rem;
         height: 1rem;
         border-radius: 50%;
-        background-color: #000091;
+        background-color: var(--bg500-plain);
         display: inline-block;
         margin-top: 0.25rem;
 

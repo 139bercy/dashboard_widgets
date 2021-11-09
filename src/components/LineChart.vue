@@ -106,7 +106,7 @@ export default {
           this.geoFallback = true
           this.geoFallbackMsg = 'Affichage des résultats au niveau national, faute de données au niveau régional'
         } else {
-          const depObj = store.state.dep.find(obj => {
+          const depObj = store.state.departements.find(obj => {
             return obj.value === geocode
           })
           geoObject = this.getGeoObject('regions', depObj.region_value)
@@ -337,7 +337,7 @@ export default {
           height: 1rem;
           min-width: 1rem;
           border-radius: 50%;
-          background-color: #000091;
+          background-color: var(--bg500-plain);
           display: inline-block;
           margin-top: 0.25rem;
         }
