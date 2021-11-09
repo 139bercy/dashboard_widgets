@@ -47,7 +47,7 @@
         </MapChart>
       </div>
       <left-col class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColPropsNotLargeMap"
-                v-if="$screen.breakpoint !== 'lg' && this.indicateur_data && this.indicateur_data.departements"></left-col>
+                v-if="$screen.breakpoint !== 'lg' && this.indicateur_data && this.indicateur_data.departements && onglet.Carte"></left-col>
     </div>
     <div v-else-if="loading">
       Récupération des données en cours
@@ -101,7 +101,7 @@ export default {
       leftColProps: {
         min: 0,
         max: 0,
-        isMap: true,
+        isMap: false,
         date: null,
         localisation: null,
         currentValues: [],
@@ -284,6 +284,7 @@ export default {
 
       this.leftColProps.min = Math.min.apply(null, values)
       this.leftColProps.max = Math.max.apply(null, values)
+      this.leftColProps.isMap = this.onglet.Carte
     }
   },
   created() {
@@ -304,6 +305,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 .chart-map-panel {
+  .map-legend {
+    height: 100%;
+    overflow: auto;
+  }
   &.panel-full-page-lg {
     height: 100%;
     max-height: 100%;

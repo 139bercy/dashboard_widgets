@@ -131,8 +131,8 @@ export default {
       }
       &.only-one-element {
         // TODO handle multiple indicateurs !!
-        height: 100vh;
-        max-height: 100vh;
+        height: 50vh;
+        max-height: 50vh;
         overflow: hidden;
       }
       & > .fr-tabs {
