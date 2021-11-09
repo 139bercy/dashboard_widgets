@@ -1,0 +1,14 @@
+{
+  "options": {
+    "scales": {
+      "xAxes": [{
+        "ticks": {
+          "callback": "function (value) {return new Date(value).getFullYear();}"
+        }
+      }],
+      "yAxes": [{
+        "beginAtZero": true
+      }]
+    }
+  }
+}

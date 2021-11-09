@@ -26,14 +26,17 @@
              :tabindex="currentOnglet === onglet ? 1 : 0"
              :aria-selected="currentOnglet === onglet ? 1 : 0">
           <div v-if="currentOnglet.indicateurs.length > 0 && currentOnglet === onglet">
-            <line-map-panel
+            <ChartMapPanel
               :onglet="onglet"
               :logo="logo" :alt-logo="altLogo"
               :line-chart-configuration="lineChartConfiguration"
+              :bar-chart-configuration="barChartConfiguration"
               v-if="chartPanel">
-            </line-map-panel>
-            <MapPointPanel :onglet="onglet" :logo="logo" :alt-logo="altLogo" v-if="onglet.Points">
-              <!-- && indicateur_data && this.indicateur_data.points -->
+            </ChartMapPanel>
+            <MapPointPanel
+              :onglet="onglet"
+              :logo="logo" :alt-logo="altLogo"
+              v-if="onglet.Points">
             </MapPointPanel>
           </div>
         </div>
@@ -70,14 +73,14 @@
 <script>
 
 import { mixin } from '@/utils.js'
-import LineMapPanel from './LineMapPanel'
+import ChartMapPanel from './ChartMapPanel'
 import MapPointPanel from './MapPointPanel.vue'
 
 export default {
   name: 'Panel',
   mixins: [mixin],
   components: {
-    LineMapPanel,
+    ChartMapPanel,
     MapPointPanel
   },
   props: {
@@ -88,7 +91,8 @@ export default {
     onglets: Array,
     logo: String,
     altLogo: String,
-    lineChartConfiguration: Object
+    lineChartConfiguration: Object,
+    barChartConfiguration: Object
   },
   data() {
     return {
@@ -101,14 +105,13 @@ export default {
       return this.currentOnglet.Carte  || this.currentOnglet.Graph  || this.currentOnglet.Bar
     },
     onlyOneElement() {
-      return this.currentOnglet.Carte && !this.currentOnglet.Graph && !this.currentOnglet.Points
-      || !this.currentOnglet.Carte && this.currentOnglet.Graph && !this.currentOnglet.Points
-      || !this.currentOnglet.Carte && !this.currentOnglet.Graph && this.currentOnglet.Points
+      return this.currentOnglet.Carte && !this.currentOnglet.Graph && !this.currentOnglet.Bar
+      || !this.currentOnglet.Carte && this.currentOnglet.Graph && !this.currentOnglet.Bar
+      || !this.currentOnglet.Carte && !this.currentOnglet.Graph && this.currentOnglet.Bar
+      || !this.currentOnglet.Carte && !this.currentOnglet.Graph && !this.currentOnglet.Bar
     },
     points() {
-      return this.currentOnglet.Carte && !this.currentOnglet.Graph && !this.currentOnglet.Points
-      || !this.currentOnglet.Carte && this.currentOnglet.Graph && !this.currentOnglet.Points
-      || !this.currentOnglet.Carte && !this.currentOnglet.Graph && this.currentOnglet.Points
+      return this.currentOnglet.Points
     }
   },
   methods: {}
@@ -127,8 +130,9 @@ export default {
         overflow: hidden;
       }
       &.only-one-element {
-        height: 45vh;
-        max-height: 45vh;
+        // TODO handle multiple indicateurs !!
+        height: 100vh;
+        max-height: 100vh;
         overflow: hidden;
       }
       & > .fr-tabs {

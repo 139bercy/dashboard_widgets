@@ -8,15 +8,10 @@
         <p class="fr-text--sm fr-mb-0 fr-p-3v">{{geoFallbackMsg}}
         </p>
     </div>
-    <LeftCol :data-display="display" :props="leftColProps"></LeftCol>
     <LeftCol v-bind="leftColProps" v-if="leftCol"></LeftCol>
-    <div class="r_col fr-col-12 fr-col-lg-9">
+    <div class="r_col fr-col-12" :class="{'fr-col-lg-9': leftCol}">
       <div class="chart ml-lg">
         <canvas :id="chartId"></canvas>
-        <div class="flex fr-mt-3v" :style="style">
-          <span class="legende_dot"></span>
-          <p class="fr-text--sm fr-text--bold fr-ml-1v fr-mb-0">{{capitalize(units[0])}}</p>
-        </div>
       </div>
     </div>
   </div>
@@ -61,18 +56,11 @@ export default {
   },
   props: {
     indicateur: String,
-    topCol: {
-      type: Boolean,
-      default: false
-    },
     leftCol: {
       type: Boolean,
       default: true
     },
-    bottomCol: {
-      type: Boolean,
-      default: false
-    }
+    barChartConfiguration: Object
   },
   computed: {
     selectedGeoLevel () {
@@ -86,6 +74,16 @@ export default {
     },
     style () {
       return 'margin-left: ' + this.legendLeftMargin + 'px'
+    },
+    barCharConfigurationDataset () {
+      return this.barChartConfiguration && this.barChartConfiguration.dataset
+        ? this.barChartConfiguration.dataset
+        : {}
+    },
+    barCharConfigurationOptions () {
+      return this.barChartConfiguration && this.barChartConfiguration.options
+        ? this.barChartConfiguration.options
+        : {}
     }
 
   },
@@ -111,29 +109,6 @@ export default {
 
       geoObject = this.getGeoObject(geolevel, geocode)
       this.leftColProps.date = this.convertDateToHuman(geoObject.last_date)
-
-      if (typeof geoObject === 'undefined') {
-        if (geolevel === 'regions') {
-          geoObject = this.getGeoObject('France', '01')
-          this.leftColProps.localisation = 'France entière'
-          this.geoFallback = true
-          this.geoFallbackMsg = 'Affichage des résultats au niveau national, faute de données au niveau régional'
-        } else {
-          const depObj = store.state.dep.find(obj => {
-            return obj.value === geocode
-          })
-          geoObject = this.getGeoObject('regions', depObj.region_value)
-          this.leftColProps.localisation = depObj.region
-          this.geoFallback = true
-          this.geoFallbackMsg = 'Affichage des résultats au niveau régional, faute de données au niveau départemental'
-          if (typeof geoObject === 'undefined') {
-            geoObject = this.getGeoObject('France', '01')
-            this.leftColProps.localisation = 'France entière'
-            this.geoFallback = true
-            this.geoFallbackMsg = 'Affichage des résultats au niveau national, faute de données au niveau régional ou départemental'
-          }
-        }
-      }
 
       this.leftColProps.names.length = 0
       this.units.length = 0
@@ -166,6 +141,29 @@ export default {
           return obj.code_level === geocode
         })
       }
+
+      if (typeof geoObject === 'undefined') {
+        if (geolevel === 'regions') {
+          geoObject = this.getGeoObject('France', '01')
+          this.leftColProps.localisation = 'France entière'
+          this.geoFallback = true
+          this.geoFallbackMsg = 'Affichage des résultats au niveau national, faute de données au niveau régional'
+        } else {
+          const depObj = store.state.dep.find(obj => {
+            return obj.value === geocode
+          })
+          geoObject = this.getGeoObject('regions', depObj.region_value)
+          this.leftColProps.localisation = depObj.region
+          this.geoFallback = true
+          this.geoFallbackMsg = 'Affichage des résultats au niveau régional, faute de données au niveau départemental'
+          if (typeof geoObject === 'undefined') {
+            geoObject = this.getGeoObject('France', '01')
+            this.leftColProps.localisation = 'France entière'
+            this.geoFallback = true
+            this.geoFallbackMsg = 'Affichage des résultats au niveau national, faute de données au niveau régional ou départemental'
+          }
+        }
+      }
       return geoObject
     },
 
@@ -187,15 +185,17 @@ export default {
       this.chart = new Chart(ctx, {
         data: {
           labels: self.labels,
-          datasets: [{
-            data: self.dataset,
-            backgroundColor: '#000091',
-            borderColor: '#000091',
-            type: 'bar',
-            borderWidth: 4
-          }]
+          datasets: [
+            Object.assign({
+              data: self.dataset,
+              backgroundColor: '#000091',
+              borderColor: '#000091',
+              type: 'bar',
+              borderWidth: 4
+            }, this.barCharConfigurationDataset)
+          ]
         },
-        options: {
+        options: Object.assign({
           animation: {
             easing: 'easeInOutBack'
           },
@@ -212,6 +212,7 @@ export default {
                 minRotation: 0,
                 callback: function (value) {
                   return value.toString().substring(3, 5) + '/' + value.toString().substring(8, 10)
+                  // return new Date(value).getFullYear()
                 }
               }
             }],
@@ -235,7 +236,7 @@ export default {
             callbacks: {
               label: function (tooltipItems) {
                 const int = self.convertStringToLocaleNumber(tooltipItems.value)
-                return int + ' ' + self.unit
+                return int + ' ' + self.units[0]
               },
               title: function (tooltipItems) {
                 return tooltipItems[0].label
@@ -245,7 +246,7 @@ export default {
               }
             }
           }
-        }
+        }, this.barChartConfigurationOptions)
       })
     }
   },

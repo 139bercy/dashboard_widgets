@@ -97,17 +97,9 @@ export default {
   },
   props: {
     indicateur: String,
-    topCol: {
-      type: Boolean,
-      default: false
-    },
     leftCol: {
       type: Boolean,
       default: true
-    },
-    bottomCol: {
-      type: Boolean,
-      default: false
     },
     DOMTOMBottom: {
       type: Boolean,

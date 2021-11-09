@@ -1,5 +1,5 @@
 <template>
-  <div class="line-map-panel" :class="{'panel-full-page-lg': $screen.breakpoint === 'lg', 'only-one-element' : onlyOneElement}">
+  <div class="chart-map-panel" :class="{'panel-full-page-lg': $screen.breakpoint === 'lg', 'only-one-element' : onlyOneElement}">
     <div v-if="indicateur_data && !loading" class="fr-grid-row">
       <left-col class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColProps" :logo="logo" :alt-logo="altLogo"
                 v-if="$screen.breakpoint === 'lg' && this.indicateur_data && this.indicateur_data.departements"></left-col>
@@ -8,34 +8,43 @@
       <left-col class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColPropsNotLargeChart"
                 v-if="$screen.breakpoint !== 'lg'"></left-col>
       <div class="line-map-container fr-col-12 fr-col-lg-9" v-if="onglet.indicateurs.length > 0">
-        <line-chart
+        <LineChart
             class="chart-container"
-            interpolation="monotone"
             :line-chart-configuration="lineChartConfiguration"
             :indicateur="indicateurCode1"
-            :top-col="false"
             :left-col="false"
-            v-if="indicateur_data && !indicateur_data2">
-        </line-chart>
-        <multi-line-chart
+            v-if="indicateur_data && !indicateur_data2 && onglet.Graph">
+        </LineChart>
+        <MultiLineChart
             class="chart-container"
-            interpolation="monotone"
             :line-chart-configuration="lineChartConfiguration"
             :indicateur1="indicateurCode1"
             :indicateur2="indicateurCode2"
-            :top-col="false"
             :left-col="false"
-            v-if="indicateur_data2">
-        </multi-line-chart>
-        <map-chart
+            v-if="indicateur_data2 && onglet.Graph">
+        </MultiLineChart>
+        <BarChart
+            class="chart-container"
+            :bar-chart-configuration="barChartConfiguration"
+            :indicateur="indicateurCode1"
+            :left-col="false"
+            v-if="indicateur_data && !indicateur_data2 && onglet.Bar">
+        </BarChart>
+        <MultiBarChart
+            class="chart-container"
+            :bar-chart-configuration="barChartConfiguration"
+            :indicateur1="indicateurCode1"
+            :indicateur2="indicateurCode2"
+            :left-col="false"
+            v-if="indicateur_data2 && onglet.Bar">
+        </MultiBarChart>
+        <MapChart
             class="map-container fr-col-12"
             :indicateur="indicateurCode1"
-            :top-col="false"
             :left-col="false"
-            :bottom-col="false"
             :DOMTOMBottom="true"
             v-if="onglet.Carte && indicateur_data && this.indicateur_data.departements">
-        </map-chart>
+        </MapChart>
       </div>
       <left-col class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColPropsNotLargeMap"
                 v-if="$screen.breakpoint !== 'lg' && this.indicateur_data && this.indicateur_data.departements"></left-col>
@@ -54,18 +63,22 @@
 import store from '@/store'
 import LineChart from './LineChart.vue'
 import MultiLineChart from './MultiLineChart.vue'
+import BarChart from './BarChart.vue'
+import MultiBarChart from './MultiBarChart.vue'
 import MapChart from './MapChart.vue'
 import { mixin } from '@/utils.js'
 import LeftCol from './LeftCol'
 
 export default {
-  name: 'LineMapPanel',
+  name: 'ChartMapPanel',
 
   mixins: [mixin],
   components: {
     LeftCol,
     LineChart,
+    BarChart,
     MultiLineChart,
+    MultiBarChart,
     MapChart
   },
   props: {
@@ -75,7 +88,8 @@ export default {
     onglet: Object,
     logo: String,
     altLogo: String,
-    lineChartConfiguration: Object
+    lineChartConfiguration: Object,
+    barChartConfiguration: Object
   },
   data() {
     return {
@@ -145,8 +159,9 @@ export default {
       }
     },
     onlyOneElement() {
-      return this.onglet.Carte && !this.onglet.Graph
-      || !this.onglet.Carte && this.onglet.Graph
+      return this.onglet.Carte && !this.onglet.Graph && !this.onglet.Bar
+      || !this.onglet.Carte && this.onglet.Graph && !this.onglet.Bar
+      || !this.onglet.Carte && !this.onglet.Graph && this.onglet.Bar
     }
   },
   methods: {
@@ -288,7 +303,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-.line-map-panel {
+.chart-map-panel {
   &.panel-full-page-lg {
     height: 100%;
     max-height: 100%;
@@ -301,8 +316,8 @@ export default {
       max-height: 100%;
     }
     &.only-one-element {
-      height: 65%;
-      max-height: 65%;
+      height: 100%;
+      max-height: 100%;
       .chart-container {
         height: 100%;
         max-height: 100%;

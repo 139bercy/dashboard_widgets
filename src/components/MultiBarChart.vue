@@ -1,14 +1,20 @@
 <template>
 
   <div class="widget_container fr-grid-row" :class="(loading)?'loading':''" :data-display="display" :id="widgetId">
-    <LeftCol v-bind="leftColProps" v-if="leftCol || leftCol === undefined"></LeftCol>
+      <div class="fr-warning" v-if="geoFallback">
+        <div class="scheme-border">
+            <span class="fr-fi-information-fill fr-px-1w fr-py-3v" aria-hidden="true"></span>
+        </div>
+        <p class="fr-text--sm fr-mb-0 fr-p-3v">{{geoFallbackMsg}}
+        </p>
+    </div>
+    <LeftCol v-bind="leftColProps" v-if="leftCol"></LeftCol>
     <div class="r_col fr-col-12" :class="{'fr-col-lg-9': leftCol}">
       <div class="chart ml-lg">
         <canvas :id="chartId"></canvas>
       </div>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -16,13 +22,12 @@ import store from '@/store'
 import Chart from 'chart.js'
 import LeftCol from '@/components/LeftCol'
 import { mixin } from '@/utils.js'
-
 export default {
-  name: 'MultiLineChart',
+  name: 'MultiBarChart',
+  mixins: [mixin],
   components: {
     LeftCol
   },
-  mixins: [mixin],
   data () {
     return {
       indicateur_data: undefined,
@@ -46,7 +51,9 @@ export default {
       units: [],
       chart: undefined,
       loading: true,
-      legendLeftMargin: 0
+      legendLeftMargin: 0,
+      geoFallback: false,
+      geoFallbackMsg: ''
     }
   },
   props: {
@@ -56,7 +63,6 @@ export default {
       type: Boolean,
       default: true
     },
-    lineChartConfiguration: Object
   },
   computed: {
     selectedGeoLevel () {
@@ -70,23 +76,7 @@ export default {
     },
     style () {
       return this.leftCol || this.leftCol === undefined ? 'margin-left: ' + this.legendLeftMargin + 'px' : ''
-    },
-    lineChartConfigurationOptions () {
-      return this.lineChartConfiguration && this.lineChartConfiguration.options
-        ? this.lineChartConfiguration.options
-        : {}
-    },
-    lineChartConfigurationDatasets1 () {
-      return this.lineChartConfiguration && this.lineChartConfiguration.datasets && this.lineChartConfiguration.datasets.length >= 1
-        ? this.lineChartConfiguration.datasets[0] : {}
-    },
-    lineChartConfigurationDatasets2 () {
-      return this.lineChartConfiguration.datasets && this.lineChartConfiguration.datasets.length > 1
-        ? this.lineChartConfiguration.datasets[1]
-        : this.lineChartConfiguration.datasets && this.lineChartConfiguration.datasets.length === 1
-          ? this.lineChartConfiguration.datasets[0] : {}
     }
-
   },
   methods: {
 
@@ -108,26 +98,16 @@ export default {
     updateData () {
       const self = this
 
-      this.leftColProps.localisation = this.selectedGeoLabel
-
       const geolevel = this.selectedGeoLevel
       const geocode = this.selectedGeoCode
+
+      this.leftColProps.localisation = this.selectedGeoLabel
 
       let geoObject
       let geoObject2
 
-      if (geolevel === 'France') {
-        geoObject = this.indicateur_data.france[0]
-        geoObject2 = this.indicateur_data2.france[0]
-      } else {
-        geoObject = this.indicateur_data[geolevel].find(obj => {
-          return obj.code_level === geocode
-        })
-        geoObject2 = this.indicateur_data2[geolevel].find(obj => {
-          return obj.code_level === geocode
-        })
-      }
-
+      geoObject = this.getGeoObject(geolevel, geocode, this.indicateur_data)
+      geoObject2 = this.getGeoObject(geolevel, geocode, this.indicateur_data2)
       this.leftColProps.date = this.convertDateToHuman(geoObject.last_date)
 
       this.leftColProps.names.length = 0
@@ -137,6 +117,7 @@ export default {
       this.leftColProps.evolvalues.length = 0
 
       this.leftColProps.names.push(this.indicateur_data.nom, this.indicateur_data2.nom)
+      // this.units.push(this.indicateur1["Unité_GP"], this.indicateur2["Unité_GP"])
       this.units.push(this.indicateur_data.unite, this.indicateur_data2.unite)
       this.leftColProps.currentValues.push(geoObject.last_value, geoObject2.last_value)
       this.leftColProps.currentDate = this.convertDateToHuman(geoObject.last_date)
@@ -160,6 +141,40 @@ export default {
       })
     },
 
+    getGeoObject (geolevel, geocode, data) {
+      let geoObject
+      if (geolevel === 'France') {
+        geoObject = data.france[0]
+      } else {
+        geoObject = data[geolevel].find(obj => {
+          return obj.code_level === geocode
+        })
+      }
+      if (typeof geoObject === 'undefined') {
+        if (geolevel === 'regions') {
+          geoObject = this.getGeoObject('France', '01')
+          this.leftColProps.localisation = 'France entière'
+          this.geoFallback = true
+          this.geoFallbackMsg = 'Affichage des résultats au niveau national, faute de données au niveau régional'
+        } else {
+          const depObj = store.state.dep.find(obj => {
+            return obj.value === geocode
+          })
+          geoObject = this.getGeoObject('regions', depObj.region_value)
+          this.leftColProps.localisation = depObj.region
+          this.geoFallback = true
+          this.geoFallbackMsg = 'Affichage des résultats au niveau régional, faute de données au niveau départemental'
+          if (typeof geoObject === 'undefined') {
+            geoObject = this.getGeoObject('France', '01')
+            this.leftColProps.localisation = 'France entière'
+            this.geoFallback = true
+            this.geoFallbackMsg = 'Affichage des résultats au niveau national, faute de données au niveau régional ou départemental'
+          }
+        }
+      }
+      return geoObject
+    },
+
     updateChart () {
       this.updateData()
       this.chart.update()
@@ -175,49 +190,31 @@ export default {
 
       const ctx = document.getElementById(self.chartId).getContext('2d')
 
-      let gradientFill
-
-      this.display === 'big' ? gradientFill = ctx.createLinearGradient(0, 0, 0, 500) : gradientFill = ctx.createLinearGradient(0, 0, 0, 250)
-
-      gradientFill.addColorStop(0, 'rgba(218, 218, 254, 0.6)')
-      gradientFill.addColorStop(0.6, 'rgba(245, 245, 255, 0)')
-
-      let gradientFill2
-
-      this.display === 'big' ? gradientFill2 = ctx.createLinearGradient(0, 0, 0, 350) : gradientFill2 = ctx.createLinearGradient(0, 0, 0, 225)
-
-      gradientFill2.addColorStop(0, 'rgba(0, 124, 58, 0.6)')
-      gradientFill2.addColorStop(0.6, 'rgba(0, 124, 58, 0)')
-
       this.chart = new Chart(ctx, {
         data: {
           labels: self.labels,
           datasets: [
-            Object.assign({
+            {
               data: self.dataset,
-              backgroundColor: gradientFill,
+              backgroundColor: '#000091',
               borderColor: '#000091',
-              type: 'line',
-              pointRadius: 8,
-              pointBackgroundColor: 'rgba(0, 0, 0, 0)',
-              pointBorderColor: 'rgba(0, 0, 0, 0)'
-            }, this.lineChartConfigurationDatasets1),
-            Object.assign({
+              type: 'bar',
+              borderWidth: 4
+            },
+            {
               data: self.dataset2,
-              backgroundColor: gradientFill2,
+              backgroundColor: '#007c3a',
               borderColor: '#007c3a',
-              type: 'line',
-              pointRadius: 8,
-              pointBackgroundColor: 'rgba(0, 0, 0, 0)',
-              pointBorderColor: 'rgba(0, 0, 0, 0)'
-            }, this.lineChartConfigurationDatasets2)
+              type: 'bar',
+              borderWidth: 4
+            }
           ]
         },
-        options: Object.assign({
+        options: {
           animation: {
             easing: 'easeInOutBack'
           },
-          maintainAspectRatio: false,
+
           scales: {
             xAxes: [{
               gridLines: {
@@ -240,21 +237,7 @@ export default {
               },
               ticks: {
                 autoSkip: true,
-                maxTicksLimit: 5,
-                callback: function (value) {
-                  value = parseFloat(value)
-                  if (value / 1000000000 >= 1) {
-                    return Intl.NumberFormat().format(value / 1000000000) + ' Mrds'
-                  } else if (value / 1000000 >= 1) {
-                    return Intl.NumberFormat().format(value / 1000000) + ' M'
-                  } else if (value / 1000 >= 1) {
-                    return Intl.NumberFormat().format(value / 1000) + ' K'
-                  }
-                  return Intl.NumberFormat().format(value)
-                }
-              },
-              afterFit: function (axis) {
-                self.legendLeftMargin = axis.width
+                maxTicksLimit: 5
               }
             }]
           },
@@ -266,7 +249,7 @@ export default {
             backgroundColor: '#6b6b6b',
             callbacks: {
               label: function (tooltipItems) {
-                const int = self.convertFloatToHuman(tooltipItems.value)
+                const int = self.convertStringToLocaleNumber(tooltipItems.value)
                 return int + ' ' + self.units[tooltipItems.datasetIndex]
               },
               title: function (tooltipItems) {
@@ -277,7 +260,7 @@ export default {
               }
             }
           }
-        }, this.lineChartConfigurationOptions)
+        }
       })
     }
   },
@@ -299,6 +282,7 @@ export default {
 
   mounted () {
     document.getElementById(this.widgetId).offsetWidth > 486 ? this.display = 'big' : this.display = 'small'
+    // 502px to break
   }
 
 }
@@ -306,47 +290,62 @@ export default {
 
 <style scoped lang="scss">
 
-.widget_container {
-  .ml-lg {
-    margin-left: 0;
-  }
-
-  @media (min-width: 62em) {
-    .ml-lg {
-      margin-left: 3rem;
-    }
-  }
-  @media (max-width: 62em) {
-    .chart .flex {
-      margin-left: 0 !important
-    }
-  }
-
-  .r_col {
-    align-self: center;
-
-    .flex {
+  .widget_container{
+    .fr-warning {
       display: flex;
+      min-width: 100%;
+      margin: 0 0 0.75rem;
+      background-color: var(--w);
+      width: 100%;
+      .scheme-border {
+          min-width: 2.5rem;
+          background-color: #0768d5;
+          display: flex;
+          justify-content: center;
+      }
+      span {
+          display: block;
+          color: var(--w);
+      }
+      p {
+          border: solid 1px #0768d5;
+          width: 100%;
 
-      .legende_dot {
-        width: 1rem;
-        height: 1rem;
-        border-radius: 50%;
-        background-color: #000091;
-        display: inline-block;
-        margin-top: 0.25rem;
-
-        &[data-serie="2"] {
-          background-color: #007c3a;
+      }
+    }
+    .ml-lg {
+      margin-left:0;
+    }
+    @media (min-width: 62em) {
+      .ml-lg {
+        margin-left:3rem;
+      }
+    }
+    @media (max-width: 62em) {
+      .chart .flex {
+        margin-left:0!important
+      }
+    }
+    .r_col {
+      align-self:center;
+      .flex{
+        display: flex;
+        .legende_dot{
+          width: 1rem;
+          height: 1rem;
+          min-width: 1rem;
+          border-radius: 50%;
+          background-color: #000091;
+          display: inline-block;
+          margin-top: 0.25rem;
         }
       }
     }
-  }
 
-  .chart canvas {
-    max-width: 100%;
-  }
+    .chart canvas {
+      max-width:100%;
+    }
 
-}
+  }
 
 </style>

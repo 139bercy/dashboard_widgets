@@ -14,7 +14,8 @@
             v-bind="panneau"
             :logo="logo"
             :alt-logo="altLogo"
-            :line-chart-configuration="lineChartConfigurationContent">
+            :line-chart-configuration="lineChartConfigurationContent"
+            :bar-chart-configuration="barChartConfigurationContent">
           </panel>
         </div>
 
@@ -46,13 +47,15 @@ export default {
     sourceLinks: String,
     logo: String,
     altLogo: String,
-    lineChartConfiguration: String
+    lineChartConfiguration: String,
+    barChartConfiguration: String
   },
   data() {
     return {
       panneaux: [],
       descriptionContent: '',
-      lineChartConfigurationContent: {}
+      lineChartConfigurationContent: {},
+      barChartConfigurationContent: {}
     }
   },
   methods: {
@@ -75,6 +78,17 @@ export default {
         try {
           this.lineChartConfigurationContent = JSON.parse(
             await fetch(this.lineChartConfiguration)
+              .then(res => res.text())
+          )
+        } catch (e) {
+          console.error(e)
+        }
+      }
+      if (this.barChartConfiguration!== undefined && this.barChartConfiguration !== '') {
+        const self = this
+        try {
+          this.barChartConfigurationContent = JSON.parse(
+            await fetch(this.barChartConfiguration)
               .then(res => res.text())
           )
         } catch (e) {

@@ -12,10 +12,6 @@
     <div class="r_col fr-col-12" :class="{'fr-col-lg-9': leftCol}">
       <div class="chart ml-lg">
         <canvas :id="chartId"></canvas>
-<!--        <div class="flex fr-mt-3v" :style="style">-->
-<!--          <span class="legende_dot"></span>-->
-<!--          <p class="fr-text&#45;&#45;sm fr-text&#45;&#45;bold fr-ml-1v fr-mb-0">{{capitalize(units[0])}}</p>-->
-<!--        </div>-->
       </div>
     </div>
   </div>
@@ -61,18 +57,9 @@ export default {
   },
   props: {
     indicateur: String,
-    interpolation: String,
-    topCol: {
-      type: Boolean,
-      default: false
-    },
     leftCol: {
       type: Boolean,
       default: true
-    },
-    bottomCol: {
-      type: Boolean,
-      default: false
     },
     lineChartConfiguration: Object
   },
@@ -201,14 +188,15 @@ export default {
 
       this.chart = new Chart(ctx, {
         data: {
-          labels: self.labels,
+          labels: this.lineChartConfiguration && this.lineChartConfiguration.labels
+            ? this.lineChartConfiguration.labels
+            : self.labels,
           datasets: [
             Object.assign({
               data: self.dataset,
               backgroundColor: gradientFill,
               borderColor: '#000091',
               type: 'line',
-              cubicInterpolationMode: this.interpolation || 'default',
               pointRadius: 8,
               pointBackgroundColor: 'rgba(0, 0, 0, 0)',
               pointBorderColor: 'rgba(0, 0, 0, 0)'

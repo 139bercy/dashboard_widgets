@@ -13,7 +13,7 @@ import MultiLineChart from './components/MultiLineChart'
 import BarChart from './components/BarChart'
 import MapChart from './components/MapChart'
 import GeoList from './components/GeoList'
-import LineMapPanel from './components/LineMapPanel'
+import ChartMapPanel from './components/ChartMapPanel'
 import PageContent from './components/PageContent'
 import MenuContent from './components/MenuContent'
 import MapPoint from './components/MapPoint'
@@ -42,7 +42,7 @@ Vue.customElement('multiline-chart', MultiLineChart)
 Vue.customElement('bar-chart', BarChart)
 Vue.customElement('map-chart', MapChart)
 Vue.customElement('geo-list', GeoList)
-Vue.customElement('line-map-panel', LineMapPanel)
+Vue.customElement('chart-map-panel', ChartMapPanel)
 Vue.customElement('page-content', PageContent)
 Vue.customElement('menu-content', MenuContent)
 Vue.customElement('map-point', MapPoint)
