@@ -1,3 +1,5 @@
+var _ = require('lodash');
+
 export const capitalize = function (string) {
   if (string) {
     return string.charAt(0).toUpperCase() + string.slice(1)
@@ -42,6 +44,11 @@ export const testIfNaN = function (float) {
   return isNaN(parseFloat(float))
 }
 
+export const deepMerge = function () {
+    return  _.merge({}, ...arguments)
+};
+
+
 export const mixin = {
   methods: {
     capitalize,
@@ -49,6 +56,7 @@ export const mixin = {
     convertFloatToHuman,
     convertDateToHuman,
     testIfNaN,
-    toJsonNameFormat
+    toJsonNameFormat,
+    deepMerge
   }
 }

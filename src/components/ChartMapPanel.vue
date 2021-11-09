@@ -320,6 +320,20 @@ export default {
       height: 100%;
       max-height: 100%;
     }
+    .chart-container {
+      > div {
+        height: 100%;
+        max-height: 100%;
+        > .chart {
+          max-height: 100%;
+          height: 100%;
+          canvas {
+            height: 100%;
+            max-height: 100%;
+          }
+        }
+      }
+    }
     &.only-one-element {
       height: 100%;
       max-height: 100%;
@@ -332,18 +346,6 @@ export default {
       .chart-container {
         height: 30%;
         max-height: 30%;
-        > div {
-          height: 100%;
-          max-height: 100%;
-          > .chart {
-            max-height: 100%;
-            height: 100%;
-            canvas {
-              height: 100%;
-              max-height: 100%;
-            }
-          }
-        }
       }
       .map-container {
         height: 70%;

@@ -1,10 +1,12 @@
 {
-  "datasets": [
-    {
-      "cubicInterpolationMode": "monotone"
-    },
-    {
-      "cubicInterpolationMode": "monotone"
-    }
-  ]
+  "data": {
+    "datasets": [
+      {
+        "cubicInterpolationMode": "monotone"
+      },
+      {
+        "cubicInterpolationMode": "monotone"
+      }
+    ]
+  }
 }

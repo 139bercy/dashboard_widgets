@@ -1,14 +1,29 @@
 {
   "options": {
     "scales": {
-      "xAxes": [{
-        "ticks": {
-          "callback": "function (value) {return new Date(value).getFullYear();}"
+      "xAxes": [
+        {
+          "stacked": true,
+          "offset": true,
+          "ticks": {
+            "autoSkip": false,
+            "callback": null,
+            "align": "center"
+          },
+          "type": "time",
+          "time": {
+            "unit": "year",
+              "displayFormats": {
+                  "year": "YYYY"
+              }
+          }
         }
-      }],
-      "yAxes": [{
-        "beginAtZero": true
-      }]
+      ],
+      "yAxes": [
+        {
+          "beginAtZero": true
+        }
+      ]
     }
   }
 }

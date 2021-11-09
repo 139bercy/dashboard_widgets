@@ -71,21 +71,6 @@ export default {
     style () {
       return this.leftCol || this.leftCol === undefined ? 'margin-left: ' + this.legendLeftMargin + 'px' : ''
     },
-    lineChartConfigurationOptions () {
-      return this.lineChartConfiguration && this.lineChartConfiguration.options
-        ? this.lineChartConfiguration.options
-        : {}
-    },
-    lineChartConfigurationDatasets1 () {
-      return this.lineChartConfiguration && this.lineChartConfiguration.datasets && this.lineChartConfiguration.datasets.length >= 1
-        ? this.lineChartConfiguration.datasets[0] : {}
-    },
-    lineChartConfigurationDatasets2 () {
-      return this.lineChartConfiguration.datasets && this.lineChartConfiguration.datasets.length > 1
-        ? this.lineChartConfiguration.datasets[1]
-        : this.lineChartConfiguration.datasets && this.lineChartConfiguration.datasets.length === 1
-          ? this.lineChartConfiguration.datasets[0] : {}
-    }
 
   },
   methods: {
@@ -189,11 +174,11 @@ export default {
       gradientFill2.addColorStop(0, 'rgba(0, 124, 58, 0.6)')
       gradientFill2.addColorStop(0.6, 'rgba(0, 124, 58, 0)')
 
-      this.chart = new Chart(ctx, {
+      this.chart = new Chart(ctx, this.deepMerge({
         data: {
           labels: self.labels,
           datasets: [
-            Object.assign({
+            {
               data: self.dataset,
               backgroundColor: gradientFill,
               borderColor: '#000091',
@@ -201,8 +186,8 @@ export default {
               pointRadius: 8,
               pointBackgroundColor: 'rgba(0, 0, 0, 0)',
               pointBorderColor: 'rgba(0, 0, 0, 0)'
-            }, this.lineChartConfigurationDatasets1),
-            Object.assign({
+            },
+            {
               data: self.dataset2,
               backgroundColor: gradientFill2,
               borderColor: '#007c3a',
@@ -210,14 +195,14 @@ export default {
               pointRadius: 8,
               pointBackgroundColor: 'rgba(0, 0, 0, 0)',
               pointBorderColor: 'rgba(0, 0, 0, 0)'
-            }, this.lineChartConfigurationDatasets2)
+            }
           ]
         },
-        options: Object.assign({
+        options: {
+          maintainAspectRatio: false,
           animation: {
             easing: 'easeInOutBack'
           },
-          maintainAspectRatio: false,
           scales: {
             xAxes: [{
               gridLines: {
@@ -277,8 +262,8 @@ export default {
               }
             }
           }
-        }, this.lineChartConfigurationOptions)
-      })
+        }
+      }, this.lineChartConfiguration))
     }
   },
 

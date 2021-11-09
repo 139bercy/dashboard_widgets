@@ -76,15 +76,6 @@ export default {
     style () {
       return 'margin-left: ' + this.legendLeftMargin + 'px'
     },
-    lineChartConfigurationOptions () {
-      return this.lineChartConfiguration && this.lineChartConfiguration.options
-        ? this.lineChartConfiguration.options
-        : {}
-    },
-    lineChartConfigurationDatasets1 () {
-      return this.lineChartConfiguration && this.lineChartConfiguration.datasets && this.lineChartConfiguration.datasets.length >= 1
-        ? this.lineChartConfiguration.datasets[0] : {}
-    },
   },
   methods: {
     async getData () {
@@ -186,13 +177,13 @@ export default {
       gradientFill.addColorStop(0, 'rgba(218, 218, 254, 0.6)')
       gradientFill.addColorStop(0.6, 'rgba(245, 245, 255, 0)')
 
-      this.chart = new Chart(ctx, {
+      this.chart = new Chart(ctx, this.deepMerge({
         data: {
           labels: this.lineChartConfiguration && this.lineChartConfiguration.labels
             ? this.lineChartConfiguration.labels
             : self.labels,
           datasets: [
-            Object.assign({
+            {
               data: self.dataset,
               backgroundColor: gradientFill,
               borderColor: '#000091',
@@ -200,10 +191,15 @@ export default {
               pointRadius: 8,
               pointBackgroundColor: 'rgba(0, 0, 0, 0)',
               pointBorderColor: 'rgba(0, 0, 0, 0)'
-            }, this.lineChartConfigurationDatasets1)
+            },
+            {
+              // hack to managed mutual configuration option between LineChart and MultilineChart
+              showLine: false,
+              type: 'line',
+            }
           ]
         },
-        options: Object.assign({
+        options: {
           animation: {
             easing: 'easeInOutBack'
           },
@@ -267,8 +263,8 @@ export default {
               }
             }
           }
-        }, this.lineChartConfigurationOptions)
-      })
+        }
+      }, this.lineChartConfiguration))
     }
   },
 

@@ -75,16 +75,6 @@ export default {
     style () {
       return 'margin-left: ' + this.legendLeftMargin + 'px'
     },
-    barCharConfigurationDataset () {
-      return this.barChartConfiguration && this.barChartConfiguration.dataset
-        ? this.barChartConfiguration.dataset
-        : {}
-    },
-    barCharConfigurationOptions () {
-      return this.barChartConfiguration && this.barChartConfiguration.options
-        ? this.barChartConfiguration.options
-        : {}
-    }
 
   },
   methods: {
@@ -182,24 +172,24 @@ export default {
 
       const ctx = document.getElementById(self.chartId).getContext('2d')
 
-      this.chart = new Chart(ctx, {
+      this.chart = new Chart(ctx, this.deepMerge({
         data: {
           labels: self.labels,
           datasets: [
-            Object.assign({
+            {
               data: self.dataset,
               backgroundColor: '#000091',
               borderColor: '#000091',
               type: 'bar',
               borderWidth: 4
-            }, this.barCharConfigurationDataset)
+            }
           ]
         },
-        options: Object.assign({
+        options: {
+          maintainAspectRatio: false,
           animation: {
             easing: 'easeInOutBack'
           },
-
           scales: {
             xAxes: [{
               gridLines: {
@@ -212,7 +202,6 @@ export default {
                 minRotation: 0,
                 callback: function (value) {
                   return value.toString().substring(3, 5) + '/' + value.toString().substring(8, 10)
-                  // return new Date(value).getFullYear()
                 }
               }
             }],
@@ -246,8 +235,8 @@ export default {
               }
             }
           }
-        }, this.barChartConfigurationOptions)
-      })
+        }
+      }, this.barChartConfiguration))
     }
   },
 

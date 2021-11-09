@@ -63,6 +63,7 @@ export default {
       type: Boolean,
       default: true
     },
+    barChartConfiguration: Object
   },
   computed: {
     selectedGeoLevel () {
@@ -76,7 +77,7 @@ export default {
     },
     style () {
       return this.leftCol || this.leftCol === undefined ? 'margin-left: ' + this.legendLeftMargin + 'px' : ''
-    }
+    },
   },
   methods: {
 
@@ -190,7 +191,7 @@ export default {
 
       const ctx = document.getElementById(self.chartId).getContext('2d')
 
-      this.chart = new Chart(ctx, {
+      this.chart = new Chart(ctx, this.deepMerge({
         data: {
           labels: self.labels,
           datasets: [
@@ -211,6 +212,7 @@ export default {
           ]
         },
         options: {
+          maintainAspectRatio: false,
           animation: {
             easing: 'easeInOutBack'
           },
@@ -226,7 +228,8 @@ export default {
                 maxRotation: 0,
                 minRotation: 0,
                 callback: function (value) {
-                  return value.toString().substring(3, 5) + '/' + value.toString().substring(8, 10)
+                  // return value.toString().substring(3, 5) + '/' + value.toString().substring(8, 10)
+                  return new Date(value).toISOString()
                 }
               }
             }],
@@ -261,7 +264,7 @@ export default {
             }
           }
         }
-      })
+      }, this.barChartConfiguration))
     }
   },
 
