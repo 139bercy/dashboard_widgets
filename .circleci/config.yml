@@ -74,7 +74,7 @@ jobs:
             name: Génération du fichier de configuration par rapport au fichier csv
             command: |
               . venv/bin/activate
-              python dashboard-configuration/csv_to_json.py
+              python dashboard-configuration/generate_configurations.py
         - persist_to_workspace:
             root: ./
             paths:

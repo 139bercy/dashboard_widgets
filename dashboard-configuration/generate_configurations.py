@@ -20,6 +20,7 @@ def convert_excel_to_json(path):
         "Bar",
         "Box",
         "Points",
+        "MinGeoLevel",
         "Description_mesure",
         "Titre_onglet"
     ]
