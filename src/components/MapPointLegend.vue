@@ -2,9 +2,6 @@
   <div class="fr-grid-row">
     <div class="l_col fr-col-11" data-box="number" v-if="indicateurs && indicateurs.length > 0 && !loading">
       <div class="indicateur_info">
-        <!-- <p class="fr-text--sm fr-text--bold fr-mt-0 fr-mb-1w">
-          {{ selecteur }}
-        </p> -->
         <div class="l_box_number_container" v-for="indicateur,index in indicateurs" :key="indicateur">
           <div class="fr-checkbox-group">
               <input
@@ -81,9 +78,6 @@ export default {
 
 <style scoped lang="scss">
   @import "../../css/overload-fonts.css";
-  .fr-grid-row {
-    overflow: visible;
-  }
   .l_col{
     .flex{
       display: inline-flex;

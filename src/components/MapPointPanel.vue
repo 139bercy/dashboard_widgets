@@ -113,5 +113,9 @@ export default {
     height: 100%;
     max-height: 100%;
   }
+  .map-legend {
+    height: 100%;
+    overflow: auto;
+  }
 }
 </style>
