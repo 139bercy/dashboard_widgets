@@ -3,6 +3,7 @@
     "scales": {
       "xAxes": [
         {
+          "barThickness":38,
           "stacked": true,
           "offset": true,
           "ticks": {
@@ -21,6 +22,7 @@
       ],
       "yAxes": [
         {
+          "stacked": true,
           "beginAtZero": true
         }
       ]
