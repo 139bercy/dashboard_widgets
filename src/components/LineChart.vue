@@ -182,6 +182,7 @@ export default {
           labels: this.lineChartConfiguration && this.lineChartConfiguration.labels
             ? this.lineChartConfiguration.labels
             : self.labels,
+            // To do erwan afficher les dates correctement
           datasets: [
             {
               data: self.dataset,
