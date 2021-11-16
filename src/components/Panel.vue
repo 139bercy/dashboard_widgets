@@ -115,6 +115,7 @@ export default {
       return this.currentOnglet.Carte && !this.currentOnglet.Graph && !this.currentOnglet.Bar
       || !this.currentOnglet.Carte && this.currentOnglet.Graph && !this.currentOnglet.Bar
       || !this.currentOnglet.Carte && !this.currentOnglet.Graph && this.currentOnglet.Bar
+      || !this.currentOnglet.Carte && !this.currentOnglet.Graph && !this.currentOnglet.Bar
     },
     onlyBoxes() {
       return this.currentOnglet.Box && !this.currentOnglet.Graph

@@ -6,7 +6,7 @@
         :class="{'fr-p-2w': onglet.indicateurs.length > 3, 'fr-p-3w': onglet.indicateurs.length <= 3}"
         v-for="(indicateur, indexIndicateur) in onglet.indicateurs" :key="indexIndicateur">
         <DataBox
-          :indicateur="getIndicateurCode(indicateur)">
+          :indicateur="getIndicateurCode(indicateur)" :unit="getIndicateurUnit(indicateur)">
         </DataBox>
       </div>
     </div>
@@ -85,6 +85,9 @@ export default {
   methods: {
     getIndicateurCode(indicateur) {
       return indicateur.Code_indicateur
+    },
+    getIndicateurUnit(indicateur) {
+      return indicateur["Unité_Evol"]
     },
     async getData() {
       const self = this

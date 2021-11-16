@@ -117,14 +117,61 @@ export default {
     }
   },
   computed: {
-    selectedGeoLevel() {
+    selectedGeoLevel () {
+      if (store.state.user.geoLevelOrder.indexOf(this.definedMinGeoLevel) > store.state.user.geoLevelOrder.indexOf(store.state.user.selectedGeoLevel)) {
+        return this.definedMinGeoLevel
+      }
       return store.state.user.selectedGeoLevel
+
     },
-    selectedGeoCode() {
+    selectedGeoCode () {
+      if (store.state.user.geoLevelOrder.indexOf(this.definedMinGeoLevel) > store.state.user.geoLevelOrder.indexOf(store.state.user.selectedGeoLevel)) {
+        const departement = store.state.departements.find(function (departement) {
+          if (self.selectedGeoLevel === "France") {
+            return true
+          } else if (self.selectedGeoLevel === "regions") {
+            return store.state.user.selectedGeoCode === departement.region_value
+          } else {
+            return store.state.user.selectedGeoCode === departement.value
+          }
+        })
+        if (this.selectedGeoLevel === "France") {
+          return "France entière"
+        } else if (this.selectedGeoLevel === "regions") {
+          return departement.region_value
+        }
+        return departement.value
+      }
       return store.state.user.selectedGeoCode
     },
-    selectedGeoLabel() {
+    selectedGeoLabel () {
+      if (store.state.user.geoLevelOrder.indexOf(this.definedMinGeoLevel) > store.state.user.geoLevelOrder.indexOf(store.state.user.selectedGeoLevel)) {
+        const departement = store.state.departements.find(function (departement) {
+          if (self.selectedGeoLevel === "France") {
+            return true
+          } else if (self.selectedGeoLevel === "regions") {
+            return store.state.user.selectedGeoCode === departement.region_value
+          } else {
+            return store.state.user.selectedGeoCode === departement.value
+          }
+        })
+        if (this.selectedGeoLevel === "France") {
+          return "France entière"
+        } else if (this.selectedGeoLevel === "regions") {
+          const region = store.state.regions.find(function (region) {
+            return region.value === departement.region_value
+          })
+          return region.label
+        }
+        return departement.label
+      }
       return store.state.user.selectedGeoLabel
+    },
+    definedMinGeoLevel () {
+      if (this.indicateur_data && this.indicateur_data[this.onglet.MinGeoLevel]) {
+        return this.onglet.MinGeoLevel
+      }
+      return store.state.user.geoLevelOrder[store.state.user.geoLevelOrder.indexOf(this.onglet.MinGeoLevel) + 1]
     },
     indicateurCode1() {
       return this.onglet.indicateurs[0].Code_indicateur
