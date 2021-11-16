@@ -182,10 +182,17 @@ export default {
               borderColor: '#000091',
               type: 'bar',
               borderWidth: 4
+            },
+            {
+              type: 'bar',
             }
           ]
         },
         options: {
+          maintainAspectRatio: false,
+          animation: {
+            easing: 'easeInOutBack'
+          },
           scales: {
             xAxes: [{
               gridLines: {
@@ -193,6 +200,7 @@ export default {
               },
               ticks: {
                 autoSkip: true,
+                maxTicksLimit: xTickLimit,
                 maxRotation: 0,
                 minRotation: 0,
                 callback: function (value) {

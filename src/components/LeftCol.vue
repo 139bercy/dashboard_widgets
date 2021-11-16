@@ -28,7 +28,7 @@
               <p class="l_box_trend flex fr-mb-0 fr-text--xs fr-text--bold fr-px-1w fr-py-1v"
                  v-bind:class="{'down':isDown[i],'green':isGreen[i],'red':isRed[i],'blue':isBlue[i]}"
                  v-if="isBox && (typeof evolvalues[i] === 'Number' || typeof evolvalues[i] === 'number')">
-                <svg class="trend_ico" width="16" height="16" viewBox="0 0 24 24">
+                <svg class="trend_ico" width="16" height="16" viewBox="0 0 24 24" v-if="showEvolIcon">
                   <path v-if="!isBlue[i]" d="M19.071 4.929c3.903 3.903 3.903 10.239 0 14.142-3.903 3.903-10.239 3.903-14.142 0-3.903-3.903-3.903-10.239 0-14.142 3.903-3.903 10.239-3.903 14.142 0zm-2.828 2.828H7.757l3.182 3.182-4.242 4.243 2.121 2.121 4.243-4.242 3.182 3.182V7.757z" transform="translate(-902 -5664) translate(902 5664)"/>
                   <path v-if="isBlue[i]" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm4 11H8v2h8v-2zm0-4H8v2h8V9z" transform="translate(-1366 -5645) translate(1366 5645)"/>
                 </svg>
@@ -61,7 +61,8 @@ export default {
       isDown: [false, false],
       isGreen: [false, false],
       isRed: [false, false],
-      isBlue: [false, false]
+      isBlue: [false, false],
+      showEvolIcon: [false, false]
     }
   },
   props: {
@@ -89,6 +90,7 @@ export default {
       const self = this
       if (this.names) {
         this.names.forEach(function (n, i) {
+          self.showEvolIcon[i] = true
           if (self.evolcodes[i] === 'green') {
             self.isGreen[i] = true
             self.isRed[i] = false
@@ -99,6 +101,12 @@ export default {
             self.isRed[i] = true
             self.isBlue[i] = false
             self.evolvalues[i] > 0 ? self.isDown[i] = false : self.isDown[i] = true
+          } else if (this.evolcode[i] === 'None') {
+            self.isGreen[i] = false
+            self.isRed[i] = false
+            self.isBlue[i] = false
+            self.isDown[i] = false
+            self.showEvolIcon[i] = false
           } else {
             self.isGreen[i] = false
             self.isRed[i] = false

@@ -212,7 +212,6 @@ export default {
           ]
         },
         options: {
-          indexAxis: 'y',
           maintainAspectRatio: false,
           animation: {
             easing: 'easeInOutBack'

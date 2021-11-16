@@ -45,7 +45,7 @@ export const testIfNaN = function (float) {
 }
 
 export const deepMerge = function () {
-    return  _.merge({}, ...arguments)
+  return  _.merge({}, ...arguments)
 };
 
 

@@ -15,27 +15,29 @@
         "pointBorderColor": "rgb(0, 124, 58)",
         "tension": 0.1
       }
-    ],
-    "options": {
-      "scales": {
-        "xAxes": [{
+    ]
+  },
+  "options": {
+    "scales": {
+      "xAxes": [
+        {
           "ticks": {
-            "callback": null,
             "autoSkip": false,
+            "callback": null,
             "align": "center"
           },
           "type": "time",
           "time": {
             "unit": "year",
-              "displayFormats": {
-                  "year": "YYYY"
-              }
+            "displayFormats": {
+                "year": "YYYY"
+            }
           }
-        }],
-        "yAxes": [{
-          "beginAtZero": true
-        }]
-      }
+        }
+      ],
+      "yAxes": [{
+        "beginAtZero": true
+      }]
     }
   }
 }

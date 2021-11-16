@@ -1,9 +1,19 @@
 {
+  "data": {
+    "datasets": [
+      {
+        "barThickness": 38
+      },
+      {
+        "barThickness": 38
+      }
+    ]
+  },
   "options": {
+    "indexAxis": "y",
     "scales": {
       "xAxes": [
         {
-          "barThickness":38,
           "stacked": true,
           "offset": true,
           "ticks": {
@@ -14,9 +24,9 @@
           "type": "time",
           "time": {
             "unit": "year",
-              "displayFormats": {
-                  "year": "YYYY"
-              }
+            "displayFormats": {
+                "year": "YYYY"
+            }
           }
         }
       ],
