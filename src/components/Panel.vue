@@ -66,10 +66,10 @@
         </p>
         <p class="fr-text--xs fr-mb-3w fr-pb-1v">Source :
           {{source}}
-          <a title="vers data.gouv.fr" v-bind:href="Lien_page_mesure"
+          <a title="Sources et références" v-bind:href="Lien_page_mesure"
              target="_blank" rel="noopener" data-section="nom_section"
              data-subsection="nom_subsection">
-            Vers le site de l'Agence Française Anticorruption.</a>
+            {{titre_page_mesure}}</a>
         </p>
       </div>
     </div>
@@ -95,6 +95,7 @@ export default {
     index: String,
     Titre_panneau: String,
     Lien_page_mesure: String,
+    titre_page_mesure: String,
     source: String,
     accordéon: String,
     onglets: Array,
