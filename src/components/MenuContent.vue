@@ -23,6 +23,7 @@
           'fr-collapse--expanded': showMenu || $screen.breakpoint !== 'sm',
         }"
       >
+      <!-- <img src="https://www.agence-francaise-anticorruption.gouv.fr/files/2018-11/logo-afa.png" alt="Flowers in Chania"> -->
         <div class="fr-sidemenu__title">
           Affiner la recherche par territoire :
         </div>

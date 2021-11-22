@@ -56,7 +56,8 @@
                 :aria-expanded="accordionOpened"
                 v-on:click="accordionOpened=!accordionOpened"
         >
-          En savoir plus sur la mesure
+          <!-- En savoir plus sur la mesure -->
+          En savoir plus sur la donnée
         </button>
       </h3>
       <div class="fr-pl-2v fr-pr-2v fr-col-12" v-show="accordionOpened">
@@ -68,7 +69,7 @@
           <a title="vers data.gouv.fr" v-bind:href="Lien_page_mesure"
              target="_blank" rel="noopener" data-section="nom_section"
              data-subsection="nom_subsection">
-            Vers des fichiers d'open-data</a>
+            Vers le site de l'Agence Française Anticorruption.</a>
         </p>
       </div>
     </div>
