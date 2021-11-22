@@ -65,7 +65,7 @@
           {{ onglets[0].Description_mesure }}
         </p>
         <p class="fr-text--xs fr-mb-3w fr-pb-1v">Source :
-          {{source}}
+          {{source}}.
           <a title="Sources et références" v-bind:href="Lien_page_mesure"
              target="_blank" rel="noopener" data-section="nom_section"
              data-subsection="nom_subsection">
