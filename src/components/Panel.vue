@@ -57,7 +57,7 @@
                 v-on:click="accordionOpened=!accordionOpened"
         >
           <!-- En savoir plus sur la mesure -->
-          En savoir plus sur la donnée
+          {{accordéon}}
         </button>
       </h3>
       <div class="fr-pl-2v fr-pr-2v fr-col-12" v-show="accordionOpened">
@@ -96,6 +96,7 @@ export default {
     Titre_panneau: String,
     Lien_page_mesure: String,
     source: String,
+    accordéon: String,
     onglets: Array,
     logo: String,
     altLogo: String,
