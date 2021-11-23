@@ -9,7 +9,14 @@
         <div v-html="descriptionContent"></div>
 
         <div v-for="(panneau, index) in panneaux" :key="index">
-          <panel v-bind:index="index + ''" v-bind="panneau" :logo="logo" :alt-logo="altLogo"></panel>
+          <panel
+            v-bind:index="index + ''"
+            v-bind="panneau"
+            :logo="logo"
+            :alt-logo="altLogo"
+            :line-chart-configuration="lineChartConfigurationContent"
+            :bar-chart-configuration="barChartConfigurationContent">
+          </panel>
         </div>
 
         <SourceLinks class="fr-col-12 fr-col-md-12 fr-col-lg-12 fr-mt-3w" :source-links="sourceLinks"/>
@@ -39,12 +46,16 @@ export default {
     description: String,
     sourceLinks: String,
     logo: String,
-    altLogo: String
+    altLogo: String,
+    lineChartConfiguration: String,
+    barChartConfiguration: String
   },
   data() {
     return {
       panneaux: [],
-      descriptionContent: ''
+      descriptionContent: '',
+      lineChartConfigurationContent: {},
+      barChartConfigurationContent: {}
     }
   },
   methods: {
@@ -62,6 +73,28 @@ export default {
           // hack pour intégrer le nombre d'indicateurs dans la description
           .then(data => this.descriptionContent = data.replace("{{ panneaux.length }}", this.panneaux.length))
       }
+      if (this.lineChartConfiguration!== undefined && this.lineChartConfiguration !== '') {
+        const self = this
+        try {
+          this.lineChartConfigurationContent = JSON.parse(
+            await fetch(this.lineChartConfiguration)
+              .then(res => res.text())
+          )
+        } catch (e) {
+          console.error(e)
+        }
+      }
+      if (this.barChartConfiguration!== undefined && this.barChartConfiguration !== '') {
+        const self = this
+        try {
+          this.barChartConfigurationContent = JSON.parse(
+            await fetch(this.barChartConfiguration)
+              .then(res => res.text())
+          )
+        } catch (e) {
+          console.error(e)
+        }
+      }
     }
   }
   ,
@@ -70,12 +103,12 @@ export default {
   },
   mounted () {
     if(this.customRootCss && this.customRootCss != '') {
-    var element = document.createElement("link");
-    element.setAttribute("rel", "stylesheet");
-    element.setAttribute("type", "text/css");
-    element.setAttribute("href", this.customRootCss);
-    document.getElementsByTagName("head")[0].appendChild(element);
-}
+      var element = document.createElement("link");
+      element.setAttribute("rel", "stylesheet");
+      element.setAttribute("type", "text/css");
+      element.setAttribute("href", this.customRootCss);
+      document.getElementsByTagName("head")[0].appendChild(element);
+    }
   }
 }
 </script>

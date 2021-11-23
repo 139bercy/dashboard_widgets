@@ -1,4 +1,9 @@
-
+@media (min-width: 62em) {
+  .full-page-lg:not(.only-one-element) {
+      height: 75vh !important;
+      max-height: 75vh !important;
+  }
+}
 .page-content {
   --boxshadow: var(--bf500);
   --boxcountour: var(--bf500-plain);

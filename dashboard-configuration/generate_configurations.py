@@ -12,12 +12,17 @@ def convert_excel_to_json(path):
         "Lien_page_mesure",
         "Titre_panneau",
         "Volet",
-        "source"
+        "source",
+        "accordéon",
+        "titre_page_mesure"
     ]
     onglet_properties = [
         "Carte",
         "Graph",
+        "Bar",
+        "Box",
         "Points",
+        "MinGeoLevel",
         "Description_mesure",
         "Titre_onglet"
     ]
@@ -27,6 +32,7 @@ def convert_excel_to_json(path):
         "Indicateur_principal",
         "Titre_indicateur",
         "Unité_GP",
+        "Unité_Evol",
     ]
     df = df.dropna(subset=['No_Panneau']).sort_values(by=["No_Panneau"], ascending=True)
     panneaux = list(df["No_Panneau"].unique())
@@ -50,10 +56,11 @@ def convert_excel_to_json(path):
                         dict_indicateur[col] = str(df_indicateur[col])
                 liste_indicateurs += [dict_indicateur]
             for col in onglet_properties:
+                # ne pas intégrer les valeurs null ou autre
                 if not pd.isna(df_onglet[col].iloc[0]):
                     dict_onglet[col] = str(df_onglet[col].iloc[0])
-                    if col in ["Carte", "Graph", "Points"]:
-                        if int(df_panneau[col].iloc[0]) == 1:
+                    if col in ["Carte", "Graph", "Points", "Bar", "Box"]:
+                        if int(df_onglet[col].iloc[0]) == 1:
                             dict_onglet[col] = True
                         else:
                             dict_onglet[col] = False

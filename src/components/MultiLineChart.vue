@@ -5,16 +5,6 @@
     <div class="r_col fr-col-12" :class="{'fr-col-lg-9': leftCol}">
       <div class="chart ml-lg">
         <canvas :id="chartId"></canvas>
-<!--        <div class="fr-col-12 fr-grid-row">-->
-<!--          <div class="flex fr-col-6" :style="style" v-if="units[0]">-->
-<!--            <span class="legende_dot"></span>-->
-<!--            <span class="fr-text&#45;&#45;sm fr-text&#45;&#45;bold fr-ml-1v fr-mb-0">{{ capitalize(units[0]) }}</span>-->
-<!--          </div>-->
-<!--          <div class="flex fr-col-6" :style="style" v-if="units[1]">-->
-<!--            <span class="legende_dot" data-serie="2"></span>-->
-<!--            <span class="fr-text&#45;&#45;sm fr-text&#45;&#45;bold fr-ml-1v fr-mb-0">{{ capitalize(units[1]) }}</span>-->
-<!--          </div>-->
-<!--        </div>-->
       </div>
     </div>
   </div>
@@ -62,19 +52,11 @@ export default {
   props: {
     indicateur1: String,
     indicateur2: String,
-    interpolation: String,
-    topCol: {
-      type: Boolean,
-      default: false
-    },
     leftCol: {
       type: Boolean,
       default: true
     },
-    bottomCol: {
-      type: Boolean,
-      default: false
-    }
+    lineChartConfiguration: Object
   },
   computed: {
     selectedGeoLevel () {
@@ -88,7 +70,7 @@ export default {
     },
     style () {
       return this.leftCol || this.leftCol === undefined ? 'margin-left: ' + this.legendLeftMargin + 'px' : ''
-    }
+    },
 
   },
   methods: {
@@ -192,7 +174,7 @@ export default {
       gradientFill2.addColorStop(0, 'rgba(0, 124, 58, 0.6)')
       gradientFill2.addColorStop(0.6, 'rgba(0, 124, 58, 0)')
 
-      this.chart = new Chart(ctx, {
+      this.chart = new Chart(ctx, this.deepMerge({
         data: {
           labels: self.labels,
           datasets: [
@@ -201,7 +183,6 @@ export default {
               backgroundColor: gradientFill,
               borderColor: '#000091',
               type: 'line',
-              cubicInterpolationMode: this.interpolation || 'default',
               pointRadius: 8,
               pointBackgroundColor: 'rgba(0, 0, 0, 0)',
               pointBorderColor: 'rgba(0, 0, 0, 0)'
@@ -211,7 +192,6 @@ export default {
               backgroundColor: gradientFill2,
               borderColor: '#007c3a',
               type: 'line',
-              cubicInterpolationMode: this.interpolation || 'default',
               pointRadius: 8,
               pointBackgroundColor: 'rgba(0, 0, 0, 0)',
               pointBorderColor: 'rgba(0, 0, 0, 0)'
@@ -219,10 +199,10 @@ export default {
           ]
         },
         options: {
+          maintainAspectRatio: false,
           animation: {
             easing: 'easeInOutBack'
           },
-          maintainAspectRatio: false,
           scales: {
             xAxes: [{
               gridLines: {
@@ -283,7 +263,7 @@ export default {
             }
           }
         }
-      })
+      }, this.lineChartConfiguration))
     }
   },
 
@@ -337,7 +317,7 @@ export default {
         width: 1rem;
         height: 1rem;
         border-radius: 50%;
-        background-color: #000091;
+        background-color: var(--bg500-plain);
         display: inline-block;
         margin-top: 0.25rem;
 

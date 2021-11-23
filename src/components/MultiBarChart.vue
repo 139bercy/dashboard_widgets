@@ -23,7 +23,7 @@ import Chart from 'chart.js'
 import LeftCol from '@/components/LeftCol'
 import { mixin } from '@/utils.js'
 export default {
-  name: 'BarChart',
+  name: 'MultiBarChart',
   mixins: [mixin],
   components: {
     LeftCol
@@ -31,8 +31,10 @@ export default {
   data () {
     return {
       indicateur_data: undefined,
+      indicateur_data2: undefined,
       labels: [],
       dataset: [],
+      dataset2: [],
       widgetId: '',
       chartId: '',
       display: '',
@@ -55,7 +57,8 @@ export default {
     }
   },
   props: {
-    indicateur: String,
+    indicateur1: String,
+    indicateur2: String,
     leftCol: {
       type: Boolean,
       default: true
@@ -73,15 +76,21 @@ export default {
       return store.state.user.selectedGeoLabel
     },
     style () {
-      return 'margin-left: ' + this.legendLeftMargin + 'px'
+      return this.leftCol || this.leftCol === undefined ? 'margin-left: ' + this.legendLeftMargin + 'px' : ''
     },
-
   },
   methods: {
 
     async getData () {
-      store.dispatch('getData', this.indicateur).then(data => {
+      const promise1 = store.dispatch('getData', this.indicateur1).then(data => {
         this.indicateur_data = data
+      })
+
+      const promise2 = store.dispatch('getData', this.indicateur2).then(data => {
+        this.indicateur_data2 = data
+      })
+
+      Promise.all([promise1, promise2]).then((values) => {
         this.loading = false
         this.createChart()
       })
@@ -96,8 +105,10 @@ export default {
       this.leftColProps.localisation = this.selectedGeoLabel
 
       let geoObject
+      let geoObject2
 
-      geoObject = this.getGeoObject(geolevel, geocode)
+      geoObject = this.getGeoObject(geolevel, geocode, this.indicateur_data)
+      geoObject2 = this.getGeoObject(geolevel, geocode, this.indicateur_data2)
       this.leftColProps.date = this.convertDateToHuman(geoObject.last_date)
 
       this.leftColProps.names.length = 0
@@ -106,32 +117,40 @@ export default {
       this.leftColProps.evolcodes.length = 0
       this.leftColProps.evolvalues.length = 0
 
-      this.leftColProps.names.push(this.indicateur_data.nom)
-      this.units.push(this.indicateur_data.unite)
-      this.leftColProps.currentValues.push(geoObject.last_value)
+      this.leftColProps.names.push(this.indicateur_data.nom, this.indicateur_data2.nom)
+      // this.units.push(this.indicateur1["Unité_GP"], this.indicateur2["Unité_GP"])
+      this.units.push(this.indicateur_data.unite, this.indicateur_data2.unite)
+      this.leftColProps.currentValues.push(geoObject.last_value, geoObject2.last_value)
       this.leftColProps.currentDate = this.convertDateToHuman(geoObject.last_date)
-      this.leftColProps.evolcodes.push(geoObject.evol_color)
-      this.leftColProps.evolvalues.push(geoObject.evol_percentage)
+      this.leftColProps.evolcodes.push(geoObject.evol_color, geoObject2.evol_color)
+      this.leftColProps.evolvalues.push(geoObject.evol_percentage, geoObject2.evol_percentage)
 
       this.labels.length = 0
       this.dataset.length = 0
+      this.dataset2.length = 0
 
       geoObject.values.forEach(function (d) {
         self.labels.push(self.convertDateToHuman(d.date))
         self.dataset.push((d.value))
+
+        const correspondingValue = geoObject2.values.find(obj => {
+          return obj.date === d.date
+        })
+        if (correspondingValue) {
+          self.dataset2.push(correspondingValue.value)
+        }
       })
     },
 
-    getGeoObject (geolevel, geocode) {
+    getGeoObject (geolevel, geocode, data) {
       let geoObject
       if (geolevel === 'France') {
-        geoObject = this.indicateur_data.france[0]
+        geoObject = data.france[0]
       } else {
-        geoObject = this.indicateur_data[geolevel].find(obj => {
+        geoObject = data[geolevel].find(obj => {
           return obj.code_level === geocode
         })
       }
-
       if (typeof geoObject === 'undefined') {
         if (geolevel === 'regions') {
           geoObject = this.getGeoObject('France', '01')
@@ -184,7 +203,11 @@ export default {
               borderWidth: 4
             },
             {
+              data: self.dataset2,
+              backgroundColor: '#007c3a',
+              borderColor: '#007c3a',
               type: 'bar',
+              borderWidth: 4
             }
           ]
         },
@@ -193,6 +216,7 @@ export default {
           animation: {
             easing: 'easeInOutBack'
           },
+
           scales: {
             xAxes: [{
               gridLines: {
@@ -200,11 +224,11 @@ export default {
               },
               ticks: {
                 autoSkip: true,
-                maxTicksLimit: xTickLimit,
                 maxRotation: 0,
                 minRotation: 0,
                 callback: function (value) {
-                  return value.toString().substring(3, 5) + '/' + value.toString().substring(8, 10)
+                  // return value.toString().substring(3, 5) + '/' + value.toString().substring(8, 10)
+                  return new Date(value).toISOString()
                 }
               }
             }],
@@ -228,7 +252,7 @@ export default {
             callbacks: {
               label: function (tooltipItems) {
                 const int = self.convertStringToLocaleNumber(tooltipItems.value)
-                return int + ' ' + self.units[0]
+                return int + ' ' + self.units[tooltipItems.datasetIndex]
               },
               title: function (tooltipItems) {
                 return tooltipItems[0].label

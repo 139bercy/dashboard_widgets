@@ -12,10 +12,6 @@
     <div class="r_col fr-col-12" :class="{'fr-col-lg-9': leftCol}">
       <div class="chart ml-lg">
         <canvas :id="chartId"></canvas>
-<!--        <div class="flex fr-mt-3v" :style="style">-->
-<!--          <span class="legende_dot"></span>-->
-<!--          <p class="fr-text&#45;&#45;sm fr-text&#45;&#45;bold fr-ml-1v fr-mb-0">{{capitalize(units[0])}}</p>-->
-<!--        </div>-->
       </div>
     </div>
   </div>
@@ -61,19 +57,11 @@ export default {
   },
   props: {
     indicateur: String,
-    interpolation: String,
-    topCol: {
-      type: Boolean,
-      default: false
-    },
     leftCol: {
       type: Boolean,
       default: true
     },
-    bottomCol: {
-      type: Boolean,
-      default: false
-    }
+    lineChartConfiguration: Object
   },
   computed: {
     selectedGeoLevel () {
@@ -87,7 +75,7 @@ export default {
     },
     style () {
       return 'margin-left: ' + this.legendLeftMargin + 'px'
-    }
+    },
   },
   methods: {
     async getData () {
@@ -118,7 +106,7 @@ export default {
           this.geoFallback = true
           this.geoFallbackMsg = 'Affichage des résultats au niveau national, faute de données au niveau régional'
         } else {
-          const depObj = store.state.dep.find(obj => {
+          const depObj = store.state.departements.find(obj => {
             return obj.value === geocode
           })
           geoObject = this.getGeoObject('regions', depObj.region_value)
@@ -189,19 +177,27 @@ export default {
       gradientFill.addColorStop(0, 'rgba(218, 218, 254, 0.6)')
       gradientFill.addColorStop(0.6, 'rgba(245, 245, 255, 0)')
 
-      this.chart = new Chart(ctx, {
+      this.chart = new Chart(ctx, this.deepMerge({
         data: {
-          labels: self.labels,
-          datasets: [{
-            data: self.dataset,
-            backgroundColor: gradientFill,
-            borderColor: '#000091',
-            type: 'line',
-            cubicInterpolationMode: this.interpolation || 'default',
-            pointRadius: 8,
-            pointBackgroundColor: 'rgba(0, 0, 0, 0)',
-            pointBorderColor: 'rgba(0, 0, 0, 0)'
-          }]
+          labels: this.lineChartConfiguration && this.lineChartConfiguration.labels
+            ? this.lineChartConfiguration.labels
+            : self.labels,
+          datasets: [
+            {
+              data: self.dataset,
+              backgroundColor: gradientFill,
+              borderColor: '#000091',
+              type: 'line',
+              pointRadius: 8,
+              pointBackgroundColor: 'rgba(0, 0, 0, 0)',
+              pointBorderColor: 'rgba(0, 0, 0, 0)'
+            },
+            {
+              // hack to managed mutual configuration option between LineChart and MultilineChart
+              showLine: false,
+              type: 'line',
+            }
+          ]
         },
         options: {
           animation: {
@@ -268,7 +264,7 @@ export default {
             }
           }
         }
-      })
+      }, this.lineChartConfiguration))
     }
   },
 
@@ -341,7 +337,7 @@ export default {
           height: 1rem;
           min-width: 1rem;
           border-radius: 50%;
-          background-color: #000091;
+          background-color: var(--bg500-plain);
           display: inline-block;
           margin-top: 0.25rem;
         }

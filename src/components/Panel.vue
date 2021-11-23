@@ -1,6 +1,6 @@
 <template>
   <div :id="'panel_' + toJsonNameFormat(Titre_panneau)" class="panel">
-    <div :class="{'full-page-lg': $screen.breakpoint === 'lg', 'only-one-element': onlyOneElement && !points}">
+    <div :class="{'full-page-lg': $screen.breakpoint === 'lg', 'only-one-element': onlyOneElement && !points, 'flex-data-boxes': onlyBoxes}">
       <div class="lvl2-header fr-px-2w fr-px-md-3w fr-pt-3w">
         <h3>{{ Titre_panneau }}</h3>
       </div>
@@ -26,10 +26,23 @@
              :tabindex="currentOnglet === onglet ? 1 : 0"
              :aria-selected="currentOnglet === onglet ? 1 : 0">
           <div v-if="currentOnglet.indicateurs.length > 0 && currentOnglet === onglet">
-            <line-map-panel :onglet="onglet" :logo="logo" :alt-logo="altLogo" v-if="onglet.Graph || onglet.Carte"></line-map-panel>
-            <MapPointPanel :onglet="onglet" :logo="logo" :alt-logo="altLogo" v-if="onglet.Points">
-              <!-- && indicateur_data && this.indicateur_data.points -->
+            <ChartMapPanel
+              :onglet="onglet"
+              :logo="logo" :alt-logo="altLogo"
+              :line-chart-configuration="lineChartConfiguration"
+              :bar-chart-configuration="barChartConfiguration"
+              v-if="chartPanel">
+            </ChartMapPanel>
+            <MapPointPanel
+              :onglet="onglet"
+              :logo="logo" :alt-logo="altLogo"
+              v-if="onglet.Points">
             </MapPointPanel>
+            <DataBoxes
+              :onglet="onglet"
+              :logo="logo" :alt-logo="altLogo"
+              v-if="onglet.Box && !onglet.Graph && !onglet.Bar">
+            </DataBoxes>
           </div>
         </div>
       </div>
@@ -43,7 +56,8 @@
                 :aria-expanded="accordionOpened"
                 v-on:click="accordionOpened=!accordionOpened"
         >
-          En savoir plus sur la mesure
+          <!-- En savoir plus sur la mesure -->
+          {{accordéon}}
         </button>
       </h3>
       <div class="fr-pl-2v fr-pr-2v fr-col-12" v-show="accordionOpened">
@@ -51,11 +65,11 @@
           {{ onglets[0].Description_mesure }}
         </p>
         <p class="fr-text--xs fr-mb-3w fr-pb-1v">Source :
-          {{source}}
-          <a title="vers data.gouv.fr" v-bind:href="Lien_page_mesure"
+          {{source}}.
+          <a title="Sources et références" v-bind:href="Lien_page_mesure"
              target="_blank" rel="noopener" data-section="nom_section"
              data-subsection="nom_subsection">
-            Vers des fichiers d'open-data</a>
+            {{titre_page_mesure}}</a>
         </p>
       </div>
     </div>
@@ -65,24 +79,30 @@
 <script>
 
 import { mixin } from '@/utils.js'
-import LineMapPanel from './LineMapPanel'
+import ChartMapPanel from './ChartMapPanel'
 import MapPointPanel from './MapPointPanel.vue'
+import DataBoxes from './DataBoxes.vue'
 
 export default {
   name: 'Panel',
   mixins: [mixin],
   components: {
-    LineMapPanel,
-    MapPointPanel
+    ChartMapPanel,
+    MapPointPanel,
+    DataBoxes
   },
   props: {
     index: String,
     Titre_panneau: String,
     Lien_page_mesure: String,
+    titre_page_mesure: String,
     source: String,
+    accordéon: String,
     onglets: Array,
     logo: String,
-    altLogo: String
+    altLogo: String,
+    lineChartConfiguration: Object,
+    barChartConfiguration: Object
   },
   data() {
     return {
@@ -91,15 +111,20 @@ export default {
     }
   },
   computed: {
+    chartPanel() {
+      return this.currentOnglet.Carte  || this.currentOnglet.Graph  || this.currentOnglet.Bar
+    },
     onlyOneElement() {
-      return this.currentOnglet.Carte && !this.currentOnglet.Graph && !this.currentOnglet.Points
-      || !this.currentOnglet.Carte && this.currentOnglet.Graph && !this.currentOnglet.Points
-      || !this.currentOnglet.Carte && !this.currentOnglet.Graph && this.currentOnglet.Points
+      return this.currentOnglet.Carte && !this.currentOnglet.Graph && !this.currentOnglet.Bar
+      || !this.currentOnglet.Carte && this.currentOnglet.Graph && !this.currentOnglet.Bar
+      || !this.currentOnglet.Carte && !this.currentOnglet.Graph && this.currentOnglet.Bar
+      || !this.currentOnglet.Carte && !this.currentOnglet.Graph && !this.currentOnglet.Bar
+    },
+    onlyBoxes() {
+      return this.currentOnglet.Box && !this.currentOnglet.Graph
     },
     points() {
-      return this.currentOnglet.Carte && !this.currentOnglet.Graph && !this.currentOnglet.Points
-      || !this.currentOnglet.Carte && this.currentOnglet.Graph && !this.currentOnglet.Points
-      || !this.currentOnglet.Carte && !this.currentOnglet.Graph && this.currentOnglet.Points
+      return this.currentOnglet.Points
     }
   },
   methods: {}
@@ -112,14 +137,15 @@ export default {
   // Gestion du positionnement sur grand écran (breakpoint lg)
   @media (min-width: 62em) {
     .full-page-lg {
-      &:not(.only-one-element) {
+      &:not(.only-one-element):not(.flex-data-boxes) {
         height: 97vh;
         max-height: 97vh;
         overflow: hidden;
       }
       &.only-one-element {
-        height: 45vh;
-        max-height: 45vh;
+        // TODO handle multiple indicateurs !!
+        height: 50vh;
+        max-height: 50vh;
         overflow: hidden;
       }
       & > .fr-tabs {

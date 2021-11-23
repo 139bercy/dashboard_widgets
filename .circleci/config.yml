@@ -38,9 +38,13 @@ jobs:
               sed -e 's|/css/index|css/index|g' -e 's|/js/index|js/index|g' -i dist/index.html
               sed -e 's|/css/index|css/index|g' -e 's|/js/index|js/index|g' -i dist/index-impact.html
               sed -e 's|/css/index|css/index|g' -e 's|/js/index|js/index|g' -i dist/index-afa.html
+              apk add --no-cache zip && zip -r dist.zip dist
         - persist_to_workspace:
             root: ./
             paths: dist
+        - store_artifacts: # Accès au résultat pour validation si nécessaire
+            path: ./dist.zip
+            destination: dist.zip
 
   install-requirements-python:
     docker:
@@ -74,7 +78,7 @@ jobs:
             name: Génération du fichier de configuration par rapport au fichier csv
             command: |
               . venv/bin/activate
-              python dashboard-configuration/csv_to_json.py
+              python dashboard-configuration/generate_configurations.py
         - persist_to_workspace:
             root: ./
             paths:

@@ -43,11 +43,11 @@ export default {
     populateLists () {
       const self = this
 
-      store.state.dep.forEach(function (dep) {
+      store.state.departements.forEach(function (dep) {
         const depObj = { label: dep.label, value: dep.value }
         self.departements.push(depObj)
       })
-      store.state.reg.forEach(function (reg) {
+      store.state.regions.forEach(function (reg) {
         const regObj = { label: reg.label, value: reg.value }
         self.regions.push(regObj)
       })
@@ -58,13 +58,13 @@ export default {
 
       if (level === 'departements') {
         document.querySelector('#select-reg').value = ''
-        originalObj = store.state.dep.find(obj => {
+        originalObj = store.state.departements.find(obj => {
           return obj.value === event.target.value
         })
         geoLabel = originalObj.label
       } else {
         document.querySelector('#select-dep').value = ''
-        originalObj = store.state.reg.find(obj => {
+        originalObj = store.state.regions.find(obj => {
           return obj.value === event.target.value
         })
         geoLabel = originalObj.label
@@ -90,7 +90,7 @@ export default {
 <style scoped lang="scss">
 
 .fr-select {
-  box-shadow: inset 0 -2px 0 0 #000091;
+  box-shadow: inset 0 -2px 0 0 var(--bf-500-plain);
 }
 
 button.fr-link {

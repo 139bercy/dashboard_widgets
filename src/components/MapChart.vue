@@ -12,7 +12,7 @@
           </div>
         </div>
         <div class="no_select" :class="{'france_container': DOMTOMBottom, 'fr-col-9' : !DOMTOMBottom}">
-          <france :onenter="displayTooltip" :onleave="hideTooltip"></france>
+          <France :onenter="displayTooltip" :onleave="hideTooltip"></France>
         </div>
         <div :class="{'fr-col-1' : !DOMTOMBottom}"></div>
         <div class="om_container no_select" :class="{'fr-grid-row': DOMTOMBottom, 'fr-col-2' : !DOMTOMBottom}">
@@ -97,35 +97,75 @@ export default {
   },
   props: {
     indicateur: String,
-    topCol: {
-      type: Boolean,
-      default: false
-    },
     leftCol: {
       type: Boolean,
       default: true
     },
-    bottomCol: {
-      type: Boolean,
-      default: false
-    },
     DOMTOMBottom: {
       type: Boolean,
       default: true
-    }
+    },
+    minGeoLevel: String
   },
   computed: {
     selectedGeoLevel () {
+      if (store.state.user.geoLevelOrder.indexOf(this.definedMinGeoLevel) > store.state.user.geoLevelOrder.indexOf(store.state.user.selectedGeoLevel)) {
+        return this.definedMinGeoLevel
+      }
       return store.state.user.selectedGeoLevel
+
     },
     selectedGeoCode () {
+      if (store.state.user.geoLevelOrder.indexOf(this.definedMinGeoLevel) > store.state.user.geoLevelOrder.indexOf(store.state.user.selectedGeoLevel)) {
+        const departement = store.state.departements.find(function (departement) {
+          if (self.selectedGeoLevel === "France") {
+            return true
+          } else if (self.selectedGeoLevel === "regions") {
+            return store.state.user.selectedGeoCode === departement.region_value
+          } else {
+            return store.state.user.selectedGeoCode === departement.value
+          }
+        })
+        if (this.selectedGeoLevel === "France") {
+          return "France entière"
+        } else if (this.selectedGeoLevel === "regions") {
+          return departement.region_value
+        }
+        return departement.value
+      }
       return store.state.user.selectedGeoCode
     },
     selectedGeoLabel () {
+      if (store.state.user.geoLevelOrder.indexOf(this.definedMinGeoLevel) > store.state.user.geoLevelOrder.indexOf(store.state.user.selectedGeoLevel)) {
+        const departement = store.state.departements.find(function (departement) {
+          if (self.selectedGeoLevel === "France") {
+            return true
+          } else if (self.selectedGeoLevel === "regions") {
+            return store.state.user.selectedGeoCode === departement.region_value
+          } else {
+            return store.state.user.selectedGeoCode === departement.value
+          }
+        })
+        if (this.selectedGeoLevel === "France") {
+          return "France entière"
+        } else if (this.selectedGeoLevel === "regions") {
+          const region = store.state.regions.find(function (region) {
+            return region.value === departement.region_value
+          })
+          return region.label
+        }
+        return departement.label
+      }
       return store.state.user.selectedGeoLabel
     },
     style () {
       return 'margin-left: ' + this.legendLeftMargin + 'px'
+    },
+    definedMinGeoLevel () {
+      if (this.indicateur_data && this.indicateur_data[this.minGeoLevel]) {
+        return this.minGeoLevel
+      }
+      return store.state.user.geoLevelOrder[store.state.user.geoLevelOrder.indexOf(this.minGeoLevel) + 1]
     }
 
   },
@@ -143,9 +183,9 @@ export default {
 
       const geolevel = this.selectedGeoLevel
       const geocode = this.selectedGeoCode
+      const geoObject = this.getGeoObject(geolevel, geocode)
 
       this.leftColProps.localisation = this.selectedGeoLabel
-      const geoObject = this.getGeoObject(geolevel, geocode)
       this.leftColProps.date = this.convertDateToHuman(geoObject.last_date)
 
       this.leftColProps.names.length = 0
@@ -163,7 +203,7 @@ export default {
 
       const values = []
 
-      this.indicateur_data.departements.forEach(function (d) {
+      this.indicateur_data[this.definedMinGeoLevel].forEach(function (d) {
         values.push(parseInt(d.last_value))
       })
 
@@ -177,36 +217,31 @@ export default {
 
       const parentWidget = document.getElementById(this.widgetId)
 
-      if (geolevel === 'France') {
-        this.indicateur_data.departements.forEach(function (d) {
-          const elCol = parentWidget.getElementsByClassName('FR-' + d.code_level)
-          elCol.length !== 0 && elCol[0].setAttribute('fill', x(d.last_value))
-        })
-      } else if (geolevel === 'departements') {
-        this.indicateur_data.departements.forEach(function (d) {
-          const elCol = parentWidget.getElementsByClassName('FR-' + d.code_level)
-          if (d.code_level === geocode) {
-            elCol.length !== 0 && elCol[0].setAttribute('fill', x(d.last_value))
-          } else {
-            elCol.length !== 0 && elCol[0].setAttribute('fill', 'rgba(247, 237, 211, 0.72)')
-          }
-        })
-      } else {
-        this.indicateur_data.departements.forEach(function (d) {
-          const elCol = parentWidget.getElementsByClassName('FR-' + d.code_level)
-          const depObj = store.state.dep.find(obj => {
-            return obj.value === d.code_level
+      store.state.departements.forEach(function (departement, index) {
+        const elCol = parentWidget.getElementsByClassName('FR-' + departement.value)
+        let value = null
+        if (self.definedMinGeoLevel == "France") {
+          value = self.indicateur_data[self.definedMinGeoLevel][0]
+        } else if (self.definedMinGeoLevel == "regions") {
+          value = self.indicateur_data[self.definedMinGeoLevel].find(function (v) {
+            return v.code_level === departement.region_value
           })
-          if (typeof depObj !== 'undefined') {
-            const parentRegion = depObj.region_value
-            if (parentRegion === self.selectedGeoCode) {
-              elCol.length !== 0 && elCol[0].setAttribute('fill', x(d.last_value))
-            } else {
-              elCol.length !== 0 && elCol[0].setAttribute('fill', 'rgba(247, 237, 211, 0.72)')
-            }
-          }
-        })
-      }
+        } else {
+          value = self.indicateur_data[self.definedMinGeoLevel].find(function (v) {
+            return v.code_level === departement.value
+          })
+        }
+        if (value
+          && (
+            (geolevel === 'departements' && departement.value === geocode)
+            || (geolevel === 'regions' && departement.region_value === geocode)
+            || geolevel === 'France')
+        ) {
+          elCol.length !== 0 && elCol[0].setAttribute('fill', x(value.last_value))
+        } else {
+          elCol.length !== 0 && elCol[0].setAttribute('fill', 'rgba(247, 237, 211, 0.72)')
+        }
+      })
     },
 
     getGeoObject (geolevel, geocode) {
@@ -227,19 +262,27 @@ export default {
 
     displayTooltip (e) {
       if (isMobile) return
-      const hoverdep = e.target.className.baseVal.replace(/FR-/g, '')
+      let hoverdep = e.target.className.baseVal.replace(/FR-/g, '')
 
-      const dataObj = this.indicateur_data.departements.find(obj => {
+      const depObj = store.state.departements.find(obj => {
+        return obj.value === hoverdep
+      })
+
+      if (this.definedMinGeoLevel == "regions") {
+        hoverdep = depObj.region_value
+      }
+
+      let dataObj = this.indicateur_data[this.definedMinGeoLevel].find(obj => {
         return obj.code_level === hoverdep
       })
 
-      const depObj = store.state.dep.find(obj => {
+      const levelObj = store.state[this.definedMinGeoLevel].find(obj => {
         return obj.value === dataObj.code_level
       })
 
       this.tooltip.value = dataObj.last_value
       this.tooltip.date = dataObj.last_date
-      this.tooltip.place = depObj.label
+      this.tooltip.place = levelObj.label
 
       this.tooltip.top = (e.target.getBoundingClientRect().top - 75) + 'px'
       this.tooltip.left = (e.target.getBoundingClientRect().left + 15) + 'px'

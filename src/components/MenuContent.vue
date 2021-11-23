@@ -23,6 +23,13 @@
           'fr-collapse--expanded': showMenu || $screen.breakpoint !== 'sm',
         }"
       >
+      <!-- Affichage logo AFA
+      <div class="fr-mb-4w fr-mt-3v fr-mt-md-0">
+        <div class="fr-mb-3w">
+          <img  class=" fr-text--sm fr-mb-0 fr-py-1v"  src="https://www.agence-francaise-anticorruption.gouv.fr/files/2018-11/logo-afa.png" alt="Logo AFA">
+        </div>
+      </div> -->
+
         <div class="fr-sidemenu__title">
           Affiner la recherche par territoire :
         </div>
