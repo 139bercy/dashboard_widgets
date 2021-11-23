@@ -237,7 +237,7 @@ export default {
       right: 10px;
     }
     :not(.position-absolute) {
-      margin-left: 15%;
+      margin-left: 3%;
     }
   }
 
