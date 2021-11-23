@@ -5,6 +5,7 @@
 .page-content {
   --boxshadow: var(--bf500);
   --boxcountour: var(--bf500-plain);
+  /* --boxcountour: var(rgb(75, 30, 82)); */
 }
 
 /* .page-content[data-fr-theme=dark i] {
@@ -22,7 +23,7 @@
 } */
 
 .page-content:not([data-fr-theme="dark" i]) .fr-tabs__tab:not([aria-selected="true"]) {
-  --color-hover: rgba(187, 255, 182, 0.5);
+  --color-hover: rgba(209, 111, 224, 0.5);
   --color-active: rgba(109, 168, 105, 0.5);
   --block-color-hover: rgba(187, 255, 182, 0.5);
   --block-color-active: rgba(109, 168, 105, 0.5);
