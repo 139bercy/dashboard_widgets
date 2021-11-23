@@ -4,7 +4,10 @@
             {
                 "Carte": false,
                 "Graph": false,
+                "Bar": false,
+                "Box": false,
                 "Points": true,
+                "MinGeoLevel": "departements",
                 "Titre_onglet": "Type d’entreprise",
                 "indicateurs": [
                     {
@@ -17,7 +20,10 @@
             {
                 "Carte": false,
                 "Graph": false,
+                "Bar": false,
+                "Box": false,
                 "Points": true,
+                "MinGeoLevel": "departements",
                 "Titre_onglet": "Secteur d’activité",
                 "indicateurs": [
                     {

@@ -1,0 +1,41 @@
+{
+  "data": {
+    "datasets": [
+      {
+        "barThickness": 38
+      },
+      {
+        "barThickness": 38
+      }
+    ]
+  },
+  "options": {
+    "indexAxis": "y",
+    "scales": {
+      "xAxes": [
+        {
+          "stacked": true,
+          "offset": true,
+          "ticks": {
+            "autoSkip": false,
+            "callback": null,
+            "align": "center"
+          },
+          "type": "time",
+          "time": {
+            "unit": "year",
+            "displayFormats": {
+                "year": "YYYY"
+            }
+          }
+        }
+      ],
+      "yAxes": [
+        {
+          "stacked": true,
+          "beginAtZero": true
+        }
+      ]
+    }
+  }
+}

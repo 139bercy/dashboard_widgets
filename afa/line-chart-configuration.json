@@ -1,0 +1,43 @@
+{
+  "data": {
+    "datasets": [
+      {
+        "cubicInterpolationMode": "monotone",
+        "pointRadius": 3.5,
+        "pointBackgroundColor": "rgb(0, 0, 145)",
+        "pointBorderColor": "rgb(0, 0, 145)",
+        "tension": 0.3
+      },
+      {
+        "cubicInterpolationMode": "monotone",
+        "pointRadius": 3.5,
+        "pointBackgroundColor": "rgb(0, 124, 58)",
+        "pointBorderColor": "rgb(0, 124, 58)",
+        "tension": 0.3
+      }
+    ]
+  },
+  "options": {
+    "scales": {
+      "xAxes": [
+        {
+          "ticks": {
+            "autoSkip": false,
+            "callback": null,
+            "align": "center"
+          },
+          "type": "time",
+          "time": {
+            "unit": "year",
+            "displayFormats": {
+                "year": "YYYY"
+            }
+          }
+        }
+      ],
+      "yAxes": [{
+        "beginAtZero": true
+      }]
+    }
+  }
+}
