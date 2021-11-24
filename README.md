@@ -49,3 +49,13 @@ La configuration de l'affichage des données s'effectue dans le dossier initulé
 Les fichiers `Logo-France-Relance.png` et `france-relance.description` permettent respectivement d'afficher le logo du commandiaire sur les graphiques et d'introduire des paragraphes de présentation en introduction au tableau de bord. 
 
 La configuration générale du style du tableau de bord est effectuée dans le fichier `france-relance.css`, tandis que les développements spécifiques à chacun des types de graphiques sont spécificés dans les fichiers de la forme de ce dernier : `line-chart-configuration.json`.
+
+
+### Création des données (Schéma en cours de création ***todo***)
+
+Voici le workflow général des données.
+
+D'un csv ou d'un excel on en ressort un csv modele.
+Ce csv model sera converti en json grâce aux fichier csvtojson.py ( Ce même fichier est paramétrable pour coller à chaque projet)
+Ce même fichier json est intégré dans data.economie où chaque donnée aura un nom d'indicateurs unique.
+Ainsi chacune des données de data.economie sera réucpérer grâce à ce code, à inscrire dans le ichiers de configuration des données en CSV (> afa.csv etc).
