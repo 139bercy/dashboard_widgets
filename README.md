@@ -1,6 +1,6 @@
 # Tableaux de bord publics
 
-Ce projet contient l'ensemble des éléments nécessaires à la réalisation de tableaux de bord publics. 
+> Ce projet contient l'ensemble des éléments nécessaires à la réalisation de tableaux de bord publics. 
 
 Ces composants ont été développé à l'origine par [Etalab](https://www.etalab.gouv.fr/) pour le [tableau de bord pour le Covid 19](https://github.com/etalab/covid19-dashboard-widgets). Ils ont initialement été repris ici, et adaptés pour l'élaboration du [tableau de bord France Relance](https://www.economie.gouv.fr/plan-de-relance/tableau-de-bord). Le travail en cours consiste à rendre modulaire ce projet, afin de permettre la production de tableaux de bord publics adaptés aux besoins de la commande.
 
@@ -37,7 +37,6 @@ Il est tout d'abord nécessaire de produire un fichier de configuration des donn
 
 La configuration de l'affichage des données s'effectue dans le dossier initulé du nom du projet, par exemple `france-relance`, lui-même placé dans le dossier `public`. Celui-ci se structure typiquement de la manière suivante :
 
-
 ```
 ├── france-relance
 │   ├── Logo-France-Relance.png
@@ -50,12 +49,22 @@ Les fichiers `Logo-France-Relance.png` et `france-relance.description` permetten
 
 La configuration générale du style du tableau de bord est effectuée dans le fichier `france-relance.css`, tandis que les développements spécifiques à chacun des types de graphiques sont spécificés dans les fichiers de la forme de ce dernier : `line-chart-configuration.json`.
 
+## Sources et traitement des données
 
-### Création des données (Schéma en cours de création ***todo***)
+### Sources
 
-Voici le workflow général des données.
+Les données publiées dans les tableaux de bord sont de la responsabilité éditoriale des commanditaires. Le code source produit par le BercyHub est publié ici en accès ouvert, et les données partagées sous un format interopérable sur <https://data.economie.gouv.fr/>.
 
-D'un csv ou d'un excel on en ressort un csv modele.
-Ce csv model sera converti en json grâce aux fichier csvtojson.py ( Ce même fichier est paramétrable pour coller à chaque projet)
-Ce même fichier json est intégré dans data.economie où chaque donnée aura un nom d'indicateurs unique.
-Ainsi chacune des données de data.economie sera réucpérer grâce à ce code, à inscrire dans le ichiers de configuration des données en CSV (> afa.csv etc).
+### Traitement des données
+
+Afin d'être intégrées dans les tableaux de bord, les données sont traitées selon le processus suivant :
+
+1. Transformation des données sources en CSV modèle ;
+2. Export du CSV modèle en JSON à l'aide du script `cstvojson.py`, paramétrable pour chaque projet ;
+3. Publication des données sur <https://www.data.economie.gouv.fr> ;
+4. Récupération de ces données à l'aide des codes d'indicateurs uniques inscrits dans le fichier CSV de configuration (`france-relance.csv` par exemple) ;
+5. Transformation de ce fichier en JSON de configuration final, à l'aide du script `generate_configurations.py`.
+
+Ce processus de traitement, mis en place pour le projet France Relance, permet de paramétrer facilement l'affichage du tableau de bord dans le fichier de configuration CSV, y compris pour des métiers peu accoutumés au maniement de la donnée, tout en assurant la publication en accès ouvert. Si une refonte de ce dernier pourrait être envisagée à moyen terme, celui-ci est néanmoins fonctionnel. Afin d'en faciliter l'appropriation, le schéma ci-dessous résume les étapes de ce processus.
+
+![Schéma du processus de traitement des données pour les tableaux de bord](./processus-traitement-donnees.png "Schéma du processus de traitement des données pour les tableaux de bord")
