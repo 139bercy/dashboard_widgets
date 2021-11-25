@@ -34,7 +34,7 @@
           Affiner la recherche par territoire :
         </div>
         <geo-list></geo-list>
-        <div class="fr-sidemenu__title">Naviguer par volet :</div>
+        <div class="fr-sidemenu__title">Naviguer par thématique :</div>
 
         <ul class="fr-sidemenu__list" v-for="volet in volets" :key="volet">
           <li class="fr-sidemenu__item">
@@ -43,7 +43,7 @@
               :aria-expanded="voletOpened[volet]"
               v-on:click="toggleMenuList(volet)"
             >
-              Volet {{ volet }}
+              {{ volet }}
             </button>
             <ul class="fr-sidemenu__list" v-show="voletOpened[volet]">
               <li
