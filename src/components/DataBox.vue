@@ -141,6 +141,8 @@ export default {
 }
 </script>
 
+<!-- TODO #d80600 valeur réelle pour &red, le temps de corriger les données sur data.economie -->
+
 <style scoped lang="scss">
 
   .data_box{
@@ -156,9 +158,8 @@ export default {
       border-bottom: 5px solid #007c3a;
     }
     &.red{
-      border-bottom: 5px solid #d80600;
+      border-bottom: 5px solid #b4b4f0;
     }
-
     .evol_box{
       display: inline-flex;
       align-items: center;
