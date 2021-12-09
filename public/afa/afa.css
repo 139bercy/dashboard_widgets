@@ -28,3 +28,8 @@
   --block-color-hover: rgba(187, 255, 182, 0.5);
   --block-color-active: rgba(109, 168, 105, 0.5);
 }
+
+/* spécfication de la légende */
+.l_col .scale .scale_container[data-v-ef37b50e]{
+    background: linear-gradient(90deg, #ffc700 0%, #000 100%);
+}
