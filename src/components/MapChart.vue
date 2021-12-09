@@ -79,8 +79,8 @@ export default {
       },
       scaleMin: 0,
       scaleMax: 0,
-      colorMin: "#ffc700",
-      colorMax: "#715845",
+      colorMin: "#000000",
+      colorMax: "#666666",
       units: [],
       chart: undefined,
       loading: true,
@@ -107,7 +107,8 @@ export default {
       type: Boolean,
       default: true
     },
-    minGeoLevel: String
+    minGeoLevel: String,
+    mapChartConfiguration: Object
   },
   computed: {
     selectedGeoLevel () {
