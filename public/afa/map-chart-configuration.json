@@ -1,0 +1,10 @@
+{
+  "data": {
+    "datasets": [
+      {
+        colorMin: "#000000",
+        colorMax: "#111111"
+      }
+    ]
+  }
+}
