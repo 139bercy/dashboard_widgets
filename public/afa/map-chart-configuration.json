@@ -1,6 +1,6 @@
 {
   "data": {
-    colorMin: "#323232",
-    colorMax: "#ff0000"
+    "colorMin": "#323232",
+    "colorMax": "#ff0000"
   }
 }
