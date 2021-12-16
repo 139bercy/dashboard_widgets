@@ -40,6 +40,7 @@
         </MultiBarChart>
         <MapChart
             class="map-container fr-col-12"
+            :map-chart-configuration="mapChartConfiguration"
             :indicateur="indicateurCode1"
             :left-col="false"
             :DOMTOMBottom="true"
@@ -90,7 +91,8 @@ export default {
     logo: String,
     altLogo: String,
     lineChartConfiguration: Object,
-    barChartConfiguration: Object
+    barChartConfiguration: Object,
+    mapChartConfiguration: Object
   },
   data() {
     return {

@@ -31,6 +31,7 @@
               :logo="logo" :alt-logo="altLogo"
               :line-chart-configuration="lineChartConfiguration"
               :bar-chart-configuration="barChartConfiguration"
+              :map-chart-configuration="mapChartConfiguration"
               v-if="chartPanel">
             </ChartMapPanel>
             <MapPointPanel
@@ -102,7 +103,8 @@ export default {
     logo: String,
     altLogo: String,
     lineChartConfiguration: Object,
-    barChartConfiguration: Object
+    barChartConfiguration: Object,
+    mapChartConfiguration: Object
   },
   data() {
     return {
