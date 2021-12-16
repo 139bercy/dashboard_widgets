@@ -579,32 +579,32 @@ export const getData = async function (store) {
     {
       value: '971',
       label: 'Guadeloupe',
-      region: 'Outre',
+      region: 'Guadeloupe',
       region_value: '01'
     },
     {
       value: '972',
       label: 'Martinique',
-      region: 'Outre',
-      region_value: '01'
+      region: 'Martinique',
+      region_value: '02'
     },
     {
       value: '973',
       label: 'Guyane française',
-      region: 'Outre',
-      region_value: '01'
+      region: 'Guyane',
+      region_value: '03'
     },
     {
       value: '974',
       label: 'Réunion',
-      region: 'Outre',
-      region_value: '01'
+      region: 'La Réunion',
+      region_value: '04'
     },
     {
       value: '976',
       label: 'Mayotte',
-      region: 'Outre',
-      region_value: '01'
+      region: 'Mayotte',
+      region_value: '06'
     }
   ]
 
@@ -663,8 +663,24 @@ export const getData = async function (store) {
     },
     {
       value: '01',
-      label: 'Outre-mer'
+      label: 'Guadeloupe'
     },
+    {
+      value: '02',
+      label: 'Martinique'
+    },
+    {
+      value: '03',
+      label: 'Guyane'
+    },
+    {
+      value: '04',
+      label: 'La Réunion'
+    },
+    {
+      value: '06',
+      label: 'Mayotte'
+    }
   ]
 
   store.commit('initDep', dep)
