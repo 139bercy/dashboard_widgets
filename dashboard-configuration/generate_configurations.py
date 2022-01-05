@@ -14,6 +14,7 @@ def convert_excel_to_json(path):
         "Volet",
         "source",
         "accordéon",
+        "texte_intro",
         "titre_page_mesure"
     ]
     onglet_properties = [

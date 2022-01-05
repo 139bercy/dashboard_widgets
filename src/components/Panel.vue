@@ -3,7 +3,12 @@
     <div :class="{'full-page-lg': $screen.breakpoint === 'lg', 'only-one-element': onlyOneElement && !points, 'flex-data-boxes': onlyBoxes}">
       <div class="lvl2-header fr-px-2w fr-px-md-3w fr-pt-3w">
         <h3>{{ Titre_panneau }}</h3>
-      </div>
+      </div>        
+    <div>
+       {{ texte_intro}}<br>
+      <br>
+    </div>
+
       <div class="fr-tabs" :class="{'box-shadow-without-descrption-mesure': !onglets[0].Description_mesure}">
         <ul class="fr-tabs__list" role="tablist" aria-label="changer d'onglet">
           <li role="presentation" v-for="(onglet, indexOnglet) in onglets" :key="indexOnglet"
@@ -94,6 +99,7 @@ export default {
   },
   props: {
     index: String,
+    texte_intro: String,
     Titre_panneau: String,
     Lien_page_mesure: String,
     titre_page_mesure: String,
