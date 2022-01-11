@@ -245,6 +245,26 @@ export default {
           elCol.length !== 0 && elCol[0].setAttribute('fill', 'rgba(247, 237, 211, 0.72)')
         }
       })
+
+      store.state.regions.forEach(function (region, index) {
+        const elCol = parentWidget.getElementsByClassName('REG-' + region.value)
+        let value = null
+        if (self.definedMinGeoLevel == "France") {
+          value = self.indicateur_data[self.definedMinGeoLevel][0]
+        } else {
+          value = self.indicateur_data[self.definedMinGeoLevel].find(function (v) {
+            return v.code_level === region.value
+          })
+        }
+        if (value
+          && ((geolevel === 'regions' && region.value === geocode)
+            || geolevel === 'France')
+        ) {
+          elCol.length !== 0 && elCol[0].setAttribute('fill', x(value.last_value))
+        } else {
+          elCol.length !== 0 && elCol[0].setAttribute('fill', 'rgba(247, 237, 211, 0.72)')
+        }
+      })
     },
 
     getGeoObject (geolevel, geocode) {
