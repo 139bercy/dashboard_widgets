@@ -8,16 +8,17 @@
           <div class="tooltip_header">{{ convertDateToHuman(tooltip.date) }}</div>
           <div class="tooltip_body">
             <div class="tooltip_place">{{ tooltip.place }}</div>
-            <div class="tooltip_value">{{ convertStringToLocaleNumber(tooltip.value) }} {{ units[0] }}</div>
+            <div class="tooltip_value">{{ convertStringToLocaleNumber(tooltip.value) }} {{ units[0] }} </div>
           </div>
         </div>
         <div class="no_select" :class="{'france_container': DOMTOMBottom, 'fr-col-9' : !DOMTOMBottom}">
-          <France :onenter="displayTooltip" :onleave="hideTooltip"></France>
+          <Regions :onenter="displayTooltip" :onleave="hideTooltip" v-if="minGeoLevel=== 'regions'"></Regions>
+          <France :onenter="displayTooltip" :onleave="hideTooltip" v-if="minGeoLevel=== 'departements'"></France>
         </div>
         <div :class="{'fr-col-1' : !DOMTOMBottom}"></div>
         <div class="om_container no_select" :class="{'fr-grid-row': DOMTOMBottom, 'fr-col-2' : !DOMTOMBottom}">
           <div class="om fr-col-4 fr-col-sm">
-            <span class="fr-text--xs fr-my-1w">Guadeloupe</span>
+            <span class="fr-text--xs fr-my-1w">Guadeloupe </span>
             <guadeloupe :onenter="displayTooltip" :onleave="hideTooltip"></guadeloupe>
           </div>
           <div class="om fr-col-4 fr-col-sm">
@@ -49,11 +50,13 @@ import maps from '@/components/maps'
 import * as d3 from 'd3-scale'
 import { isMobile } from 'mobile-device-detect'
 import { mixin } from '@/utils.js'
+import France from './maps/France.vue'
 
 export default {
   name: 'MapChart',
   mixins: [mixin],
   components: {
+    France,
     LeftCol,
     ...maps
   },

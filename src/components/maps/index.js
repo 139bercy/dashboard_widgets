@@ -1,3 +1,4 @@
+import Regions from './Regions'
 import France from './France'
 import Guadeloupe from './Guadeloupe'
 import Martinique from './Martinique'
@@ -6,6 +7,7 @@ import Reunion from './Reunion'
 import Mayotte from './Mayotte'
 
 export default {
+  Regions,
   France,
   Guadeloupe,
   Martinique,
