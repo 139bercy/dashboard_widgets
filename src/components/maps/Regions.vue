@@ -6,7 +6,7 @@ export default {
 </script>
 
 <template>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" baseProfile="tiny" width="1200" height="800" viewBox="0 0 1200 800">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" baseProfile="tiny" width="1100" height="700" viewBox="0 3 500 680">
 	<g class="France">
 		<g stroke="#FFFFFF" fill-rule="nonzero">
 			<g class="FR-44" @mouseenter="onenter($event)" @mouseleave="onleave()"  fill="#6b6b6b">
