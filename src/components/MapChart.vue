@@ -12,7 +12,8 @@
           </div>
         </div>
         <div class="no_select" :class="{'france_container': DOMTOMBottom, 'fr-col-9' : !DOMTOMBottom}">
-          <France :onenter="displayTooltip" :onleave="hideTooltip"></France>
+          <FranceByDepartments :onenter="displayTooltip" :onleave="hideTooltip" v-show="this.definedMinGeoLevel == 'departements'"></FranceByDepartments>
+          <FranceByRegions :onenter="displayTooltip" :onleave="hideTooltip" v-show="this.definedMinGeoLevel == 'regions'"></FranceByRegions>
         </div>
         <div :class="{'fr-col-1' : !DOMTOMBottom}"></div>
         <div class="om_container no_select" :class="{'fr-grid-row': DOMTOMBottom, 'fr-col-2' : !DOMTOMBottom}">
@@ -109,11 +110,7 @@ export default {
   },
   computed: {
     selectedGeoLevel () {
-      if (store.state.user.geoLevelOrder.indexOf(this.definedMinGeoLevel) > store.state.user.geoLevelOrder.indexOf(store.state.user.selectedGeoLevel)) {
-        return this.definedMinGeoLevel
-      }
       return store.state.user.selectedGeoLevel
-
     },
     selectedGeoCode () {
       if (store.state.user.geoLevelOrder.indexOf(this.definedMinGeoLevel) > store.state.user.geoLevelOrder.indexOf(store.state.user.selectedGeoLevel)) {
@@ -181,11 +178,11 @@ export default {
     updateData () {
       const self = this
 
-      const geolevel = this.selectedGeoLevel
-      const geocode = this.selectedGeoCode
-      const geoObject = this.getGeoObject(geolevel, geocode)
+      const selectedLevel = self.selectedGeoLevel
+      const selectedCode = self.selectedGeoCode
+      const geoObject = this.getGeoObject(selectedLevel, selectedCode)
 
-      this.leftColProps.localisation = this.selectedGeoLabel
+      this.leftColProps.localisation = selectedLevel
       this.leftColProps.date = this.convertDateToHuman(geoObject.last_date)
 
       this.leftColProps.names.length = 0
@@ -202,7 +199,6 @@ export default {
       this.leftColProps.evolvalues.push(geoObject.evol_percentage)
 
       const values = []
-
       this.indicateur_data[this.definedMinGeoLevel].forEach(function (d) {
         values.push(parseInt(d.last_value))
       })
@@ -213,34 +209,33 @@ export default {
       this.leftColProps.min = this.scaleMin
       this.leftColProps.max = this.scaleMax
 
-      const x = d3.scaleLinear().domain([this.scaleMin, this.scaleMax]).range(['#ffc700', '#715845'])
+      const color = d3.scaleLinear().domain([this.scaleMin, this.scaleMax]).range(['#ffc700', '#715845'])
+      const widget = document.getElementById(this.widgetId)
+      const isRegion = self.definedMinGeoLevel === 'regions'
+      const isRegionSelection = selectedLevel === 'regions'
+      const isDepartment = self.definedMinGeoLevel === 'departements'
+      const isDepartmentSelection = selectedLevel === 'departements'
+      const locationSelector = isDepartment ? 'department': 'region'
+      const data = isDepartment ? store.state.departements : store.state.regions
 
-      const parentWidget = document.getElementById(this.widgetId)
+      data.forEach(function (location) {
+        widget
+          .querySelectorAll("[data-" + locationSelector + "='" + location.value + "']")
+          .forEach(function(locationObject) {
+            const value = self.indicateur_data[self.definedMinGeoLevel].find(function (v) {
+              return v.code_level === location.value
+            })
 
-      store.state.departements.forEach(function (departement, index) {
-        const elCol = parentWidget.getElementsByClassName('FR-' + departement.value)
-        let value = null
-        if (self.definedMinGeoLevel == "France") {
-          value = self.indicateur_data[self.definedMinGeoLevel][0]
-        } else if (self.definedMinGeoLevel == "regions") {
-          value = self.indicateur_data[self.definedMinGeoLevel].find(function (v) {
-            return v.code_level === departement.region_value
+            if (selectedLevel === 'France' 
+              || (isRegion && isRegionSelection && location.value === selectedCode)
+              || (isDepartment && isDepartmentSelection && location.value === selectedCode)
+              || (isDepartment && isRegionSelection && location.region_value === selectedCode)) {
+              locationObject.setAttribute('fill', color(value.last_value))
+            }
+            else {
+              locationObject.setAttribute('fill', 'rgba(247, 237, 211, 0.72)')
+            }
           })
-        } else {
-          value = self.indicateur_data[self.definedMinGeoLevel].find(function (v) {
-            return v.code_level === departement.value
-          })
-        }
-        if (value
-          && (
-            (geolevel === 'departements' && departement.value === geocode)
-            || (geolevel === 'regions' && departement.region_value === geocode)
-            || geolevel === 'France')
-        ) {
-          elCol.length !== 0 && elCol[0].setAttribute('fill', x(value.last_value))
-        } else {
-          elCol.length !== 0 && elCol[0].setAttribute('fill', 'rgba(247, 237, 211, 0.72)')
-        }
       })
     },
 
@@ -262,28 +257,23 @@ export default {
 
     displayTooltip (e) {
       if (isMobile) return
-      let hoverdep = e.target.className.baseVal.replace(/FR-/g, '')
 
-      const depObj = store.state.departements.find(obj => {
-        return obj.value === hoverdep
+      const level = this.definedMinGeoLevel
+
+      const locationId = level == 'departements'
+        ? e.target.dataset.department
+        : e.target.dataset.region
+
+      const location = store.state[level].find(obj => {
+        return obj.value == locationId
+      })
+      const locationData = this.indicateur_data[level].find(obj => {
+        return obj.code_level === location.value
       })
 
-      if (this.definedMinGeoLevel == "regions") {
-        hoverdep = depObj.region_value
-      }
-
-      let dataObj = this.indicateur_data[this.definedMinGeoLevel].find(obj => {
-        return obj.code_level === hoverdep
-      })
-
-      const levelObj = store.state[this.definedMinGeoLevel].find(obj => {
-        return obj.value === dataObj.code_level
-      })
-
-      this.tooltip.value = dataObj.last_value
-      this.tooltip.date = dataObj.last_date
-      this.tooltip.place = levelObj.label
-
+      this.tooltip.value = locationData.last_value
+      this.tooltip.date = locationData.last_date
+      this.tooltip.place = location.label
       this.tooltip.top = (e.target.getBoundingClientRect().top - 75) + 'px'
       this.tooltip.left = (e.target.getBoundingClientRect().left + 15) + 'px'
       this.tooltip.display = true

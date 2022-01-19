@@ -48,6 +48,9 @@ export const deepMerge = function () {
   return  _.merge({}, ...arguments)
 };
 
+export const sortByLabel = function (itemA, itemB) {
+	return itemA.label.localeCompare(itemB.label);
+}
 
 export const mixin = {
   methods: {
@@ -57,6 +60,7 @@ export const mixin = {
     convertDateToHuman,
     testIfNaN,
     toJsonNameFormat,
-    deepMerge
+    deepMerge,
+    sortByLabel
   }
 }
