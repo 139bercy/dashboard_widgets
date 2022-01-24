@@ -1,4 +1,5 @@
-import France from './France'
+import FranceByDepartments from './FranceByDepartments'
+import FranceByRegions from './FranceByRegions'
 import Guadeloupe from './Guadeloupe'
 import Martinique from './Martinique'
 import Guyane from './Guyane'
@@ -6,7 +7,8 @@ import Reunion from './Reunion'
 import Mayotte from './Mayotte'
 
 export default {
-  France,
+  FranceByDepartments,
+  FranceByRegions,
   Guadeloupe,
   Martinique,
   Guyane,

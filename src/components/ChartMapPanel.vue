@@ -332,16 +332,21 @@ export default {
         return;
       }
 
-      // Gestion de la légende de la map
-      const values = []
-      this.indicateur_data.departements.forEach(function (d) {
-        if (d !== null && d.last_value !== null) {
-          values.push(parseInt(d.last_value))
-        }
+      const isRegion = this.definedMinGeoLevel === "regions"
+      const data = isRegion
+        ? this.indicateur_data.regions
+        : this.indicateur_data.departements
+
+      let minValue = 0
+      let maxValue = 0
+      data.forEach(function (item) {
+        if (!item || !item.last_value) return
+        if (item.last_value > maxValue) maxValue = item.last_value
+        if (item.last_value < minValue) minValue = item.last_value
       })
 
-      this.leftColProps.min = Math.min.apply(null, values)
-      this.leftColProps.max = Math.max.apply(null, values)
+      this.leftColProps.min = minValue
+      this.leftColProps.max = maxValue
       this.leftColProps.isMap = this.onglet.Carte
     }
   },

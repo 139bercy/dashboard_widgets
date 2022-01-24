@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import { sortByLabel } from '@/utils.js'
 
 Vue.use(Vuex)
 
@@ -28,9 +29,6 @@ export default new Vuex.Store({
       const promise = fetch(url).then(res => {
         return res.json()
       }).then(result => {
-        // console.log(result)
-        // return result
-        // Récupération des données en traitant le format fourni par data.economie
         if (!result || result.length !== 1) {
           return null
         }
@@ -65,10 +63,10 @@ export default new Vuex.Store({
       state.data[payload.indicator] = payload.data
     },
     initDep (state, dep) {
-      state.departements = dep
+      state.departements = dep.sort(sortByLabel)
     },
     initReg (state, reg) {
-      state.regions = reg
+      state.regions = reg.sort(sortByLabel)
     },
     setUserChoices (state, payload) {
       state.user.selectedGeoLevel = payload.level
