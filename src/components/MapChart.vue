@@ -229,11 +229,11 @@ export default {
               return v.code_level === location.value
             })
 
-            if (selectedLevel === 'France' 
+            if (value && selectedLevel === 'France'
               || (isRegion && isRegionSelection && location.value === selectedCode)
               || (isDepartment && isDepartmentSelection && location.value === selectedCode)
               || (isDepartment && isRegionSelection && location.region_value === selectedCode)) {
-              locationObject.setAttribute('fill', color(value.last_value))
+                locationObject.setAttribute('fill', color(value.last_value))
             }
             else {
               locationObject.setAttribute('fill', 'rgba(247, 237, 211, 0.72)')
@@ -274,8 +274,8 @@ export default {
         return obj.code_level === location.value
       })
 
-      this.tooltip.value = locationData.last_value
-      this.tooltip.date = locationData.last_date
+      this.tooltip.value = locationData ? locationData.last_value : 0
+      this.tooltip.date = locationData ? locationData.last_date : new Date()
       this.tooltip.place = location.label
       this.tooltip.top = (e.target.getBoundingClientRect().top - 75) + 'px'
       this.tooltip.left = (e.target.getBoundingClientRect().left + 15) + 'px'
