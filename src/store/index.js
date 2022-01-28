@@ -33,16 +33,44 @@ export default new Vuex.Store({
           return null
         }
         if (result[0].france) {
-          result[0].france = JSON.parse(result[0].france);
+          try
+          {
+            result[0].france = JSON.parse(result[0].france);
+          }
+          catch
+          {
+            result[0].france = [];
+          }
         }
         if (result[0].regions) {
-          result[0].regions = JSON.parse(result[0].regions);
+          try
+          {
+            result[0].regions = JSON.parse(result[0].regions);
+          }
+          catch
+          {
+            result[0].regions = [];
+          }
         }
         if (result[0].departements) {
-          result[0].departements = JSON.parse(result[0].departements);
+          try
+          {
+            result[0].departements = JSON.parse(result[0].departements);
+          }
+          catch
+          {
+            result[0].departements = [];
+          }
         }
         if (result[0].points) {
-          result[0].points = JSON.parse(result[0].points);
+          try
+          {
+            result[0].points = JSON.parse(result[0].points);
+          }
+          catch
+          {
+            result[0].points = [];
+          }
         }
         return result[0]
       }).then(data => {
