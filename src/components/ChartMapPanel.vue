@@ -7,43 +7,69 @@
                 v-if="$screen.breakpoint === 'lg' && this.indicateur_data && !this.indicateur_data.departements"></left-col>
       <left-col class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColPropsNotLargeChart"
                 v-if="$screen.breakpoint !== 'lg'"></left-col>
-      <div class="line-map-container fr-col-12 fr-col-lg-9" v-if="onglet.indicateurs.length > 0">
+      <div id="WidgetContainer" class="line-map-container fr-col-12 fr-col-lg-9" v-if="onglet.indicateurs.length > 0">
         <LineChart
             class="chart-container"
             :line-chart-configuration="lineChartConfiguration"
             :indicateur="indicateurCode1"
+            :widget-position="onglet.Graph"
             :left-col="false"
-            v-if="indicateur_data && !indicateur_data2 && onglet.Graph">
+            v-if="indicateur_data && !indicateur_data2
+              && ((typeof onglet.Graph == 'boolean' && onglet.Graph)
+              || typeof onglet.Graph == 'number' && onglet.Graph > 0)">
         </LineChart>
         <MultiLineChart
             class="chart-container"
             :line-chart-configuration="lineChartConfiguration"
             :indicateur1="indicateurCode1"
             :indicateur2="indicateurCode2"
+            :widget-position="onglet.Graph"
             :left-col="false"
-            v-if="indicateur_data2 && onglet.Graph">
+            v-if="indicateur_data2 && ((typeof onglet.Graph == 'boolean' && onglet.Graph)
+              || typeof onglet.Graph == 'number' && onglet.Graph > 0)">
         </MultiLineChart>
         <BarChart
             class="chart-container"
             :bar-chart-configuration="barChartConfiguration"
             :indicateur="indicateurCode1"
+            :widget-position="onglet.Bar"
             :left-col="false"
-            v-if="indicateur_data && !indicateur_data2 && onglet.Bar">
+            v-if="indicateur_data && !indicateur_data2 && ((typeof onglet.Bar == 'boolean' && onglet.Bar)
+              || typeof onglet.Bar == 'number' && onglet.Bar > 0)">
         </BarChart>
+        <PieChart
+            class="chart-container"
+            :indicateur="indicateurCode1"
+            :widget-position="onglet.Pie"
+            :left-col="false"
+            v-if="indicateur_data && !indicateur_data2 && ((typeof onglet.Pie == 'boolean' && onglet.Pie)
+              || typeof onglet.Pie == 'number' && onglet.Pie > 0)">
+        </PieChart>
+        <Table
+            class="chart-container"
+            :indicateur="indicateurCode1"
+            :widget-position="onglet.Table"
+            :left-col="false"
+            v-if="indicateur_data && !indicateur_data2 && ((typeof onglet.Table == 'boolean' && onglet.Table)
+              || typeof onglet.Table == 'number' && onglet.Table > 0)">
+        </Table>
         <MultiBarChart
             class="chart-container"
             :bar-chart-configuration="barChartConfiguration"
             :indicateur1="indicateurCode1"
             :indicateur2="indicateurCode2"
+            :widget-position="onglet.Bar"
             :left-col="false"
-            v-if="indicateur_data2 && onglet.Bar">
+            v-if="indicateur_data2 && ((typeof onglet.Bar == 'boolean' && onglet.Bar)
+              || typeof onglet.Bar == 'number' && onglet.Bar > 0)">
         </MultiBarChart>
         <MapChart
-            class="map-container fr-col-12"
+            class="chart-container fr-col-12"
             :indicateur="indicateurCode1"
             :left-col="false"
             :DOMTOMBottom="true"
             :min-geo-level="onglet.MinGeoLevel"
+            :widget-position="onglet.Carte"
             v-if="onglet.Carte && indicateur_data && this.indicateur_data[onglet.MinGeoLevel]">
         </MapChart>
       </div>
@@ -65,6 +91,8 @@ import store from '@/store'
 import LineChart from './LineChart.vue'
 import MultiLineChart from './MultiLineChart.vue'
 import BarChart from './BarChart.vue'
+import PieChart from './PieChart.vue'
+import Table from './Table.vue'
 import MultiBarChart from './MultiBarChart.vue'
 import MapChart from './MapChart.vue'
 import { mixin } from '@/utils.js'
@@ -78,6 +106,8 @@ export default {
     LeftCol,
     LineChart,
     BarChart,
+    PieChart,
+    Table,
     MultiLineChart,
     MultiBarChart,
     MapChart
@@ -212,9 +242,18 @@ export default {
       }
     },
     onlyOneElement() {
-      return this.onglet.Carte && !this.onglet.Graph && !this.onglet.Bar
-      || !this.onglet.Carte && this.onglet.Graph && !this.onglet.Bar
-      || !this.onglet.Carte && !this.onglet.Graph && this.onglet.Bar
+      const charts = ['Carte', 'Graph', 'Bar', 'Pie'];
+      let booleans = [];
+      charts.forEach(_chart => {
+        const value = this.onglet[_chart];
+        if (typeof value == 'boolean')
+          booleans.push(value);
+        else if (typeof value == 'number') 
+          booleans.push(value > 0)
+        else false;
+      });
+
+      return booleans.filter(Boolean).length == 1;
     }
   },
   methods: {
@@ -282,6 +321,9 @@ export default {
         }
       }
 
+      if (!geoObject)
+        return
+
       this.leftColProps.date = this.convertDateToHuman(geoObject.last_date)
 
       this.leftColProps.names = []
@@ -348,11 +390,46 @@ export default {
       this.leftColProps.min = minValue
       this.leftColProps.max = maxValue
       this.leftColProps.isMap = this.onglet.Carte
+    },
+
+    rearrangeCharts() {
+      let widgetContainer = document.getElementById('WidgetContainer');
+      if (!widgetContainer)
+        return;
+      const numberWidgets = Array.from(widgetContainer.children).filter(_child => {
+        return !isNaN(_child.dataset.position)
+      });
+      const booleanWidgets = Array.from(widgetContainer.children).filter(_child => {
+        return isNaN(_child.dataset.position)
+      });
+
+      let children = document.createDocumentFragment();
+      const sortedWidgets = numberWidgets.sort((a, b) => {
+        const aPosition = a.dataset.position;
+        const bPosition = b.dataset.position;
+        return aPosition < bPosition ? -1 : aPosition > bPosition ? 1 : 0;
+      });
+
+      for (const sortedWidget of sortedWidgets) {
+        children.appendChild(sortedWidget);
+      }
+      for(const booleanWidget of booleanWidgets) {
+        children.appendChild(booleanWidget);
+      }
+
+      widgetContainer.appendChild(children);
     }
+
   },
+
   created() {
     this.getData()
   },
+
+  updated() {
+    this.rearrangeCharts()
+  },
+
   watch: {
     selectedGeoCode: function () {
       this.updateData()
@@ -367,29 +444,35 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
+.widget_container {
+  border: 1px dashed #b3b3b3;
+ // margin-left: 20px !important;
+  padding: 15px !important;
+}
+@media (min-width: 36em) {
+  .widget_container {
+    margin-left:0 !important;
+  }
+}
+@media (min-width: 36em) {
+  .widget_container {
+    margin-left:0 !important;
+  }
+}
+@media (min-width: 62em) {
+  .widget_container {
+    margin-left: 20px !important;
+  }
+}
 .chart-map-panel {
   .map-legend {
     height: 100%;
     overflow: auto;
   }
   &.panel-full-page-lg {
-    height: 100%;
-    max-height: 100%;
-    .line-map-container {
-      height: 100%;
-      max-height: 100%;
-    }
-    > div {
-      height: 100%;
-      max-height: 100%;
-    }
     .chart-container {
       > div {
-        height: 100%;
-        max-height: 100%;
         > .chart {
-          max-height: 100%;
-          height: 100%;
           canvas {
             height: 100%;
             max-height: 100%;
@@ -406,29 +489,10 @@ export default {
       }
     }
     &:not(.only-one-element) {
-      .chart-container {
-        height: 30%;
-        max-height: 30%;
-      }
       .map-container {
         height: 70%;
         max-height: 70%;
         > div {
-          height: 100%;
-          max-height: 100%;
-          > div {
-            height: 100%;
-            max-height: 100%;
-            > .france_container {
-              height: 70%;
-              max-height: 70%;
-              .svg {
-                max-height: 70%;
-                margin-left: 0;
-                margin-right: 0;
-              }
-            }
-          }
           .om_container {
             svg {
               max-height: 35%;

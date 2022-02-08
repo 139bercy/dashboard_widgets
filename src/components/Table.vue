@@ -11,7 +11,10 @@
     <LeftCol v-bind="leftColProps" v-if="leftCol"></LeftCol>
     <div class="r_col fr-col-12" :class="{'fr-col-lg-9': leftCol}">
       <div class="chart ml-lg">
-        <canvas :id="chartId"></canvas>
+        <table :id="chartId" class="fr-table">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
       </div>
     </div>
   </div>
@@ -19,14 +22,11 @@
 
 <script>
 import store from '@/store'
-import Chart from 'chart.js'
-import 'chartjs-plugin-colorschemes'
-import 'chartjs-plugin-labels'
-import * as brewer from 'chartjs-plugin-colorschemes/src/colorschemes/colorschemes.brewer'
+import moment from 'moment'
 import LeftCol from '@/components/LeftCol'
 import { mixin } from '@/utils.js'
 export default {
-  name: 'BarChart',
+  name: 'Table',
   mixins: [mixin],
   components: {
     LeftCol
@@ -102,6 +102,7 @@ export default {
       let geoObject
 
       geoObject = this.getGeoObject(geolevel, geocode)
+      if (!geoObject) return
       this.leftColProps.date = this.convertDateToHuman(geoObject.last_date)
 
       this.leftColProps.names.length = 0
@@ -163,7 +164,8 @@ export default {
 
     updateChart () {
       this.updateData()
-      this.chart.update()
+      this.chart.destroy()
+      this.createChart()
     },
 
     createChart () {
@@ -171,107 +173,39 @@ export default {
 
       this.updateData()
 
-      let xTickLimit
-      this.display === 'big' ? xTickLimit = 6 : xTickLimit = 1
+      let labels = [];
+      this.labels.forEach(_label => labels.push(moment(_label, "DD/MM/YYYY").format('YYYY')));
 
-      const ctx = document.getElementById(self.chartId).getContext('2d')
-      
-      this.chart = new Chart(ctx, this.deepMerge({
-        type: 'bar',
-        data: {
-          labels: self.labels,
-          datasets: [
-            {
-              data: self.dataset,
-              backgroundColor: brewer.SetOne9,
-            }
-          ]
-        },
-        options: {
-          maintainAspectRatio: false,
-          animation: {
-            easing: 'easeInOutBack'
-          },
-          scales: {
-            xAxes: [{
-              gridLines: {
-                color: 'rgba(0, 0, 0, 0)'
-              },
-              ticks: {
-                autoSkip: true,
-                maxTicksLimit: xTickLimit,
-                maxRotation: 0,
-                minRotation: 0,
-                callback: function (value) {
-                  return value.toString().substring(3, 5) + '/' + value.toString().substring(8, 10)
-                }
-              }
-            }],
-            yAxes: [{
-              gridLines: {
-                color: '#e5e5e5',
-                borderDash: [3]
-              },
-              ticks: {
-                steps: 10,
-                stepValue: 10,
-                autoSkip: true,
-                max: this.getMaxTick(self.dataset),
-                maxTicksLimit: 10
-              }
-            }]
-          },
-          legend: {
-            display: false
-          },
-          plugins: {
-            colorschemes: {
-              scheme: 'brewer.SetOne9'
-            },
-            labels: [
-              {
-                render: 'value',
-                position: 'border',
-                textShadow: false,
-                fontStyle: 'normal',
-                fontColor: '#000',
-                showActualPercentages: false
-              }
-            ],
-          },
-          tooltips: {
-            displayColors: false,
-            backgroundColor: '#6b6b6b',
-            callbacks: {
-              label: function (tooltipItems) {
-                const int = self.convertStringToLocaleNumber(tooltipItems.value)
-                return int + ' ' + self.units[0]
-              },
-              title: function (tooltipItems) {
-                return tooltipItems[0].label
-              },
-              labelTextColor: function () {
-                return '#eeeeee'
-              }
-            }
-          }
-        }
-      }, this.barChartConfiguration))
-    },
+      let values = [];
+      const total = this.dataset.reduce((a, b) => a + b, 0);
+      this.dataset.forEach(_value => values.push(_value));
 
-    getMaxTick(dataset) {
-      const maxValue = Math.max(...dataset);
-      const maxValueStr = Math.round(maxValue).toString();
-      const maxValueLength = maxValueStr.length;
-      const maxValueToAdd = Math.pow(10, maxValueLength - 1);
-      const maxTick = Math.ceil((maxValue + maxValueToAdd)/maxValueToAdd)*maxValueToAdd;
+      const headerRow = document.createElement('tr');
+      labels.forEach(_label => {
+        const header = document.createElement('th');
+        const headerText = document.createTextNode(_label);
 
-      return maxTick;
+        header.appendChild(headerText);
+        headerRow.appendChild(header);
+      });
+
+      const valueRow = document.createElement('tr');
+      values.forEach(_value => {
+        const rowCol = document.createElement('td');
+        const rowText = document.createTextNode(_value);
+
+        rowCol.appendChild(rowText);
+        valueRow.appendChild(rowCol);
+      });
+
+      const table = document.getElementById(this.chartId);
+      const headerRows = table.getElementsByTagName('thead')[0];
+      headerRows.appendChild(headerRow);
+      const valueRows = table.getElementsByTagName('tbody')[0];
+      valueRows.appendChild(valueRow);
     }
 
   },
-
-
 
   watch: {
     selectedGeoCode: function () {
@@ -298,7 +232,15 @@ export default {
 
 <style scoped lang="scss">
 
-  .widget_container{
+  .widget_container {
+
+    .fr-table {
+      width: 100%;
+      margin: 0;
+      border-collapse: collapse;
+      //border-style: hidden;
+    }
+
     .fr-warning {
       display: flex;
       min-width: 100%;
@@ -321,7 +263,6 @@ export default {
 
       }
     }
-    
     @media (max-width: 62em) {
       .chart .flex {
         margin-left:0!important

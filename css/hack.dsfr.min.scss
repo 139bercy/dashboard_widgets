@@ -340,7 +340,8 @@
     p {
         font-size: 1rem;
         line-height: 1.5rem;
-        margin: 0 0 2.5rem
+        text-align: justify;
+        margin: 0 0 1.5rem
     }
 
     //:root {
@@ -820,7 +821,6 @@
     .fr-text--xs {
         font-size: .75rem !important;
         line-height: 1.25rem !important;
-        margin: 0 0 2.5rem
     }
 
     .fr-text--sm {
@@ -855,8 +855,16 @@
     .fr-grid-row {
         display: flex;
         flex-wrap: wrap;
-        margin: 0;
+        margin: 0 0 20px 0;
         padding: 0
+    }
+
+    .fr-grid-row:first-child {
+        margin-top: 20px;
+    }
+
+    .fr-grid-row:last-child {
+        margin: 0;
     }
 
     .fr-grid-row--top {
@@ -1085,8 +1093,8 @@
 
     .fr-col-12 {
         flex: 0 0 100%;
-        width: 100%;
-        max-width: 100%
+        *width: 100%;
+        *max-width: 100%
     }
 
     .fr-col-offset-12:not(.fr-col-offset-1--right) {
@@ -2825,11 +2833,11 @@
     }
 
     .fr-table td, .fr-table th {
-        text-align: left;
+        text-align: center;
         vertical-align: middle;
         display: table-cell;
-        border: 0;
-        padding: .75rem;
+        border: 1px dotted #b3b3b3;
+        padding: 10px;
         font-size: .875rem;
         line-height: 1.5rem
     }
@@ -2992,8 +3000,6 @@
         flex-direction: row;
         align-items: flex-start;
         transition: height .3s;
-        margin-left: calc(50% - 50vw);
-        margin-right: calc(50% - 50vw)
     }
 
     .fr-tabs .fr-tabs {
@@ -7176,10 +7182,6 @@
             margin-right: 100%
         }
 
-        .fr-accordion .fr-accordion__btn {
-            padding: .75rem 1rem
-        }
-
         .fr-accordion .fr-collapse {
             margin: 0 -.25rem;
             padding-left: 1rem;
@@ -7382,10 +7384,6 @@
         .fr-table caption {
             font-size: 1.5rem;
             line-height: 2rem
-        }
-
-        .fr-table td, .fr-table th {
-            padding: 1rem
         }
 
         .fr-tabs {

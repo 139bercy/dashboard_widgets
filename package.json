@@ -9,6 +9,8 @@
     },
     "dependencies": {
         "chart.js": "^2.9.4",
+        "chartjs-plugin-colorschemes": "^0.4.0",
+        "chartjs-plugin-labels": "^1.1.0",
         "core-js": "^3.15.2",
         "d3-scale": "^3.3.0",
         "leaflet": "^1.7.1",

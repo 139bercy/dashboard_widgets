@@ -11,7 +11,9 @@ import DataBox from './components/DataBox'
 import LineChart from './components/LineChart'
 import MultiLineChart from './components/MultiLineChart'
 import BarChart from './components/BarChart'
+import PieChart from './components/PieChart'
 import MapChart from './components/MapChart'
+import Table from './components/Table'
 import GeoList from './components/GeoList'
 import ChartMapPanel from './components/ChartMapPanel'
 import PageContent from './components/PageContent'
@@ -40,6 +42,7 @@ Vue.customElement('data-box', DataBox)
 Vue.customElement('line-chart', LineChart)
 Vue.customElement('multiline-chart', MultiLineChart)
 Vue.customElement('bar-chart', BarChart)
+Vue.customElement('pie-chart', PieChart)
 Vue.customElement('map-chart', MapChart)
 Vue.customElement('geo-list', GeoList)
 Vue.customElement('chart-map-panel', ChartMapPanel)

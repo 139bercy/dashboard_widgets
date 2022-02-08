@@ -34,6 +34,10 @@ def convert_excel_to_json(path):
         "Unité_GP",
         "Unité_Evol",
     ]
+    isAfa = "afa.csv" in path
+    if isAfa:
+        onglet_properties.extend(['Pie', 'Table'])
+
     df = df.dropna(subset=['No_Panneau']).sort_values(by=["No_Panneau"], ascending=True)
     panneaux = list(df["No_Panneau"].unique())
     for panneau in panneaux:
@@ -59,11 +63,18 @@ def convert_excel_to_json(path):
                 # ne pas intégrer les valeurs null ou autre
                 if not pd.isna(df_onglet[col].iloc[0]):
                     dict_onglet[col] = str(df_onglet[col].iloc[0])
-                    if col in ["Carte", "Graph", "Points", "Bar", "Box"]:
-                        if int(df_onglet[col].iloc[0]) == 1:
-                            dict_onglet[col] = True
+                    if col in ["Carte", "Graph", "Points", "Bar", "Box", 'Pie', 'Table']:
+                        value = int(df_onglet[col].iloc[0])
+                        if isAfa:
+                            if value == 0:
+                                dict_onglet[col] = False
+                            else:
+                                dict_onglet[col] = value
                         else:
-                            dict_onglet[col] = False
+                            if value == 1:
+                                dict_onglet[col] = True
+                            else:
+                                dict_onglet[col] = False
             dict_onglet["indicateurs"] = liste_indicateurs
             liste_onglets += [dict_onglet]
         for col in panneau_properties:
