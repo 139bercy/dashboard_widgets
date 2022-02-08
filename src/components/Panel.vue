@@ -61,11 +61,11 @@
           {{accordéon}}
         </button>
       </h3>
-      <div class="fr-pl-2v fr-pr-2v fr-col-12" v-show="accordionOpened">
-        <p class="description-mesure fr-mb-0 fr-text--sm fr-pb-1v">
+      <div class="fr-col-12" v-show="accordionOpened">
+        <p class="description-mesure fr-mb-0 fr-text--sm">
           {{ onglets[0].Description_mesure }}
         </p>
-        <p class="fr-text--xs fr-mb-3w fr-pb-1v">Source :
+        <p class="fr-text--xs">Source :
           {{source}}.
           <a title="Sources et références" v-bind:href="Lien_page_mesure"
              target="_blank" rel="noopener" data-section="nom_section"
@@ -137,33 +137,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
   // Gestion du positionnement sur grand écran (breakpoint lg)
-  @media (min-width: 62em) {
-    .full-page-lg {
-      &:not(.only-one-element):not(.flex-data-boxes) {
-        height: 97vh;
-        max-height: 97vh;
-        overflow: hidden;
-      }
-      &.only-one-element {
-        // TODO handle multiple indicateurs !!
-        height: 50vh;
-        max-height: 50vh;
-        overflow: hidden;
-      }
-      & > .fr-tabs {
-        height: calc(100% - 40px);
-        max-height: calc(100% - 40px);
-        .fr-tabs__panel--selected {
-          height: calc(100% - 40px);
-          max-height: calc(100% - 40px);
-          > div {
-            height: 100%;
-            max-height: 100%;
-          }
-        }
-      }
-    }
-  }
+  
   // Gestion de la bordure autour d'un panel
   .fr-tabs {
     transition: none 0s ease 0s;
@@ -216,8 +190,7 @@ export default {
       }
     }
     .fr-tabs__panel {
-      padding-top: 2.0rem !important;
-      padding-bottom: 0.5rem !important;
+      padding: 20px;
     }
     &:after {
       box-shadow: inset 1px 0 var(--boxshadow), inset -1px 0 0 var(--boxshadow) !important;
@@ -225,15 +198,40 @@ export default {
   }
 
   .fr-accordion {
-    &.mobile {
-      margin-left: calc(50% - 50vw);
-      margin-right: calc(50% - 50vw);
-    }
     box-shadow: inset 1px -1px var(--boxshadow), inset -1px 0 0 var(--boxshadow) !important;
     // Fin de gestion de la bordure autour d'un panel
     .description-mesure {
       text-align: justify;
-      margin-top: 1rem;
+    }
+
+    &.panel-accordion-extended {
+      border-top: 1px dashed #818080;
+
+      .fr-accordion__title {
+        border-bottom: 1px dashed #818080;
+        padding: 0;
+        button {
+          font-weight: bold;
+          padding: 10px 20px;
+        }
+      }
+
+      > div {
+        padding: 20px;
+        p {
+          margin: 0;
+          text-align: justify;
+        }
+        p:first-child {
+          margin-bottom: 10px !important;
+        }
+      }
     }
   }
+
+  
+
+  
+
+  
 </style>

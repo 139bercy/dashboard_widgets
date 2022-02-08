@@ -1,6 +1,6 @@
 <template>
 
-  <div class="widget_container fr-grid-row" :class="(loading)?'loading':''" :data-display="display" :id="widgetId">
+  <div class="widget_container fr-grid-row" :class="(loading)?'loading':''" :data-display="display" :data-position="widgetPosition" :id="widgetId">
     <LeftCol v-bind="leftColProps" v-if="leftCol || leftCol === undefined"></LeftCol>
     <div class="r_col fr-col-12" :class="{'fr-col-lg-9': leftCol}">
       <div class="" :class="{'map fr-col-12': DOMTOMBottom, 'm-lg': leftCol, 'fr-grid-row': !DOMTOMBottom}">
@@ -100,6 +100,7 @@ export default {
   },
   props: {
     indicateur: String,
+    widgetPosition: [Boolean, Number],
     leftCol: {
       type: Boolean,
       default: true
@@ -186,6 +187,9 @@ export default {
       const geoObject = this.getGeoObject(selectedLevel, selectedCode)
 
       this.leftColProps.localisation = selectedLevel
+      if (!geoObject)
+        return;
+
       this.leftColProps.date = this.convertDateToHuman(geoObject.last_date)
 
       this.leftColProps.names.length = 0
@@ -320,10 +324,14 @@ export default {
 }
 
 .widget_container {
-  .m-lg {
-    margin-left: 0;
-    margin-top: 1.5rem;
-  }
+  .ml-lg {
+      margin-left:0;
+    }
+    @media (min-width: 62em) {
+      .ml-lg {
+        margin-left:3rem;
+      }
+    }
 
   .map {
     display: flex;

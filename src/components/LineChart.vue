@@ -1,6 +1,6 @@
 <template>
 
-  <div class="widget_container fr-grid-row" :class="(loading)?'loading':''" :data-display="display" :id="widgetId">
+  <div class="widget_container fr-grid-row" :class="(loading)?'loading':''" :data-display="display" :data-position="widgetPosition" :id="widgetId">
       <div class="fr-warning" v-if="geoFallback">
         <div class="scheme-border">
             <span class="fr-fi-information-fill fr-px-1w fr-py-3v" aria-hidden="true"></span>
@@ -57,6 +57,7 @@ export default {
   },
   props: {
     indicateur: String,
+    widgetPosition: [Boolean, Number],
     leftCol: {
       type: Boolean,
       default: true
@@ -88,7 +89,7 @@ export default {
 
     updateData () {
       const self = this
-
+      
       const geolevel = this.selectedGeoLevel
       const geocode = this.selectedGeoCode
 
@@ -97,7 +98,6 @@ export default {
       let geoObject
 
       geoObject = this.getGeoObject(geolevel, geocode)
-      this.leftColProps.date = this.convertDateToHuman(geoObject.last_date)
 
       if (typeof geoObject === 'undefined') {
         if (geolevel === 'regions') {
@@ -120,6 +120,9 @@ export default {
             this.geoFallbackMsg = 'Affichage des résultats au niveau national, faute de données au niveau régional ou départemental'
           }
         }
+      }
+      else {
+        this.leftColProps.date = this.convertDateToHuman(geoObject.last_date)
       }
 
       this.leftColProps.names.length = 0
@@ -178,6 +181,7 @@ export default {
       gradientFill.addColorStop(0.6, 'rgba(245, 245, 255, 0)')
 
       this.chart = new Chart(ctx, this.deepMerge({
+        type: 'line',
         data: {
           labels: this.lineChartConfiguration && this.lineChartConfiguration.labels
             ? this.lineChartConfiguration.labels
@@ -185,23 +189,31 @@ export default {
           datasets: [
             {
               data: self.dataset,
+              borderWidth: 1,
+              //borderColor: '#377eb8',
               backgroundColor: gradientFill,
-              borderColor: '#000091',
-              type: 'line',
-              pointRadius: 8,
-              pointBackgroundColor: 'rgba(0, 0, 0, 0)',
-              pointBorderColor: 'rgba(0, 0, 0, 0)'
-            },
-            {
-              // hack to managed mutual configuration option between LineChart and MultilineChart
-              showLine: false,
-              type: 'line',
+              //pointHoverBackgroundColor: '#377eb8',
+              pointRadius: 2
             }
           ]
         },
         options: {
           animation: {
-            easing: 'easeInOutBack'
+            onComplete: function () {
+              let context = this.chart.ctx;
+              context.textAlign = "center";
+              //context.fillStyle = "#000";
+              context.textBaseline = "bottom";
+              this.data.datasets.forEach(function (dataset) {
+                for (var i = 0; i < dataset.data.length; i++) {
+                    var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model;
+                    var xPos = model.x;
+                    var yPos = model.y - 5;
+
+                    context.fillText(dataset.data[i], xPos, yPos);     
+                }
+              })
+            }
           },
           maintainAspectRatio: false,
           scales: {
@@ -227,6 +239,7 @@ export default {
               ticks: {
                 autoSkip: true,
                 maxTicksLimit: 5,
+                max: this.getMaxTick(self.dataset),
                 callback: function (value) {
                   value = parseFloat(value)
                   if (value / 1000000000 >= 1) {
@@ -247,6 +260,9 @@ export default {
           legend: {
             display: false
           },
+          hover: {
+            animationDuration: 0
+          },
           tooltips: {
             displayColors: false,
             backgroundColor: '#6b6b6b',
@@ -265,6 +281,16 @@ export default {
           }
         }
       }, this.lineChartConfiguration))
+    },
+
+    getMaxTick(dataset) {
+      const maxValue = Math.max(...dataset);
+      const maxValueStr = Math.round(maxValue).toString();
+      const maxValueLength = maxValueStr.length;
+      const maxValueToAdd = Math.pow(10, maxValueLength - 1);
+      const maxTick = Math.ceil((maxValue + maxValueToAdd)/maxValueToAdd)*maxValueToAdd;
+
+      return maxTick;
     }
   },
 
@@ -313,14 +339,6 @@ export default {
           border: solid 1px #0768d5;
           width: 100%;
 
-      }
-    }
-    .ml-lg {
-      margin-left:0;
-    }
-    @media (min-width: 62em) {
-      .ml-lg {
-        margin-left:3rem;
       }
     }
     @media (max-width: 62em) {

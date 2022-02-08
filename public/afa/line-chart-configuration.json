@@ -3,17 +3,17 @@
     "datasets": [
       {
         "cubicInterpolationMode": "monotone",
-        "pointRadius": 3.5,
+        "pointRadius": 2.5,
         "pointBackgroundColor": "rgb(0, 0, 145)",
         "pointBorderColor": "rgb(0, 0, 145)",
-        "tension": 0.3
+        "tension": 0.2
       },
       {
         "cubicInterpolationMode": "monotone",
-        "pointRadius": 3.5,
+        "pointRadius": 2.5,
         "pointBackgroundColor": "rgb(0, 124, 58)",
         "pointBorderColor": "rgb(0, 124, 58)",
-        "tension": 0.3
+        "tension": 0.2
       }
     ]
   },

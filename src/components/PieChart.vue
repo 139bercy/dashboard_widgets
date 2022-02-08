@@ -11,7 +11,7 @@
     <LeftCol v-bind="leftColProps" v-if="leftCol"></LeftCol>
     <div class="r_col fr-col-12" :class="{'fr-col-lg-9': leftCol}">
       <div class="chart ml-lg">
-        <canvas :id="chartId"></canvas>
+        <canvas :id="chartId" height="260" style="margin: auto"></canvas>
       </div>
     </div>
   </div>
@@ -20,13 +20,13 @@
 <script>
 import store from '@/store'
 import Chart from 'chart.js'
+import moment from 'moment'
 import 'chartjs-plugin-colorschemes'
 import 'chartjs-plugin-labels'
-import * as brewer from 'chartjs-plugin-colorschemes/src/colorschemes/colorschemes.brewer'
 import LeftCol from '@/components/LeftCol'
 import { mixin } from '@/utils.js'
 export default {
-  name: 'BarChart',
+  name: 'PieChart',
   mixins: [mixin],
   components: {
     LeftCol
@@ -102,6 +102,7 @@ export default {
       let geoObject
 
       geoObject = this.getGeoObject(geolevel, geocode)
+      if (!geoObject) return
       this.leftColProps.date = this.convertDateToHuman(geoObject.last_date)
 
       this.leftColProps.names.length = 0
@@ -163,7 +164,8 @@ export default {
 
     updateChart () {
       this.updateData()
-      this.chart.update()
+      this.chart.destroy()
+      this.createChart()
     },
 
     createChart () {
@@ -171,107 +173,79 @@ export default {
 
       this.updateData()
 
-      let xTickLimit
-      this.display === 'big' ? xTickLimit = 6 : xTickLimit = 1
+      const context = document.getElementById(self.chartId).getContext('2d')
 
-      const ctx = document.getElementById(self.chartId).getContext('2d')
-      
-      this.chart = new Chart(ctx, this.deepMerge({
-        type: 'bar',
-        data: {
-          labels: self.labels,
-          datasets: [
-            {
-              data: self.dataset,
-              backgroundColor: brewer.SetOne9,
-            }
-          ]
+      let labels = [];
+      this.labels.forEach(_label => labels.push(moment(_label, "DD/MM/YYYY").format('YYYY')));
+
+      let values = [];
+      const total = this.dataset.reduce((a, b) => a + b, 0);
+      this.dataset.forEach(_value => values.push((_value / total * 100).toFixed(1)));
+
+      const datasets = [{
+        data: values,
+        borderWidth: 2,
+        borderColor: "#fff"
+      }];
+
+      this.options = {
+        legend: {
+          display: false
         },
-        options: {
-          maintainAspectRatio: false,
-          animation: {
-            easing: 'easeInOutBack'
-          },
-          scales: {
-            xAxes: [{
-              gridLines: {
-                color: 'rgba(0, 0, 0, 0)'
-              },
-              ticks: {
-                autoSkip: true,
-                maxTicksLimit: xTickLimit,
-                maxRotation: 0,
-                minRotation: 0,
-                callback: function (value) {
-                  return value.toString().substring(3, 5) + '/' + value.toString().substring(8, 10)
-                }
-              }
-            }],
-            yAxes: [{
-              gridLines: {
-                color: '#e5e5e5',
-                borderDash: [3]
-              },
-              ticks: {
-                steps: 10,
-                stepValue: 10,
-                autoSkip: true,
-                max: this.getMaxTick(self.dataset),
-                maxTicksLimit: 10
-              }
-            }]
-          },
-          legend: {
-            display: false
-          },
-          plugins: {
-            colorschemes: {
-              scheme: 'brewer.SetOne9'
+        tooltips: {
+          displayColors: true,
+          backgroundColor: '#6b6b6b',
+          callbacks: {
+            title: function(tooltipItem, data) {
+              return data['labels'][tooltipItem[0]['index']];
             },
-            labels: [
-              {
-                render: 'value',
-                position: 'border',
-                textShadow: false,
-                fontStyle: 'normal',
-                fontColor: '#000',
-                showActualPercentages: false
-              }
-            ],
-          },
-          tooltips: {
-            displayColors: false,
-            backgroundColor: '#6b6b6b',
-            callbacks: {
-              label: function (tooltipItems) {
-                const int = self.convertStringToLocaleNumber(tooltipItems.value)
-                return int + ' ' + self.units[0]
-              },
-              title: function (tooltipItems) {
-                return tooltipItems[0].label
-              },
-              labelTextColor: function () {
-                return '#eeeeee'
-              }
+            label: function(tooltipItem, data) {
+              return ' ' + data['datasets'][0]['data'][tooltipItem['index']] + '% ' + self.units[0];
+            },
+            afterLabel: function(tooltipItem, data) {
             }
           }
+        },
+        responsive: false,
+        maintainAspectRatio: false,
+        plugins: {
+          labels: [
+            {
+              render: 'label',
+              arc: false,
+              fontColor: '#000',
+              fontStyle: 'normal',
+              position: 'outside',
+              outsidePadding: 4,
+              textMargin: 8
+            },
+            {
+              render: 'percentage',
+              position: 'border',
+              textShadow: true,
+              fontStyle: 'normal',
+              fontColor: '#fff',
+              precision: 1,
+              showActualPercentages: false
+            }
+          ],
+          colorschemes: {
+            scheme: 'brewer.SetOne9'
+          }
         }
-      }, this.barChartConfiguration))
-    },
+      };
 
-    getMaxTick(dataset) {
-      const maxValue = Math.max(...dataset);
-      const maxValueStr = Math.round(maxValue).toString();
-      const maxValueLength = maxValueStr.length;
-      const maxValueToAdd = Math.pow(10, maxValueLength - 1);
-      const maxTick = Math.ceil((maxValue + maxValueToAdd)/maxValueToAdd)*maxValueToAdd;
-
-      return maxTick;
+      this.chart = new Chart(context, {
+        type: 'pie',
+        data: {
+            labels: labels,
+            datasets: datasets
+        },
+        options: this.options
+      });
     }
 
   },
-
-
 
   watch: {
     selectedGeoCode: function () {
@@ -321,7 +295,6 @@ export default {
 
       }
     }
-    
     @media (max-width: 62em) {
       .chart .flex {
         margin-left:0!important
