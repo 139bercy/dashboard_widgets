@@ -38,9 +38,9 @@
           </div>
         </div>
 
-        <div v-if="(typeof isMap == 'boolean' && isMap) || (typeof isMap == 'number' && isMap >= 0)" class="sep fr-my-4w fr-my-md-3w"></div>
+        <div v-if="(typeof isMap == 'boolean' && isMap) || (typeof isMap == 'number' && isMap > 0)" class="sep fr-my-4w fr-my-md-3w"></div>
         <div v-else class="sep-viz fr-my-4w fr-my-md-3w"></div>
-        <div class="scale" v-if="(typeof isMap == 'boolean' && isMap) || (typeof isMap == 'number' && isMap >= 0)">
+        <div class="scale" v-if="((typeof isMap == 'boolean' && isMap) || (typeof isMap == 'number' && isMap > 0))">
           <p class="l_box_title fr-text--xs fr-mb-1w">Légende</p>
           <div class="scale_container"></div>
           <div>
