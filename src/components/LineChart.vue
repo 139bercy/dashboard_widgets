@@ -190,9 +190,7 @@ export default {
             {
               data: self.dataset,
               borderWidth: 1,
-              //borderColor: '#377eb8',
               backgroundColor: gradientFill,
-              //pointHoverBackgroundColor: '#377eb8',
               pointRadius: 2
             }
           ]
@@ -202,7 +200,6 @@ export default {
             onComplete: function () {
               let context = this.chart.ctx;
               context.textAlign = "center";
-              //context.fillStyle = "#000";
               context.textBaseline = "bottom";
               this.data.datasets.forEach(function (dataset) {
                 for (var i = 0; i < dataset.data.length; i++) {
