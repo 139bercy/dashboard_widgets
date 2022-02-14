@@ -296,8 +296,6 @@ export default {
       }).catch(_ => {
         this.loading = false
       })
-
-      console.log(this.indicateurCode1)
     },
     updateData() {
       if (this.indicateur_data === null) {
