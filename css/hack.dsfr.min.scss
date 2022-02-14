@@ -860,11 +860,15 @@
     }
 
     .fr-grid-row:first-child {
-        margin-top: 20px;
+        margin-top: 10px;
+    }
+
+    .fr-grid-row:last-child:not(:first-child) {
+        margin-top: 0px;
     }
 
     .fr-grid-row:last-child {
-        margin: 0;
+        margin-bottom: 0px;
     }
 
     .fr-grid-row--top {
