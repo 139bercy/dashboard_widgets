@@ -16,7 +16,7 @@
             :left-col="false"
             v-if="indicateur_data && !indicateur_data2
               && ((typeof onglet.Graph == 'boolean' && onglet.Graph)
-              || typeof onglet.Graph == 'number' && onglet.Graph > 0)">
+              || (typeof onglet.Graph == 'number' && onglet.Graph > 0))">
         </LineChart>
         <MultiLineChart
             class="chart-container"
@@ -26,7 +26,7 @@
             :widget-position="onglet.Graph"
             :left-col="false"
             v-if="indicateur_data2 && ((typeof onglet.Graph == 'boolean' && onglet.Graph)
-              || typeof onglet.Graph == 'number' && onglet.Graph > 0)">
+              || (typeof onglet.Graph == 'number' && onglet.Graph > 0))">
         </MultiLineChart>
         <BarChart
             class="chart-container"
@@ -35,7 +35,7 @@
             :widget-position="onglet.Bar"
             :left-col="false"
             v-if="indicateur_data && !indicateur_data2 && ((typeof onglet.Bar == 'boolean' && onglet.Bar)
-              || typeof onglet.Bar == 'number' && onglet.Bar > 0)">
+              || (typeof onglet.Bar == 'number' && onglet.Bar > 0))">
         </BarChart>
         <PieChart
             class="chart-container"
@@ -45,7 +45,7 @@
             :widget-position="onglet.Pie"
             :left-col="false"
             v-if="indicateur_data && ((typeof onglet.Pie == 'boolean' && onglet.Pie)
-              || typeof onglet.Pie == 'number' && onglet.Pie > 0)">
+              || (typeof onglet.Pie == 'number' && onglet.Pie > 0))">
         </PieChart>
         <Table
             class="chart-container"
@@ -53,8 +53,18 @@
             :widget-position="onglet.Table"
             :left-col="false"
             v-if="indicateur_data && !indicateur_data2 && ((typeof onglet.Table == 'boolean' && onglet.Table)
-              || typeof onglet.Table == 'number' && onglet.Table > 0)">
+              || (typeof onglet.Table == 'number' && onglet.Table > 0))">
         </Table>
+        <Info
+            class="chart-container"
+            :indicateur="indicateurCode1"
+            :widget-position="onglet.Info"
+            :widget-title="onglet.InfoTitle"
+            :widget-content="onglet.InfoContent"
+            :left-col="false"
+            v-if="(typeof onglet.Info == 'boolean' && onglet.Info)
+              || (typeof onglet.Info == 'number' && onglet.Info > 0)">
+        </Info>
         <MultiBarChart
             class="chart-container"
             :bar-chart-configuration="barChartConfiguration"
@@ -95,6 +105,7 @@ import MultiLineChart from './MultiLineChart.vue'
 import BarChart from './BarChart.vue'
 import PieChart from './PieChart.vue'
 import Table from './Table.vue'
+import Info from './Info.vue'
 import MultiBarChart from './MultiBarChart.vue'
 import MapChart from './MapChart.vue'
 import { mixin } from '@/utils.js'
@@ -110,6 +121,7 @@ export default {
     BarChart,
     PieChart,
     Table,
+    Info,
     MultiLineChart,
     MultiBarChart,
     MapChart
