@@ -122,7 +122,7 @@ export default {
 
       geoObject.values.forEach(function (d) {
         self.labels.push(self.convertDateToHuman(d.date))
-        self.dataset.push((d.value))
+        self.dataset.push(Math.round(d.value * 10) / 10)
       })
     },
 
@@ -162,8 +162,15 @@ export default {
     },
 
     updateChart () {
-      this.updateData()
-      this.chart.update()
+      if (this.chart)
+        this.chart.destroy()
+      this.createChart()
+    },
+
+    resizeChart(e) {
+      if (this.chart)
+        this.chart.destroy()
+      this.createChart()
     },
 
     createChart () {
@@ -174,9 +181,8 @@ export default {
       let xTickLimit
       this.display === 'big' ? xTickLimit = 6 : xTickLimit = 1
 
-      const ctx = document.getElementById(self.chartId).getContext('2d')
-      
-      this.chart = new Chart(ctx, this.deepMerge({
+      const context = document.getElementById(self.chartId).getContext('2d')
+      this.chart = new Chart(context, this.deepMerge({
         type: 'bar',
         data: {
           labels: self.labels,
@@ -271,8 +277,6 @@ export default {
 
   },
 
-
-
   watch: {
     selectedGeoCode: function () {
       this.updateChart()
@@ -286,11 +290,12 @@ export default {
     this.chartId = 'myChart' + Math.floor(Math.random() * (1000))
     this.widgetId = 'widget' + Math.floor(Math.random() * (1000))
     this.getData()
+
+    window.addEventListener("resize", this.resizeChart);
   },
 
   mounted () {
     document.getElementById(this.widgetId).offsetWidth > 486 ? this.display = 'big' : this.display = 'small'
-    // 502px to break
   }
 
 }

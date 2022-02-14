@@ -52,6 +52,10 @@ export const sortByLabel = function (itemA, itemB) {
 	return itemA.label.localeCompare(itemB.label);
 }
 
+String.prototype.capitalize = function() {
+  return this.charAt(0).toUpperCase() + this.slice(1)
+}
+
 export const mixin = {
   methods: {
     capitalize,
