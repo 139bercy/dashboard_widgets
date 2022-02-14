@@ -198,11 +198,6 @@ export default {
           animation: {
             easing: 'easeInOutBack'
           },
-          elements: {
-              point:{
-                  radius: 0
-              }
-          },
           scales: {
             xAxes: [{
               gridLines: {
