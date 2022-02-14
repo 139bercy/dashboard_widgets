@@ -175,26 +175,21 @@ export default {
       gradientFill2.addColorStop(0.6, 'rgba(0, 124, 58, 0)')
 
       this.chart = new Chart(ctx, this.deepMerge({
+        type: 'line',
         data: {
           labels: self.labels,
           datasets: [
             {
               data: self.dataset,
               backgroundColor: gradientFill,
-              borderColor: '#000091',
-              type: 'line',
-              pointRadius: 8,
-              pointBackgroundColor: 'rgba(0, 0, 0, 0)',
-              pointBorderColor: 'rgba(0, 0, 0, 0)'
+              borderWidth: 1,
+              pointRadius: 2
             },
             {
               data: self.dataset2,
               backgroundColor: gradientFill2,
-              borderColor: '#007c3a',
-              type: 'line',
-              pointRadius: 8,
-              pointBackgroundColor: 'rgba(0, 0, 0, 0)',
-              pointBorderColor: 'rgba(0, 0, 0, 0)'
+              borderWidth: 1,
+              pointRadius: 2
             }
           ]
         },
