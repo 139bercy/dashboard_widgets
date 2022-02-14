@@ -1,5 +1,5 @@
 <template>
-  <div class="chart-map-panel" :class="{'panel-full-page-lg': $screen.breakpoint === 'lg', 'only-one-element' : onlyOneElement}">
+  <div class="chart-map-panel" :class="{'panel-full-page-lg': $screen.breakpoint === 'lg'}">
     <div v-if="indicateur_data && !loading" class="fr-grid-row">
       <left-col class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColProps" :logo="logo" :alt-logo="altLogo"
                 v-if="$screen.breakpoint === 'lg' && this.indicateur_data && this.indicateur_data.departements"></left-col>
@@ -264,20 +264,6 @@ export default {
         logo: this.logo,
         altLogo: this.altLogo
       }
-    },
-    onlyOneElement() {
-      const charts = ['Carte', 'Graph', 'Bar', 'Pie'];
-      let booleans = [];
-      charts.forEach(_chart => {
-        const value = this.onglet[_chart];
-        if (typeof value == 'boolean')
-          booleans.push(value);
-        else if (typeof value == 'number') 
-          booleans.push(value > 0)
-        else false;
-      });
-
-      return booleans.filter(Boolean).length == 1;
     }
   },
   methods: {
@@ -311,6 +297,8 @@ export default {
       }).catch(_ => {
         this.loading = false
       })
+
+      console.log(this.indicateurCode1)
     },
     updateData() {
       if (this.indicateur_data === null) {

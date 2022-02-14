@@ -1,6 +1,6 @@
 <template>
   <div :id="'panel_' + toJsonNameFormat(Titre_panneau)" class="panel">
-    <div :class="{'full-page-lg': $screen.breakpoint === 'lg', 'only-one-element': onlyOneElement && !points, 'flex-data-boxes': onlyBoxes}">
+    <div :class="{'full-page-lg': $screen.breakpoint === 'lg', 'flex-data-boxes': onlyBoxes}">
       <div class="lvl2-header fr-px-2w fr-px-md-3w fr-pt-3w">
         <h3>{{ Titre_panneau }}</h3>
       </div>
@@ -114,13 +114,12 @@ export default {
   },
   computed: {
     chartPanel() {
-      return this.currentOnglet.Carte  || this.currentOnglet.Graph  || this.currentOnglet.Bar
-    },
-    onlyOneElement() {
-      return this.currentOnglet.Carte && !this.currentOnglet.Graph && !this.currentOnglet.Bar
-      || !this.currentOnglet.Carte && this.currentOnglet.Graph && !this.currentOnglet.Bar
-      || !this.currentOnglet.Carte && !this.currentOnglet.Graph && this.currentOnglet.Bar
-      || !this.currentOnglet.Carte && !this.currentOnglet.Graph && !this.currentOnglet.Bar
+      return this.currentOnglet.Carte
+        || this.currentOnglet.Graph
+        || this.currentOnglet.Bar
+        || this.currentOnglet.Pie
+        || this.currentOnglet.Table
+        || this.currentOnglet.Info
     },
     onlyBoxes() {
       return this.currentOnglet.Box && !this.currentOnglet.Graph
