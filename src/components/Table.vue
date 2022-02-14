@@ -22,7 +22,6 @@
 
 <script>
 import store from '@/store'
-import moment from 'moment'
 import LeftCol from '@/components/LeftCol'
 import { mixin } from '@/utils.js'
 export default {
@@ -163,8 +162,6 @@ export default {
     },
 
     updateChart () {
-      this.updateData()
-      this.chart.destroy()
       this.createChart()
     },
 
@@ -173,47 +170,67 @@ export default {
 
       this.updateData()
 
-      let labels = [];
-      this.labels.forEach(_label => labels.push(moment(_label, "DD/MM/YYYY").format('YYYY')));
+      const departments = this.indicateur_data.departements
+        .sort(function (itemA, itemB) {
+          return itemB.last_value - itemA.last_value;
+        })
+        .slice(0, 10)
 
-      let values = [];
-      const total = this.dataset.reduce((a, b) => a + b, 0);
-      this.dataset.forEach(_value => values.push(_value));
-
+      const total = this.indicateur_data.departements.map(_department => _department.last_value).reduce((a, b) => a + b, 0);
+      
+      const table = document.getElementById(this.chartId);
       const headerRow = document.createElement('tr');
-      labels.forEach(_label => {
+      const headers = ['Rang', 'Département', 'Nombre', 'Ratio']
+
+      headers.forEach(_header => {
         const header = document.createElement('th');
-        const headerText = document.createTextNode(_label);
+        const headerText = document.createTextNode(_header);
 
         header.appendChild(headerText);
         headerRow.appendChild(header);
       });
-
-      const valueRow = document.createElement('tr');
-      values.forEach(_value => {
-        const rowCol = document.createElement('td');
-        const rowText = document.createTextNode(_value);
-
-        rowCol.appendChild(rowText);
-        valueRow.appendChild(rowCol);
-      });
-
-      const table = document.getElementById(this.chartId);
+      
       const headerRows = table.getElementsByTagName('thead')[0];
+      headerRows.innerHTML = ""
       headerRows.appendChild(headerRow);
+
+      let departmentRank = 1;
       const valueRows = table.getElementsByTagName('tbody')[0];
-      valueRows.appendChild(valueRow);
+      valueRows.innerHTML = ""
+      departments.forEach(_department => {
+        const valueRow = document.createElement('tr');
+        const rankCol = document.createElement('td');
+        const nameCol = document.createElement('td');
+        const valueCol = document.createElement('td');
+        const percentCol = document.createElement('td');
+
+        const department = store.state.departements.find(_storeDepartment => {
+          return _storeDepartment.value == _department.code_level
+        })
+
+        if (!department)
+          return;
+
+        const rankText = document.createTextNode(departmentRank);
+        const nameText = document.createTextNode(department.label);
+        const valueText = document.createTextNode(Math.round(_department.last_value * 10) / 10);
+        const percentText = document.createTextNode(Math.round(_department.last_value / total * 1000) / 10 + "%");
+
+        rankCol.appendChild(rankText);
+        nameCol.appendChild(nameText);
+        valueCol.appendChild(valueText);
+        percentCol.appendChild(percentText);
+
+        valueRow.appendChild(rankCol);
+        valueRow.appendChild(nameCol);
+        valueRow.appendChild(valueCol);
+        valueRow.appendChild(percentCol);
+        valueRows.appendChild(valueRow);
+
+        departmentRank++
+      });
     }
 
-  },
-
-  watch: {
-    selectedGeoCode: function () {
-      this.updateChart()
-    },
-    selectedGeoLevel: function () {
-      this.updateChart()
-    }
   },
 
   created () {

@@ -40,9 +40,11 @@
         <PieChart
             class="chart-container"
             :indicateur="indicateurCode1"
+            :indicateur2="indicateurCode2"
+            :indicateur3="indicateurCode3"
             :widget-position="onglet.Pie"
             :left-col="false"
-            v-if="indicateur_data && !indicateur_data2 && ((typeof onglet.Pie == 'boolean' && onglet.Pie)
+            v-if="indicateur_data && ((typeof onglet.Pie == 'boolean' && onglet.Pie)
               || typeof onglet.Pie == 'number' && onglet.Pie > 0)">
         </PieChart>
         <Table
@@ -127,8 +129,10 @@ export default {
       loading: true,
       indicateur_data: undefined,
       indicateur_data2: undefined,
+      indicateur_data3: undefined,
       dataset: [],
       dataset2: [],
+      dataset3: [],
       leftColProps: {
         min: 0,
         max: 0,
@@ -207,7 +211,14 @@ export default {
       return this.onglet.indicateurs[0].Code_indicateur
     },
     indicateurCode2() {
-      return this.onglet.indicateurs[1].Code_indicateur
+      return this.onglet.indicateurs.length > 1
+        ? this.onglet.indicateurs[1].Code_indicateur
+        : undefined
+    },
+    indicateurCode3() {
+      return this.onglet.indicateurs.length > 2
+        ? this.onglet.indicateurs[2].Code_indicateur
+        : undefined
     },
     indicateurName1() {
       return this.onglet.indicateurs[0].Titre_indicateur
@@ -272,7 +283,16 @@ export default {
         promise2 = Promise.resolve();
       }
 
-      Promise.all([promise1, promise2]).then(_ => {
+      let promise3;
+      if (this.onglet.indicateurs.length === 3) {
+        promise3 = store.dispatch('getData', this.indicateurCode3).then(data => {
+          this.indicateur_data3 = data
+        })
+      } else {
+        promise3 = Promise.resolve();
+      }
+
+      Promise.all([promise1, promise2, promise3]).then(_ => {
         this.updateData()
         this.loading = false
       }).catch(_ => {
