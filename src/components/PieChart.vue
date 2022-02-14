@@ -20,7 +20,6 @@
 <script>
 import store from '@/store'
 import Chart from 'chart.js'
-import moment from 'moment'
 import 'chartjs-plugin-colorschemes'
 import 'chartjs-plugin-labels'
 import LeftCol from '@/components/LeftCol'
@@ -34,6 +33,8 @@ export default {
   data () {
     return {
       indicateur_data: undefined,
+      indicateur_data2: undefined,
+      indicateur_data3: undefined,
       labels: [],
       dataset: [],
       widgetId: '',
@@ -59,6 +60,8 @@ export default {
   },
   props: {
     indicateur: String,
+    indicateur2: String,
+    indicateur3: String,
     widgetPosition: [Boolean, Number],
     leftCol: {
       type: Boolean,
@@ -84,8 +87,19 @@ export default {
   methods: {
 
     async getData () {
-      store.dispatch('getData', this.indicateur).then(data => {
+      const promise1 = store.dispatch('getData', this.indicateur).then(data => {
         this.indicateur_data = data
+      })
+
+      const promise2 = store.dispatch('getData', this.indicateur2).then(data => {
+        this.indicateur_data2 = data
+      })
+
+      const promise3 = store.dispatch('getData', this.indicateur3).then(data => {
+        this.indicateur_data3 = data
+      })
+
+      Promise.all([promise1, promise2, promise3]).then((values) => {
         this.loading = false
         this.createChart()
       })
@@ -97,49 +111,37 @@ export default {
       const geolevel = this.selectedGeoLevel
       const geocode = this.selectedGeoCode
 
-      this.leftColProps.localisation = this.selectedGeoLabel
-
-      let geoObject
-
-      geoObject = this.getGeoObject(geolevel, geocode)
-      if (!geoObject) return
-      this.leftColProps.date = this.convertDateToHuman(geoObject.last_date)
-
-      this.leftColProps.names.length = 0
-      this.units.length = 0
-      this.leftColProps.currentValues.length = 0
-      this.leftColProps.evolcodes.length = 0
-      this.leftColProps.evolvalues.length = 0
-
-      this.leftColProps.names.push(this.indicateur_data.nom)
       this.units.push(this.indicateur_data.unite)
-      this.leftColProps.currentValues.push(geoObject.last_value)
-      this.leftColProps.currentDate = this.convertDateToHuman(geoObject.last_date)
-      this.leftColProps.evolcodes.push(geoObject.evol_color)
-      this.leftColProps.evolvalues.push(geoObject.evol_percentage)
 
-      this.labels.length = 0
-      this.dataset.length = 0
+      let indicatorData = [];
+      [this.indicateur_data, this.indicateur_data2, this.indicateur_data3].forEach(_indicatorData => {
+        if (_indicatorData) {
+          indicatorData.push(_indicatorData);
+        }
+      })
 
-      geoObject.values.forEach(function (d) {
-        self.labels.push(self.convertDateToHuman(d.date))
-        self.dataset.push((d.value))
+      self.labels = []
+      self.dataset = []
+      indicatorData.forEach(_indicatorData => {
+        self.labels.push(_indicatorData.code.capitalize())
+        const geoObject = this.getGeoObject(geolevel, geocode, _indicatorData)
+        self.dataset.push(geoObject.values.at(-1))
       })
     },
 
-    getGeoObject (geolevel, geocode) {
+    getGeoObject (geolevel, geocode, data) {
       let geoObject
       if (geolevel === 'France') {
-        geoObject = this.indicateur_data.france[0]
+        geoObject = data.france[0]
       } else {
-        geoObject = this.indicateur_data[geolevel].find(obj => {
+        geoObject = data[geolevel].find(obj => {
           return obj.code_level === geocode
         })
       }
 
       if (typeof geoObject === 'undefined') {
         if (geolevel === 'regions') {
-          geoObject = this.getGeoObject('France', '01')
+          geoObject = this.getGeoObject('France', '01', this.indicateur_data)
           this.leftColProps.localisation = 'France entière'
           this.geoFallback = true
           this.geoFallbackMsg = 'Affichage des résultats au niveau national, faute de données au niveau régional'
@@ -147,12 +149,12 @@ export default {
           const depObj = store.state.departements.find(obj => {
             return obj.value === geocode
           })
-          geoObject = this.getGeoObject('regions', depObj.region_value)
+          geoObject = this.getGeoObject('regions', depObj.region_value, this.indicateur_data)
           this.leftColProps.localisation = depObj.region
           this.geoFallback = true
           this.geoFallbackMsg = 'Affichage des résultats au niveau régional, faute de données au niveau départemental'
           if (typeof geoObject === 'undefined') {
-            geoObject = this.getGeoObject('France', '01')
+            geoObject = this.getGeoObject('France', '01', this.indicateur_data)
             this.leftColProps.localisation = 'France entière'
             this.geoFallback = true
             this.geoFallbackMsg = 'Affichage des résultats au niveau national, faute de données au niveau régional ou départemental'
@@ -162,9 +164,15 @@ export default {
       return geoObject
     },
 
+    resizeChart () {
+      if (this.chart)
+        this.chart.destroy()
+      this.createChart()
+    },
+
     updateChart () {
-      this.updateData()
-      this.chart.destroy()
+      if (this.chart)
+        this.chart.destroy()
       this.createChart()
     },
 
@@ -175,12 +183,9 @@ export default {
 
       const context = document.getElementById(self.chartId).getContext('2d')
 
-      let labels = [];
-      this.labels.forEach(_label => labels.push(moment(_label, "DD/MM/YYYY").format('YYYY')));
-
       let values = [];
-      const total = this.dataset.reduce((a, b) => a + b, 0);
-      this.dataset.forEach(_value => values.push((_value / total * 100).toFixed(1)));
+      const total = this.dataset.map(_item => _item.value).reduce((a, b) => a + b, 0);
+      this.dataset.forEach(_item => values.push((_item.value / total * 100).toFixed(1)));         
 
       const datasets = [{
         data: values,
@@ -206,7 +211,7 @@ export default {
             }
           }
         },
-        responsive: false,
+        responsive: true,
         maintainAspectRatio: false,
         plugins: {
           labels: [
@@ -238,7 +243,7 @@ export default {
       this.chart = new Chart(context, {
         type: 'pie',
         data: {
-            labels: labels,
+            labels: self.labels,
             datasets: datasets
         },
         options: this.options
@@ -260,6 +265,8 @@ export default {
     this.chartId = 'myChart' + Math.floor(Math.random() * (1000))
     this.widgetId = 'widget' + Math.floor(Math.random() * (1000))
     this.getData()
+
+    window.addEventListener("resize", this.resizeChart);
   },
 
   mounted () {

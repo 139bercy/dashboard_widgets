@@ -143,7 +143,7 @@ export default {
 
       geoObject.values.forEach(function (d) {
         self.labels.push(self.convertDateToHuman(d.date))
-        self.dataset.push((d.value))
+        self.dataset.push(Math.round(d.value * 10) / 10)
       })
     },
 
