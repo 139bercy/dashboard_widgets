@@ -8,25 +8,15 @@
       <left-col class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColPropsNotLargeChart"
                 v-if="$screen.breakpoint !== 'lg'"></left-col>
       <div id="WidgetContainer" class="line-map-container fr-col-12 fr-col-lg-9" v-if="onglet.indicateurs.length > 0">
-        <LineChart
-            class="chart-container"
-            :line-chart-configuration="lineChartConfiguration"
-            :indicateur="indicateurCode1"
-            :widget-position="onglet.Graph"
-            :left-col="false"
-            v-if="indicateur_data && !indicateur_data2
-              && ((typeof onglet.Graph == 'boolean' && onglet.Graph)
-              || (typeof onglet.Graph == 'number' && onglet.Graph > 0))">
-        </LineChart>
         <MultiLineChart
             class="chart-container"
             :line-chart-configuration="lineChartConfiguration"
-            :indicateur1="indicateurCode1"
-            :indicateur2="indicateurCode2"
+            :indicators="onglet.indicateurs"
+            :with-values="onglet.Graph_avec_valeurs"
             :widget-position="onglet.Graph"
             :left-col="false"
-            v-if="indicateur_data2 && ((typeof onglet.Graph == 'boolean' && onglet.Graph)
-              || (typeof onglet.Graph == 'number' && onglet.Graph > 0))">
+            v-if="(typeof onglet.Graph == 'boolean' && onglet.Graph)
+              || (typeof onglet.Graph == 'number' && onglet.Graph > 0)">
         </MultiLineChart>
         <BarChart
             class="chart-container"
@@ -39,13 +29,11 @@
         </BarChart>
         <PieChart
             class="chart-container"
-            :indicateur="indicateurCode1"
-            :indicateur2="indicateurCode2"
-            :indicateur3="indicateurCode3"
+            :indicators="onglet.indicateurs"
             :widget-position="onglet.Pie"
             :left-col="false"
-            v-if="indicateur_data && ((typeof onglet.Pie == 'boolean' && onglet.Pie)
-              || (typeof onglet.Pie == 'number' && onglet.Pie > 0))">
+            v-if="(typeof onglet.Pie == 'boolean' && onglet.Pie)
+              || (typeof onglet.Pie == 'number' && onglet.Pie > 0)">
         </PieChart>
         <Table
             class="chart-container"
@@ -140,6 +128,7 @@ export default {
   data() {
     return {
       loading: true,
+      indicatorData: [],
       indicateur_data: undefined,
       indicateur_data2: undefined,
       indicateur_data3: undefined,
@@ -297,6 +286,7 @@ export default {
       }).catch(_ => {
         this.loading = false
       })
+
     },
     updateData() {
       if (this.indicateur_data === null) {

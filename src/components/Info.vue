@@ -9,7 +9,6 @@
 </template>
 
 <script>
-import store from '@/store'
 import { mixin } from '@/utils.js'
 export default {
   name: 'Table',

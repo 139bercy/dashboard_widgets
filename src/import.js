@@ -683,8 +683,21 @@ export const getData = async function (store) {
     }
   ]
 
+  const colors = [
+    '#377eb8',
+    '#e41a1c',
+    '#4daf4a',
+    '#984ea3',
+    '#ff7f00',
+    '#ffff33',
+    '#a65628',
+    '#f781bf',
+    '#999999'
+  ]
+
   store.commit('initDep', dep)
   store.commit('initReg', reg)
+  store.commit('colors', colors)
 
   return true
 }

@@ -22,7 +22,6 @@ import store from '@/store'
 import Chart from 'chart.js'
 import 'chartjs-plugin-colorschemes'
 import 'chartjs-plugin-labels'
-import * as brewer from 'chartjs-plugin-colorschemes/src/colorschemes/colorschemes.brewer'
 import LeftCol from '@/components/LeftCol'
 import { mixin } from '@/utils.js'
 export default {
@@ -189,7 +188,7 @@ export default {
           datasets: [
             {
               data: self.dataset,
-              backgroundColor: brewer.SetOne9,
+              backgroundColor: store.state.colors[0],
             }
           ]
         },
@@ -205,7 +204,7 @@ export default {
               },
               ticks: {
                 autoSkip: true,
-                maxTicksLimit: xTickLimit,
+                maxTicksLimit: Math.round(self.labels.length),
                 maxRotation: 0,
                 minRotation: 0,
                 callback: function (value) {
@@ -240,7 +239,7 @@ export default {
                 position: 'border',
                 textShadow: false,
                 fontStyle: 'normal',
-                fontColor: '#000',
+                fontColor: '#777',
                 showActualPercentages: false
               }
             ],
