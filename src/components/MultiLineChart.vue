@@ -189,9 +189,6 @@ export default {
         options: {
           responsive: true,
           maintainAspectRatio: false,
-          animation: {
-            easing: 'easeInOutBack'
-          },
           scales: {
             xAxes: [{
               gridLines: {
@@ -240,6 +237,7 @@ export default {
             animationDuration: 0
           },
           animation: {
+            easing: 'easeInOutBack',
             onComplete: function () {
               if (!self.withValues)
                 return
