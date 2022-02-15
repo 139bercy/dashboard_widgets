@@ -93,6 +93,9 @@ export default new Vuex.Store({
     initDep (state, dep) {
       state.departements = dep.sort(sortByLabel)
     },
+    colors (state, colors) {
+      state.colors = colors
+    },
     initReg (state, reg) {
       state.regions = reg.sort(sortByLabel)
     },
