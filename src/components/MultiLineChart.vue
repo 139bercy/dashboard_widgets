@@ -3,7 +3,7 @@
   <div class="widget_container fr-grid-row" :class="(loading)?'loading':''" :data-display="display" :id="widgetId">
     <LeftCol v-bind="leftColProps" v-if="leftCol || leftCol === undefined"></LeftCol>
     <div class="r_col fr-col-12" :class="{'fr-col-lg-9': leftCol}">
-      <div class="chart ml-lg">
+      <div class="chart">
         <canvas :id="chartId"></canvas>
       </div>
     </div>
@@ -14,8 +14,9 @@
 <script>
 import store from '@/store'
 import Chart from 'chart.js'
+import 'chartjs-plugin-labels'
 import LeftCol from '@/components/LeftCol'
-import { mixin } from '@/utils.js'
+import { mixin, hexToRgb } from '@/utils.js'
 
 export default {
   name: 'MultiLineChart',
@@ -25,11 +26,9 @@ export default {
   mixins: [mixin],
   data () {
     return {
-      indicateur_data: undefined,
-      indicateur_data2: undefined,
+      indicatorData: [],
       labels: [],
-      dataset: [],
-      dataset2: [],
+      datasets: [],
       widgetId: '',
       chartId: '',
       display: '',
@@ -50,8 +49,8 @@ export default {
     }
   },
   props: {
-    indicateur1: String,
-    indicateur2: String,
+    indicators: [],
+    withValues: Boolean,
     leftCol: {
       type: Boolean,
       default: true
@@ -76,17 +75,19 @@ export default {
   methods: {
 
     async getData () {
-      const promise1 = store.dispatch('getData', this.indicateur1).then(data => {
-        this.indicateur_data = data
-      })
+      let promises = [];
+      this.indicators.forEach(_indicator => {
+        let promise = store.dispatch('getData', _indicator.Code_indicateur).then(data => {
+          this.indicatorData.push(data);
+        })
+        promises.push(promise);
+      });
 
-      const promise2 = store.dispatch('getData', this.indicateur2).then(data => {
-        this.indicateur_data2 = data
-      })
-
-      Promise.all([promise1, promise2]).then((values) => {
+      Promise.all(promises).then(() => {
         this.loading = false
         this.createChart()
+      }).catch(_ => {
+        this.loading = false
       })
     },
 
@@ -98,56 +99,62 @@ export default {
       const geolevel = this.selectedGeoLevel
       const geocode = this.selectedGeoCode
 
-      let geoObject
-      let geoObject2
-
-      if (geolevel === 'France') {
-        geoObject = this.indicateur_data.france[0]
-        geoObject2 = this.indicateur_data2.france[0]
-      } else {
-        geoObject = this.indicateur_data[geolevel].find(obj => {
-          return obj.code_level === geocode
-        })
-        geoObject2 = this.indicateur_data2[geolevel].find(obj => {
-          return obj.code_level === geocode
-        })
-      }
-
-      this.leftColProps.date = this.convertDateToHuman(geoObject.last_date)
-
-      this.leftColProps.names.length = 0
-      this.units.length = 0
-      this.leftColProps.currentValues.length = 0
-      this.leftColProps.evolcodes.length = 0
-      this.leftColProps.evolvalues.length = 0
-
-      this.leftColProps.names.push(this.indicateur_data.nom, this.indicateur_data2.nom)
-      this.units.push(this.indicateur_data.unite, this.indicateur_data2.unite)
-      this.leftColProps.currentValues.push(geoObject.last_value, geoObject2.last_value)
-      this.leftColProps.currentDate = this.convertDateToHuman(geoObject.last_date)
-      this.leftColProps.evolcodes.push(geoObject.evol_color, geoObject2.evol_color)
-      this.leftColProps.evolvalues.push(geoObject.evol_percentage, geoObject2.evol_percentage)
-
-      this.labels.length = 0
-      this.dataset.length = 0
-      this.dataset2.length = 0
-
-      geoObject.values.forEach(function (d) {
-        self.labels.push(self.convertDateToHuman(d.date))
-        self.dataset.push((d.value))
-
-        const correspondingValue = geoObject2.values.find(obj => {
-          return obj.date === d.date
-        })
-        if (correspondingValue) {
-          self.dataset2.push(correspondingValue.value)
+      let geoObjects = []
+      this.indicatorData.forEach(_indicatorData => {
+        let geoObject
+        if (geolevel === 'France') {
+          geoObject = _indicatorData.france[0]
         }
+        else {
+          geoObject = _indicatorData[geolevel].find(_geoObject => {
+            return _geoObject.code_level === geocode
+          })
+        }
+
+        if (geoObject) {
+          geoObjects.push(geoObject)
+        }
+
+        this.units.push(_indicatorData.unite)
       })
+
+      self.labels = []
+      self.datasets = []
+
+      let dataset = []
+      geoObjects[0].values.forEach(_item => {
+        self.labels.push(self.convertDateToHuman(_item.date))
+        dataset.push((_item.value))
+      })
+      self.datasets.push(dataset)
+      
+      geoObjects.shift()
+      geoObjects.forEach(_geoObject => {
+        let otherDataset = []
+        self.labels.forEach(_date => {
+          const item = _geoObject.values.find(_item => {
+            return self.convertDateToHuman(_item.date) === _date
+          })
+          if (item) {
+            otherDataset.push(item.value)
+          }
+        })
+        
+        self.datasets.push(otherDataset)
+      })
+
     },
 
     updateChart () {
-      this.updateData()
-      this.chart.update()
+      if (this.chart)
+        this.chart.destroy()
+      this.createChart()
+    },
+
+    resizeChart(e) {
+      if (this.chart)
+        this.chart.destroy()
+      this.createChart()
     },
 
     createChart () {
@@ -155,57 +162,44 @@ export default {
 
       this.updateData()
 
-      let xTickLimit
-      this.display === 'big' ? xTickLimit = 6 : xTickLimit = 1
+      const context = document.getElementById(self.chartId).getContext('2d')
 
-      const ctx = document.getElementById(self.chartId).getContext('2d')
+      let datasets = [];
+      self.datasets.forEach((_dataset, _index) => {
+        const hexaColor = store.state.colors[_index]
+        const rgbColor = hexToRgb(hexaColor)
+        datasets.push({
+          data: _dataset,
+          cubicInterpolationMode: "monotone",
+          borderColor: hexaColor,
+          backgroundColor: 'rgba(' + rgbColor.r + ', ' + rgbColor.g + ', ' + rgbColor.b + ', 0.05)',
+          pointBackgroundColor: hexaColor,
+          pointBorderColor: hexaColor,
+          borderWidth: 1,
+          pointRadius: 2
+        })
+      })
 
-      let gradientFill
-
-      this.display === 'big' ? gradientFill = ctx.createLinearGradient(0, 0, 0, 500) : gradientFill = ctx.createLinearGradient(0, 0, 0, 250)
-
-      gradientFill.addColorStop(0, 'rgba(218, 218, 254, 0.6)')
-      gradientFill.addColorStop(0.6, 'rgba(245, 245, 255, 0)')
-
-      let gradientFill2
-
-      this.display === 'big' ? gradientFill2 = ctx.createLinearGradient(0, 0, 0, 350) : gradientFill2 = ctx.createLinearGradient(0, 0, 0, 225)
-
-      gradientFill2.addColorStop(0, 'rgba(0, 124, 58, 0.6)')
-      gradientFill2.addColorStop(0.6, 'rgba(0, 124, 58, 0)')
-
-      this.chart = new Chart(ctx, this.deepMerge({
+      this.chart = new Chart(context, {
         type: 'line',
         data: {
           labels: self.labels,
-          datasets: [
-            {
-              data: self.dataset,
-              backgroundColor: gradientFill,
-              borderWidth: 1,
-              pointRadius: 2
-            },
-            {
-              data: self.dataset2,
-              backgroundColor: gradientFill2,
-              borderWidth: 1,
-              pointRadius: 2
-            }
-          ]
+          datasets: datasets
         },
         options: {
+          responsive: true,
           maintainAspectRatio: false,
-          animation: {
-            easing: 'easeInOutBack'
-          },
           scales: {
             xAxes: [{
               gridLines: {
-                color: 'rgba(0, 0, 0, 0)'
+                color: '#e5e5e5',
+                borderDash: [3]
               },
               ticks: {
                 autoSkip: true,
-                maxTicksLimit: xTickLimit,
+                maxTicksLimit: self.labels.length > 10
+                  ? Math.round(self.labels.length / 2)
+                  : self.labels.length,
                 maxRotation: 0,
                 minRotation: 0,
                 callback: function (value) {
@@ -221,6 +215,7 @@ export default {
               ticks: {
                 autoSkip: true,
                 maxTicksLimit: 5,
+                max: this.getMaxTick(self.datasets),
                 callback: function (value) {
                   value = parseFloat(value)
                   if (value / 1000000000 >= 1) {
@@ -232,14 +227,35 @@ export default {
                   }
                   return Intl.NumberFormat().format(value)
                 }
-              },
-              afterFit: function (axis) {
-                self.legendLeftMargin = axis.width
               }
             }]
           },
           legend: {
             display: false
+          },
+          hover: {
+            animationDuration: 0
+          },
+          animation: {
+            easing: 'easeInOutBack',
+            onComplete: function () {
+              if (!self.withValues)
+                return
+              let context = this.chart.ctx;
+              context.font = '12px Arial, Helvetica, sans-serif',
+              context.fillStyle = "#777";
+              context.textAlign = "center";
+              context.textBaseline = "bottom";
+              this.data.datasets.forEach(function (dataset) {
+                for (var i = 0; i < dataset.data.length; i++) {
+                    var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model;
+                    var xPos = model.x;
+                    var yPos = model.y - 5;
+
+                    context.fillText(dataset.data[i], xPos, yPos);     
+                }
+              })
+            }
           },
           tooltips: {
             displayColors: false,
@@ -258,7 +274,17 @@ export default {
             }
           }
         }
-      }, this.lineChartConfiguration))
+      })
+    },
+
+    getMaxTick(datasets) {
+      const maxValue = Math.max(...datasets.flat());
+      const maxValueStr = Math.round(maxValue).toString();
+      const maxValueLength = maxValueStr.length;
+      const maxValueToAdd = Math.pow(10, maxValueLength - 1);
+      const maxTick = Math.floor((maxValue + maxValueToAdd)/maxValueToAdd)*maxValueToAdd;
+
+      return maxTick;
     }
   },
 
@@ -275,6 +301,8 @@ export default {
     this.chartId = 'myChart' + Math.floor(Math.random() * (1000))
     this.widgetId = 'widget' + Math.floor(Math.random() * (1000))
     this.getData()
+
+    window.addEventListener("resize", this.resizeChart);
   },
 
   mounted () {

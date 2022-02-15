@@ -32,9 +32,7 @@ export default {
   },
   data () {
     return {
-      indicateur_data: undefined,
-      indicateur_data2: undefined,
-      indicateur_data3: undefined,
+      indicatorData: [],
       labels: [],
       dataset: [],
       widgetId: '',
@@ -59,9 +57,7 @@ export default {
     }
   },
   props: {
-    indicateur: String,
-    indicateur2: String,
-    indicateur3: String,
+    indicators: [],
     widgetPosition: [Boolean, Number],
     leftCol: {
       type: Boolean,
@@ -87,43 +83,38 @@ export default {
   methods: {
 
     async getData () {
-      const promise1 = store.dispatch('getData', this.indicateur).then(data => {
-        this.indicateur_data = data
-      })
+      let promises = [];
+      this.indicators.forEach(_indicator => {
+        let promise = store.dispatch('getData', _indicator.Code_indicateur).then(data => {
+          this.indicatorData.push(data);
+        })
+        promises.push(promise);
+      });
 
-      const promise2 = store.dispatch('getData', this.indicateur2).then(data => {
-        this.indicateur_data2 = data
-      })
-
-      const promise3 = store.dispatch('getData', this.indicateur3).then(data => {
-        this.indicateur_data3 = data
-      })
-
-      Promise.all([promise1, promise2, promise3]).then((values) => {
+      Promise.all(promises).then(() => {
         this.loading = false
         this.createChart()
+      }).catch(_ => {
+        this.loading = false
       })
     },
 
     updateData () {
+
       const self = this
 
       const geolevel = this.selectedGeoLevel
       const geocode = this.selectedGeoCode
 
-      this.units.push(this.indicateur_data.unite)
-
-      let indicatorData = [];
-      [this.indicateur_data, this.indicateur_data2, this.indicateur_data3].forEach(_indicatorData => {
-        if (_indicatorData) {
-          indicatorData.push(_indicatorData);
-        }
-      })
+      this.units.push(self.indicatorData[0].unite)
 
       self.labels = []
+      self.indicators.forEach(_indcator => {
+        self.labels.push(_indcator.Nom_indicateur)
+      })
+
       self.dataset = []
-      indicatorData.forEach(_indicatorData => {
-        self.labels.push(_indicatorData.code.capitalize())
+      self.indicatorData.forEach(_indicatorData => {
         const geoObject = this.getGeoObject(geolevel, geocode, _indicatorData)
         self.dataset.push(geoObject.values.at(-1))
       })
