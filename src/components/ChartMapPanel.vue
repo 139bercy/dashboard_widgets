@@ -88,7 +88,6 @@
 <script>
 
 import store from '@/store'
-import LineChart from './LineChart.vue'
 import MultiLineChart from './MultiLineChart.vue'
 import BarChart from './BarChart.vue'
 import PieChart from './PieChart.vue'
@@ -105,7 +104,6 @@ export default {
   mixins: [mixin],
   components: {
     LeftCol,
-    LineChart,
     BarChart,
     PieChart,
     Table,
