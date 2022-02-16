@@ -10,6 +10,7 @@
     </div>
     <LeftCol v-bind="leftColProps" v-if="leftCol"></LeftCol>
     <div class="r_col fr-col-12" :class="{'fr-col-lg-9': leftCol}">
+      <h4 v-if="widgetTitle" class="chart-title">{{widgetTitle}}</h4>
       <div class="chart ml-lg">
         <canvas :id="chartId" height="260" style="margin: auto"></canvas>
       </div>
@@ -58,6 +59,8 @@ export default {
   },
   props: {
     indicators: [],
+    withLegend: Boolean,
+    widgetTitle: String,
     widgetPosition: [Boolean, Number],
     leftCol: {
       type: Boolean,
@@ -180,13 +183,46 @@ export default {
 
       const datasets = [{
         data: values,
+        backgroundColor: store.state.colors,
         borderWidth: 2,
         borderColor: "#fff"
       }];
 
+      const plugins = {
+        labels: [
+          {
+            render: 'percentage',
+            position: 'border',
+            textShadow: true,
+            shadowBlur: 5,
+            shadowColor: '#000',
+            shadowOffsetX: 0,
+            shadowOffsetY: 0,
+            fontStyle: 'normal',
+            fontColor: '#fff',
+            precision: 1,
+            showActualPercentages: false
+          }
+        ]
+      }
+
+      if (!this.withLegend) [
+        plugins.labels.push(
+        {
+          render: 'label',
+          arc: false,
+          fontColor: '#000',
+          fontStyle: 'normal',
+          position: 'outside',
+          outsidePadding: 4,
+          textMargin: 8
+        })
+      ]
+
       this.options = {
         legend: {
-          display: false
+          display: this.withLegend,
+          position: 'left'
         },
         tooltips: {
           displayColors: true,
@@ -204,31 +240,7 @@ export default {
         },
         responsive: true,
         maintainAspectRatio: false,
-        plugins: {
-          labels: [
-            {
-              render: 'label',
-              arc: false,
-              fontColor: '#000',
-              fontStyle: 'normal',
-              position: 'outside',
-              outsidePadding: 4,
-              textMargin: 8
-            },
-            {
-              render: 'percentage',
-              position: 'border',
-              textShadow: true,
-              fontStyle: 'normal',
-              fontColor: '#fff',
-              precision: 1,
-              showActualPercentages: false
-            }
-          ],
-          colorschemes: {
-            scheme: 'brewer.SetOne9'
-          }
-        }
+        plugins: plugins
       };
 
       this.chart = new Chart(context, {

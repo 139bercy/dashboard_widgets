@@ -4,6 +4,7 @@
     <LeftCol v-bind="leftColProps" v-if="leftCol || leftCol === undefined"></LeftCol>
     <div class="r_col fr-col-12" :class="{'fr-col-lg-9': leftCol}">
       <div class="" :class="{'map fr-col-12': DOMTOMBottom, 'm-lg': leftCol, 'fr-grid-row': !DOMTOMBottom}">
+      <h4 v-if="widgetTitle" class="chart-title">{{widgetTitle}}</h4>
         <div class="map_tooltip" v-if="tooltip.display" :style="{top:tooltip.top,left:tooltip.left}">
           <div class="tooltip_header">{{ convertDateToHuman(tooltip.date) }}</div>
           <div class="tooltip_body">
@@ -98,6 +99,7 @@ export default {
   },
   props: {
     indicateur: String,
+    widgetTitle: String,
     widgetPosition: [Boolean, Number],
     leftCol: {
       type: Boolean,
@@ -213,7 +215,7 @@ export default {
       this.leftColProps.min = this.scaleMin
       this.leftColProps.max = this.scaleMax
 
-      const color = d3.scaleLinear().domain([this.scaleMin, this.scaleMax]).range(['#ffc700', '#715845'])
+      const color = d3.scaleLinear().domain([this.scaleMin, this.scaleMax]).range(['#0071ffcc', '#FF0002'])
       const widget = document.getElementById(this.widgetId)
       const isRegion = self.definedMinGeoLevel === 'regions'
       const isRegionSelection = selectedLevel === 'regions'

@@ -1,8 +1,9 @@
 <template>
 
-  <div class="widget_container fr-grid-row" :class="(loading)?'loading':''" :data-display="display" :id="widgetId">
+  <div class="widget_container fr-grid-row" :class="(loading)?'loading':''" :data-display="display" :data-position="widgetPosition" :id="widgetId">
     <LeftCol v-bind="leftColProps" v-if="leftCol || leftCol === undefined"></LeftCol>
     <div class="r_col fr-col-12" :class="{'fr-col-lg-9': leftCol}">
+      <h4 v-if="widgetTitle" class="chart-title">{{widgetTitle}}</h4>
       <div class="chart">
         <canvas :id="chartId"></canvas>
       </div>
@@ -50,6 +51,8 @@ export default {
   },
   props: {
     indicators: [],
+    widgetTitle: String,
+    widgetPosition: [Boolean, Number],
     withValues: Boolean,
     leftCol: {
       type: Boolean,
