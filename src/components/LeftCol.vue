@@ -14,9 +14,9 @@
           </p>
           <p class="l_box_title fr-text--xs fr-mb-1w">Mise à jour : {{date}}</p>
         </div>
-        <div class="sep fr-my-4w fr-my-md-3w" v-if="currentValues"></div>
-        <div data-box="number" v-if="currentValues">
-          <div class="indicateur_info" :class="i>0 ? 'fr-mt-2w' : ''" v-for="(n,i) in names" :key="n">
+        <div class="sep fr-my-4w fr-my-md-3w" v-if="isGraph && currentValues"></div>
+        <div data-box="number" v-if="isGraph && currentValues">
+          <div class="indicateur_info" :class="i>0 ? 'fr-mt-2w' : ''" v-for="(n,i) in names" :key="n + i">
             <p class="fr-text--sm fr-text--bold fr-mt-0 fr-mb-1w">
               <span class="legende_dot" :class="{'dot-blue': i === 0, 'dot-green': i === 1}"></span>
               {{names[i]}}
@@ -75,6 +75,7 @@ export default {
     evolcodes: Array,
     evolvalues: Array,
     isMap: [Number, Boolean],
+    isGraph: Boolean,
     isBox: Boolean,
     date: String,
     units: Array,
@@ -128,6 +129,8 @@ export default {
 
   created () {
     this.testEvolStyle()
+
+    console.log(this.isLine)
   }
 
 }
@@ -214,7 +217,7 @@ export default {
       .scale_container{
         height: 1.5rem;
         background-color: red;
-        background: linear-gradient(90deg, rgba(255, 199, 0,1) 0%, rgba(113, 88, 69, 1) 100%);
+        background: linear-gradient(90deg, #0071ffcc 0%, #FF0002 100%);
       }
       div:last-child {
         display:flex;

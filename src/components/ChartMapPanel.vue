@@ -7,12 +7,13 @@
                 v-if="$screen.breakpoint === 'lg' && this.indicateur_data && !this.indicateur_data.departements"></left-col>
       <left-col class="map-legend fr-col-12 fr-col-lg-3" v-bind="leftColPropsNotLargeChart"
                 v-if="$screen.breakpoint !== 'lg'"></left-col>
-      <div id="WidgetContainer" class="line-map-container fr-col-12 fr-col-lg-9" v-if="onglet.indicateurs.length > 0">
+      <div  :id="containerId" class="line-map-container fr-col-12 fr-col-lg-9" v-if="onglet.indicateurs.length > 0">
         <MultiLineChart
             class="chart-container"
             :line-chart-configuration="lineChartConfiguration"
             :indicators="onglet.indicateurs"
             :with-values="onglet.Graph_avec_valeurs"
+            :widget-title="onglet.Graph_titre"
             :widget-position="onglet.Graph"
             :left-col="false"
             v-if="(typeof onglet.Graph == 'boolean' && onglet.Graph)
@@ -22,6 +23,7 @@
             class="chart-container"
             :bar-chart-configuration="barChartConfiguration"
             :indicateur="indicateurCode1"
+            :widget-title="onglet.Bar_titre"
             :widget-position="onglet.Bar"
             :left-col="false"
             v-if="indicateur_data && !indicateur_data2 && ((typeof onglet.Bar == 'boolean' && onglet.Bar)
@@ -30,6 +32,8 @@
         <PieChart
             class="chart-container"
             :indicators="onglet.indicateurs"
+            :with-legend="onglet.Pie_legende"
+            :widget-title="onglet.Pie_titre"
             :widget-position="onglet.Pie"
             :left-col="false"
             v-if="(typeof onglet.Pie == 'boolean' && onglet.Pie)
@@ -38,6 +42,7 @@
         <Table
             class="chart-container"
             :indicateur="indicateurCode1"
+            :widget-title="onglet.Table_titre"
             :widget-position="onglet.Table"
             :left-col="false"
             v-if="indicateur_data && !indicateur_data2 && ((typeof onglet.Table == 'boolean' && onglet.Table)
@@ -47,8 +52,8 @@
             class="chart-container"
             :indicateur="indicateurCode1"
             :widget-position="onglet.Info"
-            :widget-title="onglet.InfoTitle"
-            :widget-content="onglet.InfoContent"
+            :widget-title="onglet.Info_titre"
+            :widget-content="onglet.Info_contenu"
             :left-col="false"
             v-if="(typeof onglet.Info == 'boolean' && onglet.Info)
               || (typeof onglet.Info == 'number' && onglet.Info > 0)">
@@ -69,6 +74,7 @@
             :left-col="false"
             :DOMTOMBottom="true"
             :min-geo-level="onglet.MinGeoLevel"
+            :widget-title="onglet.Carte_titre"
             :widget-position="onglet.Carte"
             v-if="onglet.Carte && indicateur_data && this.indicateur_data[onglet.MinGeoLevel]">
         </MapChart>
@@ -130,6 +136,7 @@ export default {
       indicateur_data: undefined,
       indicateur_data2: undefined,
       indicateur_data3: undefined,
+      containerId: undefined,
       dataset: [],
       dataset2: [],
       dataset3: [],
@@ -144,6 +151,7 @@ export default {
         evolcodes: null,
         evolvalues: null,
         isMap: false,
+        isGraph: false,
         isBox: false,
         units: [],
         unitsEvol: []
@@ -397,10 +405,12 @@ export default {
       this.leftColProps.min = minValue
       this.leftColProps.max = maxValue
       this.leftColProps.isMap = this.onglet.Carte
+      this.leftColProps.isGraph = (typeof this.onglet.Graph == 'boolean' && this.onglet.Graph)
+        || (typeof this.onglet.Graph == 'number' && this.onglet.Graph > 0)
     },
 
     rearrangeCharts() {
-      let widgetContainer = document.getElementById('WidgetContainer');
+      let widgetContainer = document.getElementById(this.containerId);
       if (!widgetContainer)
         return;
       const numberWidgets = Array.from(widgetContainer.children).filter(_child => {
@@ -425,11 +435,15 @@ export default {
       }
 
       widgetContainer.appendChild(children);
+
+      return true
     }
 
   },
 
   created() {
+    this.containerId = 'WidgetContainer' + Math.floor(Math.random() * (1000))
+
     this.getData()
   },
 

@@ -684,15 +684,19 @@ export const getData = async function (store) {
   ]
 
   const colors = [
-    '#377eb8',
-    '#e41a1c',
-    '#4daf4a',
-    '#984ea3',
-    '#ff7f00',
-    '#ffff33',
-    '#a65628',
-    '#f781bf',
-    '#999999'
+    '#2185d0', // blue
+    '#db2828', // red
+    '#21ba45', // green
+    '#fbbd08', // yellow
+    '#f2711c', // orange
+    '#b5cc18', // olive
+    '#00b5ad', // teal
+    '#6435c9', // violet
+    '#a333c8', // purple
+    '#e03997', // pink
+    '#a5673f', // brown
+    '#767676', // grey
+    '#1b1c1d', // black
   ]
 
   store.commit('initDep', dep)
