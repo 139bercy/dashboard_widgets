@@ -18,10 +18,14 @@ def convert_excel_to_json(path):
     ]
     onglet_properties = [
         "Carte",
+        "Carte_titre",
         "Graph",
+        "Graph_titre",
         "Graph_avec_valeurs",
         "Bar",
+        "Bar_titre",
         "Box",
+        "Box_titre",
         "Points",
         "MinGeoLevel",
         "Description_mesure",
@@ -37,7 +41,15 @@ def convert_excel_to_json(path):
     ]
     isAfa = "afa.csv" in path
     if isAfa:
-        onglet_properties.extend(['Pie', 'Table', 'Info', 'InfoTitle', 'InfoContent'])
+        onglet_properties.extend([
+            'Pie',
+            'Pie_titre',
+            'Pie_legende',
+            'Table',
+            'Table_titre',
+            'Info',
+            'Info_titre',
+            'Info_contenu'])
 
     df = df.dropna(subset=['No_Panneau']).sort_values(by=["No_Panneau"], ascending=True)
     panneaux = list(df["No_Panneau"].unique())
@@ -62,11 +74,11 @@ def convert_excel_to_json(path):
                 liste_indicateurs += [dict_indicateur]
             for col in onglet_properties:
                 # ne pas intégrer les valeurs null ou autre
-                if not pd.isna(df_onglet[col].iloc[0]):
+                if col in df_onglet and not pd.isna(df_onglet[col].iloc[0]):
                     dict_onglet[col] = str(df_onglet[col].iloc[0])
-                    if col in ["Carte", "Graph", "Points", "Bar", "Box", 'Pie', 'Table', 'Info', 'Graph_avec_valeurs']:
+                    if col in ["Carte", "Graph", "Points", "Bar", "Box", 'Pie', 'Table', 'Info', 'Graph_avec_valeurs', 'Pie_legende']:
                         value = int(df_onglet[col].iloc[0])
-                        if isAfa and col != 'Graph_avec_valeurs':
+                        if isAfa and col not in ['Graph_avec_valeurs', 'Pie_legende']:
                             if value == 0:
                                 dict_onglet[col] = False
                             else:

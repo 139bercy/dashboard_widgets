@@ -10,6 +10,7 @@
     </div>
     <LeftCol v-bind="leftColProps" v-if="leftCol"></LeftCol>
     <div class="r_col fr-col-12" :class="{'fr-col-lg-9': leftCol}">
+      <h4 v-if="widgetTitle" class="chart-title">{{widgetTitle}}</h4>
       <div class="chart ml-lg">
         <canvas :id="chartId"></canvas>
       </div>
@@ -58,6 +59,7 @@ export default {
   },
   props: {
     indicateur: String,
+    widgetTitle: String,
     widgetPosition: [Boolean, Number],
     leftCol: {
       type: Boolean,
