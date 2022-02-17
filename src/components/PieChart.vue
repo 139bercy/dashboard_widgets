@@ -87,6 +87,7 @@ export default {
 
     async getData () {
       let promises = [];
+      this.indicators.sort((_a, _b) => _a.Code_indicateur.localeCompare(_b.Code_indicateur))
       this.indicators.forEach(_indicator => {
         let promise = store.dispatch('getData', _indicator.Code_indicateur).then(data => {
           this.indicatorData.push(data);
@@ -109,11 +110,15 @@ export default {
       const geolevel = this.selectedGeoLevel
       const geocode = this.selectedGeoCode
 
-      this.units.push(self.indicatorData[0].unite)
+      self.indicatorData.sort((a, b) => a.code.localeCompare(b.code))
+      self.indicatorData
+        .map(_indicateurData => _indicateurData.unite)
+        .forEach(_unit => this.units.push(_unit))
 
       self.labels = []
-      self.indicators.forEach(_indcator => {
-        self.labels.push(_indcator.Nom_indicateur)
+      self.indicators.sort((a, b) => a.Code_indicateur.localeCompare(b.Code_indicateur))
+      self.indicators.forEach(_indicator => {
+        self.labels.push(_indicator.Nom_indicateur)
       })
 
       self.dataset = []
@@ -222,7 +227,10 @@ export default {
       this.options = {
         legend: {
           display: this.withLegend,
-          position: 'left'
+          position: 'left',
+          labels: {
+            usePointStyle: true
+          }
         },
         tooltips: {
           displayColors: true,
@@ -232,7 +240,7 @@ export default {
               return data['labels'][tooltipItem[0]['index']];
             },
             label: function(tooltipItem, data) {
-              return ' ' + data['datasets'][0]['data'][tooltipItem['index']] + '% ' + self.units[0];
+              return ' ' + data['datasets'][0]['data'][tooltipItem['index']] + '% ' + self.units[tooltipItem['index']];
             },
             afterLabel: function(tooltipItem, data) {
             }

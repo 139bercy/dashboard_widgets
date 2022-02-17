@@ -14,6 +14,7 @@
             v-bind="panneau"
             :logo="logo"
             :alt-logo="altLogo"
+            :project-configuration="projectConfigurationContent"
             :line-chart-configuration="lineChartConfigurationContent"
             :bar-chart-configuration="barChartConfigurationContent">
           </panel>
@@ -47,6 +48,7 @@ export default {
     sourceLinks: String,
     logo: String,
     altLogo: String,
+    projectConfiguration: String,
     lineChartConfiguration: String,
     barChartConfiguration: String
   },
@@ -54,6 +56,7 @@ export default {
     return {
       panneaux: [],
       descriptionContent: '',
+      projectConfigurationContent: {},
       lineChartConfigurationContent: {},
       barChartConfigurationContent: {}
     }
@@ -72,6 +75,17 @@ export default {
           .then(res => res.text())
           // hack pour intégrer le nombre d'indicateurs dans la description
           .then(data => this.descriptionContent = data.replace("{{ panneaux.length }}", this.panneaux.length))
+      }
+      if (this.projectConfiguration !== undefined && this.projectConfiguration !== '') {
+        const self = this
+        try {
+          this.projectConfigurationContent = JSON.parse(
+            await fetch(this.projectConfiguration)
+              .then(res => res.text())
+          )
+        } catch (e) {
+          console.error(e)
+        }
       }
       if (this.lineChartConfiguration!== undefined && this.lineChartConfiguration !== '') {
         const self = this
