@@ -100,6 +100,7 @@ export default {
     }
   },
   props: {
+    projectConfiguration: Object,
     indicateur: String,
     widgetTitle: String,
     widgetPosition: [Boolean, Number],
@@ -218,7 +219,9 @@ export default {
       this.leftColProps.min = this.scaleMin
       this.leftColProps.max = this.scaleMax
 
-      const color = d3.scaleLinear().domain([this.scaleMin, this.scaleMax]).range(['#0071ffcc', '#FF0002'])
+      const color = d3.scaleLinear().domain([this.scaleMin, this.scaleMax]).range([
+        this.projectConfiguration.mapLegendMinColor,
+        this.projectConfiguration.mapLegendMaxColor])
       const widget = document.getElementById(this.widgetId)
       const isRegion = self.definedMinGeoLevel === 'regions'
       const isRegionSelection = selectedLevel === 'regions'
@@ -308,6 +311,15 @@ export default {
     this.chartId = 'myChart' + Math.floor(Math.random() * (1000))
     this.widgetId = 'widget' + Math.floor(Math.random() * (1000))
     this.getData()
+  },
+
+  updated () {
+    const widget = document.getElementById(this.widgetId)
+    const scale = widget.parentNode.parentNode.getElementsByClassName('scale_container')[0]
+    const scaleMin =  this.projectConfiguration.mapLegendMinColor
+    const scaleMax = this.projectConfiguration.mapLegendMaxColor
+
+    scale.style.background = 'linear-gradient(90deg, ' + scaleMin + ' 0%, ' + scaleMax + ' 100%)'
   }
 }
 

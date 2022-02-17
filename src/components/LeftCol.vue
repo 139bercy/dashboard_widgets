@@ -129,8 +129,6 @@ export default {
 
   created () {
     this.testEvolStyle()
-
-    console.log(this.isLine)
   }
 
 }
