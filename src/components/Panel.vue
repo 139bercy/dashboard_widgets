@@ -29,6 +29,7 @@
             <ChartMapPanel
               :onglet="onglet"
               :logo="logo" :alt-logo="altLogo"
+              :project-configuration="projectConfiguration"
               :line-chart-configuration="lineChartConfiguration"
               :bar-chart-configuration="barChartConfiguration"
               v-if="chartPanel">
@@ -101,6 +102,7 @@ export default {
     onglets: Array,
     logo: String,
     altLogo: String,
+    projectConfiguration: Object,
     lineChartConfiguration: Object,
     barChartConfiguration: Object
   },

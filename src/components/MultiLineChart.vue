@@ -79,6 +79,8 @@ export default {
 
     async getData () {
       let promises = [];
+      this.indicatorData = [];
+      this.indicators.sort((a, b) => a.Code_indicateur.localeCompare(b.Code_indicateur))
       this.indicators.forEach(_indicator => {
         let promise = store.dispatch('getData', _indicator.Code_indicateur).then(data => {
           this.indicatorData.push(data);
@@ -103,6 +105,7 @@ export default {
       const geocode = this.selectedGeoCode
 
       let geoObjects = []
+      self.indicatorData.sort((a, b) => a.code.localeCompare(b.code))
       this.indicatorData.forEach(_indicatorData => {
         let geoObject
         if (geolevel === 'France') {

@@ -76,6 +76,7 @@
             :min-geo-level="onglet.MinGeoLevel"
             :widget-title="onglet.Carte_titre"
             :widget-position="onglet.Carte"
+            :project-configuration="projectConfiguration"
             v-if="onglet.Carte && indicateur_data && this.indicateur_data[onglet.MinGeoLevel]">
         </MapChart>
       </div>
@@ -125,6 +126,7 @@ export default {
     onglet: Object,
     logo: String,
     altLogo: String,
+    projectConfiguration: Object,
     lineChartConfiguration: Object,
     barChartConfiguration: Object
   },
