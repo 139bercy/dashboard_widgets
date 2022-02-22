@@ -252,7 +252,7 @@ export default {
       };
 
       this.chart = new Chart(context, {
-        type: 'pie',
+        type: 'doughnut',
         data: {
             labels: self.labels,
             datasets: datasets
