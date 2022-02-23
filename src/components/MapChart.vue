@@ -81,8 +81,6 @@ export default {
       },
       scaleMin: 0,
       scaleMax: 0,
-      colorMin: this.mapChartConfiguration.data.colorMin,
-      colorMax: this.mapChartConfiguration.data.colorMax,
       units: [],
       chart: undefined,
       loading: true,
