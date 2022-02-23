@@ -32,6 +32,7 @@
               :project-configuration="projectConfiguration"
               :line-chart-configuration="lineChartConfiguration"
               :bar-chart-configuration="barChartConfiguration"
+              :map-chart-configuration="mapChartConfiguration"
               v-if="chartPanel">
             </ChartMapPanel>
             <MapPointPanel
@@ -104,7 +105,8 @@ export default {
     altLogo: String,
     projectConfiguration: Object,
     lineChartConfiguration: Object,
-    barChartConfiguration: Object
+    barChartConfiguration: Object,
+    mapChartConfiguration: Object
   },
   data() {
     return {

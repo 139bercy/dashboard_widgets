@@ -16,7 +16,8 @@
             :alt-logo="altLogo"
             :project-configuration="projectConfigurationContent"
             :line-chart-configuration="lineChartConfigurationContent"
-            :bar-chart-configuration="barChartConfigurationContent">
+            :bar-chart-configuration="barChartConfigurationContent"
+            :map-chart-configuration="mapChartConfigurationContent">
           </panel>
         </div>
 
@@ -50,7 +51,8 @@ export default {
     altLogo: String,
     projectConfiguration: String,
     lineChartConfiguration: String,
-    barChartConfiguration: String
+    barChartConfiguration: String,
+    mapChartConfiguration: String
   },
   data() {
     return {
@@ -58,7 +60,8 @@ export default {
       descriptionContent: '',
       projectConfigurationContent: {},
       lineChartConfigurationContent: {},
-      barChartConfigurationContent: {}
+      barChartConfigurationContent: {},
+      mapChartConfigurationContent: {}
     }
   },
   methods: {
@@ -103,6 +106,17 @@ export default {
         try {
           this.barChartConfigurationContent = JSON.parse(
             await fetch(this.barChartConfiguration)
+              .then(res => res.text())
+          )
+        } catch (e) {
+          console.error(e)
+        }
+      }
+      if (this.mapChartConfiguration!== undefined && this.mapChartConfiguration !== '') {
+        const self = this
+        try {
+          this.mapChartConfigurationContent = JSON.parse(
+            await fetch(this.mapChartConfiguration)
               .then(res => res.text())
           )
         } catch (e) {

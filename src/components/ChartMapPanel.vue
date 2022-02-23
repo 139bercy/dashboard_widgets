@@ -128,7 +128,8 @@ export default {
     altLogo: String,
     projectConfiguration: Object,
     lineChartConfiguration: Object,
-    barChartConfiguration: Object
+    barChartConfiguration: Object,
+    mapChartConfiguration: Object
   },
   data() {
     return {

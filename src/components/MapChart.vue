@@ -110,7 +110,8 @@ export default {
       type: Boolean,
       default: true
     },
-    minGeoLevel: String
+    minGeoLevel: String,
+    mapChartConfiguration: Object
   },
   computed: {
     selectedGeoLevel () {
