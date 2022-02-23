@@ -69,7 +69,7 @@ def convert_excel_to_json(path):
                 df_indicateur = df_onglet.iloc[indicateur]
                 dict_indicateur = {}
                 for col in indicateur_properties:
-                    if not pd.isna(df_indicateur[col]):
+                    if col in df_indicateur.keys() and not pd.isna(df_indicateur[col]):
                         dict_indicateur[col] = str(df_indicateur[col])
                 liste_indicateurs += [dict_indicateur]
             for col in onglet_properties:
