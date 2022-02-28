@@ -87,7 +87,6 @@ def convert_excel_to_json(path):
                     if col in ["Carte", "Graph", "Points", "Bar", "Box", 'Pie', 'Table', 'Info']:
                         value = int(df_onglet[col].iloc[0])
                         if isAfa:
-
                             if value == 0:
                                 dict_onglet[col] = False
                             else:
