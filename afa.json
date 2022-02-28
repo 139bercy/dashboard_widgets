@@ -8,8 +8,8 @@
         "titre_page_mesure": "Vers le site de l'Agence Française Anticorruption",
         "onglets": [
             {
-                "Carte": true,
-                "Graph": true,
+                "Carte": 1,
+                "Graph": 1,
                 "Bar": false,
                 "Box": false,
                 "Points": false,
@@ -27,8 +27,8 @@
                 ]
             },
             {
-                "Carte": true,
-                "Graph": true,
+                "Carte": 1,
+                "Graph": 1,
                 "Bar": false,
                 "Box": false,
                 "Points": false,
@@ -56,8 +56,8 @@
         "titre_page_mesure": "Vers le site de l'Agence Française Anticorruption",
         "onglets": [
             {
-                "Carte": true,
-                "Graph": true,
+                "Carte": 1,
+                "Graph": 1,
                 "Bar": false,
                 "Box": false,
                 "Points": false,
@@ -75,8 +75,8 @@
                 ]
             },
             {
-                "Carte": true,
-                "Graph": true,
+                "Carte": 1,
+                "Graph": 1,
                 "Bar": false,
                 "Box": false,
                 "Points": false,
@@ -105,7 +105,7 @@
         "onglets": [
             {
                 "Carte": false,
-                "Graph": true,
+                "Graph": 1,
                 "Bar": false,
                 "Box": false,
                 "Points": false,
@@ -134,7 +134,7 @@
         "onglets": [
             {
                 "Carte": false,
-                "Graph": true,
+                "Graph": 1,
                 "Bar": false,
                 "Box": false,
                 "Points": false,
@@ -163,7 +163,7 @@
         "onglets": [
             {
                 "Carte": false,
-                "Graph": true,
+                "Graph": 1,
                 "Bar": false,
                 "Box": false,
                 "Points": false,
@@ -192,7 +192,7 @@
         "onglets": [
             {
                 "Carte": false,
-                "Graph": true,
+                "Graph": 1,
                 "Bar": false,
                 "Box": false,
                 "Points": false,
@@ -221,7 +221,7 @@
         "onglets": [
             {
                 "Carte": false,
-                "Graph": true,
+                "Graph": 1,
                 "Bar": false,
                 "Box": false,
                 "Points": false,
@@ -240,7 +240,7 @@
             },
             {
                 "Carte": false,
-                "Graph": true,
+                "Graph": 1,
                 "Bar": false,
                 "Box": false,
                 "Points": false,
@@ -269,7 +269,7 @@
         "onglets": [
             {
                 "Carte": false,
-                "Graph": true,
+                "Graph": 1,
                 "Bar": false,
                 "Box": false,
                 "Points": false,
@@ -288,7 +288,7 @@
             },
             {
                 "Carte": false,
-                "Graph": true,
+                "Graph": 1,
                 "Bar": false,
                 "Box": false,
                 "Points": false,
@@ -319,7 +319,7 @@
                 "Carte": false,
                 "Graph": false,
                 "Bar": false,
-                "Box": true,
+                "Box": 1,
                 "Points": false,
                 "MinGeoLevel": "departements",
                 "Description_mesure": "Les atteintes à la probité  sont definies par : la corruption, le trafics d’influence, l’ingérence,  la prise illégale d’intérêt, le détournement de biens publics et le conflit d’intérêts.",
@@ -367,7 +367,7 @@
         "onglets": [
             {
                 "Carte": false,
-                "Graph": true,
+                "Graph": 1,
                 "Bar": false,
                 "Box": false,
                 "Points": false,
@@ -386,7 +386,7 @@
             },
             {
                 "Carte": false,
-                "Graph": true,
+                "Graph": 1,
                 "Bar": false,
                 "Box": false,
                 "Points": false,
@@ -405,7 +405,7 @@
             },
             {
                 "Carte": false,
-                "Graph": true,
+                "Graph": 1,
                 "Bar": false,
                 "Box": false,
                 "Points": false,
@@ -436,7 +436,7 @@
                 "Carte": false,
                 "Graph": false,
                 "Bar": false,
-                "Box": true,
+                "Box": 1,
                 "Points": false,
                 "MinGeoLevel": "departements",
                 "Description_mesure": "Les atteintes à la probité  sont definies par : la corruption, le trafics d’influence, l’ingérence,  la prise illégale d’intérêt, le détournement de biens publics et le conflit d’intérêts.",

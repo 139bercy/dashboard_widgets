@@ -1,7 +1,4 @@
-.full-page-lg.only-one-element {
-  height: 70vh !important;
-  max-height: 70vh !important;
-}
+
 .page-content {
   --boxshadow: var(--bf500);
   --boxcountour: var(--bf500-plain);
