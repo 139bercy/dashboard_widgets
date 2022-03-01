@@ -124,6 +124,7 @@ export default {
     Titre_panneau: String,
     Lien_page_mesure: String,
     onglet: Object,
+    legends: Array,
     logo: String,
     altLogo: String,
     projectConfiguration: Object,
@@ -152,6 +153,7 @@ export default {
         names: null,
         evolcodes: null,
         evolvalues: null,
+        legends: [],
         isMap: false,
         isGraph: false,
         isBox: false,
@@ -371,6 +373,15 @@ export default {
       this.labels = []
       this.dataset = []
       this.dataset2 = []
+
+      if ((this.onglet.Pie && this.onglet.Pie_legende) || (!this.onglet.Pie && this.onglet.Avec_nom_indicateur)) {
+        self.onglet.indicateurs.sort((a, b) => a.Code_indicateur.localeCompare(b.Code_indicateur))
+        self.onglet.indicateurs.forEach(_indicator => {
+          if (_indicator.Nom_indicateur) {
+            this.leftColProps.legends.push(_indicator.Nom_indicateur)
+          }
+        })
+      }
 
       geoObject.values.forEach(function (d) {
         self.labels.push(self.convertDateToHuman(d.date))

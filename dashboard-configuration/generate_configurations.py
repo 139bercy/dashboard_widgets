@@ -39,6 +39,15 @@ def convert_excel_to_json(path):
         "Unité_GP",
         "Unité_Evol",
     ]
+    unique_bool_properties = [
+        'Graph_avec_valeurs',
+        'Pie_legende',
+        'Avec_nom_indicateur'
+    ]
+    unique_text_properties = [
+        'Pie_titre',
+        'Graph_titre'
+    ]
     isAfa = "afa.csv" in path
     if isAfa:
         onglet_properties.extend([
@@ -75,10 +84,9 @@ def convert_excel_to_json(path):
             for col in onglet_properties:
                 # ne pas intégrer les valeurs null ou autre
                 if col in df_onglet and not pd.isna(df_onglet[col].iloc[0]):
-                    dict_onglet[col] = str(df_onglet[col].iloc[0])
-                    if col in ["Carte", "Graph", "Points", "Bar", "Box", 'Pie', 'Table', 'Info', 'Graph_avec_valeurs', 'Pie_legende']:
+                    if col in ["Carte", "Graph", "Points", "Bar", "Box", 'Pie', 'Table', 'Info']:
                         value = int(df_onglet[col].iloc[0])
-                        if isAfa and col not in ['Graph_avec_valeurs', 'Pie_legende']:
+                        if isAfa:
                             if value == 0:
                                 dict_onglet[col] = False
                             else:
@@ -88,6 +96,19 @@ def convert_excel_to_json(path):
                                 dict_onglet[col] = True
                             else:
                                 dict_onglet[col] = False
+                    elif not col in unique_text_properties and col not in unique_bool_properties:
+                        dict_onglet[col] = str(df_onglet[col].iloc[0])
+
+            for property in unique_text_properties:
+                if property in df_onglet.keys():
+                    property_values = df_onglet[df_onglet[property].notnull()][property].sort_index()
+                    if not property_values.empty:
+                        dict_onglet[property] = str(property_values.iloc[0])
+
+            for property in unique_bool_properties:
+                if property in df_onglet.keys():
+                    dict_onglet[property] = bool(df_onglet[property].any())
+
             dict_onglet["indicateurs"] = liste_indicateurs
             liste_onglets += [dict_onglet]
         for col in panneau_properties:

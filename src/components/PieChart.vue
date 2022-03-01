@@ -226,7 +226,7 @@ export default {
 
       this.options = {
         legend: {
-          display: this.withLegend,
+          display: false,
           position: 'left',
           labels: {
             usePointStyle: true

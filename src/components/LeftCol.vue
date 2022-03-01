@@ -14,8 +14,8 @@
           </p>
           <p class="l_box_title fr-text--xs fr-mb-1w">Mise à jour : {{date}}</p>
         </div>
-        <div class="sep fr-my-4w fr-my-md-3w" v-if="isGraph && currentValues"></div>
-        <div data-box="number" v-if="isGraph && currentValues">
+        <div class="sep fr-my-4w fr-my-md-3w" v-if="isGraph && currentValues && (!legends || !legends.length)"></div>
+        <div data-box="number" v-if="isGraph && currentValues && (!legends || !legends.length)">
           <div class="indicateur_info" :class="i>0 ? 'fr-mt-2w' : ''" v-for="(n,i) in names" :key="n + i">
             <p class="fr-text--sm fr-text--bold fr-mt-0 fr-mb-1w">
               <span class="legende_dot" :class="{'dot-blue': i === 0, 'dot-green': i === 1}"></span>
@@ -37,6 +37,14 @@
             </div>
           </div>
         </div>
+        
+        <div class="sep fr-my-4w fr-my-md-2w" v-if="legends && legends.length"></div>
+        <ul class="chart-legend" v-if="legends && legends.length">
+          <li v-for="(legend, index) in legends" :key="legend">
+            <div class="bullet" :style="backgroundColor(index)"></div>
+            {{ legend }}
+            </li>
+        </ul>
 
         <div v-if="(typeof isMap == 'boolean' && isMap) || (typeof isMap == 'number' && isMap > 0)" class="sep fr-my-4w fr-my-md-3w"></div>
         <div v-else class="sep-viz fr-my-4w fr-my-md-3w"></div>
@@ -52,6 +60,7 @@
 </template>
 
 <script>
+import store from '@/store'
 import { mixin } from '@/utils.js'
 export default {
   name: 'LeftCol',
@@ -74,6 +83,7 @@ export default {
     names: Array,
     evolcodes: Array,
     evolvalues: Array,
+    legends: Array,
     isMap: [Number, Boolean],
     isGraph: Boolean,
     isBox: Boolean,
@@ -86,6 +96,13 @@ export default {
   computed: {
   },
   methods: {
+    
+    backgroundColor(index) {
+      return {
+        background: store.state.colors[index]
+      }
+    },
+
     testEvolStyle () {
       const self = this
       if (this.names) {
@@ -136,8 +153,27 @@ export default {
 
 <style scoped lang="scss">
   @import "../../css/overload-fonts.css";
+
+  .chart-legend {
+    li {
+      list-style-type: none;
+      font-size: 13px;
+      &::before {
+        content: '';
+      }
+      .bullet {
+        display: inline-block;
+        border-radius: 50%;
+        margin-right: 3px;
+        width: 14px;
+        height: 14px;
+        background: black;
+      }
+    }
+  }
+
   .dot-blue {
-    background-color: #000091;
+    background-color: #2185d0;
     width: 1rem;
     height: 1rem;
     min-width: 1rem;
@@ -146,7 +182,7 @@ export default {
     margin-top: 0.25rem;
   }
   .dot-green {
-    background-color: #007c3a;
+    background-color: #db2828;
     width: 1rem;
     height: 1rem;
     min-width: 1rem;
