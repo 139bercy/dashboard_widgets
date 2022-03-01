@@ -158,6 +158,7 @@ export default {
     li {
       list-style-type: none;
       font-size: 13px;
+      margin-bottom: 4px;
       &::before {
         content: '';
       }
