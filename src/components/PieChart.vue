@@ -196,7 +196,6 @@ export default {
       const plugins = {
         labels: [
           {
-            render: 'percentage',
             position: 'border',
             textShadow: true,
             shadowBlur: 5,
@@ -206,7 +205,15 @@ export default {
             fontStyle: 'normal',
             fontColor: '#fff',
             precision: 1,
-            showActualPercentages: false
+            showActualPercentages: false,
+            render: (args) => {
+              if(args.value < 5){
+                return ''
+              }
+              else{
+                return args.value + ' %'
+              }
+            }
           }
         ]
       }
