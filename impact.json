@@ -16,22 +16,6 @@
                         "Titre_indicateur": "Nombre d’entreprise de ce type"
                     }
                 ]
-            },
-            {
-                "Carte": false,
-                "Graph": false,
-                "Bar": false,
-                "Box": false,
-                "Points": true,
-                "MinGeoLevel": "departements",
-                "Titre_onglet": "Secteur d’activité",
-                "indicateurs": [
-                    {
-                        "Code_indicateur": "INDUSTRIE MANUFACTURIÈRE|ACTIVITÉS SPÉCIALISÉES, SCIENTIFIQUES ET TECHNIQUES|TRANSPORTS ET ENTREPOSAGE,COMMERCE |ADMINISTRATION PUBLIQUE |INFORMATION ET COMMUNICATION,CONSTRUCTION|ACTIVITÉS FINANCIÈRES ET D'ASSURANCE|AUTRES ACTIVITÉS DE SERVICES|ACTIVITÉS DE SERVICES ADMINISTRATIFS ET DE SOUTIEN,ENSEIGNEMENT|ARTS, SPECTACLES ET ACTIVITÉS RÉCRÉATIVES|SANTÉ HUMAINE ET ACTION SOCIALE|PRODUCTION ET DISTRIBUTION D'EAU ; ASSAINISSEMENT, GESTION DES DÉCHETS ET DÉPOLLUTION|ACTIVITÉS IMMOBILIÈRES|HÉBERGEMENT ET RESTAURATION|AGRICULTURE, SYLVICULTURE ET PÊCHE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Nombre d’entreprise dans ce secteur d’activité"
-                    }
-                ]
             }
         ]
     }
