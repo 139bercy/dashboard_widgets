@@ -343,6 +343,84 @@
         ]
     },
     {
+        "Titre_panneau": "Aide à la relance de la construction durable (maires densificateurs)",
+        "Volet": "Volet Écologie",
+        "source": "Ministère de l’Economie, des Finances et de la Relance",
+        "accordéon": "En savoir plus sur la mesure",
+        "titre_page_mesure": " Vers des fichiers d'open-data",
+        "onglets": [
+            {
+                "Carte": true,
+                "Graph": true,
+                "Bar": false,
+                "Box": false,
+                "Points": false,
+                "MinGeoLevel": "departements",
+                "Titre_onglet": "Nombre de communes bénéficiant de l'aide à la densification",
+                "indicateurs": [
+                    {
+                        "Code_indicateur": "AMD1",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Nombre de communes bénéficiant de l'aide à la densification",
+                        "Unité_GP": "communes"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Titre_panneau": "Réhabilitation Friches (urbaines et sites pollués)",
+        "Volet": "Volet Écologie",
+        "source": "Ministère de l’Economie, des Finances et de la Relance",
+        "accordéon": "En savoir plus sur la mesure",
+        "titre_page_mesure": " Vers des fichiers d'open-data",
+        "onglets": [
+            {
+                "Carte": true,
+                "Graph": true,
+                "Bar": false,
+                "Box": false,
+                "Points": false,
+                "MinGeoLevel": "departements",
+                "Titre_onglet": "Nombre de sites concernés",
+                "indicateurs": [
+                    {
+                        "Code_indicateur": "FFR1",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Nombre de sites concernés",
+                        "Unité_GP": "sites"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Titre_panneau": "Rénovation énergétique et réhabilitation lourde des logements sociaux",
+        "Volet": "Volet Écologie",
+        "source": "Ministère de l’Economie, des Finances et de la Relance",
+        "accordéon": "En savoir plus sur la mesure",
+        "titre_page_mesure": " Vers des fichiers d'open-data",
+        "onglets": [
+            {
+                "Carte": true,
+                "Graph": true,
+                "Bar": false,
+                "Box": false,
+                "Points": false,
+                "MinGeoLevel": "departements",
+                "Titre_onglet": "Nombre de logements subventionnés",
+                "indicateurs": [
+                    {
+                        "Code_indicateur": "RER1",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Nombre de logements subventionnés",
+                        "Unité_GP": "logements"
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "Lien_page_mesure": "https://www.bpifrance.fr/A-la-une/Appels-a-projets-concours/Appel-a-projets-Plan-de-relance-pour-l-industrie-Secteurs-strategiques-volet-national-50697",
         "Titre_panneau": "Soutien aux projets industriels dans 5 secteurs critiques",
         "Volet": "Volet Compétitivité",
@@ -362,6 +440,12 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "SAC2",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Nombre d’entreprises bénéficiaires",
+                        "Unité_GP": "entreprises"
+                    },
+                    {
+                        "Code_indicateur": "PIT2",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre d’entreprises bénéficiaires",
                         "Unité_GP": "entreprises"
@@ -388,31 +472,12 @@
         ]
     },
     {
-        "Lien_page_mesure": "http://relance.projets-territoriaux.bpifrance.fr/",
         "Titre_panneau": "Soutien aux projets industriels dans les territoires",
         "Volet": "Volet Compétitivité",
         "source": "Ministère de l’Economie, des Finances et de la Relance",
         "accordéon": "En savoir plus sur la mesure",
         "titre_page_mesure": " Vers des fichiers d'open-data",
         "onglets": [
-            {
-                "Carte": true,
-                "Graph": true,
-                "Bar": false,
-                "Box": false,
-                "Points": false,
-                "MinGeoLevel": "departements",
-                "Description_mesure": "La mesure de relocalisation par le soutien à l’investissement industriel dans les territoires vise à accélérer des projets structurants, prêts à être engagés rapidement, afin de favoriser la relance de l’industrie française et la compétitivité des entreprises ainsi que de contribuer à la transition écologique et à la relocalisation des chaînes de production en France. Il prend la forme d’un fonds, de subventions, du volontariat territorial en entreprise ainsi que de conditions d’accès privilégiées aux accélérateurs de Bpifrance. ",
-                "Titre_onglet": "Entreprises bénéficiaires",
-                "indicateurs": [
-                    {
-                        "Code_indicateur": "PIT2",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Nombre d’entreprises bénéficiaires",
-                        "Unité_GP": "entreprises"
-                    }
-                ]
-            },
             {
                 "Carte": true,
                 "Graph": true,
@@ -601,6 +666,84 @@
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Montant estimé de cette baisse des impôts de production ",
                         "Unité_GP": "euros"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Titre_panneau": "Plan de soutien aux cantines scolaires des petites communes",
+        "Volet": "Volet Compétitivité",
+        "source": "Ministère de l’Economie, des Finances et de la Relance",
+        "accordéon": "En savoir plus sur la mesure",
+        "titre_page_mesure": " Vers des fichiers d'open-data",
+        "onglets": [
+            {
+                "Carte": true,
+                "Graph": true,
+                "Bar": false,
+                "Box": false,
+                "Points": false,
+                "MinGeoLevel": "departements",
+                "Titre_onglet": "Nombre de communes soutenues",
+                "indicateurs": [
+                    {
+                        "Code_indicateur": "TSA1",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Nombre de communes soutenues",
+                        "Unité_GP": "communes"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Titre_panneau": "Soutien au spectacle vivant",
+        "Volet": "Volet Compétitivité",
+        "source": "Ministère de l’Economie, des Finances et de la Relance",
+        "accordéon": "En savoir plus sur la mesure",
+        "titre_page_mesure": " Vers des fichiers d'open-data",
+        "onglets": [
+            {
+                "Carte": true,
+                "Graph": true,
+                "Bar": false,
+                "Box": false,
+                "Points": false,
+                "MinGeoLevel": "departements",
+                "Titre_onglet": "Nombre de structures du spectacle vivant aidées",
+                "indicateurs": [
+                    {
+                        "Code_indicateur": "SSV1",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Nombre de structures du spectacle vivant aidées",
+                        "Unité_GP": "structures"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Titre_panneau": "Soutien aux filières culturelles (cinéma, audiovisuel, numérique, livre)",
+        "Volet": "Volet Compétitivité",
+        "source": "Ministère de l’Economie, des Finances et de la Relance",
+        "accordéon": "En savoir plus sur la mesure",
+        "titre_page_mesure": " Vers des fichiers d'open-data",
+        "onglets": [
+            {
+                "Carte": true,
+                "Graph": true,
+                "Bar": false,
+                "Box": false,
+                "Points": false,
+                "MinGeoLevel": "departements",
+                "Titre_onglet": "Nombre d'entreprises aidées dans les secteurs du cinéma, de l'audiovisuel, du numérique et du livre",
+                "indicateurs": [
+                    {
+                        "Code_indicateur": "SFC1",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Nombre d'entreprises aidées dans les secteurs du cinéma, de l'audiovisuel, du numérique et du livre",
+                        "Unité_GP": "entreprises"
                     }
                 ]
             }
