@@ -421,6 +421,58 @@
         ]
     },
     {
+        "Titre_panneau": "Plan de soutien aux cantines scolaires des petites communes",
+        "Volet": "Volet Écologie",
+        "source": "Ministère de l’Economie, des Finances et de la Relance",
+        "accordéon": "En savoir plus sur la mesure",
+        "titre_page_mesure": " Vers des fichiers d'open-data",
+        "onglets": [
+            {
+                "Carte": true,
+                "Graph": true,
+                "Bar": false,
+                "Box": false,
+                "Points": false,
+                "MinGeoLevel": "departements",
+                "Titre_onglet": "Nombre de communes soutenues",
+                "indicateurs": [
+                    {
+                        "Code_indicateur": "TSA1",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Nombre de communes soutenues",
+                        "Unité_GP": "communes"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Titre_panneau": "Soutien aux petites lignes ferroviaires",
+        "Volet": "Volet Écologie",
+        "source": "Ministère de l’Economie, des Finances et de la Relance",
+        "accordéon": "En savoir plus sur la mesure",
+        "titre_page_mesure": " Vers des fichiers d'open-data",
+        "onglets": [
+            {
+                "Carte": true,
+                "Graph": true,
+                "Bar": false,
+                "Box": false,
+                "Points": false,
+                "MinGeoLevel": "regions",
+                "Titre_onglet": "Km de petites lignes dont les travaux sont soutenus",
+                "indicateurs": [
+                    {
+                        "Code_indicateur": "SPL1",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Km de petites lignes dont les travaux sont soutenus",
+                        "Unité_GP": "Km"
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "Lien_page_mesure": "https://www.bpifrance.fr/A-la-une/Appels-a-projets-concours/Appel-a-projets-Plan-de-relance-pour-l-industrie-Secteurs-strategiques-volet-national-50697",
         "Titre_panneau": "Soutien aux projets industriels dans 5 secteurs critiques",
         "Volet": "Volet Compétitivité",
@@ -672,32 +724,6 @@
         ]
     },
     {
-        "Titre_panneau": "Plan de soutien aux cantines scolaires des petites communes",
-        "Volet": "Volet Compétitivité",
-        "source": "Ministère de l’Economie, des Finances et de la Relance",
-        "accordéon": "En savoir plus sur la mesure",
-        "titre_page_mesure": " Vers des fichiers d'open-data",
-        "onglets": [
-            {
-                "Carte": true,
-                "Graph": true,
-                "Bar": false,
-                "Box": false,
-                "Points": false,
-                "MinGeoLevel": "departements",
-                "Titre_onglet": "Nombre de communes soutenues",
-                "indicateurs": [
-                    {
-                        "Code_indicateur": "TSA1",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Nombre de communes soutenues",
-                        "Unité_GP": "communes"
-                    }
-                ]
-            }
-        ]
-    },
-    {
         "Titre_panneau": "Soutien au spectacle vivant",
         "Volet": "Volet Compétitivité",
         "source": "Ministère de l’Economie, des Finances et de la Relance",
@@ -744,6 +770,32 @@
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre d'entreprises aidées dans les secteurs du cinéma, de l'audiovisuel, du numérique et du livre",
                         "Unité_GP": "entreprises"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Titre_panneau": "Assurance prospection à l’export",
+        "Volet": "Volet Compétitivité",
+        "source": "Ministère de l’Economie, des Finances et de la Relance",
+        "accordéon": "En savoir plus sur la mesure",
+        "titre_page_mesure": " Vers des fichiers d'open-data",
+        "onglets": [
+            {
+                "Carte": true,
+                "Graph": true,
+                "Bar": false,
+                "Box": false,
+                "Points": false,
+                "MinGeoLevel": "departements",
+                "Titre_onglet": "Nombre de TPE,PME,ETI bénéficiaires",
+                "indicateurs": [
+                    {
+                        "Code_indicateur": "APR1",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Nombre de TPE,PME,ETI bénéficiaires",
+                        "Unité_GP": "TPE,PME,ETI"
                     }
                 ]
             }
