@@ -24,7 +24,7 @@ export default new Vuex.Store({
         return state.promises[indicator]
       }
 
-      const url = `https://data.economie.gouv.fr/api/v2/catalog/datasets/${state.dataset}/exports/json?limit=-1&pretty=false&where=code%20LIKE%20'${indicator}'`
+      const url = `https://data.economie.gouv.fr/api/v2/catalog/datasets/${state.dataset}/exports/json?limit=-1&pretty=false&where=code%20in%20("${indicator}")`
       // const url = `https://data.economie.gouv.fr/api/v2/catalog/datasets/plan-de-relance-tableau-de-bord/exports/json?where=code%20LIKE%20'${indicator}'&limit=-1&pretty=false`
       const promise = fetch(url).then(res => {
         return res.json()
