@@ -63,9 +63,7 @@
         </button>
       </h3>
       <div class="fr-col-12" v-show="accordionOpened">
-        <p class="description-mesure fr-mb-0 fr-text--sm">
-          {{ onglets[0].Description_mesure }}
-        </p>
+        <p  class="description-mesure fr-mb-0 fr-text--sm" style="white-space:pre-wrap;">{{ onglets[0].Description_mesure }}</p>
         <p class="fr-text--xs">Source :
           {{source}}.
           <a title="Sources et références" v-bind:href="Lien_page_mesure"
