@@ -61,6 +61,8 @@ export const hexToRgb = function (hex) {
   } : null;
 }
 
+export const unescapeNewLine = (str) => str.replace(/\\n/g, '\n')
+
 String.prototype.capitalize = function() {
   return this.charAt(0).toUpperCase() + this.slice(1)
 }

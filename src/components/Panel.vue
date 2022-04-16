@@ -63,7 +63,7 @@
         </button>
       </h3>
       <div class="fr-col-12" v-show="accordionOpened">
-        <p  class="description-mesure fr-mb-0 fr-text--sm" style="white-space:pre-wrap;">{{ onglets[0].Description_mesure }}</p>
+        <p  class="description-mesure fr-mb-0 fr-text--sm" style="white-space:pre-wrap;">{{ unescapedDescription }}</p>
         <p class="fr-text--xs">Source :
           {{source}}.
           <a title="Sources et références" v-bind:href="Lien_page_mesure"
@@ -78,7 +78,7 @@
 
 <script>
 
-import { mixin } from '@/utils.js'
+import { mixin, unescapeNewLine } from '@/utils.js'
 import ChartMapPanel from './ChartMapPanel'
 import MapPointPanel from './MapPointPanel.vue'
 import DataBoxes from './DataBoxes.vue'
@@ -126,10 +126,13 @@ export default {
     },
     points() {
       return this.currentOnglet.Points
+    },
+    unescapedDescription() {
+      return unescapeNewLine(this.currentOnglet.Description_mesure)
     }
   },
   methods: {}
-}
+  }
 
 </script>
 
