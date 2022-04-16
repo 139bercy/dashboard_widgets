@@ -209,7 +209,7 @@ export default {
                 maxRotation: 0,
                 minRotation: 0,
                 callback: function (value) {
-                  return value.toString().substring(3, 5) + '/' + value.toString().substring(8, 10)
+                  return value.toString().substring(3, 5) + '/' + value.toString().substring(6, 10)
                 }
               }
             }],
