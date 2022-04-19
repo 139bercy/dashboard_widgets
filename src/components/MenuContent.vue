@@ -57,6 +57,7 @@
                 {{ panneau.Titre_panneau }}
               </li>
             </ul>
+            <hr v-if="isAfa"/>
           </li>
         </ul>
       </div>
@@ -76,6 +77,7 @@ export default {
   mixins: [mixin],
   props: {
     panneaux: Array,
+    isAfa: Boolean
   },
   data() {
     return {
@@ -157,5 +159,13 @@ export default {
 .fr-sidemenu__item--active.fr-sidemenu__link {
   color: var(--bf500);
   box-shadow: inset 1px 0 var(--boxshadow);
+}
+
+#fr-sidemenu-wrapper .fr-sidemenu__list hr {
+  height: 3px;
+  background: var(--bf500)
+}
+#fr-sidemenu-wrapper .fr-sidemenu__list:last-child hr {
+  display: none;
 }
 </style>
