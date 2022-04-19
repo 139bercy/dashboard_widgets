@@ -35,6 +35,7 @@ export default {
     return {
       indicatorData: [],
       labels: [],
+      indicatorNames: [],
       dataset: [],
       widgetId: '',
       chartId: '',
@@ -116,8 +117,10 @@ export default {
         .forEach(_unit => this.units.push(_unit))
 
       self.labels = []
+      self.indicatorsNames = []
       self.indicators.sort((a, b) => a.Code_indicateur.localeCompare(b.Code_indicateur))
       self.indicators.forEach(_indicator => {
+        self.indicatorsNames.push(_indicator.Titre_indicateur)
         self.labels.push(_indicator.Nom_indicateur)
       })
 
@@ -247,7 +250,14 @@ export default {
               return data['labels'][tooltipItem[0]['index']];
             },
             label: function(tooltipItem, data) {
-              return ' ' + data['datasets'][0]['data'][tooltipItem['index']] + '% ' + self.units[tooltipItem['index']];
+              const indicatorIndex = tooltipItem['index'];
+              const indicatorValue = data['datasets'][0]['data'][indicatorIndex] + '%';
+              let indicatorUnit = self.indicatorsNames[indicatorIndex]
+                ? self.indicatorsNames[indicatorIndex]
+                : self.units[indicatorIndex]
+              return indicatorUnit.includes('%value%')
+                ? indicatorUnit.replace('%value%', indicatorValue)
+                : indicatorValue  + ' ' + indicatorUnit
             },
             afterLabel: function(tooltipItem, data) {
             }

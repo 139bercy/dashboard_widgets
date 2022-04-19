@@ -9,7 +9,7 @@
           <div class="tooltip_header">{{ convertDateToHuman(tooltip.date) }}</div>
           <div class="tooltip_body">
             <div class="tooltip_place">{{ tooltip.place }}</div>
-            <div class="tooltip_value">{{ convertStringToLocaleNumber(tooltip.value) }} {{ units[0] }}</div>
+            <div class="tooltip_value">{{ tooltip.value }}</div>
           </div>
         </div>
         <div class="no_select" :class="{'france_container': DOMTOMBottom, 'fr-col-9' : !DOMTOMBottom}">
@@ -91,7 +91,7 @@ export default {
         top: '0px',
         left: '0px',
         display: false,
-        value: 0,
+        value: '',
         date: '',
         place: ''
       }
@@ -100,6 +100,7 @@ export default {
   props: {
     projectConfiguration: Object,
     indicateur: String,
+    indicatorName: String,
     widgetTitle: String,
     widgetPosition: [Boolean, Number],
     leftCol: {
@@ -281,7 +282,14 @@ export default {
         return obj.code_level === location.value
       })
 
-      this.tooltip.value = locationData ? locationData.last_value : 0
+      let indicatorValue = this.convertStringToLocaleNumber(locationData ? locationData.last_value : 0)
+      let indicatorUnit = this.indicatorName
+        ? this.indicatorName
+        : this.units[0]
+
+      this.tooltip.value = indicatorUnit.includes('%value%')
+        ? indicatorUnit.replace('%value%', indicatorValue)
+        : indicatorValue + ' ' + indicatorUnit
       this.tooltip.date = locationData ? locationData.last_date : new Date()
       this.tooltip.place = location.label
       this.tooltip.top = (e.target.getBoundingClientRect().top - 75) + 'px'

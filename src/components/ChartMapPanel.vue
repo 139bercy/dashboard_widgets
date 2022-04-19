@@ -71,6 +71,7 @@
         <MapChart
             class="chart-container fr-col-12"
             :indicateur="indicateurCode1"
+            :indicator-name="indicateurName1"
             :left-col="false"
             :DOMTOMBottom="true"
             :min-geo-level="onglet.MinGeoLevel"
