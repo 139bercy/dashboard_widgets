@@ -6,7 +6,7 @@
       <div class="" :class="{'map fr-col-12': DOMTOMBottom, 'm-lg': leftCol, 'fr-grid-row': !DOMTOMBottom}">
       <h4 v-if="widgetTitle" class="chart-title">{{widgetTitle}}</h4>
         <div class="map_tooltip" v-if="tooltip.display" :style="{top:tooltip.top,left:tooltip.left}">
-          <div class="tooltip_header">{{ convertDateToHuman(tooltip.date) }}</div>
+          <div v-if="tooltip.date" class="tooltip_header">{{ tooltip.date }}</div>
           <div class="tooltip_body">
             <div class="tooltip_place">{{ tooltip.place }}</div>
             <div class="tooltip_value">{{ tooltip.value }}</div>
@@ -50,7 +50,7 @@ import LeftCol from '@/components/LeftCol'
 import maps from '@/components/maps'
 import * as d3 from 'd3-scale'
 import { isMobile } from 'mobile-device-detect'
-import { mixin } from '@/utils.js'
+import { mixin, average } from '@/utils.js'
 
 export default {
   name: 'MapChart',
@@ -101,6 +101,7 @@ export default {
     projectConfiguration: Object,
     indicateur: String,
     indicatorName: String,
+    withAverage: Boolean,
     widgetTitle: String,
     widgetPosition: [Boolean, Number],
     leftCol: {
@@ -208,8 +209,12 @@ export default {
       this.leftColProps.evolvalues.push(geoObject.evol_percentage)
 
       const values = []
-      this.indicateur_data[this.definedMinGeoLevel].forEach(function (d) {
-        values.push(parseInt(d.last_value))
+      this.indicateur_data[this.definedMinGeoLevel].forEach(function (data) {
+        const value = self.withAverage
+              ? average(data.values.map(_value => _value.value))
+              : data.last_value
+
+        values.push(parseInt(value))
       })
 
       this.scaleMin = Math.min.apply(null, values)
@@ -233,15 +238,19 @@ export default {
         widget
           .querySelectorAll("[data-" + locationSelector + "='" + location.value + "']")
           .forEach(function(locationObject) {
-            const value = self.indicateur_data[self.definedMinGeoLevel].find(function (v) {
+            const data = self.indicateur_data[self.definedMinGeoLevel].find(function (v) {
               return v.code_level === location.value
             })
+
+            const value = self.withAverage
+              ? average(data.values.map(_value => _value.value))
+              : data.last_value
 
             if (value && selectedLevel === 'France'
               || (isRegion && isRegionSelection && location.value === selectedCode)
               || (isDepartment && isDepartmentSelection && location.value === selectedCode)
               || (isDepartment && isRegionSelection && location.region_value === selectedCode)) {
-                locationObject.setAttribute('fill', color(value.last_value))
+                locationObject.setAttribute('fill', color(value))
             }
             else {
               locationObject.setAttribute('fill', 'rgba(247, 237, 211, 0.72)')
@@ -270,7 +279,6 @@ export default {
       if (isMobile) return
 
       const level = this.definedMinGeoLevel
-
       const locationId = level == 'departements'
         ? e.target.dataset.department
         : e.target.dataset.region
@@ -282,7 +290,9 @@ export default {
         return obj.code_level === location.value
       })
 
-      let indicatorValue = this.convertStringToLocaleNumber(locationData ? locationData.last_value : 0)
+      let indicatorValue = this.withAverage
+        ? locationData ? average(locationData.values.map(_value => _value.value)) : 0
+        : this.convertStringToLocaleNumber(locationData ? locationData.last_value : 0)
       let indicatorUnit = this.indicatorName
         ? this.indicatorName
         : this.units[0]
@@ -290,7 +300,9 @@ export default {
       this.tooltip.value = indicatorUnit.includes('%value%')
         ? indicatorUnit.replace('%value%', indicatorValue)
         : indicatorValue + ' ' + indicatorUnit
-      this.tooltip.date = locationData ? locationData.last_date : new Date()
+      this.tooltip.date = this.withAverage
+        ? ''
+        : this.convertDateToHuman(locationData ? locationData.last_date : new Date())
       this.tooltip.place = location.label
       this.tooltip.top = (e.target.getBoundingClientRect().top - 75) + 'px'
       this.tooltip.left = (e.target.getBoundingClientRect().left + 15) + 'px'

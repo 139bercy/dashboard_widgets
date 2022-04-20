@@ -24,7 +24,7 @@ import Chart from 'chart.js'
 import 'chartjs-plugin-colorschemes'
 import 'chartjs-plugin-labels'
 import LeftCol from '@/components/LeftCol'
-import { mixin } from '@/utils.js'
+import { mixin, average } from '@/utils.js'
 export default {
   name: 'PieChart',
   mixins: [mixin],
@@ -60,6 +60,7 @@ export default {
   },
   props: {
     indicators: [],
+    withAverage: Boolean,
     withLegend: Boolean,
     widgetTitle: String,
     widgetPosition: [Boolean, Number],
@@ -107,7 +108,7 @@ export default {
     updateData () {
 
       const self = this
-
+      
       const geolevel = this.selectedGeoLevel
       const geocode = this.selectedGeoCode
 
@@ -127,7 +128,11 @@ export default {
       self.dataset = []
       self.indicatorData.forEach(_indicatorData => {
         const geoObject = this.getGeoObject(geolevel, geocode, _indicatorData)
-        self.dataset.push(geoObject.values.at(-1))
+        const value = self.withAverage
+          ? average(geoObject.values.map(_value => _value.value))
+          : geoObject.values.at(-1).value
+
+        self.dataset.push(value)
       })
     },
 
@@ -186,8 +191,8 @@ export default {
       const context = document.getElementById(self.chartId).getContext('2d')
 
       let values = [];
-      const total = this.dataset.map(_item => _item.value).reduce((a, b) => a + b, 0);
-      this.dataset.forEach(_item => values.push((_item.value / total * 100).toFixed(1)));         
+      const total = this.dataset.reduce((a, b) => a + b, 0);
+      this.dataset.forEach(_item => values.push((_item / total * 100).toFixed(1)));
 
       const datasets = [{
         data: values,
