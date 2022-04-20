@@ -7,18 +7,36 @@
       </div>
       <div class="fr-col-12 fr-col-md-7 fr-col-lg-7 fr-ml-md-6w fr-mb-6w">
         <div v-html="descriptionContent"></div>
-
-        <div v-for="(panneau, index) in panneaux" :key="index">
-          <panel
-            v-bind:index="index + ''"
-            v-bind="panneau"
-            :logo="logo"
-            :alt-logo="altLogo"
-            :project-configuration="projectConfigurationContent"
-            :line-chart-configuration="lineChartConfigurationContent"
-            :bar-chart-configuration="barChartConfigurationContent"
-            :map-chart-configuration="mapChartConfigurationContent">
-          </panel>
+        <div v-if="isAfa">
+          <div v-for="sectionName in pannelsBySection.keys()" :key="sectionName" class="section">
+            <div v-for="(panel, index) in pannelsBySection.get(sectionName)" :key="index">
+                <panel
+                  v-bind:index="index + ''"
+                  v-bind="panel"
+                  :logo="logo"
+                  :alt-logo="altLogo"
+                  :project-configuration="projectConfigurationContent"
+                  :line-chart-configuration="lineChartConfigurationContent"
+                  :bar-chart-configuration="barChartConfigurationContent"
+                  :map-chart-configuration="mapChartConfigurationContent">
+                </panel>
+              </div>
+              <hr class="section-separator">
+          </div>
+        </div>
+        <div v-else>
+          <div v-for="(panneau, index) in panneaux" :key="index">
+            <panel
+              v-bind:index="index + ''"
+              v-bind="panneau"
+              :logo="logo"
+              :alt-logo="altLogo"
+              :project-configuration="projectConfigurationContent"
+              :line-chart-configuration="lineChartConfigurationContent"
+              :bar-chart-configuration="barChartConfigurationContent"
+              :map-chart-configuration="mapChartConfigurationContent">
+            </panel>
+          </div>
         </div>
 
         <SourceLinks class="fr-col-12 fr-col-md-12 fr-col-lg-12 fr-mt-3w" :source-links="sourceLinks"/>
@@ -32,6 +50,7 @@ import store from '@/store'
 import MenuContent from '@/components/MenuContent'
 import Panel from '@/components/Panel'
 import SourceLinks from '@/components/SourceLinks'
+import { groupBy } from '@/utils.js'
 
 export default {
   name: 'PageContent',
@@ -57,6 +76,7 @@ export default {
   data() {
     return {
       panneaux: [],
+      pannelsBySection: [],
       descriptionContent: '',
       projectConfigurationContent: {},
       lineChartConfigurationContent: {},
@@ -76,6 +96,7 @@ export default {
           .then(res => res.json())
           .then(data => {
             this.panneaux = data
+            this.pannelsBySection = groupBy(this.panneaux, panneau => panneau.Volet);
           })
       if (this.description!== undefined && this.description !== '') {
         const self = this
@@ -157,6 +178,15 @@ export default {
 
 .page-content {
   @include dsfr;
+}
+
+.section:last-child .section-separator {
+  display: none;
+}
+
+.section-separator {
+  margin: 50px 40px 15px;
+  border-top: 8px solid var(--bf500);
 }
 
 </style>

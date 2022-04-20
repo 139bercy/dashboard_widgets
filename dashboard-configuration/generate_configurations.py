@@ -42,7 +42,8 @@ def convert_excel_to_json(path):
     unique_bool_properties = [
         'Graph_avec_valeurs',
         'Pie_legende',
-        'Avec_nom_indicateur'
+        'Avec_nom_indicateur',
+        'Avec_moyenne'
     ]
     unique_text_properties = [
         'Pie_titre',

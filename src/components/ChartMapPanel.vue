@@ -33,6 +33,7 @@
             class="chart-container"
             :indicators="onglet.indicateurs"
             :with-legend="onglet.Pie_legende"
+            :with-average="onglet.Avec_moyenne"
             :widget-title="onglet.Pie_titre"
             :widget-position="onglet.Pie"
             :left-col="false"
@@ -42,6 +43,7 @@
         <Table
             class="chart-container"
             :indicateur="indicateurCode1"
+            :with-average="onglet.Avec_moyenne"
             :widget-title="onglet.Table_titre"
             :widget-position="onglet.Table"
             :left-col="false"
@@ -75,6 +77,7 @@
             :left-col="false"
             :DOMTOMBottom="true"
             :min-geo-level="onglet.MinGeoLevel"
+            :with-average="onglet.Avec_moyenne"
             :widget-title="onglet.Carte_titre"
             :widget-position="onglet.Carte"
             :project-configuration="projectConfiguration"

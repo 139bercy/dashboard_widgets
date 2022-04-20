@@ -64,6 +64,32 @@ export const hexToRgb = function (hex) {
 
 export const unescapeNewLine = (str) => str.replace(/\\n/g, '\n')
 
+export const average = function (array) {
+    var total = 0;
+    var count = 0;
+
+    array.forEach(function(item) {
+        total += item;
+        count++;
+    });
+
+    return total / count;
+}
+
+export const groupBy = function(list, keyGetter) {
+  const map = new Map();
+  list.forEach((item) => {
+       const key = keyGetter(item);
+       const collection = map.get(key);
+       if (!collection) {
+           map.set(key, [item]);
+       } else {
+           collection.push(item);
+       }
+  });
+  return map;
+}
+
 String.prototype.capitalize = function() {
   return this.charAt(0).toUpperCase() + this.slice(1)
 }

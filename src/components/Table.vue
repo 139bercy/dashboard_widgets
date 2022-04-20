@@ -24,7 +24,7 @@
 <script>
 import store from '@/store'
 import LeftCol from '@/components/LeftCol'
-import { mixin } from '@/utils.js'
+import { mixin, average } from '@/utils.js'
 export default {
   name: 'Table',
   mixins: [mixin],
@@ -59,6 +59,7 @@ export default {
   },
   props: {
     indicateur: String,
+    withAverage: Boolean,
     widgetTitle: String,
     widgetPosition: [Boolean, Number],
     leftCol: {
@@ -173,12 +174,23 @@ export default {
       this.updateData()
 
       const departments = this.indicateur_data.departements
-        .sort(function (itemA, itemB) {
-          return itemB.last_value - itemA.last_value;
+        .sort(function (departmentA, departmentB) {
+          const departmentAAverage = average(departmentA.values.map(_value => _value.value))
+          const departmentBAverage = average(departmentB.values.map(_value => _value.value))
+
+          return self.withAverage
+            ? departmentBAverage - departmentAAverage
+            : departmentB.last_value - departmentA.last_value
         })
         .slice(0, 10)
-
-      const total = this.indicateur_data.departements.map(_department => _department.last_value).reduce((a, b) => a + b, 0);
+      
+      const total = this.indicateur_data.departements
+        .map(_department => {
+          return self.withAverage
+            ? average(_department.values.map(_value => _value.value))
+            : _department.last_value
+        })
+        .reduce((a, b) => a + b, 0);
       
       const table = document.getElementById(this.chartId);
       const headerRow = document.createElement('tr');
@@ -213,10 +225,14 @@ export default {
         if (!department)
           return;
 
+        const departmentValue = self.withAverage
+          ? average(_department.values.map(_value => _value.value))
+          : _department.last_value;
+
         const rankText = document.createTextNode(departmentRank);
         const nameText = document.createTextNode(department.label);
-        const valueText = document.createTextNode(Math.round(_department.last_value * 10) / 10);
-        const percentText = document.createTextNode(Math.round(_department.last_value / total * 1000) / 10 + "%");
+        const valueText = document.createTextNode(Math.round(departmentValue * 10) / 10);
+        const percentText = document.createTextNode(Math.round(departmentValue / total * 1000) / 10 + "%");
 
         rankCol.appendChild(rankText);
         nameCol.appendChild(nameText);
