@@ -9,6 +9,7 @@
         <div v-html="descriptionContent"></div>
         <div v-if="isAfa">
           <div v-for="sectionName in pannelsBySection.keys()" :key="sectionName" class="section">
+            <h2>{{sectionName}}</h2>
             <div v-for="(panel, index) in pannelsBySection.get(sectionName)" :key="index">
                 <panel
                   v-bind:index="index + ''"
