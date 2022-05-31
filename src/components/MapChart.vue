@@ -299,7 +299,7 @@ export default {
 
       this.tooltip.value = indicatorUnit.includes('%value%')
         ? indicatorUnit.replace('%value%', indicatorValue)
-        : indicatorValue + ' ' + indicatorUnit
+        : indicatorValue.toFixed(2) + ' ' + indicatorUnit
       this.tooltip.date = this.withAverage
         ? ''
         : this.convertDateToHuman(locationData ? locationData.last_date : new Date())
