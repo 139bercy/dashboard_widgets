@@ -161,16 +161,16 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "MISE_EN_CAUSE_POUR_TRAFIC D’INFLUENCE",
-                        "Nom_indicateur": "TRAFIC D’INFLUENCE",
+                        "Code_indicateur": "MISE_EN_CAUSE_POUR_FAVORITISME",
+                        "Nom_indicateur": "FAVORITISME",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Corruption active",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "MISE_EN_CAUSE_POUR_FAVORITISME",
-                        "Nom_indicateur": "FAVORITISME",
+                        "Code_indicateur": "MISE_EN_CAUSE_POUR_TRAFIC D’INFLUENCE",
+                        "Nom_indicateur": "TRAFIC D’INFLUENCE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Corruption active",
                         "Unité_GP": "Infractions en 2020",
@@ -273,24 +273,24 @@
                 "Pie": 1,
                 "Table": false,
                 "Info": false,
-                "Info_titre": "jellsf",
-                "Info_contenu": "qosfjhsq",
+                "Info_titre": "c",
+                "Info_contenu": "c",
                 "Pie_titre": "Répartition des mis en cause par sexe",
                 "Graph_avec_valeurs": false,
                 "Pie_legende": true,
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "HOMME",
-                        "Nom_indicateur": "HOMME",
+                        "Code_indicateur": "FEMME",
+                        "Nom_indicateur": "FEMME",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Corruption active",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "FEMME",
-                        "Nom_indicateur": "FEMME",
+                        "Code_indicateur": "HOMME",
+                        "Nom_indicateur": "HOMME",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Corruption active",
                         "Unité_GP": "Infractions en 2020",
@@ -328,6 +328,22 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
+                        "Code_indicateur": "EMPLOYES",
+                        "Nom_indicateur": "EMPLOYES",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Corruption active",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "CHEF D'ENTREPRISE AVEC SERVICE PUBLIC",
+                        "Nom_indicateur": "CHEF D’ENTREPRISE AVEC SERVICE PUBLIC",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Corruption active",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
                         "Code_indicateur": "DIRIGEANTS DE SOCIETE",
                         "Nom_indicateur": "DIRIGEANTS DE SOCIETE",
                         "Indicateur_principal": "1",
@@ -344,8 +360,8 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "CHEF D'ENTREPRISE AVEC SERVICE PUBLIC",
-                        "Nom_indicateur": "CHEF D’ENTREPRISE AVEC SERVICE PUBLIC",
+                        "Code_indicateur": "AGENTS PUBLICS",
+                        "Nom_indicateur": "AGENTS PUBLICS",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Corruption active",
                         "Unité_GP": "Infractions en 2020",
@@ -354,22 +370,6 @@
                     {
                         "Code_indicateur": "ELUS",
                         "Nom_indicateur": "ELUS",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Corruption active",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "EMPLOYES",
-                        "Nom_indicateur": "EMPLOYES",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Corruption active",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "AGENTS PUBLICS",
-                        "Nom_indicateur": "AGENTS PUBLICS",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Corruption active",
                         "Unité_GP": "Infractions en 2020",
@@ -405,16 +405,8 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "NON RENSEIGNE",
-                        "Nom_indicateur": "NON RENSEIGNE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Corruption active",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "AUTRE_CATEGORIE_Profession et catégorie socioprofessionnelle",
-                        "Nom_indicateur": "AUTRE",
+                        "Code_indicateur": "INACTIFS DIVERS (AUTRES QUE RETRAITÉS)",
+                        "Nom_indicateur": "INACTIFS DIVERS (AUTRES QUE RETRAITÉS)",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Corruption active",
                         "Unité_GP": "Infractions en 2020",
@@ -429,8 +421,24 @@
                         "Unité_Evol": "%"
                     },
                     {
+                        "Code_indicateur": "CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET  ARTISTIQUES",
+                        "Nom_indicateur": "CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET ARTISTIQUES",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Corruption active",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
                         "Code_indicateur": "EMPLOYÉS DE LA FONCTION PUBLIQUE",
                         "Nom_indicateur": "EMPLOYÉS DE LA FONCTION PUBLIQUE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Corruption active",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "AUTRE_CATEGORIE_Profession et catégorie socioprofessionnelle",
+                        "Nom_indicateur": "AUTRE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Corruption active",
                         "Unité_GP": "Infractions en 2020",
@@ -445,16 +453,8 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET  ARTISTIQUES",
-                        "Nom_indicateur": "CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET ARTISTIQUES",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Corruption active",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "INACTIFS DIVERS (AUTRES QUE RETRAITÉS)",
-                        "Nom_indicateur": "INACTIFS DIVERS (AUTRES QUE RETRAITÉS)",
+                        "Code_indicateur": "NON RENSEIGNE",
+                        "Nom_indicateur": "NON RENSEIGNE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Corruption active",
                         "Unité_GP": "Infractions en 2020",
@@ -492,14 +492,6 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "PLAINTE",
-                        "Nom_indicateur": "PLAINTE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "TI passif",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
                         "Code_indicateur": "LETTRE ANONYME",
                         "Nom_indicateur": "LETTRE ANONYME",
                         "Indicateur_principal": "1",
@@ -510,6 +502,14 @@
                     {
                         "Code_indicateur": "DOSSIER CONNEXE JUSTICE",
                         "Nom_indicateur": "DOSSIER CONNEXE JUSTICE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "TI passif",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "PLAINTE",
+                        "Nom_indicateur": "PLAINTE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "TI passif",
                         "Unité_GP": "Infractions en 2020",
@@ -561,14 +561,6 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "CRPC",
-                        "Nom_indicateur": "CRPC",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "TI actif",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
                         "Code_indicateur": "CITATION",
                         "Nom_indicateur": "CITATION",
                         "Indicateur_principal": "1",
@@ -579,6 +571,14 @@
                     {
                         "Code_indicateur": "COPJ",
                         "Nom_indicateur": "COPJ",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "TI actif",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "CRPC",
+                        "Nom_indicateur": "CRPC",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "TI actif",
                         "Unité_GP": "Infractions en 2020",
@@ -662,8 +662,8 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "AUTRE",
-                        "Nom_indicateur": "AUTRE",
+                        "Code_indicateur": "RELAXE",
+                        "Nom_indicateur": "RELAXE",
                         "Indicateur_principal": "3",
                         "Titre_indicateur": "d’âge moyen des prévenus",
                         "Unité_GP": "Infractions en 2020",
@@ -678,8 +678,8 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "RELAXE",
-                        "Nom_indicateur": "RELAXE",
+                        "Code_indicateur": "AUTRE",
+                        "Nom_indicateur": "AUTRE",
                         "Indicateur_principal": "3",
                         "Titre_indicateur": "d’âge moyen des prévenus",
                         "Unité_GP": "Infractions en 2020",
@@ -925,22 +925,6 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "Corruption active",
-                        "Nom_indicateur": "CORRUPTION ACTIVE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Nombre d'infractions pour des atteintes à la probité pour 100 000 habitants",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Corruption passive",
-                        "Nom_indicateur": "CORRUPTION PASSIVE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Nombre d'infractions pour des atteintes à la probité pour 100 000 habitants",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
                         "Code_indicateur": "Concussion",
                         "Nom_indicateur": "CONCUSSION",
                         "Indicateur_principal": "1",
@@ -949,8 +933,16 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "TI passif",
-                        "Nom_indicateur": "TRAFIC D'INFLUENCE PASSIF",
+                        "Code_indicateur": "Corruption",
+                        "Nom_indicateur": "CORRUPTION",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Nombre d'infractions pour des atteintes à la probité pour 100 000 habitants",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "Prise illégale d’intérêts",
+                        "Nom_indicateur": "PRISE ILLEGALE D'INTERET",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre d'infractions pour des atteintes à la probité pour 100 000 habitants",
                         "Unité_GP": "Infractions en 2020",
@@ -965,7 +957,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "DFP",
+                        "Code_indicateur": "Détournements de fonds publics",
                         "Nom_indicateur": "DETOURNEMENT DE FONDS",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre d'infractions pour des atteintes à la probité pour 100 000 habitants",
@@ -973,16 +965,8 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "PII",
-                        "Nom_indicateur": "PRISE ILLEGALE D'INTERET",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Nombre d'infractions pour des atteintes à la probité pour 100 000 habitants",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "TI actif",
-                        "Nom_indicateur": "TRAFIC D'INFLUENCE ACTIF",
+                        "Code_indicateur": "Trafic d’Influence",
+                        "Nom_indicateur": "TRAFIC D'INFLUENCE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre d'infractions pour des atteintes à la probité pour 100 000 habitants",
                         "Unité_GP": "Infractions en 2020",
@@ -1086,56 +1070,64 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "70 ans et plus",
-                        "Nom_indicateur": "70 ans et plus",
+                        "Code_indicateur": "de 65 à 74 ans",
+                        "Nom_indicateur": "de 65 à 74 ans",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre d'infractions pour des atteintes à la probité pour 100 000 habitants",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "de 40 à 49 ans",
-                        "Nom_indicateur": "de 40 à 49 ans",
+                        "Code_indicateur": "75 ans et plus",
+                        "Nom_indicateur": "75 ans et plus",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre d'infractions pour des atteintes à la probité pour 100 000 habitants",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "de 50 à 59 ans",
-                        "Nom_indicateur": "de 50 à 59 ans",
+                        "Code_indicateur": "de 15 à 24 ans",
+                        "Nom_indicateur": "de 15 à 24 ans",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre d'infractions pour des atteintes à la probité pour 100 000 habitants",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "de 60 à 69 ans",
-                        "Nom_indicateur": "de 60 à 69 ans",
+                        "Code_indicateur": "de 45 à 54 ans",
+                        "Nom_indicateur": "de 45 à 54 ans",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre d'infractions pour des atteintes à la probité pour 100 000 habitants",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "de 30 à 39 ans",
-                        "Nom_indicateur": "de 30 à 39 ans",
+                        "Code_indicateur": "de 35 à 44 ans",
+                        "Nom_indicateur": "de 35 à 44 ans",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre d'infractions pour des atteintes à la probité pour 100 000 habitants",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Age indeterminé",
-                        "Nom_indicateur": "Age indeterminé",
+                        "Code_indicateur": "moins de 15 ans",
+                        "Nom_indicateur": "moins de 15 ans",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre d'infractions pour des atteintes à la probité pour 100 000 habitants",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "de 20 à 29 ans",
-                        "Nom_indicateur": "de 20 à 29 ans",
+                        "Code_indicateur": "de 25 à 34 ans",
+                        "Nom_indicateur": "de 25 à 34 ans",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Nombre d'infractions pour des atteintes à la probité pour 100 000 habitants",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "de 55 à 64 ans",
+                        "Nom_indicateur": "de 55 à 64 ans",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre d'infractions pour des atteintes à la probité pour 100 000 habitants",
                         "Unité_GP": "Infractions en 2020",
@@ -1174,7 +1166,7 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "NR",
-                        "Nom_indicateur": "HOMME",
+                        "Nom_indicateur": "NON RENSEIGNE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre d'infractions pour des atteintes à la probité pour 100 000 habitants",
                         "Unité_GP": "Infractions en 2020",
@@ -1190,7 +1182,7 @@
                     },
                     {
                         "Code_indicateur": "H",
-                        "Nom_indicateur": "NON RENSEIGNÉ",
+                        "Nom_indicateur": "HOMME",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre d'infractions pour des atteintes à la probité pour 100 000 habitants",
                         "Unité_GP": "Infractions en 2020",
