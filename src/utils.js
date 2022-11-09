@@ -12,7 +12,7 @@ export const convertStringToLocaleNumber = function (string) {
 
 export const convertFloatToHuman = function (float) {
   // if (Number.isInteger(parseFloat(float))) {
-    //return parseInt(float).toLocaleString()
+
     return Math.round(float * 100) / 100
   // } else {
   //   return parseFloat(parseFloat(float).toFixed(2)).toLocaleString()

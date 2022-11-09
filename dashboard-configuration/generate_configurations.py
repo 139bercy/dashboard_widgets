@@ -109,7 +109,6 @@ def convert_excel_to_json(path):
             for property in unique_bool_properties:
                 if property in df_onglet.keys():
                     dict_onglet[property] = bool(df_onglet[property].any())
-
             dict_onglet["indicateurs"] = liste_indicateurs
             liste_onglets += [dict_onglet]
         for col in panneau_properties:

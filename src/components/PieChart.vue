@@ -204,7 +204,6 @@ export default {
       const plugins = {
         labels: [
           {
-            position: 'border',
             textShadow: true,
             shadowBlur: 5,
             shadowColor: '#000',
