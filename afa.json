@@ -28,15 +28,23 @@
                     {
                         "Code_indicateur": "ANALYSE_PAR_TYPE_Corruption",
                         "Nom_indicateur": "CORRUPTION",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "CORRUPTION",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "ANALYSE_PAR_TYPE_Trafic d’influence",
+                        "Nom_indicateur": "PRISE ILLEGALE D’INTERETS",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "PRISE ILLEGALE D’INTERETS",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
                         "Code_indicateur": "ANALYSE_PAR_TYPE_Pris illégale d’intérêts",
                         "Nom_indicateur": "DETOURNEMENT DE FONDS PUBLICS",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "DETOURNEMENT DE FONDS PUBLICS",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
@@ -44,7 +52,7 @@
                     {
                         "Code_indicateur": "ANALYSE_PAR_TYPE_Favoritisme",
                         "Nom_indicateur": "TRAFIC D’INFLUENCE",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "TRAFIC D’INFLUENCE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
@@ -52,16 +60,8 @@
                     {
                         "Code_indicateur": "ANALYSE_PAR_TYPE_Détournement de fonds publics",
                         "Nom_indicateur": "FAVORITISME",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "FAVORITISME",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "ANALYSE_PAR_TYPE_Trafic d’influence",
-                        "Nom_indicateur": "PRISE ILLEGALE D’INTERETS",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "PRISE ILLEGALE D’INTERETS",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -87,33 +87,33 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "ANALYSE_PAR_TYPE_Pris illégale d’intérêts2",
+                        "Code_indicateur": "ANALYSE_PAR_TYPE_Trafic d’influence",
+                        "Nom_indicateur": "PRISE ILLEGALE D’INTERETS",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "PRISE ILLEGALE D’INTERETS",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "ANALYSE_PAR_TYPE_Pris illégale d’intérêts",
                         "Nom_indicateur": "DETOURNEMENT DE FONDS PUBLICS",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "DETOURNEMENT DE FONDS PUBLICS",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "ANALYSE_PAR_TYPE_Favoritisme2",
-                        "Nom_indicateur": "TRAFIC D’INFLUENCE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "TRAFIC D’INFLUENCE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "ANALYSE_PAR_TYPE_Détournement de fonds publics2",
+                        "Code_indicateur": "ANALYSE_PAR_TYPE_Détournement de fonds publics",
                         "Nom_indicateur": "FAVORITISME",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "FAVORITISME",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "ANALYSE_PAR_TYPE_Corruption2",
+                        "Code_indicateur": "ANALYSE_PAR_TYPE_Corruption",
                         "Nom_indicateur": "CORRUPTION",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "CORRUPTION",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
@@ -121,8 +121,48 @@
                     {
                         "Code_indicateur": "ANALYSE_PAR_TYPE_Trafic d’influence2",
                         "Nom_indicateur": "PRISE ILLEGALE D’INTERETS",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "PRISE ILLEGALE D’INTERETS",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "ANALYSE_PAR_TYPE_Pris illégale d’intérêts2",
+                        "Nom_indicateur": "DETOURNEMENT DE FONDS PUBLICS",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "DETOURNEMENT DE FONDS PUBLICS",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "ANALYSE_PAR_TYPE_Favoritisme",
+                        "Nom_indicateur": "TRAFIC D’INFLUENCE",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "TRAFIC D’INFLUENCE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "ANALYSE_PAR_TYPE_Détournement de fonds publics2",
+                        "Nom_indicateur": "FAVORITISME",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "FAVORITISME",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "ANALYSE_PAR_TYPE_Corruption2",
+                        "Nom_indicateur": "CORRUPTION",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "CORRUPTION",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "ANALYSE_PAR_TYPE_Favoritisme2",
+                        "Nom_indicateur": "TRAFIC D’INFLUENCE",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "TRAFIC D’INFLUENCE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -159,7 +199,7 @@
                     {
                         "Code_indicateur": "secteur économique public concerné",
                         "Nom_indicateur": "PUBLIC",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "PUBLIC",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
@@ -167,7 +207,7 @@
                     {
                         "Code_indicateur": "secteur économique privé concerné",
                         "Nom_indicateur": "PRIVE",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "PRIVE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
@@ -194,74 +234,74 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "COLLECTIVITÉS DÉPARTEMENTALES",
-                        "Nom_indicateur": "COLLECTIVITÉS DÉPARTEMENTALES",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "COLLECTIVITÉS DÉPARTEMENTALES",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "AUTRE_CATEGORIE_secteur économique public concerné",
-                        "Nom_indicateur": "AUTRE CATEGORIE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "AUTRE CATEGORIE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "ETAT - ADMINISTRATION CENTRALE",
-                        "Nom_indicateur": "ETAT - ADMINISTRATION CENTRALE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "ETAT - ADMINISTRATION CENTRALE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
                         "Code_indicateur": "COLLECTIVITÉS - MAIRIES",
                         "Nom_indicateur": "COLLECTIVITÉS - MAIRIES",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "COLLECTIVITÉS - MAIRIES",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "COLLECTIVITÉS RÉGIONALES",
-                        "Nom_indicateur": "COLLECTIVITÉS RÉGIONALES",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "COLLECTIVITÉS RÉGIONALES",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "ETABLISSEMENT PUBLIC",
-                        "Nom_indicateur": "ETABLISSEMENT PUBLIC",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "ETABLISSEMENT PUBLIC",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "ETAT - DECONCENTRE",
-                        "Nom_indicateur": "ETAT - DECONCENTRE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "ETAT - DECONCENTRE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "UE",
-                        "Nom_indicateur": "UE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "UE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
                         "Code_indicateur": "FONCTION PUBLIQUE HOSPITALIERE",
                         "Nom_indicateur": "FONCTION PUBLIQUE HOSPITALIERE",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "FONCTION PUBLIQUE HOSPITALIERE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "ETAT - ADMINISTRATION CENTRALE",
+                        "Nom_indicateur": "ETAT - ADMINISTRATION CENTRALE",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "ETAT - ADMINISTRATION CENTRALE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "COLLECTIVITÉS RÉGIONALES",
+                        "Nom_indicateur": "COLLECTIVITÉS RÉGIONALES",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "COLLECTIVITÉS RÉGIONALES",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "AUTRE_CATEGORIE_secteur économique public concerné",
+                        "Nom_indicateur": "AUTRE CATEGORIE",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "AUTRE CATEGORIE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "ETABLISSEMENT PUBLIC",
+                        "Nom_indicateur": "ETABLISSEMENT PUBLIC",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "ETABLISSEMENT PUBLIC",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "UE",
+                        "Nom_indicateur": "UE",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "UE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "ETAT - DECONCENTRE",
+                        "Nom_indicateur": "ETAT - DECONCENTRE",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "ETAT - DECONCENTRE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "COLLECTIVITÉS DÉPARTEMENTALES",
+                        "Nom_indicateur": "COLLECTIVITÉS DÉPARTEMENTALES",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "COLLECTIVITÉS DÉPARTEMENTALES",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -287,90 +327,90 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "INDUSTRIES EXTRACTIVES",
-                        "Nom_indicateur": "INDUSTRIES EXTRACTIVES",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "INDUSTRIES EXTRACTIVES",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "INDUSTRIE MANUFACTURIÈRE",
-                        "Nom_indicateur": "INDUSTRIE MANUFACTURIÈRE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "INDUSTRIE MANUFACTURIÈRE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "secteur économique privé concernéNON RENSEIGNE",
-                        "Nom_indicateur": "NON RENSEIGNE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "NON RENSEIGNE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "CONSTRUCTION",
-                        "Nom_indicateur": "CONSTRUCTION",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "CONSTRUCTION",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "ACTIVITÉS DE SERVICES ADMINISTRATIFS ET DE SOUTIEN",
-                        "Nom_indicateur": "ACTIVITÉS DE SERVICES ADMINISTRATIFS ET DE SOUTIEN",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "ACTIVITÉS DE SERVICES ADMINISTRATIFS ET DE SOUTIEN",
+                        "Code_indicateur": "AUTRE_CATEGORIE_secteur économique privé concerné",
+                        "Nom_indicateur": "AUTRE CATEGORIE",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "AUTRE CATEGORIE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
                         "Code_indicateur": "ENSEIGNEMENT",
                         "Nom_indicateur": "ENSEIGNEMENT",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "ENSEIGNEMENT",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "ACTIVITÉS SPÉCIALISÉES, SCIENTIFIQUES ET TECHNIQUES",
-                        "Nom_indicateur": "ACTIVITÉS SPÉCIALISÉES, SCIENTIFIQUES ET TECHNIQUES",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "ACTIVITÉS SPÉCIALISÉES, SCIENTIFIQUES ET TECHNIQUES",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "AUTRE_CATEGORIE_secteur économique privé concerné",
-                        "Nom_indicateur": "AUTRE CATEGORIE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "AUTRE CATEGORIE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "ACTIVITÉS FINANCIÈRES ET D'ASSURANCE",
-                        "Nom_indicateur": "ACTIVITÉS FINANCIÈRES ET D'ASSURANCE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "ACTIVITÉS FINANCIÈRES ET D'ASSURANCE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
                         "Code_indicateur": "ACTIVITÉS IMMOBILIÈRES",
                         "Nom_indicateur": "ACTIVITÉS IMMOBILIÈRES",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "ACTIVITÉS IMMOBILIÈRES",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "CONSTRUCTION",
+                        "Nom_indicateur": "CONSTRUCTION",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "CONSTRUCTION",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "ACTIVITÉS FINANCIÈRES ET D'ASSURANCE",
+                        "Nom_indicateur": "ACTIVITÉS FINANCIÈRES ET D'ASSURANCE",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "ACTIVITÉS FINANCIÈRES ET D'ASSURANCE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "INDUSTRIES EXTRACTIVES",
+                        "Nom_indicateur": "INDUSTRIES EXTRACTIVES",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "INDUSTRIES EXTRACTIVES",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "ACTIVITÉS SPÉCIALISÉES, SCIENTIFIQUES ET TECHNIQUES",
+                        "Nom_indicateur": "ACTIVITÉS SPÉCIALISÉES, SCIENTIFIQUES ET TECHNIQUES",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "ACTIVITÉS SPÉCIALISÉES, SCIENTIFIQUES ET TECHNIQUES",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "INDUSTRIE MANUFACTURIÈRE",
+                        "Nom_indicateur": "INDUSTRIE MANUFACTURIÈRE",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "INDUSTRIE MANUFACTURIÈRE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
                         "Code_indicateur": "AUTRES ACTIVITÉS DE SERVICES",
                         "Nom_indicateur": "AUTRES ACTIVITÉS DE SERVICES",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "AUTRES ACTIVITÉS DE SERVICES",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "secteur économique privé concernéNON RENSEIGNE",
+                        "Nom_indicateur": "NON RENSEIGNE",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "NON RENSEIGNE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "ACTIVITÉS DE SERVICES ADMINISTRATIFS ET DE SOUTIEN",
+                        "Nom_indicateur": "ACTIVITÉS DE SERVICES ADMINISTRATIFS ET DE SOUTIEN",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "ACTIVITÉS DE SERVICES ADMINISTRATIFS ET DE SOUTIEN",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -405,25 +445,25 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "dTI",
-                        "Nom_indicateur": "TRAFIC D’INFLUENCE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "TRAFIC D’INFLUENCE",
+                        "Code_indicateur": "dPII",
+                        "Nom_indicateur": "PRISE ILLEGALE D’INTERETS",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "PRISE ILLEGALE D’INTERETS",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "dFav",
-                        "Nom_indicateur": "FAVORITISME",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "FAVORITISME",
+                        "Code_indicateur": "dTI",
+                        "Nom_indicateur": "TRAFIC D’INFLUENCE",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "TRAFIC D’INFLUENCE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
                         "Code_indicateur": "dCorruption",
                         "Nom_indicateur": "CORRUPTION",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "CORRUPTION",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
@@ -431,16 +471,16 @@
                     {
                         "Code_indicateur": "dFB",
                         "Nom_indicateur": "DETOURNEMENT DE FONDS",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "DETOURNEMENT DE FONDS",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "dPII",
-                        "Nom_indicateur": "PRISE ILLEGALE D’INTERETS",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "PRISE ILLEGALE D’INTERETS",
+                        "Code_indicateur": "dFav",
+                        "Nom_indicateur": "FAVORITISME",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "FAVORITISME",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -466,14 +506,14 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "NOMBRE_MOY_PREV",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "Nombre moyen de prévenus par affaire",
                         "Unité_GP": "prévenus",
                         "Unité_Evol": "%"
                     },
                     {
                         "Code_indicateur": "âge au moment des faits",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "Age moyen des prévenus",
                         "Unité_GP": "ans",
                         "Unité_Evol": "ans"
@@ -509,18 +549,18 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "PART_PERS_PHYS_PREV",
-                        "Nom_indicateur": "PERSONNE PHYSIQUE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "PERSONNE PHYSIQUE",
+                        "Code_indicateur": "PART_PERS_MOR_PREV",
+                        "Nom_indicateur": "PERSONNE MORALE",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "PERSONNE MORALE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "PART_PERS_MOR_PREV",
-                        "Nom_indicateur": "PERSONNE MORALE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "PERSONNE MORALE",
+                        "Code_indicateur": "PART_PERS_PHYS_PREV",
+                        "Nom_indicateur": "PERSONNE PHYSIQUE",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "PERSONNE PHYSIQUE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -548,7 +588,7 @@
                     {
                         "Code_indicateur": "FEMME",
                         "Nom_indicateur": "FEMME",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "FEMME",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
@@ -556,7 +596,7 @@
                     {
                         "Code_indicateur": "HOMME",
                         "Nom_indicateur": "HOMME",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "HOMME",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
@@ -579,7 +619,7 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Note de lecture : Sur l’échantillon de 111 décisions de justice rendues entre 2014 et 2020 et analysées par l’AFA, 29,7% des prévenus étaient des agents publics. Explications : Cette classification a été créée par l’AFA. La catégorie « particuliers » regroupe les prévenus auxquels on reproche des faits d’atteinte à la probité commis en dehors de leur activité professionnelle. Dans l’échantillon analysé, aucune personne morale de droit public n’a été renvoyée devant une juridiction pénale. Méthode de comptage : Calcul de répartition des prévenus selon leur qualité. Source : Analyse par l’AFA de 111 décisions de justice rendues entre 2014 et 2020 en matière d’atteintes à la probité. ",
+                "Description_mesure": "Note de lecture : Sur l’échantillon de 111 décisions de justice rendues entre 2014 et 2020 et analysées par l’AFA, 29,7% des prévenus étaient des agents publics. Explications : Cette classification a été créée par l’AFA. La catégorie « particuliers » regroupe les prévenus auxquels on reproche des faits d’atteinte à la probité commis en dehors de leur activité professionnelle. Dans l’échantillon analysé, aucune personne morale de droit public n’a été renvoyée devant une juridiction pénale. Méthode de comptage : Calcul de répartition des prévenus selon leur qualité. ",
                 "Titre_onglet": "Qualité",
                 "Pie": 1,
                 "Table": false,
@@ -592,17 +632,9 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "ELUS",
-                        "Nom_indicateur": "ELUS",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "ELUS",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
                         "Code_indicateur": "DIRIGEANTS DE SOCIETE",
                         "Nom_indicateur": "DIRIGEANTS DE SOCIETE",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "DIRIGEANTS DE SOCIETE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
@@ -610,23 +642,15 @@
                     {
                         "Code_indicateur": "PARTICULIERS",
                         "Nom_indicateur": "PARTICULIERS",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "PARTICULIERS",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "EMPLOYES",
-                        "Nom_indicateur": "EMPLOYES",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "EMPLOYES",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
                         "Code_indicateur": "AGENTS PUBLICS",
                         "Nom_indicateur": "AGENTS PUBLICS",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "AGENTS PUBLICS",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
@@ -634,8 +658,24 @@
                     {
                         "Code_indicateur": "PERSONNE MORALE DE DROIT PRIVE",
                         "Nom_indicateur": "PERSONNE MORALE DE DROIT PRIVE",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "PERSONNE MORALE DE DROIT PRIVE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "EMPLOYES",
+                        "Nom_indicateur": "EMPLOYES",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "EMPLOYES",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "ELUS",
+                        "Nom_indicateur": "ELUS",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "ELUS",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -663,55 +703,47 @@
                     {
                         "Code_indicateur": "EMPLOYÉS DE LA FONCTION PUBLIQUE",
                         "Nom_indicateur": "EMPLOYÉS DE LA FONCTION PUBLIQUE",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "EMPLOYÉS DE LA FONCTION PUBLIQUE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET  ARTISTIQUES",
-                        "Nom_indicateur": "CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET ARTISTIQUES",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET ARTISTIQUES",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "AUTRE_CATEGORIE_Profession et catégorie socioprofessionnelle",
-                        "Nom_indicateur": "AUTRE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "AUTRE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
                         "Code_indicateur": "CHEFS D'ENTREPRISE DE 10 SALARIÉS OU PLUS",
                         "Nom_indicateur": "CHEFS D'ENTREPRISE DE 10 SALARIÉS OU PLUS",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "CHEFS D'ENTREPRISE DE 10 SALARIÉS OU PLUS",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "AUTRE_CATEGORIE_Profession et catégorie socioprofessionnelle",
+                        "Nom_indicateur": "AUTRE",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "AUTRE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET  ARTISTIQUES",
+                        "Nom_indicateur": "CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET ARTISTIQUES",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET ARTISTIQUES",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
                         "Code_indicateur": "CADRES D'ENTREPRISE",
                         "Nom_indicateur": "CADRES D’ENTREPRISE",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "CADRES D’ENTREPRISE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "INACTIFS DIVERS (AUTRES QUE RETRAITÉS)",
-                        "Nom_indicateur": "INACTIFS DIVERS (AUTRES QUE RETRAITÉS)",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "INACTIFS DIVERS (AUTRES QUE RETRAITÉS)",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
                         "Code_indicateur": "NON RENSEIGNE",
                         "Nom_indicateur": "NON RENSEIGNE",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "NON RENSEIGNE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
@@ -719,8 +751,16 @@
                     {
                         "Code_indicateur": "PROFESSIONS INTERMÉDIAIRES DE L'ENSEIGNEMENT, DE LA SANTÉ, DE LA FONCTION PUBLIQUE ET ASSIMILÉS",
                         "Nom_indicateur": "PROFESSIONS INTERMÉDIAIRES DE L'ENSEIGNEMENT, DE LA SANTÉ, DE LA FONCTION PUBLIQUE ET ASSIMILÉS",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "PROFESSIONS INTERMÉDIAIRES DE L'ENSEIGNEMENT, DE LA SANTÉ, DE LA FONCTION PUBLIQUE ET ASSIMILÉS",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "INACTIFS DIVERS (AUTRES QUE RETRAITÉS)",
+                        "Nom_indicateur": "INACTIFS DIVERS (AUTRES QUE RETRAITÉS)",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "INACTIFS DIVERS (AUTRES QUE RETRAITÉS)",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -755,9 +795,25 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
+                        "Code_indicateur": "LETTRE ANONYME",
+                        "Nom_indicateur": "LETTRE ANONYME",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "LETTRE ANONYME",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "PLAINTE",
+                        "Nom_indicateur": "PLAINTE",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "PLAINTE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
                         "Code_indicateur": "origine de l’affaireNON RENSEIGNE",
                         "Nom_indicateur": "NON RENSEIGNE",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "NON RENSEIGNE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
@@ -765,40 +821,24 @@
                     {
                         "Code_indicateur": "DOSSIER CONNEXE JUSTICE",
                         "Nom_indicateur": "DOSSIER CONNEXE JUSTICE",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "DOSSIER CONNEXE JUSTICE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "LETTRE ANONYME",
-                        "Nom_indicateur": "LETTRE ANONYME",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "LETTRE ANONYME",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "ARTICLE 40 al.2",
-                        "Nom_indicateur": "ARTICLE 40 al.2",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "ARTICLE 40 al.1",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "PLAINTE",
-                        "Nom_indicateur": "PLAINTE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "PLAINTE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
                         "Code_indicateur": "AUTRE_CATEGORIE_origine de l’affaire",
                         "Nom_indicateur": "AUTRE",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "AUTRE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "ARTICLE 40 al.2",
+                        "Nom_indicateur": "ARTICLE 40 al.2",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "ARTICLE 40 al.1",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -824,14 +864,14 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "durée de la procédure",
-                        "Indicateur_principal": "4",
+                        "Indicateur_principal": "4.0",
                         "Titre_indicateur": "Durée moyenne de la procédure",
                         "Unité_GP": "ans",
                         "Unité_Evol": "ans"
                     },
                     {
                         "Code_indicateur": "durée de la période de prévention (en nbr jours)",
-                        "Indicateur_principal": "4",
+                        "Indicateur_principal": "4.0",
                         "Titre_indicateur": "Durée moyenne de la période de prévention ",
                         "Unité_GP": "jours",
                         "Unité_Evol": "%"
@@ -854,7 +894,7 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Note de lecture : Sur l’échantillon de 111 décisions de justice rendues entre 2014 et 2020 et analysées par l’AFA, le taux de sanction pénale est de 66,1%. Plus de 6 infractions d’atteintes à la probité poursuivies sur 10 aboutissent à une sanction pénale.   Explications : La relaxe est une décision prise par une juridiction pénale de jugement autre que la Cour d'assises (tribunal correctionnel ou tribunal de police), qui déclare non coupable le prévenu renvoyée devant elle.  L’extinction de l’action publique est constatée lorsque les conditions nécessaires pour poursuivre une personne ne sont plus réunies (décès du prévenu, prescription des faits, amnistie, abrogation de la loi pénale, autorité de la chose jugée, retrait de la plainte pour certaines infractions etc.).  La catégorie « autre » regroupe les situations suivantes : annulation de la procédure, nullité des poursuites, irrecevabilité de la citation directe devant le tribunal, déclaration de culpabilité avec dispense de peine etc. Méthode de comptage : Calcul de répartition par infractions selon le sens de la décision.",
+                "Description_mesure": "Note de lecture : Sur l’échantillon de 111 décisions de justice rendues entre 2014 et 2020 et analysées par l’AFA, le taux de sanction pénale est de 66,1%. Plus de 6 infractions d’atteintes à la probité poursuivies sur 10 aboutissent à une sanction pénale.   Explications : La relaxe est une décision prise par une juridiction pénale de jugement autre que la Cour d'assises (tribunal correctionnel ou tribunal de police), qui déclare non coupable le prévenu renvoyée devant elle.  L’extinction de l’action publique est constatée lorsque les conditions nécessaires pour poursuivre une personne ne sont plus réunies (décès du prévenu, prescription des faits, amnistie, abrogation de la loi pénale, autorité de la chose jugée, retrait de la plainte pour certaines infractions etc.).  La catégorie « autre » regroupe les situations suivantes : annulation de la procédure, nullité des poursuites, irrecevabilité de la citation directe devant le tribunal, déclaration de culpabilité avec dispense de peine etc. Méthode de comptage : Calcul de répartition par infractions selon le sens de la décision. ",
                 "Titre_onglet": "Sens de la décision",
                 "Pie": 1,
                 "Table": false,
@@ -867,25 +907,9 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "AUTRE",
-                        "Nom_indicateur": "AUTRE",
-                        "Indicateur_principal": "3",
-                        "Titre_indicateur": "AUTRE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Extinction action publique",
-                        "Nom_indicateur": "Extinction action publique",
-                        "Indicateur_principal": "3",
-                        "Titre_indicateur": "Extinction action publique",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
                         "Code_indicateur": "CONDAMNATION",
                         "Nom_indicateur": "CONDAMNATION",
-                        "Indicateur_principal": "3",
+                        "Indicateur_principal": "3.0",
                         "Titre_indicateur": "Déclaration de culpabilité",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
@@ -893,8 +917,24 @@
                     {
                         "Code_indicateur": "RELAXE",
                         "Nom_indicateur": "RELAXE",
-                        "Indicateur_principal": "3",
+                        "Indicateur_principal": "3.0",
                         "Titre_indicateur": "RELAXE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "Extinction action publique",
+                        "Nom_indicateur": "Extinction action publique",
+                        "Indicateur_principal": "3.0",
+                        "Titre_indicateur": "Extinction action publique",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "AUTRE",
+                        "Nom_indicateur": "AUTRE",
+                        "Indicateur_principal": "3.0",
+                        "Titre_indicateur": "AUTRE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -922,7 +962,7 @@
                     {
                         "Code_indicateur": "AMENDE",
                         "Nom_indicateur": "AMENDE",
-                        "Indicateur_principal": "3",
+                        "Indicateur_principal": "3.0",
                         "Titre_indicateur": "AMENDE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
@@ -930,7 +970,7 @@
                     {
                         "Code_indicateur": "DISPENSE DE PEINE",
                         "Nom_indicateur": "DISPENSE DE PEINE",
-                        "Indicateur_principal": "3",
+                        "Indicateur_principal": "3.0",
                         "Titre_indicateur": "DISPENSE DE PEINE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
@@ -938,7 +978,7 @@
                     {
                         "Code_indicateur": "EMPRISONNEMENT ET AMENDE",
                         "Nom_indicateur": "AMENDE & EMPRISONNEMENT",
-                        "Indicateur_principal": "3",
+                        "Indicateur_principal": "3.0",
                         "Titre_indicateur": "AMENDE & EMPRISONNEMENT",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
@@ -946,7 +986,7 @@
                     {
                         "Code_indicateur": "EMPRISONNEMENT",
                         "Nom_indicateur": "EMPRISONNEMENT",
-                        "Indicateur_principal": "3",
+                        "Indicateur_principal": "3.0",
                         "Titre_indicateur": "EMPRISONNEMENT",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
@@ -982,14 +1022,14 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "montant de l'amende pp",
-                        "Indicateur_principal": "3",
+                        "Indicateur_principal": "3.0",
                         "Titre_indicateur": "Montant moyen des amendes prononcées",
                         "Unité_GP": "€",
                         "Unité_Evol": "%"
                     },
                     {
                         "Code_indicateur": "durée de l'emprisonnement (mois)",
-                        "Indicateur_principal": "3",
+                        "Indicateur_principal": "3.0",
                         "Titre_indicateur": "Durée moyenne de l’emprisonnement",
                         "Unité_GP": "mois",
                         "Unité_Evol": "%"
@@ -1016,7 +1056,7 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "montant de l'amende pm",
-                        "Indicateur_principal": "3",
+                        "Indicateur_principal": "3.0",
                         "Titre_indicateur": "Montant moyen des amendes prononcées",
                         "Unité_GP": "€",
                         "Unité_Evol": "%"
@@ -1043,7 +1083,7 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "montant de la confiscation",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "Montant moyen des confiscations",
                         "Unité_GP": "€",
                         "Unité_Evol": "€"
@@ -1081,7 +1121,7 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "NB_INF_PROB",
-                        "Indicateur_principal": "10",
+                        "Indicateur_principal": "10.0",
                         "Titre_indicateur": "Nombre d’infractions d’atteinte à la probité commises ",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
@@ -1119,7 +1159,7 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "NB_INF_PROB",
-                        "Indicateur_principal": "10",
+                        "Indicateur_principal": "10.0",
                         "Titre_indicateur": "Nombre d'infractions pour des atteintes à la probité",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
@@ -1148,7 +1188,7 @@
                 "indicateurs": [
                     {
                         "Code_indicateur": "PART_INF_PROB_HAB",
-                        "Indicateur_principal": "10",
+                        "Indicateur_principal": "10.0",
                         "Titre_indicateur": "Nombre d'infractions pour des atteintes à la probité",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
@@ -1166,7 +1206,7 @@
         "onglets": [
             {
                 "Carte": false,
-                "Graph": false,
+                "Graph": 2,
                 "Bar": false,
                 "Box": false,
                 "Points": false,
@@ -1185,66 +1225,66 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "Prise illégale d’intérêts",
-                        "Nom_indicateur": "PRISE ILLEGALE D'INTERETS",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "PRISE ILLEGALE D'INTERETS",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Trafic d’Influence",
-                        "Nom_indicateur": "TRAFIC D'INFLUENCE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "TRAFIC D'INFLUENCE",
+                        "Code_indicateur": "Recel",
+                        "Nom_indicateur": "RECEL",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "RECEL",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
                         "Code_indicateur": "Concussion",
                         "Nom_indicateur": "CONCUSSION",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "CONCUSSION",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Corruption",
-                        "Nom_indicateur": "CORRUPTION",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "CORRUPTION",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Blanchiment",
-                        "Nom_indicateur": "BLANCHIMENT",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "BLANCHIMENT",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
                         "Code_indicateur": "Favoritisme",
                         "Nom_indicateur": "FAVORITISME",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "FAVORITISME",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "Prise illégale d’intérêts",
+                        "Nom_indicateur": "PRISE ILLEGALE D'INTERETS",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "PRISE ILLEGALE D'INTERETS",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "Blanchiment",
+                        "Nom_indicateur": "BLANCHIMENT",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "BLANCHIMENT",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
                         "Code_indicateur": "Détournements de fonds publics",
                         "Nom_indicateur": "DETOURNEMENT DE FONDS PUBLICS",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "DETOURNEMENT DE FONDS PUBLICS",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Recel",
-                        "Nom_indicateur": "RECEL",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "RECEL",
+                        "Code_indicateur": "Corruption",
+                        "Nom_indicateur": "CORRUPTION",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "CORRUPTION",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "Trafic d’Influence",
+                        "Nom_indicateur": "TRAFIC D'INFLUENCE",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "TRAFIC D'INFLUENCE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -1278,65 +1318,65 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "de 55 à 64 ans",
-                        "Nom_indicateur": "de 55 à 64 ans",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "de 55 à 64 ans",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "moins de 15 ans",
-                        "Nom_indicateur": "moins de 15 ans",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "moins de 15 ans",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
                         "Code_indicateur": "de 65 à 74 ans",
                         "Nom_indicateur": "de 65 à 74 ans",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "de 65 à 74 ans",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "de 45 à 54 ans",
-                        "Nom_indicateur": "de 45 à 54 ans",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "de 45 à 54 ans",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "de 15 à 24 ans",
-                        "Nom_indicateur": "de 15 à 24 ans",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "de 15 à 24 ans",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "75 ans et plus",
-                        "Nom_indicateur": "75 ans et plus",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "75 ans et plus",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
                         "Code_indicateur": "de 35 à 44 ans",
                         "Nom_indicateur": "de 35 à 44 ans",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "de 35 à 44 ans",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "75 ans et plus",
+                        "Nom_indicateur": "75 ans et plus",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "75 ans et plus",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "de 15 à 24 ans",
+                        "Nom_indicateur": "de 15 à 24 ans",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "de 15 à 24 ans",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "moins de 15 ans",
+                        "Nom_indicateur": "moins de 15 ans",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "moins de 15 ans",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "de 55 à 64 ans",
+                        "Nom_indicateur": "de 55 à 64 ans",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "de 55 à 64 ans",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "de 45 à 54 ans",
+                        "Nom_indicateur": "de 45 à 54 ans",
+                        "Indicateur_principal": "1.0",
+                        "Titre_indicateur": "de 45 à 54 ans",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
                         "Code_indicateur": "de 25 à 34 ans",
                         "Nom_indicateur": "de 25 à 34 ans",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "de 25 à 34 ans",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
@@ -1364,7 +1404,7 @@
                     {
                         "Code_indicateur": "H",
                         "Nom_indicateur": "HOMME",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "HOMME",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
@@ -1372,7 +1412,7 @@
                     {
                         "Code_indicateur": "F",
                         "Nom_indicateur": "FEMME",
-                        "Indicateur_principal": "1",
+                        "Indicateur_principal": "1.0",
                         "Titre_indicateur": "FEMME",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
