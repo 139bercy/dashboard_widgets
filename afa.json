@@ -34,10 +34,18 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "ANALYSE_PAR_TYPE_Pris illégale d’intérêts",
+                        "Code_indicateur": "ANALYSE_PAR_TYPE_Prise",
                         "Nom_indicateur": "DETOURNEMENT DE FONDS PUBLICS",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "DETOURNEMENT DE FONDS PUBLICS",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "ANALYSE_PAR_TYPE_Trafic",
+                        "Nom_indicateur": "PRISE ILLEGALE D’INTERETS",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "PRISE ILLEGALE D’INTERETS",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -50,18 +58,10 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "ANALYSE_PAR_TYPE_Détournement de fonds publics",
+                        "Code_indicateur": "ANALYSE_PAR_TYPE_Détournement",
                         "Nom_indicateur": "FAVORITISME",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "FAVORITISME",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "ANALYSE_PAR_TYPE_Trafic d’influence",
-                        "Nom_indicateur": "PRISE ILLEGALE D’INTERETS",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "PRISE ILLEGALE D’INTERETS",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -87,7 +87,15 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "ANALYSE_PAR_TYPE_Pris illégale d’intérêts",
+                        "Code_indicateur": "ANALYSE_PAR_TYPE_Trafic",
+                        "Nom_indicateur": "PRISE ILLEGALE D’INTERETS",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "PRISE ILLEGALE D’INTERETS",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "ANALYSE_PAR_TYPE_Prise",
                         "Nom_indicateur": "DETOURNEMENT DE FONDS PUBLICS",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "DETOURNEMENT DE FONDS PUBLICS",
@@ -103,14 +111,6 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "ANALYSE_PAR_TYPE_Détournement de fonds publics",
-                        "Nom_indicateur": "FAVORITISME",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "FAVORITISME",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
                         "Code_indicateur": "ANALYSE_PAR_TYPE_Corruption",
                         "Nom_indicateur": "CORRUPTION",
                         "Indicateur_principal": "1",
@@ -119,10 +119,10 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "ANALYSE_PAR_TYPE_Trafic d’influence",
-                        "Nom_indicateur": "PRISE ILLEGALE D’INTERETS",
+                        "Code_indicateur": "ANALYSE_PAR_TYPE_Détournement",
+                        "Nom_indicateur": "FAVORITISME",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "PRISE ILLEGALE D’INTERETS",
+                        "Titre_indicateur": "FAVORITISME",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
