@@ -995,7 +995,7 @@
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
         "Titre_panneau": "Évolution nationale des faits d’atteinte à la probité",
         "Volet": "Données issues des enquêtes judiciaires de la gendarmerie et de la police nationales",
-        "source": "AFA, d’après des données du service statistique de la sécurité intérieure (SSMSI), base des infractions enregistrées par la police et la gendarmerie (extraite le 10 février 2021). ",
+        "source": "SSMSI, bases des crimes et délits enregistrés par la police et la gendarmerie entre 2016 et 2021",
         "accordéon": "En savoir plus sur la donnée",
         "onglets": [
             {
@@ -1033,7 +1033,7 @@
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
         "Titre_panneau": "Analyse géographique",
         "Volet": "Données issues des enquêtes judiciaires de la gendarmerie et de la police nationales",
-        "source": "AFA, d’après des données du service statistique de la sécurité intérieure (SSMSI), base des infractions enregistrées par la police et la gendarmerie (extraite le 10 février 2021). ",
+        "source": "SSMSI, bases des crimes et délits enregistrés par la police et la gendarmerie entre 2016 et 2022",
         "accordéon": "En savoir plus sur la donnée",
         "onglets": [
             {
@@ -1100,7 +1100,7 @@
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
         "Titre_panneau": "Analyse par famille d'infraction",
         "Volet": "Données issues des enquêtes judiciaires de la gendarmerie et de la police nationales",
-        "source": "AFA, d’après des données du service statistique de la sécurité intérieure (SSMSI), base des infractions enregistrées par la police et la gendarmerie (extraite le 10 février 2021). ",
+        "source": "SSMSI, bases des crimes et délits enregistrés par la police et la gendarmerie entre 2016 et 2030",
         "accordéon": "En savoir plus sur la donnée",
         "onglets": [
             {
@@ -1195,7 +1195,7 @@
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
         "Titre_panneau": "Profil type du mis en cause",
         "Volet": "Données issues des enquêtes judiciaires de la gendarmerie et de la police nationales",
-        "source": "AFA, d’après des données du service statistique de la sécurité intérieure (SSMSI), base des infractions enregistrées par la police et la gendarmerie (extraite le 10 février 2021). ",
+        "source": "SSMSI, bases des crimes et délits enregistrés par la police et la gendarmerie entre 2016 et 2034",
         "accordéon": "En savoir plus sur la donnée",
         "onglets": [
             {
