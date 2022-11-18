@@ -1289,7 +1289,7 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Note de lecture : Entre 2016 et 2020, le profil type d’un mis en cause pour une infraction d’atteinte à la probité est un homme (79,3%) ayant entre 40 et 59 ans (26,1%). ",
+                "Description_mesure": "Note de lecture : Dans les procédures judiciaires clôturées entre 2016 et 2021 par la gendarmerie et la police nationales, 78 % des mis en cause pour des infractions d’atteinte à la probité sont des hommes. Champ : France (Métropole + DROM), procédures clôturées sur la période 2016-2021",
                 "Titre_onglet": "Mis en cause par genre",
                 "Pie": 1,
                 "Table": false,
