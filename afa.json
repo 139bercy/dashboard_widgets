@@ -803,13 +803,13 @@
                 "Pie_titre": "Répartition selon le sens de la décision",
                 "Graph_avec_valeurs": false,
                 "Pie_legende": true,
-                "Avec_nom_indicateur": false,
+                "Avec_nom_indicateur": true,
                 "indicateurs": [
                     {
                         "Code_indicateur": "CONDAMNATION",
                         "Nom_indicateur": "CONDAMNATION",
                         "Indicateur_principal": "3",
-                        "Titre_indicateur": "Déclaration de culpabilité",
+                        "Titre_indicateur": "DECLARATION DE CULPABILITE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -817,7 +817,7 @@
                         "Code_indicateur": "Extinction action publique",
                         "Nom_indicateur": "Extinction action publique",
                         "Indicateur_principal": "3",
-                        "Titre_indicateur": "Extinction action publique",
+                        "Titre_indicateur": "EXTINCTION ACTION PUBLIQUE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
