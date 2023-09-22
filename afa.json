@@ -1013,7 +1013,7 @@
                 "Info_titre": "c",
                 "Info_contenu": "c",
                 "Pie_titre": "Évolution nationale des faits enregistrés",
-                "Graph_titre": "Evolution nationale des faits enregistrés entre 2016 et 2021",
+                "Graph_titre": "Évolution nationale des faits enregistrés entre 2016 et 2021",
                 "Graph_avec_valeurs": false,
                 "Pie_legende": true,
                 "Avec_nom_indicateur": false,
@@ -1105,7 +1105,7 @@
         "onglets": [
             {
                 "Carte": false,
-                "Graph": 2,
+                "Graph": false,
                 "Bar": false,
                 "Box": false,
                 "Points": false,
