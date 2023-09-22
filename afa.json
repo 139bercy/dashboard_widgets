@@ -669,7 +669,7 @@
     },
     {
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
-        "Titre_panneau": "Procédure",
+        "Titre_panneau": "Caractéristiques de la procédure",
         "Volet": "Données issues de l’analyse des décisions de justice (phase de test)",
         "source": "Analyse par l’AFA de 111 décisions de justice rendues entre 2014 et 2020 en matière d’atteintes à la probité. ",
         "accordéon": "En savoir plus sur la donnée",
@@ -993,7 +993,7 @@
     },
     {
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
-        "Titre_panneau": "Évolution nationale des faits d’atteinte à la probité",
+        "Titre_panneau": "Évolution nationale des faits d’atteinte à la probité enregistrés par la gendarmerie et la police",
         "Volet": "Données issues des enquêtes judiciaires de la gendarmerie et de la police nationales",
         "source": "SSMSI, bases des crimes et délits enregistrés par la police et la gendarmerie entre 2016 et 2021",
         "accordéon": "En savoir plus sur la donnée",
@@ -1006,14 +1006,14 @@
                 "Points": false,
                 "MinGeoLevel": "departements",
                 "Description_mesure": "Note de lecture : Dans les procédures judiciaires clôturées en 2020, la gendarmerie et la police nationales ont enregistré 702 infractions d’atteinte à la probité. Explications. Les infractions d’atteinte à la probité regroupent la corruption, le trafic d’influence, le favoritisme, la prise illégale d’intérêts, le détournement de fonds ou de biens publics et la concussion. Pour une définition et une illustration de chaque infraction, se reporter au Lexique de l’AFA. Champ : France (Métropole + DROM), procédures clôturées sur la période 2016-2021",
-                "Titre_onglet": "Chiffres bruts",
+                "Titre_onglet": "Évolution nationale",
                 "Pie": false,
                 "Table": false,
                 "Info": false,
                 "Info_titre": "c",
                 "Info_contenu": "c",
                 "Pie_titre": "Évolution nationale des faits enregistrés",
-                "Graph_titre": "Evolution nationale des faits enregistrés",
+                "Graph_titre": "Evolution nationale des faits enregistrés entre 2016 et 2021",
                 "Graph_avec_valeurs": false,
                 "Pie_legende": true,
                 "Avec_nom_indicateur": false,
@@ -1021,7 +1021,7 @@
                     {
                         "Code_indicateur": "NB_INF_PROB",
                         "Indicateur_principal": "10",
-                        "Titre_indicateur": "Nombre d’infractions d’atteinte à la probité commises ",
+                        "Titre_indicateur": "Nombre d’infractions d’atteinte à la probité enregistrées",
                         "Unité_GP": "Infractions en 2021",
                         "Unité_Evol": "%"
                     }
