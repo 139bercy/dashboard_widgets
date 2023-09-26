@@ -12,7 +12,15 @@ export const convertStringToLocaleNumber = function (string) {
 
 export const convertFloatToHuman = function (float) {
   // if (Number.isInteger(parseFloat(float))) {
-    return Math.round(float) // Math.round(float * 100) / 100
+    return Math.round(float * 100) / 100 
+  // } else {
+  //   return parseFloat(parseFloat(float).toFixed(2)).toLocaleString()
+  // }
+}
+
+export const convertFloatToHumanDataBox = function (float) {
+  // if (Number.isInteger(parseFloat(float))) {
+    return Math.round(float) // arrondis Math.round(float * 100) / 100  
   // } else {
   //   return parseFloat(parseFloat(float).toFixed(2)).toLocaleString()
   // }
