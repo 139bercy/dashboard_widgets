@@ -18,8 +18,11 @@ export const convertFloatToHuman = function (float) {
   // }
 }
 
+export const convertFloatToHumanDB = function (float) {
 
+    return Math.round(float * 100) / 100
 
+}
 
 export const convertDateToHuman = function (string) {
   const date = new Date(string)
