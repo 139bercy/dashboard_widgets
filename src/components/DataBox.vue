@@ -4,7 +4,7 @@
 
     <p class="l_box_title fr-text--xs fr-mb-0">Mise à jour : {{currentDate}}</p>
     <p class="fr-text--sm fr-text--bold fr-my-1w">{{indicatorName}}</p>
-    <p class="fr-text--sm fr-mb-1w" v-if="(!testIfNaN(evolvalue))">{{convertFloatToHumanDataBox(currentValue)}} {{indicatorUnit}}</p>
+    <p class="fr-text--sm fr-mb-1w" v-if="(!testIfNaN(evolvalue))">{{convertFloatToHuman(currentValue)}} {{indicatorUnit}}</p>
   </div>
 
 </template>
