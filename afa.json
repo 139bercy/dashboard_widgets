@@ -1038,7 +1038,7 @@
         "onglets": [
             {
                 "Carte": 1,
-                "Carte_titre": "o\tNombre moyen d’infractions d’atteinte à la probité par an entre 2016 et 2021 – chiffres bruts",
+                "Carte_titre": "Nombre moyen d’infractions d’atteinte à la probité par an entre 2016 et 2021 – chiffres bruts",
                 "Graph": false,
                 "Bar": false,
                 "Box": false,
@@ -1067,7 +1067,7 @@
             },
             {
                 "Carte": 1,
-                "Carte_titre": "o\tNombre moyen d’infractions d’atteinte à la probité par an  pour 100 000 habitants entre 2016 et 2021",
+                "Carte_titre": "Nombre moyen d’infractions d’atteinte à la probité par an  pour 100 000 habitants entre 2016 et 2021",
                 "Graph": false,
                 "Bar": false,
                 "Box": false,
