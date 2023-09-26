@@ -12,16 +12,10 @@ export const convertStringToLocaleNumber = function (string) {
 
 export const convertFloatToHuman = function (float) {
   // if (Number.isInteger(parseFloat(float))) {
-    return Math.round(float * 100) / 100
+    return Math.round(float) // Math.round(float * 100) / 100 arrondis
   // } else {
   //   return parseFloat(parseFloat(float).toFixed(2)).toLocaleString()
   // }
-}
-
-export const convertFloatToHumanDB = function (float) {
-
-    return Math.round(float) 
-
 }
 
 export const convertDateToHuman = function (string) {
