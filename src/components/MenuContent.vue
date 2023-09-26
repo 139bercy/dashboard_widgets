@@ -30,13 +30,13 @@
         </div>
       </div> -->
 
-        <!--
+        
         <div class="fr-sidemenu__title">
           Affiner la recherche par territoire :
         </div>
         <geo-list></geo-list>
         <div class="fr-sidemenu__title">Naviguer par thématique :</div>
-        -->
+      
 
         <ul class="fr-sidemenu__list" v-for="volet in volets" :key="volet">
           <li class="fr-sidemenu__item">
