@@ -1218,9 +1218,9 @@
                     },
                     {
                         "Code_indicateur": "moins de 15 ans",
-                        "Nom_indicateur": "75 ans et plus",
+                        "Nom_indicateur": "moins de 15 ans",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "75 ans et plus",
+                        "Titre_indicateur": "moins de 15 ans",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -1234,9 +1234,9 @@
                     },
                     {
                         "Code_indicateur": "75 ans et plus",
-                        "Nom_indicateur": "moins de 15 ans",
+                        "Nom_indicateur": "75 ans et plus",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "moins de 15 ans",
+                        "Titre_indicateur": "75 ans et plus",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
