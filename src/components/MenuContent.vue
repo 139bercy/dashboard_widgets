@@ -32,7 +32,6 @@
 
 
         <div class="fr-sidemenu__title">
-        
           Affiner la recherche par territoire : 
         </div>
         <geo-list></geo-list>
