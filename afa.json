@@ -1004,7 +1004,7 @@
                 "Bar": false,
                 "Box": false,
                 "Points": false,
-                "MinGeoLevel": "France",
+                "MinGeoLevel": "departements",
                 "Description_mesure": "Note de lecture : Dans les procédures judiciaires clôturées en 2020, la gendarmerie et la police nationales ont enregistré 702 infractions d’atteinte à la probité. Explications. Les infractions d’atteinte à la probité regroupent la corruption, le trafic d’influence, le favoritisme, la prise illégale d’intérêts, le détournement de fonds ou de biens publics et la concussion. Pour une définition et une illustration de chaque infraction, se reporter au Lexique de l’AFA. Champ : France (Métropole + DROM), procédures clôturées sur la période 2016-2021",
                 "Titre_onglet": "Évolution nationale",
                 "Pie": false,
