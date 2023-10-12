@@ -85,6 +85,7 @@ jobs:
             paths:
               - public/france-relance.json
               - public/afa.json
+              - public/afa-2021.json
               - public/impact.json
 
   deploy-github-pages:
