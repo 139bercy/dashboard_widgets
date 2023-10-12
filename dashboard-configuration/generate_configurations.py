@@ -59,6 +59,18 @@ def convert_excel_to_json(path):
             'Info',
             'Info_titre',
             'Info_contenu'])
+    
+    isAfa21 = "afa-2021.csv" in path
+    if isAfa21:
+        onglet_properties.extend([
+            'Pie',
+            'Pie_titre',
+            'Pie_legende',
+            'Table',
+            'Table_titre',
+            'Info',
+            'Info_titre',
+            'Info_contenu'])
 
     df = df.dropna(subset=['No_Panneau']).sort_values(by=["No_Panneau"], ascending=True)
     panneaux = list(df["No_Panneau"].unique())
@@ -86,7 +98,7 @@ def convert_excel_to_json(path):
                 if col in df_onglet and not pd.isna(df_onglet[col].iloc[0]):
                     if col in ["Carte", "Graph", "Points", "Bar", "Box", 'Pie', 'Table', 'Info']:
                         value = int(df_onglet[col].iloc[0])
-                        if isAfa:
+                        if isAfa or isAfa21:
                             if value == 0:
                                 dict_onglet[col] = False
                             else:
