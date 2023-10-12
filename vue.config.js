@@ -21,6 +21,11 @@ module.exports = {
          template: 'public/index-afa.html',
          filename: 'index-afa.html',
      },
+     'index-afa-2021': {
+        entry: 'src/main.js',
+        template: 'public/index-afa-2021.html',
+        filename: 'index-afa-2021.html',
+     },
      'index-impact': {
          entry: 'src/main.js',
          template: 'public/index-impact.html',
