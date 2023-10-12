@@ -1019,7 +1019,7 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "NB_INF_PROB",
+                        "Code_indicateur": "NB_INF_PROB_bis_bis",
                         "Indicateur_principal": "10",
                         "Titre_indicateur": "Nombre d’infractions d’atteinte à la probité enregistrées",
                         "Unité_GP": "Infractions en 2021",
@@ -1057,7 +1057,7 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "NB_INF_PROB",
+                        "Code_indicateur": "NB_INF_PROB_bis",
                         "Indicateur_principal": "10",
                         "Titre_indicateur": "Nombre d'infractions pour des atteintes à la probité",
                         "Unité_GP": "Infractions en 2020",
@@ -1086,7 +1086,7 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "PART_INF_PROB_HAB",
+                        "Code_indicateur": "PART_INF_PROB_HAB_bis",
                         "Indicateur_principal": "10",
                         "Titre_indicateur": "Nombre d'infractions pour des atteintes à la probité",
                         "Unité_GP": "Infractions en 2020",
@@ -1124,7 +1124,7 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "Concussion",
+                        "Code_indicateur": "Concussion_bis",
                         "Nom_indicateur": "CONCUSSION",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "CONCUSSION",
@@ -1132,7 +1132,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Détournements de fonds publics",
+                        "Code_indicateur": "Détournements de fonds publics_bis",
                         "Nom_indicateur": "DETOURNEMENT DE FONDS PUBLICS",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "DETOURNEMENT DE FONDS PUBLICS",
@@ -1140,7 +1140,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Favoritisme",
+                        "Code_indicateur": "Favoritisme_bis",
                         "Nom_indicateur": "FAVORITISME",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "FAVORITISME",
@@ -1148,7 +1148,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Trafic d’Influence",
+                        "Code_indicateur": "Trafic d’Influence_bis",
                         "Nom_indicateur": "TRAFIC D'INFLUENCE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "TRAFIC D'INFLUENCE",
@@ -1156,7 +1156,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Corruption",
+                        "Code_indicateur": "Corruption_bis",
                         "Nom_indicateur": "CORRUPTION",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "CORRUPTION",
@@ -1164,7 +1164,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Prise illégale d’intérêts",
+                        "Code_indicateur": "Prise illégale d’intérêts_bis",
                         "Nom_indicateur": "PRISE ILLEGALE D'INTERETS",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "PRISE ILLEGALE D'INTERETS",
@@ -1201,7 +1201,7 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "de 25 à 34 ans",
+                        "Code_indicateur": "de 25 à 34 ans_bis",
                         "Nom_indicateur": "de 25 à 34 ans",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "de 25 à 34 ans",
@@ -1209,7 +1209,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "de 35 à 44 ans",
+                        "Code_indicateur": "de 35 à 44 ans_bis",
                         "Nom_indicateur": "de 35 à 44 ans",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "de 35 à 44 ans",
@@ -1217,7 +1217,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "moins de 15 ans",
+                        "Code_indicateur": "moins de 15 ans_bis",
                         "Nom_indicateur": "moins de 15 ans",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "moins de 15 ans",
@@ -1225,7 +1225,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "de 15 à 24 ans",
+                        "Code_indicateur": "de 15 à 24 ans_bis",
                         "Nom_indicateur": "de 15 à 24 ans",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "de 15 à 24 ans",
@@ -1233,7 +1233,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "75 ans et plus",
+                        "Code_indicateur": "75 ans et plus_bis",
                         "Nom_indicateur": "75 ans et plus",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "75 ans et plus",
@@ -1241,7 +1241,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "de 55 à 64 ans",
+                        "Code_indicateur": "de 55 à 64 ans_bis",
                         "Nom_indicateur": "de 55 à 64 ans",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "de 55 à 64 ans",
@@ -1249,7 +1249,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "de 65 à 74 ans",
+                        "Code_indicateur": "de 65 à 74 ans_bis",
                         "Nom_indicateur": "de 65 à 74 ans",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "de 65 à 74 ans",
@@ -1257,7 +1257,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "de 45 à 54 ans",
+                        "Code_indicateur": "de 45 à 54 ans_bis",
                         "Nom_indicateur": "de 45 à 54 ans",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "de 45 à 54 ans",
@@ -1285,7 +1285,7 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "H",
+                        "Code_indicateur": "H_bis",
                         "Nom_indicateur": "HOMME",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "HOMME",
@@ -1293,7 +1293,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "F",
+                        "Code_indicateur": "F_bis",
                         "Nom_indicateur": "FEMME",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "FEMME",
