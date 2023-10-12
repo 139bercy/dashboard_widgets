@@ -2,7 +2,7 @@
     {
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
         "Titre_panneau": "Analyse par type de faits",
-        "Volet": "Données issues de l’analyse des décisions de justice (phase de test)",
+        "Volet": "Données issues de l’analyse des décisions de justice",
         "source": "Analyse par l’AFA de 111 décisions de justice rendues entre 2014 et 2020 en matière d’atteintes à la probité. ",
         "accordéon": "En savoir plus sur la donnée",
         "onglets": [
@@ -67,7 +67,7 @@
     {
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
         "Titre_panneau": "Analyse par secteurs d’activité",
-        "Volet": "Données issues de l’analyse des décisions de justice (phase de test)",
+        "Volet": "Données issues de l’analyse des décisions de justice",
         "source": "Analyse par l’AFA de 111 décisions de justice rendues entre 2014 et 2020 en matière d’atteintes à la probité. ",
         "accordéon": "En savoir plus sur la donnée",
         "onglets": [
@@ -300,7 +300,7 @@
     {
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
         "Titre_panneau": "Répartition des prévenus",
-        "Volet": "Données issues de l’analyse des décisions de justice (phase de test)",
+        "Volet": "Données issues de l’analyse des décisions de justice",
         "source": "Analyse par l’AFA de 111 décisions de justice rendues entre 2014 et 2020 en matière d’atteintes à la probité. ",
         "accordéon": "En savoir plus sur la donnée",
         "onglets": [
@@ -394,7 +394,7 @@
     {
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
         "Titre_panneau": "Nature et sexe des prévenus ",
-        "Volet": "Données issues de l’analyse des décisions de justice (phase de test)",
+        "Volet": "Données issues de l’analyse des décisions de justice",
         "source": "Analyse par l’AFA de 111 décisions de justice rendues entre 2014 et 2020 en matière d’atteintes à la probité. ",
         "accordéon": "En savoir plus sur la donnée",
         "onglets": [
@@ -467,7 +467,7 @@
     {
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
         "Titre_panneau": "Qualité et catégorie socio-professionnelle (CSP) des prévenus",
-        "Volet": "Données issues de l’analyse des décisions de justice (phase de test)",
+        "Volet": "Données issues de l’analyse des décisions de justice",
         "source": "Analyse par l’AFA de 111 décisions de justice rendues entre 2014 et 2020 en matière d’atteintes à la probité. ",
         "accordéon": "En savoir plus sur la donnée",
         "onglets": [
@@ -620,7 +620,7 @@
     {
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
         "Titre_panneau": "Caractéristiques de la procédure",
-        "Volet": "Données issues de l’analyse des décisions de justice (phase de test)",
+        "Volet": "Données issues de l’analyse des décisions de justice",
         "source": "Analyse par l’AFA de 111 décisions de justice rendues entre 2014 et 2020 en matière d’atteintes à la probité. ",
         "accordéon": "En savoir plus sur la donnée",
         "onglets": [
@@ -722,7 +722,7 @@
     {
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
         "Titre_panneau": "Analyse de la décision judiciaire",
-        "Volet": "Données issues de l’analyse des décisions de justice (phase de test)",
+        "Volet": "Données issues de l’analyse des décisions de justice",
         "source": "Analyse par l’AFA de 111 décisions de justice rendues entre 2014 et 2020 en matière d’atteintes à la probité. ",
         "accordéon": "En savoir plus sur la donnée",
         "onglets": [
@@ -827,7 +827,7 @@
     {
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
         "Titre_panneau": "Sanction pénale",
-        "Volet": "Données issues de l’analyse des décisions de justice (phase de test)",
+        "Volet": "Données issues de l’analyse des décisions de justice",
         "source": "Analyse par l’AFA de 111 décisions de justice rendues entre 2014 et 2020 en matière d’atteintes à la probité. ",
         "accordéon": "En savoir plus sur la donnée",
         "onglets": [
