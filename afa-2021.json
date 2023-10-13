@@ -407,7 +407,7 @@
     },
     {
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
-        "Titre_panneau": "Indicateurs",
+        "Titre_panneau": "Indicateurs prévenus",
         "Volet": "Répartition des prévenus",
         "source": "Analyse par l’AFA de 111 décisions de justice rendues entre 2014 et 2020 en matière d’atteintes à la probité. ",
         "accordéon": "En savoir plus sur la donnée",
@@ -792,8 +792,8 @@
     },
     {
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
-        "Titre_panneau": "Indicateurs",
-        "Volet": "Indicateurs procédure",
+        "Titre_panneau": "Indicateurs procédure",
+        "Volet": "Caractéristiques de la procédure",
         "source": "Analyse par l’AFA de 111 décisions de justice rendues entre 2014 et 2020 en matière d’atteintes à la probité. ",
         "accordéon": "En savoir plus sur la donnée",
         "onglets": [
