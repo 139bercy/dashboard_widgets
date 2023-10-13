@@ -244,7 +244,7 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "2021_SECTEUR PRIVÉ_AUTRE CATEGORIE",
+                        "Code_indicateur": "2021_SECTEUR PRIVÉ_AUTRE CATEGORIE_v2",
                         "Nom_indicateur": "AUTRE CATEGORIE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "AUTRE CATEGORIE",
@@ -252,7 +252,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_SECTEUR PRIVÉ_INDUSTRIE MANUFACTURIÈRE",
+                        "Code_indicateur": "2021_SECTEUR PRIVÉ_INDUSTRIE MANUFACTURIÈRE_v2",
                         "Nom_indicateur": "INDUSTRIE MANUFACTURIÈRE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "INDUSTRIE MANUFACTURIÈRE",
@@ -260,7 +260,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_SECTEUR PRIVÉ_ACTIVITÉS DE SERVICES ADM",
+                        "Code_indicateur": "2021_SECTEUR PRIVÉ_ACTIVITÉS DE SERVICES ADM_v2",
                         "Nom_indicateur": "ACTIVITÉS DE SERVICES ADMINISTRATIFS ET DE SOUTIEN",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "ACTIVITÉS DE SERVICES ADMINISTRATIFS ET DE SOUTIEN",
@@ -268,7 +268,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_SECTEUR PRIVÉ_NON RENSEIGNE",
+                        "Code_indicateur": "2021_SECTEUR PRIVÉ_NON RENSEIGNE_v2",
                         "Nom_indicateur": "NON RENSEIGNE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "NON RENSEIGNE",
@@ -276,7 +276,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_SECTEUR PRIVÉ_INDUSTRIES EXTRACTIVES",
+                        "Code_indicateur": "2021_SECTEUR PRIVÉ_INDUSTRIES EXTRACTIVES_v2",
                         "Nom_indicateur": "INDUSTRIES EXTRACTIVES",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "INDUSTRIES EXTRACTIVES",
@@ -284,7 +284,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_SECTEUR PRIVÉ_ACTIVITÉS SPÉCIALISÉES, S",
+                        "Code_indicateur": "2021_SECTEUR PRIVÉ_ACTIVITÉS SPÉCIALISÉES, S_v2",
                         "Nom_indicateur": "ACTIVITÉS SPÉCIALISÉES, SCIENTIFIQUES ET TECHNIQUES",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "ACTIVITÉS SPÉCIALISÉES, SCIENTIFIQUES ET TECHNIQUES",
@@ -292,7 +292,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_SECTEUR PRIVÉ_AUTRES ACTIVITÉS DE SERVI",
+                        "Code_indicateur": "2021_SECTEUR PRIVÉ_AUTRES ACTIVITÉS DE SERVI_v2",
                         "Nom_indicateur": "AUTRES ACTIVITÉS DE SERVICES",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "AUTRES ACTIVITÉS DE SERVICES",
@@ -300,7 +300,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_SECTEUR PRIVÉ_CONSTRUCTION",
+                        "Code_indicateur": "2021_SECTEUR PRIVÉ_CONSTRUCTION_v2",
                         "Nom_indicateur": "CONSTRUCTION",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "CONSTRUCTION",
@@ -308,7 +308,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_SECTEUR PRIVÉ_ACTIVITÉS IMMOBILIÈRES",
+                        "Code_indicateur": "2021_SECTEUR PRIVÉ_ACTIVITÉS IMMOBILIÈRES_v2",
                         "Nom_indicateur": "ACTIVITÉS IMMOBILIÈRES",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "ACTIVITÉS IMMOBILIÈRES",
@@ -316,7 +316,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_SECTEUR PRIVÉ_ENSEIGNEMENT",
+                        "Code_indicateur": "2021_SECTEUR PRIVÉ_ENSEIGNEMENT_v2",
                         "Nom_indicateur": "ENSEIGNEMENT",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "ENSEIGNEMENT",
@@ -324,7 +324,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_SECTEUR PRIVÉ_ACTIVITÉS FINANCIÈRES ET ",
+                        "Code_indicateur": "2021_SECTEUR PRIVÉ_ACTIVITÉS FINANCIÈRES ET _v2",
                         "Nom_indicateur": "ACTIVITÉS FINANCIÈRES ET D'ASSURANCE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "ACTIVITÉS FINANCIÈRES ET D'ASSURANCE",
@@ -438,7 +438,7 @@
                         "Unité_Evol": "ans"
                     },
                     {
-                        "Code_indicateur": "cheval",
+                        "Code_indicateur": "2021_INDICATEURS_NOMBRE MOYEN DE PRÉVENUS_v2",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Nombre moyen de prévenus par affaire",
                         "Unité_GP": "prévenus",
@@ -567,7 +567,7 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "2021_QUALITÉ_EMPLOYES",
+                        "Code_indicateur": "2021_QUALITÉ_EMPLOYES_v2",
                         "Nom_indicateur": "EMPLOYES",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "EMPLOYES",
@@ -575,7 +575,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_QUALITÉ_PERSONNE MORALE DE DROIT ",
+                        "Code_indicateur": "2021_QUALITÉ_PERSONNE MORALE DE DROIT _v2",
                         "Nom_indicateur": "PERSONNE MORALE DE DROIT PRIVE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "PERSONNE MORALE DE DROIT PRIVE",
@@ -583,7 +583,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_QUALITÉ_ELUS",
+                        "Code_indicateur": "2021_QUALITÉ_ELUS_v2",
                         "Nom_indicateur": "ELUS",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "ELUS",
@@ -591,7 +591,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_QUALITÉ_PARTICULIERS",
+                        "Code_indicateur": "2021_QUALITÉ_PARTICULIERS_v2",
                         "Nom_indicateur": "PARTICULIERS",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "PARTICULIERS",
@@ -599,7 +599,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_QUALITÉ_AGENTS PUBLICS",
+                        "Code_indicateur": "2021_QUALITÉ_AGENTS PUBLICS_v2",
                         "Nom_indicateur": "AGENTS PUBLICS",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "AGENTS PUBLICS",
@@ -607,7 +607,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_QUALITÉ_DIRIGEANTS DE SOCIETE",
+                        "Code_indicateur": "2021_QUALITÉ_DIRIGEANTS DE SOCIETE_v2",
                         "Nom_indicateur": "DIRIGEANTS DE SOCIETE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "DIRIGEANTS DE SOCIETE",
@@ -645,7 +645,7 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "2021_CATÉGORIE SOCIO-PROF_CADRES DE LA FONCTION PUB",
+                        "Code_indicateur": "2021_CATÉGORIE SOCIO-PROF_CADRES DE LA FONCTION PUB_v2",
                         "Nom_indicateur": "CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET ARTISTIQUES",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET ARTISTIQUES",
@@ -653,7 +653,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_CATÉGORIE SOCIO-PROF_AUTRE",
+                        "Code_indicateur": "2021_CATÉGORIE SOCIO-PROF_AUTRE_v2",
                         "Nom_indicateur": "AUTRE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "AUTRE",
@@ -661,7 +661,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_CATÉGORIE SOCIO-PROF_CADRES D’ENTREPRISE",
+                        "Code_indicateur": "2021_CATÉGORIE SOCIO-PROF_CADRES D’ENTREPRISE_v2",
                         "Nom_indicateur": "CADRES D’ENTREPRISE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "CADRES D’ENTREPRISE",
@@ -669,7 +669,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_CATÉGORIE SOCIO-PROF_EMPLOYÉS DE LA FONCTION P",
+                        "Code_indicateur": "2021_CATÉGORIE SOCIO-PROF_EMPLOYÉS DE LA FONCTION P_v2",
                         "Nom_indicateur": "EMPLOYÉS DE LA FONCTION PUBLIQUE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "EMPLOYÉS DE LA FONCTION PUBLIQUE",
@@ -677,7 +677,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_CATÉGORIE SOCIO-PROF_CHEFS D'ENTREPRISE DE 10 ",
+                        "Code_indicateur": "2021_CATÉGORIE SOCIO-PROF_CHEFS D'ENTREPRISE DE 10 _v2",
                         "Nom_indicateur": "CHEFS D'ENTREPRISE DE 10 SALARIÉS OU PLUS",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "CHEFS D'ENTREPRISE DE 10 SALARIÉS OU PLUS",
@@ -685,7 +685,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_CATÉGORIE SOCIO-PROF_NON RENSEIGNE",
+                        "Code_indicateur": "2021_CATÉGORIE SOCIO-PROF_NON RENSEIGNE_v2",
                         "Nom_indicateur": "NON RENSEIGNE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "NON RENSEIGNE",
@@ -693,7 +693,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_CATÉGORIE SOCIO-PROF_PROFESSIONS INTERMÉDIAIRE",
+                        "Code_indicateur": "2021_CATÉGORIE SOCIO-PROF_PROFESSIONS INTERMÉDIAIRE_v2",
                         "Nom_indicateur": "PROFESSIONS INTERMÉDIAIRES DE L'ENSEIGNEMENT, DE LA SANTÉ, DE LA FONCTION PUBLIQUE ET ASSIMILÉS",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "PROFESSIONS INTERMÉDIAIRES DE L'ENSEIGNEMENT, DE LA SANTÉ, DE LA FONCTION PUBLIQUE ET ASSIMILÉS",
@@ -701,7 +701,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_CATÉGORIE SOCIO-PROF_INACTIFS DIVERS (AUTRES Q",
+                        "Code_indicateur": "2021_CATÉGORIE SOCIO-PROF_INACTIFS DIVERS (AUTRES Q_v2",
                         "Nom_indicateur": "INACTIFS DIVERS (AUTRES QUE RETRAITÉS)",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "INACTIFS DIVERS (AUTRES QUE RETRAITÉS)",
@@ -922,7 +922,7 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "2021_TYPE DE PEINE_DISPENSE DE PEINE",
+                        "Code_indicateur": "2021_TYPE DE PEINE_DISPENSE DE PEINE_v2",
                         "Nom_indicateur": "DISPENSE DE PEINE",
                         "Indicateur_principal": "3",
                         "Titre_indicateur": "DISPENSE DE PEINE",
@@ -930,7 +930,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_TYPE DE PEINE_AMENDE",
+                        "Code_indicateur": "2021_TYPE DE PEINE_AMENDE_v2",
                         "Nom_indicateur": "AMENDE",
                         "Indicateur_principal": "3",
                         "Titre_indicateur": "AMENDE",
@@ -938,7 +938,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_TYPE DE PEINE_EMPRISONNEMENT",
+                        "Code_indicateur": "2021_TYPE DE PEINE_EMPRISONNEMENT_v2",
                         "Nom_indicateur": "EMPRISONNEMENT",
                         "Indicateur_principal": "3",
                         "Titre_indicateur": "EMPRISONNEMENT",
@@ -946,7 +946,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_TYPE DE PEINE_AMENDE & EMPRISONNEMENT",
+                        "Code_indicateur": "2021_TYPE DE PEINE_AMENDE & EMPRISONNEMENT_v2",
                         "Nom_indicateur": "AMENDE & EMPRISONNEMENT",
                         "Indicateur_principal": "3",
                         "Titre_indicateur": "AMENDE & EMPRISONNEMENT",
