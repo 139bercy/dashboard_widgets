@@ -922,7 +922,7 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "2021_TYPE_DISPENSE DE PEINE_v3",
+                        "Code_indicateur": "2021_TYPE_DISPENSE DE PEINE",
                         "Nom_indicateur": "DISPENSE DE PEINE",
                         "Indicateur_principal": "3",
                         "Titre_indicateur": "DISPENSE DE PEINE",
@@ -930,7 +930,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_TYPE_AMENDE_v3",
+                        "Code_indicateur": "2021_TYPE_AMENDE",
                         "Nom_indicateur": "AMENDE",
                         "Indicateur_principal": "3",
                         "Titre_indicateur": "AMENDE",
@@ -938,7 +938,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_TYPE_EMPRISONNEMENT_v3",
+                        "Code_indicateur": "2021_TYPE_EMPRISONNEMENT",
                         "Nom_indicateur": "EMPRISONNEMENT",
                         "Indicateur_principal": "3",
                         "Titre_indicateur": "EMPRISONNEMENT",
@@ -946,7 +946,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_TYPE_AMENDE & EMPRISONNEMENT_v3",
+                        "Code_indicateur": "2021_TYPE_AMENDE & EMPRISONNEMENT",
                         "Nom_indicateur": "AMENDE & EMPRISONNEMENT",
                         "Indicateur_principal": "3",
                         "Titre_indicateur": "AMENDE & EMPRISONNEMENT",
