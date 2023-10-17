@@ -694,9 +694,9 @@
                     },
                     {
                         "Code_indicateur": "2021_CATÉGORIE SOCIO-PROF_NON RENSEIGNE_v2",
-                        "Nom_indicateur": "PROFESSIONS INTERMÉDIAIRES DE L'ENSEIGNEMENT, DE LA SANTÉ, DE LA FONCTION PUBLIQUE ET ASSIMILÉS",
+                        "Nom_indicateur": "NON RENSEIGNE",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "PROFESSIONS INTERMÉDIAIRES DE L'ENSEIGNEMENT, DE LA SANTÉ, DE LA FONCTION PUBLIQUE ET ASSIMILÉS",
+                        "Titre_indicateur": "NON RENSEIGNE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -763,10 +763,10 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "2021_ORIGINE DE L'AFFAIRE_DOSSIER CONNEXE JUSTICE",
-                        "Nom_indicateur": "DOSSIER CONNEXE JUSTICE",
+                        "Code_indicateur": "2021_ORIGINE DE L'AFFAIRE_CITATION DIRECTE",
+                        "Nom_indicateur": "CITATION DIRECTE",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "DOSSIER CONNEXE JUSTICE",
+                        "Titre_indicateur": "CITATION DIRECTE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
