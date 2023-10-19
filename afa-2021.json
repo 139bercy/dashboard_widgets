@@ -137,7 +137,7 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Note de lecture : 30,5% des 111 décisions de justice rendues entre 2014 et 2020 et analysées par l’AFA, visaient au moins un prévenu fonctionnaire de l’État travaillant au sein de l’administration centrale.  Explications : Cette classification a été créée par l’AFA. Méthode de comptage : Calcul de répartition des affaires dont au moins un des prévenus appartient au secteur public.",
+                "Description_mesure": "Note de lecture : 9,3% des prévenus des 111 décisions de justice rendues entre 2014 et 2020 et analysées par l’AFA, étaient fonctionnaire de l’État travaillant au sein de l’administration centrale. Explications : Cette classification a été créée par l’AFA. Méthode de comptage : Calcul de répartition des prévenus appartenant au secteur public",
                 "Titre_onglet": "Données 2021",
                 "Pie": 1,
                 "Table": false,
@@ -304,8 +304,7 @@
                         "Nom_indicateur": "TRANSPORT",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "TRANSPORT",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
+                        "Unité_GP": "En savoir plus sur la donnée"
                     },
                     {
                         "Code_indicateur": "2021_SECTEUR PRIVÉ_AUTRE CATEGORIE_v2",
