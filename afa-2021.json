@@ -137,7 +137,7 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Note de lecture : 9,3% des prévenus des 111 décisions de justice rendues entre 2014 et 2020 et analysées par l’AFA, étaient fonctionnaire de l’État travaillant au sein de l’administration centrale. Explications : Cette classification a été créée par l’AFA. Méthode de comptage : Calcul de répartition des prévenus appartenant au secteur public",
+                "Description_mesure": "Note de lecture : 9,3% des prévenus des 111 décisions de justice rendues entre 2014 et 2020 et analysées par l’AFA, étaient fonctionnaires de l’État travaillant au sein de l’administration centrale. Explications : Cette classification a été créée par l’AFA. Méthode de comptage : Calcul de répartition des prévenus appartenant au secteur public",
                 "Titre_onglet": "Données 2021",
                 "Pie": 1,
                 "Table": false,
@@ -231,7 +231,7 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Note de lecture : 13,8% des 111 décisions de justice rendues entre 2014 et 2020 et analysées par l’AFA, visaient au moins un prévenu travaillant dans le secteur de la construction.  Explications : La classification correspond à la nomenclature d’activités française de l’INSEE (NAF rev.2 - Sections).  Méthode de comptage : Calcul de répartition des affaires dont au moins un des prévenus appartient au secteur privé.",
+                "Description_mesure": "Note de lecture : 26,7% des prévenus des 111 décisions de justice rendues entre 2014 et 2020 et analysées par l’AFA, travaillaient dans le secteur de la construction. Explications : La classification correspond à la nomenclature d’activités française de l’INSEE (NAF rev.2 - Sections). Méthode de comptage : Calcul de répartition des prévenus appartenant au secteur privé.",
                 "Titre_onglet": "Données 2021",
                 "Pie": 1,
                 "Table": false,
@@ -311,8 +311,8 @@
                         "Nom_indicateur": "AUTRE CATEGORIE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "AUTRE CATEGORIE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
+                        "Unité_GP": "%",
+                        "Unité_Evol": "Analyse par l’AFA de 111 décisions de justice rendues entre 2014 et 2020 en matière d’atteintes à la probité. "
                     },
                     {
                         "Code_indicateur": "2021_SECTEUR PRIVÉ_ACTIVITÉS IMMOBILIÈRES_v2",
@@ -356,7 +356,7 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Note de lecture : Au sein de l’échantillon de 111 décisions de justice rendues entre 2014 et 2020 et analysées par l’AFA, 44,9 % des prévenus renvoyés devant les juridictions pénales pour des infractions d’atteinte à la probité, l’ont été pour des faits de corruption. Méthode de comptage : Calcul de répartition des prévenus.",
+                "Description_mesure": "Note de lecture : Au sein de l’échantillon de 111 décisions de justice rendues entre 2014 et 2020 et analysées par l’AFA, 44,9 % des prévenus renvoyés devant les juridictions pénales pour des infractions d’atteinte à la probité, l’ont été pour des faits de corruption. Un prévenu renvoyé devant les juridictions pénales pour des faits de corruption et de favoritisme est compté dans les deux catégories. Méthode de comptage : Calcul de répartition des prévenus.",
                 "Titre_onglet": "Données 2021",
                 "Pie": 1,
                 "Table": false,
