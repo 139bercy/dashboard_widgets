@@ -632,10 +632,10 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Qualité_PERSONNE MORALE DE DROIT PUBLIC ",
-                        "Nom_indicateur": "PERSONNE MORALE DE DROIT PUBLIC ",
+                        "Code_indicateur": "Données 2021_Qualité_PERSONNE MORALE DE DROIT PUBLIC",
+                        "Nom_indicateur": "PERSONNE MORALE DE DROIT PUBLIC",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "PERSONNE MORALE DE DROIT PUBLIC ",
+                        "Titre_indicateur": "PERSONNE MORALE DE DROIT PUBLIC",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -780,10 +780,10 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Origine de l’affaire_LETTRE ANONYME ",
-                        "Nom_indicateur": "LETTRE ANONYME ",
+                        "Code_indicateur": "Données 2021_Origine de l’affaire_LETTRE ANONYME",
+                        "Nom_indicateur": "LETTRE ANONYME",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "LETTRE ANONYME ",
+                        "Titre_indicateur": "LETTRE ANONYME",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -841,10 +841,10 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "Données 2021_Indicateurs procédure_Durée moyenne de la période de prévention ",
-                        "Nom_indicateur": "Durée moyenne de la période de prévention ",
+                        "Code_indicateur": "Données 2021_Indicateurs procédure_Durée moyenne de la période de prévention",
+                        "Nom_indicateur": "Durée moyenne de la période de prévention",
                         "Indicateur_principal": "4",
-                        "Titre_indicateur": "Durée moyenne de la période de prévention ",
+                        "Titre_indicateur": "Durée moyenne de la période de prévention",
                         "Unité_GP": "ans",
                         "Unité_Evol": "%"
                     },
@@ -903,18 +903,18 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Sens de la décision_AUTRE ",
-                        "Nom_indicateur": "AUTRE ",
+                        "Code_indicateur": "Données 2021_Sens de la décision_AUTRE",
+                        "Nom_indicateur": "AUTRE",
                         "Indicateur_principal": "3",
-                        "Titre_indicateur": "AUTRE ",
+                        "Titre_indicateur": "AUTRE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Sens de la décision_RELAXE ",
-                        "Nom_indicateur": "RELAXE ",
+                        "Code_indicateur": "Données 2021_Sens de la décision_RELAXE",
+                        "Nom_indicateur": "RELAXE",
                         "Indicateur_principal": "3",
-                        "Titre_indicateur": "RELAXE ",
+                        "Titre_indicateur": "RELAXE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -957,18 +957,18 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Type de peine_EMPRISONNEMENT ",
-                        "Nom_indicateur": "EMPRISONNEMENT ",
+                        "Code_indicateur": "Données 2021_Type de peine_EMPRISONNEMENT",
+                        "Nom_indicateur": "EMPRISONNEMENT",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "EMPRISONNEMENT ",
+                        "Titre_indicateur": "EMPRISONNEMENT",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Type de peine_AMENDE ",
-                        "Nom_indicateur": "AMENDE ",
+                        "Code_indicateur": "Données 2021_Type de peine_AMENDE",
+                        "Nom_indicateur": "AMENDE",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "AMENDE ",
+                        "Titre_indicateur": "AMENDE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
