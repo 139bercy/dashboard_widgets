@@ -1018,10 +1018,10 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "Données 2021_Personnes physiques_Montant moyen des amendes prononcées (Personnes Morales)",
-                        "Nom_indicateur": "Montant moyen des amendes prononcées (Personnes Morales)",
+                        "Code_indicateur": "Données 2021_Personnes physiques_Montant moyen des amendes prononcées (Personnes Physiques)",
+                        "Nom_indicateur": "Montant moyen des amendes prononcées (Personnes Physiques)",
                         "Indicateur_principal": "3",
-                        "Titre_indicateur": "Montant moyen des amendes prononcées (Personnes Morales)",
+                        "Titre_indicateur": "Montant moyen des amendes prononcées (Personnes Physiques)",
                         "Unité_GP": "€",
                         "Unité_Evol": "%"
                     },
@@ -1063,10 +1063,10 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "Données 2021_Personnes morales_Montant moyen des amendes prononcées (Personnes Physiques)",
-                        "Nom_indicateur": "Montant moyen des amendes prononcées (Personnes Physiques)",
+                        "Code_indicateur": "Données 2021_Personnes morales_Montant moyen des amendes prononcées (Personnes Morales)",
+                        "Nom_indicateur": "Montant moyen des amendes prononcées (Personnes Morales)",
                         "Indicateur_principal": "3",
-                        "Titre_indicateur": "Montant moyen des amendes prononcées (Personnes Physiques)",
+                        "Titre_indicateur": "Montant moyen des amendes prononcées (Personnes Morales)",
                         "Unité_GP": "€",
                         "Unité_Evol": "%"
                     }
