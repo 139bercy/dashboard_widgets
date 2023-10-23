@@ -34,7 +34,7 @@
         <div class="fr-sidemenu__title">
           Affiner la recherche par territoire : 
         </div>
-        // <geo-list></geo-list>
+        <!-- <geo-list></geo-list> -->
   
         <div class="fr-sidemenu__title">Naviguer par thématique :</div>
       
@@ -69,12 +69,12 @@
 
 <script>
 import { mixin } from '@/utils.js'
-// import GeoList from '@/components/GeoList'
+<!-- import GeoList from '@/components/GeoList' -->
 
 export default {
   name: 'MenuContent',
   components: {
-    // GeoList,
+    <!-- GeoList, -->
   },
   mixins: [mixin],
   props: {
