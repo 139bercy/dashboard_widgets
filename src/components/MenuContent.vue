@@ -91,7 +91,7 @@ export default {
       panneauxByVolets: [],
       activeVolet: null,
       activePanneau: null,
-      showMenu: false,
+      showMenu: true,
     };
   },
   mounted() {
