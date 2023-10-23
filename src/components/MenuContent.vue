@@ -31,13 +31,6 @@
       </div> -->
 
 
-        <div class="fr-sidemenu__title">
-          Affiner la recherche par territoire : 
-        </div>
-        
-        <div v-if="false">
-          <geo-list></geo-list>
-        </div>
 
         <div class="fr-sidemenu__title">Naviguer par thématique :</div>
       
@@ -65,6 +58,14 @@
             </ul>
           </li>
         </ul>
+
+        <div v-if="false">
+          <!-- <div class="fr-sidemenu__title">
+            Affiner la recherche par territoire : 
+          </div> -->
+            <geo-list></geo-list>
+        </div>
+
       </div>
     </div>
   </scrollactive>
