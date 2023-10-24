@@ -30,10 +30,12 @@
         </div>
       </div> -->
 
+        <div v-if="displayGeolist">
           <div class="fr-sidemenu__title">
             Affiner la recherche par territoire : 
           </div>
           <geo-list></geo-list>
+        </div>
 
         <div class="fr-sidemenu__title">Naviguer par thématique :</div>
       
@@ -80,6 +82,7 @@ export default {
   mixins: [mixin],
   props: {
     panneaux: Array,
+    displayGeolist: Boolean
   },
   data() {
     return {

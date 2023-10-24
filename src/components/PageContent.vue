@@ -3,7 +3,7 @@
     <div class="fr-grid-row">
 
       <div class="fr-col-12 fr-col-md-4 fr-col-lg-3" v-if="displaySearch">
-        <menu-content :panneaux="panneaux"></menu-content>
+        <menu-content :panneaux="panneaux" :displayGeolist="displayGeolist"></menu-content>
       </div>
       <div class="fr-col-12 fr-col-md-7 fr-col-lg-7 fr-ml-md-6w fr-mb-6w">
         <div v-html="descriptionContent"></div>
@@ -45,6 +45,7 @@ export default {
     configuration: String,
     dataset: String,
     displaySearch: Boolean,
+    displayGeolist: Boolean,
     description: String,
     sourceLinks: String,
     logo: String,
