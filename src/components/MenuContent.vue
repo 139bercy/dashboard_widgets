@@ -110,7 +110,7 @@ export default {
           }
           this.panneauxByVolets[panneau.Volet].push(panneau);
         });
-        this.toggleMenuList(this.panneaux[0].Volet, true);
+        //this.toggleMenuList(this.panneaux[0].Volet, true);
         this.activeVolet = this.panneaux[0].Volet;
         this.activePanneau = 0;
       }
