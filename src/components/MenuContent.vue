@@ -106,7 +106,7 @@ export default {
           if (!this.volets.includes(panneau.Volet)) {
             this.volets.push(panneau.Volet);
             this.panneauxByVolets[panneau.Volet] = [];
-            this.toggleMenuList(panneau.Volet, false);
+            this.toggleMenuList(panneau.Volet, true);
           }
           this.panneauxByVolets[panneau.Volet].push(panneau);
         });
