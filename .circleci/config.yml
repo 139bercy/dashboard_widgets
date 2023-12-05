@@ -88,6 +88,7 @@ jobs:
               - public/afa.json
               - public/afa-2021.json
               - public/impact.json
+              - public/ca-afa-2021.json
 
   deploy-github-pages:
     docker:
