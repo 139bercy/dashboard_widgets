@@ -26,10 +26,10 @@ module.exports = {
         template: 'public/index-afa-2021.html',
         filename: 'index-afa-2021.html',
      },
-     'ca-afa-2021': {
+     'index-ca-afa-2021': {
       entry: 'src/main.js',
-      template: 'public/ca-afa-2021.html',
-      filename: 'ca-afa-2021.html',
+      template: 'public/index-ca-afa-2021.html',
+      filename: 'index-ca-afa-2021.html',
      },
      'index-impact': {
          entry: 'src/main.js',

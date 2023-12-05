@@ -39,7 +39,7 @@ jobs:
               sed -e 's|/css/index|css/index|g' -e 's|/js/index|js/index|g' -i dist/index-impact.html
               sed -e 's|/css/index|css/index|g' -e 's|/js/index|js/index|g' -i dist/index-afa.html
               sed -e 's|/css/index|css/index|g' -e 's|/js/index|js/index|g' -i dist/index-afa-2021.html
-              sed -e 's|/css/index|css/index|g' -e 's|/js/index|js/index|g' -i dist/ca-afa-2021.html
+              sed -e 's|/css/index|css/index|g' -e 's|/js/index|js/index|g' -i dist/index-ca-afa-2021.html
               apk add --no-cache zip && zip -r dist.zip dist
         - persist_to_workspace:
             root: ./
