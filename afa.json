@@ -479,7 +479,7 @@
                 "Info": false,
                 "Info_titre": "jellsf",
                 "Info_contenu": "qosfjhsq",
-                "Pie_titre": "Répartition des prévenus par sexe",
+                "Pie_titre": "Répartition des prévenus par sexe (personnes physiques)",
                 "Graph_avec_valeurs": false,
                 "Pie_legende": true,
                 "Avec_nom_indicateur": false,
@@ -1133,9 +1133,9 @@
                     },
                     {
                         "Code_indicateur": "Détournements de fonds publics_bis",
-                        "Nom_indicateur": "DETOURNEMENT DE FONDS PUBLICS",
+                        "Nom_indicateur": "DETOURNEMENT DE FONDS/BIENS PUBLICS",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "DETOURNEMENT DE FONDS PUBLICS",
+                        "Titre_indicateur": "DETOURNEMENT DE FONDS/BIENS PUBLICS",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
