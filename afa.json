@@ -775,7 +775,8 @@
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
         "Titre_panneau": "Analyse de la décision judiciaire",
         "Volet": "Données issues de l’analyse des décisions de justice (phase de test)",
-        "source": "En savoir plus sur la donnée",
+        "source": "Analyse par l’AFA de 111 décisions de justice rendues entre 2014 et 2020 en matière d’atteintes à la probité. ",
+        "accordéon": "En savoir plus sur la donnée",
         "onglets": [
             {
                 "Carte": false,
@@ -802,8 +803,8 @@
                         "Nom_indicateur": "EXTINCTION ACTION PUBLIQUE",
                         "Indicateur_principal": "3",
                         "Titre_indicateur": "EXTINCTION ACTION PUBLIQUE",
-                        "Unité_GP": "%",
-                        "Unité_Evol": "Analyse par l’AFA de 111 décisions de justice rendues entre 2014 et 2020 en matière d’atteintes à la probité. "
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
                     },
                     {
                         "Code_indicateur": "CONDAMNATION",
@@ -826,7 +827,7 @@
                         "Nom_indicateur": "RELAXE",
                         "Indicateur_principal": "3",
                         "Titre_indicateur": "RELAXE",
-                        "Unité_GP": "Note de lecture : Sur l’échantillon de 111 décisions de justice rendues entre 2014 et 2020 et analysées par l’AFA, le taux de déclaration de culpabilité s’élève à 66,1%. Plus de 6 infractions d’atteintes à la probité poursuivies sur 10 aboutissent à une reconnaissance de culpabilité. La relaxe est une décision prise par une juridiction pénale de jugement autre que la Cour d'assises (tribunal judicaire ou tribunal de police), qui déclare non coupable le prévenu renvoyée devant elle. L’extinction de l’action publique est constatée lorsque les conditions nécessaires pour poursuivre une personne ne sont plus réunies (décès du prévenu, prescription des faits, amnistie, abrogation de la loi pénale, autorité de la chose jugée, retrait de la plainte pour certaines infractions etc.). La catégorie « autre » regroupe les situations suivantes : annulation de la procédure, nullité des poursuites, irrecevabilité de la citation directe devant le tribunal, etc. Méthode de comptage : Calcul de répartition par infractions selon le sens de la décision.",
+                        "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
                 ]
