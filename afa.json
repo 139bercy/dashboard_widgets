@@ -345,9 +345,9 @@
                     },
                     {
                         "Code_indicateur": "dFB",
-                        "Nom_indicateur": "DETOURNEMENT DE FONDS",
+                        "Nom_indicateur": "DETOURNEMENT DE FONDS/BIENS PUBLICS",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "DETOURNEMENT DE FONDS",
+                        "Titre_indicateur": "DETOURNEMENT DE FONDS/BIENS PUBLICS",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -710,7 +710,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "ARTICLE 40 al.2 du CPP",
+                        "Code_indicateur": "ARTICLE 40 al.2",
                         "Nom_indicateur": "ARTICLE 40 al.2 du CPP",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "ARTICLE 40 al.2 du CPP",
@@ -847,7 +847,7 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Note de lecture : Sur l’échantillon de 111 décisions de justice rendues entre 2014 et 2020 et analysées par l’AFA, 41,8 % des prévenus ont été condamnés à une peine d’emprisonnement et à une amende. Explications : La dispense de peine est une « mesure par laquelle le juge correctionnel ou de police qui a retenu la culpabilité du prévenu décide cependant de ne prononcer aucune sanction contre lui lorsqu’il lui apparaît que son reclassement est acquis, que le dommage est réparé, et que le trouble social occasionné par l’infraction a cessé. » (Lexique Dalloz) Méthode de comptage : Calcul de répartition par infractions selon le type de peines prononcées.  ",
+                "Description_mesure": "Note de lecture : 41,8% des personnes ont été condamnées à une peine d’emprisonnement et une peine d’amende. 42,6% des prévenus ont été condamnés uniquement à une peine d’emprisonnement tandis que 13,1% ont été condamnés uniquement  à une peine d’amende. Méthode de comptage : Calcul de répartition par peine prononcée selon le sens de la décision.",
                 "Titre_onglet": "Type de peine",
                 "Pie": 1,
                 "Table": false,
