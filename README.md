@@ -67,4 +67,4 @@ Afin d'être intégrées dans les tableaux de bord, les données sont traitées 
 
 Ce processus de traitement, mis en place pour le projet France Relance, permet de paramétrer facilement l'affichage du tableau de bord pour des métiers peu familiers avec le maniement de la donnée, tout en assurant la publication en accès ouvert. Si une refonte de cette séquence pourrait être envisagée à moyen terme, celle-ci reste actuellement en fonction. Afin d'en faciliter l'appropriation, le schéma ci-dessous en présente de manière graphique les étapes essentielles.
 
-![Schéma du processus de traitement des données pour les tableaux de bord](./processus-traitement-donnees.png "Schéma du processus de traitement des données pour les tableaux de bord")
+![Schéma du processus de traitement des données pour les tableaux de bord](./documentation/visuels/processus-traitement-donnees.png "Schéma du processus de traitement des données pour les tableaux de bord")
