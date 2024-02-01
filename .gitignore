@@ -24,7 +24,11 @@ pnpm-debug.log*
 *.sln
 *.sw?
 
-*/.ipynb_checkpoints
 */.~lock*
 
 public/*.json
+
+# Observatoire des AAP
+
+**.ipynb_checkpoints
+/dashboard-configuration/scripts/AFA/data
