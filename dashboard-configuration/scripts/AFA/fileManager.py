@@ -14,10 +14,11 @@ fs = s3fs.S3FileSystem(client_kwargs={'endpoint_url': S3_ENDPOINT_URL})
 BUCKET = "esimon" # = racine
 
 # file_path = string
-def import_excel(file_path):
+# index_lines = lignes du tableau excel considérées comme un index (0 = premièe ligne, [0,1] = 2 premières lignes en multi-index)
+def import_excel(file_path, index_lines):
     PATH = BUCKET + "/" + file_path
     with fs.open(PATH,mode="rb") as file: # https://www.geeksforgeeks.org/with-statement-in-python/
-        df = pd.read_excel(file)
+        df = pd.read_excel(file, header=index_lines)
     return df
 
 def export_csv(df,file_path):
