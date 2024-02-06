@@ -4,14 +4,10 @@ Ce fichier permet de gérer les transferts de données entre ici et l'espace Min
 
 -----------------------------------
 
-### Dossiers Panneaux
+### ./pageX/
 
-Chaque dossier correspond à un panneau/tableau/graphique. La modification d'un panneau se déroule en 3 étapes :
-1) Ecriture du script de génération de nouveaux .csv (config) et .ndjson (données)
-2) Génération du .csv et .ndjson
-3) Remplacement
+Chaque dossier correspond à une page dont l'url est [https://139bercy.github.io/dashboard_widgets/index-NOMDOSSIER](https://139bercy.github.io/dashboard_widgets/index-afa) (içi le dossier "afa").
 
-Ils contiennent éventuellement différents scripts selon les modifications voulues :
-- Changement des données utilisées
-- Modification de la description
-- Etc.
+Un script = un graphique.
+
+TODO : Workflow de modification.

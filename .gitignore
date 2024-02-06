@@ -30,5 +30,6 @@ public/*.json
 
 # Observatoire des AAP
 
+__pycache__
 **.ipynb_checkpoints
 /dashboard-configuration/scripts/AFA/data

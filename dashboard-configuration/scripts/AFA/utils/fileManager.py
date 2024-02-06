@@ -11,7 +11,7 @@ import pandas as pd
 S3_ENDPOINT_URL = "https://" + os.environ["AWS_S3_ENDPOINT"]
 fs = s3fs.S3FileSystem(client_kwargs={'endpoint_url': S3_ENDPOINT_URL})
 
-BUCKET = "esimon" # = racine
+BUCKET = "erisim" # = racine
 
 # file_path = string
 # index_lines = lignes du tableau excel considérées comme un index (0 = premièe ligne, [0,1] = 2 premières lignes en multi-index)
