@@ -34,7 +34,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "ANALYSE_PAR_TYPE_Détournement",
+                        "Code_indicateur": "ANALYSE_PAR_TYPE_Favoritisme",
                         "Nom_indicateur": "FAVORITISME",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "FAVORITISME",
@@ -42,7 +42,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "ANALYSE_PAR_TYPE_Favoritisme",
+                        "Code_indicateur": "ANALYSE_PAR_TYPE_Trafic",
                         "Nom_indicateur": "TRAFIC D’INFLUENCE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "TRAFIC D’INFLUENCE",
@@ -50,7 +50,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "ANALYSE_PAR_TYPE_Prise",
+                        "Code_indicateur": "ANALYSE_PAR_TYPE_Détournement",
                         "Nom_indicateur": "DETOURNEMENT DE FONDS/BIENS PUBLICS",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "DETOURNEMENT DE FONDS/BIENS PUBLICS",
@@ -58,7 +58,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "ANALYSE_PAR_TYPE_Trafic",
+                        "Code_indicateur": "ANALYSE_PAR_TYPE_Prise",
                         "Nom_indicateur": "PRISE ILLEGALE D’INTERETS",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "PRISE ILLEGALE D’INTERETS",
