@@ -6,6 +6,7 @@
 import os
 import s3fs
 import pandas as pd
+import ndjson
 
 # Create filesystem object ?????? je ne comprend pas mais ça marche
 S3_ENDPOINT_URL = "https://" + os.environ["AWS_S3_ENDPOINT"]
@@ -25,3 +26,8 @@ def export_csv(df,file_path):
     PATH = BUCKET + "/" + file_path
     with fs.open(PATH,mode="w") as file:
         df.to_csv(file)
+
+def export_ndjson(dict,file_path):
+    PATH = BUCKET + "/" + file_path
+    with fs.open(PATH,mode="w") as file:
+        ndjson.dump(dict,file)

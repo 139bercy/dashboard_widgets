@@ -1,7 +1,9 @@
 import utils.fileManager as fm
+import utils.formatManager as fom
 import pandas as pd
 
 import afa
 
-print(afa.AnalyseSecteursActivite_Public())
+test = fom.generateJsonDictDonut()
+fm.export_ndjson(test,"line.ndjson")
 
