@@ -2,8 +2,12 @@ import utils.fileManager as fm
 import utils.dataManager as dm
 import pandas as pd
 
-data = fm.import_excel("DJ-2014-2020.xlsx",[1])
+datasetName = "DJ-2014-2020"
+data = fm.import_excel(datasetName + ".xlsx",[1])
 dm.prepareData(data)
+
+def getDatasetName():
+    return datasetName
     
 # Graphique : Analyse par secteurs publics
 def AnalyseSecteursActivite_Public(normal=False): 
@@ -29,7 +33,7 @@ def AnalyseSecteursActivite_Prive(normal=False):
         for acteurPrive in fiche:
             proportion[acteurPrive] += 1
             
-    return pd.Series(proportion,name="Nombre de DJ pour chaque type d'acteur privé").sort_values(ascending=False)
+    return pd.Series(proportion,name="Nombre de décisions pour chaque type d'acteur privé").sort_values(ascending=False)
 
 # Graphique : Répartition public/privé
 def AnalyseSecteursActivite_RepartitionPublicPrive():

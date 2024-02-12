@@ -7,6 +7,7 @@ import os
 import s3fs
 import pandas as pd
 import ndjson
+import csv
 
 # Create filesystem object ?????? je ne comprend pas mais ça marche
 S3_ENDPOINT_URL = "https://" + os.environ["AWS_S3_ENDPOINT"]
@@ -22,12 +23,14 @@ def import_excel(file_path, index_lines):
         df = pd.read_excel(file, header=index_lines)
     return df
 
-def export_csv(df,file_path):
+def export_csv(df,file_path,index=False):
     PATH = BUCKET + "/" + file_path
     with fs.open(PATH,mode="w") as file:
-        df.to_csv(file)
+        df.to_csv(file,index=index,quoting=csv.QUOTE_NONNUMERIC) # demande au writer de metre des "" autour de ce qui n'est pas numérique
 
-def export_ndjson(dict,file_path):
+def export_ndjson(list,file_path):
     PATH = BUCKET + "/" + file_path
     with fs.open(PATH,mode="w") as file:
-        ndjson.dump(dict,file)
+        writer = ndjson.writer(file)
+        for line in list:
+            writer.writerow(line)

@@ -1,9 +1,11 @@
 import utils.fileManager as fm
-import utils.formatManager as fom
+import utils.formalismManager as fom
 import pandas as pd
 
 import afa
 
-test = fom.generateJsonDictDonut()
-fm.export_ndjson(test,"line.ndjson")
-
+datasetName = afa.getDatasetName()
+data = afa.AnalyseSecteursActivite_Prive()
+#list = fom.donut_createListData(datasetName, data)
+conf = fom.donut_createListConf(datasetName, data, "v", "p", "o")
+fm.export_csv(conf,"testconf.csv")
