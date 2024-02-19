@@ -173,7 +173,7 @@ def donut_createLineConf(orgInfos,code,name):
         "Unité_GP" : "Infractions en 2020",
         "Unité_Evol" : "%",
         "source" : orgInfos["source"],
-        "accordéon" : "En savoir plus sur le graphique : " + orgInfos["titre"],
+        "accordéon" : "En savoir plus sur la donnée",
         "titre_page_mesure" : ""
     }
     
