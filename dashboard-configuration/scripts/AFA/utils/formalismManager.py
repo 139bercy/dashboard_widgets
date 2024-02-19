@@ -82,9 +82,8 @@ def prepareData(tableau):
     
 # Formalisme du fichier .ndjson des data formattées pour être utilisé par le widget
 #--------------------------------------------------------------------------------------------------------------------------------------#
+# les format_data() retourne une liste de dict, éventuellement à 1 élément (qui sera ensuite sérialisée en ndjson)
 
-# renvoie un dictionnaire dans le format attendu pour une ligne du fichier data.ndjson (voir le schéma du format)
-# fonctionne pour les graphiques en donut (et non pie comme on pourrait le croire)
 def donut_createLineData(code,value):
 
     date = "2021-01-01"
@@ -119,9 +118,8 @@ def donut_createLineData(code,value):
 
     return line
 
-# assemble les lignes de ndjson en une liste avec les bonnes infos à chaque ligne
-# donutData est une pandas.Series où les index sont les titres, les valeurs leur valeur, le nom de la série est le nom du donut
-def donut_createListData(datasetName, donutData):
+# donutData := pandas.Series telle que : index = titres des indicateurs, values = valeurs des indicateurs, name = titre du graphe
+def donut_data(datasetName, donutData):
     list = []
     names = donutData.index.to_list()
     for i in range(donutData.size):
@@ -130,21 +128,25 @@ def donut_createListData(datasetName, donutData):
         list.append(line)
     return list
 
+# boxData := pandas.Series telle que : index = titres des indicateurs, values = valeurs des indicateurs, name = titre du graphe
+def box_data(datasetName, boxData):
+    code = datasetName + " | " + boxData.name
+    return [donut_createLineData(code,boxData.iloc[0])]
+    
 # Formalisme du fichier .csv de la configuration pour être utilisé par le widget
 #--------------------------------------------------------------------------------------------------------------------------------------#
 
 # renvoie un dictionnaire dans le format d'une ligne du fichier [page].csv (configuration widget)
-# toujours pour un graphique en donut
-def donut_createLineConf(orgInfos,code,name):
+def basic_createLineConf():
     
     dict = {
-        "Volet" : orgInfos["volet"],
-        "No_Panneau" : orgInfos["no_panneau"],
-        "Titre_panneau" : orgInfos["panneau"],
-        "No_Onglet" : orgInfos["no_onglet"],
-        "Titre_onglet" : orgInfos["onglet"],
+        "Volet" : None,
+        "No_Panneau" : None,
+        "Titre_panneau" : None,
+        "No_Onglet" : None,
+        "Titre_onglet" : None,
         "Indicateur_principal" : 1,
-        "Code_indicateur" : code,
+        "Code_indicateur" : None,
         "Carte" : 0,
         "Carte_titre" : "",
         "Graph" : 0,
@@ -155,9 +157,9 @@ def donut_createLineConf(orgInfos,code,name):
         "Box" : 0,
         "Box_titre" : "",
         "Points" : 0,
-        "Pie" : 1,
-        "Pie_titre" : orgInfos["titre"],
-        "Pie_legende" : 1,
+        "Pie" : 0,
+        "Pie_titre" : "",
+        "Pie_legende" : 0,
         "Table" : 0,
         "Table_titre" : "",
         "Info" : 0,
@@ -166,27 +168,84 @@ def donut_createLineConf(orgInfos,code,name):
         "Avec_nom_indicateur" : "",
         "Avec_moyenne" : 0,
         "MinGeoLevel" : "departements",
-        "Titre_indicateur" : name,
-        "Nom_indicateur" : name,
+        "Titre_indicateur" : None,
+        "Nom_indicateur" : None,
         "Lien_page_mesure" : "https://www.agence-francaise-anticorruption.gouv.fr/fr",
-        "Description_mesure" : orgInfos["description"],
-        "Unité_GP" : "Infractions en 2020",
-        "Unité_Evol" : "%",
-        "source" : orgInfos["source"],
+        "Description_mesure" : None,
+        "Unité_GP" : None,
+        "Unité_Evol" : None,
+        "source" : None,
         "accordéon" : "En savoir plus sur la donnée",
         "titre_page_mesure" : ""
     }
     
     return pd.Series(dict)
+    
+# renvoie un dictionnaire dans le format d'une ligne du fichier [page].csv (configuration widget)
+# toujours pour un graphique en donut
+def donut_createLineConf(orgInfos,code,name):
+
+    dict = basic_createLineConf()
+
+    dict["Pie"] =1
+    dict["Pie_titre"] = orgInfos["titre"]
+    dict["Pie_legende"] = 1
+    
+    dict["Volet"] = orgInfos["volet"]
+    dict["No_Panneau"] = orgInfos["no_panneau"]
+    dict["Titre_panneau"] = orgInfos["panneau"]
+    dict["No_Onglet"] = orgInfos["no_onglet"]
+    dict["Titre_onglet"] = orgInfos["onglet"]
+    
+    dict["Code_indicateur"] = code
+    dict["Titre_indicateur"] = name
+    dict["Nom_indicateur"] = name
+
+    dict["Description_mesure"] = orgInfos["description"]
+    dict["Unité_GP"] = "Infractions en 2020"
+    dict["Unité_Evol"] = "%"
+    dict["source"] = orgInfos["source"]
+
+    return pd.Series(dict)
 
 # assemble les lignes de conf en une liste avec les bonnes infos
 # pageInfos est un dictionnaie contenant les infos de la page pour un graphique
-def donut_createListConf(datasetName, data, orgInfos):
+def donut_conf(datasetName, data, orgInfos):
     lines = []
     names = data.index.to_list()
     for i in range(data.size):
         code = datasetName + " | " + data.name + " | " + names[i]
         line = donut_createLineConf(orgInfos,code,names[i]).T
         lines.append(line)
+    return pd.concat(lines,axis=1).T
+
+# renvoie un dictionnaire dans le format d'une ligne du fichier [page].csv (configuration widget)
+# pour un graphique en box (beosin d'une ligne unite)
+def box_createLineConf(orgInfos,code,name):
+    
+    dict = basic_createLineConf()
+
+    dict["Box"] = 1
+    
+    dict["Volet"] = orgInfos["volet"]
+    dict["No_Panneau"] = orgInfos["no_panneau"]
+    dict["Titre_panneau"] = orgInfos["panneau"]
+    dict["No_Onglet"] = orgInfos["no_onglet"]
+    dict["Titre_onglet"] = orgInfos["onglet"]
+    
+    dict["Code_indicateur"] = code
+    dict["Titre_indicateur"] = name
+    dict["Nom_indicateur"] = name
+
+    dict["Description_mesure"] = orgInfos["description"]
+    dict["Unité_GP"] = orgInfos["unite"]
+    dict["Unité_Evol"] = orgInfos["unite"]
+    dict["source"] = orgInfos["source"]
+    
+    return pd.Series(dict)
+
+def box_conf(datasetName, data, orgInfos):
+    code = datasetName + " | " + data.name
+    lines = [box_createLineConf(orgInfos,code,data.name)]
     return pd.concat(lines,axis=1).T
 

@@ -42,17 +42,30 @@ class pagecaafa2021:
                 "description" : "Note de lecture : 26,7% des prévenus des 94 décisions de justice rendues en 2021 et analysées par l’AFA, travaillaient dans le secteur de la construction. Explications : La classification correspond à la nomenclature d’activités française de l’INSEE (NAF rev.2 - Sections). Méthode de comptage : Calcul de répartition des prévenus appartenant au secteur privé.",
                 "source" : "Analyse par l’AFA de 94 décisions de justice rendues en 2021 en matière d’atteintes à la probité",
                 "titre" : "Répartition au sein du secteur privé"
+            },
+            "box_ageMoyenPrevenus" : {
+                "volet" : "Répartition des prévenus",
+                "panneau" : "Indicateurs prévenus",
+                "no_panneau" : 32,
+                "onglet" : "Données 2021",
+                "no_onglet" : 1,
+                "description" : "Note de lecture 1 : Au sein de l’échantillon de 94 décisions de justice, rendues en 2021 et analysées par l’AFA, l’âge moyen des prévenus au moment du début de la période de prévention des faits qui leur sont reprochés, est de 45 ans. Note de lecture 2 : Au sein de l’échantillon de 94 décisions de justice rendues en 2021 et analysées par l’AFA, il y a en moyenne 3 prévenus par affaire. Explications : La période de prévention correspond à la durée de temps pendant laquelle les infractions pénales reprochées à un prévenu ont été commises. Elle peut être d’un jour pour les infractions se consommant immédiatement, mais peut également durer plusieurs années. Méthode de comptage : Moyennes réalisées à partir des données concernant les prévenus.",
+                "source" : "Analyse par l’AFA de 94 décisions de justice rendues en 2021 en matière d’atteintes à la probité",
+                "titre" : "Age moyen des prévenus",
+                "unite" : "ans"
+            },
+            "box_nbMoyenPrevenusParAffaire" : {
+                "volet" : "Répartition des prévenus",
+                "panneau" : "Indicateurs prévenus",
+                "no_panneau" : 32,
+                "onglet" : "Données 2021",
+                "no_onglet" : 1,
+                "description" : "Note de lecture 1 : Au sein de l’échantillon de 94 décisions de justice, rendues en 2021 et analysées par l’AFA, l’âge moyen des prévenus au moment du début de la période de prévention des faits qui leur sont reprochés, est de 45 ans. Note de lecture 2 : Au sein de l’échantillon de 94 décisions de justice rendues en 2021 et analysées par l’AFA, il y a en moyenne 3 prévenus par affaire. Explications : La période de prévention correspond à la durée de temps pendant laquelle les infractions pénales reprochées à un prévenu ont été commises. Elle peut être d’un jour pour les infractions se consommant immédiatement, mais peut également durer plusieurs années. Méthode de comptage : Moyennes réalisées à partir des données concernant les prévenus.",
+                "source" : "Analyse par l’AFA de 94 décisions de justice rendues en 2021 en matière d’atteintes à la probité",
+                "titre" : "Nombre moyen de prévenus par affaire",
+                "unite" : "prévenus"
             }
         }
-
-    # utiliser cette fonction pour changer le jeu de données
-    #@datasetName.setter
-    #def datasetName(self, name):
-        #if name not in MinIO:
-        #    raise ValueError("Le fichier XXX n'existe pas")
-        #self.datasetName = name
-        #self.data = fm.import_excel(datasetName + ".xlsx",[1])
-        #form.prepareData(self.data)
 
     # Graphiques
     #------------------------------------------------------------------------------------------------------------------------------------------------------#
@@ -71,15 +84,11 @@ class pagecaafa2021:
         
         result = pd.Series(repartition).sort_values(ascending=False)
     
-        # Traduction
+        # Formalisation
         orgInfos = self.organisationPage["donut_nbDJParSecteur"]
-        
-        # Création des lignes de data ( besoin uniquement du code = "datasetName + graphName + indicateur" et de la valeur )
         result.name = orgInfos["titre"]
-        data = form.donut_createListData(self.datasetName, result)
-    
-        # Création des lignes de conf
-        conf = form.donut_createListConf(self.datasetName, result, orgInfos)
+        data = form.donut_data(self.datasetName, result)
+        conf = form.donut_conf(self.datasetName, result, orgInfos)
         
         return [data,conf]
         
@@ -96,15 +105,11 @@ class pagecaafa2021:
     
         result = pd.Series(proportion).sort_values(ascending=False)
     
-        # Traduction
+        # Formalisation
         orgInfos = self.organisationPage["donut_nbDJParTypeActeurPublic"]
-        
-        # Création des lignes de data ( besoin uniquement du code = "datasetName + graphName + indicateur" et de la valeur )
         result.name = orgInfos["titre"]
-        data = form.donut_createListData(self.datasetName, result)
-    
-        # Création des lignes de conf
-        conf = form.donut_createListConf(self.datasetName, result, orgInfos)
+        data = form.donut_data(self.datasetName, result)
+        conf = form.donut_conf(self.datasetName, result, orgInfos)
         
         return [data,conf]
 
@@ -121,14 +126,35 @@ class pagecaafa2021:
     
         result = pd.Series(proportion).sort_values(ascending=False)
     
-        # Traduction
+        # Formalisation
         orgInfos = self.organisationPage["donut_nbDJParTypeActeurPrive"]
-        
-        # Création des lignes de data ( besoin uniquement du code = "datasetName + graphName + indicateur" et de la valeur )
         result.name = orgInfos["titre"]
-        data = form.donut_createListData(self.datasetName, result)
-    
-        # Création des lignes de conf
-        conf = form.donut_createListConf(self.datasetName, result, orgInfos)
+        data = form.donut_data(self.datasetName, result)
+        conf = form.donut_conf(self.datasetName, result, orgInfos)
         
+        return [data,conf]
+
+    def box_ageMoyenPrevenus(self,normal=False):
+        # Création de la série
+        moyenneAge = self.data.ageMomentFaits.mean()
+        result = pd.Series({"Age moyen des prévenus" : moyenneAge})
+
+        # Formalisation
+        orgInfos = self.organisationPage["box_ageMoyenPrevenus"]
+        result.name = orgInfos["titre"]
+        data = form.box_data(self.datasetName, result)
+        conf = form.box_conf(self.datasetName, result, orgInfos)
+        return [data,conf]
+
+    def box_nbMoyenPrevenusParAffaire(self,normal=False): # Compte les personnes morales comme des prévenus
+        # Création de la série
+        gensParFiche = self.data.groupby('fiche')
+        moyenneGensParFiche = gensParFiche.personne.count().mean()
+        result = pd.Series({"Nombre moyen de prévenus par affaire" : moyenneGensParFiche})
+        
+        # Formalisation
+        orgInfos = self.organisationPage["box_nbMoyenPrevenusParAffaire"]
+        result.name = orgInfos["titre"]
+        data = form.box_data(self.datasetName, result)
+        conf = form.box_conf(self.datasetName, result, orgInfos)
         return [data,conf]
