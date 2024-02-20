@@ -1,25 +1,32 @@
 # Ce fichier sert de coordinateur : Il choisit les jeu de données à utiliser et les graphiques à générer
+
+from datetime import date
 import pandas as pd
 import utils.fileManager as fm
 import caafa2021
 
-def page1():
+def page_caafa2021():
     
-    # choix du dataset
+    # Choix du dataset et de la page
     page = caafa2021.pagecaafa2021("DJ-2021")
 
-    # obtention des datas et confs
-    data_nbDJParSecteur,conf_nbDJParSecteur = page.donut_nbDJParSecteur()
-    data_nbDJParTypeActeurPublic,conf_nbDJParTypeActeurPublic = page.donut_nbDJParTypeActeurPublic()
-    data_nbDJParTypeActeurPrive,conf_nbDJParTypeActeurPrive = page.donut_nbDJParTypeActeurPrive()
-    data_ageMoyenPrevenus,conf_ageMoyenPrevenus = page.box_ageMoyenPrevenus()
-    data_nbMoyenPrevenusParAffaire,conf_nbMoyenPrevenusParAffaire = page.box_nbMoyenPrevenusParAffaire()
-    
-    finalData = data_nbDJParSecteur + data_nbDJParTypeActeurPublic + data_nbDJParTypeActeurPrive + data_ageMoyenPrevenus + data_nbMoyenPrevenusParAffaire
-    finalConf = pd.concat([conf_nbDJParSecteur,conf_nbDJParTypeActeurPublic,conf_nbDJParTypeActeurPrive,conf_ageMoyenPrevenus,conf_nbMoyenPrevenusParAffaire])
+    # Choix des graphiques à générer : Génération des datas et confs
+    allDatas = {}
+    allConfs = {}
+    allDatas["nbDJParSecteur"],allConfs["nbDJParSecteur"] = page.donut_nbDJParSecteur()
+    allDatas["nbDJParTypeActeurPublic"],allConfs["nbDJParTypeActeurPublic"] = page.donut_nbDJParTypeActeurPublic()
+    allDatas["nbDJParTypeActeurPrive"],allConfs["nbDJParTypeActeurPrive"] = page.donut_nbDJParTypeActeurPrive()
+    allDatas["ageMoyenPrevenus"],allConfs["ageMoyenPrevenus"] = page.box_ageMoyenPrevenus()
+    allDatas["nbMoyenPrevenusParAffaire"],allConfs["nbMoyenPrevenusParAffaire"] = page.box_nbMoyenPrevenusParAffaire()
 
-    # écriture pour récupération manuelle sur MinIO
-    fm.export_ndjson(finalData,"NEW-ca-afa-2021.ndjson")
-    fm.export_csv(finalConf,"NEW-ca-afa-2021.csv")
+    # Assemblage des datas et confs
+    finalData = []
+    for data in allDatas:
+        finalData = finalData + allDatas[data]
+    finalConf = pd.concat(list(allConfs.values()))
 
-page1()
+    # Ecriture pour récupération sur MinIO
+    fm.export_ndjson(finalData,"ca-afa-2021-" + str(date.today()) +".ndjson")
+    fm.export_csv(finalConf,"ca-afa-2021-" + str(date.today()) +".csv")
+
+page_caafa2021()

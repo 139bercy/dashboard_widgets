@@ -1,14 +1,14 @@
 # Ce fichier gère le formalisme attendu par le widget (pour écrire)
-# et interprète le formalisme du tableaue excel (pour lire).
+# et interprète le formalisme du tableau excel (pour lire).
 # /!\ Ce fichier ne gère pas le format au sens de l'extension de fichier (fileManager le fait).
 
 import pandas as pd
 import copy as cp
 
-# Formalisme du tableau excel des data brutes
+# Formalisme du tableau excel = data brutes
 #--------------------------------------------------------------------------------------------------------------------------------------#
 
-# Ne retourne rien, change les noms de colonnes pou quelque chose de plus informatique-friendly
+# Ne retourne rien, change les noms de colonnes pour quelque chose de plus informatique-friendly
 def prepareData(tableau):
     # dict = { 'old column1 name' : 'new column1 name', 'old column2 name' : 'new column2 name', ... }
     # l'entièreté des colonnes est représenté, même quand il n'y a pas de changement
@@ -78,11 +78,11 @@ def prepareData(tableau):
         'durée de la procédure (entre la fin de la durée de prévention et jusqu\'à la décision de première instance)' : "dureeProcedure"
     }
 
-    tableau.rename(columns=customIndex, inplace=True) # inplace permet de ne rien retourner et de modifier
+    tableau.rename(columns=customIndex, inplace=True) # inplace permet de ne rien retourner et de modifier directement le dataframe
     
-# Formalisme du fichier .ndjson des data formattées pour être utilisé par le widget
+# Formalisme du fichier .ndjson = data formattées dans le but d'être utilisées par le widget
 #--------------------------------------------------------------------------------------------------------------------------------------#
-# les format_data() retourne une liste de dict, éventuellement à 1 élément (qui sera ensuite sérialisée en ndjson)
+# les format_data() retourne une *liste de dict*, éventuellement à 1 élément (qui sera ensuite sérialisée en ndjson)
 
 def donut_createLineData(code,value):
 
@@ -137,16 +137,17 @@ def box_data(datasetName, boxData):
 #--------------------------------------------------------------------------------------------------------------------------------------#
 
 # renvoie un dictionnaire dans le format d'une ligne du fichier [page].csv (configuration widget)
-def basic_createLineConf():
+# configuration par défaut sans privilégier un type particulier de graphique
+def basic_createLineConf(orgInfos,code,name):
     
     dict = {
-        "Volet" : None,
-        "No_Panneau" : None,
-        "Titre_panneau" : None,
-        "No_Onglet" : None,
-        "Titre_onglet" : None,
+        "Volet" : orgInfos["volet"],
+        "No_Panneau" : orgInfos["no_panneau"],
+        "Titre_panneau" : orgInfos["panneau"],
+        "No_Onglet" : orgInfos["no_onglet"],
+        "Titre_onglet" : orgInfos["onglet"],
         "Indicateur_principal" : 1,
-        "Code_indicateur" : None,
+        "Code_indicateur" : code,
         "Carte" : 0,
         "Carte_titre" : "",
         "Graph" : 0,
@@ -168,13 +169,13 @@ def basic_createLineConf():
         "Avec_nom_indicateur" : "",
         "Avec_moyenne" : 0,
         "MinGeoLevel" : "departements",
-        "Titre_indicateur" : None,
-        "Nom_indicateur" : None,
+        "Titre_indicateur" : name,
+        "Nom_indicateur" : name,
         "Lien_page_mesure" : "https://www.agence-francaise-anticorruption.gouv.fr/fr",
-        "Description_mesure" : None,
+        "Description_mesure" : orgInfos["description"],
         "Unité_GP" : None,
         "Unité_Evol" : None,
-        "source" : None,
+        "source" : orgInfos["source"],
         "accordéon" : "En savoir plus sur la donnée",
         "titre_page_mesure" : ""
     }
@@ -185,26 +186,14 @@ def basic_createLineConf():
 # toujours pour un graphique en donut
 def donut_createLineConf(orgInfos,code,name):
 
-    dict = basic_createLineConf()
+    dict = basic_createLineConf(orgInfos,code,name)
 
-    dict["Pie"] =1
+    dict["Pie"] = 1
     dict["Pie_titre"] = orgInfos["titre"]
     dict["Pie_legende"] = 1
-    
-    dict["Volet"] = orgInfos["volet"]
-    dict["No_Panneau"] = orgInfos["no_panneau"]
-    dict["Titre_panneau"] = orgInfos["panneau"]
-    dict["No_Onglet"] = orgInfos["no_onglet"]
-    dict["Titre_onglet"] = orgInfos["onglet"]
-    
-    dict["Code_indicateur"] = code
-    dict["Titre_indicateur"] = name
-    dict["Nom_indicateur"] = name
 
-    dict["Description_mesure"] = orgInfos["description"]
     dict["Unité_GP"] = "Infractions en 2020"
     dict["Unité_Evol"] = "%"
-    dict["source"] = orgInfos["source"]
 
     return pd.Series(dict)
 
@@ -223,24 +212,12 @@ def donut_conf(datasetName, data, orgInfos):
 # pour un graphique en box (beosin d'une ligne unite)
 def box_createLineConf(orgInfos,code,name):
     
-    dict = basic_createLineConf()
+    dict = basic_createLineConf(orgInfos,code,name)
 
     dict["Box"] = 1
-    
-    dict["Volet"] = orgInfos["volet"]
-    dict["No_Panneau"] = orgInfos["no_panneau"]
-    dict["Titre_panneau"] = orgInfos["panneau"]
-    dict["No_Onglet"] = orgInfos["no_onglet"]
-    dict["Titre_onglet"] = orgInfos["onglet"]
-    
-    dict["Code_indicateur"] = code
-    dict["Titre_indicateur"] = name
-    dict["Nom_indicateur"] = name
 
-    dict["Description_mesure"] = orgInfos["description"]
     dict["Unité_GP"] = orgInfos["unite"]
     dict["Unité_Evol"] = orgInfos["unite"]
-    dict["source"] = orgInfos["source"]
     
     return pd.Series(dict)
 

@@ -18,7 +18,7 @@ BUCKET = "erisim" # = racine
 # file_path = string
 # index_lines = lignes du tableau excel considérées comme un index (0 = premièe ligne, [0,1] = 2 premières lignes en multi-index)
 def import_excel(file_path, index_lines):
-    PATH = BUCKET + "/" + file_path
+    PATH = BUCKET + "/Donnees/" + file_path
     with fs.open(PATH,mode="rb") as file: # https://www.geeksforgeeks.org/with-statement-in-python/
         df = pd.read_excel(file, header=index_lines)
     return df
