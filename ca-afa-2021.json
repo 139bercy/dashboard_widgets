@@ -26,10 +26,18 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "CA_Données 2021_Familles d'infractions_PRISE ILLÉGALE D'INTÉRÊTS",
-                        "Nom_indicateur": "PRISE ILLÉGALE D'INTÉRÊTS",
+                        "Code_indicateur": "CA_Données 2021_Familles d'infractions_CONCUSSION",
+                        "Nom_indicateur": "CONCUSSION",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "PRISE ILLÉGALE D'INTÉRÊTS",
+                        "Titre_indicateur": "CONCUSSION",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "CA_Données 2021_Familles d'infractions_CORRUPTION",
+                        "Nom_indicateur": "CORRUPTION",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "CORRUPTION",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -50,26 +58,18 @@
                         "Unité_Evol": "%"
                     },
                     {
+                        "Code_indicateur": "CA_Données 2021_Familles d'infractions_PRISE ILLÉGALE D'INTÉRÊTS",
+                        "Nom_indicateur": "PRISE ILLÉGALE D'INTÉRÊTS",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "PRISE ILLÉGALE D'INTÉRÊTS",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
                         "Code_indicateur": "CA_Données 2021_Familles d'infractions_TRAFIC D'INFLUENCE",
                         "Nom_indicateur": "TRAFIC D'INFLUENCE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "TRAFIC D'INFLUENCE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "CA_Données 2021_Familles d'infractions_CORRUPTION",
-                        "Nom_indicateur": "CORRUPTION",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "CORRUPTION",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "CA_Données 2021_Familles d'infractions_CONCUSSION",
-                        "Nom_indicateur": "CONCUSSION",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "CONCUSSION",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -79,7 +79,7 @@
     },
     {
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
-        "Titre_panneau": "Répartition par secteurs d'activité",
+        "Titre_panneau": "Répartition par secteurs d’activité",
         "Volet": "Analyse par secteurs d’activité",
         "source": "Analyse par l’AFA de 94 décisions de justice rendues en 2021 en matière d’atteintes à la probité",
         "accordéon": "En savoir plus sur la donnée",
@@ -91,39 +91,39 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Note de lecture : 47,2% des prévenus concernés par les 94 décisions de justice rendues en 2021 et analysées par l’AFA, appartenaient au secteur public. Explications : Le secteur public comprend autant les agents publics (État, collectivités territoriales, établissements publics etc.) que les élus. Chaque secteur comprend à chaque fois les prévenus tant personnes physiques que personnes morales. Un prévenu est une personne poursuivie pénalement et qui n’a pas encore été jugée ou dont la condamnation n’est pas encore définitive. Méthode de comptage : Calcul de répartition des affaires. Les affaires mettant en cause des personnes tant du secteur privé que du secteur public sont comptabilisées dans les deux catégories.",
+                "Description_mesure": "Note de lecture : 47,2% des prévenus concernés par les 94 décisions de justice rendues en 2021 et analysées par l’AFA, appartenaient au secteur public. Explications : Le secteur public comprend autant les agents publics (État, collectivités territoriales, établissements publics etc.) que les élus. Chaque secteur comprend à chaque fois les prévenus tant personnes physiques que personnes morales. Un prévenu est une personne poursuivie pénalement et qui n’a pas encore été jugée ou dont la condamnation n’est pas encore définitive. Méthode de comptage : Calcul de répartition des affaires. Les affaires mettant en cause des personnes tant du secteur privé que du secteur public sont comptabilisées dans les deux catégories.",
                 "Titre_onglet": "Données 2021",
                 "Pie": 1,
                 "Table": false,
                 "Info": false,
                 "Info_titre": "c",
                 "Info_contenu": "c",
-                "Pie_titre": "Répartition par secteurs d'activité",
+                "Pie_titre": "Répartition par secteurs d’activité",
                 "Graph_avec_valeurs": false,
                 "Pie_legende": true,
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "DJ-2021 | Répartition par secteurs d'activité | Particuliers",
-                        "Nom_indicateur": "Particuliers",
+                        "Code_indicateur": "CA_Données 2021_Répartition par secteurs d’activité_PUBLIC",
+                        "Nom_indicateur": "PUBLIC",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Particuliers",
+                        "Titre_indicateur": "PUBLIC",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "DJ-2021 | Répartition par secteurs d'activité | Secteur privé",
-                        "Nom_indicateur": "Secteur privé",
+                        "Code_indicateur": "CA_Données 2021_Répartition par secteurs d’activité_PRIVE",
+                        "Nom_indicateur": "PRIVE",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Secteur privé",
+                        "Titre_indicateur": "PRIVE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "DJ-2021 | Répartition par secteurs d'activité | Secteur public",
-                        "Nom_indicateur": "Secteur public",
+                        "Code_indicateur": "CA_Données 2021_Répartition par secteurs d’activité_PARTICULIER",
+                        "Nom_indicateur": "PARTICULIER",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Secteur public",
+                        "Titre_indicateur": "PARTICULIER",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -145,7 +145,7 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Note de lecture : 9,3% des prévenus des 94 décisions de justice rendues en 2021 et analysées par l’AFA, étaient fonctionnaires de l’État travaillant au sein de l’administration centrale. Explications : Cette classification a été créée par l’AFA. Méthode de comptage : Calcul de répartition des prévenus appartenant au secteur public.",
+                "Description_mesure": "Note de lecture : 9,3% des prévenus des 94 décisions de justice rendues en 2021 et analysées par l’AFA, étaient fonctionnaires de l’État travaillant au sein de l’administration centrale. Explications : Cette classification a été créée par l’AFA. Méthode de comptage : Calcul de répartition des prévenus appartenant au secteur public",
                 "Titre_onglet": "Données 2021",
                 "Pie": 1,
                 "Table": false,
@@ -158,31 +158,7 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "DJ-2021 | Répartition au sein du secteur public | COLLECTIVITÉS DÉPARTEMENTALES",
-                        "Nom_indicateur": "COLLECTIVITÉS DÉPARTEMENTALES",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "COLLECTIVITÉS DÉPARTEMENTALES",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "DJ-2021 | Répartition au sein du secteur public | COLLECTIVITÉS - MAIRIES",
-                        "Nom_indicateur": "COLLECTIVITÉS - MAIRIES",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "COLLECTIVITÉS - MAIRIES",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "DJ-2021 | Répartition au sein du secteur public | ETAT - ADMINISTRATION CENTRALE",
-                        "Nom_indicateur": "ETAT - ADMINISTRATION CENTRALE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "ETAT - ADMINISTRATION CENTRALE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "DJ-2021 | Répartition au sein du secteur public | ETABLISSEMENT PUBLIC",
+                        "Code_indicateur": "CA_Données 2021_Secteur public_ETABLISSEMENT PUBLIC",
                         "Nom_indicateur": "ETABLISSEMENT PUBLIC",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "ETABLISSEMENT PUBLIC",
@@ -190,34 +166,42 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "DJ-2021 | Répartition au sein du secteur public | COLLECTIVITÉS RÉGIONALES",
+                        "Code_indicateur": "CA_Données 2021_Secteur public_ETAT DECONCENTRE",
+                        "Nom_indicateur": "ETAT DECONCENTRE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "ETAT DECONCENTRE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "CA_Données 2021_Secteur public_COLLECTIVITÉS MAIRIES",
+                        "Nom_indicateur": "COLLECTIVITÉS MAIRIES",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "COLLECTIVITÉS MAIRIES",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "CA_Données 2021_Secteur public_COLLECTIVITÉS DÉPARTEMENTALES",
+                        "Nom_indicateur": "COLLECTIVITÉS DÉPARTEMENTALES",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "COLLECTIVITÉS DÉPARTEMENTALES",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "CA_Données 2021_Secteur public_ETAT ADMINISTRATION CENTRALE",
+                        "Nom_indicateur": "ETAT ADMINISTRATION CENTRALE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "ETAT ADMINISTRATION CENTRALE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "CA_Données 2021_Secteur public_COLLECTIVITÉS RÉGIONALES",
                         "Nom_indicateur": "COLLECTIVITÉS RÉGIONALES",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "COLLECTIVITÉS RÉGIONALES",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "DJ-2021 | Répartition au sein du secteur public | ETAT - DECONCENTRE",
-                        "Nom_indicateur": "ETAT - DECONCENTRE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "ETAT - DECONCENTRE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "DJ-2021 | Répartition au sein du secteur public | NON RENSEIGNE",
-                        "Nom_indicateur": "NON RENSEIGNE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "NON RENSEIGNE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "DJ-2021 | Répartition au sein du secteur public | FONCTION PUBLIQUE HOSPITALIERE",
-                        "Nom_indicateur": "FONCTION PUBLIQUE HOSPITALIERE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "FONCTION PUBLIQUE HOSPITALIERE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -252,87 +236,15 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "DJ-2021 | Répartition au sein du secteur privé | ACTIVITÉS IMMOBILIÈRES",
-                        "Nom_indicateur": "ACTIVITÉS IMMOBILIÈRES",
+                        "Code_indicateur": "CA_Données 2021_Secteur privé_SANTÉ HUMAINE ET ACTION SOCIALE",
+                        "Nom_indicateur": "SANTÉ HUMAINE ET ACTION SOCIALE",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "ACTIVITÉS IMMOBILIÈRES",
+                        "Titre_indicateur": "SANTÉ HUMAINE ET ACTION SOCIALE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "DJ-2021 | Répartition au sein du secteur privé | CONSTRUCTION",
-                        "Nom_indicateur": "CONSTRUCTION",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "CONSTRUCTION",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "DJ-2021 | Répartition au sein du secteur privé | INFORMATION ET COMMUNICATION",
-                        "Nom_indicateur": "INFORMATION ET COMMUNICATION",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "INFORMATION ET COMMUNICATION",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "DJ-2021 | Répartition au sein du secteur privé | ARTS, SPECTACLES ET ACTIVITÉS RÉCRÉATIVES",
-                        "Nom_indicateur": "ARTS, SPECTACLES ET ACTIVITÉS RÉCRÉATIVES",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "ARTS, SPECTACLES ET ACTIVITÉS RÉCRÉATIVES",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "DJ-2021 | Répartition au sein du secteur privé | ACTIVITÉS DE SERVICES ADMINISTRATIFS ET DE SOUTIEN",
-                        "Nom_indicateur": "ACTIVITÉS DE SERVICES ADMINISTRATIFS ET DE SOUTIEN",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "ACTIVITÉS DE SERVICES ADMINISTRATIFS ET DE SOUTIEN",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "DJ-2021 | Répartition au sein du secteur privé | AUTRES ACTIVITÉS DE SERVICES",
-                        "Nom_indicateur": "AUTRES ACTIVITÉS DE SERVICES",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "AUTRES ACTIVITÉS DE SERVICES",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "DJ-2021 | Répartition au sein du secteur privé | ACTIVITÉS SPÉCIALISÉES, SCIENTIFIQUES ET TECHNIQUES",
-                        "Nom_indicateur": "ACTIVITÉS SPÉCIALISÉES, SCIENTIFIQUES ET TECHNIQUES",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "ACTIVITÉS SPÉCIALISÉES, SCIENTIFIQUES ET TECHNIQUES",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "DJ-2021 | Répartition au sein du secteur privé | NON RENSEIGNE",
-                        "Nom_indicateur": "NON RENSEIGNE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "NON RENSEIGNE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "DJ-2021 | Répartition au sein du secteur privé | COMMERCE ; RÉPARATION D'AUTOMOBILES ET DE MOTOCYCLES",
-                        "Nom_indicateur": "COMMERCE ; RÉPARATION D'AUTOMOBILES ET DE MOTOCYCLES",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "COMMERCE ; RÉPARATION D'AUTOMOBILES ET DE MOTOCYCLES",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "DJ-2021 | Répartition au sein du secteur privé | AGRICULTURE SYLVICULTURE ET PÊCHE",
-                        "Nom_indicateur": "AGRICULTURE SYLVICULTURE ET PÊCHE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "AGRICULTURE SYLVICULTURE ET PÊCHE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "DJ-2021 | Répartition au sein du secteur privé | TRANSPORTS ET ENTREPOSAGE",
+                        "Code_indicateur": "CA_Données 2021_Secteur privé_TRANSPORTS ET ENTREPOSAGE",
                         "Nom_indicateur": "TRANSPORTS ET ENTREPOSAGE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "TRANSPORTS ET ENTREPOSAGE",
@@ -340,26 +252,74 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "DJ-2021 | Répartition au sein du secteur privé | PRODUCTION ET DISTRIBUTION D'EAU ; ASSAINISSEMENT, GESTION DES DÉCHETS ET DÉPOLLUTION",
-                        "Nom_indicateur": "PRODUCTION ET DISTRIBUTION D'EAU ; ASSAINISSEMENT, GESTION DES DÉCHETS ET DÉPOLLUTION",
+                        "Code_indicateur": "CA_Données 2021_Secteur privé_PRODUCTION ET DISTRIBUTION D'EAU  ASSAINISSEMENT GESTION DES DÉCHETS ET DÉPOLLUTION",
+                        "Nom_indicateur": "PRODUCTION ET DISTRIBUTION D'EAU  ASSAINISSEMENT GESTION DES DÉCHETS ET DÉPOLLUTION",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "PRODUCTION ET DISTRIBUTION D'EAU ; ASSAINISSEMENT, GESTION DES DÉCHETS ET DÉPOLLUTION",
+                        "Titre_indicateur": "PRODUCTION ET DISTRIBUTION D'EAU  ASSAINISSEMENT GESTION DES DÉCHETS ET DÉPOLLUTION",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "DJ-2021 | Répartition au sein du secteur privé | HÉBERGEMENT ET RESTAURATION",
-                        "Nom_indicateur": "HÉBERGEMENT ET RESTAURATION",
+                        "Code_indicateur": "CA_Données 2021_Secteur privé_ARTS SPECTACLES ET ACTIVITÉS RÉCRÉATIVES",
+                        "Nom_indicateur": "ARTS SPECTACLES ET ACTIVITÉS RÉCRÉATIVES",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "HÉBERGEMENT ET RESTAURATION",
+                        "Titre_indicateur": "ARTS SPECTACLES ET ACTIVITÉS RÉCRÉATIVES",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "DJ-2021 | Répartition au sein du secteur privé | PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ, DE GAZ, DE VAPEUR ET D'AIR CONDITIONNÉ",
-                        "Nom_indicateur": "PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ, DE GAZ, DE VAPEUR ET D'AIR CONDITIONNÉ",
+                        "Code_indicateur": "CA_Données 2021_Secteur privé_AGRICULTURE SYLVICULTURE ET PÊCHE",
+                        "Nom_indicateur": "AGRICULTURE SYLVICULTURE ET PÊCHE",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ, DE GAZ, DE VAPEUR ET D'AIR CONDITIONNÉ",
+                        "Titre_indicateur": "AGRICULTURE SYLVICULTURE ET PÊCHE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "CA_Données 2021_Secteur privé_CONSTRUCTION",
+                        "Nom_indicateur": "CONSTRUCTION",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "CONSTRUCTION",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "CA_Données 2021_Secteur privé_PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ DE GAZ DE VAPEUR ET D'AIR CONDITIONNÉ",
+                        "Nom_indicateur": "PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ DE GAZ DE VAPEUR ET D'AIR CONDITIONNÉ",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ DE GAZ DE VAPEUR ET D'AIR CONDITIONNÉ",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "CA_Données 2021_Secteur privé_INFORMATION ET COMMUNICATION",
+                        "Nom_indicateur": "INFORMATION ET COMMUNICATION",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "INFORMATION ET COMMUNICATION",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "CA_Données 2021_Secteur privé_ACTIVITÉS FINANCIÈRES ET D'ASSURANCE",
+                        "Nom_indicateur": "ACTIVITÉS FINANCIÈRES ET D'ASSURANCE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "ACTIVITÉS FINANCIÈRES ET D'ASSURANCE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "CA_Données 2021_Secteur privé_ACTIVITÉS IMMOBILIÈRES",
+                        "Nom_indicateur": "ACTIVITÉS IMMOBILIÈRES",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "ACTIVITÉS IMMOBILIÈRES",
+                        "Unité_GP": "%",
+                        "Unité_Evol": "Analyse par l’AFA de 111 décisions de justice rendues entre 2014 et 2020 en matière d’atteintes à la probité. "
+                    },
+                    {
+                        "Code_indicateur": "CA_Données 2021_Secteur privé_ACTIVITÉS SPÉCIALISÉES SCIENTIFIQUES ET TECHNIQUES",
+                        "Nom_indicateur": "ACTIVITÉS SPÉCIALISÉES SCIENTIFIQUES ET TECHNIQUES",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "ACTIVITÉS SPÉCIALISÉES SCIENTIFIQUES ET TECHNIQUES",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -402,10 +362,10 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "CA_Données 2021_Répartition des prévenus_TRAFIC D'INFLUENCE",
-                        "Nom_indicateur": "TRAFIC D'INFLUENCE",
+                        "Code_indicateur": "CA_Données 2021_Répartition des prévenus_CORRUPTION",
+                        "Nom_indicateur": "CORRUPTION",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "TRAFIC D'INFLUENCE",
+                        "Titre_indicateur": "CORRUPTION",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -418,14 +378,6 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "CA_Données 2021_Répartition des prévenus_FAVORITISME",
-                        "Nom_indicateur": "FAVORITISME",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "FAVORITISME",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
                         "Code_indicateur": "CA_Données 2021_Répartition des prévenus_DÉTOURNEMENTS DE BIENS",
                         "Nom_indicateur": "DÉTOURNEMENTS DE BIENS",
                         "Indicateur_principal": "1",
@@ -434,10 +386,18 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "CA_Données 2021_Répartition des prévenus_CORRUPTION",
-                        "Nom_indicateur": "CORRUPTION",
+                        "Code_indicateur": "CA_Données 2021_Répartition des prévenus_FAVORITISME",
+                        "Nom_indicateur": "FAVORITISME",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "CORRUPTION",
+                        "Titre_indicateur": "FAVORITISME",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "CA_Données 2021_Répartition des prévenus_TRAFIC D'INFLUENCE",
+                        "Nom_indicateur": "TRAFIC D'INFLUENCE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "TRAFIC D'INFLUENCE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -459,7 +419,7 @@
                 "Box": 1,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Note de lecture 1 : Au sein de l’échantillon de 94 décisions de justice, rendues en 2021 et analysées par l’AFA, l’âge moyen des prévenus au moment du début de la période de prévention des faits qui leur sont reprochés, est de 45 ans. Note de lecture 2 : Au sein de l’échantillon de 94 décisions de justice rendues en 2021 et analysées par l’AFA, il y a en moyenne 3 prévenus par affaire. Explications : La période de prévention correspond à la durée de temps pendant laquelle les infractions pénales reprochées à un prévenu ont été commises. Elle peut être d’un jour pour les infractions se consommant immédiatement, mais peut également durer plusieurs années. Méthode de comptage : Moyennes réalisées à partir des données concernant les prévenus.",
+                "Description_mesure": "Note de lecture 1 : Au sein de l’échantillon de 94 décisions de justice, rendues en 2021 et analysées par l’AFA, l’âge moyen des prévenus au moment du début de la période de prévention des faits qui leur sont reprochés, est de 45 ans.  Note de lecture 2 : Au sein de l’échantillon de 94 décisions de justice rendues en 2021 et analysées par l’AFA, il y a en moyenne 3 prévenus par affaire.  Explications :  La période de prévention correspond à la durée de temps pendant laquelle les infractions pénales reprochées à un prévenu ont été commises. Elle peut être d’un jour pour les infractions se consommant immédiatement, mais peut également durer plusieurs années. Méthode de comptage : Moyennes réalisées à partir des données concernant les prévenus.",
                 "Titre_onglet": "Données 2021",
                 "Pie": false,
                 "Table": false,
@@ -467,24 +427,24 @@
                 "Info_titre": "c",
                 "Info_contenu": "c",
                 "Graph_avec_valeurs": false,
-                "Pie_legende": false,
+                "Pie_legende": true,
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "DJ-2021 | Nombre moyen de prévenus par affaire",
-                        "Nom_indicateur": "Nombre moyen de prévenus par affaire",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Nombre moyen de prévenus par affaire",
-                        "Unité_GP": "prévenus",
-                        "Unité_Evol": "prévenus"
-                    },
-                    {
-                        "Code_indicateur": "DJ-2021 | Age moyen des prévenus",
+                        "Code_indicateur": "CA_Données 2021_Indicateurs prévenus_Age moyen des prévenus",
                         "Nom_indicateur": "Age moyen des prévenus",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Age moyen des prévenus",
                         "Unité_GP": "ans",
                         "Unité_Evol": "ans"
+                    },
+                    {
+                        "Code_indicateur": "CA_Données 2021_Indicateurs prévenus_Nombre moyen de prévenus par affaire",
+                        "Nom_indicateur": "Nombre moyen de prévenus par affaire",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Nombre moyen de prévenus par affaire",
+                        "Unité_GP": "prévenus",
+                        "Unité_Evol": "%"
                     }
                 ]
             }
@@ -555,26 +515,26 @@
                 "Pie": 1,
                 "Table": false,
                 "Info": false,
-                "Info_titre": "c",
-                "Info_contenu": "c",
+                "Info_titre": "jellsf",
+                "Info_contenu": "qosfjhsq",
                 "Pie_titre": "Répartition des prévenus par sexe",
                 "Graph_avec_valeurs": false,
                 "Pie_legende": true,
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "CA_Données 2021_Sexe_HOMME",
-                        "Nom_indicateur": "HOMME",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "HOMME",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
                         "Code_indicateur": "CA_Données 2021_Sexe_FEMME",
                         "Nom_indicateur": "FEMME",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "FEMME",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "CA_Données 2021_Sexe_HOMME",
+                        "Nom_indicateur": "HOMME",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "HOMME",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -609,26 +569,10 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "CA_Données 2021_Qualité_CADRES D'ENTREPRISE",
-                        "Nom_indicateur": "CADRES D'ENTREPRISE",
+                        "Code_indicateur": "CA_Données 2021_Qualité_PERSONNE MORALE DE DROIT PRIVE",
+                        "Nom_indicateur": "PERSONNE MORALE DE DROIT PRIVE",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "CADRES D'ENTREPRISE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "CA_Données 2021_Qualité_DIRIGEANTS DE SOCIETE",
-                        "Nom_indicateur": "DIRIGEANTS DE SOCIETE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "DIRIGEANTS DE SOCIETE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "CA_Données 2021_Qualité_ELUS",
-                        "Nom_indicateur": "ELUS",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "ELUS",
+                        "Titre_indicateur": "PERSONNE MORALE DE DROIT PRIVE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -649,6 +593,14 @@
                         "Unité_Evol": "%"
                     },
                     {
+                        "Code_indicateur": "CA_Données 2021_Qualité_ELUS",
+                        "Nom_indicateur": "ELUS",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "ELUS",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
                         "Code_indicateur": "CA_Données 2021_Qualité_PARTICULIERS",
                         "Nom_indicateur": "PARTICULIERS",
                         "Indicateur_principal": "1",
@@ -657,10 +609,18 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "CA_Données 2021_Qualité_PERSONNE MORALE DE DROIT PRIVE",
-                        "Nom_indicateur": "PERSONNE MORALE DE DROIT PRIVE",
+                        "Code_indicateur": "CA_Données 2021_Qualité_DIRIGEANTS DE SOCIETE",
+                        "Nom_indicateur": "DIRIGEANTS DE SOCIETE",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "PERSONNE MORALE DE DROIT PRIVE",
+                        "Titre_indicateur": "DIRIGEANTS DE SOCIETE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "CA_Données 2021_Qualité_CADRES D'ENTREPRISE",
+                        "Nom_indicateur": "CADRES D'ENTREPRISE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "CADRES D'ENTREPRISE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -695,6 +655,14 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
+                        "Code_indicateur": "CA_Données 2021_Catégorie socio-professionnelle_NON RENSEIGNE",
+                        "Nom_indicateur": "NON RENSEIGNE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "NON RENSEIGNE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
                         "Code_indicateur": "CA_Données 2021_Catégorie socio-professionnelle_EMPLOYÉS DE LA FONCTION PUBLIQUE",
                         "Nom_indicateur": "EMPLOYÉS DE LA FONCTION PUBLIQUE",
                         "Indicateur_principal": "1",
@@ -707,14 +675,6 @@
                         "Nom_indicateur": "CADRES DE LA FONCTION PUBLIQUE PROFESSIONS INTELLECTUELLES ET  ARTISTIQUES",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "CADRES DE LA FONCTION PUBLIQUE PROFESSIONS INTELLECTUELLES ET  ARTISTIQUES",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "CA_Données 2021_Catégorie socio-professionnelle_NON RENSEIGNE",
-                        "Nom_indicateur": "NON RENSEIGNE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "NON RENSEIGNE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -765,10 +725,10 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "CA_Données 2021_Origine de l’affaire_LETTRE ANONYME",
-                        "Nom_indicateur": "LETTRE ANONYME",
+                        "Code_indicateur": "CA_Données 2021_Origine de l’affaire_ARTICLE 40 al.2",
+                        "Nom_indicateur": "ARTICLE 40 al.2",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "LETTRE ANONYME",
+                        "Titre_indicateur": "ARTICLE 40 al.2",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -781,18 +741,18 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "CA_Données 2021_Origine de l’affaire_NON RENSEIGNE",
-                        "Nom_indicateur": "NON RENSEIGNE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "NON RENSEIGNE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
                         "Code_indicateur": "CA_Données 2021_Origine de l’affaire_ARTICLE DE PRESSE",
                         "Nom_indicateur": "ARTICLE DE PRESSE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "ARTICLE DE PRESSE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "CA_Données 2021_Origine de l’affaire_NON RENSEIGNE",
+                        "Nom_indicateur": "NON RENSEIGNE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "NON RENSEIGNE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -805,10 +765,10 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "CA_Données 2021_Origine de l’affaire_ARTICLE 40 al.2",
-                        "Nom_indicateur": "ARTICLE 40 al.2",
+                        "Code_indicateur": "CA_Données 2021_Origine de l’affaire_LETTRE ANONYME",
+                        "Nom_indicateur": "LETTRE ANONYME",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "ARTICLE 40 al.2",
+                        "Titre_indicateur": "LETTRE ANONYME",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -884,7 +844,7 @@
                 "Box": 1,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Notes de lecture :  Sur l’échantillon de 94 décisions de justice rendues en 2021 et analysées par l’AFA :     • la durée moyenne de la procédure est de 5 ans;     • la durée moyenne de la période de prévention est de 2 ans.  Explications : Dans cette analyse, la durée de procédure s’entend comme la durée qui s’écoule depuis la fin de la période de prévention jusqu’à la date du jugement de première instance.  La période de prévention est la période durant laquelle les infractions pénales reprochées à un prévenu ont été commises. Elle peut être d’un jour pour les infractions se consommant immédiatement, mais peut également durer plusieurs années. Méthode de comptage : Moyennes réalisées à partir des données relevées par l’AFA dans les décisions de justice analysées.",
+                "Description_mesure": "Notes de lecture :  Sur l’échantillon de 94 décisions de justice rendues en 2021 et analysées par l’AFA :     • la durée moyenne de la procédure est de 5 ans;     • la durée moyenne de la période de prévention est de 2 ans.  Explications : Dans cette analyse, la durée de procédure s’entend comme la durée qui s’écoule depuis la fin de la période de prévention jusqu’à la date du jugement de première instance.  La période de prévention est la période durant laquelle les infractions pénales reprochées à un prévenu ont été commises. Elle peut être d’un jour pour les infractions se consommant immédiatement, mais peut également durer plusieurs années. Méthode de comptage : Moyennes réalisées à partir des données relevées par l’AFA dans les décisions de justice analysées. ",
                 "Titre_onglet": "Données 2021",
                 "Pie": false,
                 "Table": false,
@@ -895,14 +855,6 @@
                 "Pie_legende": true,
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
-                    {
-                        "Code_indicateur": "CA_Données 2021_Indicateurs procédure_Durée moyenne de la procédure",
-                        "Nom_indicateur": "Durée moyenne de la procédure",
-                        "Indicateur_principal": "4",
-                        "Titre_indicateur": "Durée moyenne de la procédure",
-                        "Unité_GP": "ans",
-                        "Unité_Evol": "%"
-                    },
                     {
                         "Code_indicateur": "CA_Données 2021_Indicateurs procédure_Durée moyenne de la période de prévention",
                         "Nom_indicateur": "Durée moyenne de la période de prévention",
@@ -918,6 +870,14 @@
                         "Titre_indicateur": "Durée moyenne de la période d'audiencement",
                         "Unité_GP": "ans",
                         "Unité_Evol": "ans"
+                    },
+                    {
+                        "Code_indicateur": "CA_Données 2021_Indicateurs procédure_Durée moyenne de la procédure",
+                        "Nom_indicateur": "Durée moyenne de la procédure",
+                        "Indicateur_principal": "4",
+                        "Titre_indicateur": "Durée moyenne de la procédure",
+                        "Unité_GP": "ans",
+                        "Unité_Evol": "%"
                     }
                 ]
             }
@@ -950,18 +910,10 @@
                 "Avec_nom_indicateur": true,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "CA_Données 2021_Sens de la décision_EXTINCTION ACTION PUBLIQUE",
-                        "Nom_indicateur": "EXTINCTION ACTION PUBLIQUE",
+                        "Code_indicateur": "CA_Données 2021_Sens de la décision_AUTRE",
+                        "Nom_indicateur": "AUTRE",
                         "Indicateur_principal": "3",
-                        "Titre_indicateur": "EXTINCTION ACTION PUBLIQUE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "CA_Données 2021_Sens de la décision_RELAXE",
-                        "Nom_indicateur": "RELAXE",
-                        "Indicateur_principal": "3",
-                        "Titre_indicateur": "RELAXE",
+                        "Titre_indicateur": "AUTRE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -974,10 +926,18 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "CA_Données 2021_Sens de la décision_AUTRE",
-                        "Nom_indicateur": "AUTRE",
+                        "Code_indicateur": "CA_Données 2021_Sens de la décision_EXTINCTION ACTION PUBLIQUE",
+                        "Nom_indicateur": "EXTINCTION ACTION PUBLIQUE",
                         "Indicateur_principal": "3",
-                        "Titre_indicateur": "AUTRE",
+                        "Titre_indicateur": "EXTINCTION ACTION PUBLIQUE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "CA_Données 2021_Sens de la décision_RELAXE",
+                        "Nom_indicateur": "RELAXE",
+                        "Indicateur_principal": "3",
+                        "Titre_indicateur": "RELAXE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -1012,18 +972,18 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "CA_Données 2021_Conclusion culpabilité_INFIRMATION CULPABILITE",
-                        "Nom_indicateur": "INFIRMATION CULPABILITE",
-                        "Indicateur_principal": "3",
-                        "Titre_indicateur": "INFIRMATION CULPABILITE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
                         "Code_indicateur": "CA_Données 2021_Conclusion culpabilité_CONFIRMATION CULPABILITE",
                         "Nom_indicateur": "CONFIRMATION CULPABILITE",
                         "Indicateur_principal": "3",
                         "Titre_indicateur": "CONFIRMATION CULPABILITE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "CA_Données 2021_Conclusion culpabilité_INFIRMATION CULPABILITE",
+                        "Nom_indicateur": "INFIRMATION CULPABILITE",
+                        "Indicateur_principal": "3",
+                        "Titre_indicateur": "INFIRMATION CULPABILITE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -1058,6 +1018,14 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
+                        "Code_indicateur": "CA_Données 2021_Conclusion peines_INFIRMATION",
+                        "Nom_indicateur": "INFIRMATION",
+                        "Indicateur_principal": "3",
+                        "Titre_indicateur": "INFIRMATION",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
                         "Code_indicateur": "CA_Données 2021_Conclusion peines_CONFIRMATION",
                         "Nom_indicateur": "CONFIRMATION",
                         "Indicateur_principal": "3",
@@ -1070,14 +1038,6 @@
                         "Nom_indicateur": "CONFIRMATION PARTIELLE",
                         "Indicateur_principal": "3",
                         "Titre_indicateur": "CONFIRMATION PARTIELLE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "CA_Données 2021_Conclusion peines_INFIRMATION",
-                        "Nom_indicateur": "INFIRMATION",
-                        "Indicateur_principal": "3",
-                        "Titre_indicateur": "INFIRMATION",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -1112,10 +1072,26 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
+                        "Code_indicateur": "CA_Données 2021_Type de peine_AUTRE",
+                        "Nom_indicateur": "AUTRE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "AUTRE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
                         "Code_indicateur": "CA_Données 2021_Type de peine_EMPRISONNEMENT ET AMENDE",
                         "Nom_indicateur": "EMPRISONNEMENT ET AMENDE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "EMPRISONNEMENT ET AMENDE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "CA_Données 2021_Type de peine_EMPRISONNEMENT",
+                        "Nom_indicateur": "EMPRISONNEMENT",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "EMPRISONNEMENT",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -1128,26 +1104,10 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "CA_Données 2021_Type de peine_AUTRE",
-                        "Nom_indicateur": "AUTRE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "AUTRE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
                         "Code_indicateur": "CA_Données 2021_Type de peine_AMENDE",
                         "Nom_indicateur": "AMENDE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "AMENDE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "CA_Données 2021_Type de peine_EMPRISONNEMENT",
-                        "Nom_indicateur": "EMPRISONNEMENT",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "EMPRISONNEMENT",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
