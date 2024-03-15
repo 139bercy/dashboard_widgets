@@ -6,7 +6,7 @@ import utils.fileManager as fm
 import utils.formalismManager as form
 import pandas as pd
 
-class pageafa:
+class pageafa2021:
 
     def __init__(self, datasetName):
         self.datasetName = datasetName

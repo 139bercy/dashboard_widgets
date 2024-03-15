@@ -4,6 +4,8 @@ from datetime import date
 import pandas as pd
 import utils.fileManager as fm
 import caafa2021
+import afa
+import afa2021
 
 def page_caafa2021():
     
@@ -29,4 +31,18 @@ def page_caafa2021():
     fm.export_ndjson(finalData,"ca-afa-2021-" + str(date.today()) +".ndjson")
     fm.export_csv(finalConf,"ca-afa-2021-" + str(date.today()) +".csv")
 
-page_caafa2021()
+def page_afa():
+
+    # Choix du dataset et de la page
+    page = afa.pageafa("Carto Phase test - 113 DJ - copie")
+
+    # Gen data pour demande Henry
+    page.CSP_in_PII()
+
+def page_afa2021():
+
+    # Choix du dataset et de la page
+    page = afa.pageafa2021("DJ-2021")
+    
+page_afa()
+
