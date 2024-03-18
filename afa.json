@@ -190,9 +190,9 @@
                     },
                     {
                         "Code_indicateur": "UE",
-                        "Nom_indicateur": "UNION EUROPEENNE",
+                        "Nom_indicateur": "AUTRE",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "UNION EUROPEENNE",
+                        "Titre_indicateur": "AUTRE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
