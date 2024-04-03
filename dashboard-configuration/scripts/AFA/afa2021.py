@@ -8,52 +8,253 @@ import pandas as pd
 
 class pageafa2021:
 
-    def __init__(self, datasetName):
-        self.datasetName = datasetName
-        self.data = fm.import_excel(datasetName + ".xlsx",[1])
-        form.prepareData(self.data)
-        self.organisationPage = {} # a remplir
+    def __init__(self):
+        self.organisationPage = {
+            "analyseTypeFaits_FamilleInfractions" : {
+                "volet" : "Données 2021",
+                "panneau" : "Analyse par type de faits",
+                "no_panneau" : 1,
+                "onglet" : "Familles d'infractions",
+                "no_onglet" : 1,
+                "description" : "Description ",
+                "source" : "source",
+                "titre" : "titre"
+            },
+            "analyseSecteursActivite_PublicPrive" : {
+                "volet" : "Données 2021",
+                "panneau" : "Analyse par secteurs d'activités",
+                "no_panneau" : 2,
+                "onglet" : "Répartition par secteurs d'activité",
+                "no_onglet" : 1,
+                "description" : "Description ",
+                "source" : "source",
+                "titre" : "titre"
+            },
+            "analyseSecteursActivite_Public" : {
+                "volet" : "Données 2021",
+                "panneau" : "Analyse par secteurs d'activités",
+                "no_panneau" : 2,
+                "onglet" : "Secteur public",
+                "no_onglet" : 2,
+                "description" : "Description ",
+                "source" : "source",
+                "titre" : "titre"
+            },
+            "analyseSecteursActivite_Prive" : {
+                "volet" : "Données 2021",
+                "panneau" : "Analyse par secteurs d'activités",
+                "no_panneau" : 2,
+                "onglet" : "Secteur privé",
+                "no_onglet" : 3,
+                "description" : "Description ",
+                "source" : "source",
+                "titre" : "titre"
+            },
+            "repartitionPrevenus_repartition" : {
+                "volet" : "Données 2021",
+                "panneau" : "Répartition des prévenus",
+                "no_panneau" : 3,
+                "onglet" : "Répartition des prévenus",
+                "no_onglet" : 1,
+                "description" : "Description ",
+                "source" : "source",
+                "titre" : "titre"
+            },
+            "repartitionPrevenus_ageMoyen" : {
+                "volet" : "Données 2021",
+                "panneau" : "Répartition des prévenus",
+                "no_panneau" : 3,
+                "onglet" : "Indicateurs",
+                "no_onglet" : 2,
+                "description" : "Description ",
+                "source" : "source",
+                "titre" : "titre"
+            },
+            "repartitionPrevenus_nbMoyen" : {
+                "volet" : "Données 2021",
+                "panneau" : "Répartition des prévenus",
+                "no_panneau" : 3,
+                "onglet" : "Indicateurs",
+                "no_onglet" : 3,
+                "description" : "Description ",
+                "source" : "source",
+                "titre" : "titre"
+            },
+            "NatureSexePrevenus_Nature" : {
+                "volet" : "Données 2021",
+                "panneau" : "Nature et sexe des prévenus",
+                "no_panneau" : 4,
+                "onglet" : "Nature",
+                "no_onglet" : 1,
+                "description" : "Description ",
+                "source" : "source",
+                "titre" : "titre"
+            },
+            "NatureSexePrevenus_Sexe" : {
+                "volet" : "Données 2021",
+                "panneau" : "Nature et sexe des prévenus",
+                "no_panneau" : 4,
+                "onglet" : "Sexe",
+                "no_onglet" : 2,
+                "description" : "Description ",
+                "source" : "source",
+                "titre" : "titre"
+            },
+            "qualiteCSPPrevenus_qualite" : {
+                "volet" : "Données 2021",
+                "panneau" : "Qualité et catégorie socio-professionnelle (CSP) des prévenus",
+                "no_panneau" : 5,
+                "onglet" : "Qualité",
+                "no_onglet" : 1,
+                "description" : "Description ",
+                "source" : "source",
+                "titre" : "titre"
+            },
+            "qualiteCSPPrevenus_CSP" : {
+                "volet" : "Données 2021",
+                "panneau" : "Qualité et catégorie socio-professionnelle (CSP) des prévenus",
+                "no_panneau" : 5,
+                "onglet" : "Catégorie socio-professionnelle",
+                "no_onglet" : 2,
+                "description" : "Description ",
+                "source" : "source",
+                "titre" : "titre"
+            },
+            "caracsProcedure_origine" : {
+                "volet" : "Données 2021",
+                "panneau" : "Caractéristiques de la procédure",
+                "no_panneau" : 6,
+                "onglet" : "Origine de l'affaire",
+                "no_onglet" : 1,
+                "description" : "Description ",
+                "source" : "source",
+                "titre" : "titre"
+            },
+            "caracsProcedure_dureeProcedure" : {
+                "volet" : "Données 2021",
+                "panneau" : "Caractéristiques de la procédure",
+                "no_panneau" : 6,
+                "onglet" : "Indicateurs",
+                "no_onglet" : 2,
+                "description" : "Description ",
+                "source" : "source",
+                "titre" : "titre"
+            },
+            "caracsProcedure_dureePrevention" : {
+                "volet" : "Données 2021",
+                "panneau" : "Caractéristiques de la procédure",
+                "no_panneau" : 6,
+                "onglet" : "Indicateurs",
+                "no_onglet" : 3,
+                "description" : "Description ",
+                "source" : "source",
+                "titre" : "titre"
+            },
+            "analyseDJ_sens" : {
+                "volet" : "Données 2021",
+                "panneau" : "Analyse de la décision judiciaire",
+                "no_panneau" : 7,
+                "onglet" : "Sens de la décision",
+                "no_onglet" : 1,
+                "description" : "Description ",
+                "source" : "source",
+                "titre" : "titre"
+            },
+            "analysePeines_type" : {
+                "volet" : "Données 2021",
+                "panneau" : "Analyse de la peine",
+                "no_panneau" : 8,
+                "onglet" : "Types de peine",
+                "no_onglet" : 1,
+                "description" : "Description ",
+                "source" : "source",
+                "titre" : "titre"
+            },
+            "sanctionPenales_physiquesMoyenneAmende" : {
+                "volet" : "Données 2021",
+                "panneau" : "Sanction pénale",
+                "no_panneau" : 9,
+                "onglet" : "Personnes physiques",
+                "no_onglet" : 1,
+                "description" : "Description ",
+                "source" : "source",
+                "titre" : "titre"
+            },
+            "sanctionPenales_physiquesMoyenneEmprisonnement" : {
+                "volet" : "Données 2021",
+                "panneau" : "Sanction pénale",
+                "no_panneau" : 9,
+                "onglet" : "Personnes physiques",
+                "no_onglet" : 2,
+                "description" : "Description ",
+                "source" : "source",
+                "titre" : "titre"
+            },
+            "sanctionPenales_moralesMoyenneAmende" : {
+                "volet" : "Données 2021",
+                "panneau" : "Sanction pénale",
+                "no_panneau" : 9,
+                "onglet" : "Personnes morales",
+                "no_onglet" : 3,
+                "description" : "Description ",
+                "source" : "source",
+                "titre" : "titre"
+            },
+            "sanctionPenales_confiscations" : {
+                "volet" : "Données 2021",
+                "panneau" : "Sanction pénale",
+                "no_panneau" : 9,
+                "onglet" : "Confiscations pénales",
+                "no_onglet" : 4,
+                "description" : "Description ",
+                "source" : "source",
+                "titre" : "titre"
+            }
+        }
 
-    # Graphiques
-    #------------------------------------------------------------------------------------------------------------------------------------------------------#
+    ##############
+    # Graphiques #
+    ##############
 
-    # PAS A JOUR -> ne fonctionnera pas #
-    def AnalyseSecteursActivite_Public(self,normal=False): 
-        FichesLieesPublic = self.data.loc[self.data.secteurPublic.notna()].groupby('fiche')
-        ActeursParFiche = FichesLieesPublic.secteurPublic.unique() # Attention : On parle ici d'une colonne dont les valeurs sont des listes (c relou)
+    def analyseTypeFaits_FamilleInfractions():
+
+    def analyseSecteursActivite_PublicPrive():
+
+    def analyseSecteursActivite_Public():
+
+    def analyseSecteursActivite_Prive():
+
+    def repartitionPrevenus_repartition():
+
+    def repartitionPrevenus_ageMoyen():
+
+    def repartitionPrevenus_nbMoyen():
+
+    def NatureSexePrevenus_Nature():
+
+    def NatureSexePrevenus_Sexe():
+
+    def qualiteCSPPrevenus_qualite():
+
+    def qualiteCSPPrevenus_CSP():
+
+    def caracsProcedure_origine():
+
+    def caracsProcedure_dureeProcedure():
+
+    def caracsProcedure_dureePrevention():
+
+    def analyseDJ_sens():
+
+    def analysePeines_type():
+
+    def sanctionPenales_physiquesMoyenneAmende():
+
+    def sanctionPenales_physiquesMoyenneEmprisonnement():
+
+    def sanctionPenales_moralesMoyenneAmende():
+
+    def sanctionPenales_confiscations():
         
-        values = data.secteurPublic.dropna().unique()
-        proportion = {key: 0 for key in values}
-        for fiche in ActeursParFiche:
-            for acteurPublic in fiche:
-                proportion[acteurPublic] += 1
-                
-        return pd.Series(proportion,name="Nombre de DJ pour chaque type d'acteur public").sort_values(ascending=False)
 
-    # PAS A JOUR -> ne fonctionnera pas #
-    def AnalyseSecteursActivite_Prive(self,normal=False):
-        FichesLieesPrive = self.data.loc[self.data.secteurPrive.notna()].groupby('fiche')
-        ActeursParFiche = FichesLieesPrive.secteurPrive.unique() # Attention : On parle ici d'une colonne dont les valeurs sont des listes (c relou)
-        
-        values = data.secteurPrive.dropna().unique()
-        proportion = {key: 0 for key in values}
-        for fiche in ActeursParFiche:
-            for acteurPrive in fiche:
-                proportion[acteurPrive] += 1
-                
-        return pd.Series(proportion,name="Nombre de décisions pour chaque type d'acteur privé").sort_values(ascending=False)
-
-    # PAS A JOUR -> ne fonctionnera pas #
-    def AnalyseSecteursActivite_RepartitionPublicPrive(self,normal=False):
-        return pd.Series([AnalyseSecteursActivite_Public().dropna().size,AnalyseSecteursActivite_Prive().dropna().size],index=["public","privé"])
-
-    def CSP_in_PII(self,normal=False):
-        
-        natinfPII = [3530,3555,4430,10709,10710,12282,12283,12284,12285,12286,12287,22725,22726,22727,22728,22729,22730,29258,30151,30152,30153,30154,34342,34343]
-        fichesPII = self.data.loc[self.data.codeNATINF.isin(natinfPII)]
-        repartitionCSP = fichesPII.qualitePrevenus.value_counts()
-        repartitionCSP_normalized = fichesPII.qualitePrevenus.value_counts(normalize=True)
-        
-        print(repartitionCSP)
-        print(repartitionCSP_normalized)
     
