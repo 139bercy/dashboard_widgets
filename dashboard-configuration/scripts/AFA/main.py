@@ -42,7 +42,22 @@ def page_afa():
 def page_afa2021():
 
     # Choix du dataset et de la page
-    page = afa.pageafa2021("DJ-2021")
+    page = afa2021.pageafa2021("20240321 - Carto TJ - Année 2021")
+
+    # Choix des graphiques à générer : Génération des datas et confs
+    allDatas = {}
+    allConfs = {}
+    allDatas["analyseTypeFaits_FamilleInfractions"],allConfs["analyseTypeFaits_FamilleInfractions"] = page.analyseTypeFaits_FamilleInfractions()
+
+    # Assemblage des datas et confs
+    finalData = []
+    for data in allDatas:
+        finalData = finalData + allDatas[data]
+    finalConf = pd.concat(list(allConfs.values()))
+
+    # Ecriture pour récupération sur MinIO
+    fm.export_ndjson(finalData,"ca-afa-2021-" + str(date.today()) +".ndjson")
+    fm.export_csv(finalConf,"ca-afa-2021-" + str(date.today()) +".csv")
     
-page_afa()
+page_afa2021()
 

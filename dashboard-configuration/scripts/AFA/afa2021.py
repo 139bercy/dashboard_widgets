@@ -8,7 +8,8 @@ import pandas as pd
 
 class pageafa2021:
 
-    def __init__(self):
+    def __init__(self,datasetName):
+        self.datasetName = datasetName
         self.organisationPage = {
             "analyseTypeFaits_FamilleInfractions" : {
                 "volet" : "Données 2021",
@@ -216,45 +217,81 @@ class pageafa2021:
     # Graphiques #
     ##############
 
-    def analyseTypeFaits_FamilleInfractions():
-
-    def analyseSecteursActivite_PublicPrive():
-
-    def analyseSecteursActivite_Public():
-
-    def analyseSecteursActivite_Prive():
-
-    def repartitionPrevenus_repartition():
-
-    def repartitionPrevenus_ageMoyen():
-
-    def repartitionPrevenus_nbMoyen():
-
-    def NatureSexePrevenus_Nature():
-
-    def NatureSexePrevenus_Sexe():
-
-    def qualiteCSPPrevenus_qualite():
-
-    def qualiteCSPPrevenus_CSP():
-
-    def caracsProcedure_origine():
-
-    def caracsProcedure_dureeProcedure():
-
-    def caracsProcedure_dureePrevention():
-
-    def analyseDJ_sens():
-
-    def analysePeines_type():
-
-    def sanctionPenales_physiquesMoyenneAmende():
-
-    def sanctionPenales_physiquesMoyenneEmprisonnement():
-
-    def sanctionPenales_moralesMoyenneAmende():
-
-    def sanctionPenales_confiscations():
+    def analyseTypeFaits_FamilleInfractions(self):
         
+        # Data
+        dict = {
+            "Corruption" : 71,
+            "Détournement de fonds publics" : 67,
+            "Prise illégale d'intérêts" : 67,
+            "Favoritisme" : 64,
+            "Trafic d'influence" : 18,
+            "Concussion" : 13,
+        }
+        series = pd.Series(dict)
 
-    
+        # Formalisation
+        orgInfos = self.organisationPage["analyseTypeFaits_FamilleInfractions"]
+        series.name = orgInfos["titre"]
+        data = form.donut_data(self.datasetName, series)
+        conf = form.donut_conf(self.datasetName, series, orgInfos)
+        
+        return [data,conf]
+
+    def analyseSecteursActivite_PublicPrive(self):
+        return
+
+    def analyseSecteursActivite_Public(self):
+        return
+
+    def analyseSecteursActivite_Prive(self):
+        return
+
+    def repartitionPrevenus_repartition(self):
+        return
+
+    def repartitionPrevenus_ageMoyen(self):
+        return
+
+    def repartitionPrevenus_nbMoyen(self):
+        return
+
+    def NatureSexePrevenus_Nature(self):
+        return
+
+    def NatureSexePrevenus_Sexe(self):
+        return
+
+    def qualiteCSPPrevenus_qualite(self):
+        return
+
+    def qualiteCSPPrevenus_CSP(self):
+        return
+
+    def caracsProcedure_origine(self):
+        return
+
+    def caracsProcedure_dureeProcedure(self):
+        return
+
+    def caracsProcedure_dureePrevention(self):
+        return
+
+    def analyseDJ_sens(self):
+        return
+
+    def analysePeines_type(self):
+        return
+
+    def sanctionPenales_physiquesMoyenneAmende(self):
+        return
+
+    def sanctionPenales_physiquesMoyenneEmprisonnement(self):
+        return
+
+    def sanctionPenales_moralesMoyenneAmende(self):
+        return
+
+    def sanctionPenales_confiscations(self):
+        return
+        
