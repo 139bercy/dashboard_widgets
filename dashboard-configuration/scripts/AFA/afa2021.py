@@ -19,7 +19,7 @@ class pageafa2021:
                 "no_onglet" : 1,
                 "description" : "Description ",
                 "source" : "source",
-                "titre" : "titre"
+                "titre" : "Répartition des infractions par familles"
             },
             "analyseSecteursActivite_PublicPrive" : {
                 "volet" : "Données 2021",
@@ -29,7 +29,7 @@ class pageafa2021:
                 "no_onglet" : 1,
                 "description" : "Description ",
                 "source" : "source",
-                "titre" : "titre"
+                "titre" : "Répartition entre le public et le privé"
             },
             "analyseSecteursActivite_Public" : {
                 "volet" : "Données 2021",
@@ -39,7 +39,7 @@ class pageafa2021:
                 "no_onglet" : 2,
                 "description" : "Description ",
                 "source" : "source",
-                "titre" : "titre"
+                "titre" : "Secteur public"
             },
             "analyseSecteursActivite_Prive" : {
                 "volet" : "Données 2021",
@@ -49,7 +49,7 @@ class pageafa2021:
                 "no_onglet" : 3,
                 "description" : "Description ",
                 "source" : "source",
-                "titre" : "titre"
+                "titre" : "Secteur privé"
             },
             "repartitionPrevenus_repartition" : {
                 "volet" : "Données 2021",
@@ -59,7 +59,7 @@ class pageafa2021:
                 "no_onglet" : 1,
                 "description" : "Description ",
                 "source" : "source",
-                "titre" : "titre"
+                "titre" : "Répartition des prévenus par familles"
             },
             "repartitionPrevenus_ageMoyen" : {
                 "volet" : "Données 2021",
@@ -69,7 +69,7 @@ class pageafa2021:
                 "no_onglet" : 2,
                 "description" : "Description ",
                 "source" : "source",
-                "titre" : "titre",
+                "titre" : "Age moyen des prévenus",
                 "unite" : "ans"
             },
             "repartitionPrevenus_nbMoyen" : {
@@ -80,7 +80,7 @@ class pageafa2021:
                 "no_onglet" : 3,
                 "description" : "Description ",
                 "source" : "source",
-                "titre" : "titre",
+                "titre" : "Nombre moyen de prévenus par affaire",
                 "unite" : "personnes"
             },
             "NatureSexePrevenus_Nature" : {
@@ -91,7 +91,7 @@ class pageafa2021:
                 "no_onglet" : 1,
                 "description" : "Description ",
                 "source" : "source",
-                "titre" : "titre"
+                "titre" : "Nature des prévenus"
             },
             "NatureSexePrevenus_Sexe" : {
                 "volet" : "Données 2021",
@@ -100,7 +100,7 @@ class pageafa2021:
                 "onglet" : "Sexe",
                 "no_onglet" : 2,
                 "description" : "Description ",
-                "source" : "source",
+                "source" : "Sexe des prévenus physiques",
                 "titre" : "titre"
             },
             "qualiteCSPPrevenus_qualite" : {
@@ -111,7 +111,7 @@ class pageafa2021:
                 "no_onglet" : 1,
                 "description" : "Description ",
                 "source" : "source",
-                "titre" : "titre"
+                "titre" : "Qualité des prévenus"
             },
             "qualiteCSPPrevenus_CSP" : {
                 "volet" : "Données 2021",
@@ -121,7 +121,7 @@ class pageafa2021:
                 "no_onglet" : 2,
                 "description" : "Description ",
                 "source" : "source",
-                "titre" : "titre"
+                "titre" : "Catégorie socio-professionnelle des prévenus"
             },
             "caracsProcedure_origine" : {
                 "volet" : "Données 2021",
@@ -131,7 +131,7 @@ class pageafa2021:
                 "no_onglet" : 1,
                 "description" : "Description ",
                 "source" : "source",
-                "titre" : "titre"
+                "titre" : "Origine de l'affaire"
             },
             "caracsProcedure_dureeProcedure" : {
                 "volet" : "Données 2021",
@@ -141,7 +141,7 @@ class pageafa2021:
                 "no_onglet" : 2,
                 "description" : "Description ",
                 "source" : "source",
-                "titre" : "titre",
+                "titre" : "Durée de la procédure",
                 "unite" : "ans"
             },
             "caracsProcedure_dureePrevention" : {
@@ -152,7 +152,7 @@ class pageafa2021:
                 "no_onglet" : 3,
                 "description" : "Description ",
                 "source" : "source",
-                "titre" : "titre",
+                "titre" : "Durée de la période de prévention",
                 "unite" : "jours"
             },
             "analyseDJ_sens" : {
@@ -163,7 +163,7 @@ class pageafa2021:
                 "no_onglet" : 1,
                 "description" : "Description ",
                 "source" : "source",
-                "titre" : "titre"
+                "titre" : "Sens de la décision"
             },
             "analysePeines_type" : {
                 "volet" : "Données 2021",
@@ -173,7 +173,7 @@ class pageafa2021:
                 "no_onglet" : 1,
                 "description" : "Description ",
                 "source" : "source",
-                "titre" : "titre"
+                "titre" : "Types de peine"
             },
             "sanctionPenales_physiquesMoyenneAmende" : {
                 "volet" : "Données 2021",
@@ -183,7 +183,7 @@ class pageafa2021:
                 "no_onglet" : 1,
                 "description" : "Description ",
                 "source" : "source",
-                "titre" : "titre",
+                "titre" : "Montant moyen de l'amende pour les personnes physiques",
                 "unite" : "€"
             },
             "sanctionPenales_physiquesMoyenneEmprisonnement" : {
@@ -194,7 +194,7 @@ class pageafa2021:
                 "no_onglet" : 2,
                 "description" : "Description ",
                 "source" : "source",
-                "titre" : "titre",
+                "titre" : "Durée moyenne de l'emprisonnement pour les personnes physiques",
                 "unite" : "mois"
             },
             "sanctionPenales_moralesMoyenneAmende" : {
@@ -205,7 +205,7 @@ class pageafa2021:
                 "no_onglet" : 3,
                 "description" : "Description ",
                 "source" : "source",
-                "titre" : "titre",
+                "titre" : "Montant moyen de l'amende pour les personnes morales",
                 "unite" : "€"
             },
             "sanctionPenales_confiscations" : {
@@ -216,7 +216,7 @@ class pageafa2021:
                 "no_onglet" : 4,
                 "description" : "Description ",
                 "source" : "source",
-                "titre" : "titre",
+                "titre" : "Montant moyen des confiscations",
                 "unite" : "€"
             }
         }
