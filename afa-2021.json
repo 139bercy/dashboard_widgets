@@ -1,9 +1,9 @@
 [
     {
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
-        "Titre_panneau": "Familles d'infractions",
-        "Volet": "Analyse par type de faits",
-        "source": "Analyse par l’AFA de 94 décisions de justice rendues en 2021 en matière d’atteintes à la probité",
+        "Titre_panneau": "Analyse par type de faits",
+        "Volet": "Données 2021",
+        "source": "source",
         "accordéon": "En savoir plus sur la donnée",
         "onglets": [
             {
@@ -13,63 +13,63 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Note de lecture : La corruption représente 25,6% des faits d’atteinte à la probité rapportés dans les 94 décisions de justice rendues en 2021 et analysées par l’AFA. Explications : Les infractions d’atteinte à la probité regroupent la corruption, le trafic d’influence, le favoritisme, la prise illégale d’intérêts, le détournement de fonds ou de biens publics et la concussion. Dans l’échantillon, aucun fait de concussion n’a été relevé. Pour une définition et une illustration de chaque infraction, se reporter au Lexique de l'AFA. Méthode de comptage : Calcul de répartition des infractions.",
-                "Titre_onglet": "Données 2021",
+                "Description_mesure": "Description ",
+                "Titre_onglet": "Familles d'infractions",
                 "Pie": 1,
                 "Table": false,
                 "Info": false,
                 "Info_titre": "c",
                 "Info_contenu": "c",
-                "Pie_titre": "Répartition par familles d’infractions",
+                "Pie_titre": "Répartition des infractions par familles",
                 "Graph_avec_valeurs": false,
                 "Pie_legende": true,
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "Données 2021_Familles d'infractions_CORRUPTION",
-                        "Nom_indicateur": "CORRUPTION",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des infractions par familles | Corruption",
+                        "Nom_indicateur": "Corruption",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "CORRUPTION",
+                        "Titre_indicateur": "Corruption",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Familles d'infractions_PRISE ILLÉGALE D'INTÉRÊTS",
-                        "Nom_indicateur": "PRISE ILLÉGALE D'INTÉRÊTS",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des infractions par familles | Détournement de fonds publics",
+                        "Nom_indicateur": "Détournement de fonds publics",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "PRISE ILLÉGALE D'INTÉRÊTS",
+                        "Titre_indicateur": "Détournement de fonds publics",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Familles d'infractions_FAVORITISME",
-                        "Nom_indicateur": "FAVORITISME",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des infractions par familles | Prise illégale d'intérêts",
+                        "Nom_indicateur": "Prise illégale d'intérêts",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "FAVORITISME",
+                        "Titre_indicateur": "Prise illégale d'intérêts",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Familles d'infractions_DÉTOURNEMENTS DE BIENS",
-                        "Nom_indicateur": "DÉTOURNEMENTS DE BIENS/FONDS PUBLICS",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des infractions par familles | Favoritisme",
+                        "Nom_indicateur": "Favoritisme",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "DÉTOURNEMENTS DE BIENS/FONDS PUBLICS",
+                        "Titre_indicateur": "Favoritisme",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Familles d'infractions_TRAFIC D'INFLUENCE",
-                        "Nom_indicateur": "TRAFIC D'INFLUENCE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des infractions par familles | Trafic d'influence",
+                        "Nom_indicateur": "Trafic d'influence",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "TRAFIC D'INFLUENCE",
+                        "Titre_indicateur": "Trafic d'influence",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Familles d'infractions_CONCUSSION",
-                        "Nom_indicateur": "CONCUSSION",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des infractions par familles | Concussion",
+                        "Nom_indicateur": "Concussion",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "CONCUSSION",
+                        "Titre_indicateur": "Concussion",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -79,9 +79,9 @@
     },
     {
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
-        "Titre_panneau": "Répartition par secteurs d’activité",
-        "Volet": "Analyse par secteurs d’activité",
-        "source": "Analyse par l’AFA de 94 décisions de justice rendues en 2021 en matière d’atteintes à la probité",
+        "Titre_panneau": "Analyse par secteurs d'activités",
+        "Volet": "Données 2021",
+        "source": "source",
         "accordéon": "En savoir plus sur la donnée",
         "onglets": [
             {
@@ -91,53 +91,36 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Note de lecture : 47,2% des prévenus concernés par les 94 décisions de justice rendues en 2021 et analysées par l’AFA, appartenaient au secteur public. Explications : Le secteur public comprend autant les agents publics (État, collectivités territoriales, établissements publics etc.) que les élus. Chaque secteur comprend à chaque fois les prévenus tant personnes physiques que personnes morales. Un prévenu est une personne poursuivie pénalement et qui n’a pas encore été jugée ou dont la condamnation n’est pas encore définitive. Méthode de comptage : Calcul de répartition des affaires. Les affaires mettant en cause des personnes tant du secteur privé que du secteur public sont comptabilisées dans les deux catégories.",
-                "Titre_onglet": "Données 2021",
+                "Description_mesure": "Description ",
+                "Titre_onglet": "Répartition par secteurs d'activité",
                 "Pie": 1,
                 "Table": false,
                 "Info": false,
                 "Info_titre": "c",
                 "Info_contenu": "c",
-                "Pie_titre": "Répartition par secteurs d’activité",
+                "Pie_titre": "Répartition entre le public et le privé",
                 "Graph_avec_valeurs": false,
                 "Pie_legende": true,
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "Données 2021_Répartition par secteurs d’activité_PARTICULIER",
-                        "Nom_indicateur": "PARTICULIER",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition entre le public et le privé | Privé",
+                        "Nom_indicateur": "Privé",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "PARTICULIER",
+                        "Titre_indicateur": "Privé",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Répartition par secteurs d’activité_PRIVE",
-                        "Nom_indicateur": "PRIVE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition entre le public et le privé | Public",
+                        "Nom_indicateur": "Public",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "PRIVE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Répartition par secteurs d’activité_PUBLIC",
-                        "Nom_indicateur": "PUBLIC",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "PUBLIC",
+                        "Titre_indicateur": "Public",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
                 ]
-            }
-        ]
-    },
-    {
-        "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
-        "Titre_panneau": "Secteur public",
-        "Volet": "Analyse par secteurs d’activité",
-        "source": "Analyse par l’AFA de 94 décisions de justice rendues en 2021 en matière d’atteintes à la probité",
-        "accordéon": "En savoir plus sur la donnée",
-        "onglets": [
+            },
             {
                 "Carte": false,
                 "Graph": false,
@@ -145,28 +128,20 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Note de lecture : 9,3% des prévenus des 94 décisions de justice rendues en 2021 et analysées par l’AFA, étaient fonctionnaires de l’État travaillant au sein de l’administration centrale. Explications : Cette classification a été créée par l’AFA. Méthode de comptage : Calcul de répartition des prévenus appartenant au secteur public",
-                "Titre_onglet": "Données 2021",
+                "Description_mesure": "Description ",
+                "Titre_onglet": "Secteur public",
                 "Pie": 1,
                 "Table": false,
                 "Info": false,
                 "Info_titre": "c",
                 "Info_contenu": "c",
-                "Pie_titre": "Répartition au sein du secteur public",
+                "Pie_titre": "Secteur public",
                 "Graph_avec_valeurs": false,
                 "Pie_legende": true,
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "Données 2021_Secteur public_FONCTION PUBLIQUE HOSPITALIERE",
-                        "Nom_indicateur": "FONCTION PUBLIQUE HOSPITALIERE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "FONCTION PUBLIQUE HOSPITALIERE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Secteur public_NON RENSEIGNE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public | NON RENSEIGNE",
                         "Nom_indicateur": "NON RENSEIGNE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "NON RENSEIGNE",
@@ -174,15 +149,23 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Secteur public_ETAT DECONCENTRE",
-                        "Nom_indicateur": "ETAT DECONCENTRE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public | ETAT - ADMINISTRATION CENTRALE",
+                        "Nom_indicateur": "ETAT - ADMINISTRATION CENTRALE",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "ETAT DECONCENTRE",
+                        "Titre_indicateur": "ETAT - ADMINISTRATION CENTRALE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Secteur public_COLLECTIVITÉS RÉGIONALES",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public | COLLECTIVITÉS DÉPARTEMENTALES",
+                        "Nom_indicateur": "COLLECTIVITÉS DÉPARTEMENTALES",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "COLLECTIVITÉS DÉPARTEMENTALES",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public | COLLECTIVITÉS RÉGIONALES",
                         "Nom_indicateur": "COLLECTIVITÉS RÉGIONALES",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "COLLECTIVITÉS RÉGIONALES",
@@ -190,7 +173,23 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Secteur public_ETABLISSEMENT PUBLIC",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public | ETAT - DECONCENTRE",
+                        "Nom_indicateur": "ETAT - DECONCENTRE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "ETAT - DECONCENTRE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public | COLLECTIVITÉS - MAIRIES",
+                        "Nom_indicateur": "COLLECTIVITÉS - MAIRIES",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "COLLECTIVITÉS - MAIRIES",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public | ETABLISSEMENT PUBLIC",
                         "Nom_indicateur": "ETABLISSEMENT PUBLIC",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "ETABLISSEMENT PUBLIC",
@@ -198,40 +197,15 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Secteur public_ETAT ADMINISTRATION CENTRALE",
-                        "Nom_indicateur": "ETAT ADMINISTRATION CENTRALE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public | FONCTION PUBLIQUE HOSPITALIERE",
+                        "Nom_indicateur": "FONCTION PUBLIQUE HOSPITALIERE",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "ETAT ADMINISTRATION CENTRALE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Secteur public_COLLECTIVITÉS MAIRIES",
-                        "Nom_indicateur": "COLLECTIVITÉS MAIRIES",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "COLLECTIVITÉS MAIRIES",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Secteur public_COLLECTIVITÉS DÉPARTEMENTALES",
-                        "Nom_indicateur": "COLLECTIVITÉS DÉPARTEMENTALES",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "COLLECTIVITÉS DÉPARTEMENTALES",
+                        "Titre_indicateur": "FONCTION PUBLIQUE HOSPITALIERE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
                 ]
-            }
-        ]
-    },
-    {
-        "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
-        "Titre_panneau": "Secteur privé",
-        "Volet": "Analyse par secteurs d’activité",
-        "source": "Analyse par l’AFA de 94 décisions de justice rendues en 2021 en matière d’atteintes à la probité",
-        "accordéon": "En savoir plus sur la donnée",
-        "onglets": [
+            },
             {
                 "Carte": false,
                 "Graph": false,
@@ -239,20 +213,20 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Note de lecture : 26,7% des prévenus des 94 décisions de justice rendues en 2021 et analysées par l’AFA, travaillaient dans le secteur de la construction. Explications : La classification correspond à la nomenclature d’activités française de l’INSEE (NAF rev.2 - Sections). Méthode de comptage : Calcul de répartition des prévenus appartenant au secteur privé.",
-                "Titre_onglet": "Données 2021",
+                "Description_mesure": "Description ",
+                "Titre_onglet": "Secteur privé",
                 "Pie": 1,
                 "Table": false,
                 "Info": false,
                 "Info_titre": "c",
                 "Info_contenu": "c",
-                "Pie_titre": "Répartition au sein du secteur privé",
+                "Pie_titre": "Secteur privé",
                 "Graph_avec_valeurs": false,
                 "Pie_legende": true,
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "Données 2021_Secteur privé_NON RENSEIGNE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | NON RENSEIGNE",
                         "Nom_indicateur": "NON RENSEIGNE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "NON RENSEIGNE",
@@ -260,7 +234,15 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Secteur privé_ACTIVITÉS IMMOBILIÈRES",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | CONSTRUCTION",
+                        "Nom_indicateur": "CONSTRUCTION",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "CONSTRUCTION",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | ACTIVITÉS IMMOBILIÈRES",
                         "Nom_indicateur": "ACTIVITÉS IMMOBILIÈRES",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "ACTIVITÉS IMMOBILIÈRES",
@@ -268,31 +250,23 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Secteur privé_HÉBERGEMENT ET RESTAURATION",
-                        "Nom_indicateur": "HÉBERGEMENT ET RESTAURATION",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | ACTIVITÉS SPÉCIALISÉES, SCIENTIFIQUES ET TECHNIQUES",
+                        "Nom_indicateur": "ACTIVITÉS SPÉCIALISÉES, SCIENTIFIQUES ET TECHNIQUES",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "HÉBERGEMENT ET RESTAURATION",
+                        "Titre_indicateur": "ACTIVITÉS SPÉCIALISÉES, SCIENTIFIQUES ET TECHNIQUES",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Secteur privé_PRODUCTION ET DISTRIBUTION D'EAU  ASSAINISSEMENT GESTION DES DÉCHETS ET DÉPOLLUTION",
-                        "Nom_indicateur": "PRODUCTION ET DISTRIBUTION D'EAU  ASSAINISSEMENT GESTION DES DÉCHETS ET DÉPOLLUTION",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | AUTRES ACTIVITÉS DE SERVICES",
+                        "Nom_indicateur": "AUTRES ACTIVITÉS DE SERVICES",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "PRODUCTION ET DISTRIBUTION D'EAU  ASSAINISSEMENT GESTION DES DÉCHETS ET DÉPOLLUTION",
+                        "Titre_indicateur": "AUTRES ACTIVITÉS DE SERVICES",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Secteur privé_COMMERCE  RÉPARATION D'AUTOMOBILES ET DE MOTOCYCLES",
-                        "Nom_indicateur": "COMMERCE  RÉPARATION D'AUTOMOBILES ET DE MOTOCYCLES",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "COMMERCE  RÉPARATION D'AUTOMOBILES ET DE MOTOCYCLES",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Secteur privé_TRANSPORTS ET ENTREPOSAGE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | TRANSPORTS ET ENTREPOSAGE",
                         "Nom_indicateur": "TRANSPORTS ET ENTREPOSAGE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "TRANSPORTS ET ENTREPOSAGE",
@@ -300,49 +274,82 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Secteur privé_CONSTRUCTION",
-                        "Nom_indicateur": "CONSTRUCTION",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | PRODUCTION ET DISTRIBUTION D'EAU ; ASSAINISSEMENT, GESTION DES DÉCHETS ET DÉPOLLUTION",
+                        "Nom_indicateur": "PRODUCTION ET DISTRIBUTION D'EAU ; ASSAINISSEMENT, GESTION DES DÉCHETS ET DÉPOLLUTION",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "CONSTRUCTION",
-                        "Unité_GP": "En savoir plus sur la donnée"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Secteur privé_AUTRES ACTIVITÉS DE SERVICES",
-                        "Nom_indicateur": "AUTRES ACTIVITÉS DE SERVICES",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "AUTRES ACTIVITÉS DE SERVICES",
-                        "Unité_GP": "%",
-                        "Unité_Evol": "Analyse par l’AFA de 111 décisions de justice rendues entre 2014 et 2020 en matière d’atteintes à la probité. "
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Secteur privé_ACTIVITÉS SPÉCIALISÉES SCIENTIFIQUES ET TECHNIQUES",
-                        "Nom_indicateur": "ACTIVITÉS SPÉCIALISÉES SCIENTIFIQUES ET TECHNIQUES",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "ACTIVITÉS SPÉCIALISÉES SCIENTIFIQUES ET TECHNIQUES",
+                        "Titre_indicateur": "PRODUCTION ET DISTRIBUTION D'EAU ; ASSAINISSEMENT, GESTION DES DÉCHETS ET DÉPOLLUTION",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Secteur privé_AUTRE",
-                        "Nom_indicateur": "AUTRE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ, DE GAZ, DE VAPEUR ET D'AIR CONDITIONNÉ",
+                        "Nom_indicateur": "PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ, DE GAZ, DE VAPEUR ET D'AIR CONDITIONNÉ",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "AUTRE",
+                        "Titre_indicateur": "PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ, DE GAZ, DE VAPEUR ET D'AIR CONDITIONNÉ",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Secteur privé_PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ DE GAZ DE VAPEUR ET D'AIR CONDITIONNÉ",
-                        "Nom_indicateur": "PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ DE GAZ DE VAPEUR ET D'AIR CONDITIONNÉ",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | HÉBERGEMENT ET RESTAURATION",
+                        "Nom_indicateur": "HÉBERGEMENT ET RESTAURATION",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ DE GAZ DE VAPEUR ET D'AIR CONDITIONNÉ",
+                        "Titre_indicateur": "HÉBERGEMENT ET RESTAURATION",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Secteur privé_ACTIVITÉS DE SERVICES ADMINISTRATIFS ET DE SOUTIEN",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | ACTIVITÉS DE SERVICES ADMINISTRATIFS ET DE SOUTIEN",
                         "Nom_indicateur": "ACTIVITÉS DE SERVICES ADMINISTRATIFS ET DE SOUTIEN",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "ACTIVITÉS DE SERVICES ADMINISTRATIFS ET DE SOUTIEN",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | INFORMATION ET COMMUNICATION",
+                        "Nom_indicateur": "INFORMATION ET COMMUNICATION",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "INFORMATION ET COMMUNICATION",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | INDUSTRIE MANUFACTURIÈRE",
+                        "Nom_indicateur": "INDUSTRIE MANUFACTURIÈRE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "INDUSTRIE MANUFACTURIÈRE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | ENSEIGNEMENT",
+                        "Nom_indicateur": "ENSEIGNEMENT",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "ENSEIGNEMENT",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | SANTÉ HUMAINE ET ACTION SOCIALE",
+                        "Nom_indicateur": "SANTÉ HUMAINE ET ACTION SOCIALE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "SANTÉ HUMAINE ET ACTION SOCIALE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | COMMERCE ; RÉPARATION D'AUTOMOBILES ET DE MOTOCYCLES",
+                        "Nom_indicateur": "COMMERCE ; RÉPARATION D'AUTOMOBILES ET DE MOTOCYCLES",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "COMMERCE ; RÉPARATION D'AUTOMOBILES ET DE MOTOCYCLES",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | ARTS, SPECTACLES ET ACTIVITÉS RÉCRÉATIVES",
+                        "Nom_indicateur": "ARTS, SPECTACLES ET ACTIVITÉS RÉCRÉATIVES",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "ARTS, SPECTACLES ET ACTIVITÉS RÉCRÉATIVES",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -353,8 +360,8 @@
     {
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
         "Titre_panneau": "Répartition des prévenus",
-        "Volet": "Répartition des prévenus",
-        "source": "Analyse par l’AFA de 94 décisions de justice rendues en 2021 en matière d’atteintes à la probité",
+        "Volet": "Données 2021",
+        "source": "source",
         "accordéon": "En savoir plus sur la donnée",
         "onglets": [
             {
@@ -364,77 +371,68 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Note de lecture : Au sein de l’échantillon de 94 décisions de justice rendues en 2021 et analysées par l’AFA, 26,6 % des prévenus renvoyés devant les juridictions pénales pour des infractions d’atteinte à la probité, l’ont été pour des faits de corruption. Un prévenu renvoyé devant les juridictions pénales pour des faits de corruption et de favoritisme est compté dans les deux catégories. Méthode de comptage : Calcul de répartition des prévenus.",
-                "Titre_onglet": "Données 2021",
+                "Description_mesure": "Description ",
+                "Titre_onglet": "Répartition des prévenus",
                 "Pie": 1,
                 "Table": false,
                 "Info": false,
                 "Info_titre": "c",
                 "Info_contenu": "c",
-                "Pie_titre": "Répartition des prévenus par famille d'infractions",
+                "Pie_titre": "Répartition des prévenus par familles",
                 "Graph_avec_valeurs": false,
                 "Pie_legende": true,
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "Données 2021_Répartition des prévenus_DÉTOURNEMENTS DE BIENS",
-                        "Nom_indicateur": "DÉTOURNEMENTS DE BIENS/FONDS PUBLICS",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des prévenus par familles | Trafic d'influence",
+                        "Nom_indicateur": "Trafic d'influence",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "DÉTOURNEMENTS DE BIENS/FONDS PUBLICS",
+                        "Titre_indicateur": "Trafic d'influence",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Répartition des prévenus_TRAFIC D'INFLUENCE",
-                        "Nom_indicateur": "TRAFIC D'INFLUENCE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des prévenus par familles | Concussion",
+                        "Nom_indicateur": "Concussion",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "TRAFIC D'INFLUENCE",
+                        "Titre_indicateur": "Concussion",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Répartition des prévenus_CONCUSSION",
-                        "Nom_indicateur": "CONCUSSION",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des prévenus par familles | Détournement de fonds publics",
+                        "Nom_indicateur": "Détournement de fonds publics",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "CONCUSSION",
+                        "Titre_indicateur": "Détournement de fonds publics",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Répartition des prévenus_PRISE ILLÉGALE D'INTÉRÊTS",
-                        "Nom_indicateur": "PRISE ILLÉGALE D'INTÉRÊTS",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des prévenus par familles | Favoritisme",
+                        "Nom_indicateur": "Favoritisme",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "PRISE ILLÉGALE D'INTÉRÊTS",
+                        "Titre_indicateur": "Favoritisme",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Répartition des prévenus_FAVORITISME",
-                        "Nom_indicateur": "FAVORITISME",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des prévenus par familles | Corruption",
+                        "Nom_indicateur": "Corruption",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "FAVORITISME",
+                        "Titre_indicateur": "Corruption",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Répartition des prévenus_CORRUPTION",
-                        "Nom_indicateur": "CORRUPTION",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des prévenus par familles | Prise illégale d'intérêts",
+                        "Nom_indicateur": "Prise illégale d'intérêts",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "CORRUPTION",
+                        "Titre_indicateur": "Prise illégale d'intérêts",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
                 ]
-            }
-        ]
-    },
-    {
-        "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
-        "Titre_panneau": "Indicateurs prévenus",
-        "Volet": "Répartition des prévenus",
-        "source": "Analyse par l’AFA de 94 décisions de justice rendues en 2021 en matière d’atteintes à la probité",
-        "accordéon": "En savoir plus sur la donnée",
-        "onglets": [
+            },
             {
                 "Carte": false,
                 "Graph": false,
@@ -442,27 +440,19 @@
                 "Box": 1,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Note de lecture 1 : Au sein de l’échantillon de 94 décisions de justice, rendues en 2021 et analysées par l’AFA, l’âge moyen des prévenus au moment du début de la période de prévention des faits qui leur sont reprochés, est de 45 ans.  Note de lecture 2 : Au sein de l’échantillon de 94 décisions de justice rendues en 2021 et analysées par l’AFA, il y a en moyenne 3 prévenus par affaire.  Explications :  La période de prévention correspond à la durée de temps pendant laquelle les infractions pénales reprochées à un prévenu ont été commises. Elle peut être d’un jour pour les infractions se consommant immédiatement, mais peut également durer plusieurs années. Méthode de comptage : Moyennes réalisées à partir des données concernant les prévenus.",
-                "Titre_onglet": "Données 2021",
+                "Description_mesure": "Description ",
+                "Titre_onglet": "Indicateurs",
                 "Pie": false,
                 "Table": false,
                 "Info": false,
                 "Info_titre": "c",
                 "Info_contenu": "c",
                 "Graph_avec_valeurs": false,
-                "Pie_legende": true,
+                "Pie_legende": false,
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "Données 2021_Indicateurs prévenus_Nombre moyen de prévenus par affaire",
-                        "Nom_indicateur": "Nombre moyen de prévenus par affaire",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Nombre moyen de prévenus par affaire",
-                        "Unité_GP": "prévenus",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Indicateurs prévenus_Age moyen des prévenus",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Age moyen des prévenus",
                         "Nom_indicateur": "Age moyen des prévenus",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Age moyen des prévenus",
@@ -470,358 +460,7 @@
                         "Unité_Evol": "ans"
                     }
                 ]
-            }
-        ]
-    },
-    {
-        "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
-        "Titre_panneau": "Nature",
-        "Volet": "Nature et sexe des prévenus ",
-        "source": "Analyse par l’AFA de 94 décisions de justice rendues en 2021 en matière d’atteintes à la probité",
-        "accordéon": "En savoir plus sur la donnée",
-        "onglets": [
-            {
-                "Carte": false,
-                "Graph": false,
-                "Bar": false,
-                "Box": false,
-                "Points": false,
-                "MinGeoLevel": "departements",
-                "Description_mesure": "Note de lecture : Sur l’échantillon de 94 décisions de justice rendues en 2021 et analysées par l’AFA, 92,0% des prévenus jugés pour des faits d’atteinte à la probité étaient des personnes physiques. Explications : En droit français, une personne morale est un groupement doté de la personnalité juridique. Elle peut être composée d’une ou plusieurs personnes physiques ou morales. La personnalité juridique donne à cette personne morale des droits et des devoirs. Une personne morale peut être droit public (État, collectivités territoriales, établissements publics etc.) ou de droit privé (sociétés privées, associations etc.). Depuis 1994 les personnes morales, à l'exclusion de l'État, sont responsables pénalement des infractions commises, pour leur compte, par leurs organes ou représentants. Les établissements publics, les collectivités territoriales et leurs groupements ne sont responsables que pour les infractions commises dans l'exercice des activités susceptibles de faire l'objet de délégation de service public. Méthode de comptage : Calcul de répartition des prévenus selon leur nature.",
-                "Titre_onglet": "Données 2021",
-                "Pie": 1,
-                "Table": false,
-                "Info": false,
-                "Info_titre": "c",
-                "Info_contenu": "c",
-                "Pie_titre": "Répartition par nature des prévenus",
-                "Graph_avec_valeurs": false,
-                "Pie_legende": true,
-                "Avec_nom_indicateur": false,
-                "indicateurs": [
-                    {
-                        "Code_indicateur": "Données 2021_Nature_PHYSIQUE",
-                        "Nom_indicateur": "PHYSIQUE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "PHYSIQUE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Nature_MORALE",
-                        "Nom_indicateur": "MORALE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "MORALE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
-        "Titre_panneau": "Sexe",
-        "Volet": "Nature et sexe des prévenus ",
-        "source": "Analyse par l’AFA de 94 décisions de justice rendues en 2021 en matière d’atteintes à la probité",
-        "accordéon": "En savoir plus sur la donnée",
-        "onglets": [
-            {
-                "Carte": false,
-                "Graph": false,
-                "Bar": false,
-                "Box": false,
-                "Points": false,
-                "MinGeoLevel": "departements",
-                "Description_mesure": "Note de lecture : Sur l’échantillon de 94 décisions de justice, rendues en 2021 et analysées par l’AFA, 78,7% des prévenus jugés pour des faits d’atteinte à la probité étaient des hommes. Méthode de comptage : Calcul de répartition des prévenus personnes physiques selon leur sexe. ",
-                "Titre_onglet": "Données 2021",
-                "Pie": 1,
-                "Table": false,
-                "Info": false,
-                "Info_titre": "c",
-                "Info_contenu": "c",
-                "Pie_titre": "Répartition des prévenus par sexe",
-                "Graph_avec_valeurs": false,
-                "Pie_legende": true,
-                "Avec_nom_indicateur": false,
-                "indicateurs": [
-                    {
-                        "Code_indicateur": "Données 2021_Sexe_FEMME",
-                        "Nom_indicateur": "FEMME",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "FEMME",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Sexe_HOMME",
-                        "Nom_indicateur": "HOMME",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "HOMME",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
-        "Titre_panneau": "Qualité",
-        "Volet": "Qualité et catégorie socio-professionnelle (CSP) des prévenus",
-        "source": "Analyse par l’AFA de 94 décisions de justice rendues en 2021 en matière d’atteintes à la probité",
-        "accordéon": "En savoir plus sur la donnée",
-        "onglets": [
-            {
-                "Carte": false,
-                "Graph": false,
-                "Bar": false,
-                "Box": false,
-                "Points": false,
-                "MinGeoLevel": "departements",
-                "Description_mesure": "Note de lecture : Sur l’échantillon de 94 décisions de justice rendues en 2021 et analysées par l’AFA, 27,2% des prévenus étaient des agents publics. Explications : Cette classification a été créée par l’AFA. La catégorie « particuliers » regroupe les prévenus auxquels on reproche des faits d’atteinte à la probité commis en dehors de leur activité professionnelle. Dans l’échantillon analysé, aucune personne morale de droit public n’a été renvoyée devant une juridiction pénale. Méthode de comptage : Calcul de répartition des prévenus selon leur qualité. ",
-                "Titre_onglet": "Données 2021",
-                "Pie": 1,
-                "Table": false,
-                "Info": false,
-                "Info_titre": "c",
-                "Info_contenu": "c",
-                "Pie_titre": "Répartition par qualité des prévenus",
-                "Graph_avec_valeurs": false,
-                "Pie_legende": true,
-                "Avec_nom_indicateur": false,
-                "indicateurs": [
-                    {
-                        "Code_indicateur": "Données 2021_Qualité_EMPLOYES",
-                        "Nom_indicateur": "EMPLOYES",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "EMPLOYES",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Qualité_DIRIGEANTS DE SOCIETE",
-                        "Nom_indicateur": "DIRIGEANTS DE SOCIETE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "DIRIGEANTS DE SOCIETE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Qualité_PERSONNE MORALE DE DROIT PRIVE",
-                        "Nom_indicateur": "PERSONNE MORALE DE DROIT PRIVE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "PERSONNE MORALE DE DROIT PRIVE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Qualité_AGENTS PUBLICS",
-                        "Nom_indicateur": "AGENTS PUBLICS",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "AGENTS PUBLICS",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Qualité_ELUS",
-                        "Nom_indicateur": "ELUS",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "ELUS",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Qualité_PERSONNE MORALE DE DROIT PUBLIC",
-                        "Nom_indicateur": "PERSONNE MORALE DE DROIT PUBLIC",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "PERSONNE MORALE DE DROIT PUBLIC",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Qualité_PARTICULIERS",
-                        "Nom_indicateur": "PARTICULIERS",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "PARTICULIERS",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
-        "Titre_panneau": "Catégorie socio-professionnelle",
-        "Volet": "Qualité et catégorie socio-professionnelle (CSP) des prévenus",
-        "source": "Analyse par l’AFA de 94 décisions de justice rendues en 2021 en matière d’atteintes à la probité",
-        "accordéon": "En savoir plus sur la donnée",
-        "onglets": [
-            {
-                "Carte": false,
-                "Graph": false,
-                "Bar": false,
-                "Box": false,
-                "Points": false,
-                "MinGeoLevel": "departements",
-                "Description_mesure": "Note de lecture : Sur l’échantillon de 94 décisions de justice, rendues en 2021 et analysées par l’AFA, 6,5 % étaient des chefs d’entreprises d’au moins 10 salariés.  Explications : Cette classification correspond à la nomenclature PCS 2003 – Niveau 2 de l’INSEE qui comprend 24 postes. Méthode de comptage : Calcul de répartition des prévenus selon leur CSP.",
-                "Titre_onglet": "Données 2021",
-                "Pie": 1,
-                "Table": false,
-                "Info": false,
-                "Info_titre": "c",
-                "Info_contenu": "c",
-                "Pie_titre": "Répartition des prévenus par catégorie socio-professionnelle",
-                "Graph_avec_valeurs": false,
-                "Pie_legende": true,
-                "Avec_nom_indicateur": false,
-                "indicateurs": [
-                    {
-                        "Code_indicateur": "Données 2021_Catégorie socio-professionnelle_NON RENSEIGNE",
-                        "Nom_indicateur": "NON RENSEIGNE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "NON RENSEIGNE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Catégorie socio-professionnelle_EMPLOYÉS DE LA FONCTION PUBLIQUE",
-                        "Nom_indicateur": "EMPLOYÉS DE LA FONCTION PUBLIQUE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "EMPLOYÉS DE LA FONCTION PUBLIQUE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Catégorie socio-professionnelle_AUTRE",
-                        "Nom_indicateur": "AUTRE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "AUTRE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Catégorie socio-professionnelle_INACTIFS DIVERS (AUTRES QUE RETRAITÉS)",
-                        "Nom_indicateur": "INACTIFS DIVERS (AUTRES QUE RETRAITÉS)",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "INACTIFS DIVERS (AUTRES QUE RETRAITÉS)",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Catégorie socio-professionnelle_CHEFS D'ENTREPRISE DE 10 SALARIÉS OU PLUS",
-                        "Nom_indicateur": "CHEFS D'ENTREPRISE DE 10 SALARIÉS OU PLUS",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "CHEFS D'ENTREPRISE DE 10 SALARIÉS OU PLUS",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Catégorie socio-professionnelle_CADRES DE LA FONCTION PUBLIQUE PROFESSIONS INTELLECTUELLES ET  ARTISTIQUES",
-                        "Nom_indicateur": "CADRES DE LA FONCTION PUBLIQUE PROFESSIONS INTELLECTUELLES ET  ARTISTIQUES",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "CADRES DE LA FONCTION PUBLIQUE PROFESSIONS INTELLECTUELLES ET  ARTISTIQUES",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Catégorie socio-professionnelle_CADRES D'ENTREPRISE",
-                        "Nom_indicateur": "CADRES D'ENTREPRISE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "CADRES D'ENTREPRISE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
-        "Titre_panneau": "Origine de l’affaire",
-        "Volet": "Caractéristiques de la procédure",
-        "source": "Analyse par l’AFA de 94 décisions de justice rendues en 2021 en matière d’atteintes à la probité",
-        "accordéon": "En savoir plus sur la donnée",
-        "onglets": [
-            {
-                "Carte": false,
-                "Graph": false,
-                "Bar": false,
-                "Box": false,
-                "Points": false,
-                "MinGeoLevel": "departements",
-                "Description_mesure": "Note de lecture : Sur l’échantillon de 94 décisions de justice rendues en 2021 et analysées par l’AFA :     •  12,8% des affaires avaient pour origine une plainte ;     • les signalements à l’autorité judiciaire, effectués par les autorités et administrations publiques dans le cadre de l’article 40 alinéa 2 du Code de procédure pénale, sont à l’origine de 25,5 % des procédures. La catégorie « AUTRE » contient essentiellement des signalements au procureur, des enquêtes/audits internes, et des enquêtes d’initiatives. Explications : Une enquête peut être ouverte, sur directive du parquet ou sur initiative des enquêteurs, à la suite de plusieurs faits : plainte, signalement, dénonciation anonyme, etc.  L’article 40 alinéa 2 du Code de procédure pénale dispose que « Toute autorité constituée, tout officier public ou fonctionnaire qui, dans l'exercice de ses fonctions, acquiert la connaissance d'un crime ou d'un délit est tenu d'en donner avis sans délai au procureur de la République et de transmettre à ce magistrat tous les renseignements, procès-verbaux et actes qui y sont relatifs. »  Méthode de comptage : Calcul de répartition des affaires selon leur origine.",
-                "Titre_onglet": "Données 2021",
-                "Pie": 1,
-                "Table": false,
-                "Info": false,
-                "Info_titre": "c",
-                "Info_contenu": "c",
-                "Pie_titre": "Origine de l’affaire",
-                "Graph_avec_valeurs": false,
-                "Pie_legende": true,
-                "Avec_nom_indicateur": false,
-                "indicateurs": [
-                    {
-                        "Code_indicateur": "Données 2021_Origine de l’affaire_AUTRE",
-                        "Nom_indicateur": "AUTRE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "AUTRE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Origine de l’affaire_CITATION DIRECTE",
-                        "Nom_indicateur": "CITATION DIRECTE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "CITATION DIRECTE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Origine de l’affaire_LETTRE ANONYME",
-                        "Nom_indicateur": "LETTRE ANONYME",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "LETTRE ANONYME",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Origine de l’affaire_ARTICLE 40 al.2",
-                        "Nom_indicateur": "ARTICLE 40 al.2 du CPP",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "ARTICLE 40 al.2 du CPP",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Origine de l’affaire_NON RENSEIGNE",
-                        "Nom_indicateur": "NON RENSEIGNE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "NON RENSEIGNE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Origine de l’affaire_PLAINTE",
-                        "Nom_indicateur": "PLAINTE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "PLAINTE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
-        "Titre_panneau": "Indicateurs procédure",
-        "Volet": "Caractéristiques de la procédure",
-        "source": "Analyse par l’AFA de 94 décisions de justice rendues en 2021 en matière d’atteintes à la probité",
-        "accordéon": "En savoir plus sur la donnée",
-        "onglets": [
+            },
             {
                 "Carte": false,
                 "Graph": false,
@@ -829,32 +468,24 @@
                 "Box": 1,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Notes de lecture :  Sur l’échantillon de 94 décisions de justice rendues en 2021 et analysées par l’AFA :     • la durée moyenne de la procédure est de 5 ans;     • la durée moyenne de la période de prévention est de 2 ans.  Explications : Dans cette analyse, la durée de procédure s’entend comme la durée qui s’écoule depuis la fin de la période de prévention jusqu’à la date du jugement de première instance.  La période de prévention est la période durant laquelle les infractions pénales reprochées à un prévenu ont été commises. Elle peut être d’un jour pour les infractions se consommant immédiatement, mais peut également durer plusieurs années. Méthode de comptage : Moyennes réalisées à partir des données relevées par l’AFA dans les décisions de justice analysées.",
-                "Titre_onglet": "Données 2021",
+                "Description_mesure": "Description ",
+                "Titre_onglet": "Indicateurs",
                 "Pie": false,
                 "Table": false,
                 "Info": false,
                 "Info_titre": "c",
                 "Info_contenu": "c",
                 "Graph_avec_valeurs": false,
-                "Pie_legende": true,
+                "Pie_legende": false,
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "Données 2021_Indicateurs procédure_Durée moyenne de la période de prévention",
-                        "Nom_indicateur": "Durée moyenne de la période de prévention",
-                        "Indicateur_principal": "4",
-                        "Titre_indicateur": "Durée moyenne de la période de prévention",
-                        "Unité_GP": "ans",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Indicateurs procédure_Durée moyenne de la procédure",
-                        "Nom_indicateur": "Durée moyenne de la procédure",
-                        "Indicateur_principal": "4",
-                        "Titre_indicateur": "Durée moyenne de la procédure",
-                        "Unité_GP": "ans",
-                        "Unité_Evol": "ans"
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Nombre moyen de prévenus par affaire",
+                        "Nom_indicateur": "Nombre moyen de prévenus par affaire",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Nombre moyen de prévenus par affaire",
+                        "Unité_GP": "personnes",
+                        "Unité_Evol": "personnes"
                     }
                 ]
             }
@@ -862,9 +493,9 @@
     },
     {
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
-        "Titre_panneau": "Sens de la décision",
-        "Volet": "Analyse de la décision judiciaire",
-        "source": "Analyse par l’AFA de 94 décisions de justice rendues en 2021 en matière d’atteintes à la probité",
+        "Titre_panneau": "Nature et sexe des prévenus",
+        "Volet": "Données 2021",
+        "source": "source",
         "accordéon": "En savoir plus sur la donnée",
         "onglets": [
             {
@@ -874,46 +505,566 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Note de lecture : Sur l’échantillon de 94 décisions de justice rendues en 2021 et analysées par l’AFA, 44,5% des personnes ont été condamnées à une peine d’emprisonnement et une peine d’amende. 37,3% des prévenus ont été condamnés uniquement à une peine d’emprisonnement tandis que 15,9% ont été condamnés uniquement  à une peine d’amende. Méthode de comptage : Calcul de répartition par peine prononcée selon le sens de la décision.",
-                "Titre_onglet": "Données 2021",
+                "Description_mesure": "Description ",
+                "Titre_onglet": "Nature",
                 "Pie": 1,
                 "Table": false,
                 "Info": false,
                 "Info_titre": "c",
                 "Info_contenu": "c",
-                "Pie_titre": "Répartition selon le sens de la décision",
+                "Pie_titre": "Nature des prévenus",
                 "Graph_avec_valeurs": false,
                 "Pie_legende": true,
-                "Avec_nom_indicateur": true,
+                "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "Données 2021_Sens de la décision_EXTINCTION ACTION PUBLIQUE",
-                        "Nom_indicateur": "EXTINCTION ACTION PUBLIQUE",
-                        "Indicateur_principal": "3",
-                        "Titre_indicateur": "EXTINCTION ACTION PUBLIQUE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Nature des prévenus | Personne morale",
+                        "Nom_indicateur": "Personne morale",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Personne morale",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Sens de la décision_CONDAMNATION",
-                        "Nom_indicateur": "CONDAMNATION",
-                        "Indicateur_principal": "3",
-                        "Titre_indicateur": "CONDAMNATION",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Nature des prévenus | Personne physique",
+                        "Nom_indicateur": "Personne physique",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Personne physique",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    }
+                ]
+            },
+            {
+                "Carte": false,
+                "Graph": false,
+                "Bar": false,
+                "Box": false,
+                "Points": false,
+                "MinGeoLevel": "departements",
+                "Description_mesure": "Description ",
+                "Titre_onglet": "Sexe",
+                "Pie": 1,
+                "Table": false,
+                "Info": false,
+                "Info_titre": "c",
+                "Info_contenu": "c",
+                "Pie_titre": "titre",
+                "Graph_avec_valeurs": false,
+                "Pie_legende": true,
+                "Avec_nom_indicateur": false,
+                "indicateurs": [
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | titre | Femme",
+                        "Nom_indicateur": "Femme",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Femme",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Sens de la décision_AUTRE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | titre | Homme",
+                        "Nom_indicateur": "Homme",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Homme",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
+        "Titre_panneau": "Qualité et catégorie socio-professionnelle (CSP) des prévenus",
+        "Volet": "Données 2021",
+        "source": "source",
+        "accordéon": "En savoir plus sur la donnée",
+        "onglets": [
+            {
+                "Carte": false,
+                "Graph": false,
+                "Bar": false,
+                "Box": false,
+                "Points": false,
+                "MinGeoLevel": "departements",
+                "Description_mesure": "Description ",
+                "Titre_onglet": "Qualité",
+                "Pie": 1,
+                "Table": false,
+                "Info": false,
+                "Info_titre": "c",
+                "Info_contenu": "c",
+                "Pie_titre": "Qualité des prévenus",
+                "Graph_avec_valeurs": false,
+                "Pie_legende": true,
+                "Avec_nom_indicateur": false,
+                "indicateurs": [
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Qualité des prévenus | PERSONNE MORALE DE DROIT PUBLIC",
+                        "Nom_indicateur": "PERSONNE MORALE DE DROIT PUBLIC",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "PERSONNE MORALE DE DROIT PUBLIC",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Qualité des prévenus | AUTRE",
                         "Nom_indicateur": "AUTRE",
-                        "Indicateur_principal": "3",
+                        "Indicateur_principal": "1",
                         "Titre_indicateur": "AUTRE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Sens de la décision_RELAXE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Qualité des prévenus | PARTICULIERS",
+                        "Nom_indicateur": "PARTICULIERS",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "PARTICULIERS",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Qualité des prévenus | PERSONNE MORALE DE DROIT PRIVE",
+                        "Nom_indicateur": "PERSONNE MORALE DE DROIT PRIVE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "PERSONNE MORALE DE DROIT PRIVE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Qualité des prévenus | ELUS",
+                        "Nom_indicateur": "ELUS",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "ELUS",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Qualité des prévenus | DIRIGEANTS DE SOCIETE",
+                        "Nom_indicateur": "DIRIGEANTS DE SOCIETE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "DIRIGEANTS DE SOCIETE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Qualité des prévenus | AGENTS PUBLICS",
+                        "Nom_indicateur": "AGENTS PUBLICS",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "AGENTS PUBLICS",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Qualité des prévenus | EMPLOYES",
+                        "Nom_indicateur": "EMPLOYES",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "EMPLOYES",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    }
+                ]
+            },
+            {
+                "Carte": false,
+                "Graph": false,
+                "Bar": false,
+                "Box": false,
+                "Points": false,
+                "MinGeoLevel": "departements",
+                "Description_mesure": "Description ",
+                "Titre_onglet": "Catégorie socio-professionnelle",
+                "Pie": 1,
+                "Table": false,
+                "Info": false,
+                "Info_titre": "c",
+                "Info_contenu": "c",
+                "Pie_titre": "Catégorie socio-professionnelle des prévenus",
+                "Graph_avec_valeurs": false,
+                "Pie_legende": true,
+                "Avec_nom_indicateur": false,
+                "indicateurs": [
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | CONTREMAÎTRES, AGENTS DE MAÎTRISE",
+                        "Nom_indicateur": "CONTREMAÎTRES, AGENTS DE MAÎTRISE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "CONTREMAÎTRES, AGENTS DE MAÎTRISE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | EMPLOYÉS DE COMMERCE",
+                        "Nom_indicateur": "EMPLOYÉS DE COMMERCE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "EMPLOYÉS DE COMMERCE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | COMMERÇANTS ET ASSIMILÉS",
+                        "Nom_indicateur": "COMMERÇANTS ET ASSIMILÉS",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "COMMERÇANTS ET ASSIMILÉS",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | EMPLOYÉS ADMINISTRATIFS D'ENTREPRISE",
+                        "Nom_indicateur": "EMPLOYÉS ADMINISTRATIFS D'ENTREPRISE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "EMPLOYÉS ADMINISTRATIFS D'ENTREPRISE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | PERSONNELS DES SERVICES DIRECTS AUX PARTICULIERS",
+                        "Nom_indicateur": "PERSONNELS DES SERVICES DIRECTS AUX PARTICULIERS",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "PERSONNELS DES SERVICES DIRECTS AUX PARTICULIERS",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | OUVRIERS QUALIFIÉS",
+                        "Nom_indicateur": "OUVRIERS QUALIFIÉS",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "OUVRIERS QUALIFIÉS",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | TECHNICIENS",
+                        "Nom_indicateur": "TECHNICIENS",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "TECHNICIENS",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | PROFESSIONS LIBÉRALES ET ASSIMILÉS",
+                        "Nom_indicateur": "PROFESSIONS LIBÉRALES ET ASSIMILÉS",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "PROFESSIONS LIBÉRALES ET ASSIMILÉS",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | NON RENSEIGNE",
+                        "Nom_indicateur": "NON RENSEIGNE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "NON RENSEIGNE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | CHEFS D'ENTREPRISE DE 10 SALARIÉS OU PLUS",
+                        "Nom_indicateur": "CHEFS D'ENTREPRISE DE 10 SALARIÉS OU PLUS",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "CHEFS D'ENTREPRISE DE 10 SALARIÉS OU PLUS",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | PROFESSIONS INTERMÉDIAIRES DE L'ENSEIGNEMENT, DE LA SANTÉ, DE LA FONCTION PUBLIQUE ET ASSIMILÉS",
+                        "Nom_indicateur": "PROFESSIONS INTERMÉDIAIRES DE L'ENSEIGNEMENT, DE LA SANTÉ, DE LA FONCTION PUBLIQUE ET ASSIMILÉS",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "PROFESSIONS INTERMÉDIAIRES DE L'ENSEIGNEMENT, DE LA SANTÉ, DE LA FONCTION PUBLIQUE ET ASSIMILÉS",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET  ARTISTIQUES",
+                        "Nom_indicateur": "CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET  ARTISTIQUES",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET  ARTISTIQUES",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | CADRES D'ENTREPRISE",
+                        "Nom_indicateur": "CADRES D'ENTREPRISE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "CADRES D'ENTREPRISE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | EMPLOYÉS DE LA FONCTION PUBLIQUE",
+                        "Nom_indicateur": "EMPLOYÉS DE LA FONCTION PUBLIQUE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "EMPLOYÉS DE LA FONCTION PUBLIQUE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | NaN",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | OUVRIERS NON QUALIFIÉS",
+                        "Nom_indicateur": "OUVRIERS NON QUALIFIÉS",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "OUVRIERS NON QUALIFIÉS",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | INACTIFS DIVERS (AUTRES QUE RETRAITÉS)",
+                        "Nom_indicateur": "INACTIFS DIVERS (AUTRES QUE RETRAITÉS)",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "INACTIFS DIVERS (AUTRES QUE RETRAITÉS)",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
+        "Titre_panneau": "Caractéristiques de la procédure",
+        "Volet": "Données 2021",
+        "source": "source",
+        "accordéon": "En savoir plus sur la donnée",
+        "onglets": [
+            {
+                "Carte": false,
+                "Graph": false,
+                "Bar": false,
+                "Box": false,
+                "Points": false,
+                "MinGeoLevel": "departements",
+                "Description_mesure": "Description ",
+                "Titre_onglet": "Origine de l'affaire",
+                "Pie": 1,
+                "Table": false,
+                "Info": false,
+                "Info_titre": "c",
+                "Info_contenu": "c",
+                "Pie_titre": "Origine de l'affaire",
+                "Graph_avec_valeurs": false,
+                "Pie_legende": true,
+                "Avec_nom_indicateur": false,
+                "indicateurs": [
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire | NaN",
+                        "Indicateur_principal": "1",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire | Plainte",
+                        "Nom_indicateur": "Plainte",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Plainte",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire | SIGNALEMENT HATVP",
+                        "Nom_indicateur": "SIGNALEMENT HATVP",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "SIGNALEMENT HATVP",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire | ENQUETE / AUDIT INTERNE",
+                        "Nom_indicateur": "ENQUETE / AUDIT INTERNE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "ENQUETE / AUDIT INTERNE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire | NOTIFICATION TRACFIN",
+                        "Nom_indicateur": "NOTIFICATION TRACFIN",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "NOTIFICATION TRACFIN",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire | DOSSIER CONNEXE JUSTICE",
+                        "Nom_indicateur": "DOSSIER CONNEXE JUSTICE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "DOSSIER CONNEXE JUSTICE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire | NON RENSEIGNE",
+                        "Nom_indicateur": "NON RENSEIGNE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "NON RENSEIGNE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire | ARTICLE 40 al.2",
+                        "Nom_indicateur": "ARTICLE 40 al.2",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "ARTICLE 40 al.2",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire | PLAINTE",
+                        "Nom_indicateur": "PLAINTE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "PLAINTE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire | LETTRE ANONYME",
+                        "Nom_indicateur": "LETTRE ANONYME",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "LETTRE ANONYME",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire | CITATION DIRECTE",
+                        "Nom_indicateur": "CITATION DIRECTE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "CITATION DIRECTE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire | ENQUETE D'INITIATIVE",
+                        "Nom_indicateur": "ENQUETE D'INITIATIVE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "ENQUETE D'INITIATIVE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire | SIGNALEMENT AU PROCUREUR PAR UNE ASSOCIATION  OU UN PARTICULIER",
+                        "Nom_indicateur": "SIGNALEMENT AU PROCUREUR PAR UNE ASSOCIATION  OU UN PARTICULIER",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "SIGNALEMENT AU PROCUREUR PAR UNE ASSOCIATION  OU UN PARTICULIER",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    }
+                ]
+            },
+            {
+                "Carte": false,
+                "Graph": false,
+                "Bar": false,
+                "Box": 1,
+                "Points": false,
+                "MinGeoLevel": "departements",
+                "Description_mesure": "Description ",
+                "Titre_onglet": "Indicateurs",
+                "Pie": false,
+                "Table": false,
+                "Info": false,
+                "Info_titre": "c",
+                "Info_contenu": "c",
+                "Graph_avec_valeurs": false,
+                "Pie_legende": false,
+                "Avec_nom_indicateur": false,
+                "indicateurs": [
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Durée de la procédure",
+                        "Nom_indicateur": "Durée de la procédure",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Durée de la procédure",
+                        "Unité_GP": "ans",
+                        "Unité_Evol": "ans"
+                    }
+                ]
+            },
+            {
+                "Carte": false,
+                "Graph": false,
+                "Bar": false,
+                "Box": 1,
+                "Points": false,
+                "MinGeoLevel": "departements",
+                "Description_mesure": "Description ",
+                "Titre_onglet": "Indicateurs",
+                "Pie": false,
+                "Table": false,
+                "Info": false,
+                "Info_titre": "c",
+                "Info_contenu": "c",
+                "Graph_avec_valeurs": false,
+                "Pie_legende": false,
+                "Avec_nom_indicateur": false,
+                "indicateurs": [
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Durée de la période de prévention",
+                        "Nom_indicateur": "Durée de la période de prévention",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Durée de la période de prévention",
+                        "Unité_GP": "jours",
+                        "Unité_Evol": "jours"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
+        "Titre_panneau": "Analyse de la décision judiciaire",
+        "Volet": "Données 2021",
+        "source": "source",
+        "accordéon": "En savoir plus sur la donnée",
+        "onglets": [
+            {
+                "Carte": false,
+                "Graph": false,
+                "Bar": false,
+                "Box": false,
+                "Points": false,
+                "MinGeoLevel": "departements",
+                "Description_mesure": "Description ",
+                "Titre_onglet": "Sens de la décision",
+                "Pie": 1,
+                "Table": false,
+                "Info": false,
+                "Info_titre": "c",
+                "Info_contenu": "c",
+                "Pie_titre": "Sens de la décision",
+                "Graph_avec_valeurs": false,
+                "Pie_legende": true,
+                "Avec_nom_indicateur": false,
+                "indicateurs": [
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Sens de la décision | Extinction action publique",
+                        "Nom_indicateur": "Extinction action publique",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Extinction action publique",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Sens de la décision | AUTRE",
+                        "Nom_indicateur": "AUTRE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "AUTRE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Sens de la décision | CONDAMNATION",
+                        "Nom_indicateur": "CONDAMNATION",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "CONDAMNATION",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Sens de la décision | RELAXE",
                         "Nom_indicateur": "RELAXE",
-                        "Indicateur_principal": "3",
+                        "Indicateur_principal": "1",
                         "Titre_indicateur": "RELAXE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
@@ -924,9 +1075,9 @@
     },
     {
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
-        "Titre_panneau": "Type de peine",
-        "Volet": "Analyse de la décision judiciaire",
-        "source": "Analyse par l’AFA de 94 décisions de justice rendues en 2021 en matière d’atteintes à la probité",
+        "Titre_panneau": "Analyse de la peine",
+        "Volet": "Données 2021",
+        "source": "source",
         "accordéon": "En savoir plus sur la donnée",
         "onglets": [
             {
@@ -936,44 +1087,20 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Note de lecture : Sur l’échantillon de 94 décisions de justice rendues en 2021 et analysées par l’AFA, 44,5 % des prévenus ont été condamnés à une peine d’emprisonnement et à une amende. Explications : La dispense de peine est une « mesure par laquelle le juge correctionnel ou de police qui a retenu la culpabilité du prévenu décide cependant de ne prononcer aucune sanction contre lui lorsqu’il lui apparaît que son reclassement est acquis, que le dommage est réparé, et que le trouble social occasionné par l’infraction a cessé. » (Lexique Dalloz) Méthode de comptage : Calcul de répartition par infractions selon le type de peines prononcées. ",
-                "Titre_onglet": "Données 2021",
+                "Description_mesure": "Description ",
+                "Titre_onglet": "Types de peine",
                 "Pie": 1,
                 "Table": false,
                 "Info": false,
                 "Info_titre": "c",
                 "Info_contenu": "c",
-                "Pie_titre": "Répartition selon le type de peines prononcées",
+                "Pie_titre": "Types de peine",
                 "Graph_avec_valeurs": false,
                 "Pie_legende": true,
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "Données 2021_Type de peine_EMPRISONNEMENT ET AMENDE",
-                        "Nom_indicateur": "EMPRISONNEMENT ET AMENDE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "EMPRISONNEMENT ET AMENDE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Type de peine_EMPRISONNEMENT",
-                        "Nom_indicateur": "EMPRISONNEMENT",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "EMPRISONNEMENT",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Type de peine_AMENDE",
-                        "Nom_indicateur": "AMENDE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "AMENDE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Type de peine_AUTRE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Types de peine | AUTRE",
                         "Nom_indicateur": "AUTRE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "AUTRE",
@@ -981,10 +1108,34 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "Données 2021_Type de peine_DISPENSE DE PEINE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Types de peine | DISPENSE DE PEINE",
                         "Nom_indicateur": "DISPENSE DE PEINE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "DISPENSE DE PEINE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Types de peine | AMENDE",
+                        "Nom_indicateur": "AMENDE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "AMENDE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Types de peine | EMPRISONNEMENT",
+                        "Nom_indicateur": "EMPRISONNEMENT",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "EMPRISONNEMENT",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Types de peine | EMPRISONNEMENT ET AMENDE",
+                        "Nom_indicateur": "EMPRISONNEMENT ET AMENDE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "EMPRISONNEMENT ET AMENDE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -994,9 +1145,9 @@
     },
     {
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
-        "Titre_panneau": "Personnes physiques",
-        "Volet": "Sanction pénale",
-        "source": "Analyse par l’AFA de 94 décisions de justice rendues en 2021 en matière d’atteintes à la probité",
+        "Titre_panneau": "Sanction pénale",
+        "Volet": "Données 2021",
+        "source": "source",
         "accordéon": "En savoir plus sur la donnée",
         "onglets": [
             {
@@ -1006,44 +1157,27 @@
                 "Box": 1,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Note de lecture : Sur l’échantillon de 94 décisions de justice rendues en 2021 et analysées par l’AFA, les personnes physiques prévenues ont été condamnés en moyenne à près de 19 mois d’emprisonnement et à une amende de 21 973€. Explications : En droit français, une personne morale est un groupement doté de la personnalité juridique. Elle peut être composée d’une ou plusieurs personnes physiques ou morales. La personnalité juridique donne à cette personne morale des droits et des devoirs. Une personne morale peut être droit public (État, collectivités territoriales, établissements publics etc.) ou de droit privé (sociétés privées, associations etc.).  Depuis 1994 les personnes morales, à l'exclusion de l'État, sont responsables pénalement des infractions commises, pour leur compte, par leurs organes ou représentants. Les établissements publics, les collectivités territoriales et leurs groupements ne sont responsables que pour les infractions commises dans l'exercice des activités susceptibles de faire l'objet de délégation de service public. Méthode de comptage : Moyennes réalisées à partir des données relatives aux « amendes » et « emprisonnement » des prévenus ayant la qualité de personnes physiques.  Source : Analyse par l’AFA de 94 décisions de justice rendues en 2021 en matière d’atteintes à la probité.",
-                "Titre_onglet": "Données 2021",
+                "Description_mesure": "Description ",
+                "Titre_onglet": "Personnes physiques",
                 "Pie": false,
                 "Table": false,
                 "Info": false,
                 "Info_titre": "c",
                 "Info_contenu": "c",
                 "Graph_avec_valeurs": false,
-                "Pie_legende": true,
+                "Pie_legende": false,
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "Données 2021_Personnes physiques_Montant moyen des amendes prononcées (Personnes Physiques)",
-                        "Nom_indicateur": "Montant moyen des amendes prononcées (Personnes Physiques)",
-                        "Indicateur_principal": "3",
-                        "Titre_indicateur": "Montant moyen des amendes prononcées (Personnes Physiques)",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Montant moyen de l'amende pour les personnes physiques",
+                        "Nom_indicateur": "Montant moyen de l'amende pour les personnes physiques",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Montant moyen de l'amende pour les personnes physiques",
                         "Unité_GP": "€",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "Données 2021_Personnes physiques_Durée moyenne de l’emprisonnement",
-                        "Nom_indicateur": "Durée moyenne de l’emprisonnement",
-                        "Indicateur_principal": "3",
-                        "Titre_indicateur": "Durée moyenne de l’emprisonnement",
-                        "Unité_GP": "mois",
-                        "Unité_Evol": "%"
+                        "Unité_Evol": "€"
                     }
                 ]
-            }
-        ]
-    },
-    {
-        "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
-        "Titre_panneau": "Personnes morales",
-        "Volet": "Sanction pénale",
-        "source": "Analyse par l’AFA de 94 décisions de justice rendues en 2021 en matière d’atteintes à la probité",
-        "accordéon": "En savoir plus sur la donnée",
-        "onglets": [
+            },
             {
                 "Carte": false,
                 "Graph": false,
@@ -1051,24 +1185,80 @@
                 "Box": 1,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Note de lecture : Sur l’échantillon de 94 décisions de justice rendues en 2021 et analysées par l’AFA, les personnes morales prévenues ont été condamnés en moyenne à une amende de 93 833€. Explications : Par principe, les personnes morales ne pouvant faire l’objet d’une peine d’emprisonnement, elles encourent le quintuple de l’amende encourue par les personnes physiques. Méthode de comptage : Moyennes réalisées à partir des données relatives aux « amendes » et aux personnes morales prévenues.  ",
-                "Titre_onglet": "Données 2021",
+                "Description_mesure": "Description ",
+                "Titre_onglet": "Personnes physiques",
                 "Pie": false,
                 "Table": false,
                 "Info": false,
                 "Info_titre": "c",
                 "Info_contenu": "c",
                 "Graph_avec_valeurs": false,
-                "Pie_legende": true,
+                "Pie_legende": false,
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "Données 2021_Personnes morales_Montant moyen des amendes prononcées (Personnes Morales)",
-                        "Nom_indicateur": "Montant moyen des amendes prononcées (Personnes Morales)",
-                        "Indicateur_principal": "3",
-                        "Titre_indicateur": "Montant moyen des amendes prononcées (Personnes Morales)",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Durée moyenne de l'emprisonnement pour les personnes physiques",
+                        "Nom_indicateur": "Durée moyenne de l'emprisonnement pour les personnes physiques",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Durée moyenne de l'emprisonnement pour les personnes physiques",
+                        "Unité_GP": "mois",
+                        "Unité_Evol": "mois"
+                    }
+                ]
+            },
+            {
+                "Carte": false,
+                "Graph": false,
+                "Bar": false,
+                "Box": 1,
+                "Points": false,
+                "MinGeoLevel": "departements",
+                "Description_mesure": "Description ",
+                "Titre_onglet": "Personnes morales",
+                "Pie": false,
+                "Table": false,
+                "Info": false,
+                "Info_titre": "c",
+                "Info_contenu": "c",
+                "Graph_avec_valeurs": false,
+                "Pie_legende": false,
+                "Avec_nom_indicateur": false,
+                "indicateurs": [
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Montant moyen de l'amende pour les personnes morales",
+                        "Nom_indicateur": "Montant moyen de l'amende pour les personnes morales",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Montant moyen de l'amende pour les personnes morales",
                         "Unité_GP": "€",
-                        "Unité_Evol": "%"
+                        "Unité_Evol": "€"
+                    }
+                ]
+            },
+            {
+                "Carte": false,
+                "Graph": false,
+                "Bar": false,
+                "Box": 1,
+                "Points": false,
+                "MinGeoLevel": "departements",
+                "Description_mesure": "Description ",
+                "Titre_onglet": "Confiscations pénales",
+                "Pie": false,
+                "Table": false,
+                "Info": false,
+                "Info_titre": "c",
+                "Info_contenu": "c",
+                "Graph_avec_valeurs": false,
+                "Pie_legende": false,
+                "Avec_nom_indicateur": false,
+                "indicateurs": [
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Montant moyen des confiscations",
+                        "Nom_indicateur": "Montant moyen des confiscations",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Montant moyen des confiscations",
+                        "Unité_GP": "€",
+                        "Unité_Evol": "€"
                     }
                 ]
             }
