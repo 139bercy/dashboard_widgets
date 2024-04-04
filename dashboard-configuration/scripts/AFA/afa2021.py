@@ -69,7 +69,8 @@ class pageafa2021:
                 "no_onglet" : 2,
                 "description" : "Description ",
                 "source" : "source",
-                "titre" : "titre"
+                "titre" : "titre",
+                "unite" : "ans"
             },
             "repartitionPrevenus_nbMoyen" : {
                 "volet" : "Données 2021",
@@ -79,7 +80,8 @@ class pageafa2021:
                 "no_onglet" : 3,
                 "description" : "Description ",
                 "source" : "source",
-                "titre" : "titre"
+                "titre" : "titre",
+                "unite" : "personnes"
             },
             "NatureSexePrevenus_Nature" : {
                 "volet" : "Données 2021",
@@ -139,7 +141,8 @@ class pageafa2021:
                 "no_onglet" : 2,
                 "description" : "Description ",
                 "source" : "source",
-                "titre" : "titre"
+                "titre" : "titre",
+                "unite" : "ans"
             },
             "caracsProcedure_dureePrevention" : {
                 "volet" : "Données 2021",
@@ -149,7 +152,8 @@ class pageafa2021:
                 "no_onglet" : 3,
                 "description" : "Description ",
                 "source" : "source",
-                "titre" : "titre"
+                "titre" : "titre",
+                "unite" : "jours"
             },
             "analyseDJ_sens" : {
                 "volet" : "Données 2021",
@@ -179,7 +183,8 @@ class pageafa2021:
                 "no_onglet" : 1,
                 "description" : "Description ",
                 "source" : "source",
-                "titre" : "titre"
+                "titre" : "titre",
+                "unite" : "€"
             },
             "sanctionPenales_physiquesMoyenneEmprisonnement" : {
                 "volet" : "Données 2021",
@@ -189,7 +194,8 @@ class pageafa2021:
                 "no_onglet" : 2,
                 "description" : "Description ",
                 "source" : "source",
-                "titre" : "titre"
+                "titre" : "titre",
+                "unite" : "mois"
             },
             "sanctionPenales_moralesMoyenneAmende" : {
                 "volet" : "Données 2021",
@@ -199,7 +205,8 @@ class pageafa2021:
                 "no_onglet" : 3,
                 "description" : "Description ",
                 "source" : "source",
-                "titre" : "titre"
+                "titre" : "titre",
+                "unite" : "€"
             },
             "sanctionPenales_confiscations" : {
                 "volet" : "Données 2021",
@@ -209,7 +216,8 @@ class pageafa2021:
                 "no_onglet" : 4,
                 "description" : "Description ",
                 "source" : "source",
-                "titre" : "titre"
+                "titre" : "titre",
+                "unite" : "€"
             }
         }
 
@@ -226,7 +234,7 @@ class pageafa2021:
             "Prise illégale d'intérêts" : 67,
             "Favoritisme" : 64,
             "Trafic d'influence" : 18,
-            "Concussion" : 13,
+            "Concussion" : 13
         }
         series = pd.Series(dict)
 
@@ -239,59 +247,378 @@ class pageafa2021:
         return [data,conf]
 
     def analyseSecteursActivite_PublicPrive(self):
-        return
+        
+        # Data
+        dict = {
+            "Public" : 103,
+            "Privé" : 50
+        }
+        series = pd.Series(dict)
+
+        # Formalisation
+        orgInfos = self.organisationPage["analyseSecteursActivite_PublicPrive"]
+        series.name = orgInfos["titre"]
+        data = form.donut_data(self.datasetName, series)
+        conf = form.donut_conf(self.datasetName, series, orgInfos)
+        
+        return [data,conf]
 
     def analyseSecteursActivite_Public(self):
-        return
+
+        # Data
+        dict = {
+            "COLLECTIVITÉS - MAIRIES" : 45,
+            "ETABLISSEMENT PUBLIC" : 24,
+            "ETAT - ADMINISTRATION CENTRALE" : 13,
+            "COLLECTIVITÉS DÉPARTEMENTALES" : 8,
+            "COLLECTIVITÉS RÉGIONALES" : 7,
+            "ETAT - DECONCENTRE" : 6,
+            "NON RENSEIGNE" : 6,
+            "FONCTION PUBLIQUE HOSPITALIERE" : 2
+        }
+        series = pd.Series(dict)
+
+        # Formalisation
+        orgInfos = self.organisationPage["analyseSecteursActivite_Public"]
+        series.name = orgInfos["titre"]
+        data = form.donut_data(self.datasetName, series)
+        conf = form.donut_conf(self.datasetName, series, orgInfos)
+        
+        return [data,conf]
 
     def analyseSecteursActivite_Prive(self):
-        return
+
+        # Data
+        dict = {
+            "CONSTRUCTION" : 16,
+            "ACTIVITÉS SPÉCIALISÉES, SCIENTIFIQUES ET TECHNIQUES" : 12,
+            "ACTIVITÉS IMMOBILIÈRES" : 6,
+            "TRANSPORTS ET ENTREPOSAGE" : 5,
+            "NON RENSEIGNE" : 4,
+            "COMMERCE ; RÉPARATION D'AUTOMOBILES ET DE MOTOCYCLES" : 4,
+            "HÉBERGEMENT ET RESTAURATION" : 4,
+            "ACTIVITÉS DE SERVICES ADMINISTRATIFS ET DE SOUTIEN" : 3,
+            "INFORMATION ET COMMUNICATION" : 2,
+            "ARTS, SPECTACLES ET ACTIVITÉS RÉCRÉATIVES" : 2,
+            "PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ, DE GAZ, DE VAPEUR ET D'AIR CONDITIONNÉ" : 2,
+            "AUTRES ACTIVITÉS DE SERVICES" : 2,
+            "SANTÉ HUMAINE ET ACTION SOCIALE" : 2,
+            "ENSEIGNEMENT" : 1,
+            "PRODUCTION ET DISTRIBUTION D'EAU ; ASSAINISSEMENT, GESTION DES DÉCHETS ET DÉPOLLUTION" : 1,
+            "INDUSTRIE MANUFACTURIÈRE" : 1
+        }
+        series = pd.Series(dict)
+
+        # Formalisation
+        orgInfos = self.organisationPage["analyseSecteursActivite_Prive"]
+        series.name = orgInfos["titre"]
+        data = form.donut_data(self.datasetName, series)
+        conf = form.donut_conf(self.datasetName, series, orgInfos)
+        
+        return [data,conf]
 
     def repartitionPrevenus_repartition(self):
-        return
+
+        # Data
+        dict = {
+            "Corruption" : 64,
+            "Favoritisme" : 61,
+            "Détournement de fonds publics" : 56,
+            "Prise illégale d'intérêts" : 51,
+            "Trafic d'influence" : 18,
+            "Concussion" : 13
+        }
+        series = pd.Series(dict)
+
+        # Formalisation
+        orgInfos = self.organisationPage["repartitionPrevenus_repartition"]
+        series.name = orgInfos["titre"]
+        data = form.donut_data(self.datasetName, series)
+        conf = form.donut_conf(self.datasetName, series, orgInfos)
+        
+        return [data,conf]
 
     def repartitionPrevenus_ageMoyen(self):
-        return
+        
+        # Data
+        dict = {
+            "Age moyen des prévenus" : 54.2
+        }
+        series = pd.Series(dict)
+
+        # Formalisation
+        orgInfos = self.organisationPage["repartitionPrevenus_ageMoyen"]
+        series.name = orgInfos["titre"]
+        data = form.box_data(self.datasetName, series)
+        conf = form.box_conf(self.datasetName, series, orgInfos)
+        
+        return [data,conf]
 
     def repartitionPrevenus_nbMoyen(self):
-        return
+        
+        # Data
+        dict = {
+            "Nombre moyen de prévenus par affaires" : 2.4
+        }
+        series = pd.Series(dict)
+
+        # Formalisation
+        orgInfos = self.organisationPage["repartitionPrevenus_nbMoyen"]
+        series.name = orgInfos["titre"]
+        data = form.box_data(self.datasetName, series)
+        conf = form.box_conf(self.datasetName, series, orgInfos)
+        
+        return [data,conf]
 
     def NatureSexePrevenus_Nature(self):
-        return
+        
+        # Data
+        dict = {
+            "Personne physique" : 283,
+            "Personne morale" : 25
+        }
+        series = pd.Series(dict)
+
+        # Formalisation
+        orgInfos = self.organisationPage["NatureSexePrevenus_Nature"]
+        series.name = orgInfos["titre"]
+        data = form.donut_data(self.datasetName, series)
+        conf = form.donut_conf(self.datasetName, series, orgInfos)
+        
+        return [data,conf]
 
     def NatureSexePrevenus_Sexe(self):
-        return
+        
+        # Data
+        dict = {
+            "Homme" : 227,
+            "Femme" : 56
+        }
+        series = pd.Series(dict)
+
+        # Formalisation
+        orgInfos = self.organisationPage["NatureSexePrevenus_Sexe"]
+        series.name = orgInfos["titre"]
+        data = form.donut_data(self.datasetName, series)
+        conf = form.donut_conf(self.datasetName, series, orgInfos)
+        
+        return [data,conf]
 
     def qualiteCSPPrevenus_qualite(self):
-        return
+        
+        # Data
+        dict = {
+            "AGENTS PUBLICS" : 89,
+            "DIRIGEANTS DE SOCIETE" : 77,
+            "PARTICULIERS" : 52,
+            "ELUS" : 44,
+            "EMPLOYES" : 21,
+            "PERSONNE MORALE DE DROIT PRIVE" : 12,
+            "PERSONNE MORALE DE DROIT PUBLIC" : 11,
+            "AUTRE" : 2
+        }
+        series = pd.Series(dict)
+
+        # Formalisation
+        orgInfos = self.organisationPage["qualiteCSPPrevenus_qualite"]
+        series.name = orgInfos["titre"]
+        data = form.donut_data(self.datasetName, series)
+        conf = form.donut_conf(self.datasetName, series, orgInfos)
+        
+        return [data,conf]
 
     def qualiteCSPPrevenus_CSP(self):
-        return
+        
+        # Data
+        dict = {
+            "CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET  ARTISTIQUES" : 83,
+            "CADRES D'ENTREPRISE" : 47,
+            "EMPLOYÉS DE LA FONCTION PUBLIQUE" : 45,
+            "NON RENSEIGNE" : 26,
+            "NaN" : 25,
+            "CHEFS D'ENTREPRISE DE 10 SALARIÉS OU PLUS" : 16,
+            "PROFESSIONS LIBÉRALES ET ASSIMILÉS" : 14,
+            "INACTIFS DIVERS (AUTRES QUE RETRAITÉS)" : 14,
+            "PROFESSIONS INTERMÉDIAIRES DE L'ENSEIGNEMENT, DE LA SANTÉ, DE LA FONCTION PUBLIQUE ET ASSIMILÉS" : 12,
+            "EMPLOYÉS DE COMMERCE" : 9,
+            "COMMERÇANTS ET ASSIMILÉS" : 6,
+            "EMPLOYÉS ADMINISTRATIFS D'ENTREPRISE" : 3,
+            "OUVRIERS NON QUALIFIÉS" : 3,
+            "PERSONNELS DES SERVICES DIRECTS AUX PARTICULIERS" : 2,
+            "OUVRIERS QUALIFIÉS" : 1,
+            "CONTREMAÎTRES, AGENTS DE MAÎTRISE" : 1,
+            "TECHNICIENS" : 1
+        }
+        series = pd.Series(dict)
+
+        # Formalisation
+        orgInfos = self.organisationPage["qualiteCSPPrevenus_CSP"]
+        series.name = orgInfos["titre"]
+        data = form.donut_data(self.datasetName, series)
+        conf = form.donut_conf(self.datasetName, series, orgInfos)
+        
+        return [data,conf]
 
     def caracsProcedure_origine(self):
-        return
+        
+        # Data
+        dict = {
+            "NON RENSEIGNE" : 54,
+            "ARTICLE 40 al.2" : 25,
+            "PLAINTE" : 15,
+            "LETTRE ANONYME" : 13,
+            "CITATION DIRECTE" : 7,
+            "ENQUETE D'INITIATIVE" : 4,
+            "DOSSIER CONNEXE JUSTICE" : 3,
+            "SIGNALEMENT AU PROCUREUR PAR UNE ASSOCIATION  OU UN PARTICULIER" : 2,
+            "NaN" : 1,
+            "NOTIFICATION TRACFIN" : 1,
+            "ENQUETE / AUDIT INTERNE" : 1,
+            "SIGNALEMENT HATVP" : 1,
+            "Plainte" : 1
+        }
+        series = pd.Series(dict)
+
+        # Formalisation
+        orgInfos = self.organisationPage["caracsProcedure_origine"]
+        series.name = orgInfos["titre"]
+        data = form.donut_data(self.datasetName, series)
+        conf = form.donut_conf(self.datasetName, series, orgInfos)
+        
+        return [data,conf]
 
     def caracsProcedure_dureeProcedure(self):
-        return
+        
+        # Data
+        dict = {
+            "Durée moyenne de la procédure" : 4.2
+        }
+        series = pd.Series(dict)
+
+        # Formalisation
+        orgInfos = self.organisationPage["caracsProcedure_dureeProcedure"]
+        series.name = orgInfos["titre"]
+        data = form.box_data(self.datasetName, series)
+        conf = form.box_conf(self.datasetName, series, orgInfos)
+        
+        return [data,conf]
 
     def caracsProcedure_dureePrevention(self):
-        return
+
+        # Data
+        dict = {
+            "Durée moyenne de la période de prévention" : 925.9
+        }
+        series = pd.Series(dict)
+
+        # Formalisation
+        orgInfos = self.organisationPage["caracsProcedure_dureePrevention"]
+        series.name = orgInfos["titre"]
+        data = form.box_data(self.datasetName, series)
+        conf = form.box_conf(self.datasetName, series, orgInfos)
+        
+        return [data,conf]
 
     def analyseDJ_sens(self):
-        return
+        
+        # Data
+        dict = {
+            "CONDAMNATION" : 422,
+            "RELAXE" : 175,
+            "AUTRE" : 15,
+            "Extinction action publique" : 7
+        }
+        series = pd.Series(dict)
+
+        # Formalisation
+        orgInfos = self.organisationPage["analyseDJ_sens"]
+        series.name = orgInfos["titre"]
+        data = form.donut_data(self.datasetName, series)
+        conf = form.donut_conf(self.datasetName, series, orgInfos)
+        
+        return [data,conf]
 
     def analysePeines_type(self):
-        return
+        
+        # Data
+        dict = {
+            "EMPRISONNEMENT ET AMENDE" : 175,
+            "EMPRISONNEMENT" : 158,
+            "AMENDE" : 72,
+            "DISPENSE DE PEINE" : 7,
+            "AUTRE" : 4
+        }
+        series = pd.Series(dict)
+
+        # Formalisation
+        orgInfos = self.organisationPage["analysePeines_type"]
+        series.name = orgInfos["titre"]
+        data = form.donut_data(self.datasetName, series)
+        conf = form.donut_conf(self.datasetName, series, orgInfos)
+        
+        return [data,conf]
 
     def sanctionPenales_physiquesMoyenneAmende(self):
-        return
+        
+        # Data
+        dict = {
+            "Montant moyen des amendes des prévenus physiques" : 22598.1
+        }
+        series = pd.Series(dict)
+
+        # Formalisation
+        orgInfos = self.organisationPage["sanctionPenales_physiquesMoyenneAmende"]
+        series.name = orgInfos["titre"]
+        data = form.box_data(self.datasetName, series)
+        conf = form.box_conf(self.datasetName, series, orgInfos)
+        
+        return [data,conf]
 
     def sanctionPenales_physiquesMoyenneEmprisonnement(self):
-        return
+        
+        # Data
+        dict = {
+            "Durée moyenne de l'emprisonnement des prévenus physiques" : 16.7
+        }
+        series = pd.Series(dict)
+
+        # Formalisation
+        orgInfos = self.organisationPage["sanctionPenales_physiquesMoyenneEmprisonnement"]
+        series.name = orgInfos["titre"]
+        data = form.box_data(self.datasetName, series)
+        conf = form.box_conf(self.datasetName, series, orgInfos)
+        
+        return [data,conf]
 
     def sanctionPenales_moralesMoyenneAmende(self):
-        return
+        
+        # Data
+        dict = {
+            "Montant moyen des amendes des prévenus moraux" : 65444.4
+        }
+        series = pd.Series(dict)
+
+        # Formalisation
+        orgInfos = self.organisationPage["sanctionPenales_moralesMoyenneAmende"]
+        series.name = orgInfos["titre"]
+        data = form.box_data(self.datasetName, series)
+        conf = form.box_conf(self.datasetName, series, orgInfos)
+        
+        return [data,conf]
 
     def sanctionPenales_confiscations(self):
-        return
+        
+        # Data
+        dict = {
+            "Montant moyen des confiscations" : 241255.2
+        }
+        series = pd.Series(dict)
+
+        # Formalisation
+        orgInfos = self.organisationPage["sanctionPenales_confiscations"]
+        series.name = orgInfos["titre"]
+        data = form.box_data(self.datasetName, series)
+        conf = form.box_conf(self.datasetName, series, orgInfos)
+        
+        return [data,conf]
         
