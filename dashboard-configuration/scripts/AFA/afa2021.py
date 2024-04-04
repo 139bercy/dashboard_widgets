@@ -100,8 +100,8 @@ class pageafa2021:
                 "onglet" : "Sexe",
                 "no_onglet" : 2,
                 "description" : "Description ",
-                "source" : "Sexe des prévenus physiques",
-                "titre" : "titre"
+                "source" : "source",
+                "titre" : "Sexe des prévenus physiques"
             },
             "qualiteCSPPrevenus_qualite" : {
                 "volet" : "Données 2021",
