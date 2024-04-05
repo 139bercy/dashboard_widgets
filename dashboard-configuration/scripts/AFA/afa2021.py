@@ -292,6 +292,7 @@ class pageafa2021:
         dict = {
             "CONSTRUCTION" : 16,
             "ACTIVITÉS SPÉCIALISÉES, SCIENTIFIQUES ET TECHNIQUES" : 12,
+            "AUTRES" : 7,
             "ACTIVITÉS IMMOBILIÈRES" : 6,
             "TRANSPORTS ET ENTREPOSAGE" : 5,
             "NON RENSEIGNE" : 4,
@@ -300,12 +301,7 @@ class pageafa2021:
             "ACTIVITÉS DE SERVICES ADMINISTRATIFS ET DE SOUTIEN" : 3,
             "INFORMATION ET COMMUNICATION" : 2,
             "ARTS, SPECTACLES ET ACTIVITÉS RÉCRÉATIVES" : 2,
-            "PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ, DE GAZ, DE VAPEUR ET D'AIR CONDITIONNÉ" : 2,
-            "AUTRES ACTIVITÉS DE SERVICES" : 2,
-            "SANTÉ HUMAINE ET ACTION SOCIALE" : 2,
-            "ENSEIGNEMENT" : 1,
-            "PRODUCTION ET DISTRIBUTION D'EAU ; ASSAINISSEMENT, GESTION DES DÉCHETS ET DÉPOLLUTION" : 1,
-            "INDUSTRIE MANUFACTURIÈRE" : 1
+            "PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ, DE GAZ, DE VAPEUR ET D'AIR CONDITIONNÉ" : 2
         }
         series = pd.Series(dict)
 
@@ -413,9 +409,8 @@ class pageafa2021:
             "PARTICULIERS" : 52,
             "ELUS" : 44,
             "EMPLOYES" : 21,
-            "PERSONNE MORALE DE DROIT PRIVE" : 12,
+            "PERSONNE MORALE DE DROIT PRIVE" : 14,
             "PERSONNE MORALE DE DROIT PUBLIC" : 11,
-            "AUTRE" : 2
         }
         series = pd.Series(dict)
 
@@ -435,19 +430,14 @@ class pageafa2021:
             "CADRES D'ENTREPRISE" : 47,
             "EMPLOYÉS DE LA FONCTION PUBLIQUE" : 45,
             "NON RENSEIGNE" : 26,
-            "NaN" : 25,
             "CHEFS D'ENTREPRISE DE 10 SALARIÉS OU PLUS" : 16,
             "PROFESSIONS LIBÉRALES ET ASSIMILÉS" : 14,
             "INACTIFS DIVERS (AUTRES QUE RETRAITÉS)" : 14,
             "PROFESSIONS INTERMÉDIAIRES DE L'ENSEIGNEMENT, DE LA SANTÉ, DE LA FONCTION PUBLIQUE ET ASSIMILÉS" : 12,
             "EMPLOYÉS DE COMMERCE" : 9,
+            "AUTRES" : 8,
             "COMMERÇANTS ET ASSIMILÉS" : 6,
-            "EMPLOYÉS ADMINISTRATIFS D'ENTREPRISE" : 3,
-            "OUVRIERS NON QUALIFIÉS" : 3,
-            "PERSONNELS DES SERVICES DIRECTS AUX PARTICULIERS" : 2,
-            "OUVRIERS QUALIFIÉS" : 1,
-            "CONTREMAÎTRES, AGENTS DE MAÎTRISE" : 1,
-            "TECHNICIENS" : 1
+            "EMPLOYÉS ADMINISTRATIFS D'ENTREPRISE" : 3
         }
         series = pd.Series(dict)
 
@@ -465,17 +455,15 @@ class pageafa2021:
         dict = {
             "NON RENSEIGNE" : 54,
             "ARTICLE 40 al.2" : 25,
-            "PLAINTE" : 15,
+            "PLAINTE" : 16,
             "LETTRE ANONYME" : 13,
-            "CITATION DIRECTE" : 7,
+            "CITATION DIRECTE" : 8,
             "ENQUETE D'INITIATIVE" : 4,
             "DOSSIER CONNEXE JUSTICE" : 3,
             "SIGNALEMENT AU PROCUREUR PAR UNE ASSOCIATION  OU UN PARTICULIER" : 2,
-            "NaN" : 1,
             "NOTIFICATION TRACFIN" : 1,
             "ENQUETE / AUDIT INTERNE" : 1,
-            "SIGNALEMENT HATVP" : 1,
-            "Plainte" : 1
+            "SIGNALEMENT HATVP" : 1
         }
         series = pd.Series(dict)
 
