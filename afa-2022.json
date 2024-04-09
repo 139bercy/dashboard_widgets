@@ -2,7 +2,7 @@
     {
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
         "Titre_panneau": "Analyse par type de faits",
-        "Volet": "Données 2021",
+        "Volet": "Données 2022",
         "source": "source",
         "accordéon": "En savoir plus sur la donnée",
         "onglets": [
@@ -29,22 +29,6 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des infractions par familles | Détournement de fonds publics",
-                        "Nom_indicateur": "Détournement de fonds publics",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Détournement de fonds publics",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des infractions par familles | Prise illégale d'intérêts",
-                        "Nom_indicateur": "Prise illégale d'intérêts",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Prise illégale d'intérêts",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
                         "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des infractions par familles | Favoritisme",
                         "Nom_indicateur": "Favoritisme",
                         "Indicateur_principal": "1",
@@ -61,10 +45,18 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des infractions par familles | Concussion",
-                        "Nom_indicateur": "Concussion",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des infractions par familles | Prise illégale d'intérêts",
+                        "Nom_indicateur": "Prise illégale d'intérêts",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Concussion",
+                        "Titre_indicateur": "Prise illégale d'intérêts",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des infractions par familles | Détournement de fonds publics",
+                        "Nom_indicateur": "Détournement de fonds publics",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Détournement de fonds publics",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -75,7 +67,7 @@
     {
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
         "Titre_panneau": "Analyse par secteurs d'activités",
-        "Volet": "Données 2021",
+        "Volet": "Données 2022",
         "source": "source",
         "accordéon": "En savoir plus sur la donnée",
         "onglets": [
@@ -94,18 +86,18 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition entre le public et le privé | Public",
-                        "Nom_indicateur": "Public",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Public",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
                         "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition entre le public et le privé | Privé",
                         "Nom_indicateur": "Privé",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Privé",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition entre le public et le privé | Public",
+                        "Nom_indicateur": "Public",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Public",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -126,34 +118,18 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public | COLLECTIVITÉS - MAIRIES",
-                        "Nom_indicateur": "COLLECTIVITÉS - MAIRIES",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public | ETAT - ADMINISTRATION CENTRALE",
+                        "Nom_indicateur": "ETAT - ADMINISTRATION CENTRALE",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "COLLECTIVITÉS - MAIRIES",
+                        "Titre_indicateur": "ETAT - ADMINISTRATION CENTRALE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public | ETAT - DECONCENTRE",
-                        "Nom_indicateur": "ETAT - DECONCENTRE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public | COLLECTIVITÉS RÉGIONALES",
+                        "Nom_indicateur": "COLLECTIVITÉS RÉGIONALES",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "ETAT - DECONCENTRE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public | NON RENSEIGNE",
-                        "Nom_indicateur": "NON RENSEIGNE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "NON RENSEIGNE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public | FONCTION PUBLIQUE HOSPITALIERE",
-                        "Nom_indicateur": "FONCTION PUBLIQUE HOSPITALIERE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "FONCTION PUBLIQUE HOSPITALIERE",
+                        "Titre_indicateur": "COLLECTIVITÉS RÉGIONALES",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -166,26 +142,18 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public | ETAT - ADMINISTRATION CENTRALE",
-                        "Nom_indicateur": "ETAT - ADMINISTRATION CENTRALE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public | COLLECTIVITÉS - MAIRIES",
+                        "Nom_indicateur": "COLLECTIVITÉS - MAIRIES",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "ETAT - ADMINISTRATION CENTRALE",
+                        "Titre_indicateur": "COLLECTIVITÉS - MAIRIES",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public | COLLECTIVITÉS DÉPARTEMENTALES",
-                        "Nom_indicateur": "COLLECTIVITÉS DÉPARTEMENTALES",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public | FONCTION PUBLIQUE HOSPITALIERE",
+                        "Nom_indicateur": "FONCTION PUBLIQUE HOSPITALIERE",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "COLLECTIVITÉS DÉPARTEMENTALES",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public | COLLECTIVITÉS RÉGIONALES",
-                        "Nom_indicateur": "COLLECTIVITÉS RÉGIONALES",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "COLLECTIVITÉS RÉGIONALES",
+                        "Titre_indicateur": "FONCTION PUBLIQUE HOSPITALIERE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -206,42 +174,10 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | CONSTRUCTION",
-                        "Nom_indicateur": "CONSTRUCTION",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | HÉBERGEMENT ET RESTAURATION",
+                        "Nom_indicateur": "HÉBERGEMENT ET RESTAURATION",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "CONSTRUCTION",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ, DE GAZ, DE VAPEUR ET D'AIR CONDITIONNÉ",
-                        "Nom_indicateur": "PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ, DE GAZ, DE VAPEUR ET D'AIR CONDITIONNÉ",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ, DE GAZ, DE VAPEUR ET D'AIR CONDITIONNÉ",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | NON RENSEIGNE",
-                        "Nom_indicateur": "NON RENSEIGNE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "NON RENSEIGNE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | INFORMATION ET COMMUNICATION",
-                        "Nom_indicateur": "INFORMATION ET COMMUNICATION",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "INFORMATION ET COMMUNICATION",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | COMMERCE ; RÉPARATION D'AUTOMOBILES ET DE MOTOCYCLES",
-                        "Nom_indicateur": "COMMERCE ; RÉPARATION D'AUTOMOBILES ET DE MOTOCYCLES",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "COMMERCE ; RÉPARATION D'AUTOMOBILES ET DE MOTOCYCLES",
+                        "Titre_indicateur": "HÉBERGEMENT ET RESTAURATION",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -254,6 +190,14 @@
                         "Unité_Evol": "%"
                     },
                     {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | AGRICULTURE SYLVICULTURE ET PÊCHE",
+                        "Nom_indicateur": "AGRICULTURE SYLVICULTURE ET PÊCHE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "AGRICULTURE SYLVICULTURE ET PÊCHE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
                         "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | ACTIVITÉS IMMOBILIÈRES",
                         "Nom_indicateur": "ACTIVITÉS IMMOBILIÈRES",
                         "Indicateur_principal": "1",
@@ -262,42 +206,26 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | AUTRES",
-                        "Nom_indicateur": "AUTRES",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ, DE GAZ, DE VAPEUR ET D'AIR CONDITIONNÉ",
+                        "Nom_indicateur": "PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ, DE GAZ, DE VAPEUR ET D'AIR CONDITIONNÉ",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "AUTRES",
+                        "Titre_indicateur": "PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ, DE GAZ, DE VAPEUR ET D'AIR CONDITIONNÉ",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | ACTIVITÉS SPÉCIALISÉES, SCIENTIFIQUES ET TECHNIQUES",
-                        "Nom_indicateur": "ACTIVITÉS SPÉCIALISÉES, SCIENTIFIQUES ET TECHNIQUES",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | CONSTRUCTION",
+                        "Nom_indicateur": "CONSTRUCTION",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "ACTIVITÉS SPÉCIALISÉES, SCIENTIFIQUES ET TECHNIQUES",
+                        "Titre_indicateur": "CONSTRUCTION",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | ACTIVITÉS DE SERVICES ADMINISTRATIFS ET DE SOUTIEN",
-                        "Nom_indicateur": "ACTIVITÉS DE SERVICES ADMINISTRATIFS ET DE SOUTIEN",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | AUTRES ACTIVITÉS DE SERVICES",
+                        "Nom_indicateur": "AUTRES ACTIVITÉS DE SERVICES",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "ACTIVITÉS DE SERVICES ADMINISTRATIFS ET DE SOUTIEN",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | ARTS, SPECTACLES ET ACTIVITÉS RÉCRÉATIVES",
-                        "Nom_indicateur": "ARTS, SPECTACLES ET ACTIVITÉS RÉCRÉATIVES",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "ARTS, SPECTACLES ET ACTIVITÉS RÉCRÉATIVES",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | HÉBERGEMENT ET RESTAURATION",
-                        "Nom_indicateur": "HÉBERGEMENT ET RESTAURATION",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "HÉBERGEMENT ET RESTAURATION",
+                        "Titre_indicateur": "AUTRES ACTIVITÉS DE SERVICES",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -308,7 +236,7 @@
     {
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
         "Titre_panneau": "Répartition des prévenus",
-        "Volet": "Données 2021",
+        "Volet": "Données 2022",
         "source": "source",
         "accordéon": "En savoir plus sur la donnée",
         "onglets": [
@@ -327,26 +255,10 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des prévenus par familles | Concussion",
-                        "Nom_indicateur": "Concussion",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des prévenus par familles | Corruption",
+                        "Nom_indicateur": "Corruption",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Concussion",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des prévenus par familles | Trafic d'influence",
-                        "Nom_indicateur": "Trafic d'influence",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Trafic d'influence",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des prévenus par familles | Détournement de fonds publics",
-                        "Nom_indicateur": "Détournement de fonds publics",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Détournement de fonds publics",
+                        "Titre_indicateur": "Corruption",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -359,10 +271,10 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des prévenus par familles | Corruption",
-                        "Nom_indicateur": "Corruption",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des prévenus par familles | Trafic d'influence",
+                        "Nom_indicateur": "Trafic d'influence",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Corruption",
+                        "Titre_indicateur": "Trafic d'influence",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -371,6 +283,14 @@
                         "Nom_indicateur": "Prise illégale d'intérêts",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Prise illégale d'intérêts",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des prévenus par familles | Détournement de fonds publics",
+                        "Nom_indicateur": "Détournement de fonds publics",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Détournement de fonds publics",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -412,7 +332,7 @@
     {
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
         "Titre_panneau": "Nature et sexe des prévenus",
-        "Volet": "Données 2021",
+        "Volet": "Données 2022",
         "source": "source",
         "accordéon": "En savoir plus sur la donnée",
         "onglets": [
@@ -431,18 +351,18 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Nature des prévenus | Personne physique",
-                        "Nom_indicateur": "Personne physique",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Personne physique",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
                         "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Nature des prévenus | Personne morale",
                         "Nom_indicateur": "Personne morale",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Personne morale",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Nature des prévenus | Personne physique",
+                        "Nom_indicateur": "Personne physique",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Personne physique",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -463,18 +383,18 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Sexe des prévenus physiques | Homme",
-                        "Nom_indicateur": "Homme",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Homme",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
                         "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Sexe des prévenus physiques | Femme",
                         "Nom_indicateur": "Femme",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Femme",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Sexe des prévenus physiques | Homme",
+                        "Nom_indicateur": "Homme",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Homme",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -485,7 +405,7 @@
     {
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
         "Titre_panneau": "Qualité et catégorie socio-professionnelle (CSP) des prévenus",
-        "Volet": "Données 2021",
+        "Volet": "Données 2022",
         "source": "source",
         "accordéon": "En savoir plus sur la donnée",
         "onglets": [
@@ -504,18 +424,18 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Qualité des prévenus | PARTICULIERS",
-                        "Nom_indicateur": "PARTICULIERS",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "PARTICULIERS",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
                         "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Qualité des prévenus | DIRIGEANTS DE SOCIETE",
                         "Nom_indicateur": "DIRIGEANTS DE SOCIETE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "DIRIGEANTS DE SOCIETE",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Qualité des prévenus | AGENTS PUBLICS",
+                        "Nom_indicateur": "AGENTS PUBLICS",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "AGENTS PUBLICS",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -542,22 +462,6 @@
                         "Titre_indicateur": "PERSONNE MORALE DE DROIT PRIVE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Qualité des prévenus | PERSONNE MORALE DE DROIT PUBLIC",
-                        "Nom_indicateur": "PERSONNE MORALE DE DROIT PUBLIC",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "PERSONNE MORALE DE DROIT PUBLIC",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Qualité des prévenus | AGENTS PUBLICS",
-                        "Nom_indicateur": "AGENTS PUBLICS",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "AGENTS PUBLICS",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
                     }
                 ]
             },
@@ -576,38 +480,6 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | AUTRES",
-                        "Nom_indicateur": "AUTRES",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "AUTRES",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET  ARTISTIQUES",
-                        "Nom_indicateur": "CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET  ARTISTIQUES",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET  ARTISTIQUES",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | CADRES D'ENTREPRISE",
-                        "Nom_indicateur": "CADRES D'ENTREPRISE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "CADRES D'ENTREPRISE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | INACTIFS DIVERS (AUTRES QUE RETRAITÉS)",
-                        "Nom_indicateur": "INACTIFS DIVERS (AUTRES QUE RETRAITÉS)",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "INACTIFS DIVERS (AUTRES QUE RETRAITÉS)",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
                         "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | EMPLOYÉS DE COMMERCE",
                         "Nom_indicateur": "EMPLOYÉS DE COMMERCE",
                         "Indicateur_principal": "1",
@@ -616,10 +488,18 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | CHEFS D'ENTREPRISE DE 10 SALARIÉS OU PLUS",
-                        "Nom_indicateur": "CHEFS D'ENTREPRISE DE 10 SALARIÉS OU PLUS",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | OUVRIERS QUALIFIÉS",
+                        "Nom_indicateur": "OUVRIERS QUALIFIÉS",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "CHEFS D'ENTREPRISE DE 10 SALARIÉS OU PLUS",
+                        "Titre_indicateur": "OUVRIERS QUALIFIÉS",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | EMPLOYÉS DE LA FONCTION PUBLIQUE",
+                        "Nom_indicateur": "EMPLOYÉS DE LA FONCTION PUBLIQUE",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "EMPLOYÉS DE LA FONCTION PUBLIQUE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -632,42 +512,26 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | EMPLOYÉS ADMINISTRATIFS D'ENTREPRISE",
-                        "Nom_indicateur": "EMPLOYÉS ADMINISTRATIFS D'ENTREPRISE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | CADRES D'ENTREPRISE",
+                        "Nom_indicateur": "CADRES D'ENTREPRISE",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "EMPLOYÉS ADMINISTRATIFS D'ENTREPRISE",
+                        "Titre_indicateur": "CADRES D'ENTREPRISE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | PROFESSIONS INTERMÉDIAIRES DE L'ENSEIGNEMENT, DE LA SANTÉ, DE LA FONCTION PUBLIQUE ET ASSIMILÉS",
-                        "Nom_indicateur": "PROFESSIONS INTERMÉDIAIRES DE L'ENSEIGNEMENT, DE LA SANTÉ, DE LA FONCTION PUBLIQUE ET ASSIMILÉS",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET  ARTISTIQUES",
+                        "Nom_indicateur": "CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET  ARTISTIQUES",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "PROFESSIONS INTERMÉDIAIRES DE L'ENSEIGNEMENT, DE LA SANTÉ, DE LA FONCTION PUBLIQUE ET ASSIMILÉS",
+                        "Titre_indicateur": "CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET  ARTISTIQUES",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | PROFESSIONS LIBÉRALES ET ASSIMILÉS",
-                        "Nom_indicateur": "PROFESSIONS LIBÉRALES ET ASSIMILÉS",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | CHEFS D'ENTREPRISE DE 10 SALARIÉS OU PLUS",
+                        "Nom_indicateur": "CHEFS D'ENTREPRISE DE 10 SALARIÉS OU PLUS",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "PROFESSIONS LIBÉRALES ET ASSIMILÉS",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | NON RENSEIGNE",
-                        "Nom_indicateur": "NON RENSEIGNE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "NON RENSEIGNE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | EMPLOYÉS DE LA FONCTION PUBLIQUE",
-                        "Nom_indicateur": "EMPLOYÉS DE LA FONCTION PUBLIQUE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "EMPLOYÉS DE LA FONCTION PUBLIQUE",
+                        "Titre_indicateur": "CHEFS D'ENTREPRISE DE 10 SALARIÉS OU PLUS",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -678,7 +542,7 @@
     {
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
         "Titre_panneau": "Caractéristiques de la procédure",
-        "Volet": "Données 2021",
+        "Volet": "Données 2022",
         "source": "source",
         "accordéon": "En savoir plus sur la donnée",
         "onglets": [
@@ -697,58 +561,10 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire | SIGNALEMENT HATVP",
-                        "Nom_indicateur": "SIGNALEMENT HATVP",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire | ARTICLE 40 al.2",
+                        "Nom_indicateur": "ARTICLE 40 al.2",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "SIGNALEMENT HATVP",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire | ENQUETE / AUDIT INTERNE",
-                        "Nom_indicateur": "ENQUETE / AUDIT INTERNE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "ENQUETE / AUDIT INTERNE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire | SIGNALEMENT AU PROCUREUR PAR UNE ASSOCIATION  OU UN PARTICULIER",
-                        "Nom_indicateur": "SIGNALEMENT AU PROCUREUR PAR UNE ASSOCIATION  OU UN PARTICULIER",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "SIGNALEMENT AU PROCUREUR PAR UNE ASSOCIATION  OU UN PARTICULIER",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire | DOSSIER CONNEXE JUSTICE",
-                        "Nom_indicateur": "DOSSIER CONNEXE JUSTICE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "DOSSIER CONNEXE JUSTICE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire | NOTIFICATION TRACFIN",
-                        "Nom_indicateur": "NOTIFICATION TRACFIN",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "NOTIFICATION TRACFIN",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire | CITATION DIRECTE",
-                        "Nom_indicateur": "CITATION DIRECTE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "CITATION DIRECTE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire | LETTRE ANONYME",
-                        "Nom_indicateur": "LETTRE ANONYME",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "LETTRE ANONYME",
+                        "Titre_indicateur": "ARTICLE 40 al.2",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -761,26 +577,10 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire | ARTICLE 40 al.2",
-                        "Nom_indicateur": "ARTICLE 40 al.2",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "ARTICLE 40 al.2",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
                         "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire | NON RENSEIGNE",
                         "Nom_indicateur": "NON RENSEIGNE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "NON RENSEIGNE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire | ENQUETE D'INITIATIVE",
-                        "Nom_indicateur": "ENQUETE D'INITIATIVE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "ENQUETE D'INITIATIVE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -822,7 +622,7 @@
     {
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
         "Titre_panneau": "Analyse de la décision judiciaire",
-        "Volet": "Données 2021",
+        "Volet": "Données 2022",
         "source": "source",
         "accordéon": "En savoir plus sur la donnée",
         "onglets": [
@@ -840,22 +640,6 @@
                 "Pie_legende": true,
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Sens de la décision | AUTRE",
-                        "Nom_indicateur": "AUTRE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "AUTRE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Sens de la décision | Extinction action publique",
-                        "Nom_indicateur": "Extinction action publique",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Extinction action publique",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
                     {
                         "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Sens de la décision | CONDAMNATION",
                         "Nom_indicateur": "CONDAMNATION",
@@ -879,7 +663,7 @@
     {
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
         "Titre_panneau": "Analyse de la peine",
-        "Volet": "Données 2021",
+        "Volet": "Données 2022",
         "source": "source",
         "accordéon": "En savoir plus sur la donnée",
         "onglets": [
@@ -898,26 +682,10 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Types de peine | AUTRE",
-                        "Nom_indicateur": "AUTRE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Types de peine | EMPRISONNEMENT ET AMENDE",
+                        "Nom_indicateur": "EMPRISONNEMENT ET AMENDE",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "AUTRE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Types de peine | DISPENSE DE PEINE",
-                        "Nom_indicateur": "DISPENSE DE PEINE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "DISPENSE DE PEINE",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Types de peine | AMENDE",
-                        "Nom_indicateur": "AMENDE",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "AMENDE",
+                        "Titre_indicateur": "EMPRISONNEMENT ET AMENDE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -930,10 +698,10 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Types de peine | EMPRISONNEMENT ET AMENDE",
-                        "Nom_indicateur": "EMPRISONNEMENT ET AMENDE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Types de peine | AMENDE",
+                        "Nom_indicateur": "AMENDE",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "EMPRISONNEMENT ET AMENDE",
+                        "Titre_indicateur": "AMENDE",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -944,7 +712,7 @@
     {
         "Lien_page_mesure": "https://www.agence-francaise-anticorruption.gouv.fr/fr",
         "Titre_panneau": "Sanction pénale",
-        "Volet": "Données 2021",
+        "Volet": "Données 2022",
         "source": "source",
         "accordéon": "En savoir plus sur la donnée",
         "onglets": [
