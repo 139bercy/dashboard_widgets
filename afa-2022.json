@@ -21,7 +21,7 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des infractions par familles | Corruption",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des infractions par familles2022 | Corruption",
                         "Nom_indicateur": "Corruption",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Corruption",
@@ -29,7 +29,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des infractions par familles | Favoritisme",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des infractions par familles2022 | Favoritisme",
                         "Nom_indicateur": "Favoritisme",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Favoritisme",
@@ -37,7 +37,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des infractions par familles | Trafic d'influence",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des infractions par familles2022 | Trafic d'influence",
                         "Nom_indicateur": "Trafic d'influence",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Trafic d'influence",
@@ -45,7 +45,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des infractions par familles | Prise illégale d'intérêts",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des infractions par familles2022 | Prise illégale d'intérêts",
                         "Nom_indicateur": "Prise illégale d'intérêts",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Prise illégale d'intérêts",
@@ -53,7 +53,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des infractions par familles | Détournement de fonds publics",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des infractions par familles2022 | Détournement de fonds publics",
                         "Nom_indicateur": "Détournement de fonds publics",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Détournement de fonds publics",
@@ -86,7 +86,7 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition entre le public et le privé | Privé",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition entre le public et le privé2022 | Privé",
                         "Nom_indicateur": "Privé",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Privé",
@@ -94,7 +94,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition entre le public et le privé | Public",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition entre le public et le privé2022 | Public",
                         "Nom_indicateur": "Public",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Public",
@@ -118,7 +118,7 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public | ETAT - ADMINISTRATION CENTRALE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public2022 | ETAT - ADMINISTRATION CENTRALE",
                         "Nom_indicateur": "ETAT - ADMINISTRATION CENTRALE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "ETAT - ADMINISTRATION CENTRALE",
@@ -126,7 +126,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public | COLLECTIVITÉS RÉGIONALES",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public2022 | COLLECTIVITÉS RÉGIONALES",
                         "Nom_indicateur": "COLLECTIVITÉS RÉGIONALES",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "COLLECTIVITÉS RÉGIONALES",
@@ -134,7 +134,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public | ETABLISSEMENT PUBLIC",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public2022 | ETABLISSEMENT PUBLIC",
                         "Nom_indicateur": "ETABLISSEMENT PUBLIC",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "ETABLISSEMENT PUBLIC",
@@ -142,7 +142,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public | COLLECTIVITÉS - MAIRIES",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public2022 | COLLECTIVITÉS - MAIRIES",
                         "Nom_indicateur": "COLLECTIVITÉS - MAIRIES",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "COLLECTIVITÉS - MAIRIES",
@@ -150,7 +150,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public | FONCTION PUBLIQUE HOSPITALIERE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur public2022 | FONCTION PUBLIQUE HOSPITALIERE",
                         "Nom_indicateur": "FONCTION PUBLIQUE HOSPITALIERE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "FONCTION PUBLIQUE HOSPITALIERE",
@@ -174,7 +174,7 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | HÉBERGEMENT ET RESTAURATION",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé2022 | HÉBERGEMENT ET RESTAURATION",
                         "Nom_indicateur": "HÉBERGEMENT ET RESTAURATION",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "HÉBERGEMENT ET RESTAURATION",
@@ -182,7 +182,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | TRANSPORTS ET ENTREPOSAGE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé2022 | TRANSPORTS ET ENTREPOSAGE",
                         "Nom_indicateur": "TRANSPORTS ET ENTREPOSAGE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "TRANSPORTS ET ENTREPOSAGE",
@@ -190,7 +190,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | AGRICULTURE SYLVICULTURE ET PÊCHE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé2022 | AGRICULTURE SYLVICULTURE ET PÊCHE",
                         "Nom_indicateur": "AGRICULTURE SYLVICULTURE ET PÊCHE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "AGRICULTURE SYLVICULTURE ET PÊCHE",
@@ -198,7 +198,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | ACTIVITÉS IMMOBILIÈRES",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé2022 | ACTIVITÉS IMMOBILIÈRES",
                         "Nom_indicateur": "ACTIVITÉS IMMOBILIÈRES",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "ACTIVITÉS IMMOBILIÈRES",
@@ -206,7 +206,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ, DE GAZ, DE VAPEUR ET D'AIR CONDITIONNÉ",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé2022 | PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ, DE GAZ, DE VAPEUR ET D'AIR CONDITIONNÉ",
                         "Nom_indicateur": "PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ, DE GAZ, DE VAPEUR ET D'AIR CONDITIONNÉ",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ, DE GAZ, DE VAPEUR ET D'AIR CONDITIONNÉ",
@@ -214,7 +214,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | CONSTRUCTION",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé2022 | CONSTRUCTION",
                         "Nom_indicateur": "CONSTRUCTION",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "CONSTRUCTION",
@@ -222,7 +222,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé | AUTRES ACTIVITÉS DE SERVICES",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Secteur privé2022 | AUTRES ACTIVITÉS DE SERVICES",
                         "Nom_indicateur": "AUTRES ACTIVITÉS DE SERVICES",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "AUTRES ACTIVITÉS DE SERVICES",
@@ -255,7 +255,7 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des prévenus par familles | Corruption",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des prévenus par familles2022 | Corruption",
                         "Nom_indicateur": "Corruption",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Corruption",
@@ -263,7 +263,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des prévenus par familles | Favoritisme",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des prévenus par familles2022 | Favoritisme",
                         "Nom_indicateur": "Favoritisme",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Favoritisme",
@@ -271,7 +271,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des prévenus par familles | Trafic d'influence",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des prévenus par familles2022 | Trafic d'influence",
                         "Nom_indicateur": "Trafic d'influence",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Trafic d'influence",
@@ -279,7 +279,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des prévenus par familles | Prise illégale d'intérêts",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des prévenus par familles2022 | Prise illégale d'intérêts",
                         "Nom_indicateur": "Prise illégale d'intérêts",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Prise illégale d'intérêts",
@@ -287,7 +287,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des prévenus par familles | Détournement de fonds publics",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Répartition des prévenus par familles2022 | Détournement de fonds publics",
                         "Nom_indicateur": "Détournement de fonds publics",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Détournement de fonds publics",
@@ -310,18 +310,18 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Nombre moyen de prévenus par affaire",
-                        "Nom_indicateur": "Nombre moyen de prévenus par affaire",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Nombre moyen de prévenus par affaire2022",
+                        "Nom_indicateur": "Nombre moyen de prévenus par affaire2022",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Nombre moyen de prévenus par affaire",
+                        "Titre_indicateur": "Nombre moyen de prévenus par affaire2022",
                         "Unité_GP": "personnes",
                         "Unité_Evol": "personnes"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Age moyen des prévenus",
-                        "Nom_indicateur": "Age moyen des prévenus",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Age moyen des prévenus2022",
+                        "Nom_indicateur": "Age moyen des prévenus2022",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Age moyen des prévenus",
+                        "Titre_indicateur": "Age moyen des prévenus2022",
                         "Unité_GP": "ans",
                         "Unité_Evol": "ans"
                     }
@@ -351,7 +351,7 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Nature des prévenus | Personne morale",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Nature des prévenus2022 | Personne morale",
                         "Nom_indicateur": "Personne morale",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Personne morale",
@@ -359,7 +359,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Nature des prévenus | Personne physique",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Nature des prévenus2022 | Personne physique",
                         "Nom_indicateur": "Personne physique",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Personne physique",
@@ -383,7 +383,7 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Sexe des prévenus physiques | Femme",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Sexe des prévenus physiques2022 | Femme",
                         "Nom_indicateur": "Femme",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Femme",
@@ -391,7 +391,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Sexe des prévenus physiques | Homme",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Sexe des prévenus physiques2022 | Homme",
                         "Nom_indicateur": "Homme",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Homme",
@@ -424,7 +424,7 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Qualité des prévenus | DIRIGEANTS DE SOCIETE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Qualité des prévenus2022 | DIRIGEANTS DE SOCIETE",
                         "Nom_indicateur": "DIRIGEANTS DE SOCIETE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "DIRIGEANTS DE SOCIETE",
@@ -432,7 +432,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Qualité des prévenus | AGENTS PUBLICS",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Qualité des prévenus2022 | AGENTS PUBLICS",
                         "Nom_indicateur": "AGENTS PUBLICS",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "AGENTS PUBLICS",
@@ -440,7 +440,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Qualité des prévenus | ELUS",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Qualité des prévenus2022 | ELUS",
                         "Nom_indicateur": "ELUS",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "ELUS",
@@ -448,7 +448,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Qualité des prévenus | EMPLOYES",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Qualité des prévenus2022 | EMPLOYES",
                         "Nom_indicateur": "EMPLOYES",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "EMPLOYES",
@@ -456,7 +456,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Qualité des prévenus | PERSONNE MORALE DE DROIT PRIVE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Qualité des prévenus2022 | PERSONNE MORALE DE DROIT PRIVE",
                         "Nom_indicateur": "PERSONNE MORALE DE DROIT PRIVE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "PERSONNE MORALE DE DROIT PRIVE",
@@ -480,7 +480,7 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | EMPLOYÉS DE COMMERCE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus2022 | EMPLOYÉS DE COMMERCE",
                         "Nom_indicateur": "EMPLOYÉS DE COMMERCE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "EMPLOYÉS DE COMMERCE",
@@ -488,7 +488,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | OUVRIERS QUALIFIÉS",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus2022 | OUVRIERS QUALIFIÉS",
                         "Nom_indicateur": "OUVRIERS QUALIFIÉS",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "OUVRIERS QUALIFIÉS",
@@ -496,7 +496,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | EMPLOYÉS DE LA FONCTION PUBLIQUE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus2022 | EMPLOYÉS DE LA FONCTION PUBLIQUE",
                         "Nom_indicateur": "EMPLOYÉS DE LA FONCTION PUBLIQUE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "EMPLOYÉS DE LA FONCTION PUBLIQUE",
@@ -504,7 +504,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | COMMERÇANTS ET ASSIMILÉS",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus2022 | COMMERÇANTS ET ASSIMILÉS",
                         "Nom_indicateur": "COMMERÇANTS ET ASSIMILÉS",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "COMMERÇANTS ET ASSIMILÉS",
@@ -512,7 +512,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | CADRES D'ENTREPRISE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus2022 | CADRES D'ENTREPRISE",
                         "Nom_indicateur": "CADRES D'ENTREPRISE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "CADRES D'ENTREPRISE",
@@ -520,7 +520,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET  ARTISTIQUES",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus2022 | CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET  ARTISTIQUES",
                         "Nom_indicateur": "CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET  ARTISTIQUES",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET  ARTISTIQUES",
@@ -528,7 +528,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus | CHEFS D'ENTREPRISE DE 10 SALARIÉS OU PLUS",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Catégorie socio-professionnelle des prévenus2022 | CHEFS D'ENTREPRISE DE 10 SALARIÉS OU PLUS",
                         "Nom_indicateur": "CHEFS D'ENTREPRISE DE 10 SALARIÉS OU PLUS",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "CHEFS D'ENTREPRISE DE 10 SALARIÉS OU PLUS",
@@ -561,7 +561,7 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire | ARTICLE 40 al.2",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire2022 | ARTICLE 40 al.2",
                         "Nom_indicateur": "ARTICLE 40 al.2",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "ARTICLE 40 al.2",
@@ -569,7 +569,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire | PLAINTE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire2022 | PLAINTE",
                         "Nom_indicateur": "PLAINTE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "PLAINTE",
@@ -577,7 +577,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire | NON RENSEIGNE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Origine de l'affaire2022 | NON RENSEIGNE",
                         "Nom_indicateur": "NON RENSEIGNE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "NON RENSEIGNE",
@@ -600,18 +600,18 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Durée de la période de prévention",
-                        "Nom_indicateur": "Durée de la période de prévention",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Durée de la période de prévention2022",
+                        "Nom_indicateur": "Durée de la période de prévention2022",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Durée de la période de prévention",
+                        "Titre_indicateur": "Durée de la période de prévention2022",
                         "Unité_GP": "jours",
                         "Unité_Evol": "jours"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Durée de la procédure",
-                        "Nom_indicateur": "Durée de la procédure",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Durée de la procédure2022",
+                        "Nom_indicateur": "Durée de la procédure2022",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Durée de la procédure",
+                        "Titre_indicateur": "Durée de la procédure2022",
                         "Unité_GP": "ans",
                         "Unité_Evol": "ans"
                     }
@@ -641,7 +641,7 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Sens de la décision | CONDAMNATION",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Sens de la décision2022 | CONDAMNATION",
                         "Nom_indicateur": "CONDAMNATION",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "CONDAMNATION",
@@ -649,7 +649,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Sens de la décision | RELAXE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Sens de la décision2022 | RELAXE",
                         "Nom_indicateur": "RELAXE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "RELAXE",
@@ -682,7 +682,7 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Types de peine | EMPRISONNEMENT ET AMENDE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Types de peine2022 | EMPRISONNEMENT ET AMENDE",
                         "Nom_indicateur": "EMPRISONNEMENT ET AMENDE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "EMPRISONNEMENT ET AMENDE",
@@ -690,7 +690,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Types de peine | EMPRISONNEMENT",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Types de peine2022 | EMPRISONNEMENT",
                         "Nom_indicateur": "EMPRISONNEMENT",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "EMPRISONNEMENT",
@@ -698,7 +698,7 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Types de peine | AMENDE",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Types de peine2022 | AMENDE",
                         "Nom_indicateur": "AMENDE",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "AMENDE",
@@ -730,18 +730,18 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Montant moyen de l'amende pour les personnes physiques",
-                        "Nom_indicateur": "Montant moyen de l'amende pour les personnes physiques",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Montant moyen de l'amende pour les personnes physiques2022",
+                        "Nom_indicateur": "Montant moyen de l'amende pour les personnes physiques2022",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Montant moyen de l'amende pour les personnes physiques",
+                        "Titre_indicateur": "Montant moyen de l'amende pour les personnes physiques2022",
                         "Unité_GP": "€",
                         "Unité_Evol": "€"
                     },
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Durée moyenne de l'emprisonnement pour les personnes physiques",
-                        "Nom_indicateur": "Durée moyenne de l'emprisonnement pour les personnes physiques",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Durée moyenne de l'emprisonnement pour les personnes physiques2022",
+                        "Nom_indicateur": "Durée moyenne de l'emprisonnement pour les personnes physiques2022",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Durée moyenne de l'emprisonnement pour les personnes physiques",
+                        "Titre_indicateur": "Durée moyenne de l'emprisonnement pour les personnes physiques2022",
                         "Unité_GP": "mois",
                         "Unité_Evol": "mois"
                     }
@@ -761,10 +761,10 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Montant moyen de l'amende pour les personnes morales",
-                        "Nom_indicateur": "Montant moyen de l'amende pour les personnes morales",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Montant moyen de l'amende pour les personnes morales2022",
+                        "Nom_indicateur": "Montant moyen de l'amende pour les personnes morales2022",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Montant moyen de l'amende pour les personnes morales",
+                        "Titre_indicateur": "Montant moyen de l'amende pour les personnes morales2022",
                         "Unité_GP": "€",
                         "Unité_Evol": "€"
                     }
@@ -784,10 +784,10 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Montant moyen des confiscations",
-                        "Nom_indicateur": "Montant moyen des confiscations",
+                        "Code_indicateur": "20240321 - Carto TJ - Année 2021 | Montant moyen des confiscations2022",
+                        "Nom_indicateur": "Montant moyen des confiscations2022",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Montant moyen des confiscations",
+                        "Titre_indicateur": "Montant moyen des confiscations2022",
                         "Unité_GP": "€",
                         "Unité_Evol": "€"
                     }
