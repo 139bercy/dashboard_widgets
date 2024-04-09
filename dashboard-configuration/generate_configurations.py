@@ -72,6 +72,18 @@ def convert_excel_to_json(path):
             'Info_titre',
             'Info_contenu'])
 
+    isAfa22 = "afa-2022.csv" in path
+    if isAfa22:
+        onglet_properties.extend([
+            'Pie',
+            'Pie_titre',
+            'Pie_legende',
+            'Table',
+            'Table_titre',
+            'Info',
+            'Info_titre',
+            'Info_contenu'])
+
     df = df.dropna(subset=['No_Panneau']).sort_values(by=["No_Panneau"], ascending=True)
     panneaux = list(df["No_Panneau"].unique())
     for panneau in panneaux:
