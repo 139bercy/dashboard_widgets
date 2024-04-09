@@ -239,7 +239,7 @@ class pageafa2022:
 
         # Formalisation
         orgInfos = self.organisationPage["analyseTypeFaits_FamilleInfractions"]
-        series.name = orgInfos["titre"]
+        series.name = orgInfos["titre"] + "2022"
         data = form.donut_data(self.datasetName, series)
         conf = form.donut_conf(self.datasetName, series, orgInfos)
         
@@ -256,7 +256,7 @@ class pageafa2022:
 
         # Formalisation
         orgInfos = self.organisationPage["analyseSecteursActivite_PublicPrive"]
-        series.name = orgInfos["titre"]
+        series.name = orgInfos["titre"] + "2022"
         data = form.donut_data(self.datasetName, series)
         conf = form.donut_conf(self.datasetName, series, orgInfos)
         
@@ -276,7 +276,7 @@ class pageafa2022:
 
         # Formalisation
         orgInfos = self.organisationPage["analyseSecteursActivite_Public"]
-        series.name = orgInfos["titre"]
+        series.name = orgInfos["titre"] + "2022"
         data = form.donut_data(self.datasetName, series)
         conf = form.donut_conf(self.datasetName, series, orgInfos)
         
@@ -298,7 +298,7 @@ class pageafa2022:
 
         # Formalisation
         orgInfos = self.organisationPage["analyseSecteursActivite_Prive"]
-        series.name = orgInfos["titre"]
+        series.name = orgInfos["titre"] + "2022"
         data = form.donut_data(self.datasetName, series)
         conf = form.donut_conf(self.datasetName, series, orgInfos)
         
@@ -318,7 +318,7 @@ class pageafa2022:
 
         # Formalisation
         orgInfos = self.organisationPage["repartitionPrevenus_repartition"]
-        series.name = orgInfos["titre"]
+        series.name = orgInfos["titre"] + "2022"
         data = form.donut_data(self.datasetName, series)
         conf = form.donut_conf(self.datasetName, series, orgInfos)
         
@@ -334,7 +334,7 @@ class pageafa2022:
 
         # Formalisation
         orgInfos = self.organisationPage["repartitionPrevenus_ageMoyen"]
-        series.name = orgInfos["titre"]
+        series.name = orgInfos["titre"] + "2022"
         data = form.box_data(self.datasetName, series)
         conf = form.box_conf(self.datasetName, series, orgInfos)
         
@@ -350,7 +350,7 @@ class pageafa2022:
 
         # Formalisation
         orgInfos = self.organisationPage["repartitionPrevenus_nbMoyen"]
-        series.name = orgInfos["titre"]
+        series.name = orgInfos["titre"] + "2022"
         data = form.box_data(self.datasetName, series)
         conf = form.box_conf(self.datasetName, series, orgInfos)
         
@@ -367,7 +367,7 @@ class pageafa2022:
 
         # Formalisation
         orgInfos = self.organisationPage["NatureSexePrevenus_Nature"]
-        series.name = orgInfos["titre"]
+        series.name = orgInfos["titre"] + "2022"
         data = form.donut_data(self.datasetName, series)
         conf = form.donut_conf(self.datasetName, series, orgInfos)
         
@@ -384,7 +384,7 @@ class pageafa2022:
 
         # Formalisation
         orgInfos = self.organisationPage["NatureSexePrevenus_Sexe"]
-        series.name = orgInfos["titre"]
+        series.name = orgInfos["titre"] + "2022"
         data = form.donut_data(self.datasetName, series)
         conf = form.donut_conf(self.datasetName, series, orgInfos)
         
@@ -404,7 +404,7 @@ class pageafa2022:
 
         # Formalisation
         orgInfos = self.organisationPage["qualiteCSPPrevenus_qualite"]
-        series.name = orgInfos["titre"]
+        series.name = orgInfos["titre"] + "2022"
         data = form.donut_data(self.datasetName, series)
         conf = form.donut_conf(self.datasetName, series, orgInfos)
         
@@ -426,7 +426,7 @@ class pageafa2022:
 
         # Formalisation
         orgInfos = self.organisationPage["qualiteCSPPrevenus_CSP"]
-        series.name = orgInfos["titre"]
+        series.name = orgInfos["titre"] + "2022"
         data = form.donut_data(self.datasetName, series)
         conf = form.donut_conf(self.datasetName, series, orgInfos)
         
@@ -444,7 +444,7 @@ class pageafa2022:
 
         # Formalisation
         orgInfos = self.organisationPage["caracsProcedure_origine"]
-        series.name = orgInfos["titre"]
+        series.name = orgInfos["titre"] + "2022"
         data = form.donut_data(self.datasetName, series)
         conf = form.donut_conf(self.datasetName, series, orgInfos)
         
@@ -460,7 +460,7 @@ class pageafa2022:
 
         # Formalisation
         orgInfos = self.organisationPage["caracsProcedure_dureeProcedure"]
-        series.name = orgInfos["titre"]
+        series.name = orgInfos["titre"] + "2022"
         data = form.box_data(self.datasetName, series)
         conf = form.box_conf(self.datasetName, series, orgInfos)
         
@@ -476,7 +476,7 @@ class pageafa2022:
 
         # Formalisation
         orgInfos = self.organisationPage["caracsProcedure_dureePrevention"]
-        series.name = orgInfos["titre"]
+        series.name = orgInfos["titre"] + "2022"
         data = form.box_data(self.datasetName, series)
         conf = form.box_conf(self.datasetName, series, orgInfos)
         
@@ -493,7 +493,7 @@ class pageafa2022:
 
         # Formalisation
         orgInfos = self.organisationPage["analyseDJ_sens"]
-        series.name = orgInfos["titre"]
+        series.name = orgInfos["titre"] + "2022"
         data = form.donut_data(self.datasetName, series)
         conf = form.donut_conf(self.datasetName, series, orgInfos)
         
@@ -511,7 +511,7 @@ class pageafa2022:
 
         # Formalisation
         orgInfos = self.organisationPage["analysePeines_type"]
-        series.name = orgInfos["titre"]
+        series.name = orgInfos["titre"] + "2022"
         data = form.donut_data(self.datasetName, series)
         conf = form.donut_conf(self.datasetName, series, orgInfos)
         
@@ -527,7 +527,7 @@ class pageafa2022:
 
         # Formalisation
         orgInfos = self.organisationPage["sanctionPenales_physiquesMoyenneAmende"]
-        series.name = orgInfos["titre"]
+        series.name = orgInfos["titre"] + "2022"
         data = form.box_data(self.datasetName, series)
         conf = form.box_conf(self.datasetName, series, orgInfos)
         
@@ -543,7 +543,7 @@ class pageafa2022:
 
         # Formalisation
         orgInfos = self.organisationPage["sanctionPenales_physiquesMoyenneEmprisonnement"]
-        series.name = orgInfos["titre"]
+        series.name = orgInfos["titre"] + "2022"
         data = form.box_data(self.datasetName, series)
         conf = form.box_conf(self.datasetName, series, orgInfos)
         
@@ -559,7 +559,7 @@ class pageafa2022:
 
         # Formalisation
         orgInfos = self.organisationPage["sanctionPenales_moralesMoyenneAmende"]
-        series.name = orgInfos["titre"]
+        series.name = orgInfos["titre"] + "2022"
         data = form.box_data(self.datasetName, series)
         conf = form.box_conf(self.datasetName, series, orgInfos)
         
@@ -575,7 +575,7 @@ class pageafa2022:
 
         # Formalisation
         orgInfos = self.organisationPage["sanctionPenales_confiscations"]
-        series.name = orgInfos["titre"]
+        series.name = orgInfos["titre"] + "2022"
         data = form.box_data(self.datasetName, series)
         conf = form.box_conf(self.datasetName, series, orgInfos)
         
