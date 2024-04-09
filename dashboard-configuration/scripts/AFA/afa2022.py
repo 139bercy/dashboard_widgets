@@ -229,12 +229,11 @@ class pageafa2022:
         
         # Data
         dict = {
-            "Corruption" : 71,
-            "Détournement de fonds publics" : 67,
-            "Prise illégale d'intérêts" : 67,
-            "Favoritisme" : 64,
-            "Trafic d'influence" : 18,
-            "Concussion" : 13
+            "Corruption" : 14,
+            "Favoritisme" : 8,
+            "Trafic d'influence" : 6,
+            "Prise illégale d'intérêts" : 3,
+            "Détournement de fonds publics" : 1
         }
         series = pd.Series(dict)
 
@@ -250,8 +249,8 @@ class pageafa2022:
         
         # Data
         dict = {
-            "Public" : 103,
-            "Privé" : 50
+            "Public" : 6,
+            "Privé" : 5
         }
         series = pd.Series(dict)
 
@@ -267,14 +266,11 @@ class pageafa2022:
 
         # Data
         dict = {
-            "COLLECTIVITÉS - MAIRIES" : 45,
-            "ETABLISSEMENT PUBLIC" : 24,
-            "ETAT - ADMINISTRATION CENTRALE" : 13,
-            "COLLECTIVITÉS DÉPARTEMENTALES" : 8,
-            "COLLECTIVITÉS RÉGIONALES" : 7,
-            "ETAT - DECONCENTRE" : 6,
-            "NON RENSEIGNE" : 6,
-            "FONCTION PUBLIQUE HOSPITALIERE" : 2
+            "COLLECTIVITÉS - MAIRIES" : 3,
+            "ETABLISSEMENT PUBLIC" : 1,
+            "ETAT - ADMINISTRATION CENTRALE" : 1,
+            "COLLECTIVITÉS RÉGIONALES" : 1,
+            "FONCTION PUBLIQUE HOSPITALIERE" : 1
         }
         series = pd.Series(dict)
 
@@ -290,18 +286,13 @@ class pageafa2022:
 
         # Data
         dict = {
-            "CONSTRUCTION" : 16,
-            "ACTIVITÉS SPÉCIALISÉES, SCIENTIFIQUES ET TECHNIQUES" : 12,
-            "AUTRES" : 7,
-            "ACTIVITÉS IMMOBILIÈRES" : 6,
-            "TRANSPORTS ET ENTREPOSAGE" : 5,
-            "NON RENSEIGNE" : 4,
-            "COMMERCE ; RÉPARATION D'AUTOMOBILES ET DE MOTOCYCLES" : 4,
-            "HÉBERGEMENT ET RESTAURATION" : 4,
-            "ACTIVITÉS DE SERVICES ADMINISTRATIFS ET DE SOUTIEN" : 3,
-            "INFORMATION ET COMMUNICATION" : 2,
-            "ARTS, SPECTACLES ET ACTIVITÉS RÉCRÉATIVES" : 2,
-            "PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ, DE GAZ, DE VAPEUR ET D'AIR CONDITIONNÉ" : 2
+            "CONSTRUCTION" : 2,
+            "AUTRES ACTIVITÉS DE SERVICES" : 2,
+            "PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ, DE GAZ, DE VAPEUR ET D'AIR CONDITIONNÉ" : 1,
+            "ACTIVITÉS IMMOBILIÈRES" : 1,
+            "AGRICULTURE SYLVICULTURE ET PÊCHE" : 1,
+            "TRANSPORTS ET ENTREPOSAGE" : 1,
+            "HÉBERGEMENT ET RESTAURATION" : 1
         }
         series = pd.Series(dict)
 
@@ -317,12 +308,11 @@ class pageafa2022:
 
         # Data
         dict = {
-            "Corruption" : 64,
-            "Favoritisme" : 61,
-            "Détournement de fonds publics" : 56,
-            "Prise illégale d'intérêts" : 51,
-            "Trafic d'influence" : 18,
-            "Concussion" : 13
+            "Corruption" : 14,
+            "Favoritisme" : 8,
+            "Trafic d'influence" : 6,
+            "Prise illégale d'intérêts" : 3,
+            "Détournement de fonds publics" : 1
         }
         series = pd.Series(dict)
 
@@ -338,7 +328,7 @@ class pageafa2022:
         
         # Data
         dict = {
-            "Age moyen des prévenus" : 54.2
+            "Age moyen des prévenus" : 0.0
         }
         series = pd.Series(dict)
 
@@ -354,7 +344,7 @@ class pageafa2022:
         
         # Data
         dict = {
-            "Nombre moyen de prévenus par affaires" : 2.4
+            "Nombre moyen de prévenus par affaires" : 3.625
         }
         series = pd.Series(dict)
 
@@ -370,8 +360,8 @@ class pageafa2022:
         
         # Data
         dict = {
-            "Personne physique" : 283,
-            "Personne morale" : 25
+            "Personne physique" : 27,
+            "Personne morale" : 2
         }
         series = pd.Series(dict)
 
@@ -387,8 +377,8 @@ class pageafa2022:
         
         # Data
         dict = {
-            "Homme" : 227,
-            "Femme" : 56
+            "Homme" : 22,
+            "Femme" : 5
         }
         series = pd.Series(dict)
 
@@ -404,13 +394,11 @@ class pageafa2022:
         
         # Data
         dict = {
-            "AGENTS PUBLICS" : 89,
-            "DIRIGEANTS DE SOCIETE" : 77,
-            "PARTICULIERS" : 52,
-            "ELUS" : 44,
-            "EMPLOYES" : 21,
-            "PERSONNE MORALE DE DROIT PRIVE" : 14,
-            "PERSONNE MORALE DE DROIT PUBLIC" : 11,
+            "DIRIGEANTS DE SOCIETE" : 14,
+            "AGENTS PUBLICS" : 7,
+            "ELUS" : 3,
+            "EMPLOYES" : 3,
+            "PERSONNE MORALE DE DROIT PRIVE" : 2
         }
         series = pd.Series(dict)
 
@@ -426,18 +414,13 @@ class pageafa2022:
         
         # Data
         dict = {
-            "CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET  ARTISTIQUES" : 83,
-            "CADRES D'ENTREPRISE" : 47,
-            "EMPLOYÉS DE LA FONCTION PUBLIQUE" : 45,
-            "NON RENSEIGNE" : 26,
-            "CHEFS D'ENTREPRISE DE 10 SALARIÉS OU PLUS" : 16,
-            "PROFESSIONS LIBÉRALES ET ASSIMILÉS" : 14,
-            "INACTIFS DIVERS (AUTRES QUE RETRAITÉS)" : 14,
-            "PROFESSIONS INTERMÉDIAIRES DE L'ENSEIGNEMENT, DE LA SANTÉ, DE LA FONCTION PUBLIQUE ET ASSIMILÉS" : 12,
-            "EMPLOYÉS DE COMMERCE" : 9,
-            "AUTRES" : 8,
-            "COMMERÇANTS ET ASSIMILÉS" : 6,
-            "EMPLOYÉS ADMINISTRATIFS D'ENTREPRISE" : 3
+            "CADRES D'ENTREPRISE" : 10,
+            "CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET  ARTISTIQUES" : 9,
+            "CHEFS D'ENTREPRISE DE 10 SALARIÉS OU PLUS" : 4,
+            "EMPLOYÉS DE COMMERCE" : 1,
+            "OUVRIERS QUALIFIÉS" : 1,
+            "EMPLOYÉS DE LA FONCTION PUBLIQUE" : 1,
+            "COMMERÇANTS ET ASSIMILÉS" : 1
         }
         series = pd.Series(dict)
 
@@ -453,17 +436,9 @@ class pageafa2022:
         
         # Data
         dict = {
-            "NON RENSEIGNE" : 54,
-            "ARTICLE 40 al.2" : 25,
-            "PLAINTE" : 16,
-            "LETTRE ANONYME" : 13,
-            "CITATION DIRECTE" : 8,
-            "ENQUETE D'INITIATIVE" : 4,
-            "DOSSIER CONNEXE JUSTICE" : 3,
-            "SIGNALEMENT AU PROCUREUR PAR UNE ASSOCIATION  OU UN PARTICULIER" : 2,
-            "NOTIFICATION TRACFIN" : 1,
-            "ENQUETE / AUDIT INTERNE" : 1,
-            "SIGNALEMENT HATVP" : 1
+            "ARTICLE 40 al.2" : 4,
+            "PLAINTE" : 2,
+            "NON RENSEIGNE" : 2
         }
         series = pd.Series(dict)
 
@@ -479,7 +454,7 @@ class pageafa2022:
         
         # Data
         dict = {
-            "Durée moyenne de la procédure" : 4.2
+            "Durée moyenne de la procédure" : 5.5
         }
         series = pd.Series(dict)
 
@@ -495,7 +470,7 @@ class pageafa2022:
 
         # Data
         dict = {
-            "Durée moyenne de la période de prévention" : 925.9
+            "Durée moyenne de la période de prévention" : 1520.7
         }
         series = pd.Series(dict)
 
@@ -511,10 +486,8 @@ class pageafa2022:
         
         # Data
         dict = {
-            "CONDAMNATION" : 422,
-            "RELAXE" : 175,
-            "AUTRE" : 15,
-            "Extinction action publique" : 7
+            "CONDAMNATION" : 41,
+            "RELAXE" : 18
         }
         series = pd.Series(dict)
 
@@ -530,11 +503,9 @@ class pageafa2022:
         
         # Data
         dict = {
-            "EMPRISONNEMENT ET AMENDE" : 175,
-            "EMPRISONNEMENT" : 158,
-            "AMENDE" : 72,
-            "DISPENSE DE PEINE" : 7,
-            "AUTRE" : 4
+            "EMPRISONNEMENT ET AMENDE" : 18,
+            "EMPRISONNEMENT" : 17,
+            "AMENDE" : 6
         }
         series = pd.Series(dict)
 
@@ -550,7 +521,7 @@ class pageafa2022:
         
         # Data
         dict = {
-            "Montant moyen des amendes des prévenus physiques" : 22598.1
+            "Montant moyen des amendes des prévenus physiques" : 13954.5
         }
         series = pd.Series(dict)
 
@@ -566,7 +537,7 @@ class pageafa2022:
         
         # Data
         dict = {
-            "Durée moyenne de l'emprisonnement des prévenus physiques" : 16.7
+            "Durée moyenne de l'emprisonnement des prévenus physiques" : 14.3
         }
         series = pd.Series(dict)
 
@@ -582,7 +553,7 @@ class pageafa2022:
         
         # Data
         dict = {
-            "Montant moyen des amendes des prévenus moraux" : 65444.4
+            "Montant moyen des amendes des prévenus moraux" : 0.0
         }
         series = pd.Series(dict)
 
@@ -598,7 +569,7 @@ class pageafa2022:
         
         # Data
         dict = {
-            "Montant moyen des confiscations" : 241255.2
+            "Montant moyen des confiscations" : 0.0
         }
         series = pd.Series(dict)
 
