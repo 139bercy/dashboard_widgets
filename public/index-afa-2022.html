@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="https://www.gouvernement.fr/sites/all/themes/custom/gouvernement/favicon.ico">
+
+    <link href="iframeResizer.contentWindow.min.js" as="script">
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+
+<noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+</noscript>
+
+<page-content
+  custom-root-css="afa/afa.css"
+  configuration="afa-2022.json"
+  dataset="tableau-de-bord-afa-format-widget"
+  display-search
+  display-geolist="false"
+  logo="afa/LOGO_AFA.png"
+  description="afa/afa-2022.description"
+  alt-logo="logo Agence Française Anticorruption"
+  project-configuration="afa/project-configuration.json"
+  line-chart-configuration="afa/line-chart-configuration.json"
+  bar-chart-configuration="afa/bar-chart-configuration.json"
+  map-chart-configuration="afa/map-chart-configuration.json">
+</page-content>
+
+</body>
+</html>

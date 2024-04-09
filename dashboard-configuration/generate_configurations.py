@@ -150,5 +150,6 @@ def build_configuration(source: str, sink: str):
 build_configuration("france-relance.csv", "france-relance.json")
 build_configuration("afa.csv", "afa.json")
 build_configuration("afa-2021.csv", "afa-2021.json")
+build_configuration("afa-2022.csv", "afa-2022.json")
 build_configuration("ca-afa-2021.csv", "ca-afa-2021.json")
 build_configuration("impact.csv", "impact.json")
