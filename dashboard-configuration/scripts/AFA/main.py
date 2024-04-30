@@ -43,7 +43,7 @@ def page_afa():
 def page_afa2021():
 
     # Choix du dataset et de la page
-    page = afa2021.pageafa2021("20240321 - Carto TJ - Année 2021")
+    page = afa2021.pageafa2021("20240424 - Carto TJ")
 
     # Choix des graphiques à générer : Génération des datas et confs
     allDatas = {}
@@ -82,7 +82,7 @@ def page_afa2021():
 def page_afa2022():
 
     # Choix du dataset et de la page
-    page = afa2022.pageafa2022("20240321 - Carto TJ - Année 2021")
+    page = afa2022.pageafa2022("20240424 - Carto TJ")
 
     # Choix des graphiques à générer : Génération des datas et confs
     allDatas = {}
@@ -117,6 +117,7 @@ def page_afa2022():
     # Ecriture pour récupération sur MinIO
     fm.export_ndjson(finalData,"afa-2022-" + str(date.today()) +".ndjson")
     fm.export_csv(finalConf,"afa-2022-" + str(date.today()) +".csv")
-    
+
+page_afa2021()
 page_afa2022()
 

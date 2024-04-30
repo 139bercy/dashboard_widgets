@@ -228,18 +228,12 @@ class pageafa2022:
     def analyseTypeFaits_FamilleInfractions(self):
         
         # Data
-        dict = {
-            "Corruption" : 14,
-            "Favoritisme" : 8,
-            "Trafic d'influence" : 6,
-            "Prise illégale d'intérêts" : 3,
-            "Détournement de fonds publics" : 1
-        }
+        dict = {'Corruption': 52, "Trafic d'influence": 30, 'Favoritisme': 25, 'Détournement de fonds publics': 22, "Prise illégale d'intérêts": 18, 'Concussion': 2}
         series = pd.Series(dict)
 
         # Formalisation
         orgInfos = self.organisationPage["analyseTypeFaits_FamilleInfractions"]
-        series.name = orgInfos["titre"] + "2022"
+        series.name = orgInfos["titre"] + " | 2022"
         data = form.donut_data(self.datasetName, series)
         conf = form.donut_conf(self.datasetName, series, orgInfos)
         
@@ -248,15 +242,12 @@ class pageafa2022:
     def analyseSecteursActivite_PublicPrive(self):
         
         # Data
-        dict = {
-            "Public" : 6,
-            "Privé" : 5
-        }
+        dict = {'Privé': 87, 'Public': 71}
         series = pd.Series(dict)
 
         # Formalisation
         orgInfos = self.organisationPage["analyseSecteursActivite_PublicPrive"]
-        series.name = orgInfos["titre"] + "2022"
+        series.name = orgInfos["titre"] + " | 2022"
         data = form.donut_data(self.datasetName, series)
         conf = form.donut_conf(self.datasetName, series, orgInfos)
         
@@ -265,18 +256,12 @@ class pageafa2022:
     def analyseSecteursActivite_Public(self):
 
         # Data
-        dict = {
-            "COLLECTIVITÉS - MAIRIES" : 3,
-            "ETABLISSEMENT PUBLIC" : 1,
-            "ETAT - ADMINISTRATION CENTRALE" : 1,
-            "COLLECTIVITÉS RÉGIONALES" : 1,
-            "FONCTION PUBLIQUE HOSPITALIERE" : 1
-        }
+        dict = {'Collectivités - mairies': 19, 'Etat - administration centrale': 18, 'Non renseigne': 9, 'Collectivités régionales': 7, 'Fonction publique hospitaliere': 6, 'Collectivités départementales': 6, 'Etablissement public': 3, 'Etat - deconcentre': 3}
         series = pd.Series(dict)
 
         # Formalisation
         orgInfos = self.organisationPage["analyseSecteursActivite_Public"]
-        series.name = orgInfos["titre"] + "2022"
+        series.name = orgInfos["titre"] + " | 2022"
         data = form.donut_data(self.datasetName, series)
         conf = form.donut_conf(self.datasetName, series, orgInfos)
         
@@ -285,20 +270,12 @@ class pageafa2022:
     def analyseSecteursActivite_Prive(self):
 
         # Data
-        dict = {
-            "CONSTRUCTION" : 2,
-            "AUTRES ACTIVITÉS DE SERVICES" : 2,
-            "PRODUCTION ET DISTRIBUTION D'ÉLECTRICITÉ, DE GAZ, DE VAPEUR ET D'AIR CONDITIONNÉ" : 1,
-            "ACTIVITÉS IMMOBILIÈRES" : 1,
-            "AGRICULTURE SYLVICULTURE ET PÊCHE" : 1,
-            "TRANSPORTS ET ENTREPOSAGE" : 1,
-            "HÉBERGEMENT ET RESTAURATION" : 1
-        }
+        dict = {'Construction': 1, 'Activités immobilières': 8, 'Activités spécialisées, scientifiques et techniques': 8, 'Non renseigne': 8, 'Hébergement et restauration': 7, 'Activités de services administratifs et de soutien': 5, 'Autres activités de services': 4, "Production et distribution d'électricité, de gaz, de vapeur et d'air conditionné": 3, 'Transports et entreposage': 3, "Commerce ; réparation d'automobiles et de motocycles": 3, "Activités financières et d'assurance": 3, 'Arts, spectacles et activités récréatives': 3, 'Agriculture sylviculture et pêche': 1, 'Santé humaine et action sociale': 1}
         series = pd.Series(dict)
 
         # Formalisation
         orgInfos = self.organisationPage["analyseSecteursActivite_Prive"]
-        series.name = orgInfos["titre"] + "2022"
+        series.name = orgInfos["titre"] + " | 2022"
         data = form.donut_data(self.datasetName, series)
         conf = form.donut_conf(self.datasetName, series, orgInfos)
         
@@ -307,18 +284,12 @@ class pageafa2022:
     def repartitionPrevenus_repartition(self):
 
         # Data
-        dict = {
-            "Corruption" : 14,
-            "Favoritisme" : 8,
-            "Trafic d'influence" : 6,
-            "Prise illégale d'intérêts" : 3,
-            "Détournement de fonds publics" : 1
-        }
+        dict = {'Corruption': 52, "Trafic d'influence": 29, 'Favoritisme': 25, 'Détournement de fonds publics': 22, "Prise illégale d'intérêts": 18, 'Concussion': 2}
         series = pd.Series(dict)
 
         # Formalisation
         orgInfos = self.organisationPage["repartitionPrevenus_repartition"]
-        series.name = orgInfos["titre"] + "2022"
+        series.name = orgInfos["titre"] + " | 2022"
         data = form.donut_data(self.datasetName, series)
         conf = form.donut_conf(self.datasetName, series, orgInfos)
         
@@ -328,13 +299,13 @@ class pageafa2022:
         
         # Data
         dict = {
-            "Age moyen des prévenus" : 0.0
+            "Age moyen des prévenus" : 45.0
         }
         series = pd.Series(dict)
 
         # Formalisation
         orgInfos = self.organisationPage["repartitionPrevenus_ageMoyen"]
-        series.name = orgInfos["titre"] + "2022"
+        series.name = orgInfos["titre"] + " | 2022"
         data = form.box_data(self.datasetName, series)
         conf = form.box_conf(self.datasetName, series, orgInfos)
         
@@ -344,13 +315,13 @@ class pageafa2022:
         
         # Data
         dict = {
-            "Nombre moyen de prévenus par affaires" : 3.625
+            "Nombre moyen de prévenus par affaires" : 3.0
         }
         series = pd.Series(dict)
 
         # Formalisation
         orgInfos = self.organisationPage["repartitionPrevenus_nbMoyen"]
-        series.name = orgInfos["titre"] + "2022"
+        series.name = orgInfos["titre"] + " | 2022"
         data = form.box_data(self.datasetName, series)
         conf = form.box_conf(self.datasetName, series, orgInfos)
         
@@ -360,14 +331,14 @@ class pageafa2022:
         
         # Data
         dict = {
-            "Personne physique" : 27,
-            "Personne morale" : 2
+            "Personne physique" : 143,
+            "Personne morale" : 7
         }
         series = pd.Series(dict)
 
         # Formalisation
         orgInfos = self.organisationPage["NatureSexePrevenus_Nature"]
-        series.name = orgInfos["titre"] + "2022"
+        series.name = orgInfos["titre"] + " | 2022"
         data = form.donut_data(self.datasetName, series)
         conf = form.donut_conf(self.datasetName, series, orgInfos)
         
@@ -376,15 +347,12 @@ class pageafa2022:
     def NatureSexePrevenus_Sexe(self):
         
         # Data
-        dict = {
-            "Homme" : 22,
-            "Femme" : 5
-        }
+        dict = {'Hommes': 115, 'Femmes': 28}
         series = pd.Series(dict)
 
         # Formalisation
         orgInfos = self.organisationPage["NatureSexePrevenus_Sexe"]
-        series.name = orgInfos["titre"] + "2022"
+        series.name = orgInfos["titre"] + " | 2022"
         data = form.donut_data(self.datasetName, series)
         conf = form.donut_conf(self.datasetName, series, orgInfos)
         
@@ -393,18 +361,12 @@ class pageafa2022:
     def qualiteCSPPrevenus_qualite(self):
         
         # Data
-        dict = {
-            "DIRIGEANTS DE SOCIETE" : 14,
-            "AGENTS PUBLICS" : 7,
-            "ELUS" : 3,
-            "EMPLOYES" : 3,
-            "PERSONNE MORALE DE DROIT PRIVE" : 2
-        }
+        dict = {'Agents publics': 51, 'Dirigeants de societe': 44, 'Employes': 18, 'Particuliers': 17, 'Elus': 9, 'Personne morale de droit prive': 5, 'Personne morale de droit public ': 1}
         series = pd.Series(dict)
 
         # Formalisation
         orgInfos = self.organisationPage["qualiteCSPPrevenus_qualite"]
-        series.name = orgInfos["titre"] + "2022"
+        series.name = orgInfos["titre"] + " | 2022"
         data = form.donut_data(self.datasetName, series)
         conf = form.donut_conf(self.datasetName, series, orgInfos)
         
@@ -413,20 +375,12 @@ class pageafa2022:
     def qualiteCSPPrevenus_CSP(self):
         
         # Data
-        dict = {
-            "CADRES D'ENTREPRISE" : 10,
-            "CADRES DE LA FONCTION PUBLIQUE, PROFESSIONS INTELLECTUELLES ET  ARTISTIQUES" : 9,
-            "CHEFS D'ENTREPRISE DE 10 SALARIÉS OU PLUS" : 4,
-            "EMPLOYÉS DE COMMERCE" : 1,
-            "OUVRIERS QUALIFIÉS" : 1,
-            "EMPLOYÉS DE LA FONCTION PUBLIQUE" : 1,
-            "COMMERÇANTS ET ASSIMILÉS" : 1
-        }
+        dict = {"Cadres d'entreprise": 43, 'Cadres de la fonction publique, professions intellectuelles et  artistiques': 27, 'Employés de la fonction publique': 24, 'Non renseigne': 19, "Chefs d'entreprise de 10 salariés ou plus": 6, 'Employés de commerce': 4, 'Ouvriers qualifiés': 3, 'Inactifs divers (autres que retraités)': 3, 'Professions libérales et assimilés': 2, "Professions intermédiaires de l'enseignement, de la santé, de la fonction publique et assimilés": 2, 'Techniciens': 2, "Employés administratifs d'entreprise": 2, 'Commerçants et assimilés': 1, 'Inactifs divers (y compris retraités)': 1, 'Contremaîtres, agents de maîtrise': 1}
         series = pd.Series(dict)
 
         # Formalisation
         orgInfos = self.organisationPage["qualiteCSPPrevenus_CSP"]
-        series.name = orgInfos["titre"] + "2022"
+        series.name = orgInfos["titre"] + " | 2022"
         data = form.donut_data(self.datasetName, series)
         conf = form.donut_conf(self.datasetName, series, orgInfos)
         
@@ -435,16 +389,12 @@ class pageafa2022:
     def caracsProcedure_origine(self):
         
         # Data
-        dict = {
-            "ARTICLE 40 al.2" : 4,
-            "PLAINTE" : 2,
-            "NON RENSEIGNE" : 2
-        }
+        dict = {'Non renseigne': 22, 'Article 40 al.2': 10, 'Plainte': 9, 'Dossier connexe justice': 3, 'Signalement au procureur par une association  ou un particulier ': 3, 'Citation directe': 2, 'Lettre anonyme ': 1}
         series = pd.Series(dict)
 
         # Formalisation
         orgInfos = self.organisationPage["caracsProcedure_origine"]
-        series.name = orgInfos["titre"] + "2022"
+        series.name = orgInfos["titre"] + " | 2022"
         data = form.donut_data(self.datasetName, series)
         conf = form.donut_conf(self.datasetName, series, orgInfos)
         
@@ -454,13 +404,13 @@ class pageafa2022:
         
         # Data
         dict = {
-            "Durée moyenne de la procédure" : 5.5
+            "Durée moyenne de la procédure" : 5.0
         }
         series = pd.Series(dict)
 
         # Formalisation
         orgInfos = self.organisationPage["caracsProcedure_dureeProcedure"]
-        series.name = orgInfos["titre"] + "2022"
+        series.name = orgInfos["titre"] + " | 2022"
         data = form.box_data(self.datasetName, series)
         conf = form.box_conf(self.datasetName, series, orgInfos)
         
@@ -470,13 +420,13 @@ class pageafa2022:
 
         # Data
         dict = {
-            "Durée moyenne de la période de prévention" : 1520.7
+            "Durée moyenne de la période de prévention" : 1126.6
         }
         series = pd.Series(dict)
 
         # Formalisation
         orgInfos = self.organisationPage["caracsProcedure_dureePrevention"]
-        series.name = orgInfos["titre"] + "2022"
+        series.name = orgInfos["titre"] + " | 2022"
         data = form.box_data(self.datasetName, series)
         conf = form.box_conf(self.datasetName, series, orgInfos)
         
@@ -485,15 +435,12 @@ class pageafa2022:
     def analyseDJ_sens(self):
         
         # Data
-        dict = {
-            "CONDAMNATION" : 41,
-            "RELAXE" : 18
-        }
+        dict = {'Déclaration de culpabilité': 232, 'Relaxe ': 79, 'Autre ': 2}
         series = pd.Series(dict)
 
         # Formalisation
         orgInfos = self.organisationPage["analyseDJ_sens"]
-        series.name = orgInfos["titre"] + "2022"
+        series.name = orgInfos["titre"] + " | 2022"
         data = form.donut_data(self.datasetName, series)
         conf = form.donut_conf(self.datasetName, series, orgInfos)
         
@@ -502,16 +449,12 @@ class pageafa2022:
     def analysePeines_type(self):
         
         # Data
-        dict = {
-            "EMPRISONNEMENT ET AMENDE" : 18,
-            "EMPRISONNEMENT" : 17,
-            "AMENDE" : 6
-        }
+        dict = {'Emprisonnement et amende': 47, 'Emprisonnement ': 46, 'Amende ': 20}
         series = pd.Series(dict)
 
         # Formalisation
         orgInfos = self.organisationPage["analysePeines_type"]
-        series.name = orgInfos["titre"] + "2022"
+        series.name = orgInfos["titre"] + " | 2022"
         data = form.donut_data(self.datasetName, series)
         conf = form.donut_conf(self.datasetName, series, orgInfos)
         
@@ -521,13 +464,13 @@ class pageafa2022:
         
         # Data
         dict = {
-            "Montant moyen des amendes des prévenus physiques" : 13954.5
+            "Montant moyen des amendes des prévenus physiques" : 25042.8
         }
         series = pd.Series(dict)
 
         # Formalisation
         orgInfos = self.organisationPage["sanctionPenales_physiquesMoyenneAmende"]
-        series.name = orgInfos["titre"] + "2022"
+        series.name = orgInfos["titre"] + " | 2022"
         data = form.box_data(self.datasetName, series)
         conf = form.box_conf(self.datasetName, series, orgInfos)
         
@@ -537,13 +480,13 @@ class pageafa2022:
         
         # Data
         dict = {
-            "Durée moyenne de l'emprisonnement des prévenus physiques" : 14.3
+            "Durée moyenne de l'emprisonnement des prévenus physiques" : 16.3
         }
         series = pd.Series(dict)
 
         # Formalisation
         orgInfos = self.organisationPage["sanctionPenales_physiquesMoyenneEmprisonnement"]
-        series.name = orgInfos["titre"] + "2022"
+        series.name = orgInfos["titre"] + " | 2022"
         data = form.box_data(self.datasetName, series)
         conf = form.box_conf(self.datasetName, series, orgInfos)
         
@@ -553,13 +496,13 @@ class pageafa2022:
         
         # Data
         dict = {
-            "Montant moyen des amendes des prévenus moraux" : 0.0
+            "Montant moyen des amendes des prévenus moraux" : 25000.0
         }
         series = pd.Series(dict)
 
         # Formalisation
         orgInfos = self.organisationPage["sanctionPenales_moralesMoyenneAmende"]
-        series.name = orgInfos["titre"] + "2022"
+        series.name = orgInfos["titre"] + " | 2022"
         data = form.box_data(self.datasetName, series)
         conf = form.box_conf(self.datasetName, series, orgInfos)
         
@@ -569,13 +512,13 @@ class pageafa2022:
         
         # Data
         dict = {
-            "Montant moyen des confiscations" : 0.0
+            "Montant moyen des confiscations" : 34672.0
         }
         series = pd.Series(dict)
 
         # Formalisation
         orgInfos = self.organisationPage["sanctionPenales_confiscations"]
-        series.name = orgInfos["titre"] + "2022"
+        series.name = orgInfos["titre"] + " | 2022"
         data = form.box_data(self.datasetName, series)
         conf = form.box_conf(self.datasetName, series, orgInfos)
         
