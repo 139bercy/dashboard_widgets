@@ -13,7 +13,7 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Description ",
+                "Description_mesure": "Note de lecture : La corruption représente 25,6% des faits d’atteinte à la probité rapportés dans les 94 décisions de justice rendues en 2021 et analysées par l’AFA. Explications : Les infractions d’atteinte à la probité regroupent la corruption, le trafic d’influence, le favoritisme, la prise illégale d’intérêts, le détournement de fonds ou de biens publics et la concussion. Dans l’échantillon, aucun fait de concussion n’a été relevé. Pour une définition et une illustration de chaque infraction, se reporter au Lexique de l'AFA. Méthode de comptage : Calcul de répartition des infractions.",
                 "Titre_onglet": "Familles d'infractions",
                 "Pie": 1,
                 "Table": false,
@@ -91,7 +91,7 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Description ",
+                "Description_mesure": "Note de lecture : 47,2% des prévenus concernés par les 94 décisions de justice rendues en 2021 et analysées par l’AFA, appartenaient au secteur public. Explications : Le secteur public comprend autant les agents publics (État, collectivités territoriales, établissements publics etc.) que les élus. Chaque secteur comprend à chaque fois les prévenus tant personnes physiques que personnes morales. Un prévenu est une personne poursuivie pénalement et qui n’a pas encore été jugée ou dont la condamnation n’est pas encore définitive. Méthode de comptage : Calcul de répartition des affaires. Les affaires mettant en cause des personnes tant du secteur privé que du secteur public sont comptabilisées dans les deux catégories.",
                 "Titre_onglet": "Répartition par secteurs d'activité",
                 "Pie": 1,
                 "Table": false,
@@ -104,18 +104,18 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Répartition entre le public et le privé | 2021 | Public",
-                        "Nom_indicateur": "Public",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Public",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
                         "Code_indicateur": "20240424 - Carto TJ | Répartition entre le public et le privé | 2021 | Privé",
                         "Nom_indicateur": "Privé",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Privé",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240424 - Carto TJ | Répartition entre le public et le privé | 2021 | Public",
+                        "Nom_indicateur": "Public",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Public",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -128,7 +128,7 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Description ",
+                "Description_mesure": "Note de lecture : 9,3% des prévenus des 94 décisions de justice rendues en 2021 et analysées par l’AFA, étaient fonctionnaires de l’État travaillant au sein de l’administration centrale. Explications : Cette classification a été créée par l’AFA. Méthode de comptage : Calcul de répartition des prévenus appartenant au secteur public.",
                 "Titre_onglet": "Secteur public",
                 "Pie": 1,
                 "Table": false,
@@ -141,10 +141,10 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Secteur public | 2021 | Etat - administration centrale",
-                        "Nom_indicateur": "Etat - administration centrale",
+                        "Code_indicateur": "20240424 - Carto TJ | Secteur public | 2021 | Non renseigne",
+                        "Nom_indicateur": "Non renseigne",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Etat - administration centrale",
+                        "Titre_indicateur": "Non renseigne",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -157,18 +157,18 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Secteur public | 2021 | Collectivités - mairies",
-                        "Nom_indicateur": "Collectivités - mairies",
+                        "Code_indicateur": "20240424 - Carto TJ | Secteur public | 2021 | Etablissement public",
+                        "Nom_indicateur": "Etablissement public",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Collectivités - mairies",
+                        "Titre_indicateur": "Etablissement public",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Secteur public | 2021 | Non renseigne",
-                        "Nom_indicateur": "Non renseigne",
+                        "Code_indicateur": "20240424 - Carto TJ | Secteur public | 2021 | Etat - administration centrale",
+                        "Nom_indicateur": "Etat - administration centrale",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Non renseigne",
+                        "Titre_indicateur": "Etat - administration centrale",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -181,10 +181,10 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Secteur public | 2021 | Collectivités régionales",
-                        "Nom_indicateur": "Collectivités régionales",
+                        "Code_indicateur": "20240424 - Carto TJ | Secteur public | 2021 | Collectivités - mairies",
+                        "Nom_indicateur": "Collectivités - mairies",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Collectivités régionales",
+                        "Titre_indicateur": "Collectivités - mairies",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -197,10 +197,10 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Secteur public | 2021 | Etablissement public",
-                        "Nom_indicateur": "Etablissement public",
+                        "Code_indicateur": "20240424 - Carto TJ | Secteur public | 2021 | Collectivités régionales",
+                        "Nom_indicateur": "Collectivités régionales",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Etablissement public",
+                        "Titre_indicateur": "Collectivités régionales",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -213,7 +213,7 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Description ",
+                "Description_mesure": "Note de lecture : 26,7% des prévenus des 94 décisions de justice rendues en 2021 et analysées par l’AFA, travaillaient dans le secteur de la construction. Explications : La classification correspond à la nomenclature d’activités française de l’INSEE (NAF rev.2 - Sections). Méthode de comptage : Calcul de répartition des prévenus appartenant au secteur privé.",
                 "Titre_onglet": "Secteur privé",
                 "Pie": 1,
                 "Table": false,
@@ -226,50 +226,10 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Secteur privé | 2021 | Transports et entreposage",
-                        "Nom_indicateur": "Transports et entreposage",
+                        "Code_indicateur": "20240424 - Carto TJ | Secteur privé | 2021 | Non renseigne",
+                        "Nom_indicateur": "Non renseigne",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Transports et entreposage",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240424 - Carto TJ | Secteur privé | 2021 | Autres activités de services",
-                        "Nom_indicateur": "Autres activités de services",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Autres activités de services",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240424 - Carto TJ | Secteur privé | 2021 | Commerce ; réparation d'automobiles et de motocycles",
-                        "Nom_indicateur": "Commerce ; réparation d'automobiles et de motocycles",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Commerce ; réparation d'automobiles et de motocycles",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240424 - Carto TJ | Secteur privé | 2021 | Production et distribution d'électricité, de gaz, de vapeur et d'air conditionné",
-                        "Nom_indicateur": "Production et distribution d'électricité, de gaz, de vapeur et d'air conditionné",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Production et distribution d'électricité, de gaz, de vapeur et d'air conditionné",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240424 - Carto TJ | Secteur privé | 2021 | Activités de services administratifs et de soutien",
-                        "Nom_indicateur": "Activités de services administratifs et de soutien",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Activités de services administratifs et de soutien",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240424 - Carto TJ | Secteur privé | 2021 | Santé humaine et action sociale",
-                        "Nom_indicateur": "Santé humaine et action sociale",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Santé humaine et action sociale",
+                        "Titre_indicateur": "Non renseigne",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -282,42 +242,34 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Secteur privé | 2021 | Enseignement",
-                        "Nom_indicateur": "Enseignement",
+                        "Code_indicateur": "20240424 - Carto TJ | Secteur privé | 2021 | Autres",
+                        "Nom_indicateur": "Autres",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Enseignement",
+                        "Titre_indicateur": "Autres",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Secteur privé | 2021 | Industrie manufacturière",
-                        "Nom_indicateur": "Industrie manufacturière",
+                        "Code_indicateur": "20240424 - Carto TJ | Secteur privé | 2021 | Hébergement et restauration",
+                        "Nom_indicateur": "Hébergement et restauration",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Industrie manufacturière",
+                        "Titre_indicateur": "Hébergement et restauration",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Secteur privé | 2021 | Information et communication",
-                        "Nom_indicateur": "Information et communication",
+                        "Code_indicateur": "20240424 - Carto TJ | Secteur privé | 2021 | Production et distribution d'eau ; assainissement, gestion des déchets et dépollution",
+                        "Nom_indicateur": "Production et distribution d'eau ; assainissement, gestion des déchets et dépollution",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Information et communication",
+                        "Titre_indicateur": "Production et distribution d'eau ; assainissement, gestion des déchets et dépollution",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Secteur privé | 2021 | Non renseigne",
-                        "Nom_indicateur": "Non renseigne",
+                        "Code_indicateur": "20240424 - Carto TJ | Secteur privé | 2021 | Activités de services administratifs et de soutien",
+                        "Nom_indicateur": "Activités de services administratifs et de soutien",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Non renseigne",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240424 - Carto TJ | Secteur privé | 2021 | Arts, spectacles et activités récréatives",
-                        "Nom_indicateur": "Arts, spectacles et activités récréatives",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Arts, spectacles et activités récréatives",
+                        "Titre_indicateur": "Activités de services administratifs et de soutien",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -338,18 +290,26 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Secteur privé | 2021 | Hébergement et restauration",
-                        "Nom_indicateur": "Hébergement et restauration",
+                        "Code_indicateur": "20240424 - Carto TJ | Secteur privé | 2021 | Commerce ; réparation d'automobiles et de motocycles",
+                        "Nom_indicateur": "Commerce ; réparation d'automobiles et de motocycles",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Hébergement et restauration",
+                        "Titre_indicateur": "Commerce ; réparation d'automobiles et de motocycles",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Secteur privé | 2021 | Production et distribution d'eau ; assainissement, gestion des déchets et dépollution",
-                        "Nom_indicateur": "Production et distribution d'eau ; assainissement, gestion des déchets et dépollution",
+                        "Code_indicateur": "20240424 - Carto TJ | Secteur privé | 2021 | Transports et entreposage",
+                        "Nom_indicateur": "Transports et entreposage",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Production et distribution d'eau ; assainissement, gestion des déchets et dépollution",
+                        "Titre_indicateur": "Transports et entreposage",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240424 - Carto TJ | Secteur privé | 2021 | Autres activités de services",
+                        "Nom_indicateur": "Autres activités de services",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Autres activités de services",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -371,7 +331,7 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Description ",
+                "Description_mesure": "Note de lecture : Au sein de l’échantillon de 94 décisions de justice rendues en 2021 et analysées par l’AFA, 26,6 % des prévenus renvoyés devant les juridictions pénales pour des infractions d’atteinte à la probité, l’ont été pour des faits de corruption. Un prévenu renvoyé devant les juridictions pénales pour des faits de corruption et de favoritisme est compté dans les deux catégories. Méthode de comptage : Calcul de répartition des prévenus.",
                 "Titre_onglet": "Répartition des prévenus",
                 "Pie": 1,
                 "Table": false,
@@ -384,18 +344,18 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Répartition des prévenus par familles | 2021 | Concussion",
-                        "Nom_indicateur": "Concussion",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Concussion",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
                         "Code_indicateur": "20240424 - Carto TJ | Répartition des prévenus par familles | 2021 | Trafic d'influence",
                         "Nom_indicateur": "Trafic d'influence",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Trafic d'influence",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240424 - Carto TJ | Répartition des prévenus par familles | 2021 | Concussion",
+                        "Nom_indicateur": "Concussion",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Concussion",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -440,7 +400,7 @@
                 "Box": 1,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Description ",
+                "Description_mesure": "Note de lecture 1 : Au sein de l’échantillon de 94 décisions de justice, rendues en 2021 et analysées par l’AFA, l’âge moyen des prévenus au moment du début de la période de prévention des faits qui leur sont reprochés, est de 45 ans.  Note de lecture 2 : Au sein de l’échantillon de 94 décisions de justice rendues en 2021 et analysées par l’AFA, il y a en moyenne 3 prévenus par affaire.  Explications :  La période de prévention correspond à la durée de temps pendant laquelle les infractions pénales reprochées à un prévenu ont été commises. Elle peut être d’un jour pour les infractions se consommant immédiatement, mais peut également durer plusieurs années. Méthode de comptage : Moyennes réalisées à partir des données concernant les prévenus.",
                 "Titre_onglet": "Indicateurs",
                 "Pie": false,
                 "Table": false,
@@ -485,7 +445,7 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Description ",
+                "Description_mesure": "Note de lecture : Sur l’échantillon de 94 décisions de justice rendues en 2021 et analysées par l’AFA, 92,0% des prévenus jugés pour des faits d’atteinte à la probité étaient des personnes physiques. Explications : En droit français, une personne morale est un groupement doté de la personnalité juridique. Elle peut être composée d’une ou plusieurs personnes physiques ou morales. La personnalité juridique donne à cette personne morale des droits et des devoirs. Une personne morale peut être droit public (État, collectivités territoriales, établissements publics etc.) ou de droit privé (sociétés privées, associations etc.). Depuis 1994 les personnes morales, à l'exclusion de l'État, sont responsables pénalement des infractions commises, pour leur compte, par leurs organes ou représentants. Les établissements publics, les collectivités territoriales et leurs groupements ne sont responsables que pour les infractions commises dans l'exercice des activités susceptibles de faire l'objet de délégation de service public. Méthode de comptage : Calcul de répartition des prévenus selon leur nature.",
                 "Titre_onglet": "Nature",
                 "Pie": 1,
                 "Table": false,
@@ -522,7 +482,7 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Description ",
+                "Description_mesure": "Note de lecture : Sur l’échantillon de 94 décisions de justice, rendues en 2021 et analysées par l’AFA, 78,7% des prévenus jugés pour des faits d’atteinte à la probité étaient des hommes. Méthode de comptage : Calcul de répartition des prévenus personnes physiques selon leur sexe.",
                 "Titre_onglet": "Sexe",
                 "Pie": 1,
                 "Table": false,
@@ -568,7 +528,7 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Description ",
+                "Description_mesure": "Note de lecture : Sur l’échantillon de 94 décisions de justice rendues en 2021 et analysées par l’AFA, 27,2% des prévenus étaient des agents publics. Explications : Cette classification a été créée par l’AFA. La catégorie « particuliers » regroupe les prévenus auxquels on reproche des faits d’atteinte à la probité commis en dehors de leur activité professionnelle. Dans l’échantillon analysé, aucune personne morale de droit public n’a été renvoyée devant une juridiction pénale. Méthode de comptage : Calcul de répartition des prévenus selon leur qualité. Source : Analyse par l’AFA de 94 décisions de justice rendues en 2021 en matière d’atteintes à la probité.",
                 "Titre_onglet": "Qualité",
                 "Pie": 1,
                 "Table": false,
@@ -581,10 +541,10 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Qualité des prévenus | 2021 | Particuliers",
-                        "Nom_indicateur": "Particuliers",
+                        "Code_indicateur": "20240424 - Carto TJ | Qualité des prévenus | 2021 | Dirigeants de societe",
+                        "Nom_indicateur": "Dirigeants de societe",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Particuliers",
+                        "Titre_indicateur": "Dirigeants de societe",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -621,10 +581,10 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Qualité des prévenus | 2021 | Dirigeants de societe",
-                        "Nom_indicateur": "Dirigeants de societe",
+                        "Code_indicateur": "20240424 - Carto TJ | Qualité des prévenus | 2021 | Particuliers",
+                        "Nom_indicateur": "Particuliers",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Dirigeants de societe",
+                        "Titre_indicateur": "Particuliers",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -645,7 +605,7 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Description ",
+                "Description_mesure": "Note de lecture : Sur l’échantillon de 94 décisions de justice, rendues en 2021 et analysées par l’AFA, 6,5 % étaient des chefs d’entreprises d’au moins 10 salariés.  Explications : Cette classification correspond à la nomenclature PCS 2003 – Niveau 2 de l’INSEE qui comprend 24 postes. Méthode de comptage : Calcul de répartition des prévenus selon leur CSP.",
                 "Titre_onglet": "Catégorie socio-professionnelle",
                 "Pie": 1,
                 "Table": false,
@@ -658,82 +618,10 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Catégorie socio-professionnelle des prévenus | 2021 | Techniciens",
-                        "Nom_indicateur": "Techniciens",
+                        "Code_indicateur": "20240424 - Carto TJ | Catégorie socio-professionnelle des prévenus | 2021 | Chefs d'entreprise de 10 salariés ou plus",
+                        "Nom_indicateur": "Chefs d'entreprise de 10 salariés ou plus",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Techniciens",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240424 - Carto TJ | Catégorie socio-professionnelle des prévenus | 2021 | Professions libérales et assimilés",
-                        "Nom_indicateur": "Professions libérales et assimilés",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Professions libérales et assimilés",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240424 - Carto TJ | Catégorie socio-professionnelle des prévenus | 2021 | Ouvriers non qualifiés",
-                        "Nom_indicateur": "Ouvriers non qualifiés",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Ouvriers non qualifiés",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240424 - Carto TJ | Catégorie socio-professionnelle des prévenus | 2021 | Professions intermédiaires de l'enseignement, de la santé, de la fonction publique et assimilés",
-                        "Nom_indicateur": "Professions intermédiaires de l'enseignement, de la santé, de la fonction publique et assimilés",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Professions intermédiaires de l'enseignement, de la santé, de la fonction publique et assimilés",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240424 - Carto TJ | Catégorie socio-professionnelle des prévenus | 2021 | Personnels des services directs aux particuliers",
-                        "Nom_indicateur": "Personnels des services directs aux particuliers",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Personnels des services directs aux particuliers",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240424 - Carto TJ | Catégorie socio-professionnelle des prévenus | 2021 | Non renseigne",
-                        "Nom_indicateur": "Non renseigne",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Non renseigne",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240424 - Carto TJ | Catégorie socio-professionnelle des prévenus | 2021 | Cadres d'entreprise",
-                        "Nom_indicateur": "Cadres d'entreprise",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Cadres d'entreprise",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240424 - Carto TJ | Catégorie socio-professionnelle des prévenus | 2021 | Employés de la fonction publique",
-                        "Nom_indicateur": "Employés de la fonction publique",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Employés de la fonction publique",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240424 - Carto TJ | Catégorie socio-professionnelle des prévenus | 2021 | Ouvriers qualifiés",
-                        "Nom_indicateur": "Ouvriers qualifiés",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Ouvriers qualifiés",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240424 - Carto TJ | Catégorie socio-professionnelle des prévenus | 2021 | Employés administratifs d'entreprise",
-                        "Nom_indicateur": "Employés administratifs d'entreprise",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Employés administratifs d'entreprise",
+                        "Titre_indicateur": "Chefs d'entreprise de 10 salariés ou plus",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -746,10 +634,58 @@
                         "Unité_Evol": "%"
                     },
                     {
+                        "Code_indicateur": "20240424 - Carto TJ | Catégorie socio-professionnelle des prévenus | 2021 | Cadres d'entreprise",
+                        "Nom_indicateur": "Cadres d'entreprise",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Cadres d'entreprise",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240424 - Carto TJ | Catégorie socio-professionnelle des prévenus | 2021 | Non renseigne",
+                        "Nom_indicateur": "Non renseigne",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Non renseigne",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240424 - Carto TJ | Catégorie socio-professionnelle des prévenus | 2021 | Employés de commerce",
+                        "Nom_indicateur": "Employés de commerce",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Employés de commerce",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240424 - Carto TJ | Catégorie socio-professionnelle des prévenus | 2021 | Autres",
+                        "Nom_indicateur": "Autres",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Autres",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
                         "Code_indicateur": "20240424 - Carto TJ | Catégorie socio-professionnelle des prévenus | 2021 | Commerçants et assimilés",
                         "Nom_indicateur": "Commerçants et assimilés",
                         "Indicateur_principal": "1",
                         "Titre_indicateur": "Commerçants et assimilés",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240424 - Carto TJ | Catégorie socio-professionnelle des prévenus | 2021 | Professions libérales et assimilés",
+                        "Nom_indicateur": "Professions libérales et assimilés",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Professions libérales et assimilés",
+                        "Unité_GP": "Infractions en 2020",
+                        "Unité_Evol": "%"
+                    },
+                    {
+                        "Code_indicateur": "20240424 - Carto TJ | Catégorie socio-professionnelle des prévenus | 2021 | Professions intermédiaires de l'enseignement, de la santé, de la fonction publique et assimilés",
+                        "Nom_indicateur": "Professions intermédiaires de l'enseignement, de la santé, de la fonction publique et assimilés",
+                        "Indicateur_principal": "1",
+                        "Titre_indicateur": "Professions intermédiaires de l'enseignement, de la santé, de la fonction publique et assimilés",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -762,26 +698,10 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Catégorie socio-professionnelle des prévenus | 2021 | Chefs d'entreprise de 10 salariés ou plus",
-                        "Nom_indicateur": "Chefs d'entreprise de 10 salariés ou plus",
+                        "Code_indicateur": "20240424 - Carto TJ | Catégorie socio-professionnelle des prévenus | 2021 | Employés de la fonction publique",
+                        "Nom_indicateur": "Employés de la fonction publique",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Chefs d'entreprise de 10 salariés ou plus",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240424 - Carto TJ | Catégorie socio-professionnelle des prévenus | 2021 | Contremaîtres, agents de maîtrise",
-                        "Nom_indicateur": "Contremaîtres, agents de maîtrise",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Contremaîtres, agents de maîtrise",
-                        "Unité_GP": "Infractions en 2020",
-                        "Unité_Evol": "%"
-                    },
-                    {
-                        "Code_indicateur": "20240424 - Carto TJ | Catégorie socio-professionnelle des prévenus | 2021 | Employés de commerce",
-                        "Nom_indicateur": "Employés de commerce",
-                        "Indicateur_principal": "1",
-                        "Titre_indicateur": "Employés de commerce",
+                        "Titre_indicateur": "Employés de la fonction publique",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -803,7 +723,7 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Description ",
+                "Description_mesure": "Note de lecture : Sur l’échantillon de 94 décisions de justice rendues en 2021 et analysées par l’AFA :     •  12,8% des affaires avaient pour origine une plainte ;     • les signalements à l’autorité judiciaire, effectués par les autorités et administrations publiques dans le cadre de l’article 40 alinéa 2 du Code de procédure pénale, sont à l’origine de 25,5 % des procédures. La catégorie « AUTRE » contient essentiellement des signalements au procureur, des enquêtes/audits internes, et des enquêtes d’initiatives. Explications : Une enquête peut être ouverte, sur directive du parquet ou sur initiative des enquêteurs, à la suite de plusieurs faits : plainte, signalement, dénonciation anonyme, etc.  L’article 40 alinéa 2 du Code de procédure pénale dispose que « Toute autorité constituée, tout officier public ou fonctionnaire qui, dans l'exercice de ses fonctions, acquiert la connaissance d'un crime ou d'un délit est tenu d'en donner avis sans délai au procureur de la République et de transmettre à ce magistrat tous les renseignements, procès-verbaux et actes qui y sont relatifs. »  Méthode de comptage : Calcul de répartition des affaires selon leur origine.",
                 "Titre_onglet": "Origine de l'affaire",
                 "Pie": 1,
                 "Table": false,
@@ -816,18 +736,18 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Origine de l'affaire | 2021 | Notification tracfin",
-                        "Nom_indicateur": "Notification tracfin",
+                        "Code_indicateur": "20240424 - Carto TJ | Origine de l'affaire | 2021 | Dossier connexe justice",
+                        "Nom_indicateur": "Dossier connexe justice",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Notification tracfin",
+                        "Titre_indicateur": "Dossier connexe justice",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Origine de l'affaire | 2021 | Enquete / audit interne",
-                        "Nom_indicateur": "Enquete / audit interne",
+                        "Code_indicateur": "20240424 - Carto TJ | Origine de l'affaire | 2021 | Notification tracfin",
+                        "Nom_indicateur": "Notification tracfin",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Enquete / audit interne",
+                        "Titre_indicateur": "Notification tracfin",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -840,10 +760,10 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Origine de l'affaire | 2021 | Dossier connexe justice",
-                        "Nom_indicateur": "Dossier connexe justice",
+                        "Code_indicateur": "20240424 - Carto TJ | Origine de l'affaire | 2021 | Enquete / audit interne",
+                        "Nom_indicateur": "Enquete / audit interne",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Dossier connexe justice",
+                        "Titre_indicateur": "Enquete / audit interne",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -912,7 +832,7 @@
                 "Box": 1,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Description ",
+                "Description_mesure": "Notes de lecture :  Sur l’échantillon de 94 décisions de justice rendues en 2021 et analysées par l’AFA :     • la durée moyenne de la procédure est de 5 ans;     • la durée moyenne de la période de prévention est de 2 ans.  Explications : Dans cette analyse, la durée de procédure s’entend comme la durée qui s’écoule depuis la fin de la période de prévention jusqu’à la date du jugement de première instance.  La période de prévention est la période durant laquelle les infractions pénales reprochées à un prévenu ont été commises. Elle peut être d’un jour pour les infractions se consommant immédiatement, mais peut également durer plusieurs années. Méthode de comptage : Moyennes réalisées à partir des données relevées par l’AFA dans les décisions de justice analysées.",
                 "Titre_onglet": "Indicateurs",
                 "Pie": false,
                 "Table": false,
@@ -957,7 +877,7 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Description ",
+                "Description_mesure": "Note de lecture : Sur l’échantillon de 94 décisions de justice rendues en 2021 et analysées par l’AFA, 44,5% des personnes ont été condamnées à une peine d’emprisonnement et une peine d’amende. 37,3% des prévenus ont été condamnés uniquement à une peine d’emprisonnement tandis que 15,9% ont été condamnés uniquement  à une peine d’amende. Méthode de comptage : Calcul de répartition par peine prononcée selon le sens de la décision.",
                 "Titre_onglet": "Sens de la décision",
                 "Pie": 1,
                 "Table": false,
@@ -1019,7 +939,7 @@
                 "Box": false,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Description ",
+                "Description_mesure": "Note de lecture : Sur l’échantillon de 94 décisions de justice rendues en 2021 et analysées par l’AFA, 44,5 % des prévenus ont été condamnés à une peine d’emprisonnement et à une amende. Explications : La dispense de peine est une « mesure par laquelle le juge correctionnel ou de police qui a retenu la culpabilité du prévenu décide cependant de ne prononcer aucune sanction contre lui lorsqu’il lui apparaît que son reclassement est acquis, que le dommage est réparé, et que le trouble social occasionné par l’infraction a cessé. » (Lexique Dalloz) Méthode de comptage : Calcul de répartition par infractions selon le type de peines prononcées.",
                 "Titre_onglet": "Types de peine",
                 "Pie": 1,
                 "Table": false,
@@ -1089,7 +1009,7 @@
                 "Box": 1,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Description ",
+                "Description_mesure": "Note de lecture : Sur l’échantillon de 94 décisions de justice rendues en 2021 et analysées par l’AFA, les personnes physiques prévenues ont été condamnés en moyenne à près de 19 mois d’emprisonnement et à une amende de 21 973€. Explications : En droit français, une personne morale est un groupement doté de la personnalité juridique. Elle peut être composée d’une ou plusieurs personnes physiques ou morales. La personnalité juridique donne à cette personne morale des droits et des devoirs. Une personne morale peut être droit public (État, collectivités territoriales, établissements publics etc.) ou de droit privé (sociétés privées, associations etc.).  Depuis 1994 les personnes morales, à l'exclusion de l'État, sont responsables pénalement des infractions commises, pour leur compte, par leurs organes ou représentants. Les établissements publics, les collectivités territoriales et leurs groupements ne sont responsables que pour les infractions commises dans l'exercice des activités susceptibles de faire l'objet de délégation de service public. Méthode de comptage : Moyennes réalisées à partir des données relatives aux « amendes » et « emprisonnement » des prévenus ayant la qualité de personnes physiques.",
                 "Titre_onglet": "Personnes physiques",
                 "Pie": false,
                 "Table": false,
@@ -1125,7 +1045,7 @@
                 "Box": 1,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Description ",
+                "Description_mesure": "Note de lecture : Sur l’échantillon de 94 décisions de justice rendues en 2021 et analysées par l’AFA, les personnes morales prévenues ont été condamnés en moyenne à une amende de 93 833€. Explications : Par principe, les personnes morales ne pouvant faire l’objet d’une peine d’emprisonnement, elles encourent le quintuple de l’amende encourue par les personnes physiques. Méthode de comptage : Moyennes réalisées à partir des données relatives aux « amendes » et aux personnes morales prévenues.",
                 "Titre_onglet": "Personnes morales",
                 "Pie": false,
                 "Table": false,
@@ -1153,7 +1073,7 @@
                 "Box": 1,
                 "Points": false,
                 "MinGeoLevel": "departements",
-                "Description_mesure": "Description ",
+                "Description_mesure": "Note de lecture : Sur l’échantillon de 111 décisions de justice rendues entre 2014 et 2020 et analysées par l’AFA, le montant moyen des confiscations pénales par affaire est de près de 135 000 €. Explications : En plus de l’amende, le juge peut décider de prononcer, dans certaines conditions expressément définies par la loi (article 131-21 du Code pénal), la confiscation de biens meubles ou immeubles, outils ou produits (direct ou indirect) de l’infraction. Il peut également saisir des sommes ou biens correspondant, en valeur, au profit que l’infraction a permis de réaliser.  La peine de confiscation prive l’auteur de l’infraction de la propriété ou de la disposition d’un bien, pour en transférer la propriété à l’État. Dans le cadre de cette étude, sont également comptabilisées les confiscations de scellés (biens saisis lors d’une procédure judiciaire par les enquêteurs ou le juge d’instruction). Méthode de comptage : Moyennes réalisées à partir des données par affaires, relatives aux « confiscations pénales ».",
                 "Titre_onglet": "Confiscations pénales",
                 "Pie": false,
                 "Table": false,
