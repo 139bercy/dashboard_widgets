@@ -270,7 +270,7 @@ class pageafa2022:
     def analyseSecteursActivite_Prive(self):
 
         # Data
-        dict = {'Construction': 1, 'Non renseigne': 9, 'Activités immobilières': 8, 'Activités spécialisées, scientifiques et techniques': 8, 'Hébergement et restauration': 7, 'Activités de services administratifs et de soutien': 6, 'Autres activités de services': 5, 'Arts, spectacles et activités récréatives': 4, "Production et distribution d'électricité, de gaz, de vapeur et d'air conditionné": 3, 'Transports et entreposage': 3, "Commerce ; réparation d'automobiles et de motocycles": 3, "Activités financières et d'assurance": 3, 'Agriculture sylviculture et pêche': 2, 'Santé humaine et action sociale': 1}
+        dict = {'Construction': 19, 'Non renseigne': 9, 'Activités immobilières': 8, 'Activités spécialisées, scientifiques et techniques': 8, 'Hébergement et restauration': 7, 'Activités de services administratifs et de soutien': 6, 'Autres activités de services': 5, 'Arts, spectacles et activités récréatives': 4, "Production et distribution d'électricité, de gaz, de vapeur et d'air conditionné": 3, 'Transports et entreposage': 3, "Commerce ; réparation d'automobiles et de motocycles": 3, "Activités financières et d'assurance": 3, 'Agriculture sylviculture et pêche': 2, 'Santé humaine et action sociale': 1}
         series = pd.Series(dict)
 
         # Formalisation
