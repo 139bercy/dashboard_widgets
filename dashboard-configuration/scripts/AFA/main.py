@@ -76,8 +76,8 @@ def page_afa2021():
     finalConf = pd.concat(list(allConfs.values()))
 
     # Ecriture pour récupération sur MinIO
-    fm.export_ndjson(finalData,"afa-2021-" + str(date.today()) +".ndjson")
-    fm.export_csv(finalConf,"afa-2021-" + str(date.today()) +".csv")
+    fm.export_ndjson(finalData,"afa-2021--" + str(date.today()) +".ndjson")
+    fm.export_csv(finalConf,"afa-2021--" + str(date.today()) +".csv")
 
 def page_afa2022():
 
@@ -115,8 +115,8 @@ def page_afa2022():
     finalConf = pd.concat(list(allConfs.values()))
 
     # Ecriture pour récupération sur MinIO
-    fm.export_ndjson(finalData,"afa-2022-" + str(date.today()) +".ndjson")
-    fm.export_csv(finalConf,"afa-2022-" + str(date.today()) +".csv")
+    fm.export_ndjson(finalData,"afa-2022--" + str(date.today()) +".ndjson")
+    fm.export_csv(finalConf,"afa-2022--" + str(date.today()) +".csv")
 
 page_afa2021()
 page_afa2022()
