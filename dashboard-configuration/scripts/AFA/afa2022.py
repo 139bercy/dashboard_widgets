@@ -228,7 +228,7 @@ class pageafa2022:
     def analyseTypeFaits_FamilleInfractions(self):
         
         # Data
-        dict = {'Corruption': 52, "Trafic d'influence": 30, 'Favoritisme': 25, 'Détournement de fonds publics': 22, "Prise illégale d'intérêts": 18, 'Concussion': 2}
+        dict = {'Corruption': 54, 'Favoritisme': 32, "Trafic d'influence": 30, 'Détournement de fonds publics': 26, "Prise illégale d'intérêts": 22, 'Concussion': 3}
         series = pd.Series(dict)
 
         # Formalisation
@@ -242,7 +242,7 @@ class pageafa2022:
     def analyseSecteursActivite_PublicPrive(self):
         
         # Data
-        dict = {'Privé': 87, 'Public': 71}
+        dict = {'Public': 92, 'Privé': 92}
         series = pd.Series(dict)
 
         # Formalisation
@@ -256,7 +256,7 @@ class pageafa2022:
     def analyseSecteursActivite_Public(self):
 
         # Data
-        dict = {'Collectivités - mairies': 19, 'Etat - administration centrale': 18, 'Non renseigne': 9, 'Collectivités régionales': 7, 'Fonction publique hospitaliere': 6, 'Collectivités départementales': 6, 'Etablissement public': 3, 'Etat - deconcentre': 3}
+        dict = {'Collectivités - mairies': 31, 'Etat - administration centrale': 22, 'Non renseigne': 10, 'Etablissement public': 7, 'Collectivités régionales': 7, 'Fonction publique hospitaliere': 6, 'Collectivités départementales': 6, 'Etat - deconcentre': 3}
         series = pd.Series(dict)
 
         # Formalisation
@@ -270,7 +270,7 @@ class pageafa2022:
     def analyseSecteursActivite_Prive(self):
 
         # Data
-        dict = {'Construction': 1, 'Activités immobilières': 8, 'Activités spécialisées, scientifiques et techniques': 8, 'Non renseigne': 8, 'Hébergement et restauration': 7, 'Activités de services administratifs et de soutien': 5, 'Autres activités de services': 4, "Production et distribution d'électricité, de gaz, de vapeur et d'air conditionné": 3, 'Transports et entreposage': 3, "Commerce ; réparation d'automobiles et de motocycles": 3, "Activités financières et d'assurance": 3, 'Arts, spectacles et activités récréatives': 3, 'Agriculture sylviculture et pêche': 1, 'Santé humaine et action sociale': 1}
+        dict = {'Construction': 1, 'Non renseigne': 9, 'Activités immobilières': 8, 'Activités spécialisées, scientifiques et techniques': 8, 'Hébergement et restauration': 7, 'Activités de services administratifs et de soutien': 6, 'Autres activités de services': 5, 'Arts, spectacles et activités récréatives': 4, "Production et distribution d'électricité, de gaz, de vapeur et d'air conditionné": 3, 'Transports et entreposage': 3, "Commerce ; réparation d'automobiles et de motocycles": 3, "Activités financières et d'assurance": 3, 'Agriculture sylviculture et pêche': 2, 'Santé humaine et action sociale': 1}
         series = pd.Series(dict)
 
         # Formalisation
@@ -284,7 +284,7 @@ class pageafa2022:
     def repartitionPrevenus_repartition(self):
 
         # Data
-        dict = {'Corruption': 52, "Trafic d'influence": 29, 'Favoritisme': 25, 'Détournement de fonds publics': 22, "Prise illégale d'intérêts": 18, 'Concussion': 2}
+        dict = {'Corruption': 54, 'Favoritisme': 32, "Trafic d'influence": 29, 'Détournement de fonds publics': 26, "Prise illégale d'intérêts": 22, 'Concussion': 3}
         series = pd.Series(dict)
 
         # Formalisation
@@ -299,7 +299,7 @@ class pageafa2022:
         
         # Data
         dict = {
-            "Age moyen des prévenus" : 45.0
+            "Age moyen des prévenus" : 45.5
         }
         series = pd.Series(dict)
 
@@ -315,7 +315,7 @@ class pageafa2022:
         
         # Data
         dict = {
-            "Nombre moyen de prévenus par affaires" : 3.0
+            "Nombre moyen de prévenus par affaires" : 2.9
         }
         series = pd.Series(dict)
 
@@ -331,8 +331,8 @@ class pageafa2022:
         
         # Data
         dict = {
-            "Personne physique" : 143,
-            "Personne morale" : 7
+            "Personne physique" : 167,
+            "Personne morale" : 8
         }
         series = pd.Series(dict)
 
@@ -347,7 +347,7 @@ class pageafa2022:
     def NatureSexePrevenus_Sexe(self):
         
         # Data
-        dict = {'Hommes': 115, 'Femmes': 28}
+        dict = {'Hommes': 133, 'Femmes': 34}
         series = pd.Series(dict)
 
         # Formalisation
@@ -361,7 +361,7 @@ class pageafa2022:
     def qualiteCSPPrevenus_qualite(self):
         
         # Data
-        dict = {'Agents publics': 51, 'Dirigeants de societe': 44, 'Employes': 18, 'Particuliers': 17, 'Elus': 9, 'Personne morale de droit prive': 5, 'Personne morale de droit public ': 1}
+        dict = {'Agents publics': 66, 'Dirigeants de societe': 46, 'Employes': 19, 'Particuliers': 18, 'Elus': 14, 'Personne morale de droit prive': 5, 'Personne morale de droit public ': 1}
         series = pd.Series(dict)
 
         # Formalisation
@@ -375,7 +375,7 @@ class pageafa2022:
     def qualiteCSPPrevenus_CSP(self):
         
         # Data
-        dict = {"Cadres d'entreprise": 43, 'Cadres de la fonction publique, professions intellectuelles et  artistiques': 27, 'Employés de la fonction publique': 24, 'Non renseigne': 19, "Chefs d'entreprise de 10 salariés ou plus": 6, 'Employés de commerce': 4, 'Ouvriers qualifiés': 3, 'Inactifs divers (autres que retraités)': 3, 'Professions libérales et assimilés': 2, "Professions intermédiaires de l'enseignement, de la santé, de la fonction publique et assimilés": 2, 'Techniciens': 2, "Employés administratifs d'entreprise": 2, 'Commerçants et assimilés': 1, 'Inactifs divers (y compris retraités)': 1, 'Contremaîtres, agents de maîtrise': 1}
+        dict = {"Cadres d'entreprise": 44, 'Cadres de la fonction publique, professions intellectuelles et  artistiques': 37, 'Employés de la fonction publique': 31, 'Non renseigne': 20, "Chefs d'entreprise de 10 salariés ou plus": 6, "Professions intermédiaires de l'enseignement, de la santé, de la fonction publique et assimilés": 5, 'Employés de commerce': 4, 'Ouvriers qualifiés': 3, 'Inactifs divers (autres que retraités)': 3, 'Techniciens': 2, "Employés administratifs d'entreprise": 2, 'Professions libérales et assimilés': 2, 'Commerçants et assimilés': 1, 'Inactifs divers (y compris retraités)': 1, 'Contremaîtres, agents de maîtrise': 1, 'Anciens cadres et professions intermédiaires': 1, 'Agriculteurs exploitants': 1}
         series = pd.Series(dict)
 
         # Formalisation
@@ -389,7 +389,7 @@ class pageafa2022:
     def caracsProcedure_origine(self):
         
         # Data
-        dict = {'Non renseigne': 22, 'Article 40 al.2': 10, 'Plainte': 9, 'Dossier connexe justice': 3, 'Signalement au procureur par une association  ou un particulier ': 3, 'Citation directe': 2, 'Lettre anonyme ': 1}
+        dict = {'Non renseigne': 26, 'Article 40 al.2': 13, 'Plainte': 11, 'Dossier connexe justice': 3, 'Signalement au procureur par une association  ou un particulier ': 3, 'Citation directe': 3, 'Lettre anonyme ': 1, 'Enquete / audit interne': 1}
         series = pd.Series(dict)
 
         # Formalisation
@@ -404,7 +404,7 @@ class pageafa2022:
         
         # Data
         dict = {
-            "Durée moyenne de la procédure" : 5.0
+            "Durée moyenne de la procédure" : 4.78
         }
         series = pd.Series(dict)
 
@@ -420,7 +420,7 @@ class pageafa2022:
 
         # Data
         dict = {
-            "Durée moyenne de la période de prévention" : 1126.6
+            "Durée moyenne de la période de prévention" : 1066.5
         }
         series = pd.Series(dict)
 
@@ -435,7 +435,7 @@ class pageafa2022:
     def analyseDJ_sens(self):
         
         # Data
-        dict = {'Déclaration de culpabilité': 232, 'Relaxe ': 79, 'Autre ': 2}
+        dict = {'Déclaration de culpabilité': 255, 'Relaxe ': 98, 'Autre ': 2}
         series = pd.Series(dict)
 
         # Formalisation
@@ -449,7 +449,7 @@ class pageafa2022:
     def analysePeines_type(self):
         
         # Data
-        dict = {'Emprisonnement et amende': 47, 'Emprisonnement ': 46, 'Amende ': 20}
+        dict = {'Emprisonnement ': 53, 'Emprisonnement et amende': 52, 'Amende ': 22}
         series = pd.Series(dict)
 
         # Formalisation
@@ -464,7 +464,7 @@ class pageafa2022:
         
         # Data
         dict = {
-            "Montant moyen des amendes des prévenus physiques" : 25042.8
+            "Montant moyen des amendes des prévenus physiques" : 23227.5
         }
         series = pd.Series(dict)
 
@@ -480,7 +480,7 @@ class pageafa2022:
         
         # Data
         dict = {
-            "Durée moyenne de l'emprisonnement des prévenus physiques" : 16.3
+            "Durée moyenne de l'emprisonnement des prévenus physiques" : 15.2
         }
         series = pd.Series(dict)
 
