@@ -361,7 +361,7 @@ class pageafa2022:
     def qualiteCSPPrevenus_qualite(self):
         
         # Data
-        dict = {'Agents publics': 66, 'Dirigeants de societe': 46, 'Employes': 19, 'Particuliers': 18, 'Elus': 14, 'Personne morale de droit prive': 5, 'Personne morale de droit public ': 1}
+        dict = {'Agents publics': 66, 'Dirigeants de societe': 46, 'Employes': 19, 'Particuliers': 18, 'Elus': 14, 'Personne morale de droit prive': 5, 'Personne morale de droit public': 1}
         series = pd.Series(dict)
 
         # Formalisation
@@ -389,7 +389,7 @@ class pageafa2022:
     def caracsProcedure_origine(self):
         
         # Data
-        dict = {'Non renseigne': 26, 'Article 40 al.2': 13, 'Plainte': 11, 'Dossier connexe justice': 3, 'Signalement au procureur par une association  ou un particulier ': 3, 'Citation directe': 3, 'Lettre anonyme ': 1, 'Enquete / audit interne': 1}
+        dict = {'Non renseigne': 26, 'Article 40 al.2': 13, 'Plainte': 11, 'Dossier connexe justice': 3, 'Signalement au procureur par une association  ou un particulier': 3, 'Citation directe': 3, 'Lettre anonyme': 1, 'Enquete / audit interne': 1}
         series = pd.Series(dict)
 
         # Formalisation
@@ -435,7 +435,7 @@ class pageafa2022:
     def analyseDJ_sens(self):
         
         # Data
-        dict = {'Déclaration de culpabilité': 255, 'Relaxe ': 98, 'Autre ': 2}
+        dict = {'Déclaration de culpabilité': 255, 'Relaxe': 98, 'Autre': 2}
         series = pd.Series(dict)
 
         # Formalisation
@@ -449,7 +449,7 @@ class pageafa2022:
     def analysePeines_type(self):
         
         # Data
-        dict = {'Emprisonnement ': 53, 'Emprisonnement et amende': 52, 'Amende ': 22}
+        dict = {'Emprisonnement': 53, 'Emprisonnement et amende': 52, 'Amende': 22}
         series = pd.Series(dict)
 
         # Formalisation

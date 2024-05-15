@@ -358,7 +358,7 @@ class pageafa2021:
     def qualiteCSPPrevenus_qualite(self):
         
         # Data
-        dict = {'Agents publics': 103, 'Dirigeants de societe': 82, 'Particuliers': 52, 'Elus': 46, 'Employes': 25, 'Personne morale de droit prive': 14, 'Personne morale de droit public ': 13}
+        dict = {'Agents publics': 103, 'Dirigeants de societe': 82, 'Particuliers': 52, 'Elus': 46, 'Employes': 25, 'Personne morale de droit prive': 14, 'Personne morale de droit public': 13}
         series = pd.Series(dict)
 
         # Formalisation
@@ -386,7 +386,7 @@ class pageafa2021:
     def caracsProcedure_origine(self):
         
         # Data
-        dict = {'Non renseigne': 56, 'Article 40 al.2': 26, 'Plainte': 21, 'Lettre anonyme ': 14, 'Citation directe': 10, "Enquete d'initiative ": 4, 'Dossier connexe justice': 3, 'Signalement au procureur par une association  ou un particulier ': 2, 'Notification tracfin': 1, 'Enquete / audit interne': 1, 'Signalement hatvp': 1}
+        dict = {'Non renseigne': 56, 'Article 40 al.2': 26, 'Plainte': 21, 'Lettre anonyme': 14, 'Citation directe': 10, "Enquete d'initiative": 4, 'Dossier connexe justice': 3, 'Signalement au procureur par une association  ou un particulier': 2, 'Notification tracfin': 1, 'Enquete / audit interne': 1, 'Signalement hatvp': 1}
         series = pd.Series(dict)
 
         # Formalisation
@@ -432,7 +432,7 @@ class pageafa2021:
     def analyseDJ_sens(self):
         
         # Data
-        dict = {'Déclaration de culpabilité': 449, 'Relaxe ': 211, 'Autre ': 15, 'Extinction action publique': 7}
+        dict = {'Déclaration de culpabilité': 449, 'Relaxe': 211, 'Autre': 15, 'Extinction action publique': 7}
         series = pd.Series(dict)
 
         # Formalisation
@@ -446,7 +446,7 @@ class pageafa2021:
     def analysePeines_type(self):
         
         # Data
-        dict = {'Emprisonnement et amende': 90, 'Emprisonnement ': 79, 'Amende ': 60, 'Dispense de peine': 11, 'Autre': 2}
+        dict = {'Emprisonnement et amende': 90, 'Emprisonnement': 79, 'Amende': 60, 'Dispense de peine': 11, 'Autre': 2}
         series = pd.Series(dict)
 
         # Formalisation
