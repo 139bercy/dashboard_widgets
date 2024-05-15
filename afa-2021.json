@@ -573,10 +573,10 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Qualité des prévenus | 2021 | Personne morale de droit public ",
-                        "Nom_indicateur": "Personne morale de droit public ",
+                        "Code_indicateur": "20240424 - Carto TJ | Qualité des prévenus | 2021 | Personne morale de droit public",
+                        "Nom_indicateur": "Personne morale de droit public",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Personne morale de droit public ",
+                        "Titre_indicateur": "Personne morale de droit public",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -768,10 +768,10 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Origine de l'affaire | 2021 | Signalement au procureur par une association  ou un particulier ",
-                        "Nom_indicateur": "Signalement au procureur par une association  ou un particulier ",
+                        "Code_indicateur": "20240424 - Carto TJ | Origine de l'affaire | 2021 | Signalement au procureur par une association  ou un particulier",
+                        "Nom_indicateur": "Signalement au procureur par une association  ou un particulier",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Signalement au procureur par une association  ou un particulier ",
+                        "Titre_indicateur": "Signalement au procureur par une association  ou un particulier",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -784,10 +784,10 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Origine de l'affaire | 2021 | Lettre anonyme ",
-                        "Nom_indicateur": "Lettre anonyme ",
+                        "Code_indicateur": "20240424 - Carto TJ | Origine de l'affaire | 2021 | Lettre anonyme",
+                        "Nom_indicateur": "Lettre anonyme",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Lettre anonyme ",
+                        "Titre_indicateur": "Lettre anonyme",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -816,10 +816,10 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Origine de l'affaire | 2021 | Enquete d'initiative ",
-                        "Nom_indicateur": "Enquete d'initiative ",
+                        "Code_indicateur": "20240424 - Carto TJ | Origine de l'affaire | 2021 | Enquete d'initiative",
+                        "Nom_indicateur": "Enquete d'initiative",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Enquete d'initiative ",
+                        "Titre_indicateur": "Enquete d'initiative",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -890,10 +890,10 @@
                 "Avec_nom_indicateur": false,
                 "indicateurs": [
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Sens de la décision | 2021 | Autre ",
-                        "Nom_indicateur": "Autre ",
+                        "Code_indicateur": "20240424 - Carto TJ | Sens de la décision | 2021 | Autre",
+                        "Nom_indicateur": "Autre",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Autre ",
+                        "Titre_indicateur": "Autre",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
@@ -914,10 +914,10 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Sens de la décision | 2021 | Relaxe ",
-                        "Nom_indicateur": "Relaxe ",
+                        "Code_indicateur": "20240424 - Carto TJ | Sens de la décision | 2021 | Relaxe",
+                        "Nom_indicateur": "Relaxe",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Relaxe ",
+                        "Titre_indicateur": "Relaxe",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     }
@@ -968,18 +968,18 @@
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Types de peine | 2021 | Amende ",
-                        "Nom_indicateur": "Amende ",
+                        "Code_indicateur": "20240424 - Carto TJ | Types de peine | 2021 | Amende",
+                        "Nom_indicateur": "Amende",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Amende ",
+                        "Titre_indicateur": "Amende",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
                     {
-                        "Code_indicateur": "20240424 - Carto TJ | Types de peine | 2021 | Emprisonnement ",
-                        "Nom_indicateur": "Emprisonnement ",
+                        "Code_indicateur": "20240424 - Carto TJ | Types de peine | 2021 | Emprisonnement",
+                        "Nom_indicateur": "Emprisonnement",
                         "Indicateur_principal": "1",
-                        "Titre_indicateur": "Emprisonnement ",
+                        "Titre_indicateur": "Emprisonnement",
                         "Unité_GP": "Infractions en 2020",
                         "Unité_Evol": "%"
                     },
